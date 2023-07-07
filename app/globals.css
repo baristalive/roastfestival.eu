@@ -3,25 +3,59 @@
 @tailwind utilities;
 
 :root {
+  --background-rgb: 255, 248, 0;
+  --invert-rgb: 255, 248, 0;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+section {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.inverted {
+  background: rgb(var(--foreground-rgb));
+  color: rgb(var(--background-rgb));
+}
+
+.instagram {
+  border-radius: 50%;
+  vertical-align: center;
+  line-height: 38px;
+  text-align: center;
+  background: rgb(var(--foreground-rgb));
+  color: rgb(var(--background-rgb));
+
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  background: linear-gradient(rgb(var(--background-rgb)), rgb(var(--background-rgb)) 50%, rgb(var(--foreground-rgb)) 0);
+  z-index: -1;
+}
+
+html::after{
+  content: "";
+  top: -999px;
+  left: 0;
+  right: 0;
+  height: calc(999px + 50%);
+  bottom: 50%;
+  pointer-events: none;
+  background: rgb(var(--invert-rgb)) ;
+  position: fixed;
+  mix-blend-mode:difference;
 }
