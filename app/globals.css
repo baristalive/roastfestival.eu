@@ -16,7 +16,7 @@
   }
 } */
 
-section {
+section, body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
@@ -36,7 +36,7 @@ section {
 
 }
 
-html::before {
+.overlay::before {
   content: "";
   position: fixed;
   top: -100px;
@@ -47,7 +47,7 @@ html::before {
   z-index: -1;
 }
 
-html::after{
+.overlay::after{
   content: "";
   top: -999px;
   left: 0;
