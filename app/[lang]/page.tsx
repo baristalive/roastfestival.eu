@@ -96,14 +96,17 @@ const Program = () => {
           Program
         </h2>
       </div>
-      {lang.program.map((d, idx) =>
-        <div key={d.title} className={`${idx % 2 ? "" : "inverted"} p-8 md:p-20`}>
+      {lang.program.map((d, idx) => (
+        <div
+          key={d.title}
+          className={`${idx % 2 ? "" : "inverted"} p-8 md:p-20`}
+        >
           <div className="md:hidden py-20 px-6 flex">
             <h2 className="grow uppercase font-medium pt-2 text-left text-3xl">
               Program
             </h2>
             <div className="text-right">
-              <h3 className="text-5xl font-semibold"></h3>
+              <h3 className="text-5xl font-semibold">{d.date}</h3>
               <small className="text-2xl">{d.title}</small>
             </div>
           </div>
@@ -125,7 +128,7 @@ const Program = () => {
             </dl>
           </div>
         </div>
-      )}
+      ))}
     </section>
   );
 };
