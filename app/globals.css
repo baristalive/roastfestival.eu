@@ -61,7 +61,7 @@ section, body {
   text-orientation: sideways;
   writing-mode: vertical-rl;
   left: 0;
-  top: 80%;
+  bottom: 10%;
   padding: 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;

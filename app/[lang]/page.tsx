@@ -9,6 +9,7 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages} from '../dictionaries/all'
 import { faAt, faEarthAmerica, faEarthEurope } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 
 const Page1 = () => {
@@ -186,9 +187,9 @@ export default function Home({params} : { params: {lang: SupportedLanguages }}) 
   return (
     <div className="overlay">
       <div className="lang inverted uppercase">
-        <a href={params.lang === "cz" ? "/en" : "/cz"}>
+        <Link href={params.lang === "cz" ? "./en" : "./cz"}>
           {params.lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
-        </a>
+        </Link>
       </div>
       <Page1 />
       <About />
