@@ -1,0 +1,102 @@
+{
+    "about": {
+        "text": [
+            "Discover the world of coffee at the first Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
+            "Immerse yourself in a sensory journey, exploring diverse brews, engaging in insightful conversations, and experiencing the vibrant atmosphere that awaits you."
+        ],
+        "title": "About"
+    },
+    "contact": "Contact us",
+    "date": "16-17/9/2023",
+    "place": "Káznice, Brno",
+    "program": [
+        {
+            "date": "16/9",
+            "schedule": [
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                }
+            ],
+            "title": "Day 1"
+        },
+        {
+            "date": "17/9",
+            "schedule": [
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                },
+                {
+                    "time": "9.00 - 9.30",
+                    "title": "Festival Opening Ceremony"
+                }
+            ],
+            "title": "Day 2"
+        }
+    ],
+    "programLoadingText": "We are still roasting the festival program for you...",
+    "tickets": "Tickets",
+    "buyTickets": "Buy tickets",
+    "title": "The first coffee roasters festival in Brno"
+}

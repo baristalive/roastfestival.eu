@@ -8,14 +8,6 @@
   --foreground-rgb: 0, 0, 0;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 section, body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
@@ -28,12 +20,15 @@ section, body {
 
 .instagram {
   border-radius: 50%;
-  vertical-align: center;
-  line-height: 38px;
+  line-height: 40px;
   text-align: center;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.instagram.inverted {
   background: rgb(var(--foreground-rgb));
   color: rgb(var(--background-rgb));
-
 }
 
 .overlay::before {
@@ -58,4 +53,17 @@ section, body {
   background: rgb(var(--invert-rgb)) ;
   position: fixed;
   mix-blend-mode:difference;
+}
+
+.lang {
+  position: fixed;
+  z-index: 2;
+  text-orientation: sideways;
+  writing-mode: vertical-rl;
+  left: 0;
+  top: 80%;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
 }
