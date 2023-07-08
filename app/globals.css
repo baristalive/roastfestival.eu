@@ -39,12 +39,13 @@ body {
   top: -999px;
   left: 0;
   right: 0;
-  height: calc(999px + 50%);
+  height: calc(999px + 49%);
   bottom: 50%;
   pointer-events: none;
   background: rgb(var(--invert-rgb));
   position: fixed;
   mix-blend-mode: difference;
+  z-index: 4;
 }
 
 .lang {
@@ -62,24 +63,36 @@ body {
 
 .page1 {
   position: relative;
-  background: url("/noise.png");
-  background: url("/noise.svg"), linear-gradient(transparent, transparent);
-  background-repeat: repeat;
+}
+.logo ~ div {
+  z-index: 2;
 }
 
-.page1::before {
+.logo::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  background: url("/noise.png");
+  background-repeat: repeat;
+  filter: contrast(0.5);
+  /* mix-blend-mode: difference; */
+}
+
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: url("/logo.png");
   background: url("/logo.svg"), linear-gradient(transparent, transparent);
-  background-color: rgb(var(--background-rgb));
   background-position: center;
-  background-size: contain;
+  background-size: calc(100% - 2rem) 80vh;
   background-repeat: no-repeat;
   background-clip: padding-box;
 }
