@@ -8,25 +8,13 @@
   --foreground-rgb: 0, 0, 0;
 }
 
-section, body {
+section,
+body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
 
 .inverted {
-  background: rgb(var(--foreground-rgb));
-  color: rgb(var(--background-rgb));
-}
-
-.instagram {
-  border-radius: 50%;
-  line-height: 40px;
-  text-align: center;
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-}
-
-.instagram.inverted {
   background: rgb(var(--foreground-rgb));
   color: rgb(var(--background-rgb));
 }
@@ -38,11 +26,15 @@ section, body {
   left: 0;
   right: 0;
   bottom: -100px;
-  background: linear-gradient(rgb(var(--background-rgb)), rgb(var(--background-rgb)) 50%, rgb(var(--foreground-rgb)) 0);
-  z-index: -1;
+  background: linear-gradient(
+    rgb(var(--background-rgb)),
+    rgb(var(--background-rgb)) 50%,
+    rgb(var(--foreground-rgb)) 0
+  );
+  z-index: -2;
 }
 
-.overlay::after{
+.overlay::after {
   content: "";
   top: -999px;
   left: 0;
@@ -50,9 +42,9 @@ section, body {
   height: calc(999px + 50%);
   bottom: 50%;
   pointer-events: none;
-  background: rgb(var(--invert-rgb)) ;
+  background: rgb(var(--invert-rgb));
   position: fixed;
-  mix-blend-mode:difference;
+  mix-blend-mode: difference;
 }
 
 .lang {
@@ -66,4 +58,39 @@ section, body {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
+}
+
+.page1 {
+  position: relative;
+  background: url("/noise.png");
+  background: url("/noise.svg"), linear-gradient(transparent, transparent);
+  background-repeat: repeat;
+}
+
+.page1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("/logo.png");
+  background: url("/logo.svg"), linear-gradient(transparent, transparent);
+  background-color: rgb(var(--background-rgb));
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+}
+
+.filler {
+  background: url("/logo-round.png");
+  background: url("/logo-round.svg"), linear-gradient(transparent, transparent);
+  background-color: rgb(var(--foreground-rgb));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  height: min(90vw, 800px);
 }
