@@ -8,6 +8,10 @@
   --foreground-rgb: 0, 0, 0;
 }
 
+html {
+  font-size: 15px;
+}
+
 section,
 body {
   color: rgb(var(--foreground-rgb));
@@ -80,7 +84,6 @@ body {
   filter: contrast(0.5);
   /* mix-blend-mode: difference; */
 }
-
 
 .logo::before {
   content: "";

@@ -6,8 +6,19 @@
         ],
         "title": "O festivalu"
     },
+    "buyTickets": "Koupit vstupenky",
     "contact": "Kontakt",
     "date": "16-17/9/2023",
+    "location": {
+        "title": "Místo konání"
+    },
+    "organizers": {
+        "text": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem odit facere voluptatibus quibusdam iure omnis nemo, id tenetur autem quam, et itaque fuga consequatur consectetur error soluta corrupti dignissimos voluptate, optio amet quaerat iste! Possimus tempore aliquid officia dolores sint maiores accusantium rem, sed saepe, nostrum non omnis culpa?",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem odit facere voluptatibus quibusdam iure omnis nemo, id tenetur autem quam, et itaque fuga consequatur consectetur error soluta corrupti dignissimos voluptate, optio amet quaerat iste! Possimus tempore aliquid officia dolores sint maiores accusantium rem, sed saepe, nostrum non omnis culpa?"
+        ],
+        "title": "O nás"
+    },
     "place": "Káznice, Brno",
     "program": [
         {
@@ -97,6 +108,19 @@
     ],
     "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
     "tickets": "Vstupenky",
-    "buyTickets": "Koupit vstupenky",
-    "title": "The first coffee roasters festival in Brno"
+    "title": "The first coffee roasters festival in Brno",
+    "sponsors": {
+        "title": "Sponzoři",
+        "add": "Stát se sponzorem",
+        "content": [
+            {
+                "src": "https://api.sebou.cz/uploads/0b762c8abc11eb69.png",
+                "href": "#"
+            },
+            {
+                "src": "https://api.sebou.cz/uploads/0b762c8abc11eb69.png",
+                "href": "#"
+            }
+        ]
+    }
 }

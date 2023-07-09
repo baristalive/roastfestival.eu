@@ -6,9 +6,20 @@
         ],
         "title": "About"
     },
+    "buyTickets": "Buy tickets",
     "contact": "Contact us",
     "date": "16-17/9/2023",
+    "organizers": {
+        "text": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem odit facere voluptatibus quibusdam iure omnis nemo, id tenetur autem quam, et itaque fuga consequatur consectetur error soluta corrupti dignissimos voluptate, optio amet quaerat iste! Possimus tempore aliquid officia dolores sint maiores accusantium rem, sed saepe, nostrum non omnis culpa?",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem odit facere voluptatibus quibusdam iure omnis nemo, id tenetur autem quam, et itaque fuga consequatur consectetur error soluta corrupti dignissimos voluptate, optio amet quaerat iste! Possimus tempore aliquid officia dolores sint maiores accusantium rem, sed saepe, nostrum non omnis culpa?"
+        ],
+        "title": "Organizers"
+    },
     "place": "Káznice, Brno",
+    "location": {
+        "title": "Location"
+    },
     "program": [
         {
             "date": "16/9",
@@ -97,6 +108,19 @@
     ],
     "programLoadingText": "We are still roasting the festival program for you.",
     "tickets": "Tickets",
-    "buyTickets": "Buy tickets",
-    "title": "The first coffee roasters festival in Brno"
+    "title": "The first coffee roasters festival in Brno",
+    "sponsors": {
+        "title": "Sponsors",
+        "add": "Become a sponsor",
+        "content": [
+            {
+                "src": "https://api.sebou.cz/uploads/0b762c8abc11eb69.png",
+                "href": "#"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/en/d/df/Red_Hat_Logo_2019-en.svg",
+                "href": "#"
+            }
+        ]
+    }
 }

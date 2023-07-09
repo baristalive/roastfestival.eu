@@ -7,6 +7,7 @@ import FacebookIcon from "../icons/facebook";
 import InstagramIcon from "../icons/instagram";
 import AtIcon from "../icons/at";
 import ArrowIcon from "../icons/arrow";
+import PlusIcon from "../icons/plus";
 
 const Page1 = () => {
   const params = useParams();
@@ -22,11 +23,11 @@ const Page1 = () => {
             {lang.place}
           </div>
           <div className="text-center pt-12 lg:pt-6">
-            <h1 className="uppercase max-w-lg mx-auto lg:max-w-none lg:mx-0 font-medium text-3xl lg:text-5xl">
+            <h1 className="uppercase max-w-lg mx-auto font-medium text-3xl lg:text-4xl">
               {lang.title}
             </h1>
           </div>
-          <nav className="hidden lg:block text-right font-medium text-3xl mr-8 leading-none">
+          <nav className="hidden lg:block text-right font-medium text-3xl mr-2 leading-none">
             <a href="#">{lang.tickets}</a>
           </nav>
           <nav className="hidden lg:block text-right font-medium text-3xl leading-none">
@@ -152,12 +153,63 @@ const BuyTickets = () => {
   );
 };
 
+const Sponsors = () => {
+  const params = useParams();
+  const lang = dictionaries[params.lang as SupportedLanguages];
+  return (
+    <section className="inverted py-20 text-center">
+      <h2 className="uppercase font-medium text-4xl py-20 ">
+        {lang.sponsors.title}
+      </h2>
+      <div className="text-xl flex justify-center items-center gap-8">
+        {lang.sponsors.content.map((s) => (
+          <div className="p-2" key={s.href}>
+            <a href={s.href}>
+              <img
+                src={s.src}
+                className="max-h-[16rem] max-w-[16rem]"
+                style={{
+                  filter: "sepia(5) saturate(100) grayscale(1) contrast(1000)  invert(0.87) sepia(15%) saturate(2736%) hue-rotate(15deg) brightness(111%) contrast(100)",
+                }}
+              />
+            </a>
+          </div>
+        ))}
+        <div className="rounded-lg px-10 py-20 opacity-50 hover:opacity-100 transition-opacity duration-200">
+          <a href="mailto:info@baristalive.cz">
+            <PlusIcon />
+            <h4 className="mt-4">{lang.sponsors.add}</h4>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+
+}
+
+const Organizers = () => {
+  const params = useParams();
+  const lang = dictionaries[params.lang as SupportedLanguages];
+  return (
+    <section className="inverted py-20 text-center">
+      <h2 className="uppercase font-medium text-4xl py-20 ">
+        {lang.organizers.title}
+      </h2>
+      <div className="space-y-10 mx-auto px-6 lg:px-0 lg:text-4xl text-xl max-w-screen-lg">
+        {lang.organizers.text.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <footer className="inverted p-10">
-      <nav className="text-center mx-auto font-medium text-xl">
+    <footer className="inverted h-[50vh] p-10 flex flex-col justify-end">
+      <nav className="text-center font-medium text-xl">
         <div>{lang.contact}</div>
         <div className="flex justify-center gap-4 mt-2 pb-40">
           <a className="inverted" href="#">
@@ -171,16 +223,28 @@ const Footer = () => {
           </a>
         </div>
       </nav>
-      <ul className="space-y-2 text-lg  max-w-4xl mx-auto text-right">
-        <li className="font-regular">
-          &copy; {`${new Date().getFullYear()}`} Barista Live, z. s.
-        </li>
-      </ul>
+      <div className="max-w-4xl w-full mx-auto">
+        <ul className="space-y-2 text-lg text-right">
+          <li className="font-regular">
+            &copy; {`${new Date().getFullYear()}`} Barista Live, z. s.
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 };
 
-const Map = () => <section className="inverted h-screen" />;
+const Map = () => {
+  const params = useParams();
+  const lang = dictionaries[params.lang as SupportedLanguages];
+  return (
+    <section className="inverted h-screen py-20 text-center">
+      <h2 className="uppercase font-medium text-4xl py-20 ">
+        {lang.location.title}
+      </h2>
+    </section>
+  );
+};
 
 export default function Home({
   params,
@@ -197,9 +261,11 @@ export default function Home({
       <Page1 />
       <About />
       <Filler />
+      <Sponsors />
       <Program />
       <BuyTickets />
       <Map />
+      <Organizers />
       <Footer />
     </div>
   );
