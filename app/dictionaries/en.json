@@ -111,16 +111,6 @@
     "title": "The first coffee roasters festival in Brno",
     "sponsors": {
         "title": "Sponsors",
-        "add": "Become a sponsor",
-        "content": [
-            {
-                "src": "https://api.sebou.cz/uploads/0b762c8abc11eb69.png",
-                "href": "#"
-            },
-            {
-                "src": "https://upload.wikimedia.org/wikipedia/en/d/df/Red_Hat_Logo_2019-en.svg",
-                "href": "#"
-            }
-        ]
+        "add": "Become a sponsor"
     }
 }

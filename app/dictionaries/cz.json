@@ -1,8 +1,9 @@
 {
     "about": {
         "text": [
-            "Discover the world of coffee at the first Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
-            "Immerse yourself in a sensory journey, exploring diverse brews, engaging in insightful conversations, and experiencing the vibrant atmosphere that awaits you."
+            "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu velkých evropských kávových festivalů.",
+            "Festivalů pořádaných nejen například v  Berlíně, Krakowě, Amsterdamu a v řadě dalších měst. Po vzoru těchto famózních etablovaných akcí zveme do moravské metropole vás – nadšence, amatéry, profesionály, odborníky i lajky. Představí se vám nejméně třicítka českých i zahraničních pražíren na třech espresso a třech brew-barech.",
+            "Tešit se můžete na řadu workshopů, přednášek, diskusí a soutěží. Pro baristy, pražiče a další kávové profesionály je navíc v sobotu připravena afterparty, s cílem propojení kontaktů, sdílení zkušeností a prohlubování vztahů."
         ],
         "title": "O festivalu"
     },
@@ -111,16 +112,6 @@
     "title": "The first coffee roasters festival in Brno",
     "sponsors": {
         "title": "Sponzoři",
-        "add": "Stát se sponzorem",
-        "content": [
-            {
-                "src": "https://api.sebou.cz/uploads/0b762c8abc11eb69.png",
-                "href": "#"
-            },
-            {
-                "src": "https://api.sebou.cz/uploads/0b762c8abc11eb69.png",
-                "href": "#"
-            }
-        ]
+        "add": "Stát se sponzorem"
     }
 }

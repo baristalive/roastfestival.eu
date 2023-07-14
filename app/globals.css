@@ -82,22 +82,33 @@ body {
   background: url("/noise.png");
   background-repeat: repeat;
   filter: contrast(0.5);
-  /* mix-blend-mode: difference; */
 }
 
-.logo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("/logo.png");
-  background: url("/logo.svg"), linear-gradient(transparent, transparent);
-  background-position: center;
-  background-size: calc(100% - 2rem) 80vh;
-  background-repeat: no-repeat;
-  background-clip: padding-box;
+@media (min-height: 800px) {
+  .logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/logo.png");
+    background: url("/logo.svg"), linear-gradient(transparent, transparent);
+    background-position: center;
+    background-size: calc(100% - 2rem) 80vh;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+  }
+}
+@media (max-height: 800px) {
+  .logo-inline {
+    background: url("/logo.png");
+    background: url("/logo.svg"), linear-gradient(transparent, transparent);
+    background-position: center;
+    background-size: calc(100% - 2rem) 100%;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+  }
 }
 
 .filler {

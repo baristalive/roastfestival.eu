@@ -15,8 +15,8 @@ const Page1 = () => {
   return (
     <section className="h-screen flex flex-col p-8 content-stretch page1">
       <div className="logo" />
-      <div className="grow flex flex-col gap-8">
-        <header className="mx-auto lg:grid lg:grid-cols-[2fr_minmax(0,_50vw)_1fr_1fr] w-full max-w-[1900px]">
+      <div className="flex flex-col gap-8">
+        <header className="mx-auto lg:grid lg:grid-cols-[1fr_minmax(0,_50vw)_1fr] w-full max-w-[1900px]">
           <div className="hidden lg:block font-medium text-xl lg:text-3xl leading-none">
             {lang.date}
             <br />
@@ -27,20 +27,21 @@ const Page1 = () => {
               {lang.title}
             </h1>
           </div>
-          <nav className="hidden lg:block text-right font-medium text-3xl mr-2 leading-none">
-            <a href="#">{lang.tickets}</a>
-          </nav>
-          <nav className="hidden lg:block text-right font-medium text-3xl leading-none">
-            <div>{lang.contact}</div>
-            <div className="flex justify-end gap-4 mt-4">
-              <a href="#">
-                <FacebookIcon />
-              </a>
-              <a href="#">
-                <InstagramIcon />
-              </a>
-            </div>
-          </nav>
+          <div className="text-right  font-medium text-3xl leading-none">
+            <nav className="hidden lg:inline-block pr-10 align-top">
+              <a href={lang.contacts.tickets}>{lang.tickets}</a>
+            </nav>
+            <nav className="hidden lg:inline-block ">
+              <div className="flex justify-end gap-4">
+                <a href={lang.contacts.facebook}>
+                  <FacebookIcon />
+                </a>
+                <a href={lang.contacts.instagram}>
+                  <InstagramIcon />
+                </a>
+              </div>
+            </nav>
+          </div>
         </header>
         <div className="lg:hidden font-medium text-lg text-center">
           {lang.date}
@@ -48,10 +49,11 @@ const Page1 = () => {
           {lang.place}
         </div>
       </div>
+      <div className="grow logo-inline" />
       <div className="lg:hidden text-center mx-auto lg:py-20 py-10">
         <a
           className="rounded-full py-3 px-8 border border-current text-lg lg:text-2xl font-medium"
-          href="#"
+          href={lang.contacts.tickets}
         >
           {lang.buyTickets}
         </a>
@@ -145,7 +147,7 @@ const BuyTickets = () => {
     <section className="text-center mx-auto py-48">
       <a
         className="rounded-full lg:py-6 py-3 lg:px-12 px-8 border border-current text-lg lg:text-2xl font-medium"
-        href="#"
+        href={lang.contacts.tickets}
       >
         {lang.buyTickets}
       </a>
@@ -161,22 +163,26 @@ const Sponsors = () => {
       <h2 className="uppercase font-medium text-4xl py-20 ">
         {lang.sponsors.title}
       </h2>
-      <div className="text-xl flex justify-center items-center gap-8">
-        {lang.sponsors.content.map((s) => (
+      <div className="text-xl flex justify-center flex-wrap items-center gap-8">
+        {lang.sponsors.content?.map((s: {href: string, src: string}) => (
           <div className="p-2" key={s.href}>
             <a href={s.href}>
-              <img
+              {
+              // eslint-disable-next-line @next/next/no-img-element
+              }<img
                 src={s.src}
+                alt="Sponsor logo"
                 className="max-h-[16rem] max-w-[16rem]"
                 style={{
-                  filter: "sepia(5) saturate(100) grayscale(1) contrast(1000)  invert(0.87) sepia(15%) saturate(2736%) hue-rotate(15deg) brightness(111%) contrast(100)",
+                  filter:
+                    "sepia(5) saturate(100) grayscale(1) contrast(1000)  invert(0.87) sepia(15%) saturate(2736%) hue-rotate(15deg) brightness(111%) contrast(100)",
                 }}
               />
             </a>
           </div>
         ))}
         <div className="rounded-lg px-10 py-20 opacity-50 hover:opacity-100 transition-opacity duration-200">
-          <a href="mailto:info@baristalive.cz">
+          <a href={lang.contacts.email}>
             <PlusIcon />
             <h4 className="mt-4">{lang.sponsors.add}</h4>
           </a>
@@ -184,8 +190,7 @@ const Sponsors = () => {
       </div>
     </section>
   );
-
-}
+};
 
 const Organizers = () => {
   const params = useParams();
@@ -212,13 +217,13 @@ const Footer = () => {
       <nav className="text-center font-medium text-xl">
         <div>{lang.contact}</div>
         <div className="flex justify-center gap-4 mt-2 pb-40">
-          <a className="inverted" href="#">
+          <a className="inverted" href={lang.contacts.facebook}>
             <FacebookIcon />
           </a>
-          <a className="inverted" href="#">
+          <a className="inverted" href={lang.contacts.instagram}>
             <InstagramIcon />
           </a>
-          <a className="h-[34px] w-[34px]" href="mailto:info@baristalive.cz">
+          <a className="h-[34px] w-[34px]" href={lang.contacts.email}>
             <AtIcon />
           </a>
         </div>
