@@ -27,7 +27,7 @@ const Page1 = () => {
               {lang.title}
             </h1>
           </div>
-          <div className="text-right  font-medium text-3xl leading-none">
+          <div className="text-right font-medium text-3xl leading-none">
             <nav className="hidden lg:inline-block pr-10 align-top">
               <a href={lang.contacts.tickets}>{lang.tickets}</a>
             </nav>
