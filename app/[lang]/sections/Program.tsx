@@ -12,7 +12,7 @@ export const Program = () => {
           Program
         </h2>
       </div>
-      {lang.program.map((d, idx) => (
+      {lang.program.length > 0 ? lang.program.map((d, idx) => (
         <div
           key={d.title}
           className={`${idx % 2 ? "" : "inverted"} p-2 md:p-20`}
@@ -46,7 +46,9 @@ export const Program = () => {
             </dl>
           </div>
         </div>
-      ))}
+      )) : <div className="text-3xl pt-32 min-h-[50vh] inverted">
+        {lang.programLoadingText}
+        </div>}
     </section>
   );
 };
