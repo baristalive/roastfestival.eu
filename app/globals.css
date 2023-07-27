@@ -23,31 +23,36 @@ body {
   color: rgb(var(--background-rgb));
 }
 
-.overlay::before {
+.wrapper::before {
   content: "";
   position: fixed;
   top: -100px;
   left: 0;
   right: 0;
   bottom: -100px;
-  background: linear-gradient(
-    rgb(var(--background-rgb)),
-    rgb(var(--background-rgb)) 50%,
-    rgb(var(--foreground-rgb)) 0
-  );
+  background:
+    rgb(var(--foreground-rgb));
   z-index: -2;
 }
 
-.overlay::after {
+.wrapper {
+  z-index: 0;
+}
+.with-overlay {
+  z-index: 0;
+  margin-top: -50vh;
+}
+
+.overlay {
   content: "";
-  top: -999px;
+  top: 0;
   left: 0;
   right: 0;
-  height: calc(999px + 49%);
-  bottom: 50%;
+  height: 49vh;
   pointer-events: none;
   background: rgb(var(--invert-rgb));
-  position: fixed;
+  position: sticky;
+  z-index: 4;
   mix-blend-mode: difference;
   z-index: 4;
 }

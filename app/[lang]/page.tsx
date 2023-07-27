@@ -15,18 +15,23 @@ type HomePropsType = {
 };
 
 const Home = ({ params: { lang } }: HomePropsType) => (
-  <div className="overlay">
+  <div className="wrapper">
     <div className="lang inverted uppercase">
       <Link href={lang === "cz" ? "./en" : "./cz"}>
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
     </div>
-    <Header />
-    <About />
-    <Filler />
-    <Sponsors />
-    <Program />
-    <BuyTickets />
+    <div>
+      <div className="overlay" />
+      <div className="with-overlay">
+        <Header />
+        <About />
+        <Filler />
+        <Sponsors />
+        <Program />
+        <BuyTickets />
+      </div>
+    </div>
     <Map />
     <Organizers />
     <Footer />
