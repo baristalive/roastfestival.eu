@@ -10,7 +10,29 @@
     "contact": "Kontakt",
     "date": "16-17/9/2023",
     "location": {
-        "title": "Místo konání"
+        "title": "Lokace",
+        "addressTitle": "Adresa",
+        "howToTitle": "Jak se na festival dostanete?",
+        "parking": {
+            "lot": {
+                "title": "Parkoviště Bratislavská",
+                "priceWhen": "Zpoplatněno: Po-Pá 24 hod.",
+                "priceAmount": "Sazba: 60 min/den zdarma, pak 30 Kč/hod"
+            },
+            "zones": {
+                "title": "Parkování v městské zóně nebo na ulici",
+                "pricing": [
+                    {
+                        "title": "Zóna B: Po-Pá 24 hod.",
+                        "price": "Sazba: 30 Kč/hod."
+                    },
+                    {
+                        "title": "Zóna C: Po-Pá 6-17 hod.",
+                        "price": "Sazba: 20 Kč/hod."
+                    }
+                ]
+            }
+        }
     },
     "organizers": {
         "text": [
@@ -19,8 +41,7 @@
         "title": "O nás"
     },
     "place": "Káznice, Brno",
-    "program": [
-    ],
+    "program": [],
     "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
     "tickets": "Vstupenky",
     "title": "The first coffee roasters festival in Brno",

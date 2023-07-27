@@ -9,7 +9,7 @@ export const Footer = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <footer className="inverted h-[50vh] p-10 flex flex-col justify-end">
+    <footer className="inverted min-h-[50vh] p-10 flex flex-col justify-end">
       <nav className="text-center font-medium text-xl">
         <div>{lang.contact}</div>
         <div className="flex justify-center gap-4 mt-2 pb-40">

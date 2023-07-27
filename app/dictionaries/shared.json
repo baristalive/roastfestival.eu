@@ -7,6 +7,15 @@
         "tickets": "",
         "facebook": "",
         "instagram": "",
-        "email": "mailto:info@baristalive.cz"
+        "email": "mailto:info@baristalive.cz",
+        "kaznice_loc": "https://goo.gl/maps/u5diB2gL4AtHce8JA",
+        "kaznice_web": "https://kaznice.art/"
+    },
+    "location": {
+        "stops": {
+            "kornerova": "Körnerova",
+            "tkalcovska": "Tkalcovská",
+            "kaznice": "Káznice"
+        }
     }
 }

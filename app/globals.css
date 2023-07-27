@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root,
+.inverted-vars-reset {
   --background-rgb: 255, 248, 0;
-  --invert-rgb: 255, 248, 0;
   --foreground-rgb: 0, 0, 0;
+}
+
+.inverted-vars {
+  --background-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 248, 0;
 }
 
 html {
@@ -54,7 +59,22 @@ body {
   position: sticky;
   z-index: 4;
   mix-blend-mode: difference;
-  z-index: 4;
+}
+
+.mapboxgl-ctrl-group {
+  box-shadow: none !important;
+  background: none !important;
+}
+.mapboxgl-ctrl-group button+button {
+  border: none !important;
+}
+.mapboxgl-ctrl-zoom-in, .mapboxgl-ctrl-zoom-out {
+    background-color: white !important;
+    filter: invert(1);
+    border-radius: 50% !important;
+    height: 64px !important;
+    width: 64px !important;
+    margin: 10px !important;
 }
 
 .lang {
