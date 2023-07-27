@@ -13,6 +13,10 @@
     "title": "Lokace",
     "addressTitle": "Adresa",
     "howToTitle": "Jak se na festival dostanete?",
+    "means": {
+      "car": "Autem",
+      "public": "MHD"
+    },
     "parking": {
       "lot": {
         "title": "Parkoviště Bratislavská",

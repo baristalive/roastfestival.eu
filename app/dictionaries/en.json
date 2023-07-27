@@ -20,6 +20,10 @@
     "title": "Location",
     "addressTitle": "Address",
     "howToTitle": "How to get there?",
+    "means": {
+      "car": "Car",
+      "public": "Tram"
+    },
     "parking": {
       "lot": {
         "title": "Bratislavská Parking",

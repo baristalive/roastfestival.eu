@@ -16,7 +16,7 @@ export const Map = () => {
       <h2 className="pb-36 pt-20 text-4xl font-medium uppercase">
         {lang.location.title}
       </h2>
-      <div className="px-20 text-lg font-medium uppercase text-black">
+      <div className="h-[70vh] px-8 text-lg font-medium uppercase text-black lg:px-20">
         <ReactMap
           initialViewState={{
             longitude: 16.6225864,
@@ -24,7 +24,7 @@ export const Map = () => {
             zoom: 15,
           }}
           scrollZoom={false}
-          style={{ width: "100%", height: " calc(70vh)", borderRadius: "40px" }}
+          style={{ width: "100%", height: "100%", borderRadius: "40px" }}
           mapStyle="https://api.maptiler.com/maps/677f7646-e8c2-42a9-bb44-6ff05d7e79f0/style.json?key=rHR8mWmLUwZBlvh6y60f"
         >
           <Marker latitude={49.1992978} longitude={16.6232864} anchor="bottom">
@@ -53,7 +53,7 @@ export const Map = () => {
           {lang.location.howToTitle}
         </h2>
       </div>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 place-content-center pt-20 text-left md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 place-content-center gap-20 pt-20 md:grid-cols-2 lg:gap-4 lg:text-left">
         <div className="space-y-10">
           <h2 className="pb-20 text-4xl font-medium uppercase lg:hidden">
             {lang.location.addressTitle}
@@ -64,7 +64,7 @@ export const Map = () => {
             <br />
             602 00 Brno-Střed-Zábrdovice
           </p>
-          <div className="mt-2 flex gap-4">
+          <div className=" flex justify-center gap-4 lg:justify-start">
             <a className="h-[34px] w-[34px]" href={lang.contacts.kaznice_loc}>
               <LocationIcon />
             </a>
@@ -77,21 +77,23 @@ export const Map = () => {
           <h2 className="pb-20 text-4xl font-medium uppercase lg:hidden">
             {lang.location.howToTitle}
           </h2>
-          <div className="grid grid-cols-[3.5em_1fr_2fr] gap-x-3">
+          <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[3.5em_1fr_2fr] lg:gap-x-3">
             <div className="row-span-2 mt-[-8px]">
               <TramIcon size="3.5em" />
             </div>
-            <div className="row-span-2 text-4xl">MHD</div>
+            <div className="row-span-2 text-4xl">
+              {lang.location.means.public}
+            </div>
             <div className="text-4xl">
               {lang.location.stops.tkalcovska} - 4, 7, 2
             </div>
-            <div className="mb-20 mt-10 text-4xl">
+            <div className="mb-20 text-4xl lg:mt-10">
               {lang.location.stops.kornerova} - 4, 7, 2
             </div>
             <div className="row-span-2  mt-[-8px]">
               <CarIcon size="3.5em" />
             </div>
-            <div className="row-span-2 text-4xl">Autem</div>
+            <div className="row-span-2 text-4xl">{lang.location.means.car}</div>
             <div className="space-y-2">
               <h5 className="text-4xl">{lang.location.parking.lot.title}</h5>
               <ul>
