@@ -7,10 +7,10 @@ export const Organizers = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <section className="inverted py-20 text-center">
-      <h2 className="uppercase font-medium text-4xl py-20 ">
+      <h2 className="py-20 text-4xl font-medium uppercase ">
         {lang.organizers.title}
       </h2>
-      <div className="space-y-10 mx-auto px-6 lg:px-0 lg:text-4xl text-xl max-w-screen-lg">
+      <div className="mx-auto max-w-screen-lg space-y-10 px-6 text-xl lg:px-0 lg:text-4xl">
         {lang.organizers.text.map((p) => (
           <p key={p}>{p}</p>
         ))}

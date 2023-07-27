@@ -1,4 +1,4 @@
-const TramIcon = ({size = 34} : {size?: string | number}) => (
+const TramIcon = ({ size = 34 }: { size?: string | number }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

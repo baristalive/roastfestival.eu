@@ -2,8 +2,8 @@
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 
-import ReactMap, {Marker, NavigationControl} from 'react-map-gl/maplibre';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
+import "maplibre-gl/dist/maplibre-gl.css";
 import TramIcon from "@/app/icons/tram";
 import CarIcon from "@/app/icons/car";
 import LocationIcon from "@/app/icons/location";
@@ -13,10 +13,10 @@ export const Map = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <section className="inverted py-20 text-center">
-      <h2 className="uppercase font-medium text-4xl pt-20 pb-36">
+      <h2 className="pb-36 pt-20 text-4xl font-medium uppercase">
         {lang.location.title}
       </h2>
-      <div className="px-20 text-black uppercase text-lg font-medium">
+      <div className="px-20 text-lg font-medium uppercase text-black">
         <ReactMap
           initialViewState={{
             longitude: 16.6225864,
@@ -45,26 +45,26 @@ export const Map = () => {
           <NavigationControl position="bottom-right" showCompass={false} />
         </ReactMap>
       </div>
-      <div className="hidden text-left max-w-7xl pt-20 mx-auto lg:grid grid-cols-2">
-        <h2 className="uppercase font-medium text-4xl">
+      <div className="mx-auto hidden max-w-7xl grid-cols-2 pt-20 text-left lg:grid">
+        <h2 className="text-4xl font-medium uppercase">
           {lang.location.addressTitle}
         </h2>
-        <h2 className="uppercase font-medium text-4xl">
+        <h2 className="text-4xl font-medium uppercase">
           {lang.location.howToTitle}
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-content-center text-left max-w-7xl pt-20 mx-auto">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 place-content-center pt-20 text-left md:grid-cols-2">
         <div className="space-y-10">
-          <h2 className="uppercase font-medium text-4xl pb-20 lg:hidden">
+          <h2 className="pb-20 text-4xl font-medium uppercase lg:hidden">
             {lang.location.addressTitle}
           </h2>
-          <p className="uppercase font-medium text-4xl">Káznice Brno</p>
-          <p className="font-medium text-4xl">
+          <p className="text-4xl font-medium uppercase">Káznice Brno</p>
+          <p className="text-4xl font-medium">
             Bratislavská 249/68,
             <br />
             602 00 Brno-Střed-Zábrdovice
           </p>
-          <div className="flex gap-4 mt-2">
+          <div className="mt-2 flex gap-4">
             <a className="h-[34px] w-[34px]" href={lang.contacts.kaznice_loc}>
               <LocationIcon />
             </a>
@@ -74,7 +74,7 @@ export const Map = () => {
           </div>
         </div>
         <div className="space-y-10">
-          <h2 className="uppercase font-medium text-4xl pb-20 lg:hidden">
+          <h2 className="pb-20 text-4xl font-medium uppercase lg:hidden">
             {lang.location.howToTitle}
           </h2>
           <div className="grid grid-cols-[3.5em_1fr_2fr] gap-x-3">
@@ -85,7 +85,7 @@ export const Map = () => {
             <div className="text-4xl">
               {lang.location.stops.tkalcovska} - 4, 7, 2
             </div>
-            <div className="text-4xl mt-10 mb-20">
+            <div className="mb-20 mt-10 text-4xl">
               {lang.location.stops.kornerova} - 4, 7, 2
             </div>
             <div className="row-span-2  mt-[-8px]">
@@ -103,11 +103,9 @@ export const Map = () => {
                 </li>
               </ul>
             </div>
-            <div className="space-y-2 mt-10">
-              <h5 className="text-4xl">
-                {lang.location.parking.zones.title}
-              </h5>
-              {lang.location.parking.zones.pricing.map(z => (
+            <div className="mt-10 space-y-2">
+              <h5 className="text-4xl">{lang.location.parking.zones.title}</h5>
+              {lang.location.parking.zones.pricing.map((z) => (
                 <ul key={z.title}>
                   <li className="text-2xl">{z.title}</li>
                   <li className="text-2xl">{z.price}</li>

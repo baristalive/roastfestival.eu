@@ -9,22 +9,22 @@ export const Header = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <section className="h-screen flex flex-col p-8 content-stretch page1">
+    <section className="page1 flex h-screen flex-col content-stretch p-8">
       <div className="logo" />
       <div className="flex flex-col gap-8">
-        <header className="mx-auto lg:grid lg:grid-cols-[1fr_minmax(0,_50vw)_1fr] w-full max-w-[1900px]">
-          <div className="hidden lg:block font-medium text-xl lg:text-3xl leading-none">
+        <header className="mx-auto w-full max-w-[1900px] lg:grid lg:grid-cols-[1fr_minmax(0,_50vw)_1fr]">
+          <div className="hidden text-xl font-medium leading-none lg:block lg:text-3xl">
             {lang.date}
             <br />
             {lang.place}
           </div>
-          <div className="text-center pt-12 lg:pt-6">
-            <h1 className="uppercase max-w-lg mx-auto font-medium text-3xl lg:text-4xl">
+          <div className="pt-12 text-center lg:pt-6">
+            <h1 className="mx-auto max-w-lg text-3xl font-medium uppercase lg:text-4xl">
               {lang.title}
             </h1>
           </div>
-          <div className="text-right font-medium text-3xl leading-none">
-            <nav className="hidden lg:inline-block pr-10 align-top">
+          <div className="text-right text-3xl font-medium leading-none">
+            <nav className="hidden pr-10 align-top lg:inline-block">
               <a href={lang.contacts.tickets}>{lang.tickets}</a>
             </nav>
             <nav className="hidden lg:inline-block ">
@@ -39,25 +39,25 @@ export const Header = () => {
             </nav>
           </div>
         </header>
-        <div className="lg:hidden font-medium text-lg text-center">
+        <div className="text-center text-lg font-medium lg:hidden">
           {lang.date}
           <br />
           {lang.place}
         </div>
       </div>
-      <div className="grow logo-inline" />
-      <div className="lg:hidden text-center mx-auto lg:py-20 py-10">
+      <div className="logo-inline grow" />
+      <div className="mx-auto py-10 text-center lg:hidden lg:py-20">
         <a
-          className="rounded-full py-3 px-8 border border-current text-lg lg:text-2xl font-medium"
+          className="rounded-full border border-current px-8 py-3 text-lg font-medium lg:text-2xl"
           href={lang.contacts.tickets}
         >
           {lang.buyTickets}
         </a>
       </div>
-      <div className="text-lg lg:text-4xl text-center lg:mb-12">
-        <div className="max-w-md mx-auto">{lang.programLoadingText}</div>
+      <div className="text-center text-lg lg:mb-12 lg:text-4xl">
+        <div className="mx-auto max-w-md">{lang.programLoadingText}</div>
       </div>
-      <div className="lg:text-6xl text-3xl text-center lg:mb-12">
+      <div className="text-center text-3xl lg:mb-12 lg:text-6xl">
         <ArrowIcon />
       </div>
     </section>

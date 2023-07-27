@@ -6,9 +6,9 @@ export const BuyTickets = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <section className="text-center mx-auto py-48">
+    <section className="mx-auto py-48 text-center">
       <a
-        className="rounded-full lg:py-6 py-3 lg:px-12 px-8 border border-current text-lg lg:text-2xl font-medium"
+        className="rounded-full border border-current px-8 py-3 text-lg font-medium lg:px-12 lg:py-6 lg:text-2xl"
         href={lang.contacts.tickets}
       >
         {lang.buyTickets}

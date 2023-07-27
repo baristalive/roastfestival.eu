@@ -1,52 +1,52 @@
 {
-    "about": {
-        "text": [
-            "Discover the world of coffee at the first Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
-            "Immerse yourself in a sensory journey, exploring diverse brews, engaging in insightful conversations, and experiencing the vibrant atmosphere that awaits you."
-        ],
-        "title": "About"
-    },
-    "buyTickets": "Buy tickets",
-    "contact": "Contact us",
-    "date": "16-17/9/2023",
-    "organizers": {
-        "text": [
-            "We are a group of coffee enthusiasts and professionals who decided to bring the culture of European coffee festivals to Brno. Organizers work in a variety of specialty coffee shops, roasters, bars and other places. What binds us together is our love for specialty coffee and fine gastronomy."
-        ],
-        "title": "Organizers"
-    },
-    "place": "Káznice, Brno",
-    "location": {
-        "title": "Location",
-        "addressTitle": "Address",
-        "howToTitle": "How to get there?",
-        "parking": {
-            "lot": {
-                "title": "Bratislavská Parking",
-                "priceWhen": "Paid: Mon-Fri all day.",
-                "priceAmount": "Price: first 60 min for free, hourly rate 30 Kč."
-            },
-            "zones": {
-                "title": "Residential parking zones",
-                "pricing": [
-                    {
-                        "title": "Zone B: Mon-Fri all day.",
-                        "price": "Price: 30 Kč/hour."
-                    },
-                    {
-                        "title": "Zone C: Mon-Fri 6AM - 17PM.",
-                        "price": "Price: 20 Kč/hour."
-                    }
-                ]
-            }
-        }
-    },
-    "program": [],
-    "programLoadingText": "We are still roasting the festival program for you.",
-    "tickets": "Tickets",
-    "title": "The first coffee roasters festival in Brno",
-    "sponsors": {
-        "title": "Sponsors",
-        "add": "Become a sponsor"
+  "about": {
+    "text": [
+      "Discover the world of coffee at the first Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
+      "Immerse yourself in a sensory journey, exploring diverse brews, engaging in insightful conversations, and experiencing the vibrant atmosphere that awaits you."
+    ],
+    "title": "About"
+  },
+  "buyTickets": "Buy tickets",
+  "contact": "Contact us",
+  "date": "16-17/9/2023",
+  "organizers": {
+    "text": [
+      "We are a group of coffee enthusiasts and professionals who decided to bring the culture of European coffee festivals to Brno. Organizers work in a variety of specialty coffee shops, roasters, bars and other places. What binds us together is our love for specialty coffee and fine gastronomy."
+    ],
+    "title": "Organizers"
+  },
+  "place": "Káznice, Brno",
+  "location": {
+    "title": "Location",
+    "addressTitle": "Address",
+    "howToTitle": "How to get there?",
+    "parking": {
+      "lot": {
+        "title": "Bratislavská Parking",
+        "priceWhen": "Paid: Mon-Fri all day.",
+        "priceAmount": "Price: first 60 min for free, hourly rate 30 Kč."
+      },
+      "zones": {
+        "title": "Residential parking zones",
+        "pricing": [
+          {
+            "title": "Zone B: Mon-Fri all day.",
+            "price": "Price: 30 Kč/hour."
+          },
+          {
+            "title": "Zone C: Mon-Fri 6AM - 17PM.",
+            "price": "Price: 20 Kč/hour."
+          }
+        ]
+      }
     }
+  },
+  "program": [],
+  "programLoadingText": "We are still roasting the festival program for you.",
+  "tickets": "Tickets",
+  "title": "The first coffee roasters festival in Brno",
+  "sponsors": {
+    "title": "Sponsors",
+    "add": "Become a sponsor"
+  }
 }

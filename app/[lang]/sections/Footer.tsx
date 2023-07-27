@@ -9,10 +9,10 @@ export const Footer = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <footer className="inverted min-h-[50vh] p-10 flex flex-col justify-end">
-      <nav className="text-center font-medium text-xl">
+    <footer className="inverted flex min-h-[50vh] flex-col justify-end p-10">
+      <nav className="text-center text-xl font-medium">
         <div>{lang.contact}</div>
-        <div className="flex justify-center gap-4 mt-2 pb-40">
+        <div className="mt-2 flex justify-center gap-4 pb-40">
           <a className="inverted" href={lang.contacts.facebook}>
             <FacebookIcon />
           </a>
@@ -24,8 +24,8 @@ export const Footer = () => {
           </a>
         </div>
       </nav>
-      <div className="max-w-4xl w-full mx-auto">
-        <ul className="space-y-2 text-lg text-right">
+      <div className="mx-auto w-full max-w-4xl">
+        <ul className="space-y-2 text-right text-lg">
           <li className="font-regular">
             &copy; {`${new Date().getFullYear()}`} Barista Live, z. s.
           </li>

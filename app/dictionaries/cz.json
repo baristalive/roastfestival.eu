@@ -1,52 +1,52 @@
 {
-    "about": {
-        "text": [
-            "Festival je brněnskou variací na evropské kávové festivaly. Inspiraci získáváme mezi etablovanými akcemi pořádanými například v Berlíně, Krakowě, Amsterdamu a v řadě dalších měst. První ročník přináší do Brna nejméně třicítku českých i zahraničních pražíren, které se představí na třech espresso a třech brew-barech v historickém prostoru brněnské Káznice. Těšit se můžete na řadu workshopů, přednášek, diskusí a soutěží. Pro baristy, pražiče a další kávové profesionály je navíc v sobotu připravena afterparty, s cílem propojení kontaktů, sdílení zkušeností a prohlubování vztahů.",
-            "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
-        ],
-        "title": "O festivalu"
-    },
-    "buyTickets": "Koupit vstupenky",
-    "contact": "Kontakt",
-    "date": "16-17/9/2023",
-    "location": {
-        "title": "Lokace",
-        "addressTitle": "Adresa",
-        "howToTitle": "Jak se na festival dostanete?",
-        "parking": {
-            "lot": {
-                "title": "Parkoviště Bratislavská",
-                "priceWhen": "Zpoplatněno: Po-Pá 24 hod.",
-                "priceAmount": "Sazba: 60 min/den zdarma, pak 30 Kč/hod"
-            },
-            "zones": {
-                "title": "Parkování v městské zóně nebo na ulici",
-                "pricing": [
-                    {
-                        "title": "Zóna B: Po-Pá 24 hod.",
-                        "price": "Sazba: 30 Kč/hod."
-                    },
-                    {
-                        "title": "Zóna C: Po-Pá 6-17 hod.",
-                        "price": "Sazba: 20 Kč/hod."
-                    }
-                ]
-            }
-        }
-    },
-    "organizers": {
-        "text": [
-            "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu evropských kávových festivalů. Jednotlivé členy našeho teamu můžete potkat za barem několika brněnských kavárnách, pražírnách, barech a dalších podnicích. Spojuje nás dohromady láska k výběrové kávě a gastronomii."
-        ],
-        "title": "O nás"
-    },
-    "place": "Káznice, Brno",
-    "program": [],
-    "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
-    "tickets": "Vstupenky",
-    "title": "The first coffee roasters festival in Brno",
-    "sponsors": {
-        "title": "Sponzoři",
-        "add": "Stát se sponzorem"
+  "about": {
+    "text": [
+      "Festival je brněnskou variací na evropské kávové festivaly. Inspiraci získáváme mezi etablovanými akcemi pořádanými například v Berlíně, Krakowě, Amsterdamu a v řadě dalších měst. První ročník přináší do Brna nejméně třicítku českých i zahraničních pražíren, které se představí na třech espresso a třech brew-barech v historickém prostoru brněnské Káznice. Těšit se můžete na řadu workshopů, přednášek, diskusí a soutěží. Pro baristy, pražiče a další kávové profesionály je navíc v sobotu připravena afterparty, s cílem propojení kontaktů, sdílení zkušeností a prohlubování vztahů.",
+      "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
+    ],
+    "title": "O festivalu"
+  },
+  "buyTickets": "Koupit vstupenky",
+  "contact": "Kontakt",
+  "date": "16-17/9/2023",
+  "location": {
+    "title": "Lokace",
+    "addressTitle": "Adresa",
+    "howToTitle": "Jak se na festival dostanete?",
+    "parking": {
+      "lot": {
+        "title": "Parkoviště Bratislavská",
+        "priceWhen": "Zpoplatněno: Po-Pá 24 hod.",
+        "priceAmount": "Sazba: 60 min/den zdarma, pak 30 Kč/hod"
+      },
+      "zones": {
+        "title": "Parkování v městské zóně nebo na ulici",
+        "pricing": [
+          {
+            "title": "Zóna B: Po-Pá 24 hod.",
+            "price": "Sazba: 30 Kč/hod."
+          },
+          {
+            "title": "Zóna C: Po-Pá 6-17 hod.",
+            "price": "Sazba: 20 Kč/hod."
+          }
+        ]
+      }
     }
+  },
+  "organizers": {
+    "text": [
+      "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu evropských kávových festivalů. Jednotlivé členy našeho teamu můžete potkat za barem několika brněnských kavárnách, pražírnách, barech a dalších podnicích. Spojuje nás dohromady láska k výběrové kávě a gastronomii."
+    ],
+    "title": "O nás"
+  },
+  "place": "Káznice, Brno",
+  "program": [],
+  "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
+  "tickets": "Vstupenky",
+  "title": "The first coffee roasters festival in Brno",
+  "sponsors": {
+    "title": "Sponzoři",
+    "add": "Stát se sponzorem"
+  }
 }

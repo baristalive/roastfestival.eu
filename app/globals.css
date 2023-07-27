@@ -35,8 +35,7 @@ body {
   left: 0;
   right: 0;
   bottom: -100px;
-  background:
-    rgb(var(--foreground-rgb));
+  background: rgb(var(--foreground-rgb));
   z-index: -2;
 }
 
@@ -65,16 +64,17 @@ body {
   box-shadow: none !important;
   background: none !important;
 }
-.mapboxgl-ctrl-group button+button {
+.mapboxgl-ctrl-group button + button {
   border: none !important;
 }
-.mapboxgl-ctrl-zoom-in, .mapboxgl-ctrl-zoom-out {
-    background-color: white !important;
-    filter: invert(1);
-    border-radius: 50% !important;
-    height: 64px !important;
-    width: 64px !important;
-    margin: 10px !important;
+.mapboxgl-ctrl-zoom-in,
+.mapboxgl-ctrl-zoom-out {
+  background-color: white !important;
+  filter: invert(1);
+  border-radius: 50% !important;
+  height: 64px !important;
+  width: 64px !important;
+  margin: 10px !important;
 }
 
 .lang {
