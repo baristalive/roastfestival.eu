@@ -55,7 +55,7 @@ body {
   right: 0;
   height: 49vh;
   pointer-events: none;
-  background: rgb(var(--invert-rgb));
+  background: rgb(var(--background-rgb));
   position: sticky;
   z-index: 4;
   mix-blend-mode: difference;
