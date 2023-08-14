@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ROAST!",
-  description: "The first coffee roasters festival in Brno",
+  description: "Coffee roasters festival in Brno",
 };
 
 export default function RootLayout({

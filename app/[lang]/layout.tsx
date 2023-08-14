@@ -6,7 +6,7 @@ import dictionaries from "../dictionaries/all";
 const figtree = Figtree({ subsets: ["latin", "latin-ext"] });
 export const metadata: Metadata = {
   title: "ROAST!",
-  description: "The first coffee roasters festival in Brno",
+  description: "Coffee roasters festival in Brno",
 };
 
 export async function generateStaticParams() {

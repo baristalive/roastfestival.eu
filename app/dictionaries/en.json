@@ -1,7 +1,7 @@
 {
   "about": {
     "text": [
-      "Discover the world of coffee at the first Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
+      "Discover the world of coffee at the Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
       "Immerse yourself in a sensory journey, exploring diverse brews, engaging in insightful conversations, and experiencing the vibrant atmosphere that awaits you."
     ],
     "title": "About"
@@ -48,7 +48,7 @@
   "program": [],
   "programLoadingText": "We are still roasting the festival program for you.",
   "tickets": "Tickets",
-  "title": "The first coffee roasters festival in Brno",
+  "title": "Coffee roasters festival in Brno",
   "sponsors": {
     "title": "Sponsors",
     "add": "Become a sponsor"
