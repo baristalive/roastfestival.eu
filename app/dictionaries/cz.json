@@ -56,5 +56,31 @@
   "promotedRoasters": {
     "title": "Pražírny",
     "text": ["Mimo jiné se můžete těšit na prezentaci následujících pražíren."]
-  }
+  },
+  "info": [
+    {
+      "title": "Co je Roast!? A co od něj mohu čekat?",
+      "text": "V ceně vstupného je zahrnuta veškerá konzumace kávy, kterou ochutnáte na našich espresso a brew barech a vstup na všechny workshopy, přednášky i cuppingy. Kávu pražíren, která ti zachutná, poté můžeš zakoupit buď přímo na barech, nebo v prodejním stánku."
+    },
+    {
+      "title": "Espresso bary",
+      "text": "Na našich barech se v určitých časových úsecích budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni! Na všech barech bude varianta ovesného mléka od OATLY. "
+    },
+    {
+      "title": "Brew bary",
+      "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům."
+    },
+    {
+      "title": "Workshopy a cuppingy",
+      "text": "Neznáš termín cupping? Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Výborně! Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky."
+    },
+    {
+      "title": "Přednášky",
+      "text": "Zajímá tě, čím si majitelé etablovaných podniků museli projít, když otevírali své kamenné děťátko? Chtěl/a by si vědět, jak funguje pražení nebo jaký je rozdíl mezi odpalovaným a kynutým těstem, které najdeš na pultu každého druhého podniku? Potom jsou pro tebe určené přednášky našich speciálních hostů. "
+    },
+    {
+      "title": "Máš už dost kafe?",
+      "text": "Dej si drink, pivko nebo domací limču. A na sladkém a slaném stánku jsou pro tebe k zakousnutí připraveny nejen sendviče, nebo věnečky se slaným karamelem!"
+    }
+  ]
 }

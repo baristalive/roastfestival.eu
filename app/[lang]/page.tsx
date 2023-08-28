@@ -4,12 +4,13 @@ import { Header } from "./sections/Header";
 import { About } from "./sections/About";
 import { Filler } from "./sections/Filler";
 import { Program } from "./sections/Program";
-import { BuyTickets } from "./sections/BuyTickets";
+import { Info } from "./sections/Info";
 import { Sponsors } from "./sections/Sponsors";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
 import { PromotedRoasters } from "./sections/PromotedRoasters";
+import { BuyTickets } from "./sections/BuyTickets";
 
 type HomePropsType = {
   params: { lang: SupportedLanguages };
@@ -31,9 +32,11 @@ const Home = ({ params: { lang } }: HomePropsType) => (
         <Sponsors />
         <Program />
         <BuyTickets />
+        <PromotedRoasters />
+        <Info />
+        <BuyTickets />
       </div>
     </div>
-    <PromotedRoasters />
     <Map />
     <Organizers />
     <Footer />

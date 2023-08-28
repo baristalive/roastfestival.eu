@@ -15,6 +15,7 @@
 
 html {
   font-size: 15px;
+  counter-reset: info-item;
 }
 
 section,
@@ -44,7 +45,7 @@ body {
 }
 .with-overlay {
   z-index: 0;
-  margin-top: -50vh;
+  margin-top: -51vh;
 }
 
 .overlay {
@@ -145,4 +146,19 @@ body {
   background-repeat: no-repeat;
   background-clip: padding-box;
   height: min(90vw, 800px);
+}
+
+.info-item {
+  counter-increment: info-item;
+}
+
+.info-item-count-before::before {
+  content: counter(info-item) "/";
+}
+.info-item-count-after::before {
+  content: "/" counter(info-item);
+}
+
+.info-item-count-before, .info-item-count-after {
+  line-height: 1em;
 }
