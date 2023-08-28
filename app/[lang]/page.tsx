@@ -9,6 +9,7 @@ import { Sponsors } from "./sections/Sponsors";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
+import { PromotedRoasters } from "./sections/PromotedRoasters";
 
 type HomePropsType = {
   params: { lang: SupportedLanguages };
@@ -32,6 +33,7 @@ const Home = ({ params: { lang } }: HomePropsType) => (
         <BuyTickets />
       </div>
     </div>
+    <PromotedRoasters />
     <Map />
     <Organizers />
     <Footer />

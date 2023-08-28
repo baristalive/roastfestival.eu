@@ -52,5 +52,11 @@
   "sponsors": {
     "title": "Sponsors",
     "add": "Become a sponsor"
+  },
+  "promotedRoasters": {
+    "title": "Coffee roasters",
+    "text": [
+      "Besides other activities, you can look forward to individual presentations of following coffee roasters."
+    ]
   }
 }

@@ -52,5 +52,9 @@
   "sponsors": {
     "title": "Sponzoři",
     "add": "Stát se sponzorem"
+  },
+  "promotedRoasters": {
+    "title": "Pražírny",
+    "text": ["Mimo jiné se můžete těšit na prezentaci následujících pražíren."]
   }
 }
