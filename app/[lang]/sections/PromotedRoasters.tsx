@@ -23,7 +23,7 @@ export const PromotedRoasters = () => {
           .sort(() => Math.random() - 0.5)
           .map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
-              <a href={s.href} target="_blank">
+              <a href={s.href} target="_blank" rel="external" title={s.alt}>
                 <Image
                   src={s.src}
                   alt={s.alt}
@@ -32,6 +32,7 @@ export const PromotedRoasters = () => {
                   height={180}
                   unoptimized
                 />
+                <span className="sr-only">{s.alt}</span>
               </a>
             </div>
           ))}

@@ -68,6 +68,7 @@ export const Map = () => {
             <a
               className="h-[34px] w-[34px]"
               href={lang.contacts.kaznice_loc}
+              rel="external"
               title="Káznice Brno - Google Maps"
             >
               <LocationIcon />
@@ -77,6 +78,7 @@ export const Map = () => {
               className="h-[34px] w-[34px]"
               href={lang.contacts.kaznice_web}
               title="Káznice Brno - Web"
+              rel="external"
             >
               <WebIcon />
               <span className="sr-only">Káznice Brno - Web</span>

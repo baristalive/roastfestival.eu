@@ -17,6 +17,7 @@ export const Footer = () => {
             className="inverted"
             href={lang.contacts.facebook}
             title="Facebook"
+            rel="external"
           >
             <FacebookIcon />
             <span className="sr-only">Facebook</span>
@@ -25,6 +26,7 @@ export const Footer = () => {
             className="inverted"
             href={lang.contacts.instagram}
             title="Instagram"
+            rel="external"
           >
             <InstagramIcon />
             <span className="sr-only">Instagram</span>
@@ -33,6 +35,7 @@ export const Footer = () => {
             className="h-[34px] w-[34px]"
             href={lang.contacts.email}
             title="E-Mail"
+            rel="author"
           >
             <AtIcon />
             <span className="sr-only">E-Mail</span>
@@ -42,7 +45,14 @@ export const Footer = () => {
       <div className="mx-auto w-full max-w-4xl">
         <ul className="space-y-2 text-right text-lg">
           <li className="font-regular">
-            &copy; {`${new Date().getFullYear()}`} Barista Live, z. s.
+            &copy; {`${new Date().getFullYear()}`}{" "}
+            <a
+              href="https://baristalive.cz"
+              rel="author"
+              title="Barista Live, z. s."
+            >
+              Barista Live, z. s.
+            </a>
           </li>
         </ul>
       </div>
