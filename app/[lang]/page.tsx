@@ -19,7 +19,7 @@ type HomePropsType = {
 const Home = ({ params: { lang } }: HomePropsType) => (
   <div className="wrapper">
     <div className="lang inverted uppercase">
-      <Link href={lang === "cz" ? "./en" : "./cz"}>
+      <Link href={lang === "cz" ? "./en" : "./cz"} rel="alternate">
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
     </div>
