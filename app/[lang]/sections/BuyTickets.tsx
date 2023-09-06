@@ -10,6 +10,7 @@ export const BuyTickets = () => {
       <a
         className="rounded-full border border-current px-8 py-3 text-lg font-medium lg:px-12 lg:py-6 lg:text-2xl"
         href={lang.contacts.tickets}
+        title={lang.buyTickets}
       >
         {lang.buyTickets}
       </a>

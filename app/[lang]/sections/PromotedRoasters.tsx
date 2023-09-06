@@ -17,16 +17,16 @@ export const PromotedRoasters = () => {
           <p key={p}>{p}</p>
         ))}
       </div>
-      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center text-xl md:gap-20 gap-2">
+      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 text-xl md:gap-20">
         {lang.promotedRoasters.content
           ?.filter((r) => !Boolean(r.hidden))
           .sort(() => Math.random() - 0.5)
-          .map((s: { href: string; src: string }) => (
+          .map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank">
                 <Image
                   src={s.src}
-                  alt="Promoted roaster logo"
+                  alt={s.alt}
                   className="max-h-[16rem] max-w-[16rem]"
                   width={180}
                   height={180}

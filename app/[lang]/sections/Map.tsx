@@ -65,11 +65,21 @@ export const Map = () => {
             602 00 Brno-Střed-Zábrdovice
           </p>
           <div className=" flex justify-center gap-4 lg:justify-start">
-            <a className="h-[34px] w-[34px]" href={lang.contacts.kaznice_loc}>
+            <a
+              className="h-[34px] w-[34px]"
+              href={lang.contacts.kaznice_loc}
+              title="Káznice Brno - Google Maps"
+            >
               <LocationIcon />
+              <span className="sr-only">Káznice Brno - Google Maps</span>
             </a>
-            <a className="h-[34px] w-[34px]" href={lang.contacts.kaznice_web}>
+            <a
+              className="h-[34px] w-[34px]"
+              href={lang.contacts.kaznice_web}
+              title="Káznice Brno - Web"
+            >
               <WebIcon />
+              <span className="sr-only">Káznice Brno - Web</span>
             </a>
           </div>
         </div>

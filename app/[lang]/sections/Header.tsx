@@ -25,15 +25,19 @@ export const Header = () => {
           </div>
           <div className="text-right text-3xl font-medium leading-none">
             <nav className="hidden pr-10 align-top lg:inline-block">
-              <a href={lang.contacts.tickets}>{lang.tickets}</a>
+              <a href={lang.contacts.tickets} title={lang.buyTickets}>
+                {lang.tickets}
+              </a>
             </nav>
             <nav className="hidden lg:inline-block ">
               <div className="flex justify-end gap-4">
-                <a href={lang.contacts.facebook}>
+                <a href={lang.contacts.facebook} title="Facebook">
                   <FacebookIcon />
+                  <span className="sr-only">Facebook</span>
                 </a>
-                <a href={lang.contacts.instagram}>
+                <a href={lang.contacts.instagram} title="Instagram">
                   <InstagramIcon />
+                  <span className="sr-only">Instagram</span>
                 </a>
               </div>
             </nav>
@@ -50,6 +54,7 @@ export const Header = () => {
         <a
           className="rounded-full border border-current px-8 py-3 text-lg font-medium lg:text-2xl"
           href={lang.contacts.tickets}
+          title={lang.buyTickets}
         >
           {lang.buyTickets}
         </a>

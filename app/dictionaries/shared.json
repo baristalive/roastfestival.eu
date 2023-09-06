@@ -18,52 +18,64 @@
     "content": [
       {
         "href": "https://www.chroast.cz/",
-        "src": "/promoted/chroast.png"
+        "src": "/promoted/chroast.png",
+        "alt": "Chroast"
       },
       {
         "href": "https://www.facebook.com/CCroastery",
         "src": "/promoted/coffee_culture.png",
+        "alt": "Coffee Culture",
         "hidden": true
       },
       {
         "href": "https://diroastery.sk/",
-        "src": "/promoted/diroastery.png"
+        "src": "/promoted/diroastery.png",
+        "alt": "Diamond's Roastery"
       },
       {
         "href": "https://www.instagram.com/ig_coffee_roasters/",
-        "src": "/promoted/ig.png"
+        "src": "/promoted/ig.png",
+        "alt": "IG Coffee Roasters"
       },
       {
         "href": "https://www.jizba.com/",
-        "src": "/promoted/jizba.png"
+        "src": "/promoted/jizba.png",
+        "alt": "Jizba"
       },
       {
         "href": "https://www.jonasreindl.at/",
-        "src": "/promoted/jonas_reindl.png"
+        "src": "/promoted/jonas_reindl.png",
+        "alt": "Jonas Reindl"
       },
       {
         "href": "https://shop.kikafe.cz/",
-        "src": "/promoted/kikafe.png"
+        "src": "/promoted/kikafe.png",
+        "alt": "Kikafe"
       },
       {
         "href": "https://www.mimacoffeeroastery.cz/",
-        "src": "/promoted/mima.png"
+        "src": "/promoted/mima.png",
+        "alt": "Mima Coffee Roastery"
       },
       {
         "href": "https://eshop.penerini.cz/",
-        "src": "/promoted/penerini.png"
+        "src": "/promoted/penerini.png",
+        "alt": "Penerini"
       },
       {
         "href": "https://poppybeans.cz/",
-        "src": "/promoted/poppy_beans.png"
+        "src": "/promoted/poppy_beans.png",
+        "alt": "Poppy Beans"
       },
       {
         "href": "https://www.facebook.com/punkt.cafe/",
-        "src": "/promoted/punkt.png"
+        "src": "/promoted/punkt.png",
+        "alt": "Punkt"
       },
       {
         "href": "https://www.veroni.cz/",
-        "src": "/promoted/veroni.png"
+        "src": "/promoted/veroni.png",
+        "alt": "Veroni"
       }
     ]
   },

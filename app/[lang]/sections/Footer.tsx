@@ -13,14 +13,29 @@ export const Footer = () => {
       <nav className="text-center text-xl font-medium">
         <div>{lang.contact}</div>
         <div className="mt-2 flex justify-center gap-4 pb-40">
-          <a className="inverted" href={lang.contacts.facebook}>
+          <a
+            className="inverted"
+            href={lang.contacts.facebook}
+            title="Facebook"
+          >
             <FacebookIcon />
+            <span className="sr-only">Facebook</span>
           </a>
-          <a className="inverted" href={lang.contacts.instagram}>
+          <a
+            className="inverted"
+            href={lang.contacts.instagram}
+            title="Instagram"
+          >
             <InstagramIcon />
+            <span className="sr-only">Instagram</span>
           </a>
-          <a className="h-[34px] w-[34px]" href={lang.contacts.email}>
+          <a
+            className="h-[34px] w-[34px]"
+            href={lang.contacts.email}
+            title="E-Mail"
+          >
             <AtIcon />
+            <span className="sr-only">E-Mail</span>
           </a>
         </div>
       </nav>
