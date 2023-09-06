@@ -58,6 +58,11 @@
         "alt": "Mima Coffee Roastery"
       },
       {
+        "href": "https://www.mittecoffee.cz/",
+        "src": "/promoted/mittecoffee.png",
+        "alt": "Mitte"
+      },
+      {
         "href": "https://eshop.penerini.cz/",
         "src": "/promoted/penerini.png",
         "alt": "Penerini"
@@ -71,6 +76,11 @@
         "href": "https://www.facebook.com/punkt.cafe/",
         "src": "/promoted/punkt.png",
         "alt": "Punkt"
+      },
+      {
+        "href": "https://theroses.cz/",
+        "src": "/promoted/the_roses.png",
+        "alt": "The Roses"
       },
       {
         "href": "https://www.veroni.cz/",
