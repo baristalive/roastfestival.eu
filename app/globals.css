@@ -159,6 +159,7 @@ body {
   content: "/" counter(info-item);
 }
 
-.info-item-count-before, .info-item-count-after {
+.info-item-count-before,
+.info-item-count-after {
   line-height: 1em;
 }

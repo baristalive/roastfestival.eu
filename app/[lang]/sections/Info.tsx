@@ -20,14 +20,13 @@ export const Info = () => {
           <div className={idx % 2 ? "text-right" : "text-left"}>
             <h2 className="py-12 text-4xl font-medium uppercase">
               <span
-                className={`info-item-count-before font-bold text-[2em] mr-6 lg:hidden ${
+                className={`info-item-count-before mr-6 text-[2em] font-bold lg:hidden ${
                   idx % 2 ? "hidden" : "inline"
                 }`}
-              >
-              </span>
+              ></span>
               {s.title}
               <span
-                className={`info-item-count-after font-bold text-[2em] ml-6 lg:hidden ${
+                className={`info-item-count-after ml-6 text-[2em] font-bold lg:hidden ${
                   idx % 2 ? "inline" : "hidden"
                 }`}
               />

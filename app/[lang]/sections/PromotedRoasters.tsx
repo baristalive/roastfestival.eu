@@ -17,9 +17,10 @@ export const PromotedRoasters = () => {
           <p key={p}>{p}</p>
         ))}
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-8 text-xl">
+      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center text-xl md:gap-20 gap-2">
         {lang.promotedRoasters.content
-          ?.sort(() => Math.random() - 0.5)
+          ?.filter((r) => !Boolean(r.hidden))
+          .sort(() => Math.random() - 0.5)
           .map((s: { href: string; src: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank">
@@ -27,8 +28,8 @@ export const PromotedRoasters = () => {
                   src={s.src}
                   alt="Promoted roaster logo"
                   className="max-h-[16rem] max-w-[16rem]"
-                  width={200}
-                  height={200}
+                  width={180}
+                  height={180}
                   unoptimized
                 />
               </a>
