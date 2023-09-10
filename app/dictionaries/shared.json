@@ -24,8 +24,7 @@
       {
         "href": "https://www.facebook.com/CCroastery",
         "src": "/promoted/coffee_culture.png",
-        "alt": "Coffee Culture",
-        "hidden": true
+        "alt": "Coffee Culture"
       },
       {
         "href": "https://diroastery.sk/",
@@ -46,6 +45,11 @@
         "href": "https://www.jonasreindl.at/",
         "src": "/promoted/jonas_reindl.png",
         "alt": "Jonas Reindl"
+      },
+      {
+        "href": "https://www.kaldi.cz/",
+        "src": "/promoted/kaldi.png",
+        "alt": "Kaldi Fresh Coffee Bar"
       },
       {
         "href": "https://shop.kikafe.cz/",
