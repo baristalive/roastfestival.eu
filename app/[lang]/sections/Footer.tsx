@@ -43,7 +43,17 @@ export const Footer = () => {
         </div>
       </nav>
       <div className="mx-auto w-full max-w-4xl">
-        <ul className="space-y-2 text-right text-lg">
+        <ul className="space-y-4 text-right text-lg">
+          <li className="font-regular text-sm">
+            Artwork by sugeng riyanto,
+            <br /> Muhammad Nur Auliady Pamungkas,
+            <br /> and Cuputo
+            <br /> from{" "}
+            <a href="https://thenounproject.com/" target="_blank">
+              Noun Project
+            </a>{" "}
+            (CC BY 3.0)
+          </li>
           <li className="font-regular">
             &copy; {`${new Date().getFullYear()}`}{" "}
             <a

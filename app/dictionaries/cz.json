@@ -42,8 +42,246 @@
     "title": "O nás"
   },
   "place": "Káznice, Brno",
-  "program": [],
-  "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
+  "programCategory": {
+    "lecture": "Přednášky",
+    "workshop": "Workshop",
+    "espresso": "Espresso bar",
+    "espresso_milk": "Espresso bar s mlékem",
+    "brew": "Brew bar"
+  },
+  "program": [
+    {
+      "title": "Den 1",
+      "date": "16/9",
+      "schedule": [
+        {
+          "category": "espresso",
+          "schedule": [
+            {
+              "time": "11:00 - 14:00",
+              "title": "Chroast"
+            },
+            {
+              "time": "14:30 - 17:30",
+              "title": "IG Coffee Roasters"
+            }
+          ]
+        },
+        {
+          "category": "espresso_milk",
+          "schedule": [
+            {
+              "time": "10:30 - 13:00",
+              "title": "Kikafe"
+            },
+            {
+              "time": "11:00 - 14:00",
+              "title": "Jonas Reindl"
+            },
+            {
+              "time": "14:00 - 17:30",
+              "title": "The Roses"
+            },
+            {
+              "time": "14:30 - 17:30",
+              "title": "Punkt"
+            }
+          ]
+        },
+        {
+          "category": "brew",
+          "schedule": [
+            {
+              "time": "10:30 - 13:30",
+              "title": "Poppy Beans"
+            },
+            {
+              "time": "10:30 - 13:00",
+              "title": "Jizba"
+            },
+            {
+              "time": "11:00 - 14:00",
+              "title": "Mitte"
+            },
+            {
+              "time": "14:00 - 17:00",
+              "title": "Penerini"
+            },
+            {
+              "time": "14:00 - 17:30",
+              "title": "Mima"
+            },
+            {
+              "time": "14:30 - 17:30",
+              "title": "Veroni"
+            }
+          ]
+        },
+        {
+          "category": "lecture",
+          "schedule": [
+            {
+              "time": "11:30 - 13:30",
+              "title": "Chicas Industry: Jak dostat kávu z Jižní Ameriky na Moravu",
+              "speakers": [
+                "Chicas Industry"
+              ],
+              "description": "Už spoustu let přiváží Terka s Kájou zelenou kávu z Jižní Ameriky na Moravu. Zajímá tě, jak se dostane zrnko z kávovníku k tobě na stůl? Co dělat když se ti zasekne konteiner s kávou kdesi v přístavu, nebo jak se liší kávová kultura v Brazilii a Kolumbii? "
+            },
+            {
+              "time": "14:00 - 16:00",
+              "title": "Účast na World Brewers Cup Milano & Melbourne",
+              "speakers": [
+                "Tomáš Taussig"
+              ],
+              "description": "Dvojnásobný vítěz národního kola Brewers Cup a majitel ostravské pražírny Coffee Culture o jeho cestě přes půl světa na mistrovství světa, spolu s tipy pro budoucí soutěžící."
+            }
+          ]
+        },
+        {
+          "category": "workshop",
+          "schedule": [
+            {
+              "time": "11:00 - 12:00",
+              "title": "Senzorické vlastnosti čaje a jeho příprava"
+            },
+            {
+              "time": "12:30 - 13:30",
+              "title": "Cupping"
+            },
+            {
+              "time": "14:00 - 15:00",
+              "title": "Úvod do pražení kávy s Chickas Industry"
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "time": "18:00 - ???",
+              "title": "Párty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Den 2",
+      "date": "17/9",
+      "schedule": [
+        {
+          "category": "espresso",
+          "schedule": [
+            {
+              "time": "10:30 - 13:00",
+              "title": "Workshop: Espresso"
+            },
+            {
+              "time": "13:30 - 16:30",
+              "title": "Penerini"
+            }
+          ]
+        },
+        {
+          "category": "espresso_milk",
+          "schedule": [
+            {
+              "time": "10:30 - 14:00",
+              "title": "Mitte"
+            },
+            {
+              "time": "10:00 - 13:30",
+              "title": "Poppy Beans"
+            },
+            {
+              "time": "14:00 - 17:00",
+              "title": "Veroni"
+            },
+            {
+              "time": "14:30 - 17:00",
+              "title": "Workshop: Latteart"
+            }
+          ]
+        },
+        {
+          "category": "brew",
+          "schedule": [
+            {
+              "time": "10:30 - 13:30",
+              "title": "Punkt"
+            },
+            {
+              "time": "11:00 - 14:00",
+              "title": "Kaldi"
+            },
+            {
+              "time": "10:30 - 13:00",
+              "title": "IG Coffee Roasters"
+            },
+            {
+              "time": "13:30 - 16:30",
+              "title": "The Roses"
+            },
+            {
+              "time": "14:00 - 17:00",
+              "title": "Diamond's Coffee"
+            },
+            {
+              "time": "14:30 - 17:00",
+              "title": "Jonas Reindl"
+            }
+          ]
+        },
+        {
+          "category": "lecture",
+          "schedule": [
+            {
+              "time": "11:30 - 13:30",
+              "title": "Diskuze: Jak si neotevřít kavárnu",
+              "speakers": [
+                "Martin Dutkiewitch",
+                "Marek Knopp",
+                "Nějaký Růžička",
+                "Martin Sienty"
+              ],
+              "description": "Čtveřice majitelů kaváren v diskusi, proč si rozhodně neotevírat kavárnu, proč by už to nikdy neudělali a proč si stejně dál otevírají další pobočky."
+            },
+            {
+              "time": "14:00 - 16:00",
+              "title": "Kousek kontroverze v kávovém světě",
+              "speakers": [
+                "Alan Jarrar"
+              ],
+              "description": "Alan Jarrar, majitel a pražič Jokes Aside Coffee a zároveň kavárny Stav se vystoupí na festivalu Roast! s jeho, řekněmě trošku kontroverznějšími tématy. Zajímá tě víc? Stav se!"
+            }
+          ]
+        },
+        {
+          "category": "workshop",
+          "schedule": [
+            {
+              "time": "11:00 - 12:00",
+              "title": "Úvod do cuppingu"
+            },
+            {
+              "time": "12:30 - 13:30",
+              "title": "Cupping"
+            },
+            {
+              "time": "14:00 - 15:00",
+              "title": "Úvod do alternativních příprav a jejich srovnání"
+            },
+            {
+              "time": "15:30 - 16:30",
+              "title": "Senzorické vlastnosti vína a kávy"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "programLoadingText": "Program je již řádně upražen!",
+  "programSubjectToChange": "Změna programu vyhrazena",
   "tickets": "Vstupenky",
   "title": "Coffee roasters festival in Brno",
   "sponsors": {
@@ -52,8 +290,11 @@
   },
   "promotedRoasters": {
     "title": "Pražírny",
-    "text": ["Mimo jiné se můžete těšit na prezentaci následujících pražíren."]
+    "text": [
+      "Mimo jiné se můžete těšit na prezentaci následujících pražíren."
+    ]
   },
+  "learnMore": "... více informací",
   "info": [
     {
       "title": "Co je Roast!? A co od něj mohu čekat?",

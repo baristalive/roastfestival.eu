@@ -42,8 +42,246 @@
       }
     }
   },
-  "program": [],
-  "programLoadingText": "We are still roasting the festival program for you.",
+  "program": [
+    {
+      "title": "Day 1",
+      "date": "16/9",
+      "schedule": [
+        {
+          "category": "espresso",
+          "schedule": [
+            {
+              "time": "11:00 - 14:00",
+              "title": "Chroast"
+            },
+            {
+              "time": "14:30 - 17:30",
+              "title": "IG Coffee Roasters"
+            }
+          ]
+        },
+        {
+          "category": "espresso_milk",
+          "schedule": [
+            {
+              "time": "10:30 - 13:00",
+              "title": "Kikafe"
+            },
+            {
+              "time": "11:00 - 14:00",
+              "title": "Jonas Reindl"
+            },
+            {
+              "time": "14:00 - 17:30",
+              "title": "The Roses"
+            },
+            {
+              "time": "14:30 - 17:30",
+              "title": "Punkt"
+            }
+          ]
+        },
+        {
+          "category": "brew",
+          "schedule": [
+            {
+              "time": "10:30 - 13:30",
+              "title": "Poppy Beans"
+            },
+            {
+              "time": "10:30 - 13:00",
+              "title": "Jizba"
+            },
+            {
+              "time": "11:00 - 14:00",
+              "title": "Mitte"
+            },
+            {
+              "time": "14:00 - 17:00",
+              "title": "Penerini"
+            },
+            {
+              "time": "14:00 - 17:30",
+              "title": "Mima"
+            },
+            {
+              "time": "14:30 - 17:30",
+              "title": "Veroni"
+            }
+          ]
+        },
+        {
+          "category": "lecture",
+          "schedule": [
+            {
+              "time": "11:30 - 13:30",
+              "title": "Chicas Industry: Shipping coffee from South America to Moravia",
+              "speakers": [
+                "Chicas Industry"
+              ],
+              "description": "Terka and Kája have been bringing green coffee from South America to Moravia for many years. Are you wondering how a bean from a coffee plant gets to your table? What to do if a coffee container gets stuck somewhere in a port, or how is the coffee culture different in Brazil and Colombia?"
+            },
+            {
+              "time": "14:00 - 16:00",
+              "title": "Attending World Brewers Cup Milano & Melbourne",
+              "speakers": [
+                "Tomáš Taussig"
+              ],
+              "description": "Two-time winner of the national round of the Brewers Cup and owner of the Coffee Culture roastery in Ostrava will talk about his journey halfway around the world to the World Championship. He will also share some tips for future attendees and new competitors."
+            }
+          ]
+        },
+        {
+          "category": "workshop",
+          "schedule": [
+            {
+              "time": "11:00 - 12:00",
+              "title": "Sensory properties of tea and its preparation"
+            },
+            {
+              "time": "12:30 - 13:30",
+              "title": "Cupping"
+            },
+            {
+              "time": "14:00 - 15:00",
+              "title": "Introduction to coffee roasting with Chickas Industry"
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "time": "18:00 - ???",
+              "title": "Party"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Day 2",
+      "date": "17/9",
+      "schedule": [
+        {
+          "category": "espresso",
+          "schedule": [
+            {
+              "time": "10:30 - 13:00",
+              "title": "Workshop: Espresso"
+            },
+            {
+              "time": "13:30 - 16:30",
+              "title": "Penerini"
+            }
+          ]
+        },
+        {
+          "category": "espresso_milk",
+          "schedule": [
+            {
+              "time": "10:30 - 14:00",
+              "title": "Mitte"
+            },
+            {
+              "time": "10:00 - 13:30",
+              "title": "Poppy Beans"
+            },
+            {
+              "time": "14:00 - 17:00",
+              "title": "Veroni"
+            },
+            {
+              "time": "14:30 - 17:00",
+              "title": "Workshop: Latteart"
+            }
+          ]
+        },
+        {
+          "category": "brew",
+          "schedule": [
+            {
+              "time": "10:30 - 13:30",
+              "title": "Punkt"
+            },
+            {
+              "time": "11:00 - 14:00",
+              "title": "Kaldi"
+            },
+            {
+              "time": "10:30 - 13:00",
+              "title": "IG Coffee Roasters"
+            },
+            {
+              "time": "13:30 - 16:30",
+              "title": "The Roses"
+            },
+            {
+              "time": "14:00 - 17:00",
+              "title": "Diamond's Coffee"
+            },
+            {
+              "time": "14:30 - 17:00",
+              "title": "Jonas Reindl"
+            }
+          ]
+        },
+        {
+          "category": "lecture",
+          "schedule": [
+            {
+              "time": "11:30 - 13:30",
+              "title": "Panel discussion: How to (not) open a cafe",
+              "speakers": [
+                "Martin Dutkiewitch",
+                "Marek Knopp",
+                "Nějaký Růžička",
+                "Martin Sienty"
+              ],
+              "description": "Four cafe owners on a panel, why you should definitely not open a cafe, why they would never do it again and why they keep opening new branches anyway."
+            },
+            {
+              "time": "14:00 - 16:00",
+              "title": "Kousek kontroverze v kávovém světě",
+              "speakers": [
+                "Alan Jarrar"
+              ],
+              "description": "Alan Jarrar, owner and roaster of the Jokes Aside Coffee and of the Stav cafe at the same time, will perform at the Roast festival! with his slightly controversial topics. Do you want to know more? Come in!"
+            }
+          ]
+        },
+        {
+          "category": "workshop",
+          "schedule": [
+            {
+              "time": "11:00 - 12:00",
+              "title": "Introduction to cuppings"
+            },
+            {
+              "time": "12:30 - 13:30",
+              "title": "Cupping"
+            },
+            {
+              "time": "14:00 - 15:00",
+              "title": "101 of alternative methods and their comparison"
+            },
+            {
+              "time": "15:30 - 16:30",
+              "title": "Senzory properties of coffee and wine"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "programCategory": {
+    "lecture": "Lectures",
+    "workshop": "Workshop",
+    "espresso": "Espresso bar",
+    "espresso_milk": "Espresso bar with milk",
+    "brew": "Brew bar"
+  },
+  "programLoadingText": "The program is properly roasted now!",
+  "programSubjectToChange": "This program is subject to change",
   "tickets": "Tickets",
   "title": "Coffee roasters festival in Brno",
   "sponsors": {
@@ -56,5 +294,6 @@
       "Besides other activities, you can look forward to individual presentations of following coffee roasters."
     ]
   },
+  "learnMore": "...learn more",
   "info": []
 }

@@ -19,7 +19,7 @@ html {
 }
 
 section,
-body {
+body, .modal {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
