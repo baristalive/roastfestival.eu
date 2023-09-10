@@ -1,4 +1,5 @@
 "use client";
+
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 import PlusIcon from "../../icons/plus";
@@ -40,3 +41,5 @@ export const PromotedRoasters = () => {
     </section>
   );
 };
+
+export default PromotedRoasters;

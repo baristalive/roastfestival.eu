@@ -1,5 +1,7 @@
-import { SupportedLanguages } from "../dictionaries/all";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+import { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
 import { About } from "./sections/About";
 import { Filler } from "./sections/Filler";
@@ -9,8 +11,11 @@ import { Sponsors } from "./sections/Sponsors";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
-import { PromotedRoasters } from "./sections/PromotedRoasters";
 import { BuyTickets } from "./sections/BuyTickets";
+
+const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
+  ssr: false,
+});
 
 type HomePropsType = {
   params: { lang: SupportedLanguages };
@@ -29,7 +34,7 @@ const Home = ({ params: { lang } }: HomePropsType) => (
         <Header />
         <About />
         <Filler />
-        <Sponsors />
+        {/* <Sponsors /> */}
         <Program />
         <BuyTickets />
         <PromotedRoasters />
