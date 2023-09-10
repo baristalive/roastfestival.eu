@@ -110,10 +110,7 @@ export const Map = () => {
               <h5 className="text-4xl">{lang.location.parking.lot.title}</h5>
               <ul>
                 <li className="text-2xl">
-                  {lang.location.parking.lot.priceWhen}
-                </li>
-                <li className="text-2xl">
-                  {lang.location.parking.lot.priceAmount}
+                  {lang.location.parking.lot.description}
                 </li>
               </ul>
             </div>
@@ -122,7 +119,6 @@ export const Map = () => {
               {lang.location.parking.zones.pricing.map((z) => (
                 <ul key={z.title}>
                   <li className="text-2xl">{z.title}</li>
-                  <li className="text-2xl">{z.price}</li>
                 </ul>
               ))}
             </div>

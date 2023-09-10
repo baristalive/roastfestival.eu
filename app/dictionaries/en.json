@@ -27,19 +27,16 @@
     "parking": {
       "lot": {
         "title": "Bratislavská Parking",
-        "priceWhen": "Paid: Mon-Fri all day.",
-        "priceAmount": "Price: first 60 min for free, hourly rate 30 Kč."
+        "description": "Free on weekends"
       },
       "zones": {
         "title": "Residential parking zones",
         "pricing": [
           {
-            "title": "Zone B: Mon-Fri all day.",
-            "price": "Price: 30 Kč/hour."
+            "title": "Zone B: Free on weekends"
           },
           {
-            "title": "Zone C: Mon-Fri 6AM - 17PM.",
-            "price": "Price: 20 Kč/hour."
+            "title": "Zone C: Free on weekends"
           }
         ]
       }

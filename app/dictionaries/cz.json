@@ -20,19 +20,16 @@
     "parking": {
       "lot": {
         "title": "Parkoviště Bratislavská",
-        "priceWhen": "Zpoplatněno: Po-Pá 24 hod.",
-        "priceAmount": "Sazba: 60 min/den zdarma, pak 30 Kč/hod"
+        "description": "O víkendu zdarma"
       },
       "zones": {
         "title": "Parkování v městské zóně nebo na ulici",
         "pricing": [
           {
-            "title": "Zóna B: Po-Pá 24 hod.",
-            "price": "Sazba: 30 Kč/hod."
+            "title": "Zóna B: O víkendu zdarma"
           },
           {
-            "title": "Zóna C: Po-Pá 6-17 hod.",
-            "price": "Sazba: 20 Kč/hod."
+            "title": "Zóna C: O víkendu zdarma"
           }
         ]
       }
