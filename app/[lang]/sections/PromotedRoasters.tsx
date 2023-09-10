@@ -20,8 +20,7 @@ export const PromotedRoasters = () => {
       </div>
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 text-xl md:gap-20">
         {lang.promotedRoasters.content
-          ?.filter((r) => !Boolean(r.hidden))
-          .sort(() => Math.random() - 0.5)
+          ?.sort(() => Math.random() - 0.5)
           .map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
