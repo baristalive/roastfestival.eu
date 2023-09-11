@@ -124,7 +124,9 @@
               "time": "11:30 - 13:30",
               "title": "Chicas Industry: Jak dostat kávu z Jižní Ameriky na Moravu",
               "speakers": [
-                "Chicas Industry"
+                "Karolína Nekvindová",
+                "Patrik Sláma",
+                "Tereza Prejdová"
               ],
               "description": "Už spoustu let přiváží Terka s Kájou zelenou kávu z Jižní Ameriky na Moravu. Zajímá tě, jak se dostane zrnko z kávovníku k tobě na stůl? Co dělat když se ti zasekne konteiner s kávou kdesi v přístavu, nebo jak se liší kávová kultura v Brazilii a Kolumbii? "
             },
@@ -152,14 +154,6 @@
             {
               "time": "14:00 - 15:00",
               "title": "Úvod do pražení kávy s Chickas Industry"
-            }
-          ]
-        },
-        {
-          "schedule": [
-            {
-              "time": "18:00 - ???",
-              "title": "Párty"
             }
           ]
         }

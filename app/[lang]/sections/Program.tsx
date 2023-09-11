@@ -84,6 +84,9 @@ export const Program = () => {
                           </dt>
                           <dd className="text-xl md:col-span-2 md:mt-0 md:text-2xl">
                             {i.title}
+                            <div className="text-lg">
+                              {"speakers" in i && i.speakers.join(", ")}
+                            </div>
                             {"description" in i && (
                               <Modal
                                 title={i.title}

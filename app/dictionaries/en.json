@@ -117,7 +117,9 @@
               "time": "11:30 - 13:30",
               "title": "Chicas Industry: Shipping coffee from South America to Moravia",
               "speakers": [
-                "Chicas Industry"
+                "Karolína Nekvindová",
+                "Patrik Sláma",
+                "Tereza Prejdová"
               ],
               "description": "Terka and Kája have been bringing green coffee from South America to Moravia for many years. Are you wondering how a bean from a coffee plant gets to your table? What to do if a coffee container gets stuck somewhere in a port, or how is the coffee culture different in Brazil and Colombia?"
             },
@@ -145,14 +147,6 @@
             {
               "time": "14:00 - 15:00",
               "title": "Introduction to coffee roasting with Chickas Industry"
-            }
-          ]
-        },
-        {
-          "schedule": [
-            {
-              "time": "18:00 - ???",
-              "title": "Party"
             }
           ]
         }

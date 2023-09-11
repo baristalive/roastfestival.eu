@@ -40,7 +40,7 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
                     ×
                   </button>
                   <h5 className="mt-10 text-4xl font-medium">{title}</h5>
-                  <h6 className="text-3xl italic">- {speakers.join(", ")}</h6>
+                  <h6 className="text-3xl">{speakers.join(", ")}</h6>
                 </div>
                 <div className="relative flex-auto px-24 py-10">
                   <p className="my-4 text-xl md:text-2xl">{description}</p>
