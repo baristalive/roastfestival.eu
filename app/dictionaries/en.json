@@ -295,5 +295,30 @@
     ]
   },
   "learnMore": "...learn more",
-  "info": []
+  "info": [
+    {
+      "title": "What is Roast!? And what can I expect from it?",
+      "text": "The entrance fee includes all coffee consumption, which you can taste at our espresso and brew bars, and entry to all workshops, lectures, and cuppings. You can buy coffee from roasters that you like, either directly at the bars or at the sales stand."
+    },
+    {
+      "title": "Espresso bars",
+      "text": "Local and foreign coffee roasters will be on rotation in all of our bars. You can try all kinds of milk drinks at two bars. On the third one, you can taste a fine-tuned espresso without any additives. Can't you have regular milk? We are ready for that too! All bars will have an oat milk option from OATLY."
+    },
+    {
+      "title": "Brew bars",
+      "text": "V60, Chemex, Aeropress or Coldbrew? You can also taste these alternative preparations at our brew bars. We leave roasters completely free to choose the preparation method that best suits their beans."
+    },
+    {
+      "title": "Workshops and cuppings",
+      "text": "You have no idea what \"cupping\" means? Would you like to try more than a dozen alternative coffee preparations or test your sensory abilities? Great! Our professional baristas will guide you through all these things and will be happy to answer all your questions."
+    },
+    {
+      "title": "Lectures",
+      "text": "Are you wondering what the owners of established businesses had to go through when they opened their brick-and-mortar stores? Would you like to know how roasting works or what the difference is between fired and leavened dough that you find on the counter of every other business? Then the lectures of our special guests are for you."
+    },
+    {
+      "title": "Have you had enough coffee yet?",
+      "text": "Have a drink, beer or homemade lemonade. And at the sweet and salty stand, not only sandwiches or wreaths with salted caramel are ready for you to bite into!"
+    }
+  ]
 }
