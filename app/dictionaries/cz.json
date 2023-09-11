@@ -186,12 +186,12 @@
           "category": "espresso_milk",
           "schedule": [
             {
-              "time": "10:30 - 14:00",
-              "title": "Mitte"
-            },
-            {
               "time": "10:00 - 13:30",
               "title": "Poppy Beans"
+            },
+            {
+              "time": "10:30 - 14:00",
+              "title": "Mitte"
             },
             {
               "time": "14:00 - 17:00",
@@ -199,7 +199,7 @@
             },
             {
               "time": "14:30 - 17:00",
-              "title": "Workshop: Latteart"
+              "title": "Traffic Coffee"
             }
           ]
         },
