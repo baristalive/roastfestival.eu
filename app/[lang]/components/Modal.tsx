@@ -10,9 +10,9 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <>
-      <div className="w-full text-right">
+      <div className="w-full text-right my-3">
         <button
-          className="inline-block text-lg italic underline hover:opacity-50"
+          className="inline-block rounded-xl border border-current px-2 py-1 text-lg hover:opacity-80"
           type="button"
           onClick={() => setShowModal(true)}
         >
@@ -22,7 +22,7 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
       {showModal ? (
         <>
           <div
-            className="fixed inset-0 z-50 flex animate-[slideUp_200ms] md:animate-[fadeIn_200ms] items-end overflow-y-auto overflow-x-hidden text-left outline-none focus:outline-none md:items-center md:justify-center"
+            className="fixed inset-0 z-50 flex animate-[slideUp_200ms] items-end overflow-y-auto overflow-x-hidden text-left outline-none focus:outline-none md:animate-[fadeIn_200ms] md:items-center md:justify-center"
             onClick={() => setShowModal(false)}
           >
             <div className="relative mx-auto w-auto max-w-4xl md:my-6">

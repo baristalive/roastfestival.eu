@@ -84,7 +84,7 @@
             },
             {
               "time": "14:30 - 17:30",
-              "title": "Punkt"
+              "title": "Punkt."
             }
           ]
         },
@@ -97,11 +97,11 @@
             },
             {
               "time": "10:30 - 13:00",
-              "title": "Jizba"
+              "title": "Jizba Luhačovice"
             },
             {
               "time": "11:00 - 14:00",
-              "title": "Mitte"
+              "title": "Mitte Coffee"
             },
             {
               "time": "14:00 - 17:00",
@@ -109,7 +109,7 @@
             },
             {
               "time": "14:00 - 17:30",
-              "title": "Mima"
+              "title": "Mima Coffee Roastery"
             },
             {
               "time": "14:30 - 17:30",
@@ -185,7 +185,7 @@
             },
             {
               "time": "10:30 - 14:00",
-              "title": "Mitte"
+              "title": "Mitte Coffee"
             },
             {
               "time": "14:00 - 17:00",
@@ -202,7 +202,7 @@
           "schedule": [
             {
               "time": "10:30 - 13:30",
-              "title": "Punkt"
+              "title": "Punkt."
             },
             {
               "time": "11:00 - 14:00",
@@ -235,7 +235,8 @@
               "speakers": [
                 "Martin Dutkiewitch",
                 "Marek Knopp",
-                "Martin Sienty"
+                "Martin Sienty",
+                "Vojtěch Růžička"
               ],
               "description": "Čtveřice majitelů kaváren v diskusi, proč si rozhodně neotevírat kavárnu, proč by už to nikdy neudělali a proč si stejně dál otevírají další pobočky."
             },
@@ -287,7 +288,7 @@
       "Mimo jiné se můžete těšit na prezentaci následujících pražíren."
     ]
   },
-  "learnMore": "... více informací",
+  "learnMore": "chci vědět víc",
   "info": [
     {
       "title": "Co je Roast!? A co od něj mohu čekat?",
