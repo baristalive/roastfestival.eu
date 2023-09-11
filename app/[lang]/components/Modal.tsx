@@ -10,13 +10,15 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <>
-      <button
-        className="inline-block text-lg italic underline float-right"
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
-        {lang.learnMore}
-      </button>
+      <div className="text-right w-full">
+        <button
+          className="inline-block text-lg italic underline"
+          type="button"
+          onClick={() => setShowModal(true)}
+        >
+          {lang.learnMore}
+        </button>
+      </div>
       {showModal ? (
         <>
           <div
