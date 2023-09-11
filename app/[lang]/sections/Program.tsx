@@ -33,9 +33,9 @@ export const Program = () => {
           {lang.program.map((d: DaySchedule, idx_d) => (
             <div
               key={d.title}
-              className={`${idx_d % 2 ? "" : "inverted"} p-2 md:p-20`}
+              className={`${idx_d % 2 ? "" : "inverted"} px-2 pb-10 md:p-20`}
             >
-              <div className="flex px-6 py-20 md:hidden">
+              <div className="flex px-6 pt-20 md:hidden">
                 <h2 className="grow pt-2 text-left text-3xl font-medium uppercase">
                   Program
                 </h2>
@@ -60,7 +60,7 @@ export const Program = () => {
                       }
                       className="m-2 grid-rows-[--rows] space-y-2 py-3 md:m-0 md:grid md:grid-cols-4 md:px-0"
                     >
-                      <div className="row-span-full flex flex-col justify-center">
+                      <div className="row-span-full flex flex-col justify-center md:py-0 py-5">
                         <div
                           className={`text-cente mx-auto ${
                             idx_d % 2 ? "" : "inverted-vars"
@@ -103,7 +103,7 @@ export const Program = () => {
               </div>
             </div>
           ))}
-          <div className="pb-24 text-3xl">{lang.programSubjectToChange}</div>
+          <div className="pb-24 pt-5 text-2xl">{lang.programSubjectToChange}</div>
         </>
       ) : (
         <div className="inverted min-h-[50vh] pt-32 text-3xl">

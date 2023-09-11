@@ -10,9 +10,9 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <>
-      <div className="text-right w-full">
+      <div className="w-full text-right">
         <button
-          className="inline-block text-lg italic underline"
+          className="inline-block text-lg italic underline hover:opacity-50"
           type="button"
           onClick={() => setShowModal(true)}
         >
@@ -22,17 +22,17 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
       {showModal ? (
         <>
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none"
+            className="fixed inset-0 z-50 flex animate-[slideUp_200ms] md:animate-[fadeIn_200ms] items-end overflow-y-auto overflow-x-hidden text-left outline-none focus:outline-none md:items-center md:justify-center"
             onClick={() => setShowModal(false)}
           >
-            <div className="relative mx-auto my-6 w-auto max-w-4xl">
+            <div className="relative mx-auto w-auto max-w-4xl md:my-6">
               <div
                 className="modal relative flex w-full flex-col rounded-sm border-0 shadow-lg outline-none focus:outline-none"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
               >
-                <div className="relative flex flex-col items-start justify-between rounded-t gap-4 px-24 pb-10">
+                <div className="relative flex flex-col items-start justify-between gap-4 rounded-t px-8 pb-10 pt-4 md:px-24 md:pt-0">
                   <button
                     className="order-0 absolute right-4 top-0 bg-transparent text-7xl leading-none transition-opacity duration-200 hover:opacity-50"
                     onClick={() => setShowModal(false)}
@@ -42,7 +42,7 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
                   <h5 className="mt-10 text-4xl font-medium">{title}</h5>
                   <h6 className="text-3xl">{speakers.join(", ")}</h6>
                 </div>
-                <div className="relative flex-auto px-24 py-10">
+                <div className="relative flex-auto px-8 py-10 md:px-24">
                   <p className="my-4 text-xl md:text-2xl">{description}</p>
                 </div>
               </div>
