@@ -142,11 +142,21 @@
             },
             {
               "time": "12:30 - 13:30",
-              "title": "Coffee Culture: Cupping"
+              "title": "Coffee Culture: Cupping",
+              "description": "Produkční cupping Coffee Culture pod taktovkou vítěze Czech Brewers Cup 2020 a 2022 Tomáše Tussiga. Těšit se můžete na profesionální ochutnávku káv od pražírny Coffee Culture se vším všudy a tak jak má být.",
+              "speakers": [
+                "Tomáš Taussig"
+              ]
             },
             {
               "time": "14:00 - 17:00",
-              "title": "Introduction to coffee roasting with Chickas Industry"
+              "title": "Introduction to coffee roasting with Chickas Industry",
+              "description": "Ano, čteš to správně. Opravdu si zde můžeš upražit vlastní kávu a vzít si ji domů. Tento workshop nabízí unikátní hands-on experience pod vedením pravých profesionálů - importérek zelené kávy z Chicas Industry.",
+              "speakers": [
+                "Karolína Nekvindová",
+                "Patrik Sláma",
+                "Tereza Prejdová"
+              ]
             }
           ]
         }
@@ -248,19 +258,36 @@
           "schedule": [
             {
               "time": "11:00 - 12:00",
-              "title": "Introduction to cuppings"
+              "title": "Introduction to cuppings",
+              "description": "Znáte slovo 'cupping'? Pokud ne, nevadí! Tato akce je právě pro vás! Přidejte se k nám, a společně se ponoříme do fascinujícího světa kávového ochutnávání. Povíme si, jak takový cupping probíhá, co a jakými smysly vnímáme a následně to na sobě věchno i vyzkoušíme.",
+              "speakers": [
+                "Natálie Růžičková"
+              ]
             },
             {
               "time": "12:30 - 13:30",
-              "title": "Decaf coffee cupping"
+              "title": "Decaf coffee cupping",
+              "description": "Myslíte si, že jsou všechny bezkofeinové kávy stejné? Tak to přijďte otestovat! Káva bez kofeinu to není jen podřadná a opovrhovaná náhražka pro slabé povahy, ale vlastně docela komplexní záležitost, díky která vznikají i zajímavé chuťové zážitky. Tento cupping je vhodný i pro milovníky kávy, kteří však neholdují kofeinu.",
+              "speakers": [
+                "Natálie Růžičková"
+              ]
             },
             {
               "time": "14:00 - 15:00",
-              "title": "101 of alternative methods and their comparison"
+              "title": "101 of alternative methods and their comparison",
+              "description": "V60, Kalita, Aeropress, Aeropress obrácený, Chemex, Džezva, CleverDrip, Vaccumpot, Origami, Frenchpress, Moccamaster, Moccamaster one... znáte další? Máte doma nějakou obskurnost a chcete se o ni podělit? Chceš-li se dozvědět o přípravě kávy na všechny možné způsoby, tohle je workshop přímo pro tebe.",
+              "speakers": [
+                "Martin Dutkiewitch"
+              ]
             },
             {
               "time": "15:30 - 16:30",
-              "title": "Senzory properties of coffee and wine"
+              "title": "Senzory properties of coffee and wine",
+              "description": "Víno a káva si jsou si bližší než byste čekali. Všimli jste si třeba někdy, že chuťové popisky na etiketách vín i káv jsou si až podezřele podobné? A co má takový profesionální somiliér společného s vítězem Cup Tasters? Přijďte hledat chutě nejen ve víně.",
+              "speakers": [
+                "Petr Chaloupek",
+                "Josef Kučera"
+              ]
             }
           ]
         }
