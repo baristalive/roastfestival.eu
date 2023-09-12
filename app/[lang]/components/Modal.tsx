@@ -2,23 +2,21 @@ import dictionaries, { SupportedLanguages } from "@/app/dictionaries/all";
 import { useParams } from "next/navigation";
 import React from "react";
 
-type ModalProps = { title: string, description: string, speakers: string[]}
+type ModalProps = { title: string; description: string; speakers?: string[] };
 
-export const Modal = ({title, description, speakers} : ModalProps) => {
+export const Modal = ({ title, description, speakers }: ModalProps) => {
   const [showModal, setShowModal] = React.useState(false);
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <>
-      <div className="w-full text-right my-3">
-        <button
-          className="inline-block rounded-xl border border-current px-2 py-1 text-lg hover:opacity-80"
-          type="button"
-          onClick={() => setShowModal(true)}
-        >
-          {lang.learnMore}
-        </button>
-      </div>
+      <button
+        className="inline-block rounded-xl border border-current px-2 py-1 text-lg hover:opacity-80"
+        type="button"
+        onClick={() => setShowModal(true)}
+      >
+        {lang.learnMore}
+      </button>
       {showModal ? (
         <>
           <div
@@ -40,7 +38,7 @@ export const Modal = ({title, description, speakers} : ModalProps) => {
                     ×
                   </button>
                   <h5 className="mt-10 text-4xl font-medium">{title}</h5>
-                  <h6 className="text-3xl">{speakers.join(", ")}</h6>
+                  {speakers && <h6 className="text-3xl">{speakers.join(", ")}</h6>}
                 </div>
                 <div className="relative flex-auto px-8 py-10 md:px-24">
                   <p className="my-4 text-xl md:text-2xl">{description}</p>
