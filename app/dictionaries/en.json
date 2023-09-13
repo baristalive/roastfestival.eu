@@ -115,13 +115,13 @@
           "schedule": [
             {
               "time": "11:30 - 13:30",
-              "title": "Chicas Industry: Shipping coffee from South America to Moravia",
+              "title": "Coffee experiments and friendship - experience gained by Chicas Industry in Colombia",
               "speakers": [
                 "Karolína Nekvindová",
                 "Patrik Sláma",
                 "Tereza Prejdová"
               ],
-              "description": "Terka and Kája have been bringing green coffee from South America to Moravia for many years. Are you wondering how a bean from a coffee plant gets to your table? What to do if a coffee container gets stuck somewhere in a port, or how is the coffee culture different in Brazil and Colombia?"
+              "description": "Do you want to find out who the Chicas Industry team members are and what is it like to be a green coffee beans importer? You will learn which aspects of their work are desirable and which are unpleasant. They will introduce who they buy green grain from and why they work with these specific farmers. You will find out how growers and importers can inspire each other and how they maintain friendships halfway around the world."
             },
             {
               "time": "14:00 - 16:00",
@@ -143,15 +143,15 @@
             {
               "time": "12:30 - 13:30",
               "title": "Coffee Culture: Cupping",
-              "description": "Produkční cupping Coffee Culture pod taktovkou vítěze Czech Brewers Cup 2020 a 2022 Tomáše Tussiga. Těšit se můžete na profesionální ochutnávku káv od pražírny Coffee Culture se vším všudy a tak jak má být.",
+              "description": "Production cupping Coffee Culture under the baton of Czech Brewers Cup 2020 and 2022 winner Tomáš Tussig. You can look forward to a professional, top-notch quality, tasting of coffees from the Coffee Culture roastery.",
               "speakers": [
                 "Tomáš Taussig"
               ]
             },
             {
               "time": "14:00 - 17:00",
-              "title": "Introduction to coffee roasting with Chickas Industry",
-              "description": "Ano, čteš to správně. Opravdu si zde můžeš upražit vlastní kávu a vzít si ji domů. Tento workshop nabízí unikátní hands-on experience pod vedením pravých profesionálů - importérek zelené kávy z Chicas Industry.",
+              "title": "Coffee roasting for beginners with Chickas Industry",
+              "description": "Yes, you read that right. You can really roast your own coffee here and take it home. This workshop offers a unique hands-on experience led by real professionals - importers of green coffee from Chicas Industry.",
               "speakers": [
                 "Karolína Nekvindová",
                 "Patrik Sláma",
@@ -259,7 +259,7 @@
             {
               "time": "11:00 - 12:00",
               "title": "Introduction to cuppings",
-              "description": "Znáte slovo 'cupping'? Pokud ne, nevadí! Tato akce je právě pro vás! Přidejte se k nám, a společně se ponoříme do fascinujícího světa kávového ochutnávání. Povíme si, jak takový cupping probíhá, co a jakými smysly vnímáme a následně to na sobě všechno i vyzkoušíme.",
+              "description": "You don't know what the word 'cupping' means? No problem! This event is exactly for you! Join us, and together we will dive into the fascinating world of coffee tasting. We will talk about how to prepare a cupping, what to focus on and with which senses to perceive the coffee during such event.",
               "speakers": [
                 "Natálie Růžičková"
               ]
@@ -267,7 +267,7 @@
             {
               "time": "12:30 - 13:30",
               "title": "Decaf coffee cupping",
-              "description": "Myslíte si, že jsou všechny bezkofeinové kávy stejné? Tak to přijďte otestovat! Káva bez kofeinu to není jen podřadná a opovrhovaná náhražka pro slabé povahy, ale vlastně docela komplexní záležitost, díky která vznikají i zajímavé chuťové zážitky. Tento cupping je vhodný i pro milovníky kávy, kteří však neholdují kofeinu.",
+              "description": "Do you think all decaffeinated coffees are the same? Come and test it! Decaffeinated coffee is not just an inferior and despised substitute for the faint of heart, but actually quite a complex matter that also creates interesting taste experiences. This cupping is suitable for coffee lovers who do not like caffeine.",
               "speakers": [
                 "Natálie Růžičková"
               ]
@@ -275,7 +275,7 @@
             {
               "time": "14:00 - 15:00",
               "title": "101 of alternative methods and their comparison",
-              "description": "V60, Kalita, Aeropress, Aeropress obrácený, Chemex, Džezva, CleverDrip, Vaccumpot, Origami, Frenchpress, Moccamaster, Moccamaster one... znáte další? Máte doma nějakou obskurnost a chcete se o ni podělit? Chceš-li se dozvědět o přípravě kávy na všechny možné způsoby, tohle je workshop přímo pro tebe.",
+              "description": "V60, Kalita, Aeropress, Aeropress obrácený, Chemex, Džezva, CleverDrip, Vaccumpot, Origami, Frenchpress, Moccamaster, Moccamaster one... do you know others? And maybe you have some obscure coffee maker at home that you want to show? If you want to learn about coffee preparation in all possible ways, this is the workshop for you.",
               "speakers": [
                 "Martin Dutkiewitch"
               ]
@@ -283,7 +283,7 @@
             {
               "time": "15:30 - 16:30",
               "title": "Senzory properties of coffee and wine",
-              "description": "Víno a káva si jsou si bližší než byste čekali. Všimli jste si třeba někdy, že chuťové popisky na etiketách vín i káv jsou si až podezřele podobné? A co má takový profesionální someliér společného s vítězem Cup Tasters? Přijďte hledat chutě nejen ve víně.",
+              "description": "Wine and coffee are closer to each other than you might expect. Have you ever noticed that the taste profile labels on wine bottles and coffee packages are suspiciously similar? And what does a professional sommelier have in common with a Cup Tasters winner? Come and find flavors not only in wine.",
               "speakers": [
                 "Petr Chaloupek",
                 "Josef Kučera"
