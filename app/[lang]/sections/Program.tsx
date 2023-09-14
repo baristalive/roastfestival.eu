@@ -9,7 +9,13 @@ type StationSchedule = {
   category?: string;
   schedule: (
     | { time: string; title: string }
-    | { time: string; title: string; description: string; speakers: string[], href?: string }
+    | {
+        time: string;
+        title: string;
+        description: string;
+        speakers: string[];
+        href?: string;
+      }
   )[];
 };
 type DaySchedule = {
@@ -17,6 +23,9 @@ type DaySchedule = {
   date: string;
   schedule: StationSchedule[];
 };
+
+const sanitize = (str: string) =>
+  str.replace(/[^a-z0-9]/gi, "-").toLocaleLowerCase();
 
 export const Program = () => {
   const params = useParams();
@@ -34,6 +43,7 @@ export const Program = () => {
             <div
               key={d.title}
               className={`${idx_d % 2 ? "" : "inverted"} px-2 pb-10 md:p-20`}
+              id={`program-${sanitize(d.title)}`}
             >
               <div className="flex px-6 pt-20 md:hidden">
                 <h2 className="grow pt-2 text-left text-3xl font-medium uppercase">
@@ -79,7 +89,12 @@ export const Program = () => {
                       </div>
                       {s.schedule.map((i) => (
                         <Fragment key={`${i.title}-${i.time}`}>
-                          <dt className="text-xl font-bold md:text-2xl">
+                          <dt
+                            className="text-xl font-bold md:text-2xl"
+                            id={`program-${sanitize(d.title)}-${sanitize(
+                              i.time,
+                            )}-${sanitize(i.title)})}`}
+                          >
                             {i.time}
                           </dt>
                           <dd className="text-xl md:col-span-2 md:mt-0 md:text-2xl">
