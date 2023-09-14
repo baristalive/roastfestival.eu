@@ -137,10 +137,6 @@
           "category": "workshop",
           "schedule": [
             {
-              "time": "11:00 - 12:00",
-              "title": "Sensory properties of tea and its preparation"
-            },
-            {
               "time": "12:30 - 13:30",
               "title": "Coffee Culture: Cupping",
               "description": "Production cupping Coffee Culture under the baton of Czech Brewers Cup 2020 and 2022 winner Tomáš Tussig. You can look forward to a professional, top-notch quality, tasting of coffees from the Coffee Culture roastery.",
@@ -338,5 +334,56 @@
       "text": "Have a drink, beer or homemade lemonade. And at the sweet and salty stand, not only sandwiches or wreaths with salted caramel are ready for you to bite into!"
     }
   ],
-  "signUp": "Sign up"
+  "signUp": "Sign up",
+  "gastro": {
+    "title": "Doprovodný program",
+    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
+    "content": [
+      {
+        "title": "Sladký bar",
+        "href": "https://www.facebook.com/punkt.cafe/",
+        "src": "/promoted/punkt.png",
+        "alt": "Punkt.",
+        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život."
+      },
+      {
+        "title": "Slaný bar",
+        "href": "https://www.instagram.com/hodnenekde/",
+        "src": "/promoted/hodne_nekde.png",
+        "alt": "Hodně někde",
+        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný."
+      },
+      {
+        "title": "Pivo",
+        "href": "https://www.pivovarstern.cz/",
+        "src": "/promoted/stern.png",
+        "alt": "Stern",
+        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek."
+      },
+      {
+        "title": "Víno",
+        "href": "https://www.instagram.com/kbwinecafe/",
+        "src": "/promoted/klara_bara.png",
+        "alt": "Klára Bára",
+        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé."
+      },
+      {
+        "title": "Míchané drinky",
+        "href": "https://www.instagram.com/kolagen.cc",
+        "alt": "Kolagen",
+        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení."
+      },
+      {
+        "title": "Mléko",
+        "href": "https://www.oatly.com/",
+        "src": "/promoted/oatly.png",
+        "alt": "Oatly",
+        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly"
+      },
+      {
+        "title": "Swap hrníčků",
+        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!"
+      }
+    ]
+  }
 }

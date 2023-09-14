@@ -12,6 +12,7 @@ import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
 import { BuyTickets } from "./sections/BuyTickets";
+import { OtherServices } from "./sections/OtherServices";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -35,8 +36,11 @@ const Home = ({ params: { lang } }: HomePropsType) => (
         <About />
         <Filler />
         {/* <Sponsors /> */}
+        <BuyTickets className="inverted pt-64" />
         <Program />
         <BuyTickets />
+        <OtherServices />
+        <BuyTickets className="inverted" />
         <PromotedRoasters />
         <Info />
         <BuyTickets />

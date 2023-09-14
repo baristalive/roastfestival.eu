@@ -78,7 +78,7 @@ export const Program = () => {
                         </h4>
                       </div>
                       {s.schedule.map((i) => (
-                        <Fragment key={i.title}>
+                        <Fragment key={`${i.title}-${i.time}`}>
                           <dt className="text-xl font-bold md:text-2xl">
                             {i.time}
                           </dt>
