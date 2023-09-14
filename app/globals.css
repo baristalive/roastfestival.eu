@@ -183,3 +183,8 @@ body, .modal {
     opacity: 1;
   }
 }
+
+.hide .hidden-link {
+  display: none;
+}
+

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
@@ -13,6 +14,7 @@ import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
 import { BuyTickets } from "./sections/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
+import { useEffect, useState } from "react";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -22,34 +24,49 @@ type HomePropsType = {
   params: { lang: SupportedLanguages };
 };
 
-const Home = ({ params: { lang } }: HomePropsType) => (
-  <div className="wrapper">
-    <div className="lang inverted uppercase">
-      <Link href={lang === "cz" ? "./en" : "./cz"} rel="alternate">
-        {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
-      </Link>
-    </div>
-    <div>
-      <div className="overlay" />
-      <div className="with-overlay">
-        <Header />
-        <About />
-        <Filler />
-        {/* <Sponsors /> */}
-        <BuyTickets className="inverted pt-64" />
-        <Program />
-        <BuyTickets />
-        <OtherServices />
-        <BuyTickets className="inverted" />
-        <PromotedRoasters />
-        <Info />
-        <BuyTickets />
+const Home = ({ params: { lang } }: HomePropsType) => {
+    const [divClass, toggleDivClass] = useState(false);
+    useEffect(() => {
+      const onKeyDown = (e: KeyboardEvent) => {
+        if (e.ctrlKey) {
+          toggleDivClass(!divClass);
+        }
+      };
+      document.addEventListener("keydown", onKeyDown);
+      return () => {
+        document.removeEventListener("keydown", onKeyDown);
+      };
+    }, [divClass]);
+
+  return (
+    <div className="wrapper">
+      <div className="lang inverted uppercase">
+        <Link href={lang === "cz" ? "./en" : "./cz"} rel="alternate">
+          {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
+        </Link>
       </div>
+      <div className={divClass ? "show" : "hide"}>
+        <div className="overlay" />
+        <div className="with-overlay">
+          <Header />
+          <About />
+          <Filler />
+          {/* <Sponsors /> */}
+          <BuyTickets className="inverted pt-64" />
+          <Program />
+          <BuyTickets />
+          <OtherServices />
+          <BuyTickets className="inverted" />
+          <PromotedRoasters />
+          <Info />
+          <BuyTickets />
+        </div>
+      </div>
+      <Map />
+      <Organizers />
+      <Footer />
     </div>
-    <Map />
-    <Organizers />
-    <Footer />
-  </div>
-);
+  );
+};
 
 export default Home;

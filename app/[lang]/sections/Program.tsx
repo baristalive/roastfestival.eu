@@ -4,6 +4,7 @@ import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 import { CSSProperties, Fragment } from "react";
 import Modal from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
+import LinkIcon from "@/app/icons/link";
 
 type StationSchedule = {
   category?: string;
@@ -35,6 +36,9 @@ export const Program = () => {
       <div className="inverted p-8 md:p-0">
         <h2 className="hidden pt-20 text-4xl font-medium uppercase md:block">
           Program
+          <a href="#program" className="hidden-link ml-4 inline-block">
+            <LinkIcon />
+          </a>
         </h2>
       </div>
       {lang.program.length > 0 ? (
@@ -51,13 +55,29 @@ export const Program = () => {
                 </h2>
                 <div className="text-right">
                   <h3 className="text-5xl font-semibold">{d.date}</h3>
-                  <small className="text-2xl">{d.title}</small>
+                  <small className="text-2xl">
+                    {d.title}
+                    <a
+                      href={`#program-${sanitize(d.title)}`}
+                      className="hidden-link ml-4 inline-block"
+                    >
+                      <LinkIcon />
+                    </a>
+                  </small>
                 </div>
               </div>
               <div className="mx-auto flex max-w-6xl gap-12">
                 <div className="hidden md:block">
                   <h3 className="text-8xl">{d.date}</h3>
-                  <small className="text-4xl">{d.title}</small>
+                  <small className="text-4xl">
+                    {d.title}
+                    <a
+                      href={`#program-${sanitize(d.title)}`}
+                      className="hidden-link ml-4 inline-block"
+                    >
+                      <LinkIcon />
+                    </a>
+                  </small>
                 </div>
                 <dl className="grow divide-y-2 divide-current md:text-left">
                   {d.schedule.map((s, idx_s) => (
@@ -93,12 +113,20 @@ export const Program = () => {
                             className="text-xl font-bold md:text-2xl"
                             id={`program-${sanitize(d.title)}-${sanitize(
                               i.time,
-                            )}-${sanitize(i.title)})}`}
+                            )}-${sanitize(i.title)}`}
                           >
                             {i.time}
                           </dt>
                           <dd className="text-xl md:col-span-2 md:mt-0 md:text-2xl">
                             {i.title}
+                            <a
+                              href={`#program-${sanitize(d.title)}-${sanitize(
+                                i.time,
+                              )}-${sanitize(i.title)}`}
+                              className="hidden-link ml-4 inline-block"
+                            >
+                              <LinkIcon />
+                            </a>
                             <div className="text-lg">
                               {"speakers" in i && i.speakers.join(", ")}
                             </div>
