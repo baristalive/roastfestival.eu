@@ -59,7 +59,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
           <BuyTickets className="inverted" />
           <PromotedRoasters />
           <Info />
-          <BuyTickets />
+          <BuyTickets  className="inverted" />
         </div>
       </div>
       <Map />
