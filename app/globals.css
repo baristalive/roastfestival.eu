@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --accent: rgb(255, 248, 0);
+  --background: #000;
+}
+
 :root,
 .inverted-vars-reset {
-  --background-rgb: 255, 248, 0;
-  --foreground-rgb: 0, 0, 0;
+  --background-rgb: var(--accent);
+  --foreground-rgb: var(--background);
 }
 
 .inverted-vars {
-  --background-rgb: 0, 0, 0;
-  --foreground-rgb: 255, 248, 0;
+  --background-rgb: var(--background);
+  --foreground-rgb: var(--accent);
 }
 
 html {
@@ -20,13 +25,13 @@ html {
 
 section,
 body, .modal {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: var(--foreground-rgb);
+  background: var(--background-rgb);
 }
 
 .inverted {
-  background: rgb(var(--foreground-rgb));
-  color: rgb(var(--background-rgb));
+  background: var(--foreground-rgb);
+  color: var(--background-rgb);
 }
 
 .wrapper::before {
@@ -36,7 +41,7 @@ body, .modal {
   left: 0;
   right: 0;
   bottom: -100px;
-  background: rgb(var(--foreground-rgb));
+  background: var(--foreground-rgb);
   z-index: -2;
 }
 
@@ -55,7 +60,7 @@ body, .modal {
   right: 0;
   height: 49vh;
   pointer-events: none;
-  background: rgb(var(--background-rgb));
+  background: var(--background-rgb);
   position: sticky;
   z-index: 4;
   mix-blend-mode: difference;

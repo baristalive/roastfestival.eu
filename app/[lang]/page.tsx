@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { ColorResult, SketchPicker } from "react-color";
 
 import { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
@@ -25,18 +26,24 @@ type HomePropsType = {
 };
 
 const Home = ({ params: { lang } }: HomePropsType) => {
-    const [divClass, toggleDivClass] = useState(false);
-    useEffect(() => {
-      const onKeyDown = (e: KeyboardEvent) => {
-        if (e.ctrlKey) {
-          toggleDivClass(!divClass);
-        }
-      };
-      document.addEventListener("keydown", onKeyDown);
-      return () => {
-        document.removeEventListener("keydown", onKeyDown);
-      };
-    }, [divClass]);
+  const [divClass, toggleDivClass] = useState(false);
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey) {
+        toggleDivClass(!divClass);
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [divClass]);
+  const [color, setColor] = useState("rgb(255, 248, 0)")
+
+  const handleColorChange = (color: ColorResult) => {
+    setColor(color.hex)
+    document.documentElement.style.setProperty('--accent', color.hex);
+  }
 
   return (
     <div className="wrapper">
@@ -44,6 +51,9 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         <Link href={lang === "cz" ? "./en" : "./cz"} rel="alternate">
           {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
         </Link>
+      </div>
+      <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
+        <SketchPicker color={color} onChange={handleColorChange}/>
       </div>
       <div className={divClass ? "show" : "hide"}>
         <div className="overlay" />
@@ -59,7 +69,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
           <BuyTickets className="inverted" />
           <PromotedRoasters />
           <Info />
-          <BuyTickets  className="inverted" />
+          <BuyTickets className="inverted" />
         </div>
       </div>
       <Map />
