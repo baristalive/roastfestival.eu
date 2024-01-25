@@ -3,7 +3,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ColorResult, SketchPicker } from "react-color";
 
-import { SupportedLanguages } from "../dictionaries/all";
+import dictionaries, { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
 import { About } from "./sections/About";
 import { Filler } from "./sections/Filler";
@@ -44,6 +44,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
     setColor(color.hex)
     document.documentElement.style.setProperty('--accent', color.hex);
   }
+  const usedLang = dictionaries[lang as SupportedLanguages];
 
   return (
     <div className="wrapper">
@@ -62,14 +63,17 @@ const Home = ({ params: { lang } }: HomePropsType) => {
           <About />
           <Filler />
           {/* <Sponsors /> */}
-          <BuyTickets className="inverted pt-64" />
-          <Program />
-          <BuyTickets />
-          <OtherServices />
-          <BuyTickets className="inverted" />
-          <PromotedRoasters />
+          {usedLang.ready && <>
+            <BuyTickets className="inverted pt-64" />
+            <Program />
+            <BuyTickets />
+            <OtherServices />
+            <BuyTickets className="inverted" />
+            <PromotedRoasters />
+          </>
+          }
           <Info />
-          <BuyTickets className="inverted" />
+          {usedLang.ready && <BuyTickets className="inverted" /> }
         </div>
       </div>
       <Map />

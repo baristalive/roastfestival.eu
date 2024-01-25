@@ -292,7 +292,8 @@
     "espresso_milk": "Espresso bar with milk",
     "brew": "Brew bar"
   },
-  "programLoadingText": "The program is properly roasted now!",
+  "programReadyText": "The program is properly roasted now!",
+  "programLoadingText": "We are still roasting the festival program for you.",
   "programSubjectToChange": "This program is subject to change",
   "tickets": "Tickets",
   "title": "Coffee roasters festival in Brno",

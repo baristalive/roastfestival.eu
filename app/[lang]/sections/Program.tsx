@@ -41,7 +41,7 @@ export const Program = () => {
           </a>
         </h2>
       </div>
-      {lang.program.length > 0 ? (
+      {lang.ready && lang.program.length > 0 ? (
         <>
           {lang.program.map((d: DaySchedule, idx_d) => (
             <div

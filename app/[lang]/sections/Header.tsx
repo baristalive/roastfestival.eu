@@ -73,7 +73,7 @@ export const Header = () => {
         </a>
       </div>
       <div className="text-center text-lg lg:mb-12 lg:text-4xl">
-        <div className="mx-auto max-w-md">{lang.programLoadingText}</div>
+        <div className="mx-auto max-w-md">{lang.ready ? lang.programReadyText : lang.programLoadingText}</div>
       </div>
       <div className="text-center text-3xl lg:mb-12 lg:text-6xl">
         <ArrowIcon />

@@ -292,7 +292,8 @@
       ]
     }
   ],
-  "programLoadingText": "Program je již řádně upražen!",
+  "programReadyText": "Program je již řádně upražen!",
+  "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
   "programSubjectToChange": "Změna programu vyhrazena",
   "tickets": "Vstupenky",
   "title": "Coffee roasters festival in Brno",
