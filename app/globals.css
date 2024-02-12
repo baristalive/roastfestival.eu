@@ -96,6 +96,8 @@ body, .modal {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
+  border: 2px solid var(--background-rgb);
+  border-left: 0;
 }
 
 .page1 {
