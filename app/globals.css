@@ -124,22 +124,22 @@ body, .modal {
   inset: 0;
   background: url('/kolona.jpg');
   background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--background-rgb);
-  mask-image: url('/clip.svg');
-  mask-repeat: no-repeat;
-  mask-position: center center;
-  mask-size: cover;
-  mask-size: contain;
-  opacity: .2;
+  opacity: .25;
 }
 .page1::after {
-  /* position: absolute;
+  position: absolute;
   content: "";
-  inset: 0; */
+  inset: 0;
   background-color: var(--background-rgb);
-  filter: blur(200px);
-  opacity: .8;
+  /* filter: blur(200px); */
+  mask-image: url('/clip.svg'), linear-gradient(#fff 0 0);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+  mask-composite: exclude;
+  opacity: .5;
 }
 
 .logo svg {
