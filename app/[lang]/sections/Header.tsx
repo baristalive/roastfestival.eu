@@ -1,5 +1,9 @@
 "use client";
 import { useParams } from "next/navigation";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 import FacebookIcon from "../../icons/facebook";
@@ -10,22 +14,34 @@ import Logo from "../components/Logo";
 export const Header = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
+  const title = useRef(null);
+  const bottom = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.set(title.current, { opacity: 0, y: "+=200" })
+      gsap.to(title.current, { delay: 3, y: 0, opacity: 1, ease: "power1.out" })
+    },
+    { scope: title },
+  );
+  useGSAP(
+    () => {
+      gsap.set(bottom.current, { opacity: 0 })
+      gsap.to(bottom.current, { delay: 4, opacity: 1 })
+    },
+    { scope: bottom },
+  );
 
   return (
-    <section className="page1 flex h-screen flex-col content-stretch p-8">
+    <section className="page1 flex h-dvh flex-col content-stretch p-8">
       <div className="flex flex-col gap-8">
-        <header className="mx-auto w-full max-w-[1900px] lg:grid lg:grid-cols-[1fr_minmax(0,_50vw)_1fr]">
-          <div className="hidden text-xl font-medium leading-none lg:block lg:text-3xl">
+        <header className="mx-auto w-full max-w-[1900px] lg:grid lg:grid-cols-[1fr_1fr]">
+          <div className="hidden text-xl font-medium leading-none lg:leading-snug lg:block lg:text-3xl">
             {lang.date}
             <br />
             {lang.place}
           </div>
-          <div className="pt-12 text-center lg:pt-6">
-            <h1 className="mx-auto max-w-lg text-3xl font-medium uppercase lg:text-4xl">
-              {lang.title}
-            </h1>
-          </div>
-          <div className="text-right text-3xl font-medium leading-none">
+          <div className="text-right text-3xl font-medium leading-snug">
             <nav className="hidden pr-10 align-top lg:inline-block">
               <a
                 href={lang.contacts.tickets}
@@ -63,9 +79,17 @@ export const Header = () => {
           {lang.place}
         </div>
       </div>
-      <div className="logo grow mx-auto max-w-[1900px] lg:mb-[-200px] flex justify-center items-center">
-        <Logo />
+      <div className="grow flex justify-center items-center flex-col">
+        <div className="logo mx-auto max-w-[1900px] mb-[-10%] ">
+          <Logo />
+        </div>
+        <div className="pt-12 text-center lg:pt-6">
+          <h1 ref={title} className="mx-auto font-bold max-w-min inline-block lowercase text-[5.9vw] 2xl:text-8xl leading-none">
+            {lang.title}
+          </h1>
+        </div>
       </div>
+      <div ref={bottom}>
       <div className="mx-auto py-10 text-center lg:hidden lg:py-20">
         <a
           className="rounded-full border border-current px-8 py-3 text-lg font-medium lg:text-2xl"
@@ -81,6 +105,7 @@ export const Header = () => {
       </div>
       <div className="text-center text-3xl lg:mb-12 lg:text-6xl">
         <ArrowIcon />
+      </div>
       </div>
     </section>
   );

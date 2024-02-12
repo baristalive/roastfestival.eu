@@ -8,7 +8,6 @@
   },
   "buyTickets": "Buy tickets",
   "contact": "Contact us",
-  "date": "16-17/9/2023",
   "organizers": {
     "text": [
       "We are a group of coffee enthusiasts and professionals who decided to bring the culture of European coffee festivals to Brno. Organizers work in a variety of specialty coffee shops, roasters, bars and other places. What binds us together is our love for specialty coffee and fine gastronomy."
@@ -296,7 +295,6 @@
   "programLoadingText": "We are still roasting the festival program for you.",
   "programSubjectToChange": "This program is subject to change",
   "tickets": "Tickets",
-  "title": "Coffee roasters festival in Brno",
   "sponsors": {
     "title": "Sponsors",
     "add": "Become a sponsor"

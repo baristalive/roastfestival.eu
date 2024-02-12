@@ -8,7 +8,6 @@
   },
   "buyTickets": "Koupit vstupenky",
   "contact": "Kontakt",
-  "date": "16-17/9/2023",
   "location": {
     "title": "Lokace",
     "addressTitle": "Adresa",
@@ -296,7 +295,6 @@
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
   "programSubjectToChange": "Změna programu vyhrazena",
   "tickets": "Vstupenky",
-  "title": "Coffee roasters festival in Brno",
   "sponsors": {
     "title": "Sponzoři",
     "add": "Stát se sponzorem"

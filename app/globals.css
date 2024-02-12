@@ -52,7 +52,7 @@ body, .modal {
 }
 .with-overlay {
   z-index: 0;
-  margin-top: -51vh;
+  /* margin-top: -51vh; */
 }
 
 .overlay {
@@ -60,7 +60,7 @@ body, .modal {
   top: 0;
   left: 0;
   right: 0;
-  height: 49vh;
+  /* height: 49vh; */
   pointer-events: none;
   /* background: var(--background-rgb); */
   position: sticky;
@@ -100,6 +100,44 @@ body, .modal {
 
 .page1 {
   position: relative;
+}
+
+.page1 > * {
+  z-index: 1;
+}
+
+/* .page1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: url('/noise.png');
+} */
+
+
+.page1::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: url('/kolona.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: var(--background-rgb);
+  mask-image: url('/clip.svg');
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: cover;
+  mask-size: contain;
+  opacity: .2;
+}
+.page1::after {
+  /* position: absolute;
+  content: "";
+  inset: 0; */
+  background-color: var(--background-rgb);
+  filter: blur(200px);
+  opacity: .8;
 }
 
 .logo svg {
