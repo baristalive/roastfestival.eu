@@ -19,15 +19,15 @@ export const Header = () => {
 
   useGSAP(
     () => {
-      gsap.set(title.current, { opacity: 0, y: "+=200" })
-      gsap.to(title.current, { delay: 3, y: 0, opacity: 1, ease: "power1.out" })
+      gsap.set(title.current, { opacity: 0, y: "+=20px" })
+      gsap.to(title.current, { delay: 2.5, y: 0, opacity: 1, ease: "back.out" })
     },
     { scope: title },
   );
   useGSAP(
     () => {
       gsap.set(bottom.current, { opacity: 0 })
-      gsap.to(bottom.current, { delay: 4, opacity: 1 })
+      gsap.to(bottom.current, { delay: 3.5, opacity: 1 })
     },
     { scope: bottom },
   );
