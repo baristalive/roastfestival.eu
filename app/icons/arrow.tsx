@@ -1,32 +1,28 @@
 const ArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    viewBox="0 0 50 50"
-    style={{ display: "inline-block" }}
+    width="80px"
+    height="80px"
+    viewBox="0 0 100 100"
   >
+    <circle cx="50" cy="50" r="40" fill="currentColor" />
     <g>
       <line
-        x1="25"
-        x2="25"
-        y1="15"
-        y2="35"
-        stroke="currentColor"
+        x1="35"
+        x2="65"
+        y1="50"
+        y2="50"
+        stroke="white"
         strokeWidth="4"
         strokeLinecap="round"
       />
       <path
-        d="M16,25,25,35,34,25"
+        d="M54,35,65,50,54,65"
         fill="none"
-        stroke="currentColor"
+        stroke="white"
         strokeWidth="4"
         strokeLinecap="round"
       />
-    </g>
-    <g fill="none" stroke="currentColor" strokeWidth="1">
-      <circle cx="25" cy="25" r="25" stroke="none" />
-      <circle cx="25" cy="25" r="24.5" fill="none" />
     </g>
   </svg>
 );

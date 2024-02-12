@@ -9,12 +9,11 @@ export const Footer = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <footer className="inverted flex min-h-[50vh] flex-col justify-end p-10">
-      <nav className="text-center text-xl font-medium">
-        <div>{lang.contact}</div>
-        <div className="mt-2 flex justify-center gap-4 pb-40">
+    <footer className="flex min-h-[50vh] flex-col justify-end p-10">
+      <nav className="text-center lowercase font-medium">
+        <div className="text-3xl pb-12">{lang.contact}</div>
+        <div className="flex justify-center gap-4 pb-40">
           <a
-            className="inverted"
             href={lang.contacts.facebook}
             title="Facebook"
             rel="external"
@@ -23,7 +22,6 @@ export const Footer = () => {
             <span className="sr-only">Facebook</span>
           </a>
           <a
-            className="inverted"
             href={lang.contacts.instagram}
             title="Instagram"
             rel="external"
@@ -32,7 +30,6 @@ export const Footer = () => {
             <span className="sr-only">Instagram</span>
           </a>
           <a
-            className="h-[34px] w-[34px]"
             href={lang.contacts.email}
             title="E-Mail"
             rel="author"
