@@ -1,16 +1,18 @@
 "use client";
 import { useParams } from "next/navigation";
+
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 import FacebookIcon from "../../icons/facebook";
 import InstagramIcon from "../../icons/instagram";
 import ArrowIcon from "../../icons/arrow";
+import Logo from "../components/Logo";
 
 export const Header = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
+
   return (
     <section className="page1 flex h-screen flex-col content-stretch p-8">
-      <div className="logo" />
       <div className="flex flex-col gap-8">
         <header className="mx-auto w-full max-w-[1900px] lg:grid lg:grid-cols-[1fr_minmax(0,_50vw)_1fr]">
           <div className="hidden text-xl font-medium leading-none lg:block lg:text-3xl">
@@ -61,7 +63,9 @@ export const Header = () => {
           {lang.place}
         </div>
       </div>
-      <div className="logo-inline grow" />
+      <div className="logo grow mx-auto max-w-[1900px] lg:mb-[-200px] flex justify-center items-center">
+        <Logo />
+      </div>
       <div className="mx-auto py-10 text-center lg:hidden lg:py-20">
         <a
           className="rounded-full border border-current px-8 py-3 text-lg font-medium lg:text-2xl"
