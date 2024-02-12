@@ -39,13 +39,13 @@ const RoundLogo = () => {
           end: "center 20%",
         }
       })
-      tl.set("#round_g0", { rotation: "-=10", svgOrigin: "582 589"});
-      tl.set("#round_g1", { rotation: "+=20", svgOrigin: "582 589"});
-      tl.set("#round_g2", { rotation: "-=30", svgOrigin: "582 589"});
-      tl.set("#round_g3", { rotation: "+=40", svgOrigin: "582 589"});
-      tl.set("#round_g4", { rotation: "-=50", svgOrigin: "582 589"});
-      tl.set("#round_g5", { rotation: "+=60", svgOrigin: "582 589"});
-      tl.set("#round_g6", { rotation: "-=70", svgOrigin: "582 589"});
+      gsap.set("#round_g0", { rotation: "-=10", svgOrigin: "582 589"});
+      gsap.set("#round_g1", { rotation: "+=20", svgOrigin: "582 589"});
+      gsap.set("#round_g2", { rotation: "-=30", svgOrigin: "582 589"});
+      gsap.set("#round_g3", { rotation: "+=40", svgOrigin: "582 589"});
+      gsap.set("#round_g4", { rotation: "-=50", svgOrigin: "582 589"});
+      gsap.set("#round_g5", { rotation: "+=60", svgOrigin: "582 589"});
+      gsap.set("#round_g6", { rotation: "-=70", svgOrigin: "582 589"});
 
       tl.to("#round_g0", { rotation: 0 }, "<");
       tl.to("#round_g1", { rotation: 0 }, "<");
