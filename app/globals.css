@@ -91,16 +91,19 @@ body, footer, .modal {
   z-index: 2;
   text-orientation: sideways;
   writing-mode: vertical-rl;
-  right: 0;
-  bottom: 30%;
-  padding: 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  left: -5px;
+  bottom: 2rem;
+  padding: 2em 1em 2em calc(1em + 5px);
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
   text-align: center;
   border: 2px solid var(--background-rgb);
-  border-right: 0;
+  border-left: 0;
+  transition: transform .5s;
 }
-
+.lang:hover {
+  transform: translateX(5px);
+}
 .page1 {
   position: relative;
 }
@@ -115,6 +118,7 @@ body, footer, .modal {
 .nav:hover {
   transform: translateY(-5px);
 }
+
 /* .page1::after {
   content: "";
   position: absolute;

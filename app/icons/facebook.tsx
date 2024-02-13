@@ -3,8 +3,8 @@ const FacebookIcon = () => (
     id="FB-icon"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="54"
-    height="54"
+    width="3em"
+    height="3em"
     viewBox="-2 -2 38 38"
     fill="currentColor"
   >

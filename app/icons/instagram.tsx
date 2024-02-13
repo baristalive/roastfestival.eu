@@ -2,8 +2,8 @@ const InstagramIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="54"
-    height="54"
+    width="3em"
+    height="3em"
     viewBox="0 0 35 35"
     fill="currentColor"
   >

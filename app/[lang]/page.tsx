@@ -38,23 +38,25 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [divClass]);
-  const [color, setColor] = useState("rgb(255, 248, 0)")
+  const [color, setColor] = useState("rgb(255, 248, 0)");
 
   const handleColorChange = (color: ColorResult) => {
-    setColor(color.hex)
-    document.documentElement.style.setProperty('--accent', color.hex);
-  }
+    setColor(color.hex);
+    document.documentElement.style.setProperty("--accent", color.hex);
+  };
   const usedLang = dictionaries[lang as SupportedLanguages];
 
   return (
     <div className="wrapper">
-      <div className="lang inverted uppercase">
-        <Link href={lang === "cz" ? "./en" : "./cz"} rel="alternate">
-          {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
-        </Link>
-      </div>
+      <Link
+        href={lang === "cz" ? "./en" : "./cz"}
+        rel="alternate"
+        className="lang inverted lowercase text-lg"
+      >
+        {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
+      </Link>
       <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
-        <SketchPicker color={color} onChange={handleColorChange}/>
+        <SketchPicker color={color} onChange={handleColorChange} />
       </div>
       <div className={divClass ? "show" : "hide"}>
         <div className="overlay" />
@@ -63,15 +65,16 @@ const Home = ({ params: { lang } }: HomePropsType) => {
           {/* <About />
           <Filler />
           <Sponsors /> */}
-          {usedLang.ready && <>
-            {/* <BuyTickets className="inverted pt-64" /> */}
-            <Program />
-            {/* <BuyTickets />
+          {usedLang.ready && (
+            <>
+              {/* <BuyTickets className="inverted pt-64" /> */}
+              <Program />
+              {/* <BuyTickets />
             <OtherServices />
             <BuyTickets className="inverted" />
             <PromotedRoasters /> */}
-          </>
-          }
+            </>
+          )}
           {/* <Info />
           {usedLang.ready && <BuyTickets className="inverted" /> } */}
         </div>

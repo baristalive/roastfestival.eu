@@ -9,6 +9,7 @@ import FacebookIcon from "../../icons/facebook";
 import InstagramIcon from "../../icons/instagram";
 import ArrowIcon from "../../icons/arrow";
 import Logo from "../components/Logo";
+import Link from "next/link";
 
 export const Header = () => {
   const params = useParams();
@@ -25,12 +26,13 @@ export const Header = () => {
         ease: "back.out",
       });
       gsap.set([".fade-in", ".fade-in-2"], { opacity: 0 });
-      gsap.to(".fade-in", { duration: 1, opacity: 1 });
+      gsap.to(".fade-in", { delay: 1, duration: 1, opacity: 1 });
       gsap.set(".slide-in", { left: 0 });
       const tl = gsap.timeline();
       tl.to(".slide-in", {
         duration: 1,
-        left: "calc(100% - 80px)",
+        delay: 1,
+        left: "calc(100% - 2.7em)",
         ease: "bounce.out",
       });
       tl.to(".fade-in-2", { duration: 1, opacity: 1 });
@@ -41,18 +43,23 @@ export const Header = () => {
   return (
     <section
       ref={header}
-      className="page1 flex h-svh flex-col content-stretch items-center p-8"
+      className="page1 flex h-svh flex-col content-stretch items-center p-8 z-10"
     >
-      <div className="flex w-full max-w-[1900px] justify-between p-12 pt-2 ">
-        <div className="fade-in text-3xl font-medium leading-snug ">
+      <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 md:text-3xl">
+        <div className="fade-in font-medium leading-snug ">
           {lang.date}
           <br />
           {lang.place}
         </div>
-        <div className="fade-in text-right text-3xl font-medium leading-snug">
+        <div className="fade-in text-right font-medium leading-snug">
           <nav className="">
             <div className="flex justify-end gap-4">
-              <a href={lang.contacts.facebook} title="Facebook" rel="external">
+              <a
+                href={lang.contacts.facebook}
+                title="Facebook"
+                rel="external"
+                className="nav"
+              >
                 <FacebookIcon />
                 <span className="sr-only">Facebook</span>
               </a>
@@ -60,10 +67,18 @@ export const Header = () => {
                 href={lang.contacts.instagram}
                 title="Instagram"
                 rel="external"
+                className="nav"
               >
                 <InstagramIcon />
                 <span className="sr-only">Instagram</span>
               </a>
+              <Link
+                href={params.lang === "cz" ? "./en" : "./cz"}
+                rel="alternate"
+                className="rounded-full nav border border-current w-[3em] flex justify-center items-center lowercase md:py-6"
+              >
+                {params.lang === "cz" ? "en" : "cz"}
+              </Link>
             </div>
           </nav>
         </div>
@@ -78,24 +93,29 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 p-12 text-center text-3xl font-medium md:flex-row md:items-end md:justify-between ">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col mt-[-10%] gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl ">
         <div className="flex flex-col gap-8 leading-snug">
           <a href="#info" className="nav">
-            <nav className="rounded-full border border-current px-12 py-6 lowercase">
+            <nav className="rounded-full border border-current px-12 py-2 lowercase md:py-6">
               Info
             </nav>
           </a>
-          <a href="#program"  className="nav">
-            <nav className="rounded-full border border-current px-12 py-6 lowercase">
+          <a href="#program" className="nav">
+            <nav className="rounded-full border border-current px-12 py-2 lowercase md:py-6">
               Program
             </nav>
           </a>
         </div>
 
-        <a href={lang.contacts.tickets} title={lang.buyTickets} rel="external"  className="nav">
-          <nav className="inverted relative rounded-full border border-current py-6 pl-12 pr-24 lowercase">
+        <a
+          href={lang.contacts.tickets}
+          title={lang.buyTickets}
+          rel="external"
+          className="nav"
+        >
+          <nav className="inverted relative rounded-full border border-current px-12 py-2 lowercase md:py-6 md:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
-            <span className="slide-in absolute bottom-0 right-0">
+            <span className="slide-in right- absolute top-1/2 -translate-y-1/2">
               <ArrowIcon />
             </span>
           </nav>
