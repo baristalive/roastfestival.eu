@@ -32,7 +32,7 @@ export const Header = () => {
       tl.to(".slide-in", {
         duration: 1,
         delay: 1,
-        left: "calc(100% - 2.5em)",
+        left: "calc(100% - 3em)",
         ease: "bounce.out",
       });
       tl.to(".fade-in-2", { duration: 1, opacity: 1 });
@@ -41,9 +41,9 @@ export const Header = () => {
   );
 
   return (
-    <section
+    <header
       ref={header}
-      className="page1 flex h-[calc(100vh_-_2em)] flex-col justify-between items-center p-8 z-10"
+      className="flex h-svh flex-col justify-between items-center p-8 z-10"
     >
       <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
@@ -75,7 +75,7 @@ export const Header = () => {
               <Link
                 href={params.lang === "cz" ? "./en" : "./cz"}
                 rel="alternate"
-                className="rounded-full nav border border-current w-[3em] flex justify-center items-center lowercase 2xl:py-6"
+                className="rounded-full nav border border-current w-[3em] leading-[1.1em] table-cell align-middle text-center lowercase 2xl:py-6"
               >
                 {params.lang === "cz" ? "en" : "cz"}
               </Link>
@@ -93,8 +93,8 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl ">
-        <div className="flex flex-col gap-8 leading-snug">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl leading-snug">
+        <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
             <nav className="rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6">
               Info
@@ -113,7 +113,7 @@ export const Header = () => {
           rel="external"
           className="nav"
         >
-          <nav className="inverted relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
+          <nav className="cta relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
             <span className="slide-in right-0 absolute top-1/2 -translate-y-1/2">
               <ArrowIcon />
@@ -127,6 +127,6 @@ export const Header = () => {
         <ArrowIcon />
       </div> */}
       </div>
-    </section>
+    </header>
   );
 };

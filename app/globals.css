@@ -4,18 +4,9 @@
 
 :root {
   --accent: #5CA9AA;
-  --background: #fff;
-}
-
-:root,
-.inverted-vars-reset {
-  --background-rgb: var(--accent);
-  --foreground-rgb: var(--background);
-}
-
-.inverted-vars {
-  --background-rgb: var(--background);
-  --foreground-rgb: var(--accent);
+  --background: #f6fff6;
+  --black: #000;
+  --white: #fff;
 }
 
 html {
@@ -25,48 +16,20 @@ html {
 }
 
 section,
-body, footer, .modal {
-  color: var(--foreground-rgb);
-  fill: var(--foreground-rgb);
-  background: var(--background-rgb);
+body, .modal {
+  color: var(--black);
+  background: var(--background);
 }
 
-.inverted {
-  background: var(--foreground-rgb);
-  fill: var(--background-rgb);
-  color: var(--background-rgb);
+header, footer {
+  color: var(--white);
+  background: var(--accent);
 }
 
-.wrapper::before {
-  content: "";
-  position: fixed;
-  top: -100px;
-  left: 0;
-  right: 0;
-  bottom: -100px;
-  background: var(--foreground-rgb);
-  z-index: -2;
-}
-
-.wrapper {
-  z-index: 0;
-}
-.with-overlay {
-  z-index: 0;
-  /* margin-top: -51vh; */
-}
-
-.overlay {
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  /* height: 49vh; */
-  pointer-events: none;
-  /* background: var(--background-rgb); */
-  position: sticky;
-  z-index: 4;
-  /* mix-blend-mode: difference; */
+.cta {
+  background: var(--white);
+  fill: var(--accent);
+  color: var(--accent);
 }
 
 .maplibregl-ctrl-group {
@@ -97,18 +60,19 @@ body, footer, .modal {
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em;
   text-align: center;
-  border: 2px solid var(--background-rgb);
+  border: 2px solid var(--accent);
+  color: var(--accent);
   border-left: 0;
   transition: transform .5s;
 }
 .lang:hover {
   transform: translateX(5px);
 }
-.page1 {
+header {
   position: relative;
 }
 
-.page1 > * {
+header > * {
   z-index: 1;
 }
 
@@ -119,17 +83,7 @@ body, footer, .modal {
   transform: translateY(-5px);
 }
 
-/* .page1::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-  background: url('/noise.png');
-} */
-
-
-.page1::before {
+header::before {
   position: absolute;
   content: "";
   inset: 0;
@@ -139,12 +93,11 @@ body, footer, .modal {
   background-repeat: no-repeat;
   opacity: .25;
 }
-.page1::after {
+header::after {
   position: absolute;
   content: "";
   inset: 0;
-  background-color: var(--background-rgb);
-  /* filter: blur(200px); */
+  background-color: var(--accent);
   mask-image: url('/clip.svg'), linear-gradient(#fff 0 0);
   mask-repeat: no-repeat;
   mask-position: center center;
@@ -152,15 +105,11 @@ body, footer, .modal {
   mask-composite: exclude;
   opacity: .5;
 }
+
 @media only screen and (max-width: 800px) {
-  .page1::after {
+  header::after {
     mask-size: cover;
   }
-}
-
-.logo svg {
-  width: 100%;
-  height: auto;
 }
 
 .info-item {
