@@ -43,7 +43,7 @@ export const Header = () => {
   return (
     <section
       ref={header}
-      className="page1 flex h-svh flex-col content-stretch items-center p-8 z-10"
+      className="page1 flex min-h-svh flex-col content-stretch items-center p-8 z-10"
     >
       <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 md:text-3xl">
         <div className="fade-in font-medium leading-snug ">
