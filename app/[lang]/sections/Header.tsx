@@ -45,7 +45,7 @@ export const Header = () => {
       ref={header}
       className="flex h-svh flex-col justify-between items-center p-8 z-10"
     >
-      <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 2xl:text-3xl">
+      <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 text-sm md:text-2xl 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
           {lang.date}
           <br />
@@ -75,7 +75,7 @@ export const Header = () => {
               <Link
                 href={params.lang === "cz" ? "./en" : "./cz"}
                 rel="alternate"
-                className="rounded-full nav border border-current w-[3em] leading-[1.1em] table-cell align-middle text-center lowercase 2xl:py-6"
+                className="rounded-full nav border border-current w-[3em] leading-[1.6em] md:leading-[1.4em] 2xl:leading-[1.1em] table-cell align-middle text-center lowercase py-2 md:py-4 2xl:py-6"
               >
                 {params.lang === "cz" ? "en" : "cz"}
               </Link>
@@ -115,7 +115,7 @@ export const Header = () => {
         >
           <nav className="cta relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
-            <span className="slide-in right-0 absolute top-1/2 -translate-y-1/2">
+            <span className="text-sm md:text-2xl 2xl:text-3xl slide-in right-0 absolute top-1/2 -translate-y-1/2">
               <ArrowIcon />
             </span>
           </nav>
