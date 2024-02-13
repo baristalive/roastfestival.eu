@@ -32,7 +32,7 @@ export const Header = () => {
       tl.to(".slide-in", {
         duration: 1,
         delay: 1,
-        left: "calc(100% - 2.7em)",
+        left: "calc(100% - 2.5em)",
         ease: "bounce.out",
       });
       tl.to(".fade-in-2", { duration: 1, opacity: 1 });
@@ -43,9 +43,9 @@ export const Header = () => {
   return (
     <section
       ref={header}
-      className="page1 flex min-h-svh flex-col content-stretch items-center p-8 z-10"
+      className="page1 flex h-[calc(100vh_-_2em)] flex-col justify-between items-center p-8 z-10"
     >
-      <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 md:text-3xl">
+      <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
           {lang.date}
           <br />
@@ -75,7 +75,7 @@ export const Header = () => {
               <Link
                 href={params.lang === "cz" ? "./en" : "./cz"}
                 rel="alternate"
-                className="rounded-full nav border border-current w-[3em] flex justify-center items-center lowercase md:py-6"
+                className="rounded-full nav border border-current w-[3em] flex justify-center items-center lowercase 2xl:py-6"
               >
                 {params.lang === "cz" ? "en" : "cz"}
               </Link>
@@ -83,12 +83,12 @@ export const Header = () => {
           </nav>
         </div>
       </div>
-      <div className="flex grow flex-col items-center justify-center">
-        <div className="logo mx-auto mb-[-10%] max-w-[1600px] ">
+      <div className="flex absolute pointer-events-none top-0 bottom-1/4 sm:bottom-0 flex-col items-center justify-center text-2xl md:text-5xl xl:text-6xl 2xl:text-8xl">
+        <div className="logo mx-auto -mb-[2em] max-w-[1600px] pointer-events-auto">
           <Logo />
         </div>
         <div className="pt-12 text-center lg:pt-6">
-          <h1 className="mx-auto inline-block max-w-min text-[5.9vw] font-bold lowercase leading-none 2xl:text-8xl">
+          <h1 className="mx-auto inline-block max-w-min font-bold lowercase leading-none">
             {lang.title}
           </h1>
         </div>
@@ -96,12 +96,12 @@ export const Header = () => {
       <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl ">
         <div className="flex flex-col gap-8 leading-snug">
           <a href="#info" className="nav">
-            <nav className="rounded-full border border-current px-12 py-2 lowercase md:py-6">
+            <nav className="rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6">
               Info
             </nav>
           </a>
           <a href="#program" className="nav">
-            <nav className="rounded-full border border-current px-12 py-2 lowercase md:py-6">
+            <nav className="rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6">
               Program
             </nav>
           </a>
@@ -113,9 +113,9 @@ export const Header = () => {
           rel="external"
           className="nav"
         >
-          <nav className="inverted relative rounded-full border border-current px-12 py-2 lowercase md:py-6 md:pr-24">
+          <nav className="inverted relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
-            <span className="slide-in right- absolute top-1/2 -translate-y-1/2">
+            <span className="slide-in right-0 absolute top-1/2 -translate-y-1/2">
               <ArrowIcon />
             </span>
           </nav>
