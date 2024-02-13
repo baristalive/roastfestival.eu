@@ -93,7 +93,7 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col mt-[-10%] gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl ">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl ">
         <div className="flex flex-col gap-8 leading-snug">
           <a href="#info" className="nav">
             <nav className="rounded-full border border-current px-12 py-2 lowercase md:py-6">
