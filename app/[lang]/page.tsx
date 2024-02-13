@@ -62,9 +62,9 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         <div className="overlay" />
         <div className="with-overlay">
           <Header />
-          {/* <About />
+          {/* <About /> */}
           <Filler />
-          <Sponsors /> */}
+          {/* <Sponsors /> */}
           {usedLang.ready && (
             <>
               {/* <BuyTickets className="inverted pt-64" /> */}
