@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollSmoother, ScrollTrigger } from "gsap/all";
+// import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 import { useRef,CSSProperties, Fragment } from "react";
 import Modal from "../components/Modal";
@@ -22,7 +22,7 @@ export const Program = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+      // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
       // //Comment me out to see issue
       // const smoother = ScrollSmoother.create({
@@ -67,9 +67,9 @@ export const Program = () => {
                     <StationIcon station={t.track} />
                     <h3>{lang.programCategory[t.track]}</h3>
                   </div>
-                  {t.schedule.map((s) => (
+                  {t.schedule.map((s, idx) => (
                     <div
-                      key={s.title}
+                      key={`${day.title}_${s.title}_${idx}`}
                       className="program-slot elevate my-2 rounded-2xl px-8 py-2 text-left text-xl font-bold md:py-4 overflow-hidden"
                       style={{
                         gridColumnStart: `${(s.start - 10) * 2 + 5}`,
