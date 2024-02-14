@@ -14,7 +14,7 @@ import Link from "next/link";
 export const Header = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const header = useRef(null);
+  const ref = useRef(null);
 
   useGSAP(
     () => {
@@ -37,13 +37,13 @@ export const Header = () => {
       });
       tl.to(".fade-in-2", { duration: 1, opacity: 1 });
     },
-    { scope: header },
+    { scope: ref },
   );
 
   return (
     <header
-      ref={header}
-      className="flex h-svh flex-col justify-between items-center p-8 z-10"
+      ref={ref}
+      className="flex elevate h-svh flex-col justify-between items-center p-8 z-10"
     >
       <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 text-sm md:text-2xl 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
@@ -113,19 +113,13 @@ export const Header = () => {
           rel="external"
           className="nav"
         >
-          <nav className="cta relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
+          <nav className="cta elevate relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
             <span className="text-sm md:text-2xl 2xl:text-3xl slide-in right-0 absolute top-1/2 -translate-y-1/2">
               <ArrowIcon />
             </span>
           </nav>
         </a>
-        {/* <div className="text-center text-lg lg:mb-12 lg:text-4xl">
-        <div className="mx-auto max-w-md">{lang.ready ? lang.programReadyText : lang.programLoadingText}</div>
-      </div>
-      <div className="text-center text-3xl lg:mb-12 lg:text-6xl">
-        <ArrowIcon />
-      </div> */}
       </div>
     </header>
   );

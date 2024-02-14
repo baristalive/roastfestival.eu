@@ -1,10 +1,9 @@
 {
   "about": {
     "text": [
-      "Festival je brněnskou variací na evropské kávové festivaly. Inspiraci získáváme mezi etablovanými akcemi pořádanými například v Berlíně, Krakowě, Amsterdamu a v řadě dalších měst. První ročník přináší do Brna nejméně třicítku českých i zahraničních pražíren, které se představí na třech espresso a třech brew-barech v historickém prostoru brněnské Káznice. Těšit se můžete na řadu workshopů, přednášek, diskusí a soutěží. Pro baristy, pražiče a další kávové profesionály je navíc v sobotu připravena afterparty, s cílem propojení kontaktů, sdílení zkušeností a prohlubování vztahů.",
       "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
     ],
-    "title": "O festivalu"
+    "title": "Co je roast!?"
   },
   "buyTickets": "Chci vstupenky",
   "contact": "Kontakt",
@@ -308,12 +307,8 @@
   "learnMore": "chci vědět víc",
   "info": [
     {
-      "title": "Co je Roast!? A co od něj mohu čekat?",
-      "text": "V ceně vstupného je zahrnuta veškerá konzumace kávy, kterou ochutnáte na našich espresso a brew barech a vstup na všechny workshopy, přednášky i cuppingy. Kávu pražíren, která ti zachutná, poté můžeš zakoupit buď přímo na barech, nebo v prodejním stánku."
-    },
-    {
       "title": "Espresso bary",
-      "text": "Na našich barech se v určitých časových úsecích budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni! Na všech barech bude varianta ovesného mléka od OATLY."
+      "text": "Na našich barech se budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni!"
     },
     {
       "title": "Brew bary",
@@ -321,15 +316,11 @@
     },
     {
       "title": "Workshopy a cuppingy",
-      "text": "Neznáš termín cupping? Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Výborně! Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky."
+      "text": "Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky."
     },
     {
       "title": "Přednášky",
       "text": "Zajímá tě, čím si majitelé etablovaných podniků museli projít, když otevírali své kamenné děťátko? Chtěl/a by si vědět, jak funguje pražení nebo jaký je rozdíl mezi odpalovaným a kynutým těstem, které najdeš na pultu každého druhého podniku? Potom jsou pro tebe určené přednášky našich speciálních hostů."
-    },
-    {
-      "title": "Máš už dost kafe?",
-      "text": "Dej si drink, pivko nebo domací limču. A na sladkém a slaném stánku jsou pro tebe k zakousnutí připraveny nejen sendviče, nebo věnečky se slaným karamelem!"
     }
   ],
   "signUp": "Přihlásit se",

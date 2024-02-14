@@ -47,40 +47,35 @@ const Home = ({ params: { lang } }: HomePropsType) => {
   const usedLang = dictionaries[lang as SupportedLanguages];
 
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${divClass ? "show" : "hide"}`}>
       <Link
         href={lang === "cz" ? "./en" : "./cz"}
         rel="alternate"
-        className="lang inverted lowercase text-lg"
+        className="lang inverted text-lg lowercase"
       >
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
-      <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
+      {/* <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
         <SketchPicker color={color} onChange={handleColorChange} />
-      </div>
-      <div className={divClass ? "show" : "hide"}>
-        <div className="overlay" />
-        <div className="with-overlay">
-          <Header />
-          <About />
-          {/* <Filler /> */}
-          <Sponsors />
-          {usedLang.ready && (
-            <>
-              <BuyTickets className="inverted pt-64" />
-              <Program />
-              <BuyTickets />
-            <OtherServices />
-            <BuyTickets className="inverted" />
-            <PromotedRoasters />
-            </>
-          )}
-          <Info />
-          {usedLang.ready && <BuyTickets className="inverted" /> }
-        </div>
-      </div>
+      </div> */}
+      <Header />
+      {/* <Filler /> */}
+      <Info />
+      {/* <About /> */}
+      {/* <Sponsors />
+      {usedLang.ready && (
+        <>
+          <BuyTickets className="inverted pt-64" />
+          <Program />
+          <BuyTickets />
+          <OtherServices />
+          <BuyTickets className="inverted" />
+          <PromotedRoasters />
+        </>
+      )}
+      {usedLang.ready && <BuyTickets className="inverted" />}
       <Map />
-      <Organizers />
+      <Organizers /> */}
       <Footer />
     </div>
   );
