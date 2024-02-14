@@ -53,73 +53,86 @@
       "date": "16/9",
       "schedule": [
         {
-          "category": "espresso",
+          "track": "espresso",
           "schedule": [
             {
-              "time": "11:00 - 14:00",
+              "start": 11,
+              "end": 14,
               "title": "IG Coffee Roasters"
             },
             {
-              "time": "14:30 - 17:30",
+              "start": 14.5,
+              "end": 17.5,
               "title": "IG Coffee Roasters"
             }
           ]
         },
         {
-          "category": "espresso_milk",
+          "track": "espresso_milk",
           "schedule": [
             {
-              "time": "10:30 - 13:00",
+              "start": 10.5,
+              "end": 13,
               "title": "Kikafe"
             },
             {
-              "time": "11:00 - 14:00",
-              "title": "Chroast"
-            },
-            {
-              "time": "14:00 - 17:30",
+              "start": 14,
+              "end": 17.5,
               "title": "The Roses"
             },
             {
-              "time": "14:30 - 17:30",
+              "start": 11,
+              "end": 14,
+              "title": "Chroast"
+            },
+            {
+              "start": 14.5,
+              "end": 17.5,
               "title": "Punkt."
             }
           ]
         },
         {
-          "category": "brew",
+          "track": "brew",
           "schedule": [
             {
-              "time": "10:30 - 13:30",
+              "start": 10.5,
+              "end": 13.5,
               "title": "Poppy Beans"
             },
             {
-              "time": "10:30 - 13:00",
-              "title": "Jizba Luhačovice"
+              "start": 14.5,
+              "end": 17.5,
+              "title": "Veroni"
             },
             {
-              "time": "11:00 - 14:00",
+              "start": 11,
+              "end": 14,
               "title": "Mitte Coffee"
             },
             {
-              "time": "14:00 - 17:00",
-              "title": "Penerini"
-            },
-            {
-              "time": "14:00 - 17:30",
+              "start": 14,
+              "end": 17.5,
               "title": "Mima Coffee Roastery"
             },
             {
-              "time": "14:30 - 17:30",
-              "title": "Veroni"
+              "start": 10.5,
+              "end": 13,
+              "title": "Jizba Luhačovice"
+            },
+            {
+              "start": 14,
+              "end": 17,
+              "title": "Penerini"
             }
           ]
         },
         {
-          "category": "lecture",
+          "track": "lecture",
           "schedule": [
             {
-              "time": "11:30 - 13:30",
+              "start": 11.5,
+              "end": 13.5,
               "title": "Kávové experimenty a přátelství - zkušenosti Chicas Industry z Kolumbie",
               "speakers": [
                 "Karolína Nekvindová",
@@ -128,7 +141,8 @@
               "description": "Chcete zjistit, kdo tvoří tým Chicas Industry a jaká je náplň práce importéra zeleného zrna? Dozvíte se, které aspekty jejich práce jsou žádoucí a které naopak nepříjemné. Představí, od koho odebírají zelené zrno a proč spolupracují právě s těmito konkrétními farmáři. Zjistíte, jak se mohou pěstitelé s importéry vzájemně inspirovat a jak udržují přátelství přes půlku světa."
             },
             {
-              "time": "14:00 - 16:00",
+              "start": 14,
+              "end": 16,
               "title": "Účast na World Brewers Cup Milano & Melbourne",
               "speakers": [
                 "Tomáš Taussig"
@@ -138,10 +152,11 @@
           ]
         },
         {
-          "category": "workshop",
+          "track": "workshop",
           "schedule": [
             {
-              "time": "12:30 - 13:30",
+              "start": 12.5,
+              "end": 13.5,
               "title": "Coffee Culture: Cupping",
               "description": "Produkční cupping Coffee Culture pod taktovkou vítěze Czech Brewers Cup 2020 a 2022 Tomáše Tussiga. Těšit se můžete na profesionální ochutnávku káv od pražírny Coffee Culture se vším všudy a tak jak má být.",
               "speakers": [
@@ -149,7 +164,8 @@
               ]
             },
             {
-              "time": "14:00 - 17:00",
+              "start": 14,
+              "end": 17,
               "title": "Upražte si vlastní kafe s Chickas Industry",
               "description": "Ano, čteš to správně. Opravdu si zde můžeš upražit vlastní kávu a vzít si ji domů. Tento workshop nabízí unikátní hands-on experience pod vedením pravých profesionálů - importérek zelené kávy z Chicas Industry.",
               "speakers": [
@@ -167,69 +183,82 @@
       "date": "17/9",
       "schedule": [
         {
-          "category": "espresso",
+          "track": "espresso",
           "schedule": [
             {
-              "time": "10:30 - 13:00",
+              "start": 10.5,
+              "end": 13,
               "title": "Workshop: Espresso"
             },
             {
-              "time": "13:30 - 16:30",
+              "start": 13.5,
+              "end": 16.5,
               "title": "Penerini"
             }
           ]
         },
         {
-          "category": "espresso_milk",
+          "track": "espresso_milk",
           "schedule": [
             {
-              "time": "10:30 - 13:30",
+              "start": 10.5,
+              "end": 13.5,
               "title": "Poppy Beans"
             },
             {
-              "time": "11:00 - 14:00",
-              "title": "Mitte Coffee"
-            },
-            {
-              "time": "14:00 - 17:00",
+              "start": 14,
+              "end": 17,
               "title": "Veroni"
             },
             {
-              "time": "14:30 - 17:00",
+              "start": 11,
+              "end": 14,
+              "title": "Mitte Coffee"
+            },
+            {
+              "start": 14.5,
+              "end": 17,
               "title": "Traffic Coffee"
             }
           ]
         },
         {
-          "category": "brew",
+          "track": "brew",
           "schedule": [
             {
-              "time": "10:30 - 13:30",
+              "start": 10.5,
+              "end": 13.5,
               "title": "Punkt."
             },
             {
-              "time": "11:00 - 14:00",
+              "start": 14,
+              "end": 17,
+              "title": "Diamond's Coffee"
+            },
+            {
+              "start": 11,
+              "end": 14,
               "title": "Kaldi"
             },
             {
-              "time": "10:30 - 13:00",
+              "start": 10.5,
+              "end": 13,
               "title": "IG Coffee Roasters"
             },
             {
+              "start": 13.5,
+              "end": 16.5,
               "time": "13:30 - 16:30",
               "title": "The Roses"
-            },
-            {
-              "time": "14:00 - 17:00",
-              "title": "Diamond's Coffee"
             }
           ]
         },
         {
-          "category": "lecture",
+          "track": "lecture",
           "schedule": [
             {
-              "time": "11:30 - 13:30",
+              "start": 11.5,
+              "end": 13.5,
               "title": "Diskuze: Jak si neotevřít kavárnu",
               "speakers": [
                 "Klára Dutkiewič",
@@ -240,7 +269,8 @@
               "description": "Čtveřice majitelů kaváren v diskusi, proč si rozhodně neotevírat kavárnu, proč by už to nikdy neudělali a proč si stejně dál otevírají další pobočky."
             },
             {
-              "time": "14:00 - 16:00",
+              "start": 14,
+              "end": 16,
               "title": "Trendy a mýty ve specialty coffee",
               "speakers": [
                 "Alan Jarrar"
@@ -250,10 +280,11 @@
           ]
         },
         {
-          "category": "workshop",
+          "track": "workshop",
           "schedule": [
             {
-              "time": "11:00 - 12:00",
+              "start": 11,
+              "end": 12,
               "title": "Úvod do cuppingu",
               "description": "Znáte slovo 'cupping'? Pokud ne, nevadí! Tato akce je právě pro vás! Přidejte se k nám, a společně se ponoříme do fascinujícího světa kávového ochutnávání. Povíme si, jak takový cupping probíhá, co a jakými smysly vnímáme a následně to na sobě všechno i vyzkoušíme.",
               "speakers": [
@@ -261,7 +292,8 @@
               ]
             },
             {
-              "time": "12:30 - 13:30",
+              "start": 12.5,
+              "end": 13.5,
               "title": "Cupping bezkofeinových káv",
               "description": "Myslíte si, že jsou všechny bezkofeinové kávy stejné? Tak to přijďte otestovat! Káva bez kofeinu to není jen podřadná a opovrhovaná náhražka pro slabé povahy, ale vlastně docela komplexní záležitost, díky která vznikají i zajímavé chuťové zážitky. Tento cupping je vhodný pro milovníky kávy, kteří však neholdují kofeinu.",
               "speakers": [
@@ -269,7 +301,8 @@
               ]
             },
             {
-              "time": "14:00 - 15:00",
+              "start": 14,
+              "end": 15,
               "title": "Úvod do alternativních příprav a jejich srovnání",
               "description": "V60, Kalita, Aeropress, Aeropress obrácený, Chemex, Džezva, CleverDrip, Vaccumpot, Origami, Frenchpress, Moccamaster, Moccamaster one... znáte další? Máte doma nějakou obskurnost a chcete se o ni podělit? Chceš-li se dozvědět o přípravě kávy na všechny možné způsoby, tohle je workshop přímo pro tebe.",
               "speakers": [
@@ -277,7 +310,8 @@
               ]
             },
             {
-              "time": "15:30 - 16:30",
+              "start": 15.5,
+              "end": 16.5,
               "title": "Senzorické vlastnosti vína a kávy",
               "description": "Víno a káva si jsou si bližší než byste čekali. Všimli jste si třeba někdy, že chuťové popisky na etiketách vín i káv jsou si až podezřele podobné? A co má takový profesionální someliér společného s vítězem Cup Tasters? Přijďte hledat chutě nejen ve víně.",
               "speakers": [

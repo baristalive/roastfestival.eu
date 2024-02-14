@@ -61,19 +61,21 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       <Header />
       {/* <Filler /> */}
       <Info />
+
+      <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1>
       {/* <About /> */}
-      {/* <Sponsors />
+      {/* <Sponsors /> */}
       {usedLang.ready && (
         <>
-          <BuyTickets className="inverted pt-64" />
+          {/* <BuyTickets className="inverted pt-64" /> */}
           <Program />
-          <BuyTickets />
+          {/* <BuyTickets />
           <OtherServices />
           <BuyTickets className="inverted" />
-          <PromotedRoasters />
+          <PromotedRoasters /> */}
         </>
       )}
-      {usedLang.ready && <BuyTickets className="inverted" />}
+      {/* {usedLang.ready && <BuyTickets className="inverted" />}
       <Map />
       <Organizers /> */}
       <Footer />

@@ -1,12 +1,10 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useLayoutEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const Info = () => {
   const params = useParams();

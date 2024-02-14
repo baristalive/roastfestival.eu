@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --accent: #5ca9aa;
+  --primary: #5ca9aa;
   --background: #fffefb;
   --black: #000;
   --white: #fff;
+  --secondary: #2e4052;
+  --accent: #ffc857;
+  --secondary-accent: #412234;
 }
 
 @media (min-width: 1024px) {
@@ -29,13 +32,13 @@ body,
 header,
 footer {
   color: var(--white);
-  background: var(--accent);
+  background: var(--primary);
 }
 
 .cta {
   background: var(--white);
-  fill: var(--accent);
-  color: var(--accent);
+  fill: var(--secondary);
+  color: var(--primary);
 }
 .watermark::before {
   position: absolute;
@@ -51,21 +54,25 @@ footer {
   z-index: 1;
 }
 @media (min-width: 1024px) {
-.info {
-  background: linear-gradient(
-      to right,
-      var(--background),
-      var(--background) 50%,
-      rgba(0, 0, 0, 0) 50%
-    ),
-    radial-gradient(
-      circle at right bottom,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0) 31%
-    ),
-    radial-gradient(circle at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 31%),
-    var(--accent);
-}
+  .info {
+    background: linear-gradient(
+        to right,
+        var(--background),
+        var(--background) 50%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      radial-gradient(
+        circle at right bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 31%
+      ),
+      radial-gradient(
+        circle at 60% 20%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 31%
+      ),
+      var(--primary);
+  }
 }
 .elevate {
   box-shadow:
@@ -109,8 +116,8 @@ footer {
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em;
   text-align: center;
-  border: 2px solid var(--accent);
-  color: var(--accent);
+  border: 2px solid var(--primary);
+  color: var(--primary);
   border-left: 0;
   transition: transform 0.5s;
 }
@@ -146,7 +153,7 @@ header::after {
   position: absolute;
   content: "";
   inset: 0;
-  background-color: var(--accent);
+  background-color: var(--primary);
   mask-image: url("/clip.svg"), linear-gradient(#fff 0 0);
   mask-repeat: no-repeat;
   mask-position: center center;
@@ -183,4 +190,41 @@ header::after {
 
 .hide .hidden-link {
   display: none;
+}
+.program-track {
+  transition: background-color 0.5s;
+}
+.program-track:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.program-slot {
+  color: var(--white);
+}
+
+.program-slot:nth-of-type(3n) {
+  background-color: var(--primary);
+}
+
+.program-slot:nth-of-type(3n + 1) {
+  background-color: var(--secondary);
+}
+
+.program-slot:nth-of-type(3n + 2) {
+  background-color: var(--accent);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.horiz-gallery-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+  position: relative;
 }
