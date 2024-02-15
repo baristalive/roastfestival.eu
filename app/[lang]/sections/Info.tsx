@@ -33,12 +33,12 @@ export const Info = () => {
         })
       })
       gsap.to(".bar",{
-        width: "10rem",
+        width: "6rem",
         scrollTrigger: {
-          trigger: "h2",
+          trigger: ref.current,
           scrub: 2,
-          start: "bottom 70%",
-          end: "bottom 20%"
+          start: "top center",
+          end: "top top"
         }
       })
     },
@@ -55,7 +55,7 @@ export const Info = () => {
             <p key={p}>{p}</p>
           ))}
         </div>
-        <div className="hidden md:block bar w-3 h-3 mt-48 rounded-full bg-[var(--accent)]"/>
+        <div className="hidden md:block bar w-3 h-3 mt-56 rounded-full bg-[var(--accent)]"/>
       </div>
       <div className="md:grid md:grid-cols-2 flex flex-col gap-8">
         {info.map((col, idx) => (
