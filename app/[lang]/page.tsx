@@ -6,7 +6,7 @@ import { ColorResult, SketchPicker } from "react-color";
 import dictionaries, { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
 import { About } from "./sections/About";
-import { Filler } from "./sections/Filler";
+import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
 import { Sponsors } from "./sections/Sponsors";
@@ -16,6 +16,7 @@ import { Map } from "./sections/Map";
 import { BuyTickets } from "./sections/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
+import { Scroller } from "./components/Scroller";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -59,7 +60,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         <SketchPicker color={color} onChange={handleColorChange} />
       </div> */}
       <Header />
-      {/* <Filler /> */}
+      {/* <Gallery /> */}
       <Info />
 
       {/* <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1> */}

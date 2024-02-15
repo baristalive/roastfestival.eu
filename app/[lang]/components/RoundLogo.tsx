@@ -8,31 +8,15 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const svgOrigin = "582 606";
-const groups = [20,10,80,130,20,60,160]
+const groups = Array(6)
 
 const RoundLogo = () => {
   const container = useRef(null);
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        svgOrigin,
-        scrollTrigger: {
-          trigger: '#round_g6',
-          scrub: 2,
-          start: "center 90%",
-          end: "center 20%",
-        }
-      })
-
-      groups.map((r,i) =>
-        gsap.set(`#round_g${i}`, { rotation: `${i%2 ? "+" : "-"}=${r}`, svgOrigin})
-      )
       groups.map((_,i) =>
-        tl.to(`#round_g${i}`, { rotation: 0 }, "<")
-      )
-      groups.map((r,i) =>
-        tl.to(`#round_g${i}`, { rotation: `${i%2 ? "-" : "+"}=${r}`}, "60%")
+        gsap.to(`#round_g${i}`, { rotation: 360, delay: "random(0,1)", repeat: -1, duration: "random(3,8)", svgOrigin, ease: "none" })
       )
     },
     { scope: container },
