@@ -33,13 +33,13 @@ export const Program = () => {
             scrub: 1,
             end: "+=3000",
             snap: 1 / (sections.length - 1),
-          }
-        })
+          },
+        });
         tl.to(sections, {
           xPercent: -100 * (sections.length - 1),
           ease: "none",
-        })
-        tl.to(ref.current, {duration: .5}, ">");
+        });
+        tl.to(ref.current, { duration: 0.5 }, ">");
       });
       gsap.matchMedia().add("(hover: none) and (min-width: 1024px)", () => {
         Draggable.create(".horizontal-scroll-container", {
@@ -54,18 +54,20 @@ export const Program = () => {
   return (
     <section ref={ref} className="min-h-screen py-12" id="program">
       <div className="program watermark2 ">
-        <h2 className="pb-8 pl-8 md:pl-20 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
+        <h2 className="pb-8 pl-8 pt-24 text-6xl font-bold md:pl-20 md:pt-56 lg:pt-20">
           Program
         </h2>
         <div className="horizontal-scroll-wraper min-h-screen">
           <div className="horizontal-scroll-container">
             {lang.program.map((day, idx) => (
-              <div key={day.title} id={`day_${idx+1}`} className="flex p-10">
-                <div className="flex-shrink-0 flex flex-col px-10">
+              <div key={day.title} id={`day_${idx + 1}`} className="flex p-10">
+                <div className="flex flex-shrink-0 flex-col px-10">
                   <h3 className="pb-6 text-6xl font-bold">{day.title}</h3>
                   <h4 className="text-3xl font-bold">{day.date}</h4>
-                  <div className={`${idx ? '': 'hidden'} text-sm md:text-2xl 2xl:text-3xl -mt-32 grow flex items-center`}>
-                    <a href={`#day_${idx+1}`}>
+                  <div
+                    className={`${idx ? "" : "hidden"} -mt-32 flex grow items-center text-sm md:text-2xl 2xl:text-3xl`}
+                  >
+                    <a href={`#day_${idx + 1}`}>
                       <ArrowIcon />
                     </a>
                   </div>
@@ -96,7 +98,13 @@ export const Program = () => {
                         style={{ gridRowEnd: t.rows + 1 }}
                       >
                         <StationIcon station={t.track} />
-                        <h3>{lang.programCategory[t.track]}</h3>
+                        <h3>
+                          {
+                            lang.programCategory[
+                              t.track as keyof typeof lang.programCategory
+                            ]
+                          }
+                        </h3>
                       </div>
                       {t.schedule.map((s, idx) => (
                         <div
