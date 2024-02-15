@@ -54,6 +54,7 @@
       "schedule": [
         {
           "track": "espresso",
+          "rows": 1,
           "schedule": [
             {
               "start": 11,
@@ -69,6 +70,7 @@
         },
         {
           "track": "espresso_milk",
+          "rows": 2,
           "schedule": [
             {
               "start": 10.5,
@@ -94,6 +96,7 @@
         },
         {
           "track": "brew",
+          "rows": 3,
           "schedule": [
             {
               "start": 10.5,
@@ -129,6 +132,7 @@
         },
         {
           "track": "lecture",
+          "rows": 1,
           "schedule": [
             {
               "start": 11.5,
@@ -153,6 +157,7 @@
         },
         {
           "track": "workshop",
+          "rows": 1,
           "schedule": [
             {
               "start": 12.5,
@@ -184,6 +189,7 @@
       "schedule": [
         {
           "track": "espresso",
+          "rows": 1,
           "schedule": [
             {
               "start": 10.5,
@@ -199,6 +205,7 @@
         },
         {
           "track": "espresso_milk",
+          "rows": 2,
           "schedule": [
             {
               "start": 10.5,
@@ -224,6 +231,7 @@
         },
         {
           "track": "brew",
+          "rows": 3,
           "schedule": [
             {
               "start": 10.5,
@@ -255,6 +263,7 @@
         },
         {
           "track": "lecture",
+          "rows": 1,
           "schedule": [
             {
               "start": 11.5,
@@ -281,6 +290,7 @@
         },
         {
           "track": "workshop",
+          "rows": 1,
           "schedule": [
             {
               "start": 11,

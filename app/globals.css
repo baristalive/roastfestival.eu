@@ -5,7 +5,7 @@
 :root {
   --primary: #5ca9aa;
   --background: #fffefb;
-  --black: #000;
+  --black: #2e4052;
   --white: #fff;
   --secondary: #2e4052;
   --accent: #ffc857;
@@ -51,6 +51,20 @@ footer {
   position: relative;
 }
 .watermark > * {
+  z-index: 1;
+}
+.watermark2::before {
+  position: absolute;
+  inset: 0;
+  top: -50px;
+  left: -50px;
+  content: "";
+  background: url("/watermark2.svg") repeat-x;
+}
+.watermark2 {
+  position: relative;
+}
+.watermark2 > * {
   z-index: 1;
 }
 @media (min-width: 1024px) {
@@ -202,29 +216,31 @@ header::after {
   color: var(--white);
 }
 
-.program-slot:nth-of-type(3n) {
+.program-track:nth-of-type(3n) .program-slot {
   background-color: var(--primary);
 }
 
-.program-slot:nth-of-type(3n + 1) {
+.program-track:nth-of-type(3n + 1) .program-slot  {
   background-color: var(--secondary);
 }
 
-.program-slot:nth-of-type(3n + 2) {
+.program-track:nth-of-type(3n + 2) .program-slot  {
   background-color: var(--accent);
 }
 
-.container-fluid {
-  width: 100%;
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.horiz-gallery-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  will-change: transform;
+.horizontal-scroll-wraper {
+  overflow-x:hidden;
+  width: 100vw;
+  max-width: 100%;
   position: relative;
 }
+.horizontal-scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 190vw;
+}
+
+.horizontal-scroll-container > div {
+  width: 90vw;
+}
+

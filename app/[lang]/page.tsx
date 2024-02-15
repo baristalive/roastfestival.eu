@@ -62,7 +62,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       {/* <Filler /> */}
       <Info />
 
-      <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1>
+      {/* <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1> */}
       {/* <About /> */}
       {/* <Sponsors /> */}
       {usedLang.ready && (

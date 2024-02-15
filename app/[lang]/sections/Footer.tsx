@@ -9,7 +9,7 @@ export const Footer = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <footer className="flex min-h-[50vh] flex-col justify-end p-10">
+    <footer className="flex min-h-[50vh] flex-col justify-end py-10">
       <nav className="text-center lowercase font-medium">
         <div className="text-3xl pb-12">{lang.contact}</div>
         <div className="flex justify-center gap-4 pb-40">

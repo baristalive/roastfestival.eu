@@ -21,9 +21,9 @@ export const Info = () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
-        gsap.set(".card", { y: "+=6rem"})
+        gsap.set(".card", { y: "+=40rem"})
         gsap.to(".card",{
-          y: '-=12rem',
+          y: '-=50rem',
           scrollTrigger: {
             trigger: ref.current,
             scrub: 2,
