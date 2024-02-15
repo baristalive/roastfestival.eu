@@ -10,37 +10,60 @@ import { StationIcon } from "../components/StationIcon";
 import LinkIcon from "@/app/icons/link";
 import { Draggable } from "gsap/all";
 import ArrowIcon from "@/app/icons/arrow";
+import { ScrollToPlugin } from "gsap/all";
 
 const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
 
 const sanitize = (str: string) =>
   str.replace(/[^a-z0-9]/gi, "-").toLocaleLowerCase();
 
+function getScrollPosition(animation?: gsap.core.Timeline, progress?: number) {
+  let p = gsap.utils.clamp(0, 1, progress || 0);
+  let st = animation?.scrollTrigger;
+  if (st === undefined) {
+    return 0;
+  }
+
+  let containerAnimation = st.vars.containerAnimation;
+  if (containerAnimation) {
+    let time = st.start + (st.end - st.start) * p;
+    st = containerAnimation.scrollTrigger;
+    return ( st ?
+      st.start + (st.end - st.start) * (time / containerAnimation.duration()) : 0
+    );
+  }
+
+  return st.start + (st.end - st.start) * p;
+}
+
 export const Program = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
+  const tl = useRef<undefined | gsap.core.Timeline>();
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger, Draggable);
+      gsap.registerPlugin(ScrollTrigger, Draggable, ScrollToPlugin);
       const sections = gsap.utils.toArray(".horizontal-scroll-container > div");
       gsap.matchMedia().add("(hover: hover) and (min-width: 1024px)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".program",
-            pin: true,
-            scrub: 1,
-            end: "+=3000",
-            snap: 1 / (sections.length - 1),
-          },
-        });
-        tl.to(sections, {
-          xPercent: -100 * (sections.length - 1),
-          ease: "none",
-        });
-        tl.to(ref.current, { duration: 0.5 }, ">");
+        tl.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".program",
+              pin: true,
+              scrub: 1,
+              end: "+=2000",
+              snap: 1 / (sections.length - 1),
+            },
+          })
+          .to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+          })
+          .to("#arrow > svg", { rotate: -180, duration: 0.1 }, "<50%");
       });
+      console.log(tl.current)
       gsap.matchMedia().add("(hover: none) and (min-width: 1024px)", () => {
         Draggable.create(".horizontal-scroll-container", {
           type: "x",
@@ -51,6 +74,13 @@ export const Program = () => {
     },
     { scope: ref },
   );
+  const { contextSafe } = useGSAP({ scope: ref });
+  const handleArrowClick =
+    contextSafe(() => {
+      console.log(tl.current)
+      gsap.to(window, { duration: 2, scrollTo: getScrollPosition(tl.current, Math.round(1 - (tl.current?.scrollTrigger?.progress || 0))) });
+    });
+
   return (
     <section ref={ref} className="min-h-screen py-12" id="program">
       <div className="program watermark2 ">
@@ -64,13 +94,13 @@ export const Program = () => {
                 <div className="flex flex-shrink-0 flex-col px-10">
                   <h3 className="pb-6 text-6xl font-bold">{day.title}</h3>
                   <h4 className="text-3xl font-bold">{day.date}</h4>
-                  <div
-                    className={`${idx ? "" : "hidden"} -mt-32 flex grow items-center text-sm md:text-2xl 2xl:text-3xl`}
+                  <a
+                    id="arrow"
+                    className={`${idx ? "" : "hidden"} nav -mt-32 flex grow items-center text-sm md:text-2xl 2xl:text-3xl cursor-pointer`}
+                    onClick={handleArrowClick}
                   >
-                    <a href={`#day_${idx + 1}`}>
                       <ArrowIcon />
-                    </a>
-                  </div>
+                  </a>
                 </div>
                 <div className="card elevate relative rounded-2xl pb-4">
                   <div className="grid grid-cols-[repeat(21,_minmax(0,_1fr))] p-8 pt-10 text-center">

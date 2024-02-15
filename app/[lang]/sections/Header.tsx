@@ -115,7 +115,7 @@ export const Header = () => {
         >
           <nav className="cta elevate relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
-            <span className="text-sm md:text-2xl 2xl:text-3xl slide-in right-0 absolute top-1/2 -translate-y-1/2">
+            <span className="text-sm md:text-2xl 2xl:text-3xl text-[var(--black)] slide-in right-0 absolute top-1/2 -translate-y-1/2">
               <ArrowIcon />
             </span>
           </nav>

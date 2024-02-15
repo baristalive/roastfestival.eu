@@ -5,7 +5,7 @@ const ArrowIcon = () => (
     height="3em"
     viewBox="0 0 100 100"
   >
-    <circle cx="50" cy="50" r="40" />
+    <circle cx="50" cy="50" r="40" fill="currentColor" />
     <g>
       <line
         x1="35"
