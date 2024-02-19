@@ -89,6 +89,20 @@ footer {
       ),
       var(--primary);
   }
+  .where-section {
+    background:
+      radial-gradient(
+        circle at right top,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 31%
+      ),
+      radial-gradient(
+        circle farthest-side at right top,
+        var(--primary) 50%,
+        var(--background) 50%
+      ),
+      var(--primary);
+  }
 }
 .elevate {
   box-shadow:
@@ -103,7 +117,26 @@ footer {
 .card:nth-child(even) {
   transform: translateY(4em);
 } */
-
+.maplibregl-marker {
+  font-size: large;
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow:
+    0px 8px 10px -5px rgba(0, 0, 0, 0.2),
+    0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.maplibregl-marker::before {
+    content: "";
+    position: absolute;
+    top: calc(100% - .25rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    border-top: 10px solid var(--white);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
 .maplibregl-ctrl-group {
   box-shadow: none !important;
   background: none !important;
@@ -113,12 +146,16 @@ footer {
 }
 .maplibregl-ctrl-zoom-in,
 .maplibregl-ctrl-zoom-out {
-  background-color: white !important;
-  filter: invert(1);
+  background-color: var(--white) !important;
+  /* filter: invert(1); */
   border-radius: 50% !important;
   height: 64px !important;
   width: 64px !important;
   margin: 10px !important;
+  box-shadow:
+    0px 8px 10px -5px rgba(0, 0, 0, 0.2),
+    0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
 }
 
 .lang {

@@ -84,7 +84,7 @@ export const Header = () => {
         </div>
       </div>
       <div className="flex absolute pointer-events-none top-0 bottom-1/4 sm:bottom-0 flex-col items-center justify-center text-2xl md:text-5xl xl:text-6xl 2xl:text-8xl">
-        <div className="logo mx-auto -mb-[2em] max-w-[1600px] pointer-events-auto">
+        <div className="mx-auto -mb-[2em] max-w-[1600px] pointer-events-auto">
           <Logo />
         </div>
         <div className="pt-12 text-center lg:pt-6">

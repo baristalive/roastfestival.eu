@@ -2,8 +2,8 @@
 import RoundLogo from '../components/RoundLogo';
 
 export const Gallery = () => (
-  <section className="inverted">
-    <div className="logo h-screen">
+  <section className="h-screen relative">
+    <div className="flex justify-center items-center">
       <RoundLogo />
     </div>
   </section>

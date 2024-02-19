@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
+import Bar from "../components/Bar";
 
 export const Info = () => {
   const params = useParams();
@@ -32,20 +33,11 @@ export const Info = () => {
           }
         })
       })
-      gsap.to(".bar",{
-        width: "6rem",
-        scrollTrigger: {
-          trigger: ref.current,
-          scrub: 2,
-          start: "top center",
-          end: "top top"
-        }
-      })
     },
     { scope: ref },
   );
   return (
-    <section ref={ref} id="info" className="info min-h-screen elevate grid lg:grid-cols-[1fr,2fr] gap-32 p-8 items-center watermark">
+    <section ref={ref} id="info" className="info min-h-screen grid lg:grid-cols-[1fr,2fr] gap-32 p-8 items-center watermark">
       <div className="md:p-12">
         <h2 className="w-3/4 pb-8 pt-24 md:pt-56 lg:pt-20 text-6xl font-bold">
           {lang.about.title}
@@ -55,7 +47,7 @@ export const Info = () => {
             <p key={p}>{p}</p>
           ))}
         </div>
-        <div className="hidden md:block bar w-3 h-3 mt-56 rounded-full bg-[var(--accent)]"/>
+        <Bar mountRef={ref} />
       </div>
       <div className="md:grid md:grid-cols-2 flex flex-col gap-8">
         {info.map((col, idx) => (

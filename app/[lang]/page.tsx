@@ -60,8 +60,9 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         <SketchPicker color={color} onChange={handleColorChange} />
       </div> */}
       <Header />
-      {/* <Gallery /> */}
       <Info />
+      <Map />
+      {/* <Gallery /> */}
 
       {/* <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1> */}
       {/* <About /> */}
@@ -76,9 +77,8 @@ const Home = ({ params: { lang } }: HomePropsType) => {
           <PromotedRoasters /> */}
         </>
       )}
-      {/* {usedLang.ready && <BuyTickets className="inverted" />}
-      <Map />
-      <Organizers /> */}
+      {/* {usedLang.ready && <BuyTickets className="inverted" />} */}
+      {/* <Organizers /> */}
       <Footer />
     </div>
   );
