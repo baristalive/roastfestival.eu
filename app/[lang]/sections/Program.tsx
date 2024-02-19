@@ -1,22 +1,9 @@
 "use client";
 import { useParams } from "next/navigation";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import {
-  MouseEvent,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import Modal from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
-import LinkIcon from "@/app/icons/link";
-import { Draggable } from "gsap/all";
-import ArrowIcon from "@/app/icons/arrow";
-import Link from "next/link";
 
 const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
 
@@ -29,56 +16,46 @@ export const Program = () => {
   const ref = useRef(null);
   const [tab, setTab] = useState(0);
 
-  const changeTabTo = (idx: number) =>
-    (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const changeTabTo =
+    (idx: number) => (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
       setTab(idx);
-    }
-
-  const hashChangeHandler = useCallback(() => {
-    const idx = Number(window.location.hash.split("_").pop());
-    console.log("here", idx)
-    if (!Number.isNaN(idx) && idx > 0 && idx < lang.program.length) {
-      setTab(idx - 1);
-    }
-  }, [lang]);
-
-  useEffect(() => {
-    window.addEventListener('hashchange', hashChangeHandler);
-    return () => {
-      window.removeEventListener('hashchange', hashChangeHandler);
     };
-  }, [hashChangeHandler]);
-
 
   return (
-    <section ref={ref} className="watermark2 pt-12" id="program">
-      <div className="flex h-full flex-col">
-        <div className="grid grid-cols-[1fr,auto,1fr] items-end">
+    <section ref={ref} className="watermark2 min-h-screen" id="program">
+      {lang.program.map((day, idx) => (
+        <div
+          key={day.title}
+          id={`program_day_${idx + 1}`}
+        />
+      ))}
+      <div className="flex h-full pt-12 flex-col">
+        <div className="grid grid-cols-[1fr,auto,1fr] items-baseline">
           <h2 className="p-4 pl-8 pt-24 text-6xl font-bold md:pl-20 md:pt-56 lg:pt-20">
             Program
           </h2>
           <div className="p-4">
-            <ul className="elevate card pills rounded-e-full rounded-s-full text-center font-medium flex">
+            <ul className="elevate card pills flex rounded-e-full rounded-s-full text-center font-medium">
               {lang.program.map((day, idx) => (
-                <li className="w-full focus-within:z-10 p-2" key={day.title}>
-                    <a
+                <li className="w-full p-2 focus-within:z-10" key={day.title}>
+                  <a
                     href={`#program_day_${idx + 1}`}
-                      className={`inline-block w-full cursor-pointer whitespace-nowrap p-4 px-16 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
-                      onClick={changeTabTo(idx)}
-                    >
-                      <h3 className="text-3xl font-bold">{day.title}</h3>
-                      <span className="text-xl">{day.date}</span>
-                    </a>
+                    className={`inline-block w-full cursor-pointer whitespace-nowrap p-4 px-16 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
+                    onClick={changeTabTo(idx)}
+                  >
+                    <h3 className="text-3xl font-bold">{day.title}</h3>
+                    <span className="text-xl">{day.date}</span>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
         <div className="grow">
+          {lang.program.map((day, idx) => (
             <div
-              key={lang.program[tab].title}
-              id={`program_day_${tab + 1}`}
-              className="inset-0 top-4 flex flex-col"
+              key={day.title}
+              className={`inset-0 top-4 flex flex-col ${idx !== tab ? "hidden" : ""}`}
             >
               <div className="schedule relative flex flex-col justify-between pb-4">
                 <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
@@ -96,7 +73,7 @@ export const Program = () => {
                   ))}
                   <div />
                 </div>
-                {lang.program[tab].schedule.map((t) => (
+                {day.schedule.map((t) => (
                   <div
                     key={t.track}
                     className="program-track relative mx-4 grid grid-cols-[repeat(20,_minmax(0,_1fr))] gap-x-2 rounded-2xl py-4 text-xl"
@@ -132,6 +109,7 @@ export const Program = () => {
                 ))}
               </div>
             </div>
+          ))}
         </div>
       </div>
     </section>

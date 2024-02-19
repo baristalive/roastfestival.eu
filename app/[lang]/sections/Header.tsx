@@ -20,7 +20,7 @@ export const Header = () => {
     () => {
       gsap.set("h1", { opacity: 0, y: "+=20px" });
       gsap.to("h1", {
-        delay: 2.5,
+        delay: 1.5,
         y: 0,
         opacity: 1,
         ease: "back.out",
@@ -30,7 +30,7 @@ export const Header = () => {
       gsap.set(".slide-in", { left: 0 });
       const tl = gsap.timeline();
       tl.to(".slide-in", {
-        duration: 1,
+        duration: .5,
         delay: 1,
         left: "calc(100% - 3em)",
         ease: "bounce.out",
