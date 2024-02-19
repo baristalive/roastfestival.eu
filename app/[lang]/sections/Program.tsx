@@ -4,183 +4,134 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import { createRef, useRef } from "react";
+import {
+  MouseEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Modal from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
 import LinkIcon from "@/app/icons/link";
 import { Draggable } from "gsap/all";
 import ArrowIcon from "@/app/icons/arrow";
-import { Scroller } from "../components/Scroller";
+import Link from "next/link";
 
 const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
 
 const sanitize = (str: string) =>
   str.replace(/[^a-z0-9]/gi, "-").toLocaleLowerCase();
 
-  function getScrollPosition(animation?: gsap.core.Timeline, progress?: number) {
-    let p = gsap.utils.clamp(0, 1, progress || 0);
-    let st = animation?.scrollTrigger;
-    if (st === undefined) {
-      return 0;
-    }
-  
-    let containerAnimation = st.vars.containerAnimation;
-    if (containerAnimation) {
-      let time = st.start + (st.end - st.start) * p;
-      st = containerAnimation.scrollTrigger;
-      return st
-        ? st.start + (st.end - st.start) * (time / containerAnimation.duration())
-        : 0;
-    }
-  
-    return st.start + (st.end - st.start) * p;
-  }
-  
 export const Program = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
-  const tl = useRef<undefined | gsap.core.Timeline>();
+  const [tab, setTab] = useState(0);
 
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger, Draggable, ScrollToPlugin);
-      const sections = gsap.utils.toArray(".horizontal-scroll-container > div");
-      gsap.matchMedia().add("(hover: hover) and (min-width: 1024px)", () => {
-        tl.current = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".program",
-              pin: true,
-              scrub: 1,
-              end: "+=2000",
-              snap: 1 / (sections.length - 1),
-            },
-          })
-          .set(".arrow-prev > svg", { display: "none" }, "<")
-          .to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-          })
-          .to(
-            ".arrow > svg",
-            {
-              rotate: -90,
-              duration: 0.05,
-            },
-            "<50%",
-            )
-            .set(".arrow-next > svg", { display: "none" }, ">")
-          .set(".arrow-prev > svg", { display: "block" }, ">")
-          .to(".arrow > svg", { rotate: -180, duration: 0.01 }, ">");
-      });
-      gsap.matchMedia().add("(hover: none) and (min-width: 1024px)", () => {
-        Draggable.create(".horizontal-scroll-container", {
-          type: "x",
-          bounds: ref.current,
-          inertia: true,
-        });
-      });
-    },
-    { scope: ref },
-  );
-  const { contextSafe } = useGSAP({ scope: ref });
-  const handleArrowClick = (idx) => contextSafe((e) => {
-    console.log(idx)
-    e.preventDefault()
-    gsap.to(window, { duration: 1, scrollTo: getScrollPosition(tl.current, idx) });
-  });
+  const changeTabTo = (idx: number) =>
+    (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      setTab(idx);
+    }
+
+  const hashChangeHandler = useCallback(() => {
+    const idx = Number(window.location.hash.split("_").pop());
+    console.log("here", idx)
+    if (!Number.isNaN(idx) && idx > 0 && idx < lang.program.length) {
+      setTab(idx - 1);
+    }
+  }, [lang]);
+
+  useEffect(() => {
+    window.addEventListener('hashchange', hashChangeHandler);
+    return () => {
+      window.removeEventListener('hashchange', hashChangeHandler);
+    };
+  }, [hashChangeHandler]);
+
 
   return (
-    <section ref={ref} className="min-h-screen py-12" id="program">
-      {/* <Scroller useRef={ref.current} animation={tl.current}/> */}
-      <div className="program watermark2 ">
-        <h2 className="pb-8 pl-8 pt-24 text-6xl font-bold md:pl-20 md:pt-56 lg:pt-20">
-          Program
-        </h2>
-        <div className="horizontal-scroll-wraper min-h-screen">
-          <div className="horizontal-scroll-container">
-            {lang.program.map((day, idx) => (
-              <div
-                key={day.title}
-                id={`program_day_${idx + 1}`}
-                className="flex p-10"
-              >
-                <div className="flex flex-shrink-0 flex-col px-10">
-                  <h3 className="pb-6 text-6xl font-bold">{day.title}</h3>
-                  <h4 className="text-3xl font-bold">{day.date}</h4>
-                  <div className="-mt-32 flex grow cursor-pointer items-center text-sm md:text-2xl 2xl:text-3xl">
-                    {idx !== 0 && (
-                      <><a
-                        className="nav arrow arrow-prev"
-                        href={`#program_day_${idx}`}
-                        onClick={handleArrowClick(idx-1)}
-                      >
-                        <ArrowIcon />
-                      </a>
-                      <a
-                        className="nav arrow arrow-next"
-                        onClick={handleArrowClick(idx)}
-                        href={`#program_day_${idx + 1}`}
-                      >
-                        <ArrowIcon />
-                      </a></>
-                    )}
-                  </div>
-                </div>
-                <div className="card elevate relative rounded-2xl pb-4">
-                  <div className="grid grid-cols-[repeat(21,_minmax(0,_1fr))] p-8 pt-10 text-center">
-                    <div className="col-span-2 col-start-4">10:00</div>
-                    {hours.map((h) => (
-                      <div className="col-span-2" key={h}>
-                        {h}:00
-                      </div>
-                    ))}
-                  </div>
-                  <div className="absolute inset-0 z-0 grid grid-cols-[repeat(21,_minmax(0,_1fr))] divide-x-2 divide-dashed divide-gray-300 p-8 pt-20">
-                    <div className="col-span-2 col-start-3"></div>
-                    {hours.map((h) => (
-                      <div className="col-span-2" key={h}></div>
-                    ))}
-                    <div />
-                  </div>
-                  {day.schedule.map((t) => (
-                    <div
-                      key={t.track}
-                      className="program-track relative z-10 mx-8 grid grid-cols-[repeat(21,_minmax(0,_1fr))] gap-x-2 rounded-2xl text-xl"
+    <section ref={ref} className="watermark2 pt-12" id="program">
+      <div className="flex h-full flex-col">
+        <div className="grid grid-cols-[1fr,auto,1fr] items-end">
+          <h2 className="p-4 pl-8 pt-24 text-6xl font-bold md:pl-20 md:pt-56 lg:pt-20">
+            Program
+          </h2>
+          <div className="p-4">
+            <ul className="elevate card pills rounded-e-full rounded-s-full text-center font-medium flex">
+              {lang.program.map((day, idx) => (
+                <li className="w-full focus-within:z-10 p-2" key={day.title}>
+                    <a
+                    href={`#program_day_${idx + 1}`}
+                      className={`inline-block w-full cursor-pointer whitespace-nowrap p-4 px-16 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
+                      onClick={changeTabTo(idx)}
                     >
-                      <div
-                        className="col-span-4 row-start-1 flex flex-col items-center justify-center py-2 text-center lowercase 2xl:px-10"
-                        style={{ gridRowEnd: t.rows + 1 }}
-                      >
-                        <StationIcon station={t.track} />
-                        <h3>
-                          {
-                            lang.programCategory[
-                              t.track as keyof typeof lang.programCategory
-                            ]
-                          }
-                        </h3>
-                      </div>
-                      {t.schedule.map((s, idx) => (
-                        <div
-                          key={`${day.title}_${s.title}_${idx}`}
-                          style={{
-                            gridColumnStart: `${(s.start - 10) * 2 + 5}`,
-                            gridColumnEnd: `${(s.end - 10) * 2 + 5}`,
-                          }}
-                        >
-                          <div className="program-slot elevate my-2 overflow-hidden rounded-2xl px-4 py-1 text-left text-lg font-bold md:py-2">
-                            {s.title}
-                          </div>
-                        </div>
-                      ))}
+                      <h3 className="text-3xl font-bold">{day.title}</h3>
+                      <span className="text-xl">{day.date}</span>
+                    </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="grow">
+            <div
+              key={lang.program[tab].title}
+              id={`program_day_${tab + 1}`}
+              className="inset-0 top-4 flex flex-col"
+            >
+              <div className="schedule relative flex flex-col justify-between pb-4">
+                <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
+                  <div className="col-span-2 col-start-3">10:00</div>
+                  {hours.map((h) => (
+                    <div className="col-span-2" key={h}>
+                      {h}:00
                     </div>
                   ))}
                 </div>
+                <div className="absolute inset-0 z-0 grid grid-cols-[repeat(20,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
+                  <div className="col-span-2 col-start-2"></div>
+                  {hours.map((h) => (
+                    <div className="col-span-2" key={h}></div>
+                  ))}
+                  <div />
+                </div>
+                {lang.program[tab].schedule.map((t) => (
+                  <div
+                    key={t.track}
+                    className="program-track relative mx-4 grid grid-cols-[repeat(20,_minmax(0,_1fr))] gap-x-2 rounded-2xl py-4 text-xl"
+                  >
+                    <div
+                      className="col-span-3 row-start-1 flex flex-col items-center justify-center p-2 text-center lowercase"
+                      style={{ gridRowEnd: t.rows + 1 }}
+                    >
+                      <StationIcon station={t.track} />
+                      <h3>
+                        {
+                          lang.programCategory[
+                            t.track as keyof typeof lang.programCategory
+                          ]
+                        }
+                      </h3>
+                    </div>
+                    {t.schedule.map((s, idx) => (
+                      <div
+                        key={`${lang.program[tab].title}_${s.title}_${idx}`}
+                        style={{
+                          gridColumnStart: `${(s.start - 10) * 2 + 4}`,
+                          gridColumnEnd: `${(s.end - 10) * 2 + 4}`,
+                        }}
+                        className="z-0"
+                      >
+                        <Modal className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-left text-lg font-bold md:py-2">
+                          {s.title}
+                        </Modal>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
         </div>
       </div>
     </section>

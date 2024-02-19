@@ -4,19 +4,18 @@ import React from "react";
 
 type ModalProps = { title: string; description: string; speakers?: string[] };
 
-export const Modal = ({ title, description, speakers }: ModalProps) => {
+export const Modal = ({ title, description, speakers, className, children }: ModalProps) => {
   const [showModal, setShowModal] = React.useState(false);
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <>
-      <button
-        className="inline-block rounded-xl border border-current px-2 py-1 text-lg hover:opacity-80"
-        type="button"
+      <div
+        className={className}
         onClick={() => setShowModal(true)}
       >
-        {lang.learnMore}
-      </button>
+        {children}
+      </div>
       {showModal ? (
         <>
           <div

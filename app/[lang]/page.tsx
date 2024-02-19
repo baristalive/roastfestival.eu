@@ -49,13 +49,13 @@ const Home = ({ params: { lang } }: HomePropsType) => {
 
   return (
     <div className={`wrapper ${divClass ? "show" : "hide"}`}>
-      <Link
+      {/* <Link
         href={lang === "cz" ? "./en" : "./cz"}
         rel="alternate"
         className="lang inverted text-lg lowercase"
       >
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
-      </Link>
+      </Link> */}
       {/* <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
         <SketchPicker color={color} onChange={handleColorChange} />
       </div> */}
