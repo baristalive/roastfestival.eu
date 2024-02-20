@@ -17,41 +17,48 @@ export const Info = () => {
     lang.info.slice(Math.ceil(lang.info.length / 2)),
   ];
 
-  useGSAP(
+  const { contextSafe } = useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
-        gsap.set(".cards", { y: "+=5rem"})
-        gsap.to(".cards",{
-          y: '-=10rem',
+        gsap.set(".cards", { y: "+=30rem" });
+        gsap.to(".cards", {
+          y: "-=40rem",
           scrollTrigger: {
             trigger: ref.current,
             scrub: 2,
             start: "top bottom",
-            end: "bottom top"
-          }
-        })
-      })
+            end: "bottom top",
+          },
+        });
+      });
     },
     { scope: ref },
   );
   return (
-    <section ref={ref} id="info" className="info-section min-h-screen grid lg:grid-cols-[1fr,2fr] gap-32 p-8 items-center watermark">
+    <section
+      ref={ref}
+      id="info"
+      className="info-section watermark grid min-h-screen items-center gap-32 p-8 lg:grid-cols-[1fr,2fr]"
+    >
       <div className="md:p-12">
-        <h2 className="w-3/4 pb-8 pt-24 md:pt-56 lg:pt-20 text-6xl font-bold">
+        <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
           {lang.about.title}
         </h2>
-        <div className="mx-auto max-w-screen-lg space-y-10 text-lg lg:text-xl leading-normal">
+        <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
           {lang.about.text.map((p) => (
             <p key={p}>{p}</p>
           ))}
         </div>
-        <Bar />
+        <Bar mountRef={ref} contextSafe={contextSafe} />
       </div>
-      <div className="md:grid md:grid-cols-2 flex flex-col gap-8 cards">
+      <div className="cards flex flex-col gap-8 md:grid md:grid-cols-2">
         {info.map((col, idx) => (
-          <div key={`col_${idx}`} className={`flex flex-col gap-8 ${idx ? "md:pt-[var(--vertical-offset)]" : ""}`}>
+          <div
+            key={`col_${idx}`}
+            className={`flex flex-col gap-8 ${idx ? "md:pt-[var(--vertical-offset)]" : ""}`}
+          >
             {col.map((s) => (
               <div
                 className="card elevate h-auto rounded-2xl p-12"

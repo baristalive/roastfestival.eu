@@ -10,13 +10,15 @@ import { useRef } from "react";
 import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
 import { SupportedLanguages, dictionaries } from "../../dictionaries/all";
 import Bar from "../components/Bar";
+import { useGSAP } from "@gsap/react";
 
 export const Map = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
+  const { contextSafe } = useGSAP({ scope: ref });
   return (
-    <section ref={ref} className="where-section min-h-screen p-8 watermark2">
+    <section ref={ref} className="where-section watermark2 min-h-screen p-8">
       <div className="grid grid-cols-[1fr,auto,1fr] md:p-12">
         <div className="flex flex-col">
           <h2 className="pb-8 text-6xl font-bold">{lang.location.title}</h2>
@@ -24,7 +26,7 @@ export const Map = () => {
             {lang.location.howToTitle}
           </div>
           <div className="grow">
-            <Bar />
+            <Bar mountRef={ref} contextSafe={contextSafe} />
           </div>
           <div className="card elevate mb-32 flex flex-col gap-4 rounded-s-2xl p-12 text-right">
             <h3 className="text-2xl font-bold">{lang.location.addressTitle}</h3>
@@ -34,18 +36,18 @@ export const Map = () => {
               <br />
               602 00 Brno-Střed-Zábrdovice
             </p>
-            <div className="flex justify-end gap-4">
+            <div className="mt-3 flex justify-end gap-4">
               <a
-                className="h-[34px] w-[34px]"
                 href={lang.contacts.kaznice_loc}
                 rel="external"
                 title="Káznice Brno - Google Maps"
+                className="h-16 w-16 rounded-full border border-[var(--black)] fill-current p-4"
               >
-                <LocationIcon />
+                <MapIcon />
                 <span className="sr-only">Káznice Brno - Google Maps</span>
               </a>
               <a
-                className="h-[34px] w-[34px]"
+                className="p-auto h-16 w-16 rounded-full border border-[var(--black)] fill-current pt-[.8rem] text-center"
                 href={lang.contacts.kaznice_web}
                 title="Káznice Brno - Web"
                 rel="external"
@@ -58,8 +60,10 @@ export const Map = () => {
         </div>
         <div className="z-10">
           <div className="card elevate relative rounded-3xl p-3">
-            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%_-_3rem)] items-center justify-between rounded-full text-2xl font-semibold leading-none">
-              <h4 className="py-6 pl-8">{lang.location.stops.kaznice}, Brno</h4>
+            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%_-_3rem)] items-center justify-between rounded-full text-2xl leading-none">
+              <h4 className="py-6 pl-8 font-semibold">
+                {lang.location.stops.kaznice}, Brno
+              </h4>
               <a
                 href={lang.contacts.kaznice_loc}
                 rel="external"
@@ -67,6 +71,7 @@ export const Map = () => {
                 className="mr-1 h-16 w-16 rounded-full bg-[var(--black)] fill-current p-4 text-[var(--white)]"
               >
                 <MapIcon />
+                <span className="sr-only">Káznice Brno - Google Maps</span>
               </a>
             </div>
 

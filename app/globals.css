@@ -38,7 +38,7 @@ footer {
 
 .cta {
   background: var(--white);
-  fill: var(--secondary);
+  fill: var(--black);
   color: var(--primary);
 }
 .watermark::before {
@@ -106,11 +106,11 @@ footer {
   }
   .gallery-section {
     background: linear-gradient(
-      to right,
-      var(--background),
-      var(--background) 50%,
-      rgba(0, 0, 0, 0) 50%
-    ),
+        to right,
+        var(--background),
+        var(--background) 50%,
+        rgba(0, 0, 0, 0) 50%
+      ),
       radial-gradient(
         circle at right top,
         rgba(0, 0, 0, 0.2),
@@ -120,8 +120,7 @@ footer {
   }
 
   .program-section {
-    background:
-      radial-gradient(
+    background: radial-gradient(
         circle farthest-side at right top,
         var(--primary) 50%,
         var(--background) 50%
@@ -152,15 +151,15 @@ footer {
     0px 6px 30px 5px rgba(0, 0, 0, 0.12);
 }
 .maplibregl-marker::before {
-    content: "";
-    position: absolute;
-    top: calc(100% - .25rem);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    border-top: 10px solid var(--white);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  border-top: 10px solid var(--white);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
 }
 .maplibregl-ctrl-group {
   box-shadow: none !important;
@@ -284,16 +283,53 @@ header::after {
   background-color: var(--primary);
 }
 
-.program-track:nth-of-type(3n + 1) .program-slot  {
-  background-color: var(--secondary);
+.program-track:nth-of-type(3n + 1) .program-slot {
+  background-color: var(--black);
 }
 
-.program-track:nth-of-type(3n + 2) .program-slot  {
+.program-track:nth-of-type(3n + 2) .program-slot {
   background-color: var(--accent);
 }
 
 .pills a.active {
+  color: var(--white);
+}
+
+div.active {
+  background-color: var(--black);
+  border-radius: 9999px;
+}
+
+.img {
+  position: relative;
+  transition: 500ms scale;
+}
+.img:not(.zoomed)::before {
+  content: "";
+  inset: 0;
+  background-color: color-mix(in srgb, var(--primary) 65%, transparent);
+  position: absolute;
+  border-radius: 1rem;
+  transition: 500ms all;
+}
+.img:hover::before {
+  opacity: 0;
+}
+.img::before {
+  pointer-events: none;
+  inset: 0;
+}
+.img:hover {
+  scale: 1.05;
+  z-index: 50;
+}
+.gallery-section {
+  overflow-x: hidden;
+}
+.zoom [data-rmiz-modal-overlay="visible"] {
+  background-color: color-mix(in srgb, var(--primary) 65%, transparent);
+}
+.zoom [data-rmiz-btn-unzoom] {
   background-color: var(--black);
   color: var(--white);
-  border-radius: 9999px;
 }

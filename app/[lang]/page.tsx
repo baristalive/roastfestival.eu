@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ColorResult, SketchPicker } from "react-color";
 
 import dictionaries, { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
@@ -38,12 +37,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [divClass]);
-  const [color, setColor] = useState("rgb(255, 248, 0)");
 
-  const handleColorChange = (color: ColorResult) => {
-    setColor(color.hex);
-    document.documentElement.style.setProperty("--accent", color.hex);
-  };
   const usedLang = dictionaries[lang as SupportedLanguages];
 
   return (
@@ -55,9 +49,6 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       >
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link> */}
-      {/* <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
-        <SketchPicker color={color} onChange={handleColorChange} />
-      </div> */}
       <Header />
       <Info />
       <Gallery />

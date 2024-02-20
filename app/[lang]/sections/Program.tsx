@@ -5,6 +5,8 @@ import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import Modal from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Flip } from "gsap/all";
 
 const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
 
@@ -18,51 +20,57 @@ export const Program = () => {
   const [tab, setTab] = useState(0);
 
   const changeTabTo =
-    (idx: number) => (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
+    (idx: number) =>
+    (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
       setTab(idx);
     };
+  useGSAP(
+    () => {
+      gsap.registerPlugin(Flip);
+      const selector = gsap.utils.selector(ref);
+      const activeBubble = selector<HTMLDivElement>("div.active");
+      const activeNav = selector<HTMLAnchorElement>("a.active");
+      const state = Flip.getState(".pills");
+      activeNav[0].appendChild(activeBubble[0]);
 
-  useGSAP(() => {
-    // gsap
-  }, {scope: ref})
+      Flip.from(state, { duration: 2, ease: "power1.inOut", scale: true });
+    },
+    { scope: ref, dependencies: [tab] },
+  );
 
   return (
-    <section ref={ref} className="program-section h-screen mb-20" id="program">
+    <section ref={ref} className="program-section mb-20 h-screen" id="program">
       {lang.program.map((day, idx) => (
-        <div
-          key={day.title}
-          id={`program_day_${idx + 1}`}
-        />
+        <div key={day.title} id={`program_day_${idx + 1}`} />
       ))}
-      <div className="flex h-full pt-12 flex-col">
-        <div className="grid grid-cols-[1fr,auto,1fr] items-baseline">
-          <h2 className="p-4 pl-8 pt-24 text-6xl font-bold md:pl-20 md:pt-56 lg:pt-20">
-            Program
-          </h2>
+      <div className="flex h-full flex-col pt-12">
+        <div className="grid grid-cols-[1fr,auto,1fr] items-center">
+          <h2 className="p-4 pl-8 text-6xl font-bold md:pl-20">Program</h2>
           <div className="p-4">
             <ul className="elevate card pills flex rounded-e-full rounded-s-full text-center font-medium">
               {lang.program.map((day, idx) => (
-                <li className="w-full p-2 focus-within:z-10" key={day.title}>
+                <li className="relative z-0 w-full p-2" key={day.title}>
+                  {idx === 0 && <div className="active absolute inset-2 z-0" />}
                   <a
                     href={`#program_day_${idx + 1}`}
-                    className={`inline-block w-full cursor-pointer whitespace-nowrap p-4 px-16 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
+                    className={`z-10 flex w-full cursor-pointer flex-col whitespace-nowrap p-4 px-16 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
                     onClick={changeTabTo(idx)}
                   >
-                    <h3 className="text-3xl font-bold">{day.title}</h3>
-                    <span className="text-xl">{day.date}</span>
+                    <h3 className="z-10 text-3xl font-bold">{day.title}</h3>
+                    <span className="z-10 text-xl">{day.date}</span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="grow relative">
+        <div className="relative grow">
           {lang.program.map((day, idx) => (
             <div
               key={day.title}
               className={`schedule absolute inset-0 top-4 flex flex-col ${idx !== tab ? "opacity-0" : ""}`}
             >
-              <div className="card m-3 elevate rounded-2xl relative flex flex-col justify-between pb-4">
+              <div className="card elevate relative m-3 flex flex-col justify-between rounded-2xl pb-4">
                 <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
                   <div className="col-span-2 col-start-3">10:00</div>
                   {hours.map((h) => (
