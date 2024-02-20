@@ -16,7 +16,6 @@ import { Map } from "./sections/Map";
 import { BuyTickets } from "./sections/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
-import { Scroller } from "./components/Scroller";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -61,8 +60,9 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       </div> */}
       <Header />
       <Info />
+      <Gallery />
+      <Program />
       <Map />
-      {/* <Gallery /> */}
 
       {/* <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1> */}
       {/* <About /> */}
@@ -70,7 +70,6 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       {usedLang.ready && (
         <>
           {/* <BuyTickets className="inverted pt-64" /> */}
-          <Program />
           {/* <BuyTickets />
           <OtherServices />
           <BuyTickets className="inverted" />

@@ -4,17 +4,17 @@ import React from "react";
 
 type ModalProps = { title: string; description: string; speakers?: string[] };
 
-export const Modal = ({ title, description, speakers, className, children }: ModalProps) => {
+export const Modal = ({ title, description, speakers,  }: ModalProps) => {
   const [showModal, setShowModal] = React.useState(false);
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <>
       <div
-        className={className}
+        // className={className}
         onClick={() => setShowModal(true)}
       >
-        {children}
+        {/* {children} */}
       </div>
       {showModal ? (
         <>

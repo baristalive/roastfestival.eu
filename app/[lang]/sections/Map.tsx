@@ -16,7 +16,7 @@ export const Map = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
   return (
-    <section ref={ref} className="where-section min-h-screen p-8 ">
+    <section ref={ref} className="where-section min-h-screen p-8 watermark2">
       <div className="grid grid-cols-[1fr,auto,1fr] md:p-12">
         <div className="flex flex-col">
           <h2 className="pb-8 text-6xl font-bold">{lang.location.title}</h2>

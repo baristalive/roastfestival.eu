@@ -37,7 +37,7 @@ export const Info = () => {
     { scope: ref },
   );
   return (
-    <section ref={ref} id="info" className="info min-h-screen grid lg:grid-cols-[1fr,2fr] gap-32 p-8 items-center watermark">
+    <section ref={ref} id="info" className="info-section min-h-screen grid lg:grid-cols-[1fr,2fr] gap-32 p-8 items-center watermark">
       <div className="md:p-12">
         <h2 className="w-3/4 pb-8 pt-24 md:pt-56 lg:pt-20 text-6xl font-bold">
           {lang.about.title}

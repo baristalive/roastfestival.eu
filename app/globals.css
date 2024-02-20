@@ -69,8 +69,23 @@ footer {
 .watermark2 > * {
   z-index: 1;
 }
+.watermark3::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  left: -50px;
+  content: "";
+  background: url("/watermark3.svg") repeat-x;
+}
+.watermark3 {
+  position: relative;
+  z-index: 0;
+}
+.watermark3 > * {
+  z-index: 1;
+}
 @media (min-width: 1024px) {
-  .info {
+  .info-section {
     background: linear-gradient(
         to right,
         var(--background),
@@ -89,13 +104,23 @@ footer {
       ),
       var(--primary);
   }
-  .where-section {
-    background:
+  .gallery-section {
+    background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
       radial-gradient(
         circle at right top,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0) 31%
       ),
+      var(--primary);
+  }
+
+  .program-section {
+    background:
       radial-gradient(
         circle farthest-side at right top,
         var(--primary) 50%,

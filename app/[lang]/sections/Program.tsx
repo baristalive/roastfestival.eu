@@ -4,6 +4,7 @@ import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
 import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import Modal from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
+import { useGSAP } from "@gsap/react";
 
 const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
 
@@ -17,12 +18,16 @@ export const Program = () => {
   const [tab, setTab] = useState(0);
 
   const changeTabTo =
-    (idx: number) => (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    (idx: number) => (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
       setTab(idx);
     };
 
+  useGSAP(() => {
+    // gsap
+  }, {scope: ref})
+
   return (
-    <section ref={ref} className="watermark2 min-h-screen" id="program">
+    <section ref={ref} className="program-section h-screen mb-20" id="program">
       {lang.program.map((day, idx) => (
         <div
           key={day.title}
@@ -51,13 +56,13 @@ export const Program = () => {
             </ul>
           </div>
         </div>
-        <div className="grow">
+        <div className="grow relative">
           {lang.program.map((day, idx) => (
             <div
               key={day.title}
-              className={`inset-0 top-4 flex flex-col ${idx !== tab ? "hidden" : ""}`}
+              className={`schedule absolute inset-0 top-4 flex flex-col ${idx !== tab ? "opacity-0" : ""}`}
             >
-              <div className="schedule relative flex flex-col justify-between pb-4">
+              <div className="card m-3 elevate rounded-2xl relative flex flex-col justify-between pb-4">
                 <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
                   <div className="col-span-2 col-start-3">10:00</div>
                   {hours.map((h) => (
@@ -100,9 +105,9 @@ export const Program = () => {
                         }}
                         className="z-0"
                       >
-                        <Modal className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-left text-lg font-bold md:py-2">
+                        <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-left text-lg font-bold md:py-2">
                           {s.title}
-                        </Modal>
+                        </div>
                       </div>
                     ))}
                   </div>
