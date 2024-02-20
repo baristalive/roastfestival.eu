@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 
 import dictionaries, { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
-import { About } from "./sections/About";
 import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
@@ -42,20 +41,19 @@ const Home = ({ params: { lang } }: HomePropsType) => {
 
   return (
     <div className={`wrapper ${divClass ? "show" : "hide"}`}>
-      {/* <Link
+      <Link
         href={lang === "cz" ? "./en" : "./cz"}
         rel="alternate"
-        className="lang inverted text-lg lowercase"
+        className="lang inverted text-lg lowercase card z-50"
       >
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
-      </Link> */}
+      </Link>
       <Header />
       <Info />
       <Gallery />
       <Program />
       <Map />
 
-      {/* <h1 className="text-red-500 text-3xl text-center pt-24 mx-auto border-b-2 border-current">Work in progress below this line</h1> */}
       {/* <About /> */}
       {/* <Sponsors /> */}
       {usedLang.ready && (
