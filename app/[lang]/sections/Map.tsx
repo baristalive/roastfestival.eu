@@ -24,7 +24,7 @@ export const Map = () => {
             {lang.location.howToTitle}
           </div>
           <div className="grow">
-            <Bar mountRef={ref} />
+            <Bar />
           </div>
           <div className="card elevate mb-32 flex flex-col gap-4 rounded-s-2xl p-12 text-right">
             <h3 className="text-2xl font-bold">{lang.location.addressTitle}</h3>

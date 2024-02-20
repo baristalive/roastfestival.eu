@@ -22,9 +22,9 @@ export const Info = () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
-        gsap.set(".card", { y: "+=40rem"})
-        gsap.to(".card",{
-          y: '-=50rem',
+        gsap.set(".cards", { y: "+=5rem"})
+        gsap.to(".cards",{
+          y: '-=10rem',
           scrollTrigger: {
             trigger: ref.current,
             scrub: 2,
@@ -47,9 +47,9 @@ export const Info = () => {
             <p key={p}>{p}</p>
           ))}
         </div>
-        <Bar mountRef={ref} />
+        <Bar />
       </div>
-      <div className="md:grid md:grid-cols-2 flex flex-col gap-8">
+      <div className="md:grid md:grid-cols-2 flex flex-col gap-8 cards">
         {info.map((col, idx) => (
           <div key={`col_${idx}`} className={`flex flex-col gap-8 ${idx ? "md:pt-[var(--vertical-offset)]" : ""}`}>
             {col.map((s) => (

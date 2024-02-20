@@ -1,9 +1,10 @@
-import React, { MutableRefObject } from "react";
+import React, { MutableRefObject, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
-const Bar = ({ mountRef }: { mountRef: MutableRefObject<null> }) => {
+const Bar = () => {
+  const ref = useRef(null);
   useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
@@ -12,18 +13,17 @@ const Bar = ({ mountRef }: { mountRef: MutableRefObject<null> }) => {
         gsap.to(".bar", {
           width: "6rem",
           scrollTrigger: {
-            trigger: mountRef.current,
-            scrub: 2,
-            start: "top center",
-            end: "top top",
+            trigger: ref.current,
+            start: "bottom bottom",
+            end: "bottom center"
           },
         });
       });
     },
-    { scope: mountRef },
+    { scope: ref },
   );
   return (
-    <div className="bar mt-12 hidden h-3 w-3 rounded-full bg-[var(--accent)] md:block" />
+    <div ref={ref} className="bar mt-12 hidden h-3 w-3 rounded-full bg-[var(--accent)] md:block" />
   );
 };
 
