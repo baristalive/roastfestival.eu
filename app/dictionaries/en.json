@@ -54,9 +54,76 @@
   "programLoadingText": "We are still roasting the festival program for you.",
   "programSubjectToChange": "This program is subject to change",
   "tickets": "Tickets",
-  "sponsors": {
-    "title": "Sponsors",
-    "add": "Become a sponsor"
+  "lastYear": {
+    "title": "Předchozí ročník",
+    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
+    "center": {
+      "stat": 2023,
+      "description": "1. ročník"
+    },
+    "side": [
+      {
+        "stat": 30,
+        "description": "pražíren",
+        "style": {
+          "marginLeft": "-2.5rem",
+          "height": 200,
+          "width": 200
+        }
+      },
+      {
+        "stat": 6,
+        "description": "workshopů",
+        "style": {
+          "marginLeft": "4rem",
+          "marginTop": "8rem",
+          "height": 200,
+          "width": 200
+        }
+      },
+      {
+        "stat": 4,
+        "description": "přednášky",
+        "style": {
+          "height": 200,
+          "width": 200
+        }
+      },
+      {
+        "stat": 200,
+        "description": "účastníků",
+        "style": {
+          "marginLeft": "14rem",
+          "marginTop": "-7rem",
+          "height": 400,
+          "width": 400
+        }
+      },
+      {
+        "stat": 2,
+        "description": "dny",
+        "style": {
+          "marginLeft": "-10rem",
+          "marginTop": "-8rem",
+          "height": 200,
+          "width": 200
+        }
+      }
+    ]
+  },
+  "colab": {
+    "title": "Collaboration",
+    "description": "",
+    "exhibitors": {
+      "title": "Exhibitors",
+      "text": "I want to be an exhibitor or presenter",
+      "button": "Send offer"
+    },
+    "sponsors": {
+      "title": "Sponsors",
+      "text": "I would like to sponsor the event",
+      "button": "Find out more"
+    }
   },
   "promotedRoasters": {
     "title": "Coffee roasters",

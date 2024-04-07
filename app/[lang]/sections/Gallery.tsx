@@ -57,6 +57,7 @@ export const ZoomableImage = (
         alt=""
       />
       <Zoom
+        zoomMargin={16}
         classDialog="zoom"
         zoomImg={{
           src: props.src,

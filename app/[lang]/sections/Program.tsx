@@ -70,7 +70,7 @@ export const Program = () => {
               key={day.title}
               className={`schedule absolute inset-0 top-4 flex flex-col ${idx !== tab ? "opacity-0" : ""}`}
             >
-              <div className="card elevate relative m-3 flex flex-col justify-between rounded-2xl pb-4">
+              <div className="card elevate relative m-3 flex flex-col justify-between rounded-2xl pb-4 z-10">
                 <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
                   <div className="col-span-2 col-start-3">10:00</div>
                   {hours.map((h) => (
@@ -111,10 +111,9 @@ export const Program = () => {
                           gridColumnStart: `${(s.start - 10) * 2 + 4}`,
                           gridColumnEnd: `${(s.end - 10) * 2 + 4}`,
                         }}
-                        className="z-0"
                       >
                         <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-left text-lg font-bold md:py-2">
-                          {s.title}
+                          <Modal title={s.title} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, facilis quasi repellendus optio possimus non veritatis tenetur illo voluptate quis?"> {s.title}</Modal>
                         </div>
                       </div>
                     ))}

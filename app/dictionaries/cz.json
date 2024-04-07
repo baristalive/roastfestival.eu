@@ -338,9 +338,76 @@
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
   "programSubjectToChange": "Změna programu vyhrazena",
   "tickets": "Vstupenky",
-  "sponsors": {
-    "title": "Sponzoři",
-    "add": "Stát se sponzorem"
+  "colab": {
+    "title": "Spolupráce",
+    "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc. Třeba tě naše nabídka zaujme. A pokud ne, ozvi se nám na email, třeba něco vymyslíme.",
+    "exhibitors": {
+      "title": "Vystavovatelé",
+      "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
+      "button": "Odeslat nabídku"
+    },
+    "sponsors": {
+      "title": "Sponzoři",
+      "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
+      "button": "Zjistit podrobnosti"
+    }
+  },
+  "lastYear": {
+    "title": "Předchozí ročník",
+    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
+    "center": {
+      "stat": 2023,
+      "description": "1. ročník"
+    },
+    "side": [
+      {
+        "stat": 30,
+        "description": "pražíren",
+        "style": {
+          "marginLeft": "-2.5rem",
+          "height": 200,
+          "width": 200
+        }
+      },
+      {
+        "stat": 6,
+        "description": "workshopů",
+        "style": {
+          "marginLeft": "4rem",
+          "marginTop": "8rem",
+          "height": 200,
+          "width": 200
+        }
+      },
+      {
+        "stat": 4,
+        "description": "přednášky",
+        "style": {
+          "height": 200,
+          "width": 200
+        }
+      },
+      {
+        "stat": 200,
+        "description": "účastníků",
+        "style": {
+          "marginLeft": "14rem",
+          "marginTop": "-7rem",
+          "height": 400,
+          "width": 400
+        }
+      },
+      {
+        "stat": 2,
+        "description": "dny",
+        "style": {
+          "marginLeft": "-10rem",
+          "marginTop": "-8rem",
+          "height": 200,
+          "width": 200
+        }
+      }
+    ]
   },
   "promotedRoasters": {
     "title": "Pražírny",

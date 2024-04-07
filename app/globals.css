@@ -51,9 +51,6 @@ footer {
 .watermark {
   position: relative;
 }
-.watermark > * {
-  z-index: 1;
-}
 .watermark2::before {
   position: absolute;
   inset: 0;
@@ -62,11 +59,11 @@ footer {
   content: "";
   background: url("/watermark2.svg") repeat-x;
 }
-.watermark2 {
+.watermark2, .watermark3, .watermark4 {
   position: relative;
   z-index: 0;
 }
-.watermark2 > * {
+.watermark > *, .watermark2 > *, .watermark3 > *, .watermark4 > * {
   z-index: 1;
 }
 .watermark3::before {
@@ -77,12 +74,12 @@ footer {
   content: "";
   background: url("/watermark3.svg") repeat-x;
 }
-.watermark3 {
-  position: relative;
-  z-index: 0;
-}
-.watermark3 > * {
-  z-index: 1;
+.watermark4::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: url("/watermark4.svg") no-repeat top right;
 }
 @media (min-width: 1024px) {
   .info-section {
@@ -104,6 +101,25 @@ footer {
       ),
       var(--primary);
   }
+  .previous-year-section {
+    background: linear-gradient(
+        to right,
+        var(--background),
+        var(--background) 50%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      radial-gradient(
+        circle at right bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 31%
+      ),
+      radial-gradient(
+        circle at right top,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 31%
+      ),
+      var(--primary);
+  }
   .gallery-section {
     background: linear-gradient(
         to right,
@@ -118,7 +134,15 @@ footer {
       ),
       var(--primary);
   }
-
+  .colab-section {
+    background: linear-gradient(
+        to right,
+        var(--background),
+        var(--background) 50%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      var(--primary);
+  }
   .program-section {
     background: radial-gradient(
         circle farthest-side at right top,
@@ -332,4 +356,8 @@ div.active {
 .zoom [data-rmiz-btn-unzoom] {
   background-color: var(--black);
   color: var(--white);
+}
+
+.zoom [data-rmiz-modal-img] {
+  border-radius: 1rem;
 }

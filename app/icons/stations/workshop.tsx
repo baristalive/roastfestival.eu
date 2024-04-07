@@ -3,7 +3,7 @@ const WorkshopIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     width="60"
     height="60"
-    viewBox="0 0 82.675606 84.600998"
+    viewBox="-20 0 110 110"
     style={{
       color: "rgb(var(--foreground-rgb))",
     }}

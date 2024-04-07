@@ -7,13 +7,14 @@ import { Header } from "./sections/Header";
 import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
-import { Sponsors } from "./sections/Sponsors";
+import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
 import { BuyTickets } from "./sections/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
+import { PreviousYears } from "./sections/PreviousYears";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -50,12 +51,13 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       </Link>
       <Header />
       <Info />
+      <PreviousYears />
       <Gallery />
+      <Colab  />
       <Program />
       <Map />
 
       {/* <About /> */}
-      {/* <Sponsors /> */}
       {usedLang.ready && (
         <>
           {/* <BuyTickets className="inverted pt-64" /> */}
@@ -66,7 +68,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         </>
       )}
       {/* {usedLang.ready && <BuyTickets className="inverted" />} */}
-      {/* <Organizers /> */}
+      <Organizers />
       <Footer />
     </div>
   );
