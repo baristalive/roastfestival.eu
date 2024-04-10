@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const svgOrigin = "582 606";
-const groups = Array(7).fill(0)
+const groups = Array(7).fill(0);
 
 const RoundLogo = () => {
   const ref = useRef(null);

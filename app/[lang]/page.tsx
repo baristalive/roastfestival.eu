@@ -45,7 +45,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       <Link
         href={lang === "cz" ? "./en" : "./cz"}
         rel="alternate"
-        className="lang inverted text-lg lowercase card z-50"
+        className="lang inverted card z-50 text-lg lowercase"
       >
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
@@ -53,21 +53,12 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       <Info />
       <PreviousYears />
       <Gallery />
-      <Colab  />
+      <Colab />
       <Program />
       <Map />
-
-      {/* <About /> */}
-      {usedLang.ready && (
-        <>
-          {/* <BuyTickets className="inverted pt-64" /> */}
-          {/* <BuyTickets />
-          <OtherServices />
-          <BuyTickets className="inverted" />
-          <PromotedRoasters /> */}
-        </>
-      )}
-      {/* {usedLang.ready && <BuyTickets className="inverted" />} */}
+      {/* <OtherServices />
+      <BuyTickets />
+      <PromotedRoasters /> */}
       <Organizers />
       <Footer />
     </div>

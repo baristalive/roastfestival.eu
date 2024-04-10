@@ -30,7 +30,7 @@ export const Header = () => {
       gsap.set(".slide-in", { left: 0 });
       const tl = gsap.timeline();
       tl.to(".slide-in", {
-        duration: .5,
+        duration: 0.5,
         delay: 1,
         left: "calc(100% - 3em)",
         ease: "bounce.out",
@@ -43,9 +43,9 @@ export const Header = () => {
   return (
     <header
       ref={ref}
-      className="flex elevate h-svh flex-col justify-between items-center p-8 z-10"
+      className="elevate z-10 flex h-svh flex-col items-center justify-between p-8"
     >
-      <div className="flex w-full max-w-[1900px] justify-between pt-2 md:p-12 text-sm md:text-2xl 2xl:text-3xl">
+      <div className="flex w-full max-w-[1900px] justify-between pt-2 text-sm md:p-12 md:text-2xl 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
           {lang.date}
           <br />
@@ -75,7 +75,7 @@ export const Header = () => {
               <Link
                 href={params.lang === "cz" ? "./en" : "./cz"}
                 rel="alternate"
-                className="rounded-full nav border border-current w-[3em] leading-[1.6em] md:leading-[1.4em] 2xl:leading-[1.1em] table-cell align-middle text-center lowercase py-2 md:py-4 2xl:py-6"
+                className="nav table-cell w-[3em] rounded-full border border-current py-2 text-center align-middle lowercase leading-[1.6em] md:py-4 md:leading-[1.4em] 2xl:py-6 2xl:leading-[1.1em]"
               >
                 {params.lang === "cz" ? "en" : "cz"}
               </Link>
@@ -83,8 +83,8 @@ export const Header = () => {
           </nav>
         </div>
       </div>
-      <div className="flex absolute pointer-events-none top-0 bottom-1/4 sm:bottom-0 flex-col items-center justify-center text-2xl md:text-5xl xl:text-6xl 2xl:text-8xl">
-        <div className="mx-auto -mb-[2em] max-w-[1600px] pointer-events-auto">
+      <div className="pointer-events-none absolute bottom-1/4 top-0 flex flex-col items-center justify-center text-2xl sm:bottom-0 md:text-5xl xl:text-6xl 2xl:text-8xl">
+        <div className="pointer-events-auto mx-auto -mb-[2em] max-w-[1600px]">
           <Logo />
         </div>
         <div className="pt-12 text-center lg:pt-6">
@@ -93,15 +93,15 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl leading-snug">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:p-12 md:text-3xl">
         <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
-            <nav className="rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6">
+            <nav className="rounded-full border border-current px-8 py-2 lowercase md:py-4 2xl:px-12 2xl:py-6">
               Info
             </nav>
           </a>
           <a href="#program" className="nav">
-            <nav className="rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6">
+            <nav className="rounded-full border border-current px-8 py-2 lowercase md:py-4 2xl:px-12 2xl:py-6">
               Program
             </nav>
           </a>
@@ -113,9 +113,9 @@ export const Header = () => {
           rel="external"
           className="nav"
         >
-          <nav className="cta elevate relative rounded-full border border-current px-8 2xl:px-12 py-2 lowercase md:py-4 2xl:py-6 md:pr-24 2xl:pr-24">
+          <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-24">
             <span className="fade-in-2">{lang.buyTickets}</span>
-            <span className="text-sm md:text-2xl 2xl:text-3xl text-[var(--black)] slide-in right-0 absolute top-1/2 -translate-y-1/2">
+            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--black)] md:text-2xl 2xl:text-3xl">
               <ArrowIcon />
             </span>
           </nav>

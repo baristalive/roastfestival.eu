@@ -35,7 +35,9 @@
   },
   "organizers": {
     "text": [
-      "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu evropských kávových festivalů. Jednotlivé členy našeho týmu můžete potkat za barem několika brněnských kavárnách, pražírnách, barech a dalších podnicích. Spojuje nás dohromady láska k výběrové kávě a gastronomii."
+      "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu evropských kávových festivalů.",
+      "Jednotlivé členy našeho týmu můžete potkat za barem několika brněnských kavárnách, pražírnách, barech a dalších podnicích.",
+      "Spojuje nás dohromady láska k výběrové kávě a gastronomii."
     ],
     "title": "O nás"
   },
@@ -50,288 +52,13 @@
   "program": [
     {
       "title": "Den 1",
-      "date": "16/9",
-      "schedule": [
-        {
-          "track": "espresso",
-          "rows": 1,
-          "schedule": [
-            {
-              "start": 11,
-              "end": 14,
-              "title": "IG Coffee Roasters"
-            },
-            {
-              "start": 14.5,
-              "end": 17.5,
-              "title": "IG Coffee Roasters"
-            }
-          ]
-        },
-        {
-          "track": "espresso_milk",
-          "rows": 2,
-          "schedule": [
-            {
-              "start": 10.5,
-              "end": 13,
-              "title": "Kikafe"
-            },
-            {
-              "start": 14,
-              "end": 17.5,
-              "title": "The Roses"
-            },
-            {
-              "start": 11,
-              "end": 14,
-              "title": "Chroast"
-            },
-            {
-              "start": 14.5,
-              "end": 17.5,
-              "title": "Punkt."
-            }
-          ]
-        },
-        {
-          "track": "brew",
-          "rows": 3,
-          "schedule": [
-            {
-              "start": 10.5,
-              "end": 13.5,
-              "title": "Poppy Beans"
-            },
-            {
-              "start": 14.5,
-              "end": 17.5,
-              "title": "Veroni"
-            },
-            {
-              "start": 11,
-              "end": 14,
-              "title": "Mitte Coffee"
-            },
-            {
-              "start": 14,
-              "end": 17.5,
-              "title": "Mima Coffee Roastery"
-            },
-            {
-              "start": 10.5,
-              "end": 13,
-              "title": "Jizba Luhačovice"
-            },
-            {
-              "start": 14,
-              "end": 17,
-              "title": "Penerini"
-            }
-          ]
-        },
-        {
-          "track": "lecture",
-          "rows": 1,
-          "schedule": [
-            {
-              "start": 11.5,
-              "end": 13.5,
-              "title": "Kávové experimenty a přátelství - zkušenosti Chicas Industry z Kolumbie",
-              "speakers": [
-                "Karolína Nekvindová",
-                "Tereza Prejdová"
-              ],
-              "description": "Chcete zjistit, kdo tvoří tým Chicas Industry a jaká je náplň práce importéra zeleného zrna? Dozvíte se, které aspekty jejich práce jsou žádoucí a které naopak nepříjemné. Představí, od koho odebírají zelené zrno a proč spolupracují právě s těmito konkrétními farmáři. Zjistíte, jak se mohou pěstitelé s importéry vzájemně inspirovat a jak udržují přátelství přes půlku světa."
-            },
-            {
-              "start": 14,
-              "end": 16,
-              "title": "Účast na World Brewers Cup Milano & Melbourne",
-              "speakers": [
-                "Tomáš Taussig"
-              ],
-              "description": "Dvojnásobný vítěz národního kola Brewers Cup a majitel ostravské pražírny Coffee Culture o jeho cestě přes půl světa na mistrovství světa, spolu s tipy pro budoucí soutěžící."
-            }
-          ]
-        },
-        {
-          "track": "workshop",
-          "rows": 1,
-          "schedule": [
-            {
-              "start": 12.5,
-              "end": 13.5,
-              "title": "Coffee Culture: Cupping",
-              "description": "Produkční cupping Coffee Culture pod taktovkou vítěze Czech Brewers Cup 2020 a 2022 Tomáše Tussiga. Těšit se můžete na profesionální ochutnávku káv od pražírny Coffee Culture se vším všudy a tak jak má být.",
-              "speakers": [
-                "Tomáš Taussig"
-              ]
-            },
-            {
-              "start": 14,
-              "end": 17,
-              "title": "Upražte si vlastní kafe s Chickas Industry",
-              "description": "Ano, čteš to správně. Opravdu si zde můžeš upražit vlastní kávu a vzít si ji domů. Tento workshop nabízí unikátní hands-on experience pod vedením pravých profesionálů - importérek zelené kávy z Chicas Industry.",
-              "speakers": [
-                "Karolína Nekvindová",
-                "Patrik Sláma",
-                "Tereza Prejdová"
-              ]
-            }
-          ]
-        }
-      ]
+      "date": "21/9",
+      "schedule": []
     },
     {
       "title": "Den 2",
-      "date": "17/9",
-      "schedule": [
-        {
-          "track": "espresso",
-          "rows": 1,
-          "schedule": [
-            {
-              "start": 10.5,
-              "end": 13,
-              "title": "Workshop: Espresso"
-            },
-            {
-              "start": 13.5,
-              "end": 16.5,
-              "title": "Penerini"
-            }
-          ]
-        },
-        {
-          "track": "espresso_milk",
-          "rows": 2,
-          "schedule": [
-            {
-              "start": 10.5,
-              "end": 13.5,
-              "title": "Poppy Beans"
-            },
-            {
-              "start": 14,
-              "end": 17,
-              "title": "Veroni"
-            },
-            {
-              "start": 11,
-              "end": 14,
-              "title": "Mitte Coffee"
-            },
-            {
-              "start": 14.5,
-              "end": 17,
-              "title": "Traffic Coffee"
-            }
-          ]
-        },
-        {
-          "track": "brew",
-          "rows": 3,
-          "schedule": [
-            {
-              "start": 10.5,
-              "end": 13.5,
-              "title": "Punkt."
-            },
-            {
-              "start": 14,
-              "end": 17,
-              "title": "Diamond's Coffee"
-            },
-            {
-              "start": 11,
-              "end": 14,
-              "title": "Kaldi"
-            },
-            {
-              "start": 10.5,
-              "end": 13,
-              "title": "IG Coffee Roasters"
-            },
-            {
-              "start": 13.5,
-              "end": 16.5,
-              "time": "13:30 - 16:30",
-              "title": "The Roses"
-            }
-          ]
-        },
-        {
-          "track": "lecture",
-          "rows": 1,
-          "schedule": [
-            {
-              "start": 11.5,
-              "end": 13.5,
-              "title": "Diskuze: Jak si neotevřít kavárnu",
-              "speakers": [
-                "Klára Dutkiewič",
-                "Marek Knopp",
-                "Martin Sienty",
-                "Vojtěch Růžička"
-              ],
-              "description": "Čtveřice majitelů kaváren v diskusi, proč si rozhodně neotevírat kavárnu, proč by už to nikdy neudělali a proč si stejně dál otevírají další pobočky."
-            },
-            {
-              "start": 14,
-              "end": 16,
-              "title": "Trendy a mýty ve specialty coffee",
-              "speakers": [
-                "Alan Jarrar"
-              ],
-              "description": "Alan Jarrar, majitel a pražič Jokes Aside Coffee a zároveň kavárny Stav se vystoupí na festivalu Roast! s jeho, řekněmě trošku kontroverznějšími tématy. Zajímá tě víc? Stav se!"
-            }
-          ]
-        },
-        {
-          "track": "workshop",
-          "rows": 1,
-          "schedule": [
-            {
-              "start": 11,
-              "end": 12,
-              "title": "Úvod do cuppingu",
-              "description": "Znáte slovo 'cupping'? Pokud ne, nevadí! Tato akce je právě pro vás! Přidejte se k nám, a společně se ponoříme do fascinujícího světa kávového ochutnávání. Povíme si, jak takový cupping probíhá, co a jakými smysly vnímáme a následně to na sobě všechno i vyzkoušíme.",
-              "speakers": [
-                "Natálie Růžičková"
-              ]
-            },
-            {
-              "start": 12.5,
-              "end": 13.5,
-              "title": "Cupping bezkofeinových káv",
-              "description": "Myslíte si, že jsou všechny bezkofeinové kávy stejné? Tak to přijďte otestovat! Káva bez kofeinu to není jen podřadná a opovrhovaná náhražka pro slabé povahy, ale vlastně docela komplexní záležitost, díky která vznikají i zajímavé chuťové zážitky. Tento cupping je vhodný pro milovníky kávy, kteří však neholdují kofeinu.",
-              "speakers": [
-                "Natálie Růžičková"
-              ]
-            },
-            {
-              "start": 14,
-              "end": 15,
-              "title": "Úvod do alternativních příprav a jejich srovnání",
-              "description": "V60, Kalita, Aeropress, Aeropress obrácený, Chemex, Džezva, CleverDrip, Vaccumpot, Origami, Frenchpress, Moccamaster, Moccamaster one... znáte další? Máte doma nějakou obskurnost a chcete se o ni podělit? Chceš-li se dozvědět o přípravě kávy na všechny možné způsoby, tohle je workshop přímo pro tebe.",
-              "speakers": [
-                "Martin Dutkiewič"
-              ]
-            },
-            {
-              "start": 15.5,
-              "end": 16.5,
-              "title": "Senzorické vlastnosti vína a kávy",
-              "description": "Víno a káva si jsou si bližší než byste čekali. Všimli jste si třeba někdy, že chuťové popisky na etiketách vín i káv jsou si až podezřele podobné? A co má takový profesionální someliér společného s vítězem Cup Tasters? Přijďte hledat chutě nejen ve víně.",
-              "speakers": [
-                "Petr Chaloupek",
-                "Josef Kučera"
-              ]
-            }
-          ]
-        }
-      ]
+      "date": "22/9",
+      "schedule": []
     }
   ],
   "programReadyText": "Program je již řádně upražen!",
@@ -361,7 +88,7 @@
     },
     "side": [
       {
-        "stat": 30,
+        "stat": 13,
         "description": "pražíren",
         "style": {
           "marginLeft": "-2.5rem",
@@ -370,7 +97,7 @@
         }
       },
       {
-        "stat": 6,
+        "stat": 7,
         "description": "workshopů",
         "style": {
           "marginLeft": "4rem",
@@ -388,7 +115,7 @@
         }
       },
       {
-        "stat": 200,
+        "stat": "200+",
         "description": "účastníků",
         "style": {
           "marginLeft": "14rem",

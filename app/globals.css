@@ -59,11 +59,16 @@ footer {
   content: "";
   background: url("/watermark2.svg") repeat-x;
 }
-.watermark2, .watermark3, .watermark4 {
+.watermark2,
+.watermark3,
+.watermark4 {
   position: relative;
   z-index: 0;
 }
-.watermark > *, .watermark2 > *, .watermark3 > *, .watermark4 > * {
+.watermark > *,
+.watermark2 > *,
+.watermark3 > *,
+.watermark4 > * {
   z-index: 1;
 }
 .watermark3::before {
@@ -81,6 +86,23 @@ footer {
   content: "";
   background: url("/watermark4.svg") no-repeat top right;
 }
+footer {
+  background: radial-gradient(
+      circle at right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 15%
+    ),
+    var(--primary);
+}
+.about-us {
+  color: var(--white);
+  background: radial-gradient(
+      circle at 60% top,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0) 45%
+    ),
+    var(--primary);
+}
 @media (min-width: 1024px) {
   .info-section {
     background: linear-gradient(
@@ -92,7 +114,7 @@ footer {
       radial-gradient(
         circle at right bottom,
         rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 31%
+        rgba(0, 0, 0, 0) 15%
       ),
       radial-gradient(
         circle at 60% 20%,
@@ -111,12 +133,12 @@ footer {
       radial-gradient(
         circle at right bottom,
         rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 31%
+        rgba(0, 0, 0, 0) 15%
       ),
       radial-gradient(
         circle at right top,
         rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 31%
+        rgba(0, 0, 0, 0) 15%
       ),
       var(--primary);
   }
@@ -130,7 +152,7 @@ footer {
       radial-gradient(
         circle at right top,
         rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 31%
+        rgba(0, 0, 0, 0) 15%
       ),
       var(--primary);
   }
@@ -145,7 +167,7 @@ footer {
   }
   .program-section {
     background: radial-gradient(
-        circle farthest-side at right top,
+        100% 100% at right top,
         var(--primary) 50%,
         var(--background) 50%
       ),
@@ -160,6 +182,7 @@ footer {
 }
 .card {
   background: var(--background);
+  color: var(--black);
 }
 /* 
 .card:nth-child(even) {
@@ -324,31 +347,32 @@ div.active {
   border-radius: 9999px;
 }
 
-.img {
+.img-overlay {
   position: relative;
+}
+.img-zoomable {
   transition: 500ms scale;
 }
-.img:not(.zoomed)::before {
+.img-zoomable:not(.zoomed)::before {
+  transition: 500ms all;
+}
+.img-overlay::before {
   content: "";
   inset: 0;
   background-color: color-mix(in srgb, var(--primary) 65%, transparent);
   position: absolute;
   border-radius: 1rem;
-  transition: 500ms all;
 }
-.img:hover::before {
+.img-zoomable:hover::before {
   opacity: 0;
 }
-.img::before {
+.img-overlay::before {
   pointer-events: none;
   inset: 0;
 }
-.img:hover {
+.img-zoomable:hover {
   scale: 1.05;
   z-index: 50;
-}
-.gallery-section {
-  overflow-x: hidden;
 }
 .zoom [data-rmiz-modal-overlay="visible"] {
   background-color: color-mix(in srgb, var(--primary) 65%, transparent);
@@ -360,4 +384,26 @@ div.active {
 
 .zoom [data-rmiz-modal-img] {
   border-radius: 1rem;
+}
+
+.dots::after {
+  animation: dots 10s linear infinite;
+  content: "";
+}
+@keyframes dots {
+  0% {
+    content: ".";
+  }
+  40% {
+    content: "..";
+  }
+  50% {
+    content: "...";
+  }
+  60% {
+    content: "....";
+  }
+  100% {
+    content: ".....";
+  }
 }

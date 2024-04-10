@@ -41,8 +41,7 @@
       }
     }
   },
-  "program": [
-  ],
+  "program": [],
   "programCategory": {
     "lecture": "Lectures",
     "workshop": "Workshop",
@@ -63,7 +62,7 @@
     },
     "side": [
       {
-        "stat": 30,
+        "stat": 13,
         "description": "pražíren",
         "style": {
           "marginLeft": "-2.5rem",
@@ -72,7 +71,7 @@
         }
       },
       {
-        "stat": 6,
+        "stat": 7,
         "description": "workshopů",
         "style": {
           "marginLeft": "4rem",
@@ -90,7 +89,7 @@
         }
       },
       {
-        "stat": 200,
+        "stat": "200+",
         "description": "účastníků",
         "style": {
           "marginLeft": "14rem",

@@ -16,14 +16,23 @@ export const OtherServices = () => {
         {lang.gastro.text}
       </div>
       <div className="mx-auto flex max-w-screen-2xl flex-col flex-wrap justify-center lg:flex-row">
-        {lang.gastro.content
-          .map((g) => (
-            <div key={g.title} className="basis-1/4 space-y-10 p-10">
-              <h4 className="text-xl font-medium md:text-2xl">{g.title}{g.alt && ` - ${g.alt}`}</h4>
-              <p>{g.text}</p>
-              {g.href && (
-                <a href={g.href} target="_blank" className="block" rel="external" title={g.alt}>
-                  { (g.src && g.alt) ? ( <>
+        {lang.gastro.content.map((g) => (
+          <div key={g.title} className="basis-1/4 space-y-10 p-10">
+            <h4 className="text-xl font-medium md:text-2xl">
+              {g.title}
+              {g.alt && ` - ${g.alt}`}
+            </h4>
+            <p>{g.text}</p>
+            {g.href && (
+              <a
+                href={g.href}
+                target="_blank"
+                className="block"
+                rel="external"
+                title={g.alt}
+              >
+                {g.src && g.alt ? (
+                  <>
                     <Image
                       src={g.src}
                       alt={g.alt}
@@ -31,18 +40,19 @@ export const OtherServices = () => {
                       width={180}
                       height={180}
                       unoptimized
+                      loader={({src}) => src}
                     />
                     <span className="sr-only">{g.alt}</span>
                   </>
-                  ) :
+                ) : (
                   <div className="flex justify-center">
                     <InstagramIcon />
-                    </div>
-                    }
-                </a>
-              )}
-            </div>
-          ))}
+                  </div>
+                )}
+              </a>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

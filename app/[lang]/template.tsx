@@ -1,6 +1,6 @@
-'use client'
- 
-import { useParams } from 'next/navigation'
+"use client";
+
+import { useParams } from "next/navigation";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
@@ -12,12 +12,8 @@ export const metadata: Metadata = {
   description: "Coffee roasters festival in Brno",
 };
 
-export default function Template ({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const params = useParams<{ lang: string }>()
+export default function Template({ children }: { children: React.ReactNode }) {
+  const params = useParams<{ lang: string }>();
   return (
     <html lang={params.lang}>
       <body className={figtree.className}>{children}</body>

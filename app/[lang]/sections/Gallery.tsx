@@ -1,11 +1,10 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { ZoomableImage } from "../components/ZoomableImage";
 
 const landscape = {
   small: { width: 512, height: 348 },
@@ -40,48 +39,7 @@ const images = [
   ],
 ];
 
-type Image = (typeof images)[0][0];
-
-export const ZoomableImage = (
-  props: Omit<ExportedImageProps, "alt" | "children"> & Image,
-) => {
-  const ref = useRef(null);
-  return (
-    <>
-      <ExportedImage
-        ref={ref}
-        className="hidden"
-        src={props.src}
-        height={props.zoomed.height}
-        width={props.zoomed.width}
-        alt=""
-      />
-      <Zoom
-        zoomMargin={16}
-        classDialog="zoom"
-        zoomImg={{
-          src: props.src,
-          height: props.zoomed.height,
-          width: props.zoomed.width,
-          alt: "here",
-          srcSet:
-            (ref.current as HTMLImageElement | null)?.getAttribute("srcset") ||
-            "",
-        }}
-      >
-        <div className="card elevate img rounded-2xl">
-          <ExportedImage
-            className="h-auto max-w-full rounded-2xl"
-            src={props.src}
-            height={props.small.height}
-            width={props.small.width}
-            alt=""
-          />
-        </div>
-      </Zoom>
-    </>
-  );
-};
+export type Image = (typeof images)[0][0];
 
 export const Gallery = () => {
   const ref = useRef(null);
@@ -105,8 +63,8 @@ export const Gallery = () => {
     { scope: ref },
   );
   return (
-    <section ref={ref} className="gallery-section watermark3 min-h-screen">
-      <div className="cards flex max-w-full items-center gap-4 p-12">
+    <section ref={ref} className="gallery-section watermark3 ">
+      <div className="cards mx-auto flex max-w-[1900px] items-center gap-4 p-12">
         {images.map((col, idx) => (
           <div className="grid gap-4" key={`col_${idx}`}>
             {col.map((i, idx) => (

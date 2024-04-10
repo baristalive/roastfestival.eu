@@ -31,6 +31,7 @@ export const PromotedRoasters = () => {
                   width={180}
                   height={180}
                   unoptimized
+                  loader={({src}) => src}
                 />
                 <span className="sr-only">{s.alt}</span>
               </a>

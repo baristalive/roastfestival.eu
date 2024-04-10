@@ -10,30 +10,18 @@ export const Footer = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <footer className="flex min-h-[50vh] flex-col justify-end py-10">
-      <nav className="text-center lowercase font-medium">
-        <div className="text-3xl pb-12">{lang.contact}</div>
+      <nav className="text-center font-medium lowercase">
+        <div className="pb-12 text-3xl">{lang.contact}</div>
         <div className="flex justify-center gap-4 pb-40">
-          <a
-            href={lang.contacts.facebook}
-            title="Facebook"
-            rel="external"
-          >
+          <a href={lang.contacts.facebook} title="Facebook" rel="external">
             <FacebookIcon />
             <span className="sr-only">Facebook</span>
           </a>
-          <a
-            href={lang.contacts.instagram}
-            title="Instagram"
-            rel="external"
-          >
+          <a href={lang.contacts.instagram} title="Instagram" rel="external">
             <InstagramIcon />
             <span className="sr-only">Instagram</span>
           </a>
-          <a
-            href={lang.contacts.email}
-            title="E-Mail"
-            rel="author"
-          >
+          <a href={lang.contacts.email} title="E-Mail" rel="author">
             <AtIcon />
             <span className="sr-only">E-Mail</span>
           </a>
