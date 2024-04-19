@@ -4,8 +4,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import Bar from "../components/Bar";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import Bar from "@/app/components/Bar";
 
 export const PreviousYears = () => {
   const params = useParams();

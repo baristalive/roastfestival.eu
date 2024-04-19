@@ -8,8 +8,8 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
-import { SupportedLanguages, dictionaries } from "../../dictionaries/all";
-import Bar from "../components/Bar";
+import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
+import Bar from "@/app/components/Bar";
 import { useGSAP } from "@gsap/react";
 
 export const Map = () => {

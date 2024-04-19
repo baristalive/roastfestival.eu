@@ -4,10 +4,10 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import FacebookIcon from "../../icons/facebook";
-import InstagramIcon from "../../icons/instagram";
-import ArrowIcon from "../../icons/arrow";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import FacebookIcon from "@/app/icons/facebook";
+import InstagramIcon from "@/app/icons/instagram";
+import ArrowIcon from "@/app/icons/arrow";
 import Logo from "../components/Logo";
 import Link from "next/link";
 

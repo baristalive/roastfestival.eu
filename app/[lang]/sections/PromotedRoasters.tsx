@@ -1,8 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import PlusIcon from "../../icons/plus";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Image from "next/image";
 
 export const PromotedRoasters = () => {

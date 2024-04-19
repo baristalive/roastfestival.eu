@@ -39,8 +39,6 @@ const images = [
   ],
 ];
 
-export type Image = (typeof images)[0][0];
-
 export const Gallery = () => {
   const ref = useRef(null);
   useGSAP(

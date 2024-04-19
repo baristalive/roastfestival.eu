@@ -1,10 +1,10 @@
 "use client";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import PlusIcon from "../../icons/plus";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import PlusIcon from "@/app/icons/plus";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import Bar from "../components/Bar";
+import Bar from "@/app/components/Bar";
 import { StationIcon } from "../components/StationIcon";
 import ArrowIcon from "@/app/icons/arrow";
 
@@ -14,7 +14,7 @@ export const Colab = () => {
   const ref = useRef(null);
   const { contextSafe } = useGSAP({ scope: ref });
   return (
-    <section ref={ref} className="colab-section">
+    <section ref={ref} id="colab" className="colab-section">
       <div className="mx-auto grid max-w-[1900px] gap-32 px-8 pb-48 lg:grid-cols-[1fr,2fr]">
         <div className="md:p-12">
           <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">

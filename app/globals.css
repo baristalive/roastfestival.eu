@@ -167,7 +167,7 @@ footer {
   }
   .program-section {
     background: radial-gradient(
-        100% 100% at right top,
+        100% 1200px at right top,
         var(--primary) 50%,
         var(--background) 50%
       ),

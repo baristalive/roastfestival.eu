@@ -1,6 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Image from "next/image";
 import InstagramIcon from "@/app/icons/instagram";
 

@@ -1,10 +1,10 @@
 "use client";
-import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import { ZoomableImage } from "../components/ZoomableImage";
-import { useRef } from "react";
+import Bar from "@/app/components/Bar";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { useGSAP } from "@gsap/react";
-import Bar from "../components/Bar";
+import { useParams } from "next/navigation";
+import { useRef } from "react";
+import { ZoomableImage } from "../components/ZoomableImage";
 
 const landscape = {
   small: { width: 512, height: 348 },

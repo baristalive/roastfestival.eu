@@ -2,8 +2,18 @@
 import { useRef } from "react";
 import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 import Zoom from "react-medium-image-zoom";
-import { Image } from "../sections/Gallery";
 
+type Image = {
+  small: {
+      width: number;
+      height: number;
+  };
+  zoomed: {
+      width: number;
+      height: number;
+  };
+  src: string;
+}
 
 export const ZoomableImage = (
   props: Omit<ExportedImageProps, "alt" | "children"> & Image

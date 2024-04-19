@@ -1,6 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import React, { MouseEvent, useRef, useState } from "react";
 import { Modal, ProgramItem } from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";

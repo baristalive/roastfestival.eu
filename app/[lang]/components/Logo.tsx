@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import LogoSvg from "../../../public/logo.svg";
+import LogoSvg from "@/app/../public/logo.svg";
 
 const sharedGsapOptions = {
   duration: 1.5,
