@@ -30,6 +30,20 @@ export const PreviousYears = () => {
           });
         });
       });
+      mm.add("(max-width: 1024px)", () => {
+        gsap.utils.toArray(".cards g").map((c, idx) => {
+          gsap.set(c as Element, { y: `+=${(idx + 1) * .2}rem` });
+          gsap.to(c as Element, {
+            y: `-=${(idx + 1) * .5}rem`,
+            scrollTrigger: {
+              trigger: ref.current,
+              scrub: 2,
+              start: "top bottom",
+              end: "bottom top",
+            },
+          });
+        });
+      });
     },
     { scope: ref },
   );
@@ -37,10 +51,11 @@ export const PreviousYears = () => {
     <section
       ref={ref}
       id="info"
-      className="previous-year-section watermark4 relative flex flex-col items-center justify-between"
+      className="previous-year-section watermark4 relative flex flex-col items-center justify-between z-0"
     >
-      <div className="absolute inset-0 items-center justify-center hidden md:flex">
-        <div className="flex flex-col items-center justify-center gap-8">
+      <div>
+      <div className="absolute inset-4 items-center justify-center flex z-10">
+        <div className="flex h-full flex-col items-center justify-end lg:justify-center gap-8">
           <div className="elevate flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full bg-[var(--black)] p-10 leading-none text-white">
             <div className=" text-6xl font-bold">
               {lang.lastYear.center.stat}
@@ -51,23 +66,23 @@ export const PreviousYears = () => {
           </div>
         </div>
       </div>
-      <div className="grid max-w-[1900px] items-center p-8 pb-24 lg:grid-cols-2 gap-4">
-        <div className="md:p-12 md:pr-64">
-          <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
+      <div className="grid max-w-[1900px] items-center p-8 pb-24 lg:grid-cols-2 gap-4 z-0">
+        <div className="md:p-12 lg:pr-64 z-0">
+          <h2 className="w-3/4 pb-8 pt-24 text-2xl lg:text-6xl font-bold md:pt-56 lg:pt-20">
             {lang.lastYear.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
+          <div className="mx-auto max-w-screen-lg space-y-10 text-sm leading-normal lg:text-xl">
             {lang.lastYear.description}
           </div>
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
-        <div className="cards relative h-full w-full gap-8">
+        <div className="cards relative h-full w-full gap-8 z-10">
           <svg
             width="100%"
             height="100%"
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
-            className="elevate"
+            className="elevate overflow-visible"
           >
             <style>
               {`.large {font-weight: bold;font-size: 0.5rem;fill: currentColor;} .small {font-size: 0.2rem;fill: currentColor;}`}
@@ -105,6 +120,7 @@ export const PreviousYears = () => {
             ))}
           </svg>
         </div>
+      </div>
       </div>
     </section>
   );

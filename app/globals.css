@@ -13,7 +13,7 @@
   --secondary-accent: #412234;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   :root {
     --vertical-offset: 11rem;
   }
@@ -44,7 +44,8 @@ footer {
 .watermark::before,
 .watermark2::before,
 .watermark3::before,
-.watermark4::before {
+.watermark4::before,
+.watermark5::before {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -54,14 +55,16 @@ footer {
 .watermark,
 .watermark2,
 .watermark3,
-.watermark4 {
+.watermark4,
+.watermark5 {
   position: relative;
   z-index: 0;
 }
 .watermark > *,
 .watermark2 > *,
 .watermark3 > *,
-.watermark4 > * {
+.watermark4 > *,
+.watermark5 > * {
   z-index: 1;
 }
 .watermark::before {
@@ -75,6 +78,27 @@ footer {
 }
 .watermark4::before {
   background: url("/watermark4.svg")  no-repeat;
+}
+.watermark5::before {
+  background: url("/watermark5.svg")  no-repeat;
+}
+
+@media (max-width: 768px) {
+  .watermark::before {
+    background: url("/watermark.svg")  no-repeat;
+  }
+  .watermark2::before {
+    background: url("/watermark2_small.svg")  repeat-x;
+  }
+  .watermark3::before {
+    background: url("/watermark3_small.svg")  repeat-x;
+  }
+  .watermark4::before {
+    background: url("/watermark4_small.svg")  no-repeat;
+  }
+  .watermark5::before {
+    background: url("/watermark2_small.svg")  no-repeat;
+  }
 }
 
 footer {
@@ -176,6 +200,7 @@ svg.elevate {
 .card:nth-child(even) {
   transform: translateY(4em);
 } */
+
 .maplibregl-marker {
   font-size: large;
   background: var(--white);
@@ -185,6 +210,12 @@ svg.elevate {
     0px 16px 24px 2px rgba(0, 0, 0, 0.14),
     0px 6px 30px 5px rgba(0, 0, 0, 0.12);
 }
+@media (max-width: 1024px) {
+  .maplibregl-marker {
+    font-size: small;
+  }
+}
+
 .maplibregl-marker::before {
   content: "";
   position: absolute;
@@ -210,11 +241,18 @@ svg.elevate {
   border-radius: 50% !important;
   height: 64px !important;
   width: 64px !important;
-  margin: 10px !important;
+  margin: 10px 0 !important;
   box-shadow:
     0px 8px 10px -5px rgba(0, 0, 0, 0.2),
     0px 16px 24px 2px rgba(0, 0, 0, 0.14),
     0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 1024px) {
+  .maplibregl-ctrl-zoom-in,
+  .maplibregl-ctrl-zoom-out {
+    height: 42px !important;
+    width: 42px !important;
+  }
 }
 
 .lang {

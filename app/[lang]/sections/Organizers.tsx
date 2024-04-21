@@ -40,7 +40,7 @@ export const Organizers = () => {
   return (
     <section ref={ref} className="about-us watermark4 pt-20">
       <div className="p-12 md:p-24">
-        <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
+        <h2 className="w-3/4 pb-8 lg:pt-24 text-2xl lg:text-6xl font-bold md:pt-56 lg:pt-20">
           {lang.organizers.title}
         </h2>
         <Bar mountRef={ref} contextSafe={contextSafe} />
@@ -53,7 +53,7 @@ export const Organizers = () => {
                 return (
                   <div
                     key={`card_${i.card}`}
-                    className="card elevate rounded-2xl md:p-12 p-4 text-lg leading-normal lg:text-xl"
+                    className="card elevate rounded-2xl md:p-12 p-4 text-sm leading-normal lg:text-xl"
                   >
                     <p>{lang.organizers.text[i.card]}</p>
                   </div>

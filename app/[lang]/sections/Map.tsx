@@ -21,14 +21,14 @@ export const Map = () => {
     <section ref={ref} className="where-section watermark2 min-h-screen p-8">
       <div className="mx-auto flex flex-col lg:grid max-w-[1900px] grid-cols-[1fr,auto,1fr] lg:p-12">
         <div className="flex flex-col">
-          <h2 className="pb-8 text-6xl font-bold">{lang.location.title}</h2>
-          <div className="max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
+          <h2 className="pb-8 text-2xl lg:text-6xl font-bold">{lang.location.title}</h2>
+          <div className="max-w-screen-lg space-y-10 text-sm leading-normal lg:text-xl">
             {lang.location.howToTitle}
           </div>
           <div className="grow">
             <Bar mountRef={ref} contextSafe={contextSafe} />
           </div>
-          <div className="card elevate lg:mb-32 lg:mt-0 mt-32 mx-4 lg:mx-0 flex flex-col gap-4 lg:rounded-s-2xl rounded-t-2xl lg:rounded-tr-none p-4 lg:p-12 lg:text-right text-center text-xl">
+          <div className="card elevate lg:mb-32 lg:mt-0 mt-32 mx-4 lg:mx-0 flex flex-col gap-4 lg:rounded-s-2xl rounded-t-2xl lg:rounded-tr-none p-4 lg:p-12 lg:text-right text-center text-sm lg:text-xl">
             <h3 className="font-bold">{lang.location.addressTitle}</h3>
             <p>Káznice Brno</p>
             <p>
@@ -41,13 +41,13 @@ export const Map = () => {
                 href={lang.contacts.kaznice_loc}
                 rel="external"
                 title="Káznice Brno - Google Maps"
-                className="h-16 w-16 rounded-full border border-[var(--black)] fill-current p-4"
+                className="h-10 w-10 lg:h-16 lg:w-16 rounded-full border border-[var(--black)] fill-current p-2 lg:p-4"
               >
                 <MapIcon />
                 <span className="sr-only">Káznice Brno - Google Maps</span>
               </a>
               <a
-                className="p-auto h-16 w-16 rounded-full border border-[var(--black)] fill-current pt-[.8rem] text-center"
+                className="p-auto h-10 w-10 lg:h-16 lg:w-16 rounded-full border border-[var(--black)] fill-current lg:pt-[.8rem] text-center"
                 href={lang.contacts.kaznice_web}
                 title="Káznice Brno - Web"
                 rel="external"
@@ -60,22 +60,22 @@ export const Map = () => {
         </div>
         <div className="z-10">
           <div className="card elevate relative rounded-3xl p-3">
-            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%_-_3rem)] items-center justify-between rounded-full text-2xl leading-none">
-              <h4 className="py-6 pl-8 font-semibold">
+            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%_-_3rem)] items-center justify-between rounded-full text-lg lg:text-2xl leading-none">
+              <h4 className="py-4 lg:py-6 pl-4 lg:pl-8 font-semibold">
                 {lang.location.stops.kaznice}, Brno
               </h4>
               <a
                 href={lang.contacts.kaznice_loc}
                 rel="external"
                 title="Káznice Brno - Google Maps"
-                className="mr-1 h-16 w-16 rounded-full bg-[var(--black)] fill-current p-4 text-[var(--white)]"
+                className="mr-1 lg:mr-2 h-10 w-10 lg:h-16 lg:w-16 rounded-full bg-[var(--black)] fill-current p-2 lg:p-4 text-[var(--white)]"
               >
                 <MapIcon />
                 <span className="sr-only">Káznice Brno - Google Maps</span>
               </a>
             </div>
 
-            <div className="2xl:h-[60rem] h-[30rem] w-[100%] md:h-[45rem] lg:w-[40rem] rounded-3xl text-xl font-medium text-black">
+            <div className="2xl:h-[60rem] h-[30rem] w-[100%] md:h-[45rem] lg:w-[30rem] xl:w-[40rem] rounded-3xl text-lg lg:text-xl font-medium text-black">
               <ReactMap
                 initialViewState={{
                   longitude: 16.6225864,
@@ -95,14 +95,14 @@ export const Map = () => {
                   longitude={16.6232864}
                   anchor="bottom"
                 >
-                  <div className="px-6 py-4">{lang.location.stops.kaznice}</div>
+                  <div className="px-4 py-2 lg:px-6 lg:py-4">{lang.location.stops.kaznice}</div>
                 </Marker>
                 <Marker
                   latitude={49.20001678633428}
                   longitude={16.626028456324793}
                   anchor="bottom"
                 >
-                  <div className="px-6 py-4">
+                  <div className="px-4 py-2 lg:px-6 lg:py-4">
                     {lang.location.stops.tkalcovska}
                   </div>
                 </Marker>
@@ -111,7 +111,7 @@ export const Map = () => {
                   longitude={16.61971675681972}
                   anchor="bottom"
                 >
-                  <div className="px-6 py-4">
+                  <div className="px-4 py-2 lg:px-6 lg:py-4">
                     {lang.location.stops.kornerova}
                   </div>
                 </Marker>
@@ -120,7 +120,7 @@ export const Map = () => {
                   longitude={16.61462520981893}
                   anchor="bottom"
                 >
-                  <div className="px-6 py-4">
+                  <div className="px-4 py-2 lg:px-6 lg:py-4">
                     {lang.location.parking.lot.title}
                   </div>
                 </Marker>
@@ -133,7 +133,7 @@ export const Map = () => {
           </div>
         </div>
         <div>
-          <div className="card elevate relative z-0 lg:mt-4 2xl:mt-32 lg:mx-0 mx-4 flex flex-col gap-4 lg:rounded-e-2xl lg:rounded-bl-none rounded-b-2xl p-12 text-xl">
+          <div className="card elevate relative z-0 lg:mt-4 2xl:mt-32 lg:mx-0 mx-4 flex flex-col gap-4 lg:rounded-e-2xl lg:rounded-bl-none rounded-b-2xl p-12 text-sm lg:text-xl">
             <h3 className="font-bold">{lang.location.howToTitle}</h3>
             <div className="grid grid-cols-[auto,1fr] gap-4">
               <div className="">

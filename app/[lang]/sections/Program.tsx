@@ -68,7 +68,7 @@ export const Program = () => {
       ))}
       <div className="mx-auto flex h-full max-w-[1900px] flex-col pt-12">
         <div className="flex grid-cols-[1fr,auto,1fr] flex-col items-center lg:grid">
-          <h2 className="p-4 pl-8 text-6xl font-bold md:pl-20">Program</h2>
+          <h2 className="p-4 pl-8 text-2xl lg:text-6xl font-bold md:pl-20">Program</h2>
           <div className="p-4">
             <ul className="elevate card pills flex rounded-e-full rounded-s-full text-center font-medium">
               {lang.program.map((day, idx) => (
@@ -79,8 +79,8 @@ export const Program = () => {
                     className={`z-10 flex w-full cursor-pointer flex-col whitespace-nowrap p-4 px-8 md:px-16 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
                     onClick={changeTabTo(idx)}
                   >
-                    <h3 className="z-10 text-3xl font-bold">{day.title}</h3>
-                    <span className="z-10 text-xl">{day.date}</span>
+                    <h3 className="z-10 text-xl lg:text-3xl font-bold">{day.title}</h3>
+                    <span className="z-10 text-sm lg:text-xl">{day.date}</span>
                   </a>
                 </li>
               ))}
@@ -92,21 +92,17 @@ export const Program = () => {
             {lang.program.every((day) => day.schedule.length === 0) && (
               <div className="mx-auto flex  h-full w-full items-center justify-center  p-12 py-48">
                 <div className="flex flex-col md:flex-row">
-                  {/* <div className="p-4 align-middle text-3xl dots" /> */}
                   <StationIcon station="espresso" />
                   <StationIcon station="espresso_milk" />
                 </div>
                 <div className="flex flex-col">
-                <div className="text-center align-middle text-3xl">
+                <div className="text-center align-middle text-xl lg:text-3xl">
                   {lang.programLoadingText}
                 </div>
-
-                <div className="text-3xl text-center align-middle dots" />
                 </div>
                 <div className="flex flex-col md:flex-row">
                   <StationIcon station="brew" />
                   <StationIcon station="lecture" />
-                  {/* <div className="p-4 align-middle text-3xl dots"/> */}
                 </div>
               </div>
             )}

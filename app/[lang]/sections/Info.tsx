@@ -21,7 +21,7 @@ export const Info = () => {
     () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
-      mm.add("(min-width: 1024px)", () => {
+      mm.add("(min-width: 768px)", () => {
         gsap.set(".cards", { y: "+=30rem" });
         gsap.to(".cards", {
           y: "-=30rem",
@@ -33,6 +33,25 @@ export const Info = () => {
           },
         });
       });
+      mm.add("(max-width: 768px)", () => {
+        gsap.utils.toArray(".card").map((c, idx, arr) => {
+          const isLast = idx === arr.length - 1;
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: c as Element,
+                pin: true,
+                start: "top 10%",
+                end: isLast ? "top top" : "bottom top",
+                scrub: 1,
+              },
+            })
+            .to(c as Element, {
+              ease: "none",
+              ...(isLast ? {} : { display: "none", scale: 0.8, opacity: 0 }),
+            });
+        });
+      });
     },
     { scope: ref },
   );
@@ -40,14 +59,14 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark pb-[10rem] flex flex-col items-center justify-between"
+      className="info-section watermark flex flex-col items-center justify-between pb-[10rem]"
     >
-      <div className="grid max-w-[1900px] items-center gap-12 2xl:gap-32 p-8 lg:grid-cols-[1fr,2fr]">
+      <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
+          <h2 className="w-3/4 pb-8 pt-24 text-2xl lg:text-6xl font-bold md:pt-56 lg:pt-20">
             {lang.about.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
+          <div className="mx-auto max-w-screen-lg space-y-10 text-sm leading-normal lg:text-xl">
             {lang.about.text.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -65,8 +84,8 @@ export const Info = () => {
                   className="card elevate h-auto rounded-2xl p-12"
                   key={s.title}
                 >
-                  <h3 className="pb-12 text-3xl font-bold">{s.title}</h3>
-                  <p className="text-lg lg:text-xl">{s.text}</p>
+                  <h3 className="pb-12 text-xl lg:text-3xl font-bold">{s.title}</h3>
+                  <p className="text-sm lg:text-xl">{s.text}</p>
                 </div>
               ))}
             </div>
