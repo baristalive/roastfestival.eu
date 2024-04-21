@@ -4,38 +4,30 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import "react-medium-image-zoom/dist/styles.css";
-import { ZoomableImage } from "../components/ZoomableImage";
+import { LANDSCAPE, PORTRAIT, ZoomableImage } from "../../components/ZoomableImage";
 
-const landscape = {
-  small: { width: 512, height: 348 },
-  zoomed: { width: 1080, height: 1623 },
-};
-const portrait = {
-  small: { width: 512, height: 768 },
-  zoomed: { width: 1080, height: 720 },
-};
 
 const images = [
   [
-    { src: "/photos/220-_DSC0453.jpg", ...landscape },
-    { src: "/photos/280-_DSC0568.jpg", ...portrait },
+    { src: "/photos/220-_DSC0453.jpg", ...LANDSCAPE },
+    { src: "/photos/280-_DSC0568.jpg", ...PORTRAIT },
   ],
   [
-    { src: "/photos/260-_DSC0526.jpg", ...landscape },
-    { src: "/photos/318-_DSC0639.jpg", ...landscape },
-    { src: "/photos/198-_DSC0389.jpg", ...landscape },
+    { src: "/photos/260-_DSC0526.jpg", ...LANDSCAPE },
+    { src: "/photos/318-_DSC0639.jpg", ...LANDSCAPE },
+    { src: "/photos/198-_DSC0389.jpg", ...LANDSCAPE },
   ],
   [
-    { src: "/photos/94-_DSC0192.jpg", ...landscape },
-    { src: "/photos/300-_DSC0610.jpg", ...portrait },
+    { src: "/photos/94-_DSC0192.jpg", ...LANDSCAPE },
+    { src: "/photos/300-_DSC0610.jpg", ...PORTRAIT },
   ],
   [
-    { src: "/photos/364-_DSC0717.jpg", ...portrait },
-    { src: "/photos/132-_DSC0253.jpg", ...landscape },
+    { src: "/photos/364-_DSC0717.jpg", ...PORTRAIT },
+    { src: "/photos/132-_DSC0253.jpg", ...LANDSCAPE },
   ],
   [
-    { src: "/photos/359-_DSC0712.jpg", ...landscape },
-    { src: "/photos/64-_DSC0125.jpg", ...portrait },
+    { src: "/photos/359-_DSC0712.jpg", ...LANDSCAPE },
+    { src: "/photos/64-_DSC0125.jpg", ...PORTRAIT },
   ],
 ];
 

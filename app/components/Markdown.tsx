@@ -1,0 +1,78 @@
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import React, { PropsWithChildren } from "react";
+import remarkExtendedTable, {
+  extendedTableHandlers,
+} from "remark-extended-table";
+import { Element } from "react-markdown/lib";
+import { LANDSCAPE, PORTRAIT, ZoomableImage } from "./ZoomableImage";
+import "react-medium-image-zoom/dist/styles.css";
+import remarkUnwrapImages from "remark-unwrap-images";
+
+const portrait = {...PORTRAIT, small: { width: 200, height: 300}}
+const landscape = {...LANDSCAPE, small: { width: 300, height: 200}}
+
+const MarkdownComponents = {
+  h2: ({ children }: PropsWithChildren) => (
+    <h2 className="mb-4 mt-12 text-3xl font-bold  clear-both">{children}</h2>
+  ),
+  h3: ({ children }: PropsWithChildren) => (
+    <h3 className="mb-4 pt-24 text-2xl  font-bold clear-both">{children}</h3>
+  ),
+  li: ({ children }: PropsWithChildren) => (
+    <li className="px-0 text-lg lg:text-xl">{children}</li>
+  ),
+  p: ({ children }: PropsWithChildren) => (
+    <p className="mb-4 text-lg lg:text-xl">{children}</p>
+  ),
+  ol: ({ children }: PropsWithChildren) => (
+    <ol className="mb-4 list-outside list-decimal round-counter">{children}</ol>
+  ),
+  ul: ({ children }: PropsWithChildren) => (
+    <ul className="mb-4 px-8 list-inside list-disc">{children}</ul>
+  ),
+  table: ({ children }: PropsWithChildren) => (
+    <div className="flex items-center justify-center">
+        <table className="border-collapse rounded-2xl elevate p-4 my-4">{children}</table>
+    </div>
+  ),
+  th: ({ children }: PropsWithChildren) => (
+    <th className="text-center first:rounded-tl-2xl last:rounded-tr-2xl p-4 px-8">{children}</th>
+  ),
+  thead:  ({ children }: PropsWithChildren) => (
+    <thead className="px-4 text-center text-[var(--white)] bg-[var(--primary)]">{children}</thead>
+  ),
+  td: ({ children, node, ...rest }: PropsWithChildren & { node?: Element | undefined}) => (
+    <td {...rest} className="p-4  px-8 text-center">{children}</td>
+  ),
+  tr: ({ children }: PropsWithChildren) => (
+    <tr className="divide-x divide-dashed even:bg-slate-50 last:rounded-b-2xl">{children}</tr>
+  ),
+  tbody: ({ children }: PropsWithChildren) => (
+    <tbody className="after:content-[''] after:pt-4 after:block">{children}</tbody>
+  ),
+  img: ({ src, alt, ...rest }: {src?: string, alt?: string}) => {
+    const [altText, sizing] = (alt || "|").split("|")
+
+    return (
+      <span className="inline float-right ml-8">
+        <ZoomableImage src={src!} alt={altText} {...rest} {...(sizing === "landscape" ? landscape : portrait)} />
+      </span>
+    );
+  },
+};
+
+
+const Markdown = ({ children }: { children?: string | null | undefined }) => {
+  return (
+    <ReactMarkdown
+      components={MarkdownComponents}
+      remarkPlugins={[remarkGfm, remarkExtendedTable, remarkUnwrapImages]}
+      remarkRehypeOptions={{ handlers: { ...extendedTableHandlers } }}
+    >
+      {children}
+    </ReactMarkdown>
+  );
+};
+
+export default Markdown;

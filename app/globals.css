@@ -407,3 +407,32 @@ div.active {
     content: ".....";
   }
 }
+
+ol.round-counter {
+  counter-reset: round-counter;
+}
+ol.round-counter li {
+  counter-increment: round-counter;
+  margin: 3rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+ol.round-counter li::before {
+  content: counter(round-counter);
+  font-variant-numeric: tabular-nums;
+  display: block;
+  margin-right: 2rem;
+  height: 4rem;
+  width: 4rem;
+  min-width: 4rem;
+  padding: 1.2rem;
+  line-height: 1.5rem;
+  font-size: 2.5rem;
+  color: var(--white);
+  background: var(--black);
+  border-radius: 50%;
+  
+
+}

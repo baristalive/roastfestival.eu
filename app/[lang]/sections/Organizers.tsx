@@ -4,40 +4,31 @@ import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { useGSAP } from "@gsap/react";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
-import { ZoomableImage } from "../components/ZoomableImage";
-
-const landscape = {
-  small: { width: 512, height: 348 },
-  zoomed: { width: 1080, height: 1623 },
-};
-const portrait = {
-  small: { width: 512, height: 768 },
-  zoomed: { width: 1080, height: 720 },
-};
+import { LANDSCAPE, PORTRAIT, ZoomableImage } from "../../components/ZoomableImage";
 
 const images = [
   [
-    { src: "/photos/DSC_3562.jpg", ...portrait },
-    { src: "/photos/3166.jpg", ...landscape },
+    { src: "/photos/DSC_3562.jpg", ...PORTRAIT },
+    { src: "/photos/3166.jpg", ...LANDSCAPE },
   ],
   [
-    { src: "/photos/DSC_3346.jpg", ...landscape },
+    { src: "/photos/DSC_3346.jpg", ...LANDSCAPE },
     { card: 0 },
-    { src: "/photos/167-_DSC0331.jpg", ...portrait },
+    { src: "/photos/167-_DSC0331.jpg", ...PORTRAIT },
   ],
   [
-    { src: "/photos/58-_DSC0116.jpg", ...portrait },
+    { src: "/photos/58-_DSC0116.jpg", ...PORTRAIT },
     { card: 1 },
-    { src: "/photos/DSC_3536.jpg", ...landscape },
+    { src: "/photos/DSC_3536.jpg", ...LANDSCAPE },
   ],
   [
-    { src: "/photos/DSC_3481.jpg", ...landscape },
+    { src: "/photos/DSC_3481.jpg", ...LANDSCAPE },
     { card: 2 },
-    { src: "/photos/DSC_3298.jpg", ...portrait },
+    { src: "/photos/DSC_3298.jpg", ...PORTRAIT },
   ],
   [
-    { src: "/photos/DSC_3263.jpg", ...portrait },
-    { src: "/photos/60-_DSC0120.jpg", ...landscape },
+    { src: "/photos/DSC_3263.jpg", ...PORTRAIT },
+    { src: "/photos/60-_DSC0120.jpg", ...LANDSCAPE },
   ],
 ];
 

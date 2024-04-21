@@ -6,6 +6,7 @@
     ],
     "title": "About"
   },
+  "back": "Back to home page",
   "buyTickets": "I want tickets",
   "contact": "Contact us",
   "organizers": {
@@ -13,6 +14,13 @@
       "We are a group of coffee enthusiasts and professionals who decided to bring the culture of European coffee festivals to Brno. Organizers work in a variety of specialty coffee shops, roasters, bars and other places. What binds us together is our love for specialty coffee and fine gastronomy."
     ],
     "title": "Organizers"
+  },
+  "exhibitors": {
+    "title": "Exhibitors",
+    "text": "Information for exhibitors",
+    "content": "",
+    "card": "",
+    "cta": "Sign up"
   },
   "place": "Káznice, Brno",
   "location": {
@@ -41,7 +49,18 @@
       }
     }
   },
-  "program": [],
+  "program": [
+    {
+      "title": "Day 1",
+      "date": "21/9",
+      "schedule": []
+    },
+    {
+      "title": "Day 2",
+      "date": "22/9",
+      "schedule": []
+    }
+  ],
   "programCategory": {
     "lecture": "Lectures",
     "workshop": "Workshop",

@@ -5,6 +5,7 @@
     ],
     "title": "Co je roast!?"
   },
+  "back": "Zpět na hlavní stránku",
   "buyTickets": "Chci vstupenky",
   "contact": "Kontakt",
   "location": {
@@ -78,6 +79,13 @@
       "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
       "button": "Zjistit podrobnosti"
     }
+  },
+  "exhibitors": {
+    "title": "Vystavovatelé",
+    "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
+    "content": "",
+    "card": "",
+    "cta": "Vyplnit přihlášku"
   },
   "lastYear": {
     "title": "Předchozí ročník",

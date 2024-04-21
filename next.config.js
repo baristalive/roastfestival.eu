@@ -40,6 +40,10 @@ const nextConfig = {
           },
         ],
       },
+      {
+        test: /\.md$/i,
+        use: 'raw-loader',
+      },
     );
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
