@@ -15,17 +15,17 @@ export const Colab = () => {
   const { contextSafe } = useGSAP({ scope: ref });
   return (
     <section ref={ref} id="colab" className="colab-section">
-      <div className="mx-auto grid max-w-[1900px] gap-32 px-8 pb-48 lg:grid-cols-[1fr,2fr]">
+      <div className="mx-auto grid max-w-[1900px] gap-12 2xl:gap-32 px-8 pb-48 lg:grid-cols-[1fr,2fr]">
         <div className="md:p-12">
           <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
             {lang.colab.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
+          <div className="mx-auto space-y-10 text-lg leading-normal lg:text-xl">
             {lang.colab.description}
           </div>
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
-        <div className="grid grid-cols-2 items-center justify-center gap-24 pt-36 text-xl">
+        <div className="flex flex-col md:grid grid-cols-2 items-center justify-center gap-8 pt-36 text-xl">
           <div className="card elevate nav h-full rounded-2xl p-12">
             <a
               href={`/${params.lang}/colab`}
@@ -36,7 +36,7 @@ export const Colab = () => {
               <h3 className="text-3xl font-bold">
                 {lang.colab.exhibitors.title}
               </h3>
-              <div className="-ml-4 flex gap-2 py-8">
+              <div className="-ml-4 flex flex-wrap gap-2 py-8">
                 <StationIcon station="espresso" />
                 <StationIcon station="espresso_milk" />
                 <StationIcon station="brew" />

@@ -38,22 +38,22 @@ export const Organizers = () => {
   const ref = useRef(null);
   const { contextSafe } = useGSAP({ scope: ref });
   return (
-    <section ref={ref} className="about-us watermark4 p-12 pt-20">
-      <div className="md:p-12">
+    <section ref={ref} className="about-us watermark4 pt-20">
+      <div className="p-12 md:p-24">
         <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
           {lang.organizers.title}
         </h2>
         <Bar mountRef={ref} contextSafe={contextSafe} />
       </div>
-      <div className="cards mx-auto flex max-w-[1900px] items-center gap-4">
+      <div className="cards mx-auto flex max-w-[1900px] items-center gap-1 md:gap-4">
         {images.map((col, idx) => (
-          <div className="grid max-w-[20%] gap-4" key={`col_${idx}`}>
+          <div className={`gap-1 md:max-w-[20%] md:gap-4 ${(idx > 2 || idx === 0) ? "hidden md:grid" : "grid"}`} key={`col_${idx}`}>
             {col.map((i, idx) => {
               if ("card" in i && i.card !== undefined) {
                 return (
                   <div
                     key={`card_${i.card}`}
-                    className="card elevate rounded-2xl p-12 text-lg leading-normal lg:text-xl"
+                    className="card elevate rounded-2xl md:p-12 p-4 text-lg leading-normal lg:text-xl"
                   >
                     <p>{lang.organizers.text[i.card]}</p>
                   </div>

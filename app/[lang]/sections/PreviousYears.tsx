@@ -1,6 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -17,11 +17,10 @@ export const PreviousYears = () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
-        // gsap.set(".cards > div", { y: "+=40rem" });
-        gsap.utils.toArray(".cards > div").map((c, idx) => {
-          gsap.set(c as Element, { y: `+=${30 + idx * 5}rem` });
+        gsap.utils.toArray(".cards g").map((c, idx) => {
+          gsap.set(c as Element, { y: `+=${4 + idx * .5}rem` });
           gsap.to(c as Element, {
-            y: `-=${30 + idx * 10}rem`,
+            y: `-=${4 + idx}rem`,
             scrollTrigger: {
               trigger: ref.current,
               scrub: 2,
@@ -38,18 +37,9 @@ export const PreviousYears = () => {
     <section
       ref={ref}
       id="info"
-      className="previous-year-section watermark4  flex  flex-col items-center justify-between"
+      className="previous-year-section watermark4 relative flex flex-col items-center justify-between"
     >
-      <div className="grid max-w-[1900px] items-center gap-32 p-8 lg:grid-cols-[2fr,1fr,2fr]">
-        <div className="md:p-12">
-          <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
-            {lang.lastYear.title}
-          </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
-            {lang.lastYear.description}
-          </div>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
-        </div>
+      <div className="absolute inset-0 items-center justify-center hidden md:flex">
         <div className="flex flex-col items-center justify-center gap-8">
           <div className="elevate flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full bg-[var(--black)] p-10 leading-none text-white">
             <div className=" text-6xl font-bold">
@@ -60,17 +50,60 @@ export const PreviousYears = () => {
             </div>
           </div>
         </div>
-        <div className="cards flex flex-wrap gap-8">
-          {lang.lastYear.side.map((i) => (
-            <div
-              key={i.description}
-              className="elevate flex flex-col items-center justify-center rounded-full bg-white p-10 text-6xl font-bold leading-none"
-              style={i.style}
-            >
-              <div className="text-6xl font-bold">{i.stat}</div>
-              <div className="text-2xl font-normal">{i.description}</div>
-            </div>
-          ))}
+      </div>
+      <div className="grid max-w-[1900px] items-center p-8 pb-24 lg:grid-cols-2 gap-4">
+        <div className="md:p-12 md:pr-64">
+          <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
+            {lang.lastYear.title}
+          </h2>
+          <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
+            {lang.lastYear.description}
+          </div>
+          <Bar mountRef={ref} contextSafe={contextSafe} />
+        </div>
+        <div className="cards relative h-full w-full gap-8">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="elevate"
+          >
+            <style>
+              {`.large {font-weight: bold;font-size: 0.5rem;fill: currentColor;} .small {font-size: 0.2rem;fill: currentColor;}`}
+            </style>
+
+            {lang.lastYear.side.map((i) => (
+              <React.Fragment key={i.description}>
+                <g>
+                  <circle
+                    cx={i.props.x}
+                    cy={i.props.y}
+                    r={i.props.r}
+                    fill="white"
+                  />
+                  <text
+                    className="large"
+                    x={i.props.x}
+                    y={i.props.y}
+                    textAnchor="middle"
+                    alignmentBaseline="baseline"
+                  >
+                    {i.stat}
+                  </text>
+                  <text
+                    className="small"
+                    x={i.props.x}
+                    y={i.props.y + 2}
+                    textAnchor="middle"
+                    alignmentBaseline="hanging"
+                  >
+                    {i.description}
+                  </text>
+                </g>
+              </React.Fragment>
+            ))}
+          </svg>
         </div>
       </div>
     </section>

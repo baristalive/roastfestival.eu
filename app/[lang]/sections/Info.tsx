@@ -40,9 +40,9 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark  flex flex-col items-center justify-between"
+      className="info-section watermark pb-[10rem] flex flex-col items-center justify-between"
     >
-      <div className="grid max-w-[1900px] items-center gap-32 p-8 lg:grid-cols-[1fr,2fr]">
+      <div className="grid max-w-[1900px] items-center gap-12 2xl:gap-32 p-8 lg:grid-cols-[1fr,2fr]">
         <div className="md:p-12">
           <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20">
             {lang.about.title}

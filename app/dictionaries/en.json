@@ -83,48 +83,46 @@
       {
         "stat": 13,
         "description": "pražíren",
-        "style": {
-          "marginLeft": "-2.5rem",
-          "height": 200,
-          "width": 200
+        "props": {
+          "x": 30,
+          "y": 12,
+          "r": 12
         }
       },
       {
         "stat": 7,
         "description": "workshopů",
-        "style": {
-          "marginLeft": "4rem",
-          "marginTop": "8rem",
-          "height": 200,
-          "width": 200
+        "props": {
+          "x": 65,
+          "y": 22,
+          "r": 12
         }
       },
       {
         "stat": 4,
         "description": "přednášky",
-        "style": {
-          "height": 200,
-          "width": 200
+        "props": {
+          "x": 45,
+          "y": 45,
+          "r": 12
         }
       },
       {
         "stat": "200+",
         "description": "účastníků",
-        "style": {
-          "marginLeft": "14rem",
-          "marginTop": "-7rem",
-          "height": 400,
-          "width": 400
+        "props": {
+          "x": 75,
+          "y": 75,
+          "r": 17
         }
       },
       {
         "stat": 2,
         "description": "dny",
-        "style": {
-          "marginLeft": "-10rem",
-          "marginTop": "-8rem",
-          "height": 200,
-          "width": 200
+        "props": {
+          "x": 25,
+          "y": 82,
+          "r": 12
         }
       }
     ]

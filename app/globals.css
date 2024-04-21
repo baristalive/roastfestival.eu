@@ -41,24 +41,17 @@ footer {
   fill: var(--black);
   color: var(--primary);
 }
-.watermark::before {
-  position: absolute;
-  inset: 0;
-  left: -50px;
-  content: "";
-  background: url("/watermark.svg") no-repeat;
-}
-.watermark {
-  position: relative;
-}
-.watermark2::before {
+.watermark::before,
+.watermark2::before,
+.watermark3::before,
+.watermark4::before {
   position: absolute;
   inset: 0;
   z-index: -1;
   left: -50px;
   content: "";
-  background: url("/watermark2.svg") repeat-x;
 }
+.watermark,
 .watermark2,
 .watermark3,
 .watermark4 {
@@ -71,21 +64,19 @@ footer {
 .watermark4 > * {
   z-index: 1;
 }
+.watermark::before {
+  background: url("/watermark.svg")  no-repeat;
+}
+.watermark2::before {
+  background: url("/watermark2.svg")  repeat-x;
+}
 .watermark3::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  left: -50px;
-  content: "";
-  background: url("/watermark3.svg") repeat-x;
+  background: url("/watermark3.svg")  repeat-x;
 }
 .watermark4::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  content: "";
-  background: url("/watermark4.svg") no-repeat top right;
+  background: url("/watermark4.svg")  no-repeat;
 }
+
 footer {
   background: radial-gradient(
       circle at right bottom,
@@ -103,82 +94,79 @@ footer {
     ),
     var(--primary);
 }
-@media (min-width: 1024px) {
-  .info-section {
-    background: linear-gradient(
-        to right,
-        var(--background),
-        var(--background) 50%,
-        rgba(0, 0, 0, 0) 50%
-      ),
-      radial-gradient(
-        circle at right bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 15%
-      ),
-      radial-gradient(
-        circle at 60% 20%,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 31%
-      ),
-      var(--primary);
-  }
-  .previous-year-section {
-    background: linear-gradient(
-        to right,
-        var(--background),
-        var(--background) 50%,
-        rgba(0, 0, 0, 0) 50%
-      ),
-      radial-gradient(
-        circle at right bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 15%
-      ),
-      radial-gradient(
-        circle at right top,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 15%
-      ),
-      var(--primary);
-  }
-  .gallery-section {
-    background: linear-gradient(
-        to right,
-        var(--background),
-        var(--background) 50%,
-        rgba(0, 0, 0, 0) 50%
-      ),
-      radial-gradient(
-        circle at right top,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0) 15%
-      ),
-      var(--primary);
-  }
-  .colab-section {
-    background: linear-gradient(
-        to right,
-        var(--background),
-        var(--background) 50%,
-        rgba(0, 0, 0, 0) 50%
-      ),
-      var(--primary);
-  }
-  .program-section {
-    background: radial-gradient(
-        100% 1200px at right top,
-        var(--primary) 50%,
-        var(--background) 50%
-      ),
-      var(--primary);
-  }
+.info-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 15rem
+    ),
+    radial-gradient(circle at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 31%),
+    var(--primary);
 }
-.elevate {
+.previous-year-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 15rem
+    ),
+    radial-gradient(
+      circle at right top,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 15rem
+    ),
+    var(--primary);
+}
+.gallery-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at right top,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 15rem
+    ),
+    var(--primary);
+}
+.colab-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    var(--primary);
+}
+.program-section {
+  background: radial-gradient(
+      100% 1200px at right top,
+      var(--primary) 50%,
+      var(--background) 50%
+    ),
+    var(--primary);
+}
+:not(svg).elevate {
   box-shadow:
     0px 8px 10px -5px rgba(0, 0, 0, 0.2),
     0px 16px 24px 2px rgba(0, 0, 0, 0.14),
     0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+svg.elevate {
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
 }
 .card {
   background: var(--background);
@@ -236,9 +224,9 @@ footer {
   writing-mode: vertical-rl;
   left: -5px;
   bottom: 2rem;
-  padding: 2em 1em 2em calc(1em + 5px);
-  border-top-right-radius: 2em;
-  border-bottom-right-radius: 2em;
+  padding: 1rem .5rem 1rem calc(.5rem + 5px);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   text-align: center;
   border: 2px solid var(--primary);
   color: var(--primary);
@@ -433,6 +421,4 @@ ol.round-counter li::before {
   color: var(--white);
   background: var(--black);
   border-radius: 50%;
-  
-
 }

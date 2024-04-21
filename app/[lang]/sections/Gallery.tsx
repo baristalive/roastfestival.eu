@@ -54,9 +54,10 @@ export const Gallery = () => {
   );
   return (
     <section ref={ref} className="gallery-section watermark3 ">
-      <div className="cards mx-auto flex max-w-[1900px] items-center gap-4 p-12">
+      <div className="md:hidden"/>
+      <div className="cards mx-auto flex max-w-[1900px] items-center gap-1 md:gap-4 md:p-12">
         {images.map((col, idx) => (
-          <div className="grid gap-4" key={`col_${idx}`}>
+          <div className={`gap-1 md:gap-4 ${idx > 2 ? "hidden md:grid": "grid"}`} key={`col_${idx}`}>
             {col.map((i, idx) => (
               <ZoomableImage key={`img_${idx}`} {...i} />
             ))}

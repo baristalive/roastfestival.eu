@@ -14,16 +14,16 @@ const landscape = {...LANDSCAPE, small: { width: 300, height: 200}}
 
 const MarkdownComponents = {
   h2: ({ children }: PropsWithChildren) => (
-    <h2 className="mb-4 mt-12 text-3xl font-bold  clear-both">{children}</h2>
+    <h2 className="px-8 md:px-0 mb-4 mt-12 text-3xl font-bold  clear-both">{children}</h2>
   ),
   h3: ({ children }: PropsWithChildren) => (
-    <h3 className="mb-4 pt-24 text-2xl  font-bold clear-both">{children}</h3>
+    <h3 className="px-8 md:px-0 mb-4 pt-24 text-2xl  font-bold clear-both">{children}</h3>
   ),
   li: ({ children }: PropsWithChildren) => (
-    <li className="px-0 text-lg lg:text-xl">{children}</li>
+    <li className="px-8 md:px-0 text-lg lg:text-xl">{children}</li>
   ),
   p: ({ children }: PropsWithChildren) => (
-    <p className="mb-4 text-lg lg:text-xl">{children}</p>
+    <p className="px-8 md:px-0 mb-4 text-lg lg:text-xl">{children}</p>
   ),
   ol: ({ children }: PropsWithChildren) => (
     <ol className="mb-4 list-outside list-decimal round-counter">{children}</ol>
@@ -33,7 +33,7 @@ const MarkdownComponents = {
   ),
   table: ({ children }: PropsWithChildren) => (
     <div className="flex items-center justify-center">
-        <table className="border-collapse rounded-2xl elevate p-4 my-4">{children}</table>
+        <table className="border-collapse rounded-2xl overflow-x-auto block md:table elevate my-4">{children}</table>
     </div>
   ),
   th: ({ children }: PropsWithChildren) => (
@@ -55,7 +55,7 @@ const MarkdownComponents = {
     const [altText, sizing] = (alt || "|").split("|")
 
     return (
-      <span className="inline float-right ml-8">
+      <span className="inline md:float-right ml-8">
         <ZoomableImage src={src!} alt={altText} {...rest} {...(sizing === "landscape" ? landscape : portrait)} />
       </span>
     );

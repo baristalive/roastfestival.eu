@@ -19,7 +19,7 @@ export const Map = () => {
   const { contextSafe } = useGSAP({ scope: ref });
   return (
     <section ref={ref} className="where-section watermark2 min-h-screen p-8">
-      <div className="mx-auto grid max-w-[1900px] grid-cols-[1fr,auto,1fr] md:p-12">
+      <div className="mx-auto flex flex-col lg:grid max-w-[1900px] grid-cols-[1fr,auto,1fr] lg:p-12">
         <div className="flex flex-col">
           <h2 className="pb-8 text-6xl font-bold">{lang.location.title}</h2>
           <div className="max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
@@ -28,15 +28,15 @@ export const Map = () => {
           <div className="grow">
             <Bar mountRef={ref} contextSafe={contextSafe} />
           </div>
-          <div className="card elevate mb-32 flex flex-col gap-4 rounded-s-2xl p-12 text-right">
-            <h3 className="text-2xl font-bold">{lang.location.addressTitle}</h3>
-            <p className="text-2xl">Káznice Brno</p>
-            <p className="text-2xl">
+          <div className="card elevate lg:mb-32 lg:mt-0 mt-32 mx-4 lg:mx-0 flex flex-col gap-4 lg:rounded-s-2xl rounded-t-2xl lg:rounded-tr-none p-4 lg:p-12 lg:text-right text-center text-xl">
+            <h3 className="font-bold">{lang.location.addressTitle}</h3>
+            <p>Káznice Brno</p>
+            <p>
               Bratislavská 249/68,
               <br />
               602 00 Brno-Střed-Zábrdovice
             </p>
-            <div className="mt-3 flex justify-end gap-4">
+            <div className="mt-3 flex justify-center lg:justify-end gap-4">
               <a
                 href={lang.contacts.kaznice_loc}
                 rel="external"
@@ -75,7 +75,7 @@ export const Map = () => {
               </a>
             </div>
 
-            <div className="h-[60rem] w-[40rem] rounded-3xl text-xl font-medium text-black">
+            <div className="2xl:h-[60rem] h-[30rem] w-[100%] md:h-[45rem] lg:w-[40rem] rounded-3xl text-xl font-medium text-black">
               <ReactMap
                 initialViewState={{
                   longitude: 16.6225864,
@@ -133,7 +133,7 @@ export const Map = () => {
           </div>
         </div>
         <div>
-          <div className="card elevate relative z-0 mt-32 flex flex-col gap-4 rounded-e-2xl p-12  text-2xl">
+          <div className="card elevate relative z-0 lg:mt-4 2xl:mt-32 lg:mx-0 mx-4 flex flex-col gap-4 lg:rounded-e-2xl lg:rounded-bl-none rounded-b-2xl p-12 text-xl">
             <h3 className="font-bold">{lang.location.howToTitle}</h3>
             <div className="grid grid-cols-[auto,1fr] gap-4">
               <div className="">
