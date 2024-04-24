@@ -46,10 +46,10 @@ const MarkdownComponents = {
     <td {...rest} className="p-4  px-8 text-center">{children}</td>
   ),
   tr: ({ children }: PropsWithChildren) => (
-    <tr className="divide-x divide-dashed even:bg-slate-50 last:rounded-b-2xl">{children}</tr>
+    <tr className="divide-x divide-dashed even:bg-slate-50  last:rounded-b-2xl">{children}</tr>
   ),
   tbody: ({ children }: PropsWithChildren) => (
-    <tbody className="after:content-[''] after:pt-4 after:block">{children}</tbody>
+    <tbody className="after:content-[''] after:pt-4 after:block rounded-b-2xl tbody">{children}</tbody>
   ),
   img: ({ src, alt, ...rest }: {src?: string, alt?: string}) => {
     const [altText, sizing] = (alt || "|").split("|")

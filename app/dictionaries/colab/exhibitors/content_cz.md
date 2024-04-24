@@ -7,7 +7,7 @@ Festival se koná v **Brněnské Káznici 21. 9.-22. 9.**
 
 ## Prezentační sloty
 
-V rámci festivalu se můžete prezentovat na následujících barech v rámci prezentačních slotů. Výběr konkrétních prezentačních barů a dnů probíhá v přihlašovacím formuláři. Je možné si rezervovat více barů v obou dnech nicméně nelze si prodloužit časový slot koupí dvou slotů v řadě. Celodenní bary provozujeme pouze na základě speciální dohody. Zároveň v přihlašovacím
+V rámci festivalu se můžete prezentovat na následujících barech v rámci prezentačních slotů. Výběr konkrétních prezentačních barů a dnů probíhá v přihlašovacím formuláři. Je možné si rezervovat více barů v obou dnech, nicméně nelze si prodloužit časový slot koupí dvou slotů v řadě. Celodenní bary provozujeme pouze na základě speciální dohody.
 
 |              | Espressobary | Brewbar | Cuppingové stoly                     |
 | ------------ | ------------ | ------- | ------------------------------------ |
@@ -19,7 +19,7 @@ V rámci festivalu se můžete prezentovat na následujících barech v rámci p
 
 Klasický espressobar, jak ho znáte z jiných kávových festivalů.
 
-K dispozici vám bude:
+K dispozici Vám bude:
 
 - Špičkový profesionální kávovar
 - Freshový mlýnek
@@ -31,7 +31,7 @@ Na stole je dostatek místa na případný vlastní druhý mlýnek.
 
 Váhy, tempery, lattiery atd. si přivezte prosím vlastní, případně po dohodě budeme mít nějaké na zapůjčení.
 
-Kravské Mléko si prosím přivezte vlastní, rádi vám ho uschováme v lednicích po dobu festivalu či je možnost objednat si mléko od festivalu. Alternativní mléko bude k dispozici ovesné od sponzora Oatly zdarma.
+Kravské mléko si prosím přivezte vlastní, rádi Vám ho uschoVáme v lednicích po dobu festivalu či je možnost objednat si mléko od festivalu. Alternativní mléko bude k dispozici ovesné od sponzora Oatly zdarma.
 
 ### Espressobar black ![Espressobar white](/photos/272-_DSC0550.jpg)
 
@@ -43,7 +43,9 @@ Dostanete k dispozici:
 - 2 freshové mlýnky
 - Filtrovaná voda
 
-Na stole je dostatek místa na případný vlastní třetí mlýnek. Váhy, tempery, atd. si přivezte prosím vlastní, případně po dohodě budeme mít nějaké na zapůjčení.
+Na stole je dostatek místa na případný vlastní druhý mlýnek.
+
+Váhy, tempery, atd. si přivezte prosím vlastní, případně po dohodě budeme mít nějaké na zapůjčení.
 
 ### Brewbar ![Brewbar|landscape](/photos/DSC_3303.jpg)
 
@@ -53,7 +55,6 @@ Na stole najdete:
 
 - Velký profi mlýnek
 - Pod stolem barel s filtrovanou vodou
-
 
 Váhy, konvice apod. si prosím přivezte vlastní, případně po dohodě budeme mít nějaké na zapůjčení. ![Brewbar|landscape](/photos/43-_DSC0087.jpg)
 
@@ -88,17 +89,17 @@ Na festivalu, obdrží každý návštěvník u vchodu keramický nebo vratný p
 
 ### Další benefity
 
-Ke každému zakupenému slotu získáte dvě vstupenky pro prezentující a až tři vstupenky s 50% slevou. Každá další vstupenka je se slevou 25%
+Ke každému zakoupenému slotu získáte dvě vstupenky pro prezentující a až tři vstupenky s 50% slevou. Každá další vstupenka je se slevou 25 %
 
 ### Retailový prodej balíčků kávy
 
 Na festivalu mohou pražírny po dobu svojí prezentace zároveň neomezeně prodávat vlastní balíčky kávy. Mimo to je možnost využít festivalového prodejního stánku otevřeného po celou dobu trvání festivalu.
 
-Na stánek lze umístit až 4 druhy kávy po 5 kusech (není problém doplnit během akce). Prosíme abyste nám nejpozději 7 dní před akcí zaslali seznam káv které budete chtít umístit na prodejní stánek včetně prodejní ceny. Festival si za prodej účtuje 20% z prodejní ceny. Na konci festivalu, vám zbytek balíčků vrátíme, vyúčtujeme a nejpozději do 14 dnů vám zašleme peníze na účet.
+Na stánek lze umístit až 4 druhy kávy po 5 kusech (není problém doplnit během akce). Prosíme abyste nám nejpozději 7 dní před akcí zaslali seznam káv které budete chtít umístit na prodejní stánek včetně prodejní ceny. Festival si za prodej účtuje 20 % z prodejní ceny. Na konci festivalu Vám zbytek balíčků vrátíme, vyúčtujeme a nejpozději do 14 dnů Vám zašleme peníze na účet.
 
 ### Reklamní grafika
 
-Za prezentační bar je možné umístit po dobu prezentace až dva rollupy o maximální výšce 2m. Vaše pražírna bude umístěna na našich internetových stránkách ve formě loga, popisku a zápisu v programu. Zároveň bude sdílena na našich sociálních sítích ve formě nejméně dvou příspěvků a jednom sponzorovaném. Pokud by vás zajímali i další formy reklamí spolupráce neváhejte se nám ozvat.
+Za prezentační bar je možné umístit po dobu prezentace až dva rollupy o maximální výšce 2m. Vaše pražírna bude umístěna na našich internetových stránkách ve formě loga, popisku a zápisu v programu. Zároveň bude sdílena na našich sociálních sítích ve formě nejméně dvou příspěvků a jednom sponzorovaném. Pokud by Vás zajímali i další formy reklamní spolupráce, neváhejte se nám ozvat.
 
 ## Ostatní informace
 
@@ -108,7 +109,7 @@ Za prezentační bar je možné umístit po dobu prezentace až dva rollupy o ma
 
 Adresa - Bratislavská 249/68
 
-Před budovou je možné zastavit na pro vás rezervovaných místech a vyložit techniku či kávu.
+Před budovou je možné zastavit na pro Vás rezervovaných místech a vyložit techniku či kávu.
 
 Parkování je možné o víkendu zdarma jak kolem budovy, tak v přilehlých modrých zónách.
 
