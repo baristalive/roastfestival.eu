@@ -9,7 +9,7 @@ import { LANDSCAPE, PORTRAIT, ZoomableImage } from "../../components/ZoomableIma
 
 const largeWallImages = [
   [
-    { src: "/photos/220-_DSC0453.jpg", ...LANDSCAPE },
+    { src: "/photos/116-_DSC0230.jpg", ...LANDSCAPE },
     { src: "/photos/280-_DSC0568.jpg", ...PORTRAIT },
   ],
   [
@@ -33,7 +33,7 @@ const largeWallImages = [
 const smallWallImages = [
   [
     { src: "/photos/94-_DSC0192.jpg", ...LANDSCAPE },
-    { src: "/photos/220-_DSC0453.jpg", ...LANDSCAPE },
+    { src: "/photos/116-_DSC0230.jpg", ...LANDSCAPE },
     { src: "/photos/280-_DSC0568.jpg", ...PORTRAIT },
     { src: "/photos/260-_DSC0526.jpg", ...LANDSCAPE },
     { src: "/photos/64-_DSC0125.jpg", ...PORTRAIT },

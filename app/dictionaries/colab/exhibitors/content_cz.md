@@ -21,8 +21,8 @@ Klasický espressobar, jak ho znáte z jiných kávových festivalů.
 
 K dispozici Vám bude:
 
-- Špičkový profesionální kávovar
-- Freshový mlýnek
+- Profesionální kávovar
+- Profesionální mlýnek
 - Filtrovaná voda
 - Oplach na konvičky
 - Lednice na mléko
@@ -31,16 +31,16 @@ Na stole je dostatek místa na případný vlastní druhý mlýnek.
 
 Váhy, tempery, lattiery atd. si přivezte prosím vlastní, případně po dohodě budeme mít nějaké na zapůjčení.
 
-Kravské mléko si prosím přivezte vlastní, rádi Vám ho uschoVáme v lednicích po dobu festivalu či je možnost objednat si mléko od festivalu. Alternativní mléko bude k dispozici ovesné od sponzora Oatly zdarma.
+Kravské mléko si prosím přivezte vlastní, rádi Vám ho uschováme v lednicích po dobu festivalu či je možnost objednat si mléko od festivalu. Alternativní mléko na místě k dispozici.
 
 ### Espressobar black ![Espressobar white](/photos/272-_DSC0550.jpg)
 
 Trochu netradiční espressobar určený pouze k přípravě čistého espressa bez mléka a dalších doplňků.
 
-Dostanete k dispozici:
+K dispozici Vám bude:
 
-- Špičkový profesionální kávovar
-- 2 freshové mlýnky
+- Profesionální kávovar
+- 2-3 profesionální mlýnky
 - Filtrovaná voda
 
 Na stole je dostatek místa na případný vlastní druhý mlýnek.
@@ -51,9 +51,9 @@ Váhy, tempery, atd. si přivezte prosím vlastní, případně po dohodě budem
 
 Klasický brewbar jak ho znáte z jiných kávových festivalů.
 
-Na stole najdete:
+K dispozici Vám bude:
 
-- Velký profi mlýnek
+- Profesionální mlýnek
 - Pod stolem barel s filtrovanou vodou
 
 Váhy, konvice apod. si prosím přivezte vlastní, případně po dohodě budeme mít nějaké na zapůjčení. ![Brewbar|landscape](/photos/43-_DSC0087.jpg)
@@ -63,9 +63,9 @@ Váhy, konvice apod. si prosím přivezte vlastní, případně po dohodě budem
 
 Nabízíme možnost uspořádat si vlastní cca 2h cupping.
 
-K dispozici dostanete:
+K dispozici Vám bude:
 
-- Freshový mlýnek
+- Profesionální mlýnek
 - Cuppingové mističky, lžičky, konvičky, ubrousky a prostě všechno co byste mohli potřebovat
 
 Vy už si přivezete jen kávu.

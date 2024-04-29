@@ -60,7 +60,7 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark flex flex-col gap-8 items-center justify-between pb-4"
+      className="info-section min-h-screen watermark flex flex-col gap-8 items-center justify-between pb-4"
     >
       <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">

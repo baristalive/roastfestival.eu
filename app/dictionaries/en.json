@@ -1,30 +1,160 @@
 {
   "about": {
     "text": [
-      "Discover the world of coffee at the Brno Coffee Roasters Festival, where passionate roasters and enthusiasts gather to celebrate the artistry, flavors, and community behind this beloved beverage.",
-      "Immerse yourself in a sensory journey, exploring diverse brews, engaging in insightful conversations, and experiencing the vibrant atmosphere that awaits you."
+      "The festival is intended for everyone who is just a little bit interested in the world of specialty coffee. It doesn't matter if you are a professional in the industry, a coffee enthusiast or if you tasted your first v60 yesterday and are just getting acquainted. And if the caffeine gets to be too much for you - the festival offers an alternative in the form of alcoholic and non-alcoholic drinks and savoury and sweet treats."
     ],
-    "title": "About"
+    "title": "What is roast!?"
   },
   "back": "Back to home page",
   "buyTickets": "I want tickets",
+  "colab": {
+    "description": "Roast! would be nothing without the participation of roasters, exhibitors, speakers and sponsors. If you fall into this category, be sure to click to find out more. Maybe you'll be interested in what we have to offer. And if not, drop us an email and maybe we can work something out.",
+    "exhibitors": {
+      "button": "Send offer",
+      "text": "Are you interested in our event and would you like to participate? We are looking for roasters, cafes and speakers.",
+      "title": "Exhibitors"
+    },
+    "sponsors": {
+      "button": "Find out more",
+      "text": "Are you a company that likes to support cultural events? You can be rewarded with a logo on the event, promotional materials, tickets and interesting packages for your employees.",
+      "title": "Sponsors"
+    },
+    "title": "Cooperation"
+  },
   "contact": "Contact us",
-  "organizers": {
-    "text": [
-      "We are a group of coffee enthusiasts and professionals who decided to bring the culture of European coffee festivals to Brno. Organizers work in a variety of specialty coffee shops, roasters, bars and other places. What binds us together is our love for specialty coffee and fine gastronomy."
-    ],
-    "title": "Organizers"
-  },
   "exhibitors": {
-    "title": "Exhibitors",
-    "text": "Information for exhibitors",
-    "content": "",
     "card": "",
-    "cta": "Sign up"
+    "content": "",
+    "cta": "Sign up",
+    "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
+    "title": "Exhibitors"
   },
-  "place": "Káznice, Brno",
+  "gastro": {
+    "content": [
+      {
+        "alt": "Punkt.",
+        "href": "https://www.facebook.com/punkt.cafe/",
+        "src": "/promoted/punkt.png",
+        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život.",
+        "title": "Sladký bar"
+      },
+      {
+        "alt": "Hodně někde",
+        "href": "https://www.instagram.com/hodnenekde/",
+        "src": "/promoted/hodne_nekde.png",
+        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný.",
+        "title": "Slaný bar"
+      },
+      {
+        "alt": "Stern",
+        "href": "https://www.pivovarstern.cz/",
+        "src": "/promoted/stern.png",
+        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek.",
+        "title": "Pivo"
+      },
+      {
+        "alt": "Klára Bára",
+        "href": "https://www.instagram.com/kbwinecafe/",
+        "src": "/promoted/klara_bara.png",
+        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé.",
+        "title": "Víno"
+      },
+      {
+        "alt": "Kolagen",
+        "href": "https://www.instagram.com/kolagen.cc",
+        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení.",
+        "title": "Míchané drinky"
+      },
+      {
+        "alt": "Oatly",
+        "href": "https://www.oatly.com/",
+        "src": "/promoted/oatly.png",
+        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly",
+        "title": "Mléko"
+      },
+      {
+        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!",
+        "title": "Swap hrníčků"
+      }
+    ],
+    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
+    "title": "Doprovodný program"
+  },
+  "info": [
+    {
+      "text": "Our bars will feature a rotation of local and out-of-town roasters of select coffees. You can taste all kinds of milk drinks at two bars. On the third, you'll taste a fine-tuned espresso with no additives. Can't have regular milk? We're ready for that too!",
+      "title": "Espresso bars"
+    },
+    {
+      "text": "V60, Chemex, Aeropress or Coldbrew? You can also taste these alternative brews at our brew bars. We give roasters complete freedom to choose the brew that best suits their beans.",
+      "title": "Brew bars"
+    },
+    {
+      "text": "Would you like to try more than a dozen alternative coffee preparations or test your sensory skills? Our professional baristas will guide you through everything and will be happy to answer any questions you may have.",
+      "title": "Workshops and cuppings"
+    },
+    {
+      "text": "Our special guests will guide you through the nooks and crannies of coffee technology, chemistry and culture you may not have known existed. In the chapel behind the main hall, professionals from the coffee scene and beyond will be waiting for you with comfortable chairs.",
+      "title": "Lectures"
+    }
+  ],
+  "lastYear": {
+    "center": {
+      "description": "Year 1",
+      "stat": 2023
+    },
+    "description": "Roast! will be held for the second time this year. In 2023, our festival had a pilot test year. We wanted to start a small festival and see if there was any interest in such an event in Brno. It turned out that an event of this format has its place and that's why we are aiming higher this year.",
+    "side": [
+      {
+        "description": "roasters",
+        "props": {
+          "r": 12,
+          "x": 30,
+          "y": 12
+        },
+        "stat": 13
+      },
+      {
+        "description": "workshops",
+        "props": {
+          "r": 12,
+          "x": 65,
+          "y": 22
+        },
+        "stat": 7
+      },
+      {
+        "description": "lectures",
+        "props": {
+          "r": 12,
+          "x": 45,
+          "y": 45
+        },
+        "stat": 4
+      },
+      {
+        "description": "visitors",
+        "props": {
+          "r": 17,
+          "x": 75,
+          "y": 75
+        },
+        "stat": ">300"
+      },
+      {
+        "description": "days",
+        "props": {
+          "r": 12,
+          "x": 25,
+          "y": 82
+        },
+        "stat": 2
+      }
+    ],
+    "title": "Previous year"
+  },
+  "learnMore": "learn more",
   "location": {
-    "title": "Location",
     "addressTitle": "Address",
     "howToTitle": "How to get there?",
     "means": {
@@ -33,11 +163,10 @@
     },
     "parking": {
       "lot": {
-        "title": "Bratislavská Parking",
-        "description": "Free on weekends"
+        "description": "Free on weekends",
+        "title": "Bratislavská Parking"
       },
       "zones": {
-        "title": "Residential parking zones",
         "pricing": [
           {
             "title": "Zone B: Free on weekends"
@@ -45,185 +174,53 @@
           {
             "title": "Zone C: Free on weekends"
           }
-        ]
+        ],
+        "title": "Residential parking zones"
       }
-    }
+    },
+    "title": "Location"
   },
+  "organizers": {
+    "text": [
+      "We are a group of Brno coffee enthusiasts and professionals who decided to bring the culture of European coffee festivals to Brno.",
+      "You can meet individual members of our team behind the bar in several Brno cafes, roasters, bars and other establishments.",
+      "What binds us together is our love for specialty coffee and gastronomy."
+    ],
+    "title": "Organizers"
+  },
+  "place": "Káznice, Brno",
   "program": [
     {
-      "title": "Day 1",
       "date": "21/9",
-      "schedule": []
+      "schedule": [],
+      "title": "Day 1"
     },
     {
-      "title": "Day 2",
       "date": "22/9",
-      "schedule": []
+      "schedule": [],
+      "title": "Day 2"
     }
   ],
   "programCategory": {
-    "lecture": "Lectures",
-    "workshop": "Workshop",
+    "brew": "Brew bar",
     "espresso": "Espresso bar",
     "espresso_milk": "Espresso bar with milk",
-    "brew": "Brew bar"
+    "lecture": "Lectures",
+    "workshop": "Workshop"
   },
-  "programReadyText": "The program is properly roasted now!",
   "programLoadingText": "We are still roasting the festival program for you.",
+  "programReadyText": "The program is properly roasted now!",
   "programSubjectToChange": "This program is subject to change",
-  "tickets": "Tickets",
-  "lastYear": {
-    "title": "Předchozí ročník",
-    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
-    "center": {
-      "stat": 2023,
-      "description": "1. ročník"
-    },
-    "side": [
-      {
-        "stat": 13,
-        "description": "pražíren",
-        "props": {
-          "x": 30,
-          "y": 12,
-          "r": 12
-        }
-      },
-      {
-        "stat": 7,
-        "description": "workshopů",
-        "props": {
-          "x": 65,
-          "y": 22,
-          "r": 12
-        }
-      },
-      {
-        "stat": 4,
-        "description": "přednášky",
-        "props": {
-          "x": 45,
-          "y": 45,
-          "r": 12
-        }
-      },
-      {
-        "stat": "200+",
-        "description": "účastníků",
-        "props": {
-          "x": 75,
-          "y": 75,
-          "r": 17
-        }
-      },
-      {
-        "stat": 2,
-        "description": "dny",
-        "props": {
-          "x": 25,
-          "y": 82,
-          "r": 12
-        }
-      }
-    ]
-  },
-  "colab": {
-    "title": "Collaboration",
-    "description": "",
-    "exhibitors": {
-      "title": "Exhibitors",
-      "text": "I want to be an exhibitor or presenter",
-      "button": "Send offer"
-    },
-    "sponsors": {
-      "title": "Sponsors",
-      "text": "I would like to sponsor the event",
-      "button": "Find out more"
-    }
-  },
   "promotedRoasters": {
-    "title": "Coffee roasters",
     "text": [
       "Besides other activities, you can look forward to individual presentations of following coffee roasters."
-    ]
+    ],
+    "title": "Coffee roasters"
   },
-  "learnMore": "learn more",
-  "info": [
-    {
-      "title": "What is Roast!? And what can I expect from it?",
-      "text": "The entrance fee includes all coffee consumption, which you can taste at our espresso and brew bars, and entry to all workshops, lectures, and cuppings. You can buy coffee from roasters that you like, either directly at the bars or at the sales stand."
-    },
-    {
-      "title": "Espresso bars",
-      "text": "Local and foreign coffee roasters will be on rotation in all of our bars. You can try all kinds of milk drinks at two bars. On the third one, you can taste a fine-tuned espresso without any additives. Can't you have regular milk? We are ready for that too! All bars will have an oat milk option from OATLY."
-    },
-    {
-      "title": "Brew bars",
-      "text": "V60, Chemex, Aeropress or Coldbrew? You can also taste these alternative preparations at our brew bars. We leave roasters completely free to choose the preparation method that best suits their beans."
-    },
-    {
-      "title": "Workshops and cuppings",
-      "text": "You have no idea what \"cupping\" means? Would you like to try more than a dozen alternative coffee preparations or test your sensory abilities? Great! Our professional baristas will guide you through all these things and will be happy to answer all your questions."
-    },
-    {
-      "title": "Lectures",
-      "text": "Are you wondering what the owners of established businesses had to go through when they opened their brick-and-mortar stores? Would you like to know how roasting works or what the difference is between fired and leavened dough that you find on the counter of every other business? Then the lectures of our special guests are for you."
-    },
-    {
-      "title": "Have you had enough coffee yet?",
-      "text": "Have a drink, beer or homemade lemonade. And at the sweet and salty stand, not only sandwiches or wreaths with salted caramel are ready for you to bite into!"
-    }
-  ],
   "signUp": "Sign up",
-  "gastro": {
-    "title": "Doprovodný program",
-    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
-    "content": [
-      {
-        "title": "Sladký bar",
-        "href": "https://www.facebook.com/punkt.cafe/",
-        "src": "/promoted/punkt.png",
-        "alt": "Punkt.",
-        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život."
-      },
-      {
-        "title": "Slaný bar",
-        "href": "https://www.instagram.com/hodnenekde/",
-        "src": "/promoted/hodne_nekde.png",
-        "alt": "Hodně někde",
-        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný."
-      },
-      {
-        "title": "Pivo",
-        "href": "https://www.pivovarstern.cz/",
-        "src": "/promoted/stern.png",
-        "alt": "Stern",
-        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek."
-      },
-      {
-        "title": "Víno",
-        "href": "https://www.instagram.com/kbwinecafe/",
-        "src": "/promoted/klara_bara.png",
-        "alt": "Klára Bára",
-        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé."
-      },
-      {
-        "title": "Míchané drinky",
-        "href": "https://www.instagram.com/kolagen.cc",
-        "alt": "Kolagen",
-        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení."
-      },
-      {
-        "title": "Mléko",
-        "href": "https://www.oatly.com/",
-        "src": "/promoted/oatly.png",
-        "alt": "Oatly",
-        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly"
-      },
-      {
-        "title": "Swap hrníčků",
-        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!"
-      }
-    ]
-  }
+  "sponsors": {
+    "content": "",
+    "cta": "Concact us"
+  },
+  "tickets": "Tickets"
 }

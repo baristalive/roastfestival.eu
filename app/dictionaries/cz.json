@@ -7,9 +7,154 @@
   },
   "back": "Zpět na hlavní stránku",
   "buyTickets": "Chci vstupenky",
+  "colab": {
+    "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc. Třeba tě naše nabídka zaujme. A pokud ne, ozvi se nám na email, třeba něco vymyslíme.",
+    "exhibitors": {
+      "button": "Odeslat nabídku",
+      "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
+      "title": "Vystavovatelé"
+    },
+    "sponsors": {
+      "button": "Zjistit podrobnosti",
+      "text": "Jste firma, která ráda podpoří kulturní akci? Odměnou Vám může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
+      "title": "Sponzoři"
+    },
+    "title": "Spolupráce"
+  },
   "contact": "Kontakt",
+  "exhibitors": {
+    "card": "",
+    "content": "",
+    "cta": "Vyplnit přihlášku",
+    "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
+    "title": "Vystavovatelé"
+  },
+  "gastro": {
+    "content": [
+      {
+        "alt": "Punkt.",
+        "href": "https://www.facebook.com/punkt.cafe/",
+        "src": "/promoted/punkt.png",
+        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život.",
+        "title": "Sladký bar"
+      },
+      {
+        "alt": "Hodně někde",
+        "href": "https://www.instagram.com/hodnenekde/",
+        "src": "/promoted/hodne_nekde.png",
+        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný.",
+        "title": "Slaný bar"
+      },
+      {
+        "alt": "Stern",
+        "href": "https://www.pivovarstern.cz/",
+        "src": "/promoted/stern.png",
+        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek.",
+        "title": "Pivo"
+      },
+      {
+        "alt": "Klára Bára",
+        "href": "https://www.instagram.com/kbwinecafe/",
+        "src": "/promoted/klara_bara.png",
+        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé.",
+        "title": "Víno"
+      },
+      {
+        "alt": "Kolagen",
+        "href": "https://www.instagram.com/kolagen.cc",
+        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení.",
+        "title": "Míchané drinky"
+      },
+      {
+        "alt": "Oatly",
+        "href": "https://www.oatly.com/",
+        "src": "/promoted/oatly.png",
+        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly",
+        "title": "Mléko"
+      },
+      {
+        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!",
+        "title": "Swap hrníčků"
+      }
+    ],
+    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
+    "title": "Doprovodný program"
+  },
+  "info": [
+    {
+      "text": "Na našich barech se budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni!",
+      "title": "Espresso bary"
+    },
+    {
+      "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
+      "title": "Brew bary"
+    },
+    {
+      "text": "Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky.",
+      "title": "Workshopy a cuppingy"
+    },
+    {
+      "text": "Naši speciální hosté tě provedou zákoutími kávových technologií, chemie či kultury o kterých jsi možná ani nechtěl vědět, že existují. V kapli za hlavním sálem tě krom pohodlných křesílek budou čekat profesionálové nejen z kávové scény.",
+      "title": "Přednášky"
+    }
+  ],
+  "lastYear": {
+    "center": {
+      "description": "1. ročník",
+      "stat": 2023
+    },
+    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
+    "side": [
+      {
+        "description": "pražíren",
+        "props": {
+          "r": 12,
+          "x": 30,
+          "y": 12
+        },
+        "stat": 13
+      },
+      {
+        "description": "workshopů",
+        "props": {
+          "r": 12,
+          "x": 65,
+          "y": 22
+        },
+        "stat": 7
+      },
+      {
+        "description": "přednášky",
+        "props": {
+          "r": 12,
+          "x": 45,
+          "y": 45
+        },
+        "stat": 4
+      },
+      {
+        "description": "návštěvníků",
+        "props": {
+          "r": 17,
+          "x": 75,
+          "y": 75
+        },
+        "stat": ">300"
+      },
+      {
+        "description": "dny",
+        "props": {
+          "r": 12,
+          "x": 25,
+          "y": 82
+        },
+        "stat": 2
+      }
+    ],
+    "title": "Předchozí ročník"
+  },
+  "learnMore": "chci vědět víc",
   "location": {
-    "title": "Místo konání",
     "addressTitle": "Adresa",
     "howToTitle": "Jak se na festival dostanete?",
     "means": {
@@ -18,11 +163,10 @@
     },
     "parking": {
       "lot": {
-        "title": "Parkoviště Bratislavská",
-        "description": "O víkendu zdarma"
+        "description": "O víkendu zdarma",
+        "title": "Parkoviště Bratislavská"
       },
       "zones": {
-        "title": "Parkování v městské zóně nebo na ulici",
         "pricing": [
           {
             "title": "Zóna B: O víkendu zdarma"
@@ -30,9 +174,11 @@
           {
             "title": "Zóna C: O víkendu zdarma"
           }
-        ]
+        ],
+        "title": "Parkování v městské zóně nebo na ulici"
       }
-    }
+    },
+    "title": "Místo konání"
   },
   "organizers": {
     "text": [
@@ -43,180 +189,38 @@
     "title": "O nás"
   },
   "place": "Káznice, Brno",
-  "programCategory": {
-    "lecture": "Přednášky",
-    "workshop": "Workshop",
-    "espresso": "Espresso bar",
-    "espresso_milk": "Espresso bar s mlékem",
-    "brew": "Brew bar"
-  },
   "program": [
     {
-      "title": "Den 1",
       "date": "21/9",
-      "schedule": []
+      "schedule": [],
+      "title": "Den 1"
     },
     {
-      "title": "Den 2",
       "date": "22/9",
-      "schedule": []
+      "schedule": [],
+      "title": "Den 2"
     }
   ],
-  "programReadyText": "Program je již řádně upražen!",
+  "programCategory": {
+    "brew": "Brew bar",
+    "espresso": "Espresso bar",
+    "espresso_milk": "Espresso bar s mlékem",
+    "lecture": "Přednášky",
+    "workshop": "Workshop"
+  },
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
+  "programReadyText": "Program je již řádně upražen!",
   "programSubjectToChange": "Změna programu vyhrazena",
-  "tickets": "Vstupenky",
-  "colab": {
-    "title": "Spolupráce",
-    "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc. Třeba tě naše nabídka zaujme. A pokud ne, ozvi se nám na email, třeba něco vymyslíme.",
-    "exhibitors": {
-      "title": "Vystavovatelé",
-      "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
-      "button": "Odeslat nabídku"
-    },
-    "sponsors": {
-      "title": "Sponzoři",
-      "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
-      "button": "Zjistit podrobnosti"
-    }
-  },
-  "exhibitors": {
-    "title": "Vystavovatelé",
-    "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
-    "content": "",
-    "card": "",
-    "cta": "Vyplnit přihlášku"
-  },
-  "lastYear": {
-    "title": "Předchozí ročník",
-    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
-    "center": {
-      "stat": 2023,
-      "description": "1. ročník"
-    },
-    "side": [
-      {
-        "stat": 13,
-        "description": "pražíren",
-        "props": {
-          "x": 30,
-          "y": 12,
-          "r": 12
-        }
-      },
-      {
-        "stat": 7,
-        "description": "workshopů",
-        "props": {
-          "x": 65,
-          "y": 22,
-          "r": 12
-        }
-      },
-      {
-        "stat": 4,
-        "description": "přednášky",
-        "props": {
-          "x": 45,
-          "y": 45,
-          "r": 12
-        }
-      },
-      {
-        "stat": "200+",
-        "description": "účastníků",
-        "props": {
-          "x": 75,
-          "y": 75,
-          "r": 17
-        }
-      },
-      {
-        "stat": 2,
-        "description": "dny",
-        "props": {
-          "x": 25,
-          "y": 82,
-          "r": 12
-        }
-      }
-    ]
-  },
   "promotedRoasters": {
-    "title": "Pražírny",
     "text": [
       "Mimo jiné se můžete těšit na prezentaci následujících pražíren."
-    ]
+    ],
+    "title": "Pražírny"
   },
-  "learnMore": "chci vědět víc",
-  "info": [
-    {
-      "title": "Espresso bary",
-      "text": "Na našich barech se budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni!"
-    },
-    {
-      "title": "Brew bary",
-      "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům."
-    },
-    {
-      "title": "Workshopy a cuppingy",
-      "text": "Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky."
-    },
-    {
-      "title": "Přednášky",
-      "text": "Zajímá tě, čím si majitelé etablovaných podniků museli projít, když otevírali své kamenné děťátko? Chtěl/a by si vědět, jak funguje pražení nebo jaký je rozdíl mezi odpalovaným a kynutým těstem, které najdeš na pultu každého druhého podniku? Potom jsou pro tebe určené přednášky našich speciálních hostů."
-    }
-  ],
   "signUp": "Přihlásit se",
-  "gastro": {
-    "title": "Doprovodný program",
-    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
-    "content": [
-      {
-        "title": "Sladký bar",
-        "href": "https://www.facebook.com/punkt.cafe/",
-        "src": "/promoted/punkt.png",
-        "alt": "Punkt.",
-        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život."
-      },
-      {
-        "title": "Slaný bar",
-        "href": "https://www.instagram.com/hodnenekde/",
-        "src": "/promoted/hodne_nekde.png",
-        "alt": "Hodně někde",
-        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný."
-      },
-      {
-        "title": "Pivo",
-        "href": "https://www.pivovarstern.cz/",
-        "src": "/promoted/stern.png",
-        "alt": "Stern",
-        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek."
-      },
-      {
-        "title": "Víno",
-        "href": "https://www.instagram.com/kbwinecafe/",
-        "src": "/promoted/klara_bara.png",
-        "alt": "Klára Bára",
-        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé."
-      },
-      {
-        "title": "Míchané drinky",
-        "href": "https://www.instagram.com/kolagen.cc",
-        "alt": "Kolagen",
-        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení."
-      },
-      {
-        "title": "Mléko",
-        "href": "https://www.oatly.com/",
-        "src": "/promoted/oatly.png",
-        "alt": "Oatly",
-        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly"
-      },
-      {
-        "title": "Swap hrníčků",
-        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!"
-      }
-    ]
-  }
+  "sponsors": {
+    "content": "",
+    "cta": "Napište nám"
+  },
+  "tickets": "Vstupenky"
 }

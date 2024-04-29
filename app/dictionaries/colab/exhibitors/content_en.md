@@ -1,0 +1,115 @@
+## Basic information
+
+The festival takes place in **Brno Káznice 21.9.-22.9.**
+
+- **Saturday 21.9.** 10:00-20:00 plus afterparty
+- **Sunday 22 Sep** 10:00-19:00
+
+## Presentation slots
+
+The following bars are available for presentation slots during the festival. Please select specific presentation bars and days on the registration form. It is possible to book multiple bars on both days, however you cannot extend your time slot by purchasing two slots in a row. All day bars are by special arrangement only.
+
+|               | Espresso bars | Brew bar | Cupping tables                             |
+| ------------- | ------------- | -------- | ------------------------------------------ |
+| Saturday 9/21 | 3,5h          | 3,5h     | 2,5h                                       |
+| Sunday 9/22   | 3h            | 3h       | 2,5h                                       |
+| >             | >             | >        | \*times include 30 minutes for preparation |
+
+### Espressobar white ![Espressobar white](/photos/202-_DSC0393.jpg) ![Espressobar white](/photos/258-_DSC0524.jpg)
+
+The classic espresso bar as you know it from other coffee festivals.
+
+At your disposal:
+
+- Professional coffee machine
+- Professional grinder
+- Filtered water
+- Kettle rinse
+- Fridge for milk
+
+There is plenty of room on the table for a possible custom second grinder.
+
+Please bring your own scales, tempera, lattiers etc, or we may have some to lend by arrangement.
+
+Please bring your own cow's milk, we will be happy to store it in the fridges for the duration of the festival or there is the option to order milk from the festival. Alternative milk available on site.
+
+### Espressobar black ![Espressobar white](/photos/272-_DSC0550.jpg)
+
+A somewhat unconventional espresso bar designed only for the preparation of pure espresso without milk and other additives.
+
+At your disposal:
+
+- Professional coffee machine
+- 2-3 professional grinders
+- Filtered water
+
+Plenty of room on the table for a possible second grinder of your own.
+
+Please bring your own scales, tempers, etc., or we may have some available for loan by arrangement.
+
+### Brewbar ![Brewbar|landscape](/photos/DSC_3303.jpg)
+
+The classic brewbar as you know it from other coffee festivals.
+
+At your disposal:
+
+- Professional grinder
+- Barrel of filtered water under the table
+
+Scales, kettles, etc. please bring your own, or we may have some on loan by arrangement. ![Brewbar|landscape](/photos/43-_DSC0087.jpg)
+
+### Cupping ![Cupping|landscape](/photos/DSC_3354.jpg)
+
+We offer the possibility to organize your own 2h cupping.
+
+At your disposal:
+
+- Professional grinder
+- Cupping bowls, spoons, teapots, napkins and just about anything you might need
+
+You just bring your coffee.
+
+### Price lise
+
+|                | Saturday | Sunday   | after July 1st |
+| -------------- | -------- | -------- | -------------- |
+| Espresso Black | 2 700 CZK | 2 400 CZK | +300 CZK        |
+| Espresso Milk  | 3 000 CZK | 2 600 CZK | +300 CZK        |
+| BrewBar        | 2 700 CZK | 2 400 CZK | +300 CZK        |
+| Cupping        | 1 500 CZK | 1 500 CZK | +0 CZK          |
+
+### Exhibition space and facilities
+
+All exhibition spaces are located inside. For exhibitors, there is an enclosed backstage area where they can put their belongings just a few steps away from the exhibition space.
+
+### Mugs/trays at the festival
+
+At the festival, each visitor receives a ceramic or returnable plastic cup at the entrance, which they can wash/rinse at several points during the festival. So you don't have to worry about bringing cups and such to the festival.
+
+### Other benefits
+
+For every slot purchased, you will receive two presenter tickets and up to three tickets at a 50% discount. Each additional ticket is 25% off
+
+### Retail sale of coffee packages
+
+At the festival, roasters can also sell their own packages of coffee for the duration of their presentation. In addition, there is the possibility to use the festival sales booth open for the entire duration of the festival.
+
+Up to 4 types of coffee can be placed on the stand, 5 pieces each (no problem to refill during the event). Please send us at least 7 days before the event a list of coffees you wish to place on the sales stand, including the selling price. The festival charges 20% of the selling price. At the end of the festival, we will return the rest of the packages, bill you and send you the money to your account within 14 days.
+
+### Advertisment
+
+Up to two rollups with a maximum height of 2m can be placed behind the presentation bar during the presentation. Your roaster will be placed on our website in the form of a logo, a caption and a listing in the program. It will also be shared on our social media in the form of at least two posts and one sponsored post. If you would be interested in other forms of advertising collaboration, please do not hesitate to contact us.
+
+## Other information
+
+### Map of presentation slots
+
+### Transportation
+
+Address - Bratislavská 249/68
+
+In front of the building you can stop at the reserved places and unload the equipment or coffee.
+
+Parking is free on weekends both around the building and in the adjacent blue zones.
+
+For non-drivers, we recommend taking the train or bus to the main train station, where tram lines 2 and 4 run direct for a few minutes.

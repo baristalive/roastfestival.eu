@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import dictionaries, { SupportedLanguages } from "@/app/dictionaries/all";
-import NavBar from "@/app/components/NavBar";
+import { SupportedLanguages } from "@/app/dictionaries/all";
 import { Footer } from "@/app/components/Footer";
 import { Info } from "./sections/Info";
 
@@ -24,8 +23,6 @@ const Colab = ({ params: { lang } }: ColabPropsType) => {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [divClass]);
-
-  const usedLang = dictionaries[lang as SupportedLanguages];
 
   return (
     <div className={`wrapper ${divClass ? "show" : "hide"}`}>

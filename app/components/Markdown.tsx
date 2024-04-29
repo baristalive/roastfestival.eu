@@ -55,7 +55,7 @@ const MarkdownComponents = {
     const [altText, sizing] = (alt || "|").split("|")
 
     return (
-      <span className="inline-block md:float-right ml-8">
+      <span className="inline-block md:float-right ml-8 mb-4">
         <ZoomableImage src={src!} alt={altText} {...rest} {...(sizing === "landscape" ? landscape : portrait)} />
       </span>
     );
