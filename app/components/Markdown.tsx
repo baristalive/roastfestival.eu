@@ -14,19 +14,19 @@ const landscape = {...LANDSCAPE, small: { width: 300, height: 200}}
 
 const MarkdownComponents = {
   h2: ({ children }: PropsWithChildren) => (
-    <h2 className="px-8 md:px-0 mb-4 mt-12 text-3xl font-bold  clear-both">{children}</h2>
+    <h2 className="px-8 md:px-0 mb-4 mt-6 md:mt-12 text-2xl lg:text-3xl font-bold  clear-both">{children}</h2>
   ),
   h3: ({ children }: PropsWithChildren) => (
-    <h3 className="px-8 md:px-0 mb-4 pt-24 text-2xl  font-bold clear-both">{children}</h3>
+    <h3 className="px-8 md:px-0 mb-4 pt-24 text-2xl lg:text-2xl font-bold clear-both">{children}</h3>
   ),
   li: ({ children }: PropsWithChildren) => (
-    <li className="px-8 md:px-0 text-lg lg:text-xl">{children}</li>
+    <li className="px-2 md:px-0 text-base lg:text-xl">{children}</li>
   ),
   p: ({ children }: PropsWithChildren) => (
-    <p className="px-8 md:px-0 mb-4 text-lg lg:text-xl">{children}</p>
+    <p className="px-8 md:px-0 mb-4 text-base lg:text-xl">{children}</p>
   ),
   ol: ({ children }: PropsWithChildren) => (
-    <ol className="mb-4 list-outside list-decimal round-counter">{children}</ol>
+    <ol className="px-6 md:px-0 mb-4 list-outside list-decimal round-counter">{children}</ol>
   ),
   ul: ({ children }: PropsWithChildren) => (
     <ul className="mb-4 px-8 list-inside list-disc">{children}</ul>
@@ -37,13 +37,13 @@ const MarkdownComponents = {
     </div>
   ),
   th: ({ children }: PropsWithChildren) => (
-    <th className="text-center first:rounded-tl-2xl last:rounded-tr-2xl p-4 px-8">{children}</th>
+    <th className="text-center first:rounded-tl-2xl last:rounded-tr-2xl p-4 px-8 text-nowrap">{children}</th>
   ),
   thead:  ({ children }: PropsWithChildren) => (
     <thead className="px-4 text-center text-[var(--white)] bg-[var(--primary)]">{children}</thead>
   ),
   td: ({ children, node, ...rest }: PropsWithChildren & { node?: Element | undefined}) => (
-    <td {...rest} className="p-4  px-8 text-center">{children}</td>
+    <td {...rest} className="p-4  px-8 text-center text-nowrap">{children}</td>
   ),
   tr: ({ children }: PropsWithChildren) => (
     <tr className="divide-x divide-dashed even:bg-slate-50  last:rounded-b-2xl">{children}</tr>
@@ -55,7 +55,7 @@ const MarkdownComponents = {
     const [altText, sizing] = (alt || "|").split("|")
 
     return (
-      <span className="inline md:float-right ml-8">
+      <span className="inline-block md:float-right ml-8">
         <ZoomableImage src={src!} alt={altText} {...rest} {...(sizing === "landscape" ? landscape : portrait)} />
       </span>
     );

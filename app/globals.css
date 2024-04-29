@@ -77,7 +77,7 @@ footer {
   background: url("/watermark2.svg") repeat-x;
 }
 .watermark3::before {
-  background: url("/watermark3.svg") repeat-x;
+  background: url("/watermark3.svg") no-repeat;
 }
 .watermark4::before {
   background: url("/watermark4.svg") no-repeat;
@@ -101,13 +101,30 @@ footer {
     background: url("/watermark2_small.svg") repeat-x;
   }
   .watermark3::before {
-    background: url("/watermark3_small.svg") repeat-x;
+    background: transparent;
   }
   .watermark4::before {
     background: url("/watermark4_small.svg") no-repeat;
   }
   .watermark5::before {
     background: url("/watermark2_small.svg") no-repeat;
+  }
+}
+@media (min-width: 1920px) {
+  .watermark::before {
+    background: url("/watermark.svg") top center no-repeat;
+  }
+  /* .watermark2::before {
+    background: url("/watermark2.svg") repeat-x;
+  } */
+  /* .watermark3::before {
+    background: url("/watermark3.svg") no-repeat;
+  } */
+  .watermark4::before {
+    background: url("/watermark4.svg") top right no-repeat;
+  }
+  .watermark5::before {
+    background: url("/watermark5.svg") top right no-repeat;
   }
 }
 
@@ -138,7 +155,7 @@ footer {
     radial-gradient(
       circle at right bottom,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0) 15rem
+      rgba(0, 0, 0, 0) 40rem
     ),
     radial-gradient(circle at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 31%),
     var(--primary);
@@ -153,12 +170,12 @@ footer {
     radial-gradient(
       circle at right bottom,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0) 15rem
+      rgba(0, 0, 0, 0) 40rem
     ),
     radial-gradient(
       circle at right top,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0) 15rem
+      rgba(0, 0, 0, 0) 40rem
     ),
     var(--primary);
 }
@@ -172,7 +189,7 @@ footer {
     radial-gradient(
       circle at right top,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0) 15rem
+      rgba(0, 0, 0, 0) 40rem
     ),
     var(--primary);
 }
@@ -192,6 +209,7 @@ footer {
       var(--background) 50%
     ),
     var(--primary);
+  min-height: 600px;
 }
 :not(svg).elevate {
   box-shadow:
@@ -292,11 +310,13 @@ header > * {
   z-index: 1;
 }
 
+@media (hover: hover) {
 .nav {
   transition: transform 0.5s;
 }
 .nav:hover {
   transform: translateY(-5px);
+  }
 }
 
 header::before {
@@ -400,7 +420,12 @@ div.active {
   inset: 0;
   background-color: color-mix(in srgb, var(--primary) 65%, transparent);
   position: absolute;
+  border-radius: .5rem;
+}
+@media (min-width: 1024px) {
+  .img-overlay::before {
   border-radius: 1rem;
+  }
 }
 .img-zoomable:hover::before {
   opacity: 0;
@@ -452,11 +477,16 @@ ol.round-counter {
 }
 ol.round-counter li {
   counter-increment: round-counter;
-  margin: 3rem 0;
+  margin: 1rem 0;
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  ol.round-counter li {
+    margin: 3rem 0;
+  }
 }
 ol.round-counter li::before {
   content: counter(round-counter);

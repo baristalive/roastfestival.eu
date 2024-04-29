@@ -1,8 +1,8 @@
 const PlusIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="60"
-    height="60"
+    width="2em"
+    height="2em"
     viewBox="0 0 32.757648 24.109631"
     version="1.1"
   >

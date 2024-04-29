@@ -1,9 +1,9 @@
 const CupIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 40"
-    width="60"
-    height="60"
+    viewBox="0 0 32 30"
+    width="2em"
+    height="2em"
     style={{
       color: "rgb(var(--foreground-rgb))",
     }}

@@ -23,21 +23,21 @@ export const Info = () => {
         className="colab-section watermark flex flex-col pb-10 items-center justify-between"
       >
         <NavBar backToSection="colab" />
-        <div className="flex flex-col lg:grid max-w-[1900px] gap-8 md:p-8 grid-cols-[1fr,2fr]">
-          <div className="top-20 md:p-12">
-            <h2 className="w-3/4 pb-8 pt-24 text-6xl font-bold md:pt-56 lg:pt-20 break-words md:break-normal">
+        <div className="flex flex-col lg:grid max-w-[1900px] gap-8 p-8 grid-cols-[1fr,2fr]">
+          <div className="md:p-12">
+            <h2 className="w-3/4 pb-8 text-3xl 2xl:text-6xl font-bold md:pt-56 lg:pt-20 break-words md:break-normal">
               {lang.exhibitors.title}
             </h2>
-            <div className="mx-auto max-w-screen-lg space-y-10 text-lg leading-normal lg:text-xl">
+            <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal lg:text-xl">
               {lang.exhibitors.text}
             </div>
             <Bar mountRef={ref} contextSafe={contextSafe} />
           </div>
           <div className="cards flex flex-col gap-8 2xl:grid md:grid-cols-2">
-            <div className="card elevate h-auto rounded-2xl md:px-12 pb-8 text-lg lg:text-xl">
+            <div className="card elevate h-auto rounded-2xl md:px-12 pb-8 text-base 2xl:text-3xl">
               <Markdown>{lang.exhibitors.card}</Markdown>
             </div>
-            <div className="card nav elevate flex h-full flex-col rounded-2xl px-12 pb-4 ">
+            <div className="card nav elevate flex h-full flex-col rounded-2xl md:px-12 pb-4 ">
               <a
                 href={lang.exhibitors.formLink}
                 rel="external"

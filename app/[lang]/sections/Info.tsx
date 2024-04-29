@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Bar from "@/app/components/Bar";
+import { BuyTickets } from "@/app/components/BuyTickets";
 
 export const Info = () => {
   const params = useParams();
@@ -41,9 +42,9 @@ export const Info = () => {
               scrollTrigger: {
                 trigger: c as Element,
                 pin: true,
-                start: "top 10%",
+                start: isLast ? "top top" :"top 50em",
                 end: isLast ? "top top" : "bottom top",
-                scrub: 1,
+                scrub: true
               },
             })
             .to(c as Element, {
@@ -59,14 +60,14 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark flex flex-col items-center justify-between pb-[10rem]"
+      className="info-section watermark flex flex-col gap-8 items-center justify-between pb-4"
     >
       <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="w-3/4 pb-8 pt-24 text-2xl lg:text-6xl font-bold md:pt-56 lg:pt-20">
+          <h2 className="w-3/4 pb-8 pt-24 text-3xl 2xl:text-6xl font-bold md:pt-0 2xl:pt-20">
             {lang.about.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-sm leading-normal lg:text-xl">
+          <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.about.text.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -81,17 +82,18 @@ export const Info = () => {
             >
               {col.map((s) => (
                 <div
-                  className="card elevate h-auto rounded-2xl p-12"
+                  className="card elevate h-auto rounded-2xl 2xl:p-12 p-8"
                   key={s.title}
                 >
-                  <h3 className="pb-12 text-xl lg:text-3xl font-bold">{s.title}</h3>
-                  <p className="text-sm lg:text-xl">{s.text}</p>
+                  <h3 className="2xl:pb-12 pb-4 text-xl 2xl:text-3xl font-bold">{s.title}</h3>
+                  <p className="text-base 2xl:text-xl">{s.text}</p>
                 </div>
               ))}
             </div>
           ))}
         </div>
       </div>
+      {/* <BuyTickets /> */}
     </section>
   );
 };

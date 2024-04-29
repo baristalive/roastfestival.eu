@@ -50,11 +50,11 @@ export const PreviousYears = () => {
   return (
     <section
       ref={ref}
-      id="info"
+      id="prev-year"
       className="previous-year-section watermark4 relative flex flex-col items-center justify-between z-0"
     >
       <div>
-      <div className="absolute inset-4 items-center justify-center flex z-10">
+      <div className="absolute inset-8 py-12 items-center justify-center flex z-10">
         <div className="flex h-full flex-col items-center justify-end lg:justify-center gap-8">
           <div className="elevate flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full bg-[var(--black)] p-10 leading-none text-white">
             <div className=" text-6xl font-bold">
@@ -66,17 +66,17 @@ export const PreviousYears = () => {
           </div>
         </div>
       </div>
-      <div className="grid max-w-[1900px] items-center p-8 pb-24 lg:grid-cols-2 gap-4 z-0">
+      <div className="grid max-w-[1900px] items-center p-8 pb-48 lg:pb-24 lg:grid-cols-2 gap-4 z-0">
         <div className="md:p-12 lg:pr-64 z-0">
-          <h2 className="w-3/4 pb-8 pt-24 text-2xl lg:text-6xl font-bold md:pt-56 lg:pt-20">
+          <h2 className="w-3/4 pb-8 pt-24 text-3xl 2xl:text-6xl font-bold md:pt-0 2xl:pt-20">
             {lang.lastYear.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-sm leading-normal lg:text-xl">
+          <div className="mx-auto max-w-screen-lg space-y-10 pb-24 lg:pb-0 text-base leading-normal 2xl:text-xl">
             {lang.lastYear.description}
           </div>
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
-        <div className="cards relative h-full w-full gap-8 z-10">
+        <div className="cards relative h-full w-full gap-8 z-10 text-base lg:text-xs">
           <svg
             width="100%"
             height="100%"
@@ -85,7 +85,7 @@ export const PreviousYears = () => {
             className="elevate overflow-visible"
           >
             <style>
-              {`.large {font-weight: bold;font-size: 0.5rem;fill: currentColor;} .small {font-size: 0.2rem;fill: currentColor;}`}
+              {`.large {font-weight: bold;font-size: .6em;fill: currentColor;} .small {font-size: 0.25em;fill: currentColor;}`}
             </style>
 
             {lang.lastYear.side.map((i) => (
