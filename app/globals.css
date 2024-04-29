@@ -311,11 +311,11 @@ header > * {
 }
 
 @media (hover: hover) {
-.nav {
-  transition: transform 0.5s;
-}
-.nav:hover {
-  transform: translateY(-5px);
+  .nav {
+    transition: transform 0.5s;
+  }
+  .nav:hover {
+    transform: translateY(-5px);
   }
 }
 
@@ -424,7 +424,7 @@ div.active {
 }
 @media (min-width: 1024px) {
   .img-overlay::before {
-  border-radius: 1rem;
+    border-radius: 1rem;
   }
 }
 .img-zoomable:hover::before {
@@ -506,4 +506,40 @@ ol.round-counter li::before {
 
 .tbody > tr {
   background: var(--white);
+}
+
+.ticket {
+  position: relative;
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: .5em;
+  z-index: 0;
+}
+.ticket::before {
+  position: absolute;
+  content: "";
+  top: calc(50% - 1em);
+  left: -2px;
+  z-index: 1;
+  height: 2em;
+  width: .75em;
+  border: 2px solid var(--black);
+  border-left: 0;
+  background-color: var(--white);
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+.ticket::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 1em);
+  right: -2px;
+  z-index: 1;
+  height: 2em;
+  width: .75em;
+  border: 2px solid var(--black);
+  border-right: 0;
+  background-color: var(--primary);
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
 }

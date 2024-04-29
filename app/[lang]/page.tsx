@@ -11,7 +11,7 @@ import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "../components/Footer";
 import { Map } from "./sections/Map";
-import { BuyTickets } from "./sections/BuyTickets";
+import { BuyTickets } from "../components/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
