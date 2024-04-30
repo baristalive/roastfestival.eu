@@ -1,7 +1,8 @@
 import type { MDXComponents } from 'mdx/types'
 import { PropsWithChildren } from "react";
 import { LANDSCAPE, PORTRAIT, ZoomableImage } from './app/components/ZoomableImage';
- 
+import "react-medium-image-zoom/dist/styles.css";
+
 const portrait = {...PORTRAIT, small: { width: 200, height: 300}}
 const landscape = {...LANDSCAPE, small: { width: 300, height: 200}}
 

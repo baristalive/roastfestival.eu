@@ -39,7 +39,7 @@ export const Info = () => {
           <div className="cards flex flex-col items-center">
             <div className="card nav elevate flex h-full flex-col rounded-2xl md:px-12 pb-4">
               <a
-                href="mailto:info@baristalive.cz"
+                href={lang.sponsors.signUpLink}
                 rel="external"
                 className="flex h-full flex-col items-center justify-center p-4 px-32"
               >

@@ -41,7 +41,6 @@ export const ZoomableImage = (
       <Zoom
         zoomMargin={16}
         classDialog="zoom"
-        wrapElement="span"
         zoomImg={{
           src: props.src,
           height: props.zoomed.height,
