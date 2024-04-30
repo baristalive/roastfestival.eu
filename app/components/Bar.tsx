@@ -31,7 +31,7 @@ const Bar = ({
   return (
     <div
       ref={ref}
-      className="bar mt-12 hidden h-2 2xl:h-3 w-2 2xl:w-3 rounded-full bg-[var(--accent)] md:block"
+      className="bar mt-12 hidden h-2 w-2 rounded-full bg-[var(--accent)] md:block 2xl:h-3 2xl:w-3"
     />
   );
 };

@@ -42,9 +42,9 @@ export const Info = () => {
               scrollTrigger: {
                 trigger: c as Element,
                 pin: true,
-                start: isLast ? "top top" :"top 50em",
+                start: isLast ? "top top" : "top 50em",
                 end: isLast ? "top top" : "bottom top",
-                scrub: true
+                scrub: true,
               },
             })
             .to(c as Element, {
@@ -60,11 +60,11 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section min-h-screen watermark flex flex-col gap-8 items-center justify-between pb-4"
+      className="info-section watermark flex min-h-screen flex-col items-center justify-between gap-8 pb-4"
     >
       <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="w-3/4 pb-8 pt-24 text-3xl 2xl:text-6xl font-bold md:pt-0 2xl:pt-20">
+          <h2 className="w-3/4 pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.about.title}
           </h2>
           <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
@@ -82,10 +82,12 @@ export const Info = () => {
             >
               {col.map((s) => (
                 <div
-                  className="card elevate h-auto rounded-2xl 2xl:p-12 p-8"
+                  className="card elevate h-auto rounded-2xl p-8 2xl:p-12"
                   key={s.title}
                 >
-                  <h3 className="2xl:pb-12 pb-4 text-xl 2xl:text-3xl font-bold">{s.title}</h3>
+                  <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
+                    {s.title}
+                  </h3>
                   <p className="text-base 2xl:text-xl">{s.text}</p>
                 </div>
               ))}

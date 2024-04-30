@@ -64,51 +64,57 @@ export const Organizers = () => {
     <section ref={ref} className="about-us watermark4 pt-20">
       <div className="mx-auto max-w-[1900px]">
         <div className="p-12 md:p-24">
-          <h2 className="w-3/4 font-bold md:pt-56 lg:pt-24 text-3xl 2xl:pb-8 2xl:text-6xl">
+          <h2 className="w-3/4 text-3xl font-bold md:pt-56 lg:pt-24 2xl:pb-8 2xl:text-6xl">
             {lang.organizers.title}
           </h2>
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
-        <div className="hidden cards mx-auto md:flex items-center gap-4 p-12">
+        <div className="cards mx-auto hidden items-center gap-4 p-12 md:flex">
           {largeWallImages.map((col, idx) => (
-            <div
-              className="gap-4 grid"
-              key={`col_${idx}`}
-            >
-              {col.map((i, idx) => {
+            <div className="grid max-w-[20%] gap-4" key={`col_${idx}`}>
+              {col.map((i, idx2) => {
                 if ("card" in i && i.card !== undefined) {
                   return (
                     <div
                       key={`card_${i.card}`}
-                      className="card elevate rounded-lg lg:rounded-2xl px-6 py-8 text-base 2xl:p-12 2xl:text-xl"
+                      className="card elevate rounded-lg px-6 py-8 text-base lg:rounded-2xl 2xl:p-12 2xl:text-xl"
                     >
                       <p>{lang.organizers.text[i.card]}</p>
                     </div>
                   );
                 }
-                return <ZoomableImage key={`img_${idx}`} {...i} />;
+                return (
+                  <ZoomableImage
+                    key={`img_${idx2}`}
+                    alt={`${lang.organizers.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
+                    {...i}
+                  />
+                );
               })}
             </div>
           ))}
         </div>
-        <div className="md:hidden cards mx-auto flex items-center gap-1 p-2">
+        <div className="cards mx-auto flex items-center gap-1 p-2 md:hidden">
           {smallWallImages.map((col, idx) => (
-            <div
-              className="gap-2 grid"
-              key={`col_${idx}`}
-            >
-              {col.map((i, idx) => {
+            <div className="grid gap-2" key={`col_${idx}`}>
+              {col.map((i, idx2) => {
                 if ("card" in i && i.card !== undefined) {
                   return (
                     <div
                       key={`card_${i.card}`}
-                      className="card elevate rounded-lg lg:rounded-2xl px-6 py-8 text-base 2xl:p-12 2xl:text-xl"
+                      className="card elevate rounded-lg px-6 py-8 text-base lg:rounded-2xl 2xl:p-12 2xl:text-xl"
                     >
                       <p>{lang.organizers.text[i.card]}</p>
                     </div>
                   );
                 }
-                return <ZoomableImage key={`img_${idx}`} {...i} />;
+                return (
+                  <ZoomableImage
+                    key={`img_${idx}`}
+                    alt={`${lang.organizers.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
+                    {...i}
+                  />
+                );
               })}
             </div>
           ))}

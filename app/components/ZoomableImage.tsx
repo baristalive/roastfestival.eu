@@ -14,19 +14,19 @@ export const PORTRAIT = {
 
 type Image = {
   small: {
-      width: number;
-      height: number;
+    width: number;
+    height: number;
   };
   zoomed: {
-      width: number;
-      height: number;
+    width: number;
+    height: number;
   };
   src: string;
   alt?: string;
-}
+};
 
 export const ZoomableImage = (
-  props: Omit<ExportedImageProps, "alt" | "children"> & Image
+  props: Omit<ExportedImageProps, "alt" | "children"> & Image,
 ) => {
   const ref = useRef(null);
   return (
@@ -37,7 +37,8 @@ export const ZoomableImage = (
         src={props.src}
         height={props.zoomed.height}
         width={props.zoomed.width}
-        alt={props.alt || ""} />
+        alt={props.alt || ""}
+      />
       <Zoom
         zoomMargin={16}
         classDialog="zoom"
@@ -46,17 +47,19 @@ export const ZoomableImage = (
           height: props.zoomed.height,
           width: props.zoomed.width,
           alt: props.alt || "",
-          srcSet: (ref.current as HTMLImageElement | null)?.getAttribute("srcset") ||
+          srcSet:
+            (ref.current as HTMLImageElement | null)?.getAttribute("srcset") ||
             "",
         }}
       >
-        <span className="card block elevate img-overlay img-zoomable rounded-lg lg:rounded-2xl">
+        <span className="card elevate img-overlay img-zoomable block rounded-lg lg:rounded-2xl">
           <ExportedImage
             className="h-auto max-w-full rounded-lg lg:rounded-2xl"
             src={props.src}
             height={props.small.height}
             width={props.small.width}
-            alt={props.alt || ""} />
+            alt={props.alt || ""}
+          />
         </span>
       </Zoom>
     </>

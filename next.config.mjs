@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import createMDX from '@next/mdx'
+import createMDX from "@next/mdx";
 import remarkUnwrapImages from "remark-unwrap-images";
 import remarkGfm from "remark-gfm";
 import remarkExtendedTable, {
@@ -11,9 +11,9 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkGfm, remarkExtendedTable, remarkUnwrapImages],
     rehypePlugins: [],
-    remarkRehypeOptions: { handlers: { ...extendedTableHandlers } }
+    remarkRehypeOptions: { handlers: { ...extendedTableHandlers } },
   },
-})
+});
 
 const nextConfig = {
   webpack(config) {
@@ -57,7 +57,7 @@ const nextConfig = {
       },
       {
         test: /\.md$/i,
-        use: 'raw-loader',
+        use: "raw-loader",
       },
     );
 

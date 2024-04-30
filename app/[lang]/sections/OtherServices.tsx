@@ -40,7 +40,7 @@ export const OtherServices = () => {
                       width={180}
                       height={180}
                       unoptimized
-                      loader={({src}) => src}
+                      loader={({ src }) => src}
                     />
                     <span className="sr-only">{g.alt}</span>
                   </>

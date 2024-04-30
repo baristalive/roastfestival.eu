@@ -26,9 +26,9 @@ export const Colab = () => {
               scrollTrigger: {
                 trigger: c as Element,
                 pin: true,
-                start: isLast ? "top top" :"top 50em",
+                start: isLast ? "top top" : "top 50em",
                 end: isLast ? "top top" : "bottom top",
-                scrub: true
+                scrub: true,
               },
             })
             .to(c as Element, {
@@ -42,9 +42,9 @@ export const Colab = () => {
   );
   return (
     <section ref={ref} id="colab" className="colab-section watermark5">
-      <div className="mx-auto grid max-w-[1900px] gap-12 2xl:gap-32 px-8 pb-48 lg:grid-cols-[1fr,2fr] pt-32">
+      <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-48 pt-32 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="w-3/4 pb-8 text-3xl 2xl:text-6xl font-bold">
+          <h2 className="w-3/4 pb-8 text-3xl font-bold 2xl:text-6xl">
             {lang.colab.title}
           </h2>
           <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
@@ -52,25 +52,27 @@ export const Colab = () => {
           </div>
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
-        <div className="flex flex-col md:grid grid-cols-2 items-center justify-center gap-8 text-xl">
-          <div className="card elevate nav h-full rounded-2xl 2xl:p-12 p-8">
+        <div className="flex grid-cols-2 flex-col items-center justify-center gap-8 text-xl md:grid">
+          <div className="card elevate nav h-full rounded-2xl p-8 2xl:p-12">
             <a
               href={`/${params.lang}/colab`}
               title={lang.colab.exhibitors.title}
-              rel="author"
+              rel="next"
               className="flex h-full flex-col"
             >
-              <h3 className="2xl:pb-12 pb-4 text-xl 2xl:text-3xl font-bold">
+              <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
                 {lang.colab.exhibitors.title}
               </h3>
-              <div className="2xl:-ml-4 flex flex-wrap gap-2 py-8 text-xl 2xl:text-3xl ">
+              <div className="flex flex-wrap gap-2 py-8 text-xl 2xl:-ml-4 2xl:text-3xl ">
                 <StationIcon station="espresso" />
                 <StationIcon station="espresso_milk" />
                 <StationIcon station="brew" />
                 <StationIcon station="lecture" />
                 <StationIcon station="workshop" />
               </div>
-              <p className="py-2 text-base 2xl:text-xl">{lang.colab.exhibitors.text}</p>
+              <p className="py-2 text-base 2xl:text-xl">
+                {lang.colab.exhibitors.text}
+              </p>
               <div className="grow" />
               <div className="text-md mt-8 text-[var(--black)]">
                 <div className="float-right">
@@ -79,20 +81,22 @@ export const Colab = () => {
               </div>
             </a>
           </div>
-          <div className="card elevate nav h-full rounded-2xl 2xl:p-12 p-8">
+          <div className="card elevate nav h-full rounded-2xl p-8 2xl:p-12">
             <a
               href={`/${params.lang}/sponsors`}
               title={lang.colab.sponsors.title}
-              rel="author"
+              rel="next"
               className="flex h-full flex-col justify-between"
             >
-              <h3 className="2xl:pb-12 pb-4 text-xl 2xl:text-3xl font-bold">
+              <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
                 {lang.colab.sponsors.title}
               </h3>
               <div className="flex gap-2 py-8 text-xl 2xl:text-3xl">
                 <PlusIcon />
               </div>
-              <p className="py-2 text-base 2xl:text-xl">{lang.colab.sponsors.text}</p>
+              <p className="py-2 text-base 2xl:text-xl">
+                {lang.colab.sponsors.text}
+              </p>
               <div className="grow" />
               <div className="text-md mt-8 text-[var(--black)]">
                 <div className="float-right">

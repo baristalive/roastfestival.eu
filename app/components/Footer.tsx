@@ -34,7 +34,11 @@ export const Footer = () => {
             <br /> Muhammad Nur Auliady Pamungkas,
             <br /> and Cuputo
             <br /> from{" "}
-            <a href="https://thenounproject.com/" target="_blank">
+            <a
+              href="https://thenounproject.com/"
+              rel="external"
+              target="_blank"
+            >
               Noun Project
             </a>{" "}
             (CC BY 3.0)

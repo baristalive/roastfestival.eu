@@ -1,11 +1,16 @@
 "use client";
+import { useParams } from "next/navigation";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import "react-medium-image-zoom/dist/styles.css";
-import { LANDSCAPE, PORTRAIT, ZoomableImage } from "../../components/ZoomableImage";
-
+import {
+  LANDSCAPE,
+  PORTRAIT,
+  ZoomableImage,
+} from "../../components/ZoomableImage";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
 const largeWallImages = [
   [
@@ -49,6 +54,8 @@ const smallWallImages = [
 ];
 
 export const Gallery = () => {
+  const params = useParams();
+  const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
   useGSAP(
     () => {
@@ -71,25 +78,32 @@ export const Gallery = () => {
   );
   return (
     <section ref={ref} className="gallery-section watermark3 ">
-      <div className="cards mx-auto md:flex max-w-[1900px] items-center gap-4 px-12 pb-12 hidden ">
+      <div className="cards mx-auto hidden max-w-[1900px] items-center gap-4 px-12 pb-12 md:flex ">
         {largeWallImages.map((col, idx) => (
-          <div className="gap-1 md:gap-4 flex md:grid" key={`col_${idx}`}>
-            {col.map((i, idx) => (
-              <ZoomableImage key={`img_${idx}`} {...i} />
+          <div className="flex gap-1 md:grid md:gap-4" key={`col_${idx}`}>
+            {col.map((i, idx2) => (
+              <ZoomableImage
+                key={`img_${idx2}`}
+                alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
+                {...i}
+              />
             ))}
           </div>
         ))}
       </div>
       <div className="cards mx-auto flex max-w-[1900px] items-center gap-1 pb-12 md:hidden ">
         {smallWallImages.map((col, idx) => (
-          <div className="gap-1 flex flex-col md:grid" key={`col_${idx}`}>
-            {col.map((i, idx) => (
-              <ZoomableImage key={`img_${idx}`} {...i} />
+          <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
+            {col.map((i, idx2) => (
+              <ZoomableImage
+                key={`img_${idx2}`}
+                alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
+                {...i}
+              />
             ))}
           </div>
         ))}
       </div>
-
     </section>
   );
 };

@@ -45,7 +45,7 @@ export const Header = () => {
       ref={ref}
       className="elevate z-10 flex h-svh flex-col items-center justify-between p-8"
     >
-      <div className="flex w-full max-w-[1900px] justify-between pt-2 text-sm 2xl:px-12 2xl:py-8 px-4 md:text-xl 2xl:text-3xl">
+      <div className="flex w-full max-w-[1900px] justify-between px-4 pt-2 text-sm md:text-xl 2xl:px-12 2xl:py-8 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
           {lang.date}
           <br />
@@ -75,7 +75,7 @@ export const Header = () => {
               <Link
                 href={params.lang === "cz" ? "./en" : "./cz"}
                 rel="alternate"
-                className="nav table-cell w-[3em] h-[3em] rounded-full border border-current py-2 text-center align-middle lowercase leading-[1.6em] md:py-4 md:leading-[1.4em] 2xl:py-6 2xl:leading-[1.1em]"
+                className="nav table-cell h-[3em] w-[3em] rounded-full border border-current py-2 text-center align-middle lowercase leading-[1.6em] md:py-4 md:leading-[1.4em] 2xl:py-6 2xl:leading-[1.1em]"
               >
                 {params.lang === "cz" ? "en" : "cz"}
               </Link>
@@ -93,15 +93,15 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between 2xl:px-12 2xl:py-8 px-4 md:text-xl 2xl:text-3xl">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-4 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-12 2xl:py-8 2xl:text-3xl">
         <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
-            <nav className="rounded-full border border-current px-4 md:px-6 py-2 lowercase md:py-4 2xl:px-12 2xl:py-6">
+            <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
               Info
             </nav>
           </a>
           <a href="#program" className="nav">
-            <nav className="rounded-full border border-current px-4 md:px-6 py-2 lowercase md:py-4 2xl:px-12 2xl:py-6">
+            <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
               Program
             </nav>
           </a>
