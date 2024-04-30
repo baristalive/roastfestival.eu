@@ -5,14 +5,20 @@ import { useGSAP } from "@gsap/react";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 
-import Markdown from "@/app/components/Markdown";
 import NavBar from "@/app/components/NavBar";
 import ArrowIcon from "@/app/icons/arrow";
+
+import enExhibitorsCard from "@/app/dictionaries/colab/exhibitors/card_en.mdx";
+import czExhibitorsCard from "@/app/dictionaries/colab/exhibitors/card_cz.mdx";
+import enExhibitorsContent from "@/app/dictionaries/colab/exhibitors/content_en.mdx";
+import czExhibitorsContent from "@/app/dictionaries/colab/exhibitors/content_cz.mdx";
 
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
+  const Card = params.lang === 'cz' ? czExhibitorsCard : enExhibitorsCard
+  const Content = params.lang === 'cz' ? czExhibitorsContent : enExhibitorsContent
 
   const { contextSafe } = useGSAP({ scope: ref });
   return (
@@ -35,7 +41,7 @@ export const Info = () => {
           </div>
           <div className="cards flex flex-col gap-8 2xl:grid md:grid-cols-2">
             <div className="card elevate h-auto rounded-2xl md:px-12 pb-8 text-base 2xl:text-3xl">
-              <Markdown>{lang.exhibitors.card}</Markdown>
+              <Card />
             </div>
             <div className="card nav elevate flex h-full flex-col rounded-2xl md:px-12 pb-4 ">
               <a
@@ -57,7 +63,7 @@ export const Info = () => {
       <section className="watermark-large relative bg-transparent program-section">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:p-12">
           <div className=" h-auto rounded-2xl md:px-32 py-16 text-lg">
-            <Markdown>{lang.exhibitors.content}</Markdown>
+            <Content />
           </div>
         </div>
       </section>

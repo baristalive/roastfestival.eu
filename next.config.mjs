@@ -1,4 +1,19 @@
 /** @type {import('next').NextConfig} */
+import createMDX from '@next/mdx'
+import remarkUnwrapImages from "remark-unwrap-images";
+import remarkGfm from "remark-gfm";
+import remarkExtendedTable, {
+  extendedTableHandlers,
+} from "remark-extended-table";
+
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+  options: {
+    remarkPlugins: [remarkGfm, remarkExtendedTable, remarkUnwrapImages],
+    rehypePlugins: [],
+    remarkRehypeOptions: { handlers: { ...extendedTableHandlers } }
+  },
+})
 
 const nextConfig = {
   webpack(config) {
@@ -76,4 +91,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default withMDX(nextConfig);

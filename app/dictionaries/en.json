@@ -23,8 +23,6 @@
   },
   "contact": "Contact us",
   "exhibitors": {
-    "card": "",
-    "content": "",
     "cta": "Sign up",
     "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
     "title": "Exhibitors"
@@ -219,7 +217,6 @@
   },
   "signUp": "Sign up",
   "sponsors": {
-    "content": "",
     "cta": "Concact us"
   },
   "tickets": "Tickets"

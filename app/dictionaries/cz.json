@@ -23,8 +23,6 @@
   },
   "contact": "Kontakt",
   "exhibitors": {
-    "card": "",
-    "content": "",
     "cta": "Vyplnit přihlášku",
     "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
     "title": "Vystavovatelé"
@@ -219,7 +217,6 @@
   },
   "signUp": "Přihlásit se",
   "sponsors": {
-    "content": "",
     "cta": "Napište nám"
   },
   "tickets": "Vstupenky"

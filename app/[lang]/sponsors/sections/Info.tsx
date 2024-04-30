@@ -5,14 +5,17 @@ import { useGSAP } from "@gsap/react";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 
-import Markdown from "@/app/components/Markdown";
 import NavBar from "@/app/components/NavBar";
 import ArrowIcon from "@/app/icons/arrow";
+
+import enSponsorsContent from "@/app/dictionaries/colab/sponsors/content_en.mdx";
+import czSponsorsContent from "@/app/dictionaries/colab/sponsors/content_cz.mdx";
 
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
+  const Content = params.lang === 'cz' ? czSponsorsContent : enSponsorsContent
 
   const { contextSafe } = useGSAP({ scope: ref });
   return (
@@ -54,7 +57,7 @@ export const Info = () => {
       <section className="watermark-large relative bg-transparent program-section">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:p-12">
           <div className=" h-auto rounded-2xl md:px-32 py-16 text-lg">
-            <Markdown>{lang.sponsors.content}</Markdown>
+            <Content />
           </div>
         </div>
       </section>
