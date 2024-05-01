@@ -1,9 +1,9 @@
 const WorkshopIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="60"
-    height="60"
-    viewBox="0 0 82.675606 84.600998"
+    width="2em"
+    height="2em"
+    viewBox="-10 0 100 80"
     style={{
       color: "rgb(var(--foreground-rgb))",
     }}

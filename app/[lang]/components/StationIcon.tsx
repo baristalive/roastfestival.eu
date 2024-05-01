@@ -5,7 +5,7 @@ import LectureIcon from "@/app/icons/stations/lecture";
 import WorkshopIcon from "@/app/icons/stations/workshop";
 import CupIcon from "@/app/icons/stations/cup";
 
-export const StationIcon = ({ station }: { station?: string; }) => {
+export const StationIcon = ({ station }: { station?: string }) => {
   switch (station) {
     case "espresso":
       return <PortafilterIcon />;

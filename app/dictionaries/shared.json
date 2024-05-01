@@ -1,11 +1,11 @@
 {
   "contacts": {
     "email": "mailto:info@baristalive.cz",
-    "facebook": "https://fb.me/e/4Ij7npLcC",
+    "facebook": "https://www.facebook.com/roastfestival",
     "instagram": "https://www.instagram.com/roast_festival",
     "kaznice_loc": "https://goo.gl/maps/u5diB2gL4AtHce8JA",
     "kaznice_web": "https://kaznice.art/",
-    "tickets": "https://goout.net/cs/listky/roast-brno-festival-of-coffee-and-roasters-2023/xhmt/"
+    "tickets": "https://goout.net/cs/listky/roast-brno-festival-of-coffee-and-roasters-2024/bbcy/"
   },
   "location": {
     "stops": {
@@ -14,7 +14,11 @@
       "tkalcovska": "Tkalcovská"
     }
   },
-  "ready": false,
+  "date": "21-23/9/2024",
+  "title": "Coffee festival",
+  "exhibitors": {
+    "formLink": "https://forms.gle/G6svTJgvdovKcMdo6"
+  },
   "promotedRoasters": {
     "content": [
       {
@@ -95,6 +99,6 @@
     ]
   },
   "sponsors": {
-    "content": []
+    "signUpLink": "mailto:eva@baristalive.cz"
   }
 }

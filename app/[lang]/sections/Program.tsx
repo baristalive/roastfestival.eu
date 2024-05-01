@@ -1,174 +1,211 @@
 "use client";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
-import { CSSProperties, Fragment } from "react";
-import Modal from "../components/Modal";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import React, { MouseEvent, useRef, useState } from "react";
+import { Modal, ProgramItem } from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
-import LinkIcon from "@/app/icons/link";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Flip } from "gsap/all";
 
-type StationSchedule = {
-  category?: string;
-  schedule: (
-    | { time: string; title: string }
-    | {
-        time: string;
+const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
+
+type DaySchedule =
+  | {
+      track: string;
+      rows: number;
+      schedule: {
+        start: number;
+        end: number;
         title: string;
-        description: string;
+      }[];
+    }
+  | {
+      track: string;
+      rows: number;
+      schedule: {
+        start: number;
+        end: number;
+        title: string;
         speakers: string[];
-        href?: string;
-      }
-  )[];
-};
-type DaySchedule = {
-  title: string;
-  date: string;
-  schedule: StationSchedule[];
-};
-
-const sanitize = (str: string) =>
-  str.replace(/[^a-z0-9]/gi, "-").toLocaleLowerCase();
+        description: string;
+      }[];
+    };
 
 export const Program = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
+  const ref = useRef(null);
+  const [tab, setTab] = useState(0);
+
+  const changeTabTo =
+    (idx: number) =>
+    (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
+      setTab(idx);
+    };
+  useGSAP(
+    () => {
+      gsap.registerPlugin(Flip);
+      const selector = gsap.utils.selector(ref);
+      const activeBubble = selector<HTMLDivElement>("div.active");
+      const activeNav = selector<HTMLAnchorElement>("a.active");
+      const state = Flip.getState(".pills");
+      activeNav[0].appendChild(activeBubble[0]);
+
+      Flip.from(state, { duration: 2, ease: "power1.inOut", scale: true });
+    },
+    { scope: ref, dependencies: [tab] },
+  );
+
   return (
-    <section className="text-center" id="program">
-      <div className="inverted p-8 md:p-0">
-        <h2 className="hidden pt-20 text-4xl font-medium uppercase md:block">
-          Program
-          <a href="#program" className="hidden-link ml-4 inline-block">
-            <LinkIcon />
-          </a>
-        </h2>
-      </div>
-      {lang.ready && lang.program.length > 0 ? (
-        <>
-          {lang.program.map((d: DaySchedule, idx_d) => (
-            <div
-              key={d.title}
-              className={`${idx_d % 2 ? "" : "inverted"} px-2 pb-10 md:p-20`}
-              id={`program-${sanitize(d.title)}`}
-            >
-              <div className="flex px-6 pt-20 md:hidden">
-                <h2 className="grow pt-2 text-left text-3xl font-medium uppercase">
-                  Program
-                </h2>
-                <div className="text-right">
-                  <h3 className="text-5xl font-semibold">{d.date}</h3>
-                  <small className="text-2xl">
-                    {d.title}
-                    <a
-                      href={`#program-${sanitize(d.title)}`}
-                      className="hidden-link ml-4 inline-block"
-                    >
-                      <LinkIcon />
-                    </a>
-                  </small>
+    <section
+      ref={ref}
+      className={`program-section mb-20 ${lang.program.some((day) => day.schedule.length > 0) ? "h-screen" : ""}`}
+      id="program"
+    >
+      {lang.program.map((day, idx) => (
+        <div key={day.title} id={`program_day_${idx + 1}`} />
+      ))}
+      <div className="mx-auto flex h-full max-w-[1900px] flex-col pt-12">
+        <div className="flex grid-cols-[1fr,auto,1fr] flex-col items-center lg:grid">
+          <h2 className="p-4 pl-8 text-3xl font-bold md:pl-20 2xl:text-6xl">
+            Program
+          </h2>
+          <div className="p-4">
+            <ul className="elevate card pills flex rounded-e-full rounded-s-full text-center font-medium">
+              {lang.program.map((day, idx) => (
+                <li className="relative z-0 w-full p-2" key={day.title}>
+                  {idx === 0 && <div className="active absolute inset-2 z-0" />}
+                  <a
+                    href={`#program_day_${idx + 1}`}
+                    className={`z-10 flex w-full cursor-pointer flex-col whitespace-nowrap px-8 py-2 2xl:px-16 2xl:py-4 ${idx === tab ? "active" : ""} ${idx === 0 ? "rounded-s-full" : ""} ${idx === lang.program.length - 1 ? "rounded-e-full" : ""}`}
+                    onClick={changeTabTo(idx)}
+                  >
+                    <h3 className="z-10 text-xl font-bold 2xl:text-3xl">
+                      {day.title}
+                    </h3>
+                    <span className="z-10 text-base 2xl:text-xl">
+                      {day.date}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="relative grow">
+          <>
+            {lang.program.every((day) => day.schedule.length === 0) && (
+              <div className="mx-auto flex  h-full w-full items-center justify-center gap-4 p-12 py-48">
+                <div className="flex flex-col gap-4 md:flex-row">
+                  <StationIcon station="espresso" />
+                  <StationIcon station="espresso_milk" />
+                </div>
+                <div className="flex flex-col">
+                  <div className="text-center align-middle text-xl 2xl:text-3xl">
+                    {lang.programLoadingText}
+                  </div>
+                </div>
+                <div className="flex flex-col gap-4 md:flex-row">
+                  <StationIcon station="brew" />
+                  <StationIcon station="lecture" />
                 </div>
               </div>
-              <div className="mx-auto flex max-w-6xl gap-12">
-                <div className="hidden md:block">
-                  <h3 className="text-8xl">{d.date}</h3>
-                  <small className="text-4xl">
-                    {d.title}
-                    <a
-                      href={`#program-${sanitize(d.title)}`}
-                      className="hidden-link ml-4 inline-block"
-                    >
-                      <LinkIcon />
-                    </a>
-                  </small>
-                </div>
-                <dl className="grow divide-y-2 divide-current md:text-left">
-                  {d.schedule.map((s, idx_s) => (
-                    <div
-                      key={idx_s}
-                      style={
-                        {
-                          "--rows": `repeat(${s.schedule.length}, auto)`,
-                        } as CSSProperties
-                      }
-                      className="m-2 grid-rows-[--rows] space-y-2 py-3 md:m-0 md:grid md:grid-cols-4 md:px-0"
-                    >
-                      <div className="row-span-full flex flex-col justify-center py-5 md:py-0">
-                        <div
-                          className={`text-cente mx-auto ${
-                            idx_d % 2 ? "" : "inverted-vars"
-                          }`}
-                        >
-                          <StationIcon station={s.category} />
-                        </div>
-                        <h4 className="text-center text-xl md:text-2xl">
-                          {(s.category &&
-                            s.category in lang.programCategory &&
-                            lang.programCategory[
-                              s.category as keyof typeof lang.programCategory
-                            ]) ||
-                            ""}
-                        </h4>
+            )}
+            {lang.program.map((day, idx) => (
+              <React.Fragment key={day.title}>
+                {day.schedule.length > 0 && (
+                  <div
+                    className={`schedule absolute inset-0 top-4 flex flex-col ${idx !== tab ? "opacity-0" : ""}`}
+                  >
+                    <div className="card elevate relative z-10 m-3 flex flex-col justify-between rounded-2xl pb-4">
+                      <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
+                        <div className="col-span-2 col-start-3">10:00</div>
+                        {hours.map((h) => (
+                          <div className="col-span-2" key={h}>
+                            {h}:00
+                          </div>
+                        ))}
                       </div>
-                      {s.schedule.map((i) => (
-                        <Fragment key={`${i.title}-${i.time}`}>
-                          <dt
-                            className="text-xl font-bold md:text-2xl"
-                            id={`program-${sanitize(d.title)}-${sanitize(
-                              i.time,
-                            )}-${sanitize(i.title)}`}
+                      <div className="absolute inset-0 z-0 grid grid-cols-[repeat(20,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
+                        <div className="col-span-2 col-start-2"></div>
+                        {hours.map((h) => (
+                          <div className="col-span-2" key={h}></div>
+                        ))}
+                        <div />
+                      </div>
+                      {day.schedule.map((t: DaySchedule) => (
+                        <div
+                          key={t.track}
+                          className="program-track relative mx-4 grid grid-cols-[repeat(20,_minmax(0,_1fr))] gap-x-2 rounded-2xl py-4 text-xl"
+                        >
+                          <div
+                            className="col-span-3 row-start-1 flex flex-col items-center justify-center p-2 text-center"
+                            style={{ gridRowEnd: t.rows + 1 }}
                           >
-                            {i.time}
-                          </dt>
-                          <dd className="text-xl md:col-span-2 md:mt-0 md:text-2xl">
-                            {i.title}
-                            <a
-                              href={`#program-${sanitize(d.title)}-${sanitize(
-                                i.time,
-                              )}-${sanitize(i.title)}`}
-                              className="hidden-link ml-4 inline-block"
+                            <StationIcon station={t.track} />
+                            <h3>
+                              {
+                                lang.programCategory[
+                                  t.track as keyof typeof lang.programCategory
+                                ]
+                              }
+                            </h3>
+                          </div>
+                          {t.schedule.map((s, idx) => (
+                            <div
+                              key={`${lang.program[tab].title}_${s.title}_${idx}`}
+                              style={{
+                                gridColumnStart: `${(s.start - 10) * 2 + 4}`,
+                                gridColumnEnd: `${(s.end - 10) * 2 + 4}`,
+                              }}
                             >
-                              <LinkIcon />
-                            </a>
-                            <div className="text-lg">
-                              {"speakers" in i && i.speakers.join(", ")}
+                              <Modal
+                                title={s.title}
+                                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, facilis quasi repellendus optio possimus non veritatis tenetur illo voluptate quis?"
+                                speakers={
+                                  "speakers" in s ? s.speakers : undefined
+                                }
+                                schedule={lang.program.reduce((accP, day) => {
+                                  const fromDay = (
+                                    day.schedule as DaySchedule[]
+                                  ).reduce((accD, track) => {
+                                    const fromTrack = track.schedule.reduce(
+                                      (accT, item) => {
+                                        if (item.title === s.title) {
+                                          accT.push({
+                                            start: item.start,
+                                            end: item.end,
+                                            track:
+                                              track.track as keyof typeof lang.programCategory,
+                                            day: day.title,
+                                          });
+                                        }
+                                        return accT;
+                                      },
+                                      [] as ProgramItem[],
+                                    );
+                                    return [...accD, ...fromTrack];
+                                  }, [] as ProgramItem[]);
+                                  return [...accP, ...fromDay];
+                                }, [] as ProgramItem[])}
+                              >
+                                <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-left text-lg font-bold md:py-2">
+                                  {s.title}
+                                </div>
+                              </Modal>
                             </div>
-                            <div className="my-3 flex w-full justify-end gap-3">
-                              {"description" in i && (
-                                <Modal
-                                  title={i.title}
-                                  description={i.description}
-                                  speakers={i.speakers}
-                                />
-                              )}
-                              {"href" in i && (
-                                <a
-                                  className={`${
-                                    idx_d % 2 ? "" : "inverted-vars"
-                                  } inverted inline-block rounded-xl border border-current px-2 py-1 text-lg hover:opacity-80`}
-                                  href={i.href}
-                                  target="_blank"
-                                  rel="external"
-                                >
-                                  {lang.signUp}
-                                </a>
-                              )}
-                            </div>
-                          </dd>
-                        </Fragment>
+                          ))}
+                        </div>
                       ))}
                     </div>
-                  ))}
-                </dl>
-              </div>
-            </div>
-          ))}
-          <div className="pb-24 pt-5 text-2xl">
-            {lang.programSubjectToChange}
-          </div>
-        </>
-      ) : (
-        <div className="inverted min-h-[50vh] pt-32 text-3xl">
-          {lang.programLoadingText}
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </>
         </div>
-      )}
+      </div>
     </section>
   );
 };

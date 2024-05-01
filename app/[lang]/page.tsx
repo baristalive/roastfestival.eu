@@ -1,21 +1,20 @@
 "use client";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ColorResult, SketchPicker } from "react-color";
 
 import dictionaries, { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
-import { About } from "./sections/About";
-import { Filler } from "./sections/Filler";
+import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
-import { Sponsors } from "./sections/Sponsors";
+import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
-import { Footer } from "./sections/Footer";
+import { Footer } from "../components/Footer";
 import { Map } from "./sections/Map";
-import { BuyTickets } from "./sections/BuyTickets";
+import { BuyTickets } from "../components/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
+import { PreviousYears } from "./sections/PreviousYears";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -38,45 +37,28 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [divClass]);
-  const [color, setColor] = useState("rgb(255, 248, 0)")
 
-  const handleColorChange = (color: ColorResult) => {
-    setColor(color.hex)
-    document.documentElement.style.setProperty('--accent', color.hex);
-  }
   const usedLang = dictionaries[lang as SupportedLanguages];
 
   return (
-    <div className="wrapper">
-      <div className="lang inverted uppercase">
-        <Link href={lang === "cz" ? "./en" : "./cz"} rel="alternate">
-          {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
-        </Link>
-      </div>
-      <div className={`fixed right-4 top-16 z-10 ${divClass ? "" : "hidden"}`}>
-        <SketchPicker color={color} onChange={handleColorChange}/>
-      </div>
-      <div className={divClass ? "show" : "hide"}>
-        <div className="overlay" />
-        <div className="with-overlay">
-          <Header />
-          <About />
-          <Filler />
-          {/* <Sponsors /> */}
-          {usedLang.ready && <>
-            <BuyTickets className="inverted pt-64" />
-            <Program />
-            <BuyTickets />
-            <OtherServices />
-            <BuyTickets className="inverted" />
-            <PromotedRoasters />
-          </>
-          }
-          <Info />
-          {usedLang.ready && <BuyTickets className="inverted" /> }
-        </div>
-      </div>
+    <div className={`wrapper ${divClass ? "show" : "hide"}`}>
+      <Link
+        href={lang === "cz" ? "./en" : "./cz"}
+        rel="alternate"
+        className="lang inverted card z-50 text-lg lowercase"
+      >
+        {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
+      </Link>
+      <Header />
+      <Info />
+      <PreviousYears />
+      <Gallery />
+      <Colab />
+      <Program />
       <Map />
+      {/* <OtherServices />
+      <BuyTickets />
+      <PromotedRoasters /> */}
       <Organizers />
       <Footer />
     </div>

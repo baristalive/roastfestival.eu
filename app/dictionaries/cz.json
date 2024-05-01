@@ -1,16 +1,158 @@
 {
   "about": {
     "text": [
-      "Festival je brněnskou variací na evropské kávové festivaly. Inspiraci získáváme mezi etablovanými akcemi pořádanými například v Berlíně, Krakowě, Amsterdamu a v řadě dalších měst. První ročník přináší do Brna nejméně třicítku českých i zahraničních pražíren, které se představí na třech espresso a třech brew-barech v historickém prostoru brněnské Káznice. Těšit se můžete na řadu workshopů, přednášek, diskusí a soutěží. Pro baristy, pražiče a další kávové profesionály je navíc v sobotu připravena afterparty, s cílem propojení kontaktů, sdílení zkušeností a prohlubování vztahů.",
       "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
     ],
-    "title": "O festivalu"
+    "title": "Co je roast!?"
   },
-  "buyTickets": "Koupit vstupenky",
+  "back": "Zpět na hlavní stránku",
+  "buyTickets": "Chci vstupenky",
+  "colab": {
+    "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc. Třeba tě naše nabídka zaujme. A pokud ne, ozvi se nám na email, třeba něco vymyslíme.",
+    "exhibitors": {
+      "button": "Odeslat nabídku",
+      "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
+      "title": "Vystavovatelé"
+    },
+    "sponsors": {
+      "button": "Zjistit podrobnosti",
+      "text": "Jste firma, která ráda podpoří kulturní akci? Odměnou Vám může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
+      "title": "Sponzoři"
+    },
+    "title": "Spolupráce"
+  },
   "contact": "Kontakt",
-  "date": "16-17/9/2023",
+  "exhibitors": {
+    "cta": "Vyplnit přihlášku",
+    "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
+    "title": "Vystavovatelé"
+  },
+  "gastro": {
+    "content": [
+      {
+        "alt": "Punkt.",
+        "href": "https://www.facebook.com/punkt.cafe/",
+        "src": "/promoted/punkt.png",
+        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život.",
+        "title": "Sladký bar"
+      },
+      {
+        "alt": "Hodně někde",
+        "href": "https://www.instagram.com/hodnenekde/",
+        "src": "/promoted/hodne_nekde.png",
+        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný.",
+        "title": "Slaný bar"
+      },
+      {
+        "alt": "Stern",
+        "href": "https://www.pivovarstern.cz/",
+        "src": "/promoted/stern.png",
+        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek.",
+        "title": "Pivo"
+      },
+      {
+        "alt": "Klára Bára",
+        "href": "https://www.instagram.com/kbwinecafe/",
+        "src": "/promoted/klara_bara.png",
+        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé.",
+        "title": "Víno"
+      },
+      {
+        "alt": "Kolagen",
+        "href": "https://www.instagram.com/kolagen.cc",
+        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení.",
+        "title": "Míchané drinky"
+      },
+      {
+        "alt": "Oatly",
+        "href": "https://www.oatly.com/",
+        "src": "/promoted/oatly.png",
+        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly",
+        "title": "Mléko"
+      },
+      {
+        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!",
+        "title": "Swap hrníčků"
+      }
+    ],
+    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
+    "title": "Doprovodný program"
+  },
+  "info": [
+    {
+      "text": "Na našich barech se budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni!",
+      "title": "Espresso bary"
+    },
+    {
+      "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
+      "title": "Brew bary"
+    },
+    {
+      "text": "Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky.",
+      "title": "Workshopy a cuppingy"
+    },
+    {
+      "text": "Naši speciální hosté tě provedou zákoutími kávových technologií, chemie či kultury o kterých jsi možná ani nechtěl vědět, že existují. V kapli za hlavním sálem tě krom pohodlných křesílek budou čekat profesionálové nejen z kávové scény.",
+      "title": "Přednášky"
+    }
+  ],
+  "lastYear": {
+    "center": {
+      "description": "1. ročník",
+      "stat": 2023
+    },
+    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
+    "side": [
+      {
+        "description": "pražíren",
+        "props": {
+          "r": 12,
+          "x": 30,
+          "y": 12
+        },
+        "stat": 13
+      },
+      {
+        "description": "workshopů",
+        "props": {
+          "r": 12,
+          "x": 65,
+          "y": 22
+        },
+        "stat": 7
+      },
+      {
+        "description": "přednášky",
+        "props": {
+          "r": 12,
+          "x": 45,
+          "y": 45
+        },
+        "stat": 4
+      },
+      {
+        "description": "návštěvníků",
+        "props": {
+          "r": 17,
+          "x": 75,
+          "y": 75
+        },
+        "stat": ">300"
+      },
+      {
+        "description": "dny",
+        "props": {
+          "r": 12,
+          "x": 25,
+          "y": 82
+        },
+        "stat": 2
+      }
+    ],
+    "title": "Předchozí ročník"
+  },
+  "learnMore": "chci vědět víc",
   "location": {
-    "title": "Lokace",
     "addressTitle": "Adresa",
     "howToTitle": "Jak se na festival dostanete?",
     "means": {
@@ -19,11 +161,10 @@
     },
     "parking": {
       "lot": {
-        "title": "Parkoviště Bratislavská",
-        "description": "O víkendu zdarma"
+        "description": "O víkendu zdarma",
+        "title": "Parkoviště Bratislavská"
       },
       "zones": {
-        "title": "Parkování v městské zóně nebo na ulici",
         "pricing": [
           {
             "title": "Zóna B: O víkendu zdarma"
@@ -31,359 +172,50 @@
           {
             "title": "Zóna C: O víkendu zdarma"
           }
-        ]
+        ],
+        "title": "Parkování v městské zóně nebo na ulici"
       }
-    }
+    },
+    "title": "Místo konání"
   },
   "organizers": {
     "text": [
-      "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu evropských kávových festivalů. Jednotlivé členy našeho týmu můžete potkat za barem několika brněnských kavárnách, pražírnách, barech a dalších podnicích. Spojuje nás dohromady láska k výběrové kávě a gastronomii."
+      "Jsme skupina brněnských kávových nadšenců a profesionálů, která se rozhodla, že přinesou do Brna kulturu evropských kávových festivalů.",
+      "Jednotlivé členy našeho týmu můžete potkat za barem několika brněnských kavárnách, pražírnách, barech a dalších podnicích.",
+      "Spojuje nás dohromady láska k výběrové kávě a gastronomii."
     ],
     "title": "O nás"
   },
   "place": "Káznice, Brno",
-  "programCategory": {
-    "lecture": "Přednášky",
-    "workshop": "Workshop",
-    "espresso": "Espresso bar",
-    "espresso_milk": "Espresso bar s mlékem",
-    "brew": "Brew bar"
-  },
   "program": [
     {
-      "title": "Den 1",
-      "date": "16/9",
-      "schedule": [
-        {
-          "category": "espresso",
-          "schedule": [
-            {
-              "time": "11:00 - 14:00",
-              "title": "IG Coffee Roasters"
-            },
-            {
-              "time": "14:30 - 17:30",
-              "title": "IG Coffee Roasters"
-            }
-          ]
-        },
-        {
-          "category": "espresso_milk",
-          "schedule": [
-            {
-              "time": "10:30 - 13:00",
-              "title": "Kikafe"
-            },
-            {
-              "time": "11:00 - 14:00",
-              "title": "Chroast"
-            },
-            {
-              "time": "14:00 - 17:30",
-              "title": "The Roses"
-            },
-            {
-              "time": "14:30 - 17:30",
-              "title": "Punkt."
-            }
-          ]
-        },
-        {
-          "category": "brew",
-          "schedule": [
-            {
-              "time": "10:30 - 13:30",
-              "title": "Poppy Beans"
-            },
-            {
-              "time": "10:30 - 13:00",
-              "title": "Jizba Luhačovice"
-            },
-            {
-              "time": "11:00 - 14:00",
-              "title": "Mitte Coffee"
-            },
-            {
-              "time": "14:00 - 17:00",
-              "title": "Penerini"
-            },
-            {
-              "time": "14:00 - 17:30",
-              "title": "Mima Coffee Roastery"
-            },
-            {
-              "time": "14:30 - 17:30",
-              "title": "Veroni"
-            }
-          ]
-        },
-        {
-          "category": "lecture",
-          "schedule": [
-            {
-              "time": "11:30 - 13:30",
-              "title": "Kávové experimenty a přátelství - zkušenosti Chicas Industry z Kolumbie",
-              "speakers": [
-                "Karolína Nekvindová",
-                "Tereza Prejdová"
-              ],
-              "description": "Chcete zjistit, kdo tvoří tým Chicas Industry a jaká je náplň práce importéra zeleného zrna? Dozvíte se, které aspekty jejich práce jsou žádoucí a které naopak nepříjemné. Představí, od koho odebírají zelené zrno a proč spolupracují právě s těmito konkrétními farmáři. Zjistíte, jak se mohou pěstitelé s importéry vzájemně inspirovat a jak udržují přátelství přes půlku světa."
-            },
-            {
-              "time": "14:00 - 16:00",
-              "title": "Účast na World Brewers Cup Milano & Melbourne",
-              "speakers": [
-                "Tomáš Taussig"
-              ],
-              "description": "Dvojnásobný vítěz národního kola Brewers Cup a majitel ostravské pražírny Coffee Culture o jeho cestě přes půl světa na mistrovství světa, spolu s tipy pro budoucí soutěžící."
-            }
-          ]
-        },
-        {
-          "category": "workshop",
-          "schedule": [
-            {
-              "time": "12:30 - 13:30",
-              "title": "Coffee Culture: Cupping",
-              "description": "Produkční cupping Coffee Culture pod taktovkou vítěze Czech Brewers Cup 2020 a 2022 Tomáše Tussiga. Těšit se můžete na profesionální ochutnávku káv od pražírny Coffee Culture se vším všudy a tak jak má být.",
-              "speakers": [
-                "Tomáš Taussig"
-              ]
-            },
-            {
-              "time": "14:00 - 17:00",
-              "title": "Upražte si vlastní kafe s Chickas Industry",
-              "description": "Ano, čteš to správně. Opravdu si zde můžeš upražit vlastní kávu a vzít si ji domů. Tento workshop nabízí unikátní hands-on experience pod vedením pravých profesionálů - importérek zelené kávy z Chicas Industry.",
-              "speakers": [
-                "Karolína Nekvindová",
-                "Patrik Sláma",
-                "Tereza Prejdová"
-              ]
-            }
-          ]
-        }
-      ]
+      "date": "21/9",
+      "schedule": [],
+      "title": "Den 1"
     },
     {
-      "title": "Den 2",
-      "date": "17/9",
-      "schedule": [
-        {
-          "category": "espresso",
-          "schedule": [
-            {
-              "time": "10:30 - 13:00",
-              "title": "Workshop: Espresso"
-            },
-            {
-              "time": "13:30 - 16:30",
-              "title": "Penerini"
-            }
-          ]
-        },
-        {
-          "category": "espresso_milk",
-          "schedule": [
-            {
-              "time": "10:30 - 13:30",
-              "title": "Poppy Beans"
-            },
-            {
-              "time": "11:00 - 14:00",
-              "title": "Mitte Coffee"
-            },
-            {
-              "time": "14:00 - 17:00",
-              "title": "Veroni"
-            },
-            {
-              "time": "14:30 - 17:00",
-              "title": "Traffic Coffee"
-            }
-          ]
-        },
-        {
-          "category": "brew",
-          "schedule": [
-            {
-              "time": "10:30 - 13:30",
-              "title": "Punkt."
-            },
-            {
-              "time": "11:00 - 14:00",
-              "title": "Kaldi"
-            },
-            {
-              "time": "10:30 - 13:00",
-              "title": "IG Coffee Roasters"
-            },
-            {
-              "time": "13:30 - 16:30",
-              "title": "The Roses"
-            },
-            {
-              "time": "14:00 - 17:00",
-              "title": "Diamond's Coffee"
-            }
-          ]
-        },
-        {
-          "category": "lecture",
-          "schedule": [
-            {
-              "time": "11:30 - 13:30",
-              "title": "Diskuze: Jak si neotevřít kavárnu",
-              "speakers": [
-                "Klára Dutkiewič",
-                "Marek Knopp",
-                "Martin Sienty",
-                "Vojtěch Růžička"
-              ],
-              "description": "Čtveřice majitelů kaváren v diskusi, proč si rozhodně neotevírat kavárnu, proč by už to nikdy neudělali a proč si stejně dál otevírají další pobočky."
-            },
-            {
-              "time": "14:00 - 16:00",
-              "title": "Trendy a mýty ve specialty coffee",
-              "speakers": [
-                "Alan Jarrar"
-              ],
-              "description": "Alan Jarrar, majitel a pražič Jokes Aside Coffee a zároveň kavárny Stav se vystoupí na festivalu Roast! s jeho, řekněmě trošku kontroverznějšími tématy. Zajímá tě víc? Stav se!"
-            }
-          ]
-        },
-        {
-          "category": "workshop",
-          "schedule": [
-            {
-              "time": "11:00 - 12:00",
-              "title": "Úvod do cuppingu",
-              "description": "Znáte slovo 'cupping'? Pokud ne, nevadí! Tato akce je právě pro vás! Přidejte se k nám, a společně se ponoříme do fascinujícího světa kávového ochutnávání. Povíme si, jak takový cupping probíhá, co a jakými smysly vnímáme a následně to na sobě všechno i vyzkoušíme.",
-              "speakers": [
-                "Natálie Růžičková"
-              ]
-            },
-            {
-              "time": "12:30 - 13:30",
-              "title": "Cupping bezkofeinových káv",
-              "description": "Myslíte si, že jsou všechny bezkofeinové kávy stejné? Tak to přijďte otestovat! Káva bez kofeinu to není jen podřadná a opovrhovaná náhražka pro slabé povahy, ale vlastně docela komplexní záležitost, díky která vznikají i zajímavé chuťové zážitky. Tento cupping je vhodný pro milovníky kávy, kteří však neholdují kofeinu.",
-              "speakers": [
-                "Natálie Růžičková"
-              ]
-            },
-            {
-              "time": "14:00 - 15:00",
-              "title": "Úvod do alternativních příprav a jejich srovnání",
-              "description": "V60, Kalita, Aeropress, Aeropress obrácený, Chemex, Džezva, CleverDrip, Vaccumpot, Origami, Frenchpress, Moccamaster, Moccamaster one... znáte další? Máte doma nějakou obskurnost a chcete se o ni podělit? Chceš-li se dozvědět o přípravě kávy na všechny možné způsoby, tohle je workshop přímo pro tebe.",
-              "speakers": [
-                "Martin Dutkiewič"
-              ]
-            },
-            {
-              "time": "15:30 - 16:30",
-              "title": "Senzorické vlastnosti vína a kávy",
-              "description": "Víno a káva si jsou si bližší než byste čekali. Všimli jste si třeba někdy, že chuťové popisky na etiketách vín i káv jsou si až podezřele podobné? A co má takový profesionální someliér společného s vítězem Cup Tasters? Přijďte hledat chutě nejen ve víně.",
-              "speakers": [
-                "Petr Chaloupek",
-                "Josef Kučera"
-              ]
-            }
-          ]
-        }
-      ]
+      "date": "22/9",
+      "schedule": [],
+      "title": "Den 2"
     }
   ],
-  "programReadyText": "Program je již řádně upražen!",
+  "programCategory": {
+    "brew": "Brew bar",
+    "espresso": "Espresso bar",
+    "espresso_milk": "Espresso bar s mlékem",
+    "lecture": "Přednášky",
+    "workshop": "Workshop"
+  },
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
+  "programReadyText": "Program je již řádně upražen!",
   "programSubjectToChange": "Změna programu vyhrazena",
-  "tickets": "Vstupenky",
-  "title": "Coffee roasters festival in Brno",
-  "sponsors": {
-    "title": "Sponzoři",
-    "add": "Stát se sponzorem"
-  },
   "promotedRoasters": {
-    "title": "Pražírny",
-    "text": [
-      "Mimo jiné se můžete těšit na prezentaci následujících pražíren."
-    ]
+    "text": ["Mimo jiné se můžete těšit na prezentaci následujících pražíren."],
+    "title": "Pražírny"
   },
-  "learnMore": "chci vědět víc",
-  "info": [
-    {
-      "title": "Co je Roast!? A co od něj mohu čekat?",
-      "text": "V ceně vstupného je zahrnuta veškerá konzumace kávy, kterou ochutnáte na našich espresso a brew barech a vstup na všechny workshopy, přednášky i cuppingy. Kávu pražíren, která ti zachutná, poté můžeš zakoupit buď přímo na barech, nebo v prodejním stánku."
-    },
-    {
-      "title": "Espresso bary",
-      "text": "Na našich barech se v určitých časových úsecích budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni! Na všech barech bude varianta ovesného mléka od OATLY."
-    },
-    {
-      "title": "Brew bary",
-      "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům."
-    },
-    {
-      "title": "Workshopy a cuppingy",
-      "text": "Neznáš termín cupping? Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Výborně! Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky."
-    },
-    {
-      "title": "Přednášky",
-      "text": "Zajímá tě, čím si majitelé etablovaných podniků museli projít, když otevírali své kamenné děťátko? Chtěl/a by si vědět, jak funguje pražení nebo jaký je rozdíl mezi odpalovaným a kynutým těstem, které najdeš na pultu každého druhého podniku? Potom jsou pro tebe určené přednášky našich speciálních hostů."
-    },
-    {
-      "title": "Máš už dost kafe?",
-      "text": "Dej si drink, pivko nebo domací limču. A na sladkém a slaném stánku jsou pro tebe k zakousnutí připraveny nejen sendviče, nebo věnečky se slaným karamelem!"
-    }
-  ],
   "signUp": "Přihlásit se",
-  "gastro": {
-    "title": "Doprovodný program",
-    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
-    "content": [
-      {
-        "title": "Sladký bar",
-        "href": "https://www.facebook.com/punkt.cafe/",
-        "src": "/promoted/punkt.png",
-        "alt": "Punkt.",
-        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život."
-      },
-      {
-        "title": "Slaný bar",
-        "href": "https://www.instagram.com/hodnenekde/",
-        "src": "/promoted/hodne_nekde.png",
-        "alt": "Hodně někde",
-        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný."
-      },
-      {
-        "title": "Pivo",
-        "href": "https://www.pivovarstern.cz/",
-        "src": "/promoted/stern.png",
-        "alt": "Stern",
-        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek."
-      },
-      {
-        "title": "Víno",
-        "href": "https://www.instagram.com/kbwinecafe/",
-        "src": "/promoted/klara_bara.png",
-        "alt": "Klára Bára",
-        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé."
-      },
-      {
-        "title": "Míchané drinky",
-        "href": "https://www.instagram.com/kolagen.cc",
-        "alt": "Kolagen",
-        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení."
-      },
-      {
-        "title": "Mléko",
-        "href": "https://www.oatly.com/",
-        "src": "/promoted/oatly.png",
-        "alt": "Oatly",
-        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly"
-      },
-      {
-        "title": "Swap hrníčků",
-        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!"
-      }
-    ]
-  }
+  "sponsors": {
+    "cta": "Napište nám"
+  },
+  "tickets": "Vstupenky"
 }
