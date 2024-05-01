@@ -84,6 +84,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         />
       );
     },
+    a: ({children, ...rest}: PropsWithChildren) => (
+      <a className="font-bold text-[var(--primary)] underline" {...rest}>{children}</a>
+    ),
     ...components,
   };
 }
