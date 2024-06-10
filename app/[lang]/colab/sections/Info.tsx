@@ -48,6 +48,7 @@ export const Info = () => {
               <a
                 href={lang.exhibitors.formLink}
                 rel="external"
+                target="_blank"
                 className="flex h-full flex-col items-center justify-center p-4"
               >
                 <div className="text-6xl">

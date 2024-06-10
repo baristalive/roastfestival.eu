@@ -25,7 +25,8 @@
   "exhibitors": {
     "cta": "Sign up",
     "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
-    "title": "Exhibitors"
+    "title": "Exhibitors",
+    "formLink": "https://forms.gle/TvyZWFom4u763MnG6"
   },
   "gastro": {
     "content": [

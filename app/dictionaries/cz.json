@@ -25,7 +25,8 @@
   "exhibitors": {
     "cta": "Vyplnit přihlášku",
     "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
-    "title": "Vystavovatelé"
+    "title": "Vystavovatelé",
+    "formLink": "https://forms.gle/G6svTJgvdovKcMdo6"
   },
   "gastro": {
     "content": [
