@@ -11,10 +11,10 @@ import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "../components/Footer";
 import { Map } from "./sections/Map";
-import { BuyTickets } from "../components/BuyTickets";
 import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
+import { Tickets } from "./sections/Tickets";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -51,6 +51,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       </Link>
       <Header />
       <Info />
+      <Tickets />
       <PreviousYears />
       <Gallery />
       <Colab />

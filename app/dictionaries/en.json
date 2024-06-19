@@ -218,7 +218,82 @@
   },
   "signUp": "Sign up",
   "sponsors": {
-    "cta": "Concact us"
+    "cta": "Contact us"
   },
-  "tickets": "Tickets"
+  "tickets": {
+    "title": "Tickets",
+    "discounted": "Discounted",
+    "timeLeft": "Time left:",
+    "soonAvailable": "Available from",
+    "soldOut": "Sold out",
+    "priceList": [
+      {
+        "availability": {
+          "end": "2024-07-01"
+        },
+        "subheading": "Pre-sale",
+        "heading": ["1", {"superscript":"st"}, " ", "Crack"],
+        "prices": [
+          {
+            "title": "Full event",
+            "full": 400,
+            "discounted": 300
+          },
+          {
+            "title": "Saturday",
+            "full": 300,
+            "discounted": 250
+          },
+          {
+            "title": "Sunday",
+            "full": 250,
+            "discounted": 250
+          }
+        ]
+      },
+      {
+        "availability": {
+          "start": "2024-07-01",
+          "end": "2024-09-19"
+        },
+        "subheading": "Pre-sale",
+        "heading": ["2", {"superscript":"nd"}, " ", "Crack"],
+        "prices": [
+          {
+            "title": "Full event",
+            "full": 450,
+            "discounted": 350
+          },
+          {
+            "title": "Saturday",
+            "full": 350,
+            "discounted": 300
+          },
+          {
+            "title": "Sunday",
+            "full": 300
+          }
+        ]
+      },
+      {
+        "heading": ["Walk-up"],
+        "prices": [
+          {
+            "title": "Full event",
+            "full": 500,
+            "discounted": 400
+          },
+          {
+            "title": "Saturday",
+            "full": 400,
+            "discounted": 350
+          },
+          {
+            "title": "Sunday",
+            "full": 350
+          }
+        ]
+      }
+    ]
+  }
 }

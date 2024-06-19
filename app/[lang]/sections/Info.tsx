@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Bar from "@/app/components/Bar";
-import { BuyTickets } from "@/app/components/BuyTickets";
 
 export const Info = () => {
   const params = useParams();

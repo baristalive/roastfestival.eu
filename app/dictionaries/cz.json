@@ -218,5 +218,79 @@
   "sponsors": {
     "cta": "Napište nám"
   },
-  "tickets": "Vstupenky"
+  "tickets": {
+    "title": "Vstupenky",
+    "discounted": "Snížená",
+    "timeLeft": "Zbývá",
+    "soonAvailable": "Dostupné od",
+    "soldOut": "Vyprodáno",
+    "priceList": [
+      {
+        "availability": {
+          "end": "2024-07-01"
+        },
+        "subheading": "Předprodej",
+        "heading": ["1", {"superscript":"st"}, " ", "Crack"],
+        "prices": [
+          {
+            "title": "Celofestivalová",
+            "full": 400,
+            "discounted": 300
+          },
+          {
+            "title": "Sobota",
+            "full": 300,
+            "discounted": 250
+          },
+          {
+            "title": "Neděle",
+            "full": 250
+          }
+        ]
+      },
+      {
+        "availability": {
+          "start": "2024-07-01",
+          "end": "2024-09-19"
+        },
+        "subheading": "Předprodej",
+        "heading": ["2", {"superscript":"nd"}, " ", "Crack"],
+        "prices": [
+          {
+            "title": "Celofestivalová",
+            "full": 450,
+            "discounted": 350
+          },
+          {
+            "title": "Sobota",
+            "full": 350,
+            "discounted": 300
+          },
+          {
+            "title": "Neděle",
+            "full": 300
+          }
+        ]
+      },
+      {
+        "heading": ["Na místě"],
+        "prices": [
+          {
+            "title": "Celofestivalová",
+            "full": 500,
+            "discounted": 400
+          },
+          {
+            "title": "Sobota",
+            "full": 400,
+            "discounted": 350
+          },
+          {
+            "title": "Neděle",
+            "full": 350
+          }
+        ]
+      }
+    ]
+  }
 }
