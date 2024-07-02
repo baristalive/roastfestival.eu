@@ -17,12 +17,12 @@ export const PromotedRoasters = () => {
 
   return (
     <section className="watermark5 pb-48" id="promoted" ref={ref}>
-      <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
+      <div className="grid max-w-[1900px] mx-auto items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.promoted.roasters.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
+          <div className="space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.promoted.roasters.text.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -51,12 +51,12 @@ export const PromotedRoasters = () => {
           ))}
         <div className="p-2 text-2xl">a další...</div>
       </div>
-      <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
+      <div className="grid mx-auto max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.promoted.others.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
+          <div className="space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.promoted.others.text.map((p) => (
               <p key={p}>{p}</p>
             ))}
