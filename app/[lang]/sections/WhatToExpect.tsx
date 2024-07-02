@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import BeanIcon from "@/app/icons/icon";
+import BeanIcon from "@/app/icons/beanicon";
 
 export const WhatToExpect = () => {
   const params = useParams();

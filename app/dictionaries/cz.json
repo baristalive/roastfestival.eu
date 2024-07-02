@@ -28,56 +28,17 @@
     "title": "Vystavovatelé",
     "formLink": "https://forms.gle/G6svTJgvdovKcMdo6"
   },
-  "gastro": {
-    "content": [
-      {
-        "alt": "Punkt.",
-        "href": "https://www.facebook.com/punkt.cafe/",
-        "src": "/promoted/punkt.png",
-        "text": "Kavárna Punkt. se ráda pyšní tím, že si všechny své sladké dobroty peče sám. Přijď ochutnat a osladit si život.",
-        "title": "Sladký bar"
-      },
-      {
-        "alt": "Hodně někde",
-        "href": "https://www.instagram.com/hodnenekde/",
-        "src": "/promoted/hodne_nekde.png",
-        "text": "Kde? U nás na Roastu! Kolik? Fakt hodně. A bude to prý i slaný.",
-        "title": "Slaný bar"
-      },
-      {
-        "alt": "Stern",
-        "href": "https://www.pivovarstern.cz/",
-        "src": "/promoted/stern.png",
-        "text": "Festival bez piva není festival. Ať už bude žízeň, chuť nebo budeš potřebovat jen utéct od kafe, máme pro tebe alternativu v podobě točeného pivka od pivovaru Stern! Krýgl vlastní a nebo ti zapůjčíme znovupoužitelný zálohovaný kelímek.",
-        "title": "Pivo"
-      },
-      {
-        "alt": "Klára Bára",
-        "href": "https://www.instagram.com/kbwinecafe/",
-        "src": "/promoted/klara_bara.png",
-        "text": "Lidstvo zná víno mnohem déle než kávu. Máš-li chuť na návrat k bobulím, ochutnej víno od Kláry a nebo si dej to od Báry. Obě budou skvělé.",
-        "title": "Víno"
-      },
-      {
-        "alt": "Kolagen",
-        "href": "https://www.instagram.com/kolagen.cc",
-        "text": "Kolagen je bar, drinkový catering a plno věcí k tomu. Jediný, co mu chybí, je domov, tak je doma všude, kam si ho pozvou. Vystrkuje růžky kdekoli, kde má smysl dělat zajímavý drinky. Hraje si s netradičními technikami a absurdními nápady, ale vše podřizuje tomu, aby hosté i jejich mámy odcházeli spokojení.",
-        "title": "Míchané drinky"
-      },
-      {
-        "alt": "Oatly",
-        "href": "https://www.oatly.com/",
-        "src": "/promoted/oatly.png",
-        "text": "Ať z jakéhokoliv důvodu upřednostňuješ rostlinnou alternativu mléka před kravským, myslíme na tebe! Na všech kávových barech bude připravena zásoba ovesného mléka od Oatly",
-        "title": "Mléko"
-      },
-      {
-        "text": "Obnov svou sbírku hrníčků, vyber doma ty, co už nepoužíváš a vyměň je v našem hrníčkovém swapu!",
-        "title": "Swap hrníčků"
-      }
-    ],
-    "text": "Kromě kávového programu se můžeš behem festivalu oddávat i dalším činnostem. Navštiv Sladký bar nebo si dej míchaný drink ať nabereš síly na další kávové zážitky.",
-    "title": "Doprovodný program"
+  "promoted": {
+    "roasters": {
+      "title": "Pražírny na Roastu",
+      "text": [
+        "V tuto chvíli potvrdily svou účast následující pražírny. A další budou přibývat. Pokud Vám zde Vaše oblíbená pražírna schází, napište jim o nás!"
+      ]
+    },
+    "others": {
+      "title": "Doprovodný program",
+      "text": ["Občerstvení a další doprovodný program pro Vás zajišťují mimo jiné následující partneři."]
+    }
   },
   "info": [
     {

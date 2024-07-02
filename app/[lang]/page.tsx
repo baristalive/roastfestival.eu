@@ -11,7 +11,6 @@ import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "../components/Footer";
 import { Map } from "./sections/Map";
-import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
@@ -59,6 +58,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       <Colab />
       <Program />
       {/* <Map /> */}
+      <PromotedRoasters />
       <Organizers />
       <Footer />
     </div>
