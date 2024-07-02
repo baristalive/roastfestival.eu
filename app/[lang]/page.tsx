@@ -57,8 +57,8 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       <Gallery />
       <Colab />
       <Program />
-      {/* <Map /> */}
       <PromotedRoasters />
+      <Map />
       <Organizers />
       <Footer />
     </div>
