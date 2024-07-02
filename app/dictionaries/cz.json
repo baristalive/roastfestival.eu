@@ -1,7 +1,7 @@
 {
   "about": {
     "text": [
-      "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
+      "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na Vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
     ],
     "title": "Co je roast!?"
   },
@@ -211,15 +211,75 @@
   "programReadyText": "Program je již řádně upražen!",
   "programSubjectToChange": "Změna programu vyhrazena",
   "promotedRoasters": {
-    "text": ["Mimo jiné se můžete těšit na prezentaci následujících pražíren."],
+    "text": [
+      "Mimo jiné se můžete těšit na prezentaci následujících pražíren."
+    ],
     "title": "Pražírny"
   },
   "signUp": "Přihlásit se",
   "sponsors": {
     "cta": "Napište nám"
   },
+  "whatToExpect": {
+    "title": "Co čekat od Roastu?",
+    "content": [
+      {
+        "title": "Hlavní program",
+        "items": [
+          {
+            "title": "Neomezená konzumace kávy",
+            "text": "V ceně vstupného můžete dosytosti ochutnávat kávy od všech přítomných pražíren po celou dobu konání festivalu."
+          },
+          {
+            "title": "Přednášky",
+            "text": "Čekají Vás přednášky od známých kavárníků, pražíčů kávy a jiných osobností z branže. Využijte jedinečnou možnost setkat se s těmi, díky kterým si u nás můžete užívat výběrovou kávu. Vstup na přednášky je v ceně vstupného."
+          },
+          {
+            "title": "Workshopy",
+            "text": "Vyzkoušejte si různé metody přípravy kávy nebo si upražte vlastní kávu. Vstup na workshopy je kapacitně omezen, proto přijďte včas. Účast na workshopech je v ceně vstupného."
+          },
+          {
+            "title": "Cuppingy",
+            "text": "Zajímá Vás, jak vznikají chuťové popisy jednotlivých káv? Přijďte ochutnat kávu tak, jak ji ochutnávají a hodnotí profesionálové. Účast je v ceně vstupného."
+          },
+          {
+            "title": "Kelímky a hrníčky",
+            "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach kelímků, tak abyste si mohli vychutnat kávu pokaždé z čistého kelímku."
+          }
+        ]
+      },
+      {
+        "title": "Doprovodný program",
+        "items": [
+          {
+            "title": "Chill-out zóna",
+            "text": "Pokud si chcete během festivalu trochu oddechnout, máme pro Vás připravenou odpočinkou zónu s lehátky a posezením."
+          },
+          {
+            "title": "Občerstvení",
+            "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
+          },
+          {
+            "title": "Výběrová káva v prodeji",
+            "text": "Během prezentace jednotlivých pražíren máte možnost zakoupit si jejich kávu. Nestihli jste Vaši oblíbenou kávu zrovna na mlýnku? Nezoufejte, kávu od všech pražíren bude možné zakoupit po celou dobu festivalu na centrálním prodejním stánku."
+          },
+          {
+            "title": "Festivalový merch",
+            "text": "Stejně jako kávu, máme v nabídce ke koupi i různý další kávový sortiment. A navíc i speciální merch festivalu Roast!"
+          }
+        ]
+      }
+    ]
+  },
   "tickets": {
     "title": "Vstupenky",
+    "text": [
+      "Neomezená konzumace kávy",
+      "Účast na workshopech (dle kapacity místnostní)",
+      "Vstup na přednášky",
+      "Sleva pro studenty",
+      "Sleva pro ZTP/P"
+    ],
     "discounted": "Snížená",
     "timeLeft": "Zbývá",
     "soonAvailable": "Dostupné od",
@@ -227,10 +287,17 @@
     "priceList": [
       {
         "availability": {
-          "end": "2024-07-01"
+          "end": "2024-07-07"
         },
         "subheading": "Předprodej",
-        "heading": ["1", {"superscript":"st"}, " ", "Crack"],
+        "heading": [
+          "1",
+          {
+            "superscript": "st"
+          },
+          " ",
+          "Crack"
+        ],
         "prices": [
           {
             "title": "Celofestivalová",
@@ -250,11 +317,18 @@
       },
       {
         "availability": {
-          "start": "2024-07-01",
-          "end": "2024-09-19"
+          "start": "2024-07-07",
+          "end": "2024-09-20"
         },
         "subheading": "Předprodej",
-        "heading": ["2", {"superscript":"nd"}, " ", "Crack"],
+        "heading": [
+          "2",
+          {
+            "superscript": "nd"
+          },
+          " ",
+          "Crack"
+        ],
         "prices": [
           {
             "title": "Celofestivalová",
@@ -273,7 +347,10 @@
         ]
       },
       {
-        "heading": ["Na místě"],
+        "subheading": "Poslední možnost",
+        "heading": [
+          "Na místě"
+        ],
         "prices": [
           {
             "title": "Celofestivalová",

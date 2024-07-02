@@ -160,7 +160,9 @@ footer {
     radial-gradient(circle at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 31%),
     var(--primary);
 }
-.previous-year-section {
+.previous-year-section,
+.ticket-section,
+.what-to-expect-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -237,22 +239,28 @@ svg.elevate {
   filter: drop-shadow(0 0 0 var(--background));
 }
 .beans {
-  background: url("/beans.svg") center 1px/cover no-repeat;
+  background: url("/beans.svg") center 1px / cover no-repeat;
+}
+.large-bean {
+  background: url("./icon.svg") left top/contain no-repeat;
+  padding: 30% 0 10% 35%;
 }
 .availability__soon {
-  opacity: .5;
+  opacity: 0.5;
 }
-.availability__sold-out, .availability__sold-out {
+.availability__sold-out,
+.availability__sold-out {
   position: relative;
-  opacity: .5;
+  opacity: 0.5;
 }
-.availability__sold-out::before, .availability__sold-out::before {
+.availability__sold-out::before,
+.availability__sold-out::before {
   position: absolute;
   content: "";
   left: -1rem;
   right: -1rem;
   top: 50%;
-  border-top: .2rem solid var(--black);
+  border-top: 0.2rem solid var(--black);
   transform: rotate(3deg);
 }
 
@@ -510,22 +518,18 @@ ol.round-counter li {
   align-items: center;
   justify-content: flex-start;
 }
-@media (min-width: 768px) {
-  ol.round-counter li {
-    margin: 3rem 0;
-  }
-}
+
 ol.round-counter li::before {
   content: counter(round-counter);
   font-variant-numeric: tabular-nums;
   display: block;
-  margin-right: 2rem;
-  height: 4rem;
-  width: 4rem;
-  min-width: 4rem;
-  padding: 1.2rem;
-  line-height: 1.5rem;
-  font-size: 2.5rem;
+  margin-right: 1em;
+  height: 2em;
+  width: 2em;
+  min-width: 2em;
+  padding: 0.3em 0.75em;
+  line-height: 1.5em;
+  font-size: 1em;
   color: var(--white);
   background: var(--black);
   border-radius: 50%;

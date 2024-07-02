@@ -220,8 +220,64 @@
   "sponsors": {
     "cta": "Contact us"
   },
+  "whatToExpect": {
+    "title": "What to expect?",
+    "content": [
+      {
+        "title": "Main program",
+        "items": [
+          {
+            "title": "Unlimited coffee consumption",
+            "text": "With the price of admission, you can sample coffees from all the roasters present throughout the festival."
+          },
+          {
+            "title": "Lectures",
+            "text": "You can expect lectures from well-known café owners, coffee roasters and other personalities from the industry. Take the unique opportunity to meet those who make it possible for you to enjoy the finest coffee. Admission to the lectures is included in the price of admission."
+          },
+          {
+            "title": "Workshops",
+            "text": "Try out different coffee brewing methods or roast your own coffee. Capacity of the workshops is limited, so come early. Participation in the workshops is included in the price of admission."
+          },
+          {
+            "title": "Cuppings",
+            "text": "Are you curious about how the taste descriptions of individual coffees are created? Come and taste coffee as it is tasted and evaluated by professionals. Participation is included in the price of admission."
+          },
+          {
+            "title": "Cups and mugs",
+            "text": "We have back-up coffee and beer cups for each participant. A deposit is paid on site. Of course there is a cup rinse available free of charge so you can enjoy your coffee from a clean cup every time."
+          }
+        ]
+      },
+      {
+        "title": "Accompanying program",
+        "items": [
+          {
+            "title": "Chill-out zone",
+            "text": "If you want to relax during the festival, we have a relaxation area with deck chairs and seating."
+          },
+          {
+            "title": "Snack bar",
+            "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
+          },
+          {
+            "title": "Specialty coffee to buy",
+            "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
+          },
+          {
+            "title": "Festival merchandise",
+            "text": "As well as coffee, we also have various other coffee products available for purchase. Plus, special Roast! Festival merch."
+          }
+        ]
+      }
+    ]
+  },
   "tickets": {
     "title": "Tickets",
+    "text": [
+      "We offer tickets for the whole festival as well as for individual days.",
+      "The price includes unlimited coffee, entry to workshops (depending on room capacity) and lectures",
+      "A discount on the entrance fee is available for students and ZTP/P (severe health disability requiring special care)."
+    ],
     "discounted": "Discounted",
     "timeLeft": "Time left:",
     "soonAvailable": "Available from",
@@ -229,10 +285,17 @@
     "priceList": [
       {
         "availability": {
-          "end": "2024-07-01"
+          "end": "2024-07-07"
         },
         "subheading": "Pre-sale",
-        "heading": ["1", {"superscript":"st"}, " ", "Crack"],
+        "heading": [
+          "1",
+          {
+            "superscript": "st"
+          },
+          " ",
+          "Crack"
+        ],
         "prices": [
           {
             "title": "Full event",
@@ -253,11 +316,18 @@
       },
       {
         "availability": {
-          "start": "2024-07-01",
+          "start": "2024-07-07",
           "end": "2024-09-19"
         },
         "subheading": "Pre-sale",
-        "heading": ["2", {"superscript":"nd"}, " ", "Crack"],
+        "heading": [
+          "2",
+          {
+            "superscript": "nd"
+          },
+          " ",
+          "Crack"
+        ],
         "prices": [
           {
             "title": "Full event",
@@ -276,7 +346,10 @@
         ]
       },
       {
-        "heading": ["Walk-up"],
+        "subheading": "Last chance",
+        "heading": [
+          "Walk-up"
+        ],
         "prices": [
           {
             "title": "Full event",

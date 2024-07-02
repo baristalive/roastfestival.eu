@@ -15,6 +15,7 @@ import { OtherServices } from "./sections/OtherServices";
 import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
+import { WhatToExpect } from "./sections/WhatToExpect";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -51,15 +52,13 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       </Link>
       <Header />
       <Info />
+      <WhatToExpect />
       <Tickets />
       <PreviousYears />
       <Gallery />
       <Colab />
       <Program />
-      <Map />
-      {/* <OtherServices />
-      <BuyTickets />
-      <PromotedRoasters /> */}
+      {/* <Map /> */}
       <Organizers />
       <Footer />
     </div>

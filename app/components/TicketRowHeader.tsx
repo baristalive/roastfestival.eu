@@ -32,9 +32,9 @@ export const TicketRowHeader = ({
 
   return (
     <div className="flex lg:flex-col flex-col md:flex-row items-center lg:items-start gap-2 pt-4 lg:mr-20 2xl:pt-8">
-      {subheading && (
+      {subheading ? (
         <h4 className="text-xl hidden lg:block font-bold 2xl:text-2xl">{subheading}</h4>
-      )}
+      ) : <div className="hidden lg:block h-7 2xl:h-8" />}
       <h3 className="text-3xl font-bold 2xl:text-6xl">
         {heading.map((el, idx) =>
           typeof el === "object" && el?.superscript ? (
@@ -46,9 +46,6 @@ export const TicketRowHeader = ({
           ),
         )}
       </h3>
-      {/* {subheading && (
-        <h4 className="text-xl lg:hidden font-bold 2xl:text-2xl">{subheading}</h4>
-      )} */}
       {availability !== Availability.Available && (
         <div className="rounded-full bg-[var(--black)] lg:px-4 px-2 lg:py-1 lg:text-base text-sm text-[var(--white)]">
           {chipTexts[availability]}

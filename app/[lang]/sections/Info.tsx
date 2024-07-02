@@ -59,11 +59,11 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark flex min-h-screen flex-col items-center justify-between gap-8 pb-4"
+      className="info-section watermark flex min-h-screen flex-col items-center justify-between gap-8"
     >
       <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="w-3/4 pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
+          <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.about.title}
           </h2>
           <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
@@ -94,7 +94,6 @@ export const Info = () => {
           ))}
         </div>
       </div>
-      {/* <BuyTickets /> */}
     </section>
   );
 };

@@ -16,7 +16,7 @@ export const TicketCard = ({
   if (availability === Availability.AvailableNow) {
     return (
       <a href={href} target="_blank" rel="external" className="h-full">
-        <div className="flex flex-col rounded-2xl text-center transition-transform duration-200 hover:scale-110">
+        <div className="flex flex-col rounded-2xl text-center nav">
           <div className="card elevate flex flex-col items-start justify-center gap-2 rounded-t-2xl px-4 2xl:px-8 pt-4 2xl:pt-8 pb-2 2xl:pb-0">
             {title && (
               <span className="text-xl font-bold 2xl:text-2xl">{title}</span>
