@@ -58,6 +58,11 @@
           "href": "https://poppybeans.cz/",
           "src": "/promoted/poppy_beans.png",
           "alt": "Poppy Beans"
+        },
+        {
+          "href": "https://kafepikola.cz",
+          "src": "/promoted/pikola.png",
+          "alt": "Pikola"
         }
       ]
     },
