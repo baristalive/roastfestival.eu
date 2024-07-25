@@ -63,6 +63,16 @@
           "href": "https://kafepikola.cz",
           "src": "/promoted/pikola.png",
           "alt": "Pikola"
+        },
+        {
+          "href": "https://www.mamacoffee.cz/",
+          "src": "/promoted/mamacoffee.png",
+          "alt": "mamacoffee"
+        },
+        {
+          "href": "https://www.black.sk/",
+          "src": "/promoted/black.png",
+          "alt": "black."
         }
       ]
     },
@@ -92,6 +102,11 @@
           "href": "https://kaplebrno.cz/",
           "src": "/promoted/kaple.png",
           "alt": "Kaple Brno winebar"
+        },
+        {
+          "href": "https://www.instagram.com/buchta_b/",
+          "src": "/promoted/buchta_b.png",
+          "alt": "Buchta B"
         }
       ]
     }
