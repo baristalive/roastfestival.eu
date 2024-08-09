@@ -33,13 +33,18 @@
       "title": "Roasters at Roast",
       "text": [
         "The following roasters have confirmed their participation at this time. And more will follow. If you miss your favourite roastery here, write to them about us!"
-      ]
+      ],
+      "honoredTitle": "Honored guests",
+      "regularTitle": "Guests"
     },
     "others": {
       "title": "Accompanying program",
       "text": [
         "Refreshments and other accompanying program are provided by the following partners."
       ]
+    },
+    "sponsors": {
+      "title": "Partners and sponsors"
     }
   },
   "info": [
@@ -171,15 +176,6 @@
     "workshop": "Workshop"
   },
   "programLoadingText": "We are still roasting the festival program for you.",
-  "programReadyText": "The program is properly roasted now!",
-  "programSubjectToChange": "This program is subject to change",
-  "promotedRoasters": {
-    "text": [
-      "Besides other activities, you can look forward to individual presentations of following coffee roasters."
-    ],
-    "title": "Coffee roasters"
-  },
-  "signUp": "Sign up",
   "sponsors": {
     "cta": "Contact us"
   },

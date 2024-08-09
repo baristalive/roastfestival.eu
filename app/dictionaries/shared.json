@@ -18,7 +18,14 @@
   "title": "Coffee festival",
   "promoted": {
     "roasters": {
-      "items": [
+      "honored": [
+        {
+          "href": "https://haybcoffee.pl/",
+          "src": "/promoted/hayb.png",
+          "alt": "HAYB"
+        }
+      ],
+      "regular": [
         {
           "href": "https://www.instagram.com/veroni_brno/",
           "src": "/promoted/veroni.png",
@@ -78,6 +85,21 @@
           "href": "https://www.dos-mundos.cz",
           "src": "/promoted/dos_mundos.png",
           "alt": "Dos Mundos"
+        },
+        {
+          "href": "https://idylika.sk",
+          "src": "/promoted/idylika.png",
+          "alt": "Idylika"
+        },
+        {
+          "href": "https://quickborn.sk/",
+          "src": "/promoted/quickborn.png",
+          "alt": "Quickborn"
+        },
+        {
+          "href": "https://penerini.cz/",
+          "src": "/promoted/penerini.png",
+          "alt": "Penerini"
         }
       ]
     },
@@ -112,6 +134,15 @@
           "href": "https://www.instagram.com/buchta_b/",
           "src": "/promoted/buchta_b.png",
           "alt": "Buchta B"
+        }
+      ]
+    },
+    "sponsors": {
+      "items": [
+        {
+          "href": "https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner",
+          "src": "/promoted/kudy-z-nudy.png",
+          "alt": "Kudyznudy.cz – tipy na výlet"
         }
       ]
     }

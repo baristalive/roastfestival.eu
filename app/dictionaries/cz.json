@@ -33,11 +33,16 @@
       "title": "Pražírny na Roastu",
       "text": [
         "V tuto chvíli potvrdily svou účast následující pražírny. A další budou přibývat. Pokud Vám zde Vaše oblíbená pražírna schází, napište jim o nás!"
-      ]
+      ],
+      "honoredTitle": "Čestní hosté",
+      "regularTitle": "Hosté"
     },
     "others": {
       "title": "Doprovodný program",
       "text": ["Občerstvení a další doprovodný program pro Vás zajišťují mimo jiné následující partneři."]
+    },
+    "sponsors": {
+      "title": "Partneři a sponzoři"
     }
   },
   "info": [
@@ -169,15 +174,6 @@
     "workshop": "Workshop"
   },
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
-  "programReadyText": "Program je již řádně upražen!",
-  "programSubjectToChange": "Změna programu vyhrazena",
-  "promotedRoasters": {
-    "text": [
-      "Mimo jiné se můžete těšit na prezentaci následujících pražíren."
-    ],
-    "title": "Pražírny"
-  },
-  "signUp": "Přihlásit se",
   "sponsors": {
     "cta": "Napište nám"
   },

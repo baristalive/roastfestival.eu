@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
+import Sponsors from "./sections/Sponsors";
 
 const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
   ssr: false,
@@ -59,6 +60,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       <Program />
       <PromotedRoasters />
       <Map />
+      <Sponsors />
       <Organizers />
       <Footer />
     </div>
