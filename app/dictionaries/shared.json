@@ -27,11 +27,6 @@
       ],
       "regular": [
         {
-          "href": "https://www.instagram.com/veroni_brno/",
-          "src": "/promoted/veroni.png",
-          "alt": "Veroni coffee & chocolate"
-        },
-        {
           "href": "https://www.instagram.com/punkt_espresso_bar/",
           "src": "/promoted/punkt.png",
           "alt": "Punkt."
@@ -100,6 +95,21 @@
           "href": "https://penerini.cz/",
           "src": "/promoted/penerini.png",
           "alt": "Penerini"
+        },
+        {
+          "href": "https://www.baristaroasters.sk/",
+          "src": "/promoted/baristaroasters.webp",
+          "alt": "Barista roasters"
+        },
+        {
+          "href": "https://www.kolnaroastery.cz/",
+          "src": "/promoted/kolna.png",
+          "alt": "Kolna roastery"
+        },
+        {
+          "href": "https://www.rebelbean.cz/",
+          "src": "/promoted/rebelbean.png",
+          "alt": "Rebelbean"
         }
       ]
     },

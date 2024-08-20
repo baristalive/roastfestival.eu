@@ -16,7 +16,7 @@ export const PromotedRoasters = () => {
   const { contextSafe } = useGSAP();
 
   return (
-    <section className="watermark5 pb-48" id="promoted" ref={ref}>
+    <section className="watermark5 pb-48 promoted-roasters-section" id="promoted" ref={ref}>
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">

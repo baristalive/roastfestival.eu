@@ -60,7 +60,7 @@ export const Program = () => {
   return (
     <section
       ref={ref}
-      className={`program-section mb-20 ${lang.program.some((day) => day.schedule.length > 0) ? "h-screen" : ""}`}
+      className={`program-section ${lang.program.some((day) => day.schedule.length > 0) ? "h-screen" : ""}`}
       id="program"
     >
       {lang.program.map((day, idx) => (

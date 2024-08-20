@@ -15,11 +15,8 @@ import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
-import Sponsors from "./sections/Sponsors";
-
-const PromotedRoasters = dynamic(() => import("./sections/PromotedRoasters"), {
-  ssr: false,
-});
+import { PromotedRoasters } from "./sections/PromotedRoasters";
+import { Sponsors } from "./sections/Sponsors";
 
 type HomePropsType = {
   params: { lang: SupportedLanguages };
@@ -51,14 +48,14 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
       <Header />
+      <PromotedRoasters />
+      <Program />
       <Info />
-      <WhatToExpect />
       <Tickets />
+      <WhatToExpect />
       <PreviousYears />
       <Gallery />
       <Colab />
-      <Program />
-      <PromotedRoasters />
       <Map />
       <Sponsors />
       <Organizers />
