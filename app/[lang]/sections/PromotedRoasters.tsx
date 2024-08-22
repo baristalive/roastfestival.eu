@@ -51,7 +51,7 @@ export const PromotedRoasters = () => {
             </div>
           ))}
       </div>
-      <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20">{lang.promoted.roasters.regularTitle}</h2>
+      <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20 md:pb-24">{lang.promoted.roasters.regularTitle}</h2>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
         {lang.promoted.roasters.regular
           ?.sort(() => Math.random() - 0.5)

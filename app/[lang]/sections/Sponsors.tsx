@@ -34,9 +34,9 @@ export const Sponsors = () => {
                 <Image
                   src={s.src}
                   alt={s.alt}
-                  className="max-h-[20rem] max-w-[20rem]"
+                  className="max-h-[18rem] max-w-[20rem]"
                   width={320}
-                  height={320}
+                  height={288}
                   unoptimized
                   loader={({ src }) => src}
                 />
