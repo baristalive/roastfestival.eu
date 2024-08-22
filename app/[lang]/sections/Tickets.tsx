@@ -8,6 +8,7 @@ import { TicketCard } from "@/app/components/TicketCard";
 import { TicketRowHeader } from "@/app/components/TicketRowHeader";
 import { getAvailability, AvailabilityRange } from "@/app/utils/ticket";
 
+const TICKETS_PER_ROW = 3
 export const Tickets = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
@@ -51,9 +52,11 @@ export const Tickets = () => {
                       price={price}
                       availability={availability}
                       href={lang.contacts.tickets}
+                      dateRange={row.availability || {}}
                     />
                   </div>
                 ))}
+                {Array(TICKETS_PER_ROW - row.prices.length).fill(0).map((_, idx) => <div key={idx}></div>)}
               </React.Fragment>
             );
           })}

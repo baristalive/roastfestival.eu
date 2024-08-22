@@ -43,9 +43,19 @@ export const Header = () => {
   return (
     <header
       ref={ref}
-      className="elevate z-10 flex h-svh flex-col items-center justify-between p-8"
+      className="elevate z-10 flex h-svh flex-col items-center justify-between py-8"
     >
-      <div className="flex w-full max-w-[1900px] justify-between px-4 pt-2 text-sm md:text-xl 2xl:px-12 2xl:py-8 2xl:text-3xl">
+      {lang.banner && <a
+        href={lang.contacts.tickets}
+        title={lang.buyTickets}
+        rel="external"
+        target="_blank"
+        className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl"
+      >
+        {lang.banner}
+      </a>
+}
+      <div className="mb-auto flex w-full max-w-[1900px] justify-between px-12 pt-2 text-sm md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug ">
           {lang.date}
           <br />
@@ -93,7 +103,7 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-4 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-12 2xl:py-8 2xl:text-3xl">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
         <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
             <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">

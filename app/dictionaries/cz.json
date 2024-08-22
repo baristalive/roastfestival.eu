@@ -6,6 +6,7 @@
     "title": "Co je roast!?"
   },
   "back": "Zpět na hlavní stránku",
+  "banner": "Speciální nabídka ❤️ Celofestivalové vstupné + ☕ = 500 Kč",
   "buyTickets": "Chci vstupenky",
   "colab": {
     "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc. Třeba tě naše nabídka zaujme. A pokud ne, ozvi se nám na email, třeba něco vymyslíme.",
@@ -300,6 +301,19 @@
           {
             "title": "Neděle",
             "full": 300
+          }
+        ]
+      },
+      {
+        "availability": {
+          "start": "2024-08-21",
+          "end": "2024-08-28"
+        },
+        "prices": [
+          {
+            "title": "Celofestivalová + hrníček",
+            "full": 500,
+            "highlight": true
           }
         ]
       },

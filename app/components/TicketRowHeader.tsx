@@ -4,7 +4,6 @@ import {
   Availability,
   AvailabilityRange,
   availabilityRemainingToLocale,
-  availabilityToClassName,
   toLocaleDateString,
 } from "@/app/utils/ticket";
 import { useParams } from "next/navigation";
@@ -17,7 +16,7 @@ export const TicketRowHeader = ({
   dateRange,
 }: {
   subheading?: string;
-  heading: (string | { superscript: string })[];
+  heading?: (string | { superscript: string })[];
   availability: Availability;
   dateRange: AvailabilityRange;
 }) => {
@@ -36,7 +35,7 @@ export const TicketRowHeader = ({
         <h4 className="text-xl hidden lg:block font-bold 2xl:text-2xl">{subheading}</h4>
       ) : <div className="hidden lg:block h-7 2xl:h-8" />}
       <h3 className="text-3xl font-bold 2xl:text-6xl">
-        {heading.map((el, idx) =>
+        {heading?.map((el, idx) =>
           typeof el === "object" && el?.superscript ? (
             <span className="align-super text-lg 2xl:text-4xl" key={idx}>
               {el.superscript}
@@ -46,7 +45,7 @@ export const TicketRowHeader = ({
           ),
         )}
       </h3>
-      {availability !== Availability.Available && (
+      {heading && availability !== Availability.Available && (
         <div className="rounded-full bg-[var(--black)] lg:px-4 px-2 lg:py-1 lg:text-base text-sm text-[var(--white)]">
           {chipTexts[availability]}
           <span className="ml-1">
