@@ -120,6 +120,10 @@
     ],
     "title": "Previous year"
   },
+  "social": {
+    "title": "Newsroom",
+    "text": "Roast! is preset on social networks as well. Follow us!"
+  },
   "learnMore": "learn more",
   "location": {
     "addressTitle": "Address",

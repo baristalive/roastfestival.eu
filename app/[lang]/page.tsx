@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
-import dictionaries, { SupportedLanguages } from "../dictionaries/all";
+import  { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
 import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
@@ -17,6 +16,7 @@ import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
 import { PromotedRoasters } from "./sections/PromotedRoasters";
 import { Sponsors } from "./sections/Sponsors";
+import InstagramFeed from "./sections/InstagramFeed";
 
 type HomePropsType = {
   params: { lang: SupportedLanguages };
@@ -36,8 +36,6 @@ const Home = ({ params: { lang } }: HomePropsType) => {
     };
   }, [divClass]);
 
-  const usedLang = dictionaries[lang as SupportedLanguages];
-
   return (
     <div className={`wrapper ${divClass ? "show" : "hide"}`}>
       <Link
@@ -49,6 +47,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
       </Link>
       <Header />
       <PromotedRoasters />
+      <InstagramFeed />
       <Program />
       <Info />
       <Tickets />

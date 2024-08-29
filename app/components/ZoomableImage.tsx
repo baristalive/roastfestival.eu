@@ -52,7 +52,7 @@ export const ZoomableImage = (
             "",
         }}
       >
-        <span className="card elevate img-overlay img-zoomable block rounded-lg lg:rounded-2xl">
+        <span className="card elevate img-overlay block rounded-lg lg:rounded-2xl">
           <ExportedImage
             className="h-auto max-w-full rounded-lg lg:rounded-2xl"
             src={props.src}

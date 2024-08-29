@@ -45,7 +45,6 @@ footer {
 .watermark2::before,
 .watermark3::before,
 .watermark4::before,
-.watermark5::before,
 .watermark-large::before {
   position: absolute;
   inset: 0;
@@ -57,7 +56,6 @@ footer {
 .watermark2,
 .watermark3,
 .watermark4,
-.watermark5,
 .watermark-large {
   position: relative;
   z-index: 0;
@@ -66,12 +64,11 @@ footer {
 .watermark2 > *,
 .watermark3 > *,
 .watermark4 > *,
-.watermark5 > *,
 .watermark-large > * {
   z-index: 1;
 }
 .watermark::before {
-  background: url("/watermark.svg") no-repeat;
+  background: url("/watermark.svg") no-repeat, url("/watermark5.svg") center center no-repeat;
 }
 .watermark2::before {
   background: url("/watermark2.svg") repeat-x;
@@ -81,9 +78,6 @@ footer {
 }
 .watermark4::before {
   background: url("/watermark4.svg") no-repeat;
-}
-.watermark5::before {
-  background: url("/watermark5.svg") center center no-repeat;
 }
 .watermark-large::before {
   background:
@@ -95,7 +89,7 @@ footer {
 
 @media (max-width: 768px) {
   .watermark::before {
-    background: url("/watermark.svg") no-repeat;
+    background: url("/watermark.svg") no-repeat, url("/watermark2_small.svg") no-repeat;
   }
   .watermark2::before {
     background: url("/watermark2_small.svg") repeat-x;
@@ -106,13 +100,10 @@ footer {
   .watermark4::before {
     background: url("/watermark4_small.svg") no-repeat;
   }
-  .watermark5::before {
-    background: url("/watermark2_small.svg") no-repeat;
-  }
 }
 @media (min-width: 1920px) {
   .watermark::before {
-    background: url("/watermark.svg") top center no-repeat;
+    background: url("/watermark.svg") top center no-repeat, url("/watermark5.svg") top right no-repeat;
   }
   /* .watermark2::before {
     background: url("/watermark2.svg") repeat-x;
@@ -122,9 +113,6 @@ footer {
   } */
   .watermark4::before {
     background: url("/watermark4.svg") top right no-repeat;
-  }
-  .watermark5::before {
-    background: url("/watermark5.svg") top right no-repeat;
   }
 }
 
@@ -145,6 +133,15 @@ footer {
     ),
     var(--primary);
 }
+.social-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    var(--primary);
+}
 .promoted-roasters-section {
   background: linear-gradient(
       to right,
@@ -153,7 +150,7 @@ footer {
       rgba(0, 0, 0, 0) 50%
     ),
     radial-gradient(
-      circle at right bottom,
+      circle at right 70%,
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0) 40rem
     ),
@@ -162,7 +159,6 @@ footer {
 }
 .what-to-expect-section,
 .ticket-section,
-.program-section,
 .info-section {
   background: linear-gradient(
       to right,
@@ -181,6 +177,21 @@ footer {
       rgba(0, 0, 0, 0) 40rem
     ),
     var(--primary);
+}
+.program-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 40rem
+    ),
+    var(--primary);
+
 }
 .previous-year-section {
   background: linear-gradient(
@@ -459,33 +470,29 @@ div.active {
 
 .img-overlay {
   position: relative;
-}
-.img-zoomable {
   transition: 500ms scale;
 }
-.img-zoomable:not(.zoomed)::before {
+.img-overlay:not(.zoomed)::before {
   transition: 500ms all;
 }
 .img-overlay::before {
   content: "";
   inset: 0;
-  background-color: color-mix(in srgb, var(--primary) 65%, transparent);
+  background-color: color-mix(in srgb, var(--primary) 45%, transparent);
   position: absolute;
   border-radius: 0.5rem;
+  pointer-events: none;
+  inset: 0;
 }
 @media (min-width: 1024px) {
   .img-overlay::before {
     border-radius: 1rem;
   }
 }
-.img-zoomable:hover::before {
+.img-overlay:hover::before {
   opacity: 0;
 }
-.img-overlay::before {
-  pointer-events: none;
-  inset: 0;
-}
-.img-zoomable:hover {
+.img-overlay:hover {
   scale: 1.05;
   z-index: 50;
 }
@@ -589,4 +596,43 @@ ol.round-counter li::before {
   background-color: var(--primary);
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-hover-pause:hover div {
+  animation-play-state: paused;
+}
+
+.carousel {
+  position: relative;
+}
+.carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  background: linear-gradient(to right, var(--background), rgba(0, 0, 0, 0) );
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  background: linear-gradient(to right,  rgba(0, 0, 0, 0), var(--primary) );
+  z-index: 2;
+  pointer-events: none;
 }
