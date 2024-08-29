@@ -121,6 +121,11 @@
           "href": "https://www.lotroastery.com/",
           "src": "/promoted/lot.png",
           "alt": "LOT roastery"
+        },
+        {
+          "href": "https://gills.cz/",
+          "src": "/promoted/gills.svg",
+          "alt": "Gill's Coffee Roastery"
         }
       ]
     },
