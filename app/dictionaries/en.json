@@ -6,7 +6,6 @@
     "title": "What is roast!?"
   },
   "back": "Back to home page",
-  "banner": "Special offer ❤️ Full event tickets + ☕ = 500 Kč",
   "buyTickets": "I want tickets",
   "colab": {
     "description": "Roast! would be nothing without the participation of roasters, exhibitors, speakers and sponsors. If you fall into this category, be sure to click to find out more. Maybe you'll be interested in what we have to offer. And if not, drop us an email and maybe we can work something out.",
@@ -302,19 +301,6 @@
           {
             "title": "Sunday",
             "full": 300
-          }
-        ]
-      },
-      {
-        "availability": {
-          "start": "2024-08-21",
-          "end": "2024-08-30"
-        },
-        "prices": [
-          {
-            "title": "Full event + cup",
-            "full": 500,
-            "highlight": true
           }
         ]
       },
