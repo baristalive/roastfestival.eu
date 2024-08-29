@@ -110,7 +110,7 @@ export const Organizers = () => {
                 }
                 return (
                   <ZoomableImage
-                    key={`img_${idx}`}
+                    key={`col_${idx2}img_${idx}`}
                     alt={`${lang.organizers.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
                     {...i}
                   />

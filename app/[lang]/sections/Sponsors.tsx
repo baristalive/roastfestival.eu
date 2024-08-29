@@ -3,7 +3,7 @@
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 ("@/app/dictionaries/all");
 import Image from "next/image";
@@ -15,6 +15,11 @@ export const Sponsors = () => {
 
   const { contextSafe } = useGSAP();
 
+  const [sponsors, setSponsors] = useState([] as {href: string, alt: string, src: string}[])
+
+  useEffect(() => {
+    setSponsors(lang.promoted.sponsors.items?.sort(() => Math.random() - 0.5) || [])
+  }, [])
   return (
     <section className="watermark pb-48" id="promoted" ref={ref}>
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
@@ -26,9 +31,7 @@ export const Sponsors = () => {
         </div>
       </div>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
-        {lang.promoted.sponsors.items
-          ?.sort(() => Math.random() - 0.5)
-          .map((s: { href: string; src: string; alt: string }) => (
+        {sponsors.map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
                 <Image
