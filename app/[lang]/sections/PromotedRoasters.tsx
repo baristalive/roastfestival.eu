@@ -28,7 +28,7 @@ export const PromotedRoasters = () => {
       regular: lang.promoted.roasters.regular?.sort(() => Math.random() - 0.5) || [],
       others: lang.promoted.others.items?.sort(() => Math.random() - 0.5) || []
     })
-  }, [])
+  }, [lang.promoted.roasters.honored, lang.promoted.roasters.regular, lang.promoted.others])
 
   return (
     <section className="watermark promoted-roasters-section" id="promoted" ref={ref}>

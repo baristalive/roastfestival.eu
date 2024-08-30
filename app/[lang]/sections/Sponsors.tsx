@@ -19,7 +19,7 @@ export const Sponsors = () => {
 
   useEffect(() => {
     setSponsors(lang.promoted.sponsors.items?.sort(() => Math.random() - 0.5) || [])
-  }, [])
+  }, [lang.promoted.sponsors.items])
   return (
     <section className="watermark pb-48" id="promoted" ref={ref}>
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
