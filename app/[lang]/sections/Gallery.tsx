@@ -62,7 +62,7 @@ export const Gallery = () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
-        gsap.set(".cards", { y: "+=10rem" });
+        gsap.set(".cards", { y: "+=20rem" });
         gsap.to(".cards", {
           y: "-=40rem",
           scrollTrigger: {
@@ -78,7 +78,7 @@ export const Gallery = () => {
   );
   return (
     <section ref={ref} className="gallery-section">
-      <div className="cards mx-auto hidden max-w-[1900px] items-center gap-4 px-12 pb-12 md:flex ">
+      <div className="cards mx-auto hidden max-w-[1900px] items-center gap-4 px-12 pb-12 md:flex  will-change-transform">
         {largeWallImages.map((col, idx) => (
           <div className="flex gap-1 md:grid md:gap-4" key={`col_${idx}`}>
             {col.map((i, idx2) => (
@@ -91,7 +91,7 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="cards mx-auto flex max-w-[1900px] items-center gap-1 pb-12 md:hidden ">
+      <div className="cards mx-auto flex max-w-[1900px] items-center gap-1 p-2 pb-12 md:hidden  will-change-transform">
         {smallWallImages.map((col, idx) => (
           <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
             {col.map((i, idx2) => (

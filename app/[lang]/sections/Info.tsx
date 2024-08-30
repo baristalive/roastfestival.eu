@@ -33,25 +33,6 @@ export const Info = () => {
           },
         });
       });
-      mm.add("(max-width: 768px)", () => {
-        gsap.utils.toArray(".card").map((c, idx, arr) => {
-          const isLast = idx === arr.length - 1;
-          gsap
-            .timeline({
-              scrollTrigger: {
-                trigger: c as Element,
-                pin: true,
-                start: isLast ? "top top" : "top 50em",
-                end: isLast ? "top top" : "bottom top",
-                scrub: true,
-              },
-            })
-            .to(c as Element, {
-              ease: "none",
-              ...(isLast ? {} : { display: "none", scale: 0.8, opacity: 0 }),
-            });
-        });
-      });
     },
     { scope: ref },
   );

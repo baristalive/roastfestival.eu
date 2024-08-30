@@ -98,6 +98,7 @@ const InstagramFeed = () => {
               title="Instagram"
               rel="external"
               className="nav"
+              target="_blank"
             >
               <InstagramIcon />
               <span className="sr-only">Instagram</span>
@@ -107,6 +108,7 @@ const InstagramFeed = () => {
               title="Facebook"
               rel="external"
               className="nav"
+              target="_blank"
             >
               <FacebookIcon />
               <span className="sr-only">Facebook</span>

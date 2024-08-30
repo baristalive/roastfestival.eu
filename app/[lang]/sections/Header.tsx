@@ -50,18 +50,18 @@ export const Header = () => {
         title={lang.buyTickets}
         rel="external"
         target="_blank"
-        className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl"
+        className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl will-change-[opacity]"
       >
         {lang.banner}
       </a>
 }
       <div className="mb-auto flex w-full max-w-[1900px] justify-between px-12 pt-2 text-sm md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
-        <div className="fade-in font-medium leading-snug ">
+        <div className="fade-in font-medium leading-snug will-change-[opacity]">
           {lang.date}
           <br />
           {lang.place}
         </div>
-        <div className="fade-in text-right font-medium leading-snug">
+        <div className="fade-in text-right font-medium leading-snug will-change-[opacity]">
           <nav className="">
             <div className="flex justify-end gap-4">
               <a
@@ -69,6 +69,7 @@ export const Header = () => {
                 title="Facebook"
                 rel="external"
                 className="nav"
+                target="_blank"
               >
                 <FacebookIcon />
                 <span className="sr-only">Facebook</span>
@@ -78,6 +79,7 @@ export const Header = () => {
                 title="Instagram"
                 rel="external"
                 className="nav"
+                target="_blank"
               >
                 <InstagramIcon />
                 <span className="sr-only">Instagram</span>
@@ -98,12 +100,12 @@ export const Header = () => {
           <Logo />
         </div>
         <div className="pt-12 text-center lg:pt-6">
-          <h1 className="mx-auto inline-block max-w-min font-bold lowercase leading-none">
+          <h1 className="mx-auto inline-block max-w-min font-bold lowercase leading-none will-change-[opacity,_transform]">
             {lang.title}
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl will-change-[opacity]">
         <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
             <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
@@ -125,8 +127,8 @@ export const Header = () => {
           className="nav"
         >
           <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-24">
-            <span className="fade-in-2">{lang.buyTickets}</span>
-            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--black)] md:text-xl 2xl:text-3xl">
+            <span className="fade-in-2 will-change-[opacity]">{lang.buyTickets}</span>
+            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--black)] md:text-xl 2xl:text-3xl will-change-[left]">
               <ArrowIcon />
             </span>
           </nav>

@@ -1,6 +1,5 @@
 "use client";
 import CarIcon from "@/app/icons/car";
-import LocationIcon from "@/app/icons/location";
 import MapIcon from "@/app/icons/map.svg";
 import TramIcon from "@/app/icons/tram";
 import WebIcon from "@/app/icons/web";
