@@ -269,7 +269,7 @@ svg.elevate {
   background: url("/beans.svg") center 1px / cover no-repeat;
 }
 .large-bean {
-  background: url("./icon.svg") left top/contain no-repeat;
+  background: url("/icon-light.svg") left top/contain no-repeat;
   padding: 30% 0 10% 35%;
 }
 .availability__soon {
