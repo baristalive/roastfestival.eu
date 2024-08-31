@@ -1,24 +1,40 @@
 "use client";
+import React, { useEffect, useState, useRef } from "react";
+import { initializeApp } from "firebase/app";
+import {
+  fetchAndActivate,
+  getRemoteConfig,
+  getValue,
+} from "firebase/remote-config";
+import { useGSAP } from "@gsap/react";
+import { useParams } from "next/navigation";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+
 import CarouselIcon from "@/app/icons/carousel";
 import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import VideoIcon from "@/app/icons/video";
-import React, { useEffect, useState, useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Bar from "@/app/components/Bar";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCUzZ7UIBkSWiS8HGOvOGJU_neEJftyyy4",
+  authDomain: "roastfestival.firebaseapp.com",
+  projectId: "roastfestival",
+  storageBucket: "roastfestival.appspot.com",
+  messagingSenderId: "635139009990",
+  appId: "1:635139009990:web:936b1cd8582998e00056c7",
+  measurementId: "G-RGNDY5N337",
+};
+const app = initializeApp(firebaseConfig);
 
 const LIMIT = 5;
 
 const INSTAGRAM_PARAMS = new URLSearchParams({
-  access_token:
-    "IGQWRNSjY3SmRfLUlhUWs0cENNbHk4bTRucnMyaEtoNVlHenFFNFVxajVfQUlNcXRNdEtRRWhhajN3OU1rZAUVPdUVfWFpIZA1lobzgtRmlvY2RvMjRkR05mQmgxcVdNcnByZADEwODUwNXl5dXpuem9yUk9kcUtiTFUZD",
   fields: "media_url,permalink,media_type,thumbnail_url,caption",
   limit: LIMIT.toString(),
 });
 
-const INSTAGRAM_URL = `https://graph.instagram.com/me/media?${INSTAGRAM_PARAMS}`;
+const INSTAGRAM_URL = "https://graph.instagram.com/me/media";
 
 type InstagramMediaType = "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO";
 type InstagramPost = {
@@ -69,15 +85,28 @@ const InstagramFeed = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
-
+  const [posts, setPosts] = useState([]);
+  const [igApiKey, setIgApiKey] = useState("");
   const { contextSafe } = useGSAP();
 
-  const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch(INSTAGRAM_URL)
+    if (typeof window === "undefined") return;
+
+    const remoteConfig = getRemoteConfig(app);
+
+    fetchAndActivate(remoteConfig)
+      .then(() => getValue(remoteConfig, "INSTAGRAM_API_KEY"))
+      .then((c) => setIgApiKey(c.asString()));
+  }, [igApiKey]);
+
+  useEffect(() => {
+    if (igApiKey === "") return;
+    INSTAGRAM_PARAMS.set("access_token", igApiKey);
+
+    fetch(`${INSTAGRAM_URL}?${INSTAGRAM_PARAMS}`)
       .then((resp) => resp.json())
       .then((data) => setPosts(data?.data));
-  }, []);
+  }, [posts, igApiKey]);
 
   return (
     <section className="social-section">
