@@ -168,13 +168,6 @@ const InstagramFeed = () => {
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col items-center justify-center">
-        <p className="mb-4">Zjisti vice na</p>
-        <div className="flex justify-center gap-4">
-          <InstagramIcon />
-          <FacebookIcon />
-        </div>
-      </div> */}
     </section>
   );
 };

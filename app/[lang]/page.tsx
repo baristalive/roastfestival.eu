@@ -8,7 +8,7 @@ import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
 import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
-import { Footer } from "../components/Footer";
+import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
 import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";

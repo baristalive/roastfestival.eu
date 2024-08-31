@@ -37,8 +37,6 @@ const Logo = () => {
         ease: "elastic.inOut",
       });
       gsap.to("path", { opacity: 1, delay: 1.5, ease: "none" });
-      // gsap.utils.toArray('.bean').forEach(b => gsap.to(b, {delay: "random(4.2,5.2)", duration: 1, opacity: 0.5, repeatDelay: 0, repeat: -1, yoyo: true}))
-      // gsap.utils.toArray("path").forEach(p => gsap.to(p, { opacity: 0.2, delay: "random(3,4)", duration: 3, ease: "elastic.inOut", repeat: -1, repeatDelay: 0, yoyo: true }));
     },
     { scope: container },
   );

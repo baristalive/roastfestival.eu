@@ -1,9 +1,9 @@
 "use client";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "../dictionaries/all";
-import FacebookIcon from "../icons/facebook";
-import InstagramIcon from "../icons/instagram";
-import AtIcon from "../icons/at";
+import { dictionaries, SupportedLanguages } from "../../dictionaries/all";
+import FacebookIcon from "../../icons/facebook";
+import InstagramIcon from "../../icons/instagram";
+import AtIcon from "../../icons/at";
 
 export const Footer = () => {
   const params = useParams();

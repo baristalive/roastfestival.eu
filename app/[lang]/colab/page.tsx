@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { SupportedLanguages } from "@/app/dictionaries/all";
-import { Footer } from "@/app/components/Footer";
+import { Footer } from "@/app/[lang]/sections/Footer";
 import { Info } from "./sections/Info";
 
 type ColabPropsType = {
