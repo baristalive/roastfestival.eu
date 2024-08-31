@@ -22,109 +22,109 @@
       "honored": [
         {
           "href": "https://haybcoffee.pl/",
-          "src": "/promoted/hayb.png",
+          "src": "hayb.png",
           "alt": "HAYB"
         }
       ],
       "regular": [
         {
           "href": "https://www.instagram.com/punkt_espresso_bar/",
-          "src": "/promoted/punkt.png",
+          "src": "punkt.png",
           "alt": "Punkt."
         },
         {
           "href": "https://www.francin.cz/",
-          "src": "/promoted/fracin.png",
+          "src": "fracin.png",
           "alt": "Francin Roasters"
         },
         {
           "href": "https://kmen.coffee/",
-          "src": "/promoted/kmen.png",
+          "src": "kmen.png",
           "alt": "Kmen Coffee Roasters"
         },
         {
           "href": "https://www.instagram.com/lis.kafe",
-          "src": "/promoted/liskafe.png",
+          "src": "liskafe.png",
           "alt": "Liškafé"
         },
         {
           "href": "https://www.theminers.eu",
-          "src": "/promoted/the_miners.png",
+          "src": "the_miners.png",
           "alt": "The miners"
         },
         {
           "href": "https://www.instagram.com/ig_coffee_roasters/",
-          "src": "/promoted/ig.png",
+          "src": "ig.png",
           "alt": "IG Coffee Roasters"
         },
         {
           "href": "https://poppybeans.cz/",
-          "src": "/promoted/poppy_beans.png",
+          "src": "poppy_beans.png",
           "alt": "Poppy Beans"
         },
         {
           "href": "https://kafepikola.cz",
-          "src": "/promoted/pikola.png",
+          "src": "pikola.png",
           "alt": "Pikola"
         },
         {
           "href": "https://www.mamacoffee.cz/",
-          "src": "/promoted/mamacoffee.png",
+          "src": "mamacoffee.png",
           "alt": "mamacoffee"
         },
         {
           "href": "https://www.black.sk/",
-          "src": "/promoted/black.png",
+          "src": "black.png",
           "alt": "black."
         },
         {
           "href": "https://www.dos-mundos.cz",
-          "src": "/promoted/dos_mundos.png",
+          "src": "dos_mundos.png",
           "alt": "Dos Mundos"
         },
         {
           "href": "https://idylika.sk",
-          "src": "/promoted/idylika.png",
+          "src": "idylika.png",
           "alt": "Idylika"
         },
         {
           "href": "https://quickborn.sk/",
-          "src": "/promoted/quickborn.png",
+          "src": "quickborn.png",
           "alt": "Quickborn"
         },
         {
           "href": "https://penerini.cz/",
-          "src": "/promoted/penerini.png",
+          "src": "penerini.png",
           "alt": "Penerini"
         },
         {
           "href": "https://www.baristaroasters.sk/",
-          "src": "/promoted/baristaroasters.webp",
+          "src": "baristaroasters.webp",
           "alt": "Barista roasters"
         },
         {
           "href": "https://www.kolnaroastery.cz/",
-          "src": "/promoted/kolna.png",
+          "src": "kolna.png",
           "alt": "Kolna roastery"
         },
         {
           "href": "https://www.rebelbean.cz/",
-          "src": "/promoted/rebelbean.png",
+          "src": "rebelbean.png",
           "alt": "Rebelbean"
         },
         {
           "href": "https://www.instagram.com/redfawncoffee/",
-          "src": "/promoted/red_fawn.png",
+          "src": "red_fawn.png",
           "alt": "Red Fawn"
         },
         {
           "href": "https://www.lotroastery.com/",
-          "src": "/promoted/lot.png",
+          "src": "lot.png",
           "alt": "LOT roastery"
         },
         {
           "href": "https://gills.cz/",
-          "src": "/promoted/gills.svg",
+          "src": "gills.svg",
           "alt": "Gill's Coffee Roastery"
         }
       ]
@@ -133,32 +133,32 @@
       "items": [
         {
           "href": "https://www.instagram.com/hodnenekde/",
-          "src": "/promoted/hodne_nekde.png",
+          "src": "hodne_nekde.png",
           "alt": "Hodně někde"
         },
         {
           "href": "https://parabellumlounge.cz/",
-          "src": "/promoted/parabellum.png",
+          "src": "parabellum.png",
           "alt": "Para Bellum"
         },
         {
           "href": "https://www.instagram.com/dimchi_kimchi/",
-          "src": "/promoted/dimchi.png",
+          "src": "dimchi.png",
           "alt": "Dimchi"
         },
         {
           "href": "https://www.facebook.com/p/RAST-coffee-Brno-100087549812805/",
-          "src": "/promoted/rast.png",
+          "src": "rast.png",
           "alt": "Rast Coffee"
         },
         {
           "href": "https://kaplebrno.cz/",
-          "src": "/promoted/kaple.png",
+          "src": "kaple.png",
           "alt": "Kaple Brno winebar"
         },
         {
           "href": "https://www.instagram.com/buchta_b/",
-          "src": "/promoted/buchta_b.png",
+          "src": "buchta_b.png",
           "alt": "Buchta B"
         }
       ]
@@ -167,17 +167,17 @@
       "items": [
         {
           "href": "https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner",
-          "src": "/promoted/kudy-z-nudy.png",
+          "src": "kudy-z-nudy.png",
           "alt": "Kudyznudy.cz – tipy na výlet"
         },
         {
           "href": "https://www.instagram.com/ig_coffee_roasters/",
-          "src": "/promoted/ig.png",
+          "src": "ig.png",
           "alt": "IG Coffee Roasters"
         },
         {
           "href": "https://www.comandantegrinder.com/",
-          "src": "/promoted/comandante.png",
+          "src": "comandante.png",
           "alt": "Comandante Grinder"
         }
       ]

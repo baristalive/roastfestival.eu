@@ -386,8 +386,8 @@ header::before {
   content: "";
   inset: 0;
   background: image-set(
-    url("/photos/nextImageExportOptimizer/banner-opt-384.WEBP") 1x,
-    url("/photos/nextImageExportOptimizer/banner-opt-640.WEBP") 2x
+    url("/images/photos/optimized/banner-opt-384.WEBP") 1x,
+    url("/images/photos/optimized/banner-opt-640.WEBP") 2x
   );
   background-position: center center;
   background-size: cover;

@@ -6,7 +6,7 @@ import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 ("@/app/dictionaries/all");
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 export const Sponsors = () => {
   const params = useParams();
@@ -34,14 +34,12 @@ export const Sponsors = () => {
         {sponsors.map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
-                <Image
-                  src={s.src}
+                <ExportedImage
+                  src={`/images/promoted/${s.src}`}
                   alt={s.alt}
                   className="max-h-[18rem] max-w-[20rem]"
                   width={320}
                   height={288}
-                  unoptimized
-                  loader={({ src }) => src}
                 />
                 <span className="sr-only">{s.alt}</span>
               </a>

@@ -4,12 +4,24 @@ import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 import Zoom from "react-medium-image-zoom";
 
 export const LANDSCAPE = {
-  small: { width: 512, height: 348 },
-  zoomed: { width: 1080, height: 720 },
+  sm: {
+    small: { width: 256, height: 170 },
+    zoomed: { width: 512, height: 342 },
+  },
+  lg: {
+    small: { width: 512, height: 342 },
+    zoomed: { width: 1080, height: 720 },
+  }
 };
 export const PORTRAIT = {
-  small: { width: 512, height: 768 },
-  zoomed: { width: 1080, height: 1623 },
+  sm: {
+    small: { width: 256, height: 348 },
+    zoomed: { width: 512, height: 768 },
+  },
+  lg: {
+    small: { width: 512, height: 768 },
+    zoomed: { width: 1080, height: 1623 },
+  }
 };
 
 type Image = {

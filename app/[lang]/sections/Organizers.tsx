@@ -12,46 +12,46 @@ import {
 
 const largeWallImages = [
   [
-    { src: "/photos/DSC_3562.jpg", ...PORTRAIT },
-    { src: "/photos/3166.jpg", ...LANDSCAPE },
+    { src: "DSC_3562.jpg", ...PORTRAIT.lg },
+    { src: "3166.jpg", ...LANDSCAPE.lg },
   ],
   [
-    { src: "/photos/DSC_3346.jpg", ...LANDSCAPE },
+    { src: "DSC_3346.jpg", ...LANDSCAPE.lg },
     { card: 0 },
-    { src: "/photos/167-_DSC0331.jpg", ...PORTRAIT },
+    { src: "167-_DSC0331.jpg", ...PORTRAIT.lg },
   ],
   [
-    { src: "/photos/58-_DSC0116.jpg", ...PORTRAIT },
+    { src: "58-_DSC0116.jpg", ...PORTRAIT.lg },
     { card: 1 },
-    { src: "/photos/DSC_3536.jpg", ...LANDSCAPE },
+    { src: "DSC_3536.jpg", ...LANDSCAPE.lg },
   ],
   [
-    { src: "/photos/DSC_3481.jpg", ...LANDSCAPE },
+    { src: "DSC_3481.jpg", ...LANDSCAPE.lg },
     { card: 2 },
-    { src: "/photos/DSC_3298.jpg", ...PORTRAIT },
+    { src: "DSC_3298.jpg", ...PORTRAIT.lg },
   ],
   [
-    { src: "/photos/DSC_3263.jpg", ...PORTRAIT },
-    { src: "/photos/60-_DSC0120.jpg", ...LANDSCAPE },
+    { src: "DSC_3263.jpg", ...PORTRAIT.lg },
+    { src: "60-_DSC0120.jpg", ...LANDSCAPE.lg },
   ],
 ];
 const smallWallImages = [
   [
-    { src: "/photos/DSC_3562.jpg", ...PORTRAIT },
-    { src: "/photos/3166.jpg", ...LANDSCAPE },
-    { src: "/photos/DSC_3346.jpg", ...LANDSCAPE },
+    { src: "DSC_3562.jpg", ...PORTRAIT.sm },
+    { src: "3166.jpg", ...LANDSCAPE.sm },
+    { src: "DSC_3346.jpg", ...LANDSCAPE.sm },
     { card: 0 },
-    { src: "/photos/DSC_3263.jpg", ...PORTRAIT },
-    { src: "/photos/167-_DSC0331.jpg", ...PORTRAIT },
+    { src: "DSC_3263.jpg", ...PORTRAIT.sm },
+    { src: "167-_DSC0331.jpg", ...PORTRAIT.sm },
   ],
   [
-    { src: "/photos/DSC_3536.jpg", ...LANDSCAPE },
-    { src: "/photos/58-_DSC0116.jpg", ...PORTRAIT },
+    { src: "DSC_3536.jpg", ...LANDSCAPE.sm },
+    { src: "58-_DSC0116.jpg", ...PORTRAIT.sm },
     { card: 1 },
-    { src: "/photos/DSC_3481.jpg", ...LANDSCAPE },
-    { src: "/photos/DSC_3298.jpg", ...PORTRAIT },
+    { src: "DSC_3481.jpg", ...LANDSCAPE.sm },
+    { src: "DSC_3298.jpg", ...PORTRAIT.sm },
     { card: 2 },
-    { src: "/photos/60-_DSC0120.jpg", ...LANDSCAPE },
+    { src: "60-_DSC0120.jpg", ...LANDSCAPE.sm },
   ],
 ];
 
@@ -88,6 +88,7 @@ export const Organizers = () => {
                     key={`img_${idx2}`}
                     alt={`${lang.organizers.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
                     {...i}
+                    src={`/images/photos/${i.src}`}
                   />
                 );
               })}
@@ -113,6 +114,7 @@ export const Organizers = () => {
                     key={`col_${idx2}img_${idx}`}
                     alt={`${lang.organizers.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
                     {...i}
+                    src={`/images/photos/${i.src}`}
                   />
                 );
               })}

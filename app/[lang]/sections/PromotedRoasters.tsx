@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 type Item = {
   href: string;
@@ -51,14 +51,12 @@ export const PromotedRoasters = () => {
           .map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
-                <Image
-                  src={s.src}
+                <ExportedImage
+                  src={`/images/promoted/${s.src}`}
                   alt={s.alt}
                   className="max-h-[16rem] max-w-[16rem] w-full h-auto"
                   width={256}
                   height={256}
-                  unoptimized
-                  loader={({ src }) => src}
                 />
                 <span className="sr-only">{s.alt}</span>
               </a>
@@ -66,19 +64,17 @@ export const PromotedRoasters = () => {
           ))}
       </div>
       <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20 md:pb-24">{lang.promoted.roasters.regularTitle}</h2>
-      <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
+      <div className="mx-auto my-10 grid grid-cols-2 sm:flex max-w-screen-2xl flex-wrap items-center text-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
         {promoted.regular
           .map((s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
-                <Image
-                  src={s.src}
+                <ExportedImage
+                  src={`/images/promoted/${s.src}`}
                   alt={s.alt}
-                  className="max-h-[10rem] max-w-[10rem] w-full h-auto"
+                  className="max-h-[10rem] max-w-[10rem] w-full h-auto mx-auto"
                   width={160}
                   height={160}
-                  unoptimized
-                  loader={({ src }) => src}
                 />
                 <span className="sr-only">{s.alt}</span>
               </a>
@@ -111,14 +107,12 @@ export const PromotedRoasters = () => {
                 className="flex h-full flex-col items-center justify-between gap-4"
               >
                 <div className="flex h-[200px] items-center justify-center">
-                  <Image
-                    src={s.src}
+                  <ExportedImage
+                  src={`/images/promoted/${s.src}`}
                     alt={s.alt}
                     className="max-h-[10rem] max-w-[10rem] h-auto"
                     width={160}
                     height={160}
-                    unoptimized
-                    loader={({ src }) => src}
                   />
                 </div>
                 <span className="sr-only">{s.alt}</span>

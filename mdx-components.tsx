@@ -7,9 +7,6 @@ import {
 } from "./app/components/ZoomableImage";
 import "react-medium-image-zoom/dist/styles.css";
 
-const portrait = { ...PORTRAIT, small: { width: 200, height: 300 } };
-const landscape = { ...LANDSCAPE, small: { width: 300, height: 200 } };
-
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h2: ({ children }: PropsWithChildren) => (
@@ -76,16 +73,30 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       const [altText, sizing] = (alt || "|").split("|");
 
       return (
-        <ZoomableImage
-          src={src!}
-          alt={altText}
-          {...rest}
-          {...(sizing === "landscape" ? landscape : portrait)}
-        />
+        <>
+          <div className="hidden md:block">
+            <ZoomableImage
+              src={`/images/photos/${src!}`}
+              alt={altText}
+              {...rest}
+              {...(sizing === "landscape" ? { zoomed: LANDSCAPE.lg.zoomed, small: LANDSCAPE.sm.small} : { zoomed: PORTRAIT.lg.zoomed, small: PORTRAIT.sm.small})}
+            />
+          </div>
+          <div className="block md:hidden">
+            <ZoomableImage
+              src={`/images/photos/${src!}`}
+              alt={altText}
+              {...rest}
+              {...(sizing === "landscape" ? LANDSCAPE.sm : PORTRAIT.sm)}
+            />
+          </div>
+        </>
       );
     },
-    a: ({children, ...rest}: PropsWithChildren) => (
-      <a className="font-bold text-[var(--primary)] underline" {...rest}>{children}</a>
+    a: ({ children, ...rest }: PropsWithChildren) => (
+      <a className="font-bold text-[var(--primary)] underline" {...rest}>
+        {children}
+      </a>
     ),
     ...components,
   };

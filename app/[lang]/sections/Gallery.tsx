@@ -14,42 +14,42 @@ import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
 const largeWallImages = [
   [
-    { src: "/photos/116-_DSC0230.jpg", ...LANDSCAPE },
-    { src: "/photos/280-_DSC0568.jpg", ...PORTRAIT },
+    { src: "116-_DSC0230.jpg", ...LANDSCAPE.lg },
+    { src: "280-_DSC0568.jpg", ...PORTRAIT.lg },
   ],
   [
-    { src: "/photos/260-_DSC0526.jpg", ...LANDSCAPE },
-    { src: "/photos/318-_DSC0639.jpg", ...LANDSCAPE },
-    { src: "/photos/198-_DSC0389.jpg", ...LANDSCAPE },
+    { src: "260-_DSC0526.jpg", ...LANDSCAPE.lg },
+    { src: "318-_DSC0639.jpg", ...LANDSCAPE.lg },
+    { src: "198-_DSC0389.jpg", ...LANDSCAPE.lg },
   ],
   [
-    { src: "/photos/94-_DSC0192.jpg", ...LANDSCAPE },
-    { src: "/photos/300-_DSC0610.jpg", ...PORTRAIT },
+    { src: "94-_DSC0192.jpg", ...LANDSCAPE.lg },
+    { src: "300-_DSC0610.jpg", ...PORTRAIT.lg },
   ],
   [
-    { src: "/photos/364-_DSC0717.jpg", ...PORTRAIT },
-    { src: "/photos/132-_DSC0253.jpg", ...LANDSCAPE },
+    { src: "364-_DSC0717.jpg", ...PORTRAIT.lg },
+    { src: "132-_DSC0253.jpg", ...LANDSCAPE.lg },
   ],
   [
-    { src: "/photos/359-_DSC0712.jpg", ...LANDSCAPE },
-    { src: "/photos/64-_DSC0125.jpg", ...PORTRAIT },
+    { src: "359-_DSC0712.jpg", ...LANDSCAPE.lg },
+    { src: "64-_DSC0125.jpg", ...PORTRAIT.lg },
   ],
 ];
 const smallWallImages = [
   [
-    { src: "/photos/94-_DSC0192.jpg", ...LANDSCAPE },
-    { src: "/photos/116-_DSC0230.jpg", ...LANDSCAPE },
-    { src: "/photos/280-_DSC0568.jpg", ...PORTRAIT },
-    { src: "/photos/260-_DSC0526.jpg", ...LANDSCAPE },
-    { src: "/photos/64-_DSC0125.jpg", ...PORTRAIT },
-    { src: "/photos/359-_DSC0712.jpg", ...LANDSCAPE },
+    { src: "94-_DSC0192.jpg", ...LANDSCAPE.sm },
+    { src: "116-_DSC0230.jpg", ...LANDSCAPE.sm },
+    { src: "280-_DSC0568.jpg", ...PORTRAIT.sm },
+    { src: "260-_DSC0526.jpg", ...LANDSCAPE.sm },
+    { src: "64-_DSC0125.jpg", ...PORTRAIT.sm },
+    { src: "359-_DSC0712.jpg", ...LANDSCAPE.sm },
   ],
   [
-    { src: "/photos/318-_DSC0639.jpg", ...LANDSCAPE },
-    { src: "/photos/300-_DSC0610.jpg", ...PORTRAIT },
-    { src: "/photos/198-_DSC0389.jpg", ...LANDSCAPE },
-    { src: "/photos/364-_DSC0717.jpg", ...PORTRAIT },
-    { src: "/photos/132-_DSC0253.jpg", ...LANDSCAPE },
+    { src: "318-_DSC0639.jpg", ...LANDSCAPE.sm },
+    { src: "300-_DSC0610.jpg", ...PORTRAIT.sm },
+    { src: "198-_DSC0389.jpg", ...LANDSCAPE.sm },
+    { src: "364-_DSC0717.jpg", ...PORTRAIT.sm },
+    { src: "132-_DSC0253.jpg", ...LANDSCAPE.sm },
   ],
 ];
 
@@ -86,6 +86,7 @@ export const Gallery = () => {
                 key={`img_${idx2}`}
                 alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
                 {...i}
+                src={`/images/photos/${i.src}`}
               />
             ))}
           </div>
@@ -99,6 +100,7 @@ export const Gallery = () => {
                 key={`img_${idx2}`}
                 alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
                 {...i}
+                src={`/images/photos/${i.src}`}
               />
             ))}
           </div>
