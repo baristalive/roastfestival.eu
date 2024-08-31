@@ -106,7 +106,7 @@ const InstagramFeed = () => {
     fetch(`${INSTAGRAM_URL}?${INSTAGRAM_PARAMS}`)
       .then((resp) => resp.json())
       .then((data) => setPosts(data?.data));
-  }, [posts, igApiKey]);
+  }, [igApiKey]);
 
   return (
     <section className="social-section">
