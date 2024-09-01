@@ -11,7 +11,7 @@ type Item = {
   href: string;
   src: string;
   alt: string;
-}
+};
 
 export const PromotedRoasters = () => {
   const params = useParams();
@@ -20,18 +20,32 @@ export const PromotedRoasters = () => {
 
   const { contextSafe } = useGSAP();
 
-  const [promoted, setPromoted] = useState({honored: [] as Item[], regular: [] as Item[], others: [] as Item[]})
+  const [promoted, setPromoted] = useState({
+    honored: [] as Item[],
+    regular: [] as Item[],
+    others: [] as Item[],
+  });
 
   useEffect(() => {
     setPromoted({
-      honored: lang.promoted.roasters.honored?.sort(() => Math.random() - 0.5) || [],
-      regular: lang.promoted.roasters.regular?.sort(() => Math.random() - 0.5) || [],
-      others: lang.promoted.others.items?.sort(() => Math.random() - 0.5) || []
-    })
-  }, [lang.promoted.roasters.honored, lang.promoted.roasters.regular, lang.promoted.others])
+      honored:
+        lang.promoted.roasters.honored?.sort(() => Math.random() - 0.5) || [],
+      regular:
+        lang.promoted.roasters.regular?.sort(() => Math.random() - 0.5) || [],
+      others: lang.promoted.others.items?.sort(() => Math.random() - 0.5) || [],
+    });
+  }, [
+    lang.promoted.roasters.honored,
+    lang.promoted.roasters.regular,
+    lang.promoted.others,
+  ]);
 
   return (
-    <section className="watermark promoted-roasters-section" id="promoted" ref={ref}>
+    <section
+      className="watermark promoted-roasters-section"
+      id="promoted"
+      ref={ref}
+    >
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
@@ -45,41 +59,45 @@ export const PromotedRoasters = () => {
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
       </div>
-      <h2 className="p-8 text-center text-3xl md:px-20 ">{lang.promoted.roasters.honoredTitle}</h2>
+      <h2 className="p-8 text-center text-3xl md:px-20 ">
+        {lang.promoted.roasters.honoredTitle}
+      </h2>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
-        {promoted.honored
-          .map((s: { href: string; src: string; alt: string }) => (
+        {promoted.honored.map(
+          (s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
                 <ExportedImage
                   src={`/images/promoted/${s.src}`}
                   alt={s.alt}
-                  className="max-h-[16rem] max-w-[16rem] w-full h-auto"
+                  className="h-auto max-h-[16rem] w-full max-w-[16rem]"
                   width={256}
                   height={256}
                 />
-                <span className="sr-only">{s.alt}</span>
               </a>
             </div>
-          ))}
+          ),
+        )}
       </div>
-      <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20 md:pb-24">{lang.promoted.roasters.regularTitle}</h2>
-      <div className="mx-auto my-10 grid grid-cols-2 sm:flex max-w-screen-2xl flex-wrap items-center text-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
-        {promoted.regular
-          .map((s: { href: string; src: string; alt: string }) => (
+      <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20 md:pb-24">
+        {lang.promoted.roasters.regularTitle}
+      </h2>
+      <div className="mx-auto my-10 grid max-w-screen-2xl grid-cols-2 flex-wrap items-center justify-center gap-2 gap-y-4 text-center text-xl sm:flex md:gap-20">
+        {promoted.regular.map(
+          (s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a href={s.href} target="_blank" rel="external" title={s.alt}>
                 <ExportedImage
                   src={`/images/promoted/${s.src}`}
                   alt={s.alt}
-                  className="max-h-[10rem] max-w-[10rem] w-full h-auto mx-auto"
+                  className="mx-auto h-auto max-h-[10rem] w-full max-w-[10rem]"
                   width={160}
                   height={160}
                 />
-                <span className="sr-only">{s.alt}</span>
               </a>
             </div>
-          ))}
+          ),
+        )}
         <div className="p-2 text-base 2xl:text-xl">a další...</div>
       </div>
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
@@ -96,8 +114,8 @@ export const PromotedRoasters = () => {
         </div>
       </div>
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-stretch justify-center gap-2 text-xl md:gap-20">
-        {promoted.others
-          .map((s: { href: string; src: string; alt: string }) => (
+        {promoted.others.map(
+          (s: { href: string; src: string; alt: string }) => (
             <div className="p-2" key={s.href}>
               <a
                 href={s.href}
@@ -108,20 +126,20 @@ export const PromotedRoasters = () => {
               >
                 <div className="flex h-[200px] items-center justify-center">
                   <ExportedImage
-                  src={`/images/promoted/${s.src}`}
+                    src={`/images/promoted/${s.src}`}
                     alt={s.alt}
-                    className="max-h-[10rem] max-w-[10rem] h-auto"
+                    className="h-auto max-h-[10rem] max-w-[10rem]"
                     width={160}
                     height={160}
                   />
                 </div>
-                <span className="sr-only">{s.alt}</span>
                 <div className="justify-self-end text-center text-2xl font-bold">
                   {s.alt}
                 </div>
               </a>
             </div>
-          ))}
+          ),
+        )}
       </div>
     </section>
   );

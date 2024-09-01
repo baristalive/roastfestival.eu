@@ -40,6 +40,7 @@ const Home = ({ params: { lang } }: HomePropsType) => {
     <div className={`wrapper ${divClass ? "show" : "hide"}`}>
       <Link
         href={lang === "cz" ? "./en" : "./cz"}
+        hrefLang={lang === "cz" ? "en-US" : "cs-CZ"}
         rel="alternate"
         className="lang inverted card z-50 text-lg lowercase"
       >

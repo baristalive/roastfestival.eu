@@ -347,7 +347,7 @@ svg.elevate {
 
 .lang {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   text-orientation: sideways;
   writing-mode: vertical-rl;
   left: -5px;

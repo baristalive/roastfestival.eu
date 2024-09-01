@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "ROAST!",
   description: dictionaries.en.metadata.description,
   alternates: {
-    canonical: '/',
+    canonical: 'https://roastfestival.eu/',
     languages: {
       'en-US': '/en',
       'cs-CZ': '/cz',

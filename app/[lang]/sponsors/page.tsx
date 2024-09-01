@@ -28,6 +28,7 @@ const Sponsor = ({ params: { lang } }: SponsorPropsType) => {
     <div className={`wrapper ${divClass ? "show" : "hide"}`}>
       <Link
         href={lang === "cz" ? "/en/sponsors" : "/cz/sponsors"}
+        hrefLang={lang === "cz" ? "en-US" : "cs-CZ"}
         rel="alternate"
         className="lang inverted card z-50 text-lg lowercase"
       >

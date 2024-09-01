@@ -15,11 +15,15 @@ export const Sponsors = () => {
 
   const { contextSafe } = useGSAP();
 
-  const [sponsors, setSponsors] = useState([] as {href: string, alt: string, src: string}[])
+  const [sponsors, setSponsors] = useState(
+    [] as { href: string; alt: string; src: string }[],
+  );
 
   useEffect(() => {
-    setSponsors(lang.promoted.sponsors.items?.sort(() => Math.random() - 0.5) || [])
-  }, [lang.promoted.sponsors.items])
+    setSponsors(
+      lang.promoted.sponsors.items?.sort(() => Math.random() - 0.5) || [],
+    );
+  }, [lang.promoted.sponsors.items]);
   return (
     <section className="watermark pb-48" id="promoted" ref={ref}>
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
@@ -32,19 +36,18 @@ export const Sponsors = () => {
       </div>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
         {sponsors.map((s: { href: string; src: string; alt: string }) => (
-            <div className="p-2" key={s.href}>
-              <a href={s.href} target="_blank" rel="external" title={s.alt}>
-                <ExportedImage
-                  src={`/images/promoted/${s.src}`}
-                  alt={s.alt}
-                  className="max-h-[18rem] max-w-[20rem]"
-                  width={320}
-                  height={288}
-                />
-                <span className="sr-only">{s.alt}</span>
-              </a>
-            </div>
-          ))}
+          <div className="p-2" key={s.href}>
+            <a href={s.href} target="_blank" rel="external" title={s.alt}>
+              <ExportedImage
+                src={`/images/promoted/${s.src}`}
+                alt={s.alt}
+                className="max-h-[18rem] max-w-[20rem]"
+                width={320}
+                height={288}
+              />
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );
