@@ -126,6 +126,11 @@
           "href": "https://gills.cz/",
           "src": "gills.svg",
           "alt": "Gill's Coffee Roastery"
+        },
+        {
+          "href": "https://wild-kaffee.at/",
+          "src": "wildkaffee.png",
+          "alt": "Wildkaffee Roastery"
         }
       ]
     },
