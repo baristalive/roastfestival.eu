@@ -9,7 +9,6 @@ import {
 } from "@/app/dictionaries/all";
 import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import ExportedImage from "next-image-export-optimizer";
 import PresenterLogo from "../components/PresenterLogo";
 
 export const PromotedRoasters = () => {

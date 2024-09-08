@@ -448,15 +448,15 @@ header::after {
 }
 
 .program-track:nth-of-type(3n) .program-slot {
-  background-color: var(--primary);
-}
-
-.program-track:nth-of-type(3n + 1) .program-slot {
   background-color: var(--black);
 }
 
-.program-track:nth-of-type(3n + 2) .program-slot {
+.program-track:nth-of-type(3n + 1) .program-slot {
   background-color: var(--accent);
+}
+
+.program-track:nth-of-type(3n + 2) .program-slot {
+  background-color: var(--primary);
 }
 
 .pills a.active {
