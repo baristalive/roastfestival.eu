@@ -209,7 +209,10 @@
       "name": "The miners",
       "primaryLink": "web",
       "web": "https://www.theminers.eu",
-      "instagram": "https://www.instagram.com/theminerscoffee"
+      "instagram": "https://www.instagram.com/theminerscoffee",
+      "modalProps": {
+        "showName": false
+      }
     },
     "parabellum": {
       "logo": "parabellum.png",
@@ -246,7 +249,10 @@
       "primaryLink": "web",
       "web": "https://poppybeans.cz/",
       "facebook": "https://facebook.com/poppybeanscoffee",
-      "instagram": "https://instagram.com/poppybeanscoffee"
+      "instagram": "https://instagram.com/poppybeanscoffee",
+      "modalProps": {
+        "showName": false
+      }
     },
     "punkt": {
       "instagram": "https://www.instagram.com/punkt_espresso_bar/",

@@ -446,6 +446,15 @@ header::after {
 .program-slot {
   color: var(--white);
 }
+.program-slot-wrapper {
+  grid-column: 1 / -1;
+}
+@media (min-width: 1024px) {
+  .program-slot-wrapper {
+    grid-column-start: var(--gridColumnStart);
+    grid-column-end: var(--gridColumnEnd);
+  }
+}
 
 .program-track:nth-of-type(3n) .program-slot {
   background-color: var(--black);

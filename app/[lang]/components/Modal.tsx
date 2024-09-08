@@ -10,14 +10,8 @@ import { StationIcon } from "./StationIcon";
 import ExportedImage from "next-image-export-optimizer";
 import WebIcon from "@/app/icons/web";
 import YoutubeIcon from "@/app/icons/youtube";
+import { getTimeString } from "@/app/utils/time";
 
-const getTimeString = (time: number) => {
-  const hours = Math.floor(time);
-  const minutes = Math.floor(60 * (time % 1))
-    .toString()
-    .padStart(2, "0");
-  return `${hours}:${minutes}`;
-};
 
 export const Modal = ({
   name,
@@ -106,28 +100,28 @@ export const Modal = ({
     <>
       <div className="fixed inset-0 z-10 bg-[color-mix(in_srgb,_var(--primary)_45%,_transparent)]"></div>
       <div
-        className="fixed inset-0 z-20 flex animate-[slideUp_200ms] items-end overflow-y-auto overflow-x-hidden bg-transparent text-left outline-none focus:outline-none md:animate-[fadeIn_200ms] md:items-center md:justify-center"
+        className="fixed inset-0 z-20 flex items-end overflow-y-auto overflow-x-hidden bg-transparent text-left outline-none focus:outline-none animate-[fadeIn_200ms] md:items-center md:justify-center"
         onClick={() => setShowModal(false)}
       >
         <button
-          className="leading-1 absolute right-4 top-4 h-[40px] w-[40px] rounded-full bg-[var(--black)] p-0 pb-1 text-2xl font-bold leading-4 text-white"
+          className="leading-1 z-30 absolute right-4 top-4 h-[40px] w-[40px] rounded-full bg-[var(--black)] p-0 pb-1 text-2xl font-bold leading-4 text-white"
           onClick={() => setShowModal(false)}
         >
           ×
         </button>
-        <div className="w-full bg-transparent p-2 focus:outline-none lg:min-w-[500px] lg:max-w-[60%]">
+        <div className="w-full h-full lg:h-auto  bg-transparent p-2 focus:outline-none lg:min-w-[500px] xl:max-w-[60%] lg:max-w-[80%] pt-20">
           <div
-            className="card elevate z-10 col-start-2 flex flex-col items-start justify-center rounded-3xl border-0 px-3 pb-10 pt-3 shadow-lg"
+            className="card elevate z-10 col-start-2 flex flex-col items-start justify-center rounded-3xl border-0 px-3 pb-10 pt-3 shadow-lg gap-10"
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
             <div
-              className={`relative flex w-full flex-col items-center justify-center ${logo ? "pt-20" : ""}`}
+              className={`relative flex w-full flex-col items-center justify-center ${logo ? "pt-32 lg:pt-10" : ""}`}
             >
               {logo && (
                 <div
-                  className={`elevate absolute ${modalProps?.showName === false ? "bottom-6" : "bottom-20"} flex h-60 w-60 items-center justify-center overflow-hidden rounded-full bg-white ${modalProps?.className !== undefined ? modalProps?.className : "p-4"}`}
+                  className={`elevate absolute ${modalProps?.showName === false ? "-bottom-6" : "bottom-20"}  flex h-60 w-60 items-center justify-center overflow-hidden rounded-full bg-white ${modalProps?.className !== undefined ? modalProps?.className : "p-4"}`}
                 >
                   <ExportedImage
                     src={`/images/promoted/${logo}`}
@@ -155,37 +149,36 @@ export const Modal = ({
                     .name;
                 return (
                   <div
-                    className="flex flex-col items-center justify-center"
+                    className="flex flex-col items-center justify-center text-center"
                     key={idx}
                   >
                     <div>
                       <StationIcon station={item.track} />
                     </div>
-                    <h6 className="text-xl font-bold">
+                    <h6 className="text-base lg:text-xl font-bold">
                       {
                         lang.programCategory[
                           item.track as keyof typeof lang.programCategory
                         ]
                       }
                     </h6>
-                    <h6 className="text-xl">
+                    <h6 className="text-base lg:text-xl">
                       {day}: {getTimeString(item.start)} -{" "}
                       {getTimeString(item.end)}
                     </h6>
-                    <h6 className="text-xl"></h6>
                   </div>
                 );
               })}
             </div>
-            <div className="flex-grow p-10 font-normal">
+            <div className="flex-grow p-2 lg:p-10 font-normal">
               {Array.isArray(annotation) ? (
                 annotation.map((p) => (
-                  <p className="text-lg mb-4" key={p}>
+                  <p className="text-base lg:text-lg mb-4" key={p}>
                     {p}
                   </p>
                 ))
               ) : (
-                <p className="text-lg">{annotation}</p>
+                <p className="text-base lg:text-lg">{annotation}</p>
               )}
             </div>
             <div className="flex w-full items-center justify-center gap-4">

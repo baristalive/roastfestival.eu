@@ -5,12 +5,13 @@ import {
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import React, { MouseEvent, useRef, useState } from "react";
+import React, { MouseEvent, useRef, useState, CSSProperties } from "react";
 import { Modal } from "../components/Modal";
 import { StationIcon } from "../components/StationIcon";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Flip } from "gsap/all";
+import { getTimeString } from "@/app/utils/time";
 
 const hours = [...Array(11)].map((_, idx) => idx + 10);
 
@@ -106,10 +107,10 @@ export const Program = () => {
               <React.Fragment key={day.$ref}>
                 {day.schedule.length > 0 && (
                   <div
-                    className={`schedule inset-0 top-4 flex flex-col ${idx !== tab ? "hidden" : ""}`}
+                    className={`schedule inset-0 top-4 flex flex-col will-change-auto ${idx !== tab ? "hidden" : ""}`}
                   >
                     <div className="card elevate relative m-3 flex flex-col justify-between rounded-2xl pb-4">
-                      <div className="grid grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center">
+                      <div className="hidden lg:grid grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center">
                         <div className="col-span-2"></div>
                         {hours.map((h) => (
                           <div className="col-span-2" key={h}>
@@ -117,7 +118,7 @@ export const Program = () => {
                           </div>
                         ))}
                       </div>
-                      <div className="absolute inset-0 z-0 grid grid-cols-[repeat(24,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
+                      <div className="absolute inset-0 z-0 hidden lg:grid grid-cols-[repeat(24,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
                         <div className="col-span-3"></div>
                         {hours.map((h, idx) => (
                           <div
@@ -134,7 +135,7 @@ export const Program = () => {
                           className="program-track relative mx-4 grid grid-cols-[repeat(24,_minmax(0,_1fr))] rounded-2xl py-4 text-xl"
                         >
                           <div
-                            className="col-span-3 row-start-1 flex flex-col items-center justify-center p-2 text-center"
+                            className="col-span-full lg:col-span-3 row-start-1 flex flex-col items-center justify-center p-2 text-center"
                             style={{ gridRowEnd: t.rows + 1 }}
                           >
                             <StationIcon station={t.track} />
@@ -152,22 +153,25 @@ export const Program = () => {
                             ] as Presenter;
                             return (
                               <div
-                                className="mx-0.5"
+                                className="mx-0.5 program-slot-wrapper"
                                 key={`${lang.program[tab].$ref}_${presenter?.name}_${idx}`}
                                 style={{
-                                  gridColumnStart: `${(s.start - 10) * 2 + 4}`,
-                                  gridColumnEnd: `${(s.end - 10) * 2 + 4}`,
-                                }}
+                                  "--gridColumnStart": `${(s.start - 10) * 2 + 4}`,
+                                  "--gridColumnEnd": `${(s.end - 10) * 2 + 4}`,
+                                } as CSSProperties}
                               >
                                 {(presenter === undefined || !presenter.name ) ? (
                                   null
                                 ) : (
                                   <>
                                     <Modal {...presenter}>
-                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-left text-lg font-bold md:py-2">
-                                        <h4>{presenter.name}</h4>
+                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1  md:py-2 lg:text-left text-center">
+                                        <div className="col-span-full lg:hidden text-base">
+                                          {getTimeString(s.start)} - {getTimeString(s.end)}
+                                        </div>
+                                        <h4 className="font-bold text-lg">{presenter.name}</h4>
                                         {presenter.subheading && (
-                                          <i className="text-sm overflow-clip text-nowrap">
+                                          <i className="text-base text-nowrap text-ellipsis">
                                             {presenter.subheading}
                                           </i>
                                         )}
