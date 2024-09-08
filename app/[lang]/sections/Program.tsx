@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Flip } from "gsap/all";
 
-const hours = [...Array(8)].map((_, idx) => `1${idx + 1}`);
+const hours = [...Array(11)].map((_, idx) => idx + 10);
 
 type DaySchedule =
   | {
@@ -119,25 +119,24 @@ export const Program = () => {
                     className={`schedule absolute inset-0 top-4 flex flex-col ${idx !== tab ? "opacity-0" : ""}`}
                   >
                     <div className="card elevate relative z-10 m-3 flex flex-col justify-between rounded-2xl pb-4">
-                      <div className="grid grid-cols-[repeat(20,_minmax(0,_1fr))] p-4 pt-10 text-center">
-                        <div className="col-span-2 col-start-3">10:00</div>
+                      <div className="grid grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center">
+                        <div className="col-span-2"></div>
                         {hours.map((h) => (
                           <div className="col-span-2" key={h}>
                             {h}:00
                           </div>
                         ))}
                       </div>
-                      <div className="absolute inset-0 z-0 grid grid-cols-[repeat(20,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
-                        <div className="col-span-2 col-start-2"></div>
-                        {hours.map((h) => (
-                          <div className="col-span-2" key={h}></div>
+                      <div className="absolute inset-0 z-0 grid grid-cols-[repeat(24,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
+                        <div className="col-span-3"></div>
+                        {hours.map((h, idx) => (
+                          <div className={ idx !== hours.length-1 ? "col-span-2": ""} key={h}></div>
                         ))}
-                        <div />
                       </div>
                       {day.schedule.map((t: DaySchedule) => (
                         <div
                           key={t.track}
-                          className="program-track relative mx-4 grid grid-cols-[repeat(20,_minmax(0,_1fr))] gap-x-2 rounded-2xl py-4 text-xl"
+                          className="program-track relative mx-4 grid grid-cols-[repeat(24,_minmax(0,_1fr))] rounded-2xl py-4 text-xl"
                         >
                           <div
                             className="col-span-3 row-start-1 flex flex-col items-center justify-center p-2 text-center"
@@ -154,6 +153,7 @@ export const Program = () => {
                           </div>
                           {t.schedule.map((s, idx) => (
                             <div
+                              className="mx-0.5"
                               key={`${lang.program[tab].title}_${s.title}_${idx}`}
                               style={{
                                 gridColumnStart: `${(s.start - 10) * 2 + 4}`,

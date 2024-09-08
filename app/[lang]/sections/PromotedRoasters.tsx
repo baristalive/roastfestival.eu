@@ -2,16 +2,15 @@
 
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import {
+  dictionaries,
+  Presenter,
+  SupportedLanguages,
+} from "@/app/dictionaries/all";
 import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import ExportedImage from "next-image-export-optimizer";
-
-type Item = {
-  href: string;
-  src: string;
-  alt: string;
-};
+import PresenterLogo from "../components/PresenterLogo";
 
 export const PromotedRoasters = () => {
   const params = useParams();
@@ -21,9 +20,9 @@ export const PromotedRoasters = () => {
   const { contextSafe } = useGSAP();
 
   const [promoted, setPromoted] = useState({
-    honored: [] as Item[],
-    regular: [] as Item[],
-    others: [] as Item[],
+    honored: [] as string[],
+    regular: [] as string[],
+    others: [] as string[],
   });
 
   useEffect(() => {
@@ -63,41 +62,25 @@ export const PromotedRoasters = () => {
         {lang.promoted.roasters.honoredTitle}
       </h2>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
-        {promoted.honored.map(
-          (s: { href: string; src: string; alt: string }) => (
-            <div className="p-2" key={s.href}>
-              <a href={s.href} target="_blank" rel="external" title={s.alt}>
-                <ExportedImage
-                  src={`/images/promoted/${s.src}`}
-                  alt={s.alt}
-                  className="h-auto max-h-[16rem] w-full max-w-[16rem]"
-                  width={256}
-                  height={256}
-                />
-              </a>
-            </div>
-          ),
-        )}
+        {promoted.honored.map((p) => (
+          <PresenterLogo name={p} key={p} />
+        ))}
       </div>
       <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20 md:pb-24">
         {lang.promoted.roasters.regularTitle}
       </h2>
       <div className="mx-auto my-10 grid max-w-screen-2xl grid-cols-2 flex-wrap items-center justify-center gap-2 gap-y-4 text-center text-xl sm:flex md:gap-20">
-        {promoted.regular.map(
-          (s: { href: string; src: string; alt: string }) => (
-            <div className="p-2" key={s.href}>
-              <a href={s.href} target="_blank" rel="external" title={s.alt}>
-                <ExportedImage
-                  src={`/images/promoted/${s.src}`}
-                  alt={s.alt}
-                  className="mx-auto h-auto max-h-[10rem] w-full max-w-[10rem]"
-                  width={160}
-                  height={160}
-                />
-              </a>
-            </div>
-          ),
-        )}
+        {promoted.regular.map((p) => (
+          <PresenterLogo
+            name={p}
+            key={p}
+            imgProps={{
+              className: "mx-auto h-auto max-h-[10rem] w-full max-w-[10rem]",
+              width: 160,
+              height: 160,
+            }}
+          />
+        ))}
         <div className="p-2 text-base 2xl:text-xl">a další...</div>
       </div>
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
@@ -114,32 +97,22 @@ export const PromotedRoasters = () => {
         </div>
       </div>
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-stretch justify-center gap-2 text-xl md:gap-20">
-        {promoted.others.map(
-          (s: { href: string; src: string; alt: string }) => (
-            <div className="p-2" key={s.href}>
-              <a
-                href={s.href}
-                target="_blank"
-                rel="external"
-                title={s.alt}
-                className="flex h-full flex-col items-center justify-between gap-4"
-              >
-                <div className="flex h-[200px] items-center justify-center">
-                  <ExportedImage
-                    src={`/images/promoted/${s.src}`}
-                    alt={s.alt}
-                    className="h-auto max-h-[10rem] max-w-[10rem]"
-                    width={160}
-                    height={160}
-                  />
-                </div>
-                <div className="justify-self-end text-center text-2xl font-bold">
-                  {s.alt}
-                </div>
-              </a>
-            </div>
-          ),
-        )}
+        {promoted.others.map((p) => (
+          <PresenterLogo
+            name={p}
+            key={p}
+            showName={true}
+            imgProps={{
+              className: "h-auto max-h-[10rem] max-w-[10rem]",
+              width: 160,
+              height: 160,
+            }}
+            aProps={{
+              className: "flex h-full flex-col items-center justify-between gap-4",
+              target: "_blank", rel: "external"
+            }}
+          />
+        ))}
       </div>
     </section>
   );

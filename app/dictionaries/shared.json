@@ -1,4 +1,5 @@
 {
+  "banner": null,
   "contacts": {
     "email": "mailto:info@baristalive.cz",
     "facebook": "https://www.facebook.com/roastfestival",
@@ -7,6 +8,7 @@
     "kaznice_web": "https://kaznice.art/",
     "tickets": "https://goout.net/cs/listky/roast-brno-festival-of-coffee-and-roasters-2024/bbcy/"
   },
+  "date": "21-22/9/2024",
   "location": {
     "stops": {
       "kaznice": "Káznice",
@@ -14,181 +16,237 @@
       "tkalcovska": "Tkalcovská"
     }
   },
-  "date": "21-22/9/2024",
-  "title": "Coffee festival",
-  "banner": null,
-  "promoted": {
-    "roasters": {
-      "honored": [
-        {
-          "href": "https://haybcoffee.pl/",
-          "src": "hayb.png",
-          "alt": "HAYB"
-        }
-      ],
-      "regular": [
-        {
-          "href": "https://www.instagram.com/punkt_espresso_bar/",
-          "src": "punkt.png",
-          "alt": "Punkt."
-        },
-        {
-          "href": "https://www.francin.cz/",
-          "src": "fracin.png",
-          "alt": "Francin Roasters"
-        },
-        {
-          "href": "https://kmen.coffee/",
-          "src": "kmen.png",
-          "alt": "Kmen Coffee Roasters"
-        },
-        {
-          "href": "https://www.instagram.com/lis.kafe",
-          "src": "liskafe.png",
-          "alt": "Liškafé"
-        },
-        {
-          "href": "https://www.theminers.eu",
-          "src": "the_miners.png",
-          "alt": "The miners"
-        },
-        {
-          "href": "https://www.instagram.com/ig_coffee_roasters/",
-          "src": "ig.png",
-          "alt": "IG Coffee Roasters"
-        },
-        {
-          "href": "https://poppybeans.cz/",
-          "src": "poppy_beans.png",
-          "alt": "Poppy Beans"
-        },
-        {
-          "href": "https://kafepikola.cz",
-          "src": "pikola.png",
-          "alt": "Pikola"
-        },
-        {
-          "href": "https://www.mamacoffee.cz/",
-          "src": "mamacoffee.png",
-          "alt": "mamacoffee"
-        },
-        {
-          "href": "https://www.black.sk/",
-          "src": "black.png",
-          "alt": "black."
-        },
-        {
-          "href": "https://www.dos-mundos.cz",
-          "src": "dos_mundos.png",
-          "alt": "Dos Mundos"
-        },
-        {
-          "href": "https://idylika.sk",
-          "src": "idylika.png",
-          "alt": "Idylika"
-        },
-        {
-          "href": "https://quickborn.sk/",
-          "src": "quickborn.png",
-          "alt": "Quickborn"
-        },
-        {
-          "href": "https://penerini.cz/",
-          "src": "penerini.png",
-          "alt": "Penerini"
-        },
-        {
-          "href": "https://www.baristaroasters.sk/",
-          "src": "baristaroasters.webp",
-          "alt": "Barista roasters"
-        },
-        {
-          "href": "https://www.kolnaroastery.cz/",
-          "src": "kolna.png",
-          "alt": "Kolna roastery"
-        },
-        {
-          "href": "https://www.rebelbean.cz/",
-          "src": "rebelbean.png",
-          "alt": "Rebelbean"
-        },
-        {
-          "href": "https://www.instagram.com/redfawncoffee/",
-          "src": "red_fawn.png",
-          "alt": "Red Fawn"
-        },
-        {
-          "href": "https://www.lotroastery.com/",
-          "src": "lot.png",
-          "alt": "LOT roastery"
-        },
-        {
-          "href": "https://gills.cz/",
-          "src": "gills.svg",
-          "alt": "Gill's Coffee Roastery"
-        },
-        {
-          "href": "https://wild-kaffee.at/",
-          "src": "wildkaffee.png",
-          "alt": "Wildkaffee Roastery"
-        }
-      ]
+  "presenters": {
+    "baristaroasters": {
+      "logo": "baristaroasters.webp",
+      "name": "Barista roasters",
+      "primaryLink": "web",
+      "web": "https://www.baristaroasters.sk/"
     },
+    "black": {
+      "logo": "black.png",
+      "name": "black.",
+      "primaryLink": "web",
+      "web": "https://www.black.sk/"
+    },
+    "buchta_b": {
+      "logo": "buchta_b.png",
+      "name": "Buchta B",
+      "primaryLink": "web",
+      "web": "https://www.instagram.com/buchta_b/"
+    },
+    "comandante": {
+      "logo": "comandante.png",
+      "name": "Comandante Grinder",
+      "primaryLink": "web",
+      "web": "https://www.comandantegrinder.com/"
+    },
+    "dimchi": {
+      "logo": "dimchi.png",
+      "name": "Dimchi",
+      "primaryLink": "instagram",
+      "web": "https://www.instagram.com/dimchi_kimchi/"
+    },
+    "dos_mundos": {
+      "logo": "dos_mundos.png",
+      "name": "Dos Mundos",
+      "primaryLink": "web",
+      "web": "https://www.dos-mundos.cz"
+    },
+    "fracin": {
+      "logo": "fracin.png",
+      "name": "Francin Roasters",
+      "primaryLink": "web",
+      "web": "https://www.francin.cz/"
+    },
+    "gills": {
+      "logo": "gills.svg",
+      "name": "Gill's Coffee Roastery",
+      "primaryLink": "web",
+      "web": "https://gills.cz/"
+    },
+    "hayb": {
+      "logo": "hayb.png",
+      "name": "HAYB",
+      "primaryLink": "web",
+      "web": "https://haybcoffee.pl/"
+    },
+    "hodne_nekde": {
+      "instagram": "https://www.instagram.com/hodnenekde/",
+      "logo": "hodne_nekde.png",
+      "name": "Hodně někde",
+      "primaryLink": "instagram"
+    },
+    "idylika": {
+      "logo": "idylika.png",
+      "name": "Idylika",
+      "primaryLink": "web",
+      "web": "https://idylika.sk"
+    },
+    "ig": {
+      "instagram": "https://www.instagram.com/ig_coffee_roasters/",
+      "logo": "ig.png",
+      "name": "IG Coffee Roasters",
+      "primaryLink": "instagram"
+    },
+    "kaple": {
+      "logo": "kaple.png",
+      "name": "Kaple Brno winebar",
+      "primaryLink": "web",
+      "web": "https://kaplebrno.cz/"
+    },
+    "kmen": {
+      "logo": "kmen.png",
+      "name": "Kmen Coffee Roasters",
+      "primaryLink": "web",
+      "web": "https://kmen.coffee/"
+    },
+    "kolna": {
+      "logo": "kolna.png",
+      "name": "Kolna roastery",
+      "primaryLink": "web",
+      "web": "https://www.kolnaroastery.cz/"
+    },
+    "kudyznudy": {
+      "logo": "kudy-z-nudy.png",
+      "name": "Kudyznudy.cz – tipy na výlet",
+      "primaryLink": "web",
+      "web": "https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner"
+    },
+    "liskafe": {
+      "instagram": "https://www.instagram.com/lis.kafe",
+      "logo": "liskafe.png",
+      "name": "Liškafé",
+      "primaryLink": "instagram"
+    },
+    "lot": {
+      "logo": "lot.png",
+      "name": "LOT roastery",
+      "primaryLink": "web",
+      "web": "https://www.lotroastery.com/"
+    },
+    "mamacoffee": {
+      "logo": "mamacoffee.png",
+      "name": "mamacoffee",
+      "primaryLink": "web",
+      "web": "https://www.mamacoffee.cz/"
+    },
+    "miners": {
+      "logo": "the_miners.png",
+      "name": "The miners",
+      "primaryLink": "web",
+      "web": "https://www.theminers.eu"
+    },
+    "parabellum": {
+      "logo": "parabellum.png",
+      "name": "Para Bellum",
+      "primaryLink": "web",
+      "web": "https://parabellumlounge.cz/"
+    },
+    "penerini": {
+      "logo": "penerini.png",
+      "name": "Penerini",
+      "primaryLink": "web",
+      "web": "https://penerini.cz/"
+    },
+    "pikola": {
+      "logo": "pikola.png",
+      "name": "Pikola",
+      "primaryLink": "web",
+      "web": "https://kafepikola.cz"
+    },
+    "poppy": {
+      "logo": "poppy_beans.png",
+      "name": "Poppy Beans",
+      "primaryLink": "web",
+      "web": "https://poppybeans.cz/"
+    },
+    "punkt": {
+      "instagram": "https://www.instagram.com/punkt_espresso_bar/",
+      "logo": "punkt.png",
+      "name": "Punkt.",
+      "primaryLink": "instagram"
+    },
+    "quickborn": {
+      "logo": "quickborn.png",
+      "name": "Quickborn",
+      "primaryLink": "web",
+      "web": "https://quickborn.sk/"
+    },
+    "rast": {
+      "facebook": "https://www.facebook.com/p/RAST-coffee-Brno-100087549812805/",
+      "logo": "rast.png",
+      "name": "Rast Coffee",
+      "primaryLink": "facebook"
+    },
+    "rebelbean": {
+      "logo": "rebelbean.png",
+      "name": "Rebelbean",
+      "primaryLink": "web",
+      "web": "https://www.rebelbean.cz/"
+    },
+    "red_fawn": {
+      "instagram": "https://www.instagram.com/redfawncoffee/",
+      "logo": "red_fawn.png",
+      "name": "Red Fawn",
+      "primaryLink": "instagram"
+    },
+    "wildkaffee": {
+      "logo": "wildkaffee.png",
+      "name": "Wildkaffee Roastery",
+      "primaryLink": "web",
+      "web": "https://wild-kaffee.at/"
+    }
+  },
+  "promoted": {
     "others": {
       "items": [
-        {
-          "href": "https://www.instagram.com/hodnenekde/",
-          "src": "hodne_nekde.png",
-          "alt": "Hodně někde"
-        },
-        {
-          "href": "https://parabellumlounge.cz/",
-          "src": "parabellum.png",
-          "alt": "Para Bellum"
-        },
-        {
-          "href": "https://www.instagram.com/dimchi_kimchi/",
-          "src": "dimchi.png",
-          "alt": "Dimchi"
-        },
-        {
-          "href": "https://www.facebook.com/p/RAST-coffee-Brno-100087549812805/",
-          "src": "rast.png",
-          "alt": "Rast Coffee"
-        },
-        {
-          "href": "https://kaplebrno.cz/",
-          "src": "kaple.png",
-          "alt": "Kaple Brno winebar"
-        },
-        {
-          "href": "https://www.instagram.com/buchta_b/",
-          "src": "buchta_b.png",
-          "alt": "Buchta B"
-        }
+        "buchta_b",
+        "dimchi",
+        "hodne_nekde",
+        "kaple",
+        "parabellum",
+        "rast"
+      ]
+    },
+    "roasters": {
+      "honored": [
+        "hayb"
+      ],
+      "regular": [
+        "baristaroasters",
+        "black",
+        "dos_mundos",
+        "fracin",
+        "gills",
+        "idylika",
+        "ig",
+        "kmen",
+        "kolna",
+        "liskafe",
+        "lot",
+        "mamacoffee",
+        "miners",
+        "penerini",
+        "pikola",
+        "poppy",
+        "punkt",
+        "quickborn",
+        "rebelbean",
+        "red_fawn",
+        "wildkaffee"
       ]
     },
     "sponsors": {
       "items": [
-        {
-          "href": "https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner",
-          "src": "kudy-z-nudy.png",
-          "alt": "Kudyznudy.cz – tipy na výlet"
-        },
-        {
-          "href": "https://www.instagram.com/ig_coffee_roasters/",
-          "src": "ig.png",
-          "alt": "IG Coffee Roasters"
-        },
-        {
-          "href": "https://www.comandantegrinder.com/",
-          "src": "comandante.png",
-          "alt": "Comandante Grinder"
-        }
+        "comandante",
+        "ig",
+        "kudyznudy"
       ]
     }
   },
   "sponsors": {
     "signUpLink": "mailto:eva@baristalive.cz"
-  }
+  },
+  "title": "Coffee festival"
 }

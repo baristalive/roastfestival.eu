@@ -2,11 +2,10 @@
 
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import { dictionaries, Presenter, SupportedLanguages } from "@/app/dictionaries/all";
 import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-("@/app/dictionaries/all");
-import ExportedImage from "next-image-export-optimizer";
+import PresenterLogo from "../components/PresenterLogo";
 
 export const Sponsors = () => {
   const params = useParams();
@@ -15,9 +14,7 @@ export const Sponsors = () => {
 
   const { contextSafe } = useGSAP();
 
-  const [sponsors, setSponsors] = useState(
-    [] as { href: string; alt: string; src: string }[],
-  );
+  const [sponsors, setSponsors] = useState([] as string[]);
 
   useEffect(() => {
     setSponsors(
@@ -35,18 +32,16 @@ export const Sponsors = () => {
         </div>
       </div>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
-        {sponsors.map((s: { href: string; src: string; alt: string }) => (
-          <div className="p-2" key={s.href}>
-            <a href={s.href} target="_blank" rel="external" title={s.alt}>
-              <ExportedImage
-                src={`/images/promoted/${s.src}`}
-                alt={s.alt}
-                className="max-h-[18rem] max-w-[20rem]"
-                width={320}
-                height={288}
-              />
-            </a>
-          </div>
+        {sponsors.map((p) => (
+          <PresenterLogo
+            name={p}
+            key={p}
+            imgProps={{
+              className: "max-h-[18rem] max-w-[20rem]",
+              width: 320,
+              height: 288,
+            }}
+          />
         ))}
       </div>
     </section>
