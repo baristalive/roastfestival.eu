@@ -85,7 +85,15 @@
     "mamacoffee": {
       "annotation": "V mamacoffee spojujeme výběrovou kávu té nejvyšší kvality s férovým a udržitelným obchodováním. Zaměřujeme se na přímou spolupráci s farmáři, díky čemuž přinášíme nejen skvělý šálek kávy, ale i jedinečné příběhy, které za ním stojí. Kávu a mnoho dalšího můžete zakoupit na našem e-shopu nebo v jedné ze 7 kaváren, které v Praze provozujeme. Kde si kromě vynikající kávy můžete vychutnat i zákusky z naší vlastní řemeslné pekárny."
     },
-    "miners": {},
+    "miners": {
+      "annotation": [
+        "Vítejte u The Miners! Jsme specializovaná pražírna kávy a rostoucí síť kaváren, která s hrdostí působí v České republice a ve Španělsku.",
+        "V The Miners věříme, že skvělá káva začíná u samotného zdroje. Proto pracujeme výhradně s výběrovou kávou, jejíž zrna s hrdostí získáváme přímo od nejuznávanějších farmářů z celého světa. S pečlivostí pražíme kávová zrna z 13 různých zemí, přičemž používáme speciální metody pražení, které zdůrazňují jedinečné chutě každého původu. Náš oddaný tým se věnuje důkladnému výzkumu a budování vztahů, aby zajistil, že každý šálek, který si vychutnáte, je ztělesněním kvality a poctivého řemesla.",
+        "Chápeme, že výjimečná káva si zaslouží výjimečné baristy. Proto jsme vytvořili komplexní týdenní školení, které připravuje naše baristy na to, aby vám vždy připravili dokonalý šálek. Školení je zakončeno zkouškou, která zaručuje, že naši baristé mají všechny potřebné znalosti a dovednosti.",
+        "Věříme v dokonalost ve všem, co děláme, a náš závazek ke kvalitě se odráží v každém pečlivě praženém zrnku kávy. K přípravě používáme moderní špičkové technologie, jako jsou kávovary La Marzocco a Slayer, které zajišťují, že každý šálek je připraven s maximální precizností a péčí.",
+        "V The Miners nás pohání vášeň pro získávání nejlepších zrn od nejlepších farmářů z celého světa. Náš tým usilovně pracuje na budování pevných vztahů s těmito oddanými pěstiteli, kteří sdílejí náš neochvějný závazek k prvotřídní dokonalosti."
+      ]
+    },
     "parabellum": {
       "annotation": "Para Bellum Lounge je podnik propojující kvalitní vodní dýmky a moderní bar v samém centru Brna. Je ideálním místem pro přátelské posezení u deskových her, klidný homeoffice s rychlým internetem, či rande s chutným drinkem a výbornou dýmkou. Najdete nás v blízkosti Malinovského náměstí na adrese Sukova 4."
     },

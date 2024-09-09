@@ -85,7 +85,15 @@
     "mamacoffee": {
       "annotation": "At mamacoffee, we combine the highest quality coffee with fair and sustainable trading. We focus on working directly with the farmers to deliver not only a great cup of coffee, but also the unique stories behind it. You can buy coffee and much more from our e-shop or from one of the 7 cafes we operate in Prague. Where, in addition to delicious coffee, you can also enjoy pastries from our own artisan bakery."
     },
-    "miners": {},
+    "miners": {
+      "annotation": [
+        "Welcome to The Miners! We are a specialty coffee roaster and a growing network of cafes proudly operating in the Czech Republic and Spain.",
+        "At The Miners, we believe that great coffee starts at the source. That's why we work exclusively with specialty coffee, proudly sourcing beans directly from the most respected farmers around the world. We carefully roast beans from 13 different countries, using special roasting methods that highlight the unique flavors of each origin. Our dedicated team is committed to thorough research and relationship building to ensure that every cup you enjoy is the epitome of quality and honest craftsmanship.",
+        "We understand that exceptional coffee deserves exceptional baristas. That's why we've created a comprehensive weekly training course that prepares our baristas to make you the perfect cup every time. The training culminates in an exam that ensures our baristas have all the necessary knowledge and skills.",
+        "We believe in excellence in everything we do, and our commitment to quality is reflected in every carefully roasted bean. We use modern, cutting-edge technology such as La Marzocco and Slayer coffee machines to ensure that every cup is prepared with the utmost precision and care.",
+        "At The Miners, we are driven by a passion for sourcing the best beans from the best farmers around the world. Our team works hard to build strong relationships with these dedicated growers who share our unwavering commitment to world-class excellence."
+      ]
+    },
     "parabellum": {
       "annotation": "Para Bellum Lounge is an establishment combining quality hookahs and a modern bar in the very centre of Brno. It is an ideal place for a friendly board game session, a quiet home office with fast internet, or a date with a tasty drink and an excellent pipe. You can find us near Malinovsky Square at Sukova 4."
     },
