@@ -193,14 +193,12 @@
       "annotation": "Association of two Brno artists who combine songs with electronic music"
     },
     "party_competition": {
-      "name": "Competition",
       "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Registration and more info coming soon. Are you excited?"
     },
     "party_after": {
       "annotation": "Analog DJ Duo, unfortunately only in one this year."
     },
     "party_finale": {
-      "name": "Competition: finals",
       "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Registration and more info coming soon. Are you excited?"
     }
   },
@@ -353,6 +351,7 @@
     "party": "Extras"
   },
   "programLoadingText": "We are still roasting the festival program for you.",
+  "programDisclaimer": "This schedule is subject to change",
   "sponsors": {
     "cta": "Contact us"
   },

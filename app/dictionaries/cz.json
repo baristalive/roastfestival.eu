@@ -193,14 +193,12 @@
       "annotation": "Sdružení dvou brněnských umělců, kteří propojují písničky s elektronickou hudbu"
     },
     "party_competition": {
-      "name": "Soutěž",
       "annotation": "Je to venku, v neděli 22. září budeme soutěžit o skvělé ceny. Jelikož latte art battlů už je v Brně požehnaně, rozhodli jsme se dát prostor chuti a to chuti kávy od Fifty Beans Hodinu předem dostanete kafe a vaším úkolem bude jej udělat lépe než soupeři. Jedinou podmínkou je použít mlýnek Comandante a to vlastní, nebo zapůjčený na soutěži. Tak jednoduché to je. Přihlašování a další info soon. Těšíte se?"
     },
     "party_after": {
       "annotation": "Analogové DJ Duo, bohužel letos pouze v jednom."
     },
     "party_finale": {
-      "name": "Soutěž: finále",
       "annotation": "Je to venku, v neděli 22. září budeme soutěžit o skvělé ceny. Jelikož latte art battlů už je v Brně požehnaně, rozhodli jsme se dát prostor chuti a to chuti kávy od Fifty Beans Hodinu předem dostanete kafe a vaším úkolem bude jej udělat lépe než soupeři. Jedinou podmínkou je použít mlýnek Comandante a to vlastní, nebo zapůjčený na soutěži. Tak jednoduché to je. Přihlašování a další info soon. Těšíte se?"
     }
   },
@@ -353,6 +351,7 @@
     }
   },
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
+  "programDisclaimer": "Změna programu vyhrazena",
   "sponsors": {
     "cta": "Napište nám"
   },

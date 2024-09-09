@@ -369,34 +369,31 @@
         "showSubheading": false
       }
     },
-    "ws_history": {
-      "subheading": "Kafíčkář"
-    },
     "ws_martin": {
-      "subheading": "Martin Dutkiewič"
+      "subheading": "Martin\u00a0Dutkiewič"
     },
     "ws_roast": {
     },
     "talk_what_is": {
-      "subheading": "Petr Chalupek, Josef Kučera"
+      "subheading": "Petr\u00a0Chalupek, Josef\u00a0Kučera"
     },
     "talk_biology": {
-      "subheading": "MUDr. Barbara Šťastná"
+      "subheading": "MUDr.\u00a0Barbara\u00a0Šťastná"
     },
     "talk_neubauer": {
-      "subheading": "Štěpán Neubauer"
+      "subheading": "Štěpán\u00a0Neubauer"
     },
     "talk_chicas": {
-      "subheading": "Chicas Industry, Tereza Prejdová"
+      "subheading": "Tereza Prejdová (Chicas\u00a0Industry)"
     },
     "talk_hon": {
-      "subheading": "Martin Hon"
+      "subheading": "Martin\u00a0Hon"
     },
     "talk_hejlik": {
-      "subheading": "Lukáš Hejlík"
+      "subheading": "Lukáš\u00a0Hejlík"
     },
     "talk_kafe_start": {
-      "subheading": "Ing. Daniel Vincens, MBA"
+      "subheading": "Daniel\u00a0Vincens, Josef\u00a0Husár"
     },
     "party_1": {
       "name": "Lenka v Davu",
@@ -430,11 +427,13 @@
       }
     },
     "party_competition": {
+      "name": "Brew Battle"
     },
     "party_after": {
       "name": "Desky a Pásky (DJ)"
     },
     "party_finale": {
+      "name": "Brew Battle Finale"
     }
   },
   "promoted": {

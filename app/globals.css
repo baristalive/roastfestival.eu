@@ -449,7 +449,7 @@ header::after {
 .program-slot-wrapper {
   grid-column: 1 / -1;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .program-slot-wrapper {
     grid-column-start: var(--gridColumnStart);
     grid-column-end: var(--gridColumnEnd);
