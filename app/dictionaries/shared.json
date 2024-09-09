@@ -19,6 +19,7 @@
   "presenters": {
     "baristaroasters": {
       "logo": "baristaroasters.webp",
+      "country": "sk",
       "name": "Barista roasters",
       "primaryLink": "web",
       "web": "https://www.baristaroasters.sk/",
@@ -30,6 +31,7 @@
     },
     "black": {
       "logo": "black.png",
+      "country": "sk",
       "name": "black.",
       "primaryLink": "web",
       "web": "https://www.black.sk/",
@@ -41,6 +43,7 @@
     },
     "buchta_b": {
       "logo": "buchta_b.png",
+      "country": "cz",
       "name": "Buchta B",
       "primaryLink": "instagram",
       "instagram": "https://www.instagram.com/buchta_b/",
@@ -48,6 +51,7 @@
     },
     "comandante": {
       "logo": "comandante.png",
+      "country": "de",
       "name": "Comandante Grinder",
       "primaryLink": "web",
       "web": "https://www.comandantegrinder.com/",
@@ -56,6 +60,7 @@
     },
     "dimchi": {
       "logo": "dimchi.png",
+      "country": "cz",
       "name": "Dimchi",
       "primaryLink": "instagram",
       "instagram": "https://www.instagram.com/dimchi_kimchi",
@@ -63,6 +68,7 @@
     },
     "dos_mundos": {
       "logo": "dos_mundos.png",
+      "country": "cz",
       "name": "Dos Mundos",
       "primaryLink": "web",
       "web": "https://www.dos-mundos.cz",
@@ -74,6 +80,7 @@
     },
     "francin": {
       "logo": "fracin.png",
+      "country": "cz",
       "name": "Francin Roasters",
       "primaryLink": "web",
       "web": "https://www.francin.cz/",
@@ -84,6 +91,7 @@
     },
     "gills": {
       "logo": "gills.svg",
+      "country": "cz",
       "name": "Gill's Coffee Roastery",
       "primaryLink": "web",
       "web": "https://gills.cz/",
@@ -96,6 +104,7 @@
     },
     "hayb": {
       "logo": "hayb.png",
+      "country": "pl",
       "name": "HAYB",
       "primaryLink": "web",
       "web": "https://haybcoffee.pl/",
@@ -106,6 +115,7 @@
       }
     },
     "hodne_nekde": {
+      "country": "cz",
       "instagram": "https://www.instagram.com/hodnenekde/",
       "facebook": "https://www.facebook.com/hodnenekde/",
       "logo": "hodne_nekde.png",
@@ -113,6 +123,7 @@
       "primaryLink": "instagram"
     },
     "idylika": {
+      "country": "sk",
       "logo": "idylika.png",
       "name": "Idylika",
       "primaryLink": "web",
@@ -125,6 +136,7 @@
     },
     "ig": {
       "instagram": "https://www.instagram.com/ig_coffee_roasters/",
+      "country": "cz",
       "logo": "ig.png",
       "name": "IG Coffee Roasters",
       "primaryLink": "instagram",
@@ -135,6 +147,7 @@
       }
     },
     "kaple": {
+      "country": "cz",
       "logo": "kaple.png",
       "name": "Kaple Brno winebar",
       "primaryLink": "web",
@@ -143,6 +156,7 @@
       "instagram": "https://www.instagram.com/kaplebrno"
     },
     "kmen": {
+      "country": "cz",
       "logo": "kmen.png",
       "name": "Kmen Coffee Roasters",
       "primaryLink": "web",
@@ -154,6 +168,7 @@
       }
     },
     "kolna": {
+      "country": "cz",
       "logo": "kolna.png",
       "name": "Kolna roastery",
       "primaryLink": "web",
@@ -166,12 +181,14 @@
       }
     },
     "kudyznudy": {
+      "country": "cz",
       "logo": "kudy-z-nudy.png",
       "name": "Kudyznudy.cz – tipy na výlet",
       "primaryLink": "web",
       "web": "https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner"
     },
     "liskafe": {
+      "country": "cz",
       "instagram": "https://www.instagram.com/lis.kafe",
       "logo": "liskafe.png",
       "name": "Liškafé",
@@ -183,6 +200,7 @@
       }
     },
     "lot": {
+      "country": "sk",
       "logo": "lot.png",
       "name": "LOT roastery",
       "primaryLink": "web",
@@ -194,6 +212,7 @@
       }
     },
     "mamacoffee": {
+      "country": "cz",
       "logo": "mamacoffee.png",
       "name": "mamacoffee",
       "primaryLink": "web",
@@ -205,6 +224,7 @@
       }
     },
     "miners": {
+      "country": "cz",
       "logo": "the_miners.png",
       "name": "The miners",
       "primaryLink": "web",
@@ -215,6 +235,7 @@
       }
     },
     "parabellum": {
+      "country": "cz",
       "logo": "parabellum.png",
       "name": "Para Bellum",
       "primaryLink": "web",
@@ -223,6 +244,7 @@
       "instagram": "https://www.instagram.com/para_bellum_lounge"
     },
     "penerini": {
+      "country": "cz",
       "logo": "penerini.png",
       "name": "Penerini",
       "primaryLink": "web",
@@ -233,6 +255,7 @@
       }
     },
     "pikola": {
+      "country": "cz",
       "logo": "pikola.png",
       "name": "Pikola",
       "primaryLink": "web",
@@ -244,6 +267,7 @@
       }
     },
     "poppy": {
+      "country": "cz",
       "logo": "poppy_beans.png",
       "name": "Poppy Beans",
       "primaryLink": "web",
@@ -255,6 +279,7 @@
       }
     },
     "punkt": {
+      "country": "cz",
       "instagram": "https://www.instagram.com/punkt_espresso_bar/",
       "logo": "punkt.png",
       "name": "Punkt.",
@@ -265,6 +290,7 @@
       }
     },
     "quickborn": {
+      "country": "sk",
       "logo": "quickborn.png",
       "name": "Quickborn",
       "primaryLink": "web",
@@ -276,6 +302,7 @@
       }
     },
     "rast": {
+      "country": "cz",
       "facebook": "https://www.facebook.com/p/RAST-coffee-Brno-100087549812805/",
       "logo": "rast.png",
       "name": "Rast Coffee",
@@ -283,6 +310,7 @@
       "instagram": "https://www.instagram.com/rast_coffee_"
     },
     "rebelbean": {
+      "country": "cz",
       "logo": "rebelbean.png",
       "name": "Rebelbean",
       "primaryLink": "web",
@@ -294,6 +322,7 @@
       }
     },
     "red_fawn": {
+      "country": "sk",
       "instagram": "https://www.instagram.com/redfawncoffee/",
       "web": "https://redfawn.sk/",
       "logo": "red_fawn.png",
@@ -304,6 +333,7 @@
       }
     },
     "wildkaffee": {
+      "country": "at",
       "logo": "wildkaffee.png",
       "name": "Wildkaffee Roastery",
       "primaryLink": "web",
@@ -330,6 +360,7 @@
     "ws_cupping_lot": {
       "name": "Cupping",
       "subheading": "LOT",
+      "country": "sk",
       "logo": "lot.png",
       "web": "https://www.lotroastery.com/",
       "facebook": "https://www.facebook.com/LOT.roastery",
@@ -360,6 +391,7 @@
     },
     "ws_cupping_punkt": {
       "name": "Cupping",
+      "country": "cz",
       "subheading": "Punkt",
       "instagram": "https://www.instagram.com/punkt_espresso_bar/",
       "logo": "punkt.png",

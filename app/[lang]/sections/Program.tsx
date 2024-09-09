@@ -80,16 +80,16 @@ export const Program = () => {
       {lang.program.map((day, idx) => (
         <div key={day.$ref} id={`program_day_${idx + 1}`} />
       ))}
-      <div className="mx-auto flex max-w-[1900px] flex-col pt-12">
+      <div className="mx-auto flex max-w-[1900px] flex-col pt-12 pb-4">
         <div className="flex grid-cols-[1fr,auto,1fr] flex-col items-center lg:grid">
-          <h2 className="p-4 pl-8 text-3xl font-bold md:pl-20 2xl:text-6xl">
+          <h2 className="p-4 text-3xl font-bold lg:pl-20 2xl:text-6xl">
             Program
           </h2>
           <div className="p-4 lg:hidden xl:block">
             {dayToggle}
           </div>
         </div>
-        <div className="grow lg:grid grid-cols-2 xl:block">
+        <div className="grow lg:grid grid-cols-2 xl:block gap-6 mx-2">
           <>
             {lang.program.every((day) => day.schedule.length === 0) && (
               <div className="mx-auto flex  h-full w-full items-center justify-center gap-4 p-12 py-48">
@@ -112,7 +112,7 @@ export const Program = () => {
               <React.Fragment key={day.$ref}>
                 {day.schedule.length > 0 && (
                   <div
-                    className={`schedule flex justify-start items-center flex-col will-change-auto ${idx !== tab ? "hidden lg:block xl:hidden" : ""}`}
+                    className={`schedule flex gap-2 justify-start items-center flex-col will-change-auto ${idx !== tab ? "hidden lg:flex xl:hidden" : ""}`}
                   >
                     <div className="hidden lg:block xl:hidden text-center">
                     <h3 className="z-10 text-xl font-bold 2xl:text-3xl">
@@ -129,7 +129,7 @@ export const Program = () => {
                         ].date
                       }
                     </span></div>
-                    <div className="card elevate relative m-3 flex flex-col justify-between rounded-2xl py-4">
+                    <div className="w-full card elevate relative flex flex-col justify-between rounded-2xl py-4">
                       <div className="hidden xl:grid grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center">
                         <div className="col-span-2"></div>
                         {hours.map((h) => (
@@ -212,7 +212,7 @@ export const Program = () => {
             ))}
           </>
         </div>
-        <div className="lg:hidden mx-auto mb-4">{dayToggle}</div>
+        <div className="lg:hidden mx-auto my-4">{dayToggle}</div>
       </div>
     </section>
   );

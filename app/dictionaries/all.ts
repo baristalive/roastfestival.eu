@@ -54,6 +54,7 @@ export type Presenter = {
   annotation?: string | string[];
   schedule: ProgramItem[];
   cover?: string;
+  country?: "cz" | "sk" | "at" | "pl";
   modalProps?: {
     showName?: boolean,
     className?: string,
