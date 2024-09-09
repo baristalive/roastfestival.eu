@@ -40,7 +40,7 @@ export const PromotedRoasters = () => {
 
   return (
     <section
-      className="watermark promoted-roasters-section"
+      className="watermark2 promoted-roasters-section"
       id="promoted"
       ref={ref}
     >

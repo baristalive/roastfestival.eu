@@ -10,7 +10,6 @@ import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
-import { useEffect, useState } from "react";
 import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
@@ -23,21 +22,9 @@ type HomePropsType = {
 };
 
 const Home = ({ params: { lang } }: HomePropsType) => {
-  const [divClass, toggleDivClass] = useState(false);
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey) {
-        toggleDivClass(!divClass);
-      }
-    };
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-    };
-  }, [divClass]);
 
   return (
-    <div className={`wrapper ${divClass ? "show" : "hide"}`}>
+    <div className="wrapper">
       <Link
         href={lang === "cz" ? "./en" : "./cz"}
         hrefLang={lang === "cz" ? "en-US" : "cs-CZ"}
@@ -47,10 +34,10 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
       <Header />
-      <PromotedRoasters />
       <InstagramFeed />
       <Program />
       <Info />
+      <PromotedRoasters />
       <Tickets />
       <WhatToExpect />
       <PreviousYears />

@@ -40,7 +40,7 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark2 flex min-h-screen flex-col items-center justify-between gap-8"
+      className="info-section watermark2 flex pb-48 flex-col items-center justify-between gap-8"
     >
       <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
