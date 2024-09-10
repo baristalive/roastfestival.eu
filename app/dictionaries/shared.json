@@ -738,23 +738,8 @@
         },
         {
           "track": "espresso",
-          "rows": 3,
+          "rows": 2,
           "schedule": [
-            {
-              "start": 10,
-              "end": 12.5,
-              "$ref": "gills"
-            },
-            {
-              "start": 13,
-              "end": 15.5,
-              "$ref": "red_fawn"
-            },
-            {
-              "start": 16,
-              "end": 18.5,
-              "$ref": "wildkaffee"
-            },
             {
               "start": 10.5,
               "end": 13,
@@ -784,8 +769,23 @@
         },
         {
           "track": "brew",
-          "rows": 3,
+          "rows": 4,
           "schedule": [
+            {
+              "start": 10,
+              "end": 12.5,
+              "$ref": "gills"
+            },
+            {
+              "start": 13,
+              "end": 15.5,
+              "$ref": "red_fawn"
+            },
+            {
+              "start": 16,
+              "end": 18.5,
+              "$ref": "wildkaffee"
+            },
             {
               "start": 10,
               "end": 12.5,

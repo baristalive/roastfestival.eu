@@ -124,7 +124,7 @@
       "annotation": "Jsme pražírna Wildkaffee z oblasti Zugspitze v okolí Garmisch-Partenkirchenu. Od roku 2010 v naší pražírně zpracováváme pouze vybrané druhy kávy z celého světa. Přímý kontakt s farmáři v zemích původu je pro nás nejvyšší prioritou, stejně jako nejlepší kvalita zrn. V pražírně Wildkaffee se chceme každý den vracet k tomu klíčovému - kvalita v kávě, protože nejlepší kvalita pro nás znamená také nejlepší chuť. Do šálků našich zákazníků by se měla dostat jen ta nejlepší zrna."
     },
     "ws_latteart": {
-      "name": "Espresso a Latteart 101",
+      "name": "Espresso a Latteart",
       "annotation": "Naučte se jak správně připravit perfektní espreso a namalovat do něj latteart jako od profesionálů v kavárně. Workshopem vás provede znojemská baristka Klárka Stehlíková, kterou mimo jiné můžete potkat v brněnské kavárně Monogram."
     },
     "ws_filters": {
@@ -148,7 +148,7 @@
     },
     "ws_wine_cheese": {
       "name": "Káva a sýry. Vinné párování akorát, že bez vína",
-      "annotation": "K vínu neodmyslitelně patří párování s různými jídly, uzeninami či v našem případě sýry. Kouzlo se skví ve vzájemném propojení chutí, které zpravidla mohou vyzdvyhnout, ale i úplně zničit zážitek z obou pochutin. Co se stane, když vezmeme \"pravidla\" viného párování a víno nahradíme kávou? Odpověď na tuto otázku pro nás mají Jiří Vyzourek, majitel brněnského vinného baru Kaple a Miroslav Menhert, pražič a majitel rodinné mikropražírny Chci kofein."
+      "annotation": "K vínu neodmyslitelně patří párování s různými jídly, uzeninami či v našem případě sýry. Kouzlo se skví ve vzájemném propojení chutí, které zpravidla mohou vyzdvyhnout, ale i úplně zničit zážitek z obou pochutin. Co se stane, když vezmeme \"pravidla\" viného párování a víno nahradíme kávou? Odpověď na tuto otázku pro nás mají Jiří Vyzourek, majitel brněnského vinného baru Kaple a Miroslav Meňhert, pražič a majitel rodinné mikropražírny Chci kofein."
     },
     "ws_cupping_punkt": {
       "annotation": [
@@ -171,7 +171,9 @@
       "name": "Lidské tělo a kofein",
       "annotation": "Říká se, že všeho moc škodí a bohužel to platí i o našem milovaném nápoji. Přednáška doktorky Barbary Šťastné se zaměří na téma jakým způsobem reaguje lidské tělo na kofein a jak ho zpracovává."
     },
-    "talk_neubauer": {},
+    "talk_neubauer": {
+      "name": "Analýza průzkumu veřejného mínění: Čím sereme své baristy a čím oni nás"
+    },
     "talk_chicas": {
       "name": "Za kávou, slony a tygry do Indie",
       "annotation": "Pojďte si poslechnout, jak jsme v Indii, v zemi, která není zrovna Mekka výběrové kávy, objevily lahodná zrnka. A nejen to, povíme vám, jak jsme poznaly úžasné lidi s obrovským zápalem pro ochranu přírody a na vlastní kůži zažily jejich spokojené soužití s divokými zvířaty. Pojďte si popovídat o tom, jaká je káva z plantáže, která je otevřená volnému pohybu slonů, tygrů a opiček."

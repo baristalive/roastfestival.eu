@@ -124,7 +124,7 @@
       "annotation": "We are the Wildkaffee roastery from the Zugspitze region around Garmisch-Partenkirchen. Since 2010, we have only processed selected types of coffee from all over the world in our roastery. Direct contact with the farmers in the countries of origin is our highest priority, as is the best coffee quality. At the Wildkaffee roastery, we want to revisit the keyword quality in coffee every day, because for us, the best quality also means the best coffee taste. Only the best beans should find their way into our customers' cups."
     },
     "ws_latteart": {
-      "name": "Espresso and Latteart 101",
+      "name": "Espresso and Latteart",
       "annotation": "Learn how to properly prepare the perfect espresso and make latte art like a professionals in a café. You will be guided through the workshop by barista Klárka Stehlíková, whom you can meet in Brno's Monogram café, among other places."
     },
     "ws_filters": {
@@ -148,7 +148,7 @@
     },
     "ws_wine_cheese": {
       "name": "Coffee and cheese. Wine pairings, only without the wine ",
-      "annotation": "Pairing wine with various foods, cured meats or, in our case, cheeses, is inherent to wine. The magic lies in the connection of flavours that can usually enhance or destroy the experience of both delicacies. What happens when we take the \"rules\" of wine pairing and replace wine with coffee? Jiří Vyzourek, owner of the Brno wine bar Kaple and Miroslav Menhert, roaster and owner of the family micro-roastery Chci coffein, have the answer to this question for us."
+      "annotation": "Pairing wine with various foods, cured meats or, in our case, cheeses, is inherent to wine. The magic lies in the connection of flavours that can usually enhance or destroy the experience of both delicacies. What happens when we take the \"rules\" of wine pairing and replace wine with coffee? Jiří Vyzourek, owner of the Brno wine bar Kaple and Miroslav Meňhert, roaster and owner of the family micro-roastery Chci coffein, have the answer to this question for us."
     },
     "ws_cupping_punkt": {
       "annotation": [
@@ -171,7 +171,9 @@
       "name": "The human body and caffeine",
       "annotation": "They say that too much of anything is bad for you, and unfortunately this is also true of our beloved drink. Dr. Barbara Št'astná's lecture will focus on how the human body reacts to caffeine and how it processes it."
     },
-    "talk_neubauer": {},
+    "talk_neubauer": {
+      "name": "Opinion poll analysis: What annoys your barista and vice versa"
+    },
     "talk_chicas": {
       "name": "To India for coffee, elephants and tigers",
       "annotation": "Let's hear how we discovered delicious beans in India, a country that is not exactly the mecca of fine coffee. And not only that, we'll tell you how we met amazing people with a huge passion for protecting nature and experienced first-hand their happy coexistence with wild animals. Let's talk about what it's like to get coffee from a plantation that's open to free-roaming elephants, tigers and monkeys."
