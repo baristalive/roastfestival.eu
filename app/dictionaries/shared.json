@@ -346,13 +346,21 @@
       }
     },
     "ws_latteart": {
-      "subheading": "Workshop: Klárka Stehlíková"
+      "logo": "klara.jpg",
+      "subheading": "Workshop: Klárka Stehlíková",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_filters": {
       "subheading": "Workshop: Rozálie Nováková"
     },
     "ws_cupping_weird": {
-      "subheading": "Petr Chaloupek"
+      "logo": "hulk.jpg",
+      "subheading": "Petr Chaloupek",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_cupping_beginers": {
       "subheading": "Rozálie Nováková"
@@ -402,30 +410,64 @@
       }
     },
     "ws_martin": {
-      "subheading": "Martin\u00a0Dutkiewič"
+      "logo": "martin.jpg",
+      "subheading": "Martin\u00a0Dutkiewič",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_roast": {
     },
     "talk_what_is": {
-      "subheading": "Petr\u00a0Chalupek, Josef\u00a0Kučera"
+      "logo": "josef_hulk.jpg",
+      "subheading": "Petr\u00a0Chalupek, Josef\u00a0Kučera",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_biology": {
-      "subheading": "MUDr.\u00a0Barbara\u00a0Šťastná"
+      "logo": "lor.jpg",
+      "subheading": "MUDr.\u00a0Barbara\u00a0Šťastná",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_neubauer": {
-      "subheading": "Štěpán\u00a0Neubauer"
+      "subheading": "Štěpán\u00a0Neubauer",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_chicas": {
-      "subheading": "Tereza Prejdová (Chicas\u00a0Industry)"
+      "logo": "chicas.png",
+      "web": "https://chicasindustry.com/",
+      "facebook": "https://www.facebook.com/chicasindustry",
+      "instagram": "https://www.instagram.com/chicas_industry/",
+      "subheading": "Tereza Prejdová (Chicas\u00a0Industry)",
+      "modalProps": {
+        "className": "p-10"
+      }
     },
     "talk_hon": {
-      "subheading": "Martin\u00a0Hon"
+      "subheading": "Martin\u00a0Hon",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_hejlik": {
-      "subheading": "Lukáš\u00a0Hejlík"
+      "logo": "hejlik.jpg",
+      "web": "https://gastromapa.hejlik.cz/",
+      "instagram": "https://www.instagram.com/lukashejlik",
+      "subheading": "Lukáš\u00a0Hejlík",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_kafe_start": {
-      "subheading": "Daniel\u00a0Vincens, Josef\u00a0Husár"
+      "subheading": "Daniel\u00a0Vincens, Josef\u00a0Husár",
+      "modalProps": {
+        "className": ""
+      }
     },
     "party_1": {
       "name": "Lenka v Davu",
@@ -438,7 +480,11 @@
       }
     },
     "party_2": {
-      "name": "Vážky"
+      "name": "Vážky",
+      "logo": "vazky.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "party_3": {
       "name": "Aldente",
@@ -459,13 +505,98 @@
       }
     },
     "party_competition": {
-      "name": "Brew Battle"
+      "logo": "brew_battle.jpg",
+      "name": "Brew Battle",
+      "instagram": "https://www.instagram.com/barista_battle_brno/",
+      "actionIcons": {
+        "signup": {
+          "href": "https://forms.gle/Q8RD72BpJoQZmT78A"
+        },
+        "rules": {
+          "href": "https://drive.google.com/file/d/1JPGUBdBMt02SnJDH8vSDC3_SdcovqXmJ/view"
+        }
+      },
+      "modalProps": {
+        "showName": false,
+        "className": ""
+      }
     },
     "party_after": {
-      "name": "Desky a Pásky (DJ)"
+      "logo": "desky_pasky.jpg",
+      "name": "Desky a Pásky (DJ)",
+      "modalProps": {
+        "className": ""
+      }
     },
     "party_finale": {
-      "name": "Brew Battle Finale"
+      "name": "Brew Battle Finale",
+      "logo": "brew_battle.jpg",
+      "instagram": "https://www.instagram.com/barista_battle_brno/",
+      "actionIcons": {
+        "signup": {
+          "href": "https://forms.gle/Q8RD72BpJoQZmT78A"
+        },
+        "rules": {
+          "href": "https://drive.google.com/file/d/1JPGUBdBMt02SnJDH8vSDC3_SdcovqXmJ/view"
+        }
+      },
+      "modalProps": {
+        "showName": false,
+        "className": ""
+      }
+    },
+    "kavickar_dzezva": {
+      "subheading": "Pravý\u00a0Kávičkár",
+      "logo": "kavickar.jpg",
+      "instagram": "www.instagram.com/pravy.kavickar",
+      "web": "https://kavakavickar.blogspot.com/"
+    },
+    "kavickar_lamplota": {
+      "name": "Lamplota",
+      "subheading": "Pravý\u00a0Kávičkár",
+      "logo": "kavickar.jpg",
+      "instagram": "www.instagram.com/pravy.kavickar",
+      "web": "https://kavakavickar.blogspot.com/"
+    },
+    "kavickar_belgian": {
+      "subheading": "Pravý\u00a0Kávičkár",
+      "logo": "kavickar.jpg",
+      "instagram": "www.instagram.com/pravy.kavickar",
+      "web": "https://kavakavickar.blogspot.com/"
+    },
+    "kavickar_frenchpress": {
+      "name": "French press",
+      "subheading": "Pravý\u00a0Kávičkár",
+      "logo": "kavickar.jpg",
+      "instagram": "www.instagram.com/pravy.kavickar",
+      "web": "https://kavakavickar.blogspot.com/"
+    },
+    "kavickar_wien": {
+      "subheading": "Pravý\u00a0Kávičkár",
+      "logo": "kavickar.jpg",
+      "instagram": "www.instagram.com/pravy.kavickar",
+      "web": "https://kavakavickar.blogspot.com/"
+    },
+    "engoba": {
+      "country": "cz",
+      "logo": "engoba.png",
+      "name": "engoba | štúdio s modelovanou keramikou a keramické kurzy",
+      "primaryLink": "web",
+      "web": "https://engoba.cz/"
+    },
+    "meatfly": {
+      "country": "cz",
+      "logo": "meatfly.svg",
+      "name": "Meatfly",
+      "primaryLink": "web",
+      "web": "https://www.meatfly.cz/"
+    },
+    "mamu": {
+      "country": "cz",
+      "logo": "mamu.png",
+      "name": "Studio MAMU",
+      "primaryLink": "web",
+      "web": "https://www.mamustudio.cz/"
     }
   },
   "promoted": {
@@ -511,7 +642,10 @@
       "items": [
         "comandante",
         "ig",
-        "kudyznudy"
+        "kudyznudy",
+        "engoba",
+        "meatfly",
+        "mamu"
       ]
     }
   },
@@ -690,7 +824,7 @@
         },
         {
           "track": "party",
-          "rows": 1,
+          "rows": 2,
           "schedule": [
             {
               "start": 12.5,
@@ -712,6 +846,31 @@
               "end": 21,
               "noEnd": true,
               "$ref": "party_after"
+            },
+            {
+              "start": 10,
+              "end": 12,
+              "$ref": "kavickar_dzezva"
+            },
+            {
+              "start": 12,
+              "end": 14,
+              "$ref": "kavickar_lamplota"
+            },
+            {
+              "start": 14,
+              "end": 15,
+              "$ref": "kavickar_belgian"
+            },
+            {
+              "start": 15,
+              "end": 16,
+              "$ref": "kavickar_frenchpress"
+            },
+            {
+              "start": 16,
+              "end": 17,
+              "$ref": "kavickar_wien"
             }
           ]
         }
@@ -882,7 +1041,7 @@
         },
         {
           "track": "party",
-          "rows": 1,
+          "rows": 2,
           "schedule": [
             {
               "start": 11,
@@ -898,6 +1057,31 @@
               "start": 16,
               "end": 17.5 ,
               "$ref": "party_finale"
+            },
+            {
+              "start": 10,
+              "end": 12,
+              "$ref": "kavickar_dzezva"
+            },
+            {
+              "start": 12,
+              "end": 14,
+              "$ref": "kavickar_lamplota"
+            },
+            {
+              "start": 14,
+              "end": 15,
+              "$ref": "kavickar_belgian"
+            },
+            {
+              "start": 15,
+              "end": 16,
+              "$ref": "kavickar_frenchpress"
+            },
+            {
+              "start": 16,
+              "end": 17,
+              "$ref": "kavickar_wien"
             }
           ]
         }

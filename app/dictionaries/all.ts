@@ -11,29 +11,31 @@ type ProgramItem = {
 };
 
 const preprocess = (data: typeof shared) => {
-  const presenters = Object.fromEntries(Object.entries(data.presenters).map(([id, presenter]) => {
-    const schedule = data.program.reduce((accDay, day) => {
-      const fromDay = day.schedule.reduce((accTrack, track) => {
-        const fromTrack = track.schedule.reduce((accTrack, slot) => {
-          if (slot.$ref === id) {
-            accTrack.push({
-              start: slot.start,
-              end: slot.end,
-              track: track.track as keyof typeof shared.programCategory,
-              day: day.$ref
-            })
-          }
-          return accTrack
-        }, [] as ProgramItem[])
-        return [...accTrack, ...fromTrack]
-      }, [] as ProgramItem[])
-      return [...accDay, ...fromDay]
-    }, [] as ProgramItem[])
-    return [id, {...presenter, schedule}]
-  }))
+  const presenters = Object.fromEntries(
+    Object.entries(data.presenters).map(([id, presenter]) => {
+      const schedule = data.program.reduce((accDay, day) => {
+        const fromDay = day.schedule.reduce((accTrack, track) => {
+          const fromTrack = track.schedule.reduce((accTrack, slot) => {
+            if (slot.$ref === id) {
+              accTrack.push({
+                start: slot.start,
+                end: slot.end,
+                track: track.track as keyof typeof shared.programCategory,
+                day: day.$ref,
+              });
+            }
+            return accTrack;
+          }, [] as ProgramItem[]);
+          return [...accTrack, ...fromTrack];
+        }, [] as ProgramItem[]);
+        return [...accDay, ...fromDay];
+      }, [] as ProgramItem[]);
+      return [id, { ...presenter, schedule }];
+    }),
+  );
 
-  return {...data, presenters}
-}
+  return { ...data, presenters };
+};
 
 export const dictionaries = {
   cz: deepmerge(preprocess(shared), cz),
@@ -56,10 +58,16 @@ export type Presenter = {
   cover?: string;
   country?: "cz" | "sk" | "at" | "pl";
   modalProps?: {
-    showName?: boolean,
-    className?: string,
-    showSubheading?: boolean,
-  }
+    showName?: boolean;
+    className?: string;
+    showSubheading?: boolean;
+  };
+  actionIcons: {
+    [key: string]: {
+      href: string;
+      text: string;
+    };
+  };
 };
 
 export default dictionaries;

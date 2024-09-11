@@ -25,6 +25,7 @@ export const Modal = ({
   schedule,
   country,
   modalProps,
+  actionIcons,
   children,
 }: PropsWithChildren<Presenter>) => {
   const [showModal, setShowModal] = React.useState(false);
@@ -43,6 +44,16 @@ export const Modal = ({
       window.removeEventListener("keydown", handleEsc);
     };
   }, []);
+
+  const actionIconButtons = !actionIcons ? null : (
+    <>
+      {Object.entries(actionIcons).map(([k, v]) => (
+        <a key={k} href={v.href} className="py-4 px-8 rounded-full bg-[var(--secondary)] text-[var(--white)]" target="_blank" rel="external">
+          {v.text}
+        </a>
+      ))}
+    </>
+  );
 
   const socialLinks = (
     <>
@@ -199,8 +210,8 @@ export const Modal = ({
                   <p className="text-base xl:text-lg">{annotation}</p>
                 )}
               </div>
-              <div className="flex w-full items-center justify-center gap-4 pt-2">
-                {socialLinks}
+              <div className="flex w-full items-center justify-center gap-4 py-2">
+              {actionIconButtons}{socialLinks}
               </div>
             </div>
           </div>

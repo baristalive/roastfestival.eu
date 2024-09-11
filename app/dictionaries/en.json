@@ -203,13 +203,39 @@
       "annotation": "Association of two Brno artists who combine songs with electronic music"
     },
     "party_competition": {
-      "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Registration and more info coming soon. Are you excited?"
+      "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Are you excited?",
+      "actionIcons": {
+        "signup": {
+          "text": "Sign up"
+        },
+        "rules": {
+          "text": "Rules"
+        }
+      }
     },
     "party_after": {
-      "annotation": "Analog DJ Duo, unfortunately only in one this year."
+      "annotation": "DJ Dubins usually performs as part of the duo Desky&Tape, who try to pass on their love of analogue technology and quality music. You can most often find them blasting reggae or punk, but they're not afraid of indie or folk either. This time Dubins will play alone and on two turntables he will alternate records, which with their old-school sound will fit perfectly into the space of the Brno Penitentiary."
     },
     "party_finale": {
-      "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Registration and more info coming soon. Are you excited?"
+      "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Are you excited?"
+    },
+    "kavickar_dzezva": {
+      "name": "Turkish Cezve",
+      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
+    },
+    "kavickar_lamplota": {
+      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
+    },
+    "kavickar_belgian": {
+      "name": "Belgian Coffee Maker",
+      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
+    },
+    "kavickar_frenchpress": {
+      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
+    },
+    "kavickar_wien": {
+      "name": "Vienna Coffee Maker",
+      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
     }
   },
   "promoted": {
@@ -346,10 +372,10 @@
   "place": "Káznice, Brno",
   "programDays": {
     "day1": {
-      "name": "Day 1"
+      "name": "Saturday"
     },
     "day2": {
-      "name": "Day 2"
+      "name": "Sunday"
     }
   },
   "programCategory": {

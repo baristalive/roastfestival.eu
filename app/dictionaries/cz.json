@@ -161,7 +161,7 @@
       "annotation": "Zkuste s Martinem Dutkiewičem, majitelem brněnské kavárny a pražírny Punkt. espressobar, více než 10 příprav jedné kávy, na kterých porovná, jak se projevuje daná příprava na výsledné chuti."
     },
     "ws_roast": {
-      "name": "Upraž si svojí kávu"
+      "name": "Upraž si svoji kávu"
     },
     "talk_what_is": {
       "name": "Co je to výběrovka?",
@@ -203,13 +203,47 @@
       "annotation": "Sdružení dvou brněnských umělců, kteří propojují písničky s elektronickou hudbu"
     },
     "party_competition": {
-      "annotation": "Je to venku, v neděli 22. září budeme soutěžit o skvělé ceny. Jelikož latte art battlů už je v Brně požehnaně, rozhodli jsme se dát prostor chuti a to chuti kávy od Fifty Beans Hodinu předem dostanete kafe a vaším úkolem bude jej udělat lépe než soupeři. Jedinou podmínkou je použít mlýnek Comandante a to vlastní, nebo zapůjčený na soutěži. Tak jednoduché to je. Přihlašování a další info soon. Těšíte se?"
+      "annotation": "Je to venku, v neděli 22. září budeme soutěžit o skvělé ceny. Jelikož latte art battlů už je v Brně požehnaně, rozhodli jsme se dát prostor chuti a to chuti kávy od Fifty Beans Hodinu předem dostanete kafe a vaším úkolem bude jej udělat lépe než soupeři. Jedinou podmínkou je použít mlýnek Comandante a to vlastní, nebo zapůjčený na soutěži. Tak jednoduché to je. Těšíte se?",
+      "actionIcons": {
+        "signup": {
+          "text": "Přihláška"
+        },
+        "rules": {
+          "text": "Pravidla"
+        }
+      }
     },
     "party_after": {
-      "annotation": "Analogové DJ Duo, bohužel letos pouze v jednom."
+      "annotation": "DJ Dubins zpravidla vystupuje jako součást dua Desky&Pásky, které se snaží předávat svou lásku k analogové technice a kvalitní hudbě. Nejčastěji je můžete zastihnout, jak pouští reggae nebo punk, ale nebojí se ani indie nebo folku. Dubins tentokrát zahraje sám a na dvou gramofonech bude střídat desky, které svým oldschoolovým zvukem skvěle zapadnou do prostoru Brněnské káznice."
     },
     "party_finale": {
-      "annotation": "Je to venku, v neděli 22. září budeme soutěžit o skvělé ceny. Jelikož latte art battlů už je v Brně požehnaně, rozhodli jsme se dát prostor chuti a to chuti kávy od Fifty Beans Hodinu předem dostanete kafe a vaším úkolem bude jej udělat lépe než soupeři. Jedinou podmínkou je použít mlýnek Comandante a to vlastní, nebo zapůjčený na soutěži. Tak jednoduché to je. Přihlašování a další info soon. Těšíte se?"
+      "annotation": "Je to venku, v neděli 22. září budeme soutěžit o skvělé ceny. Jelikož latte art battlů už je v Brně požehnaně, rozhodli jsme se dát prostor chuti a to chuti kávy od Fifty Beans Hodinu předem dostanete kafe a vaším úkolem bude jej udělat lépe než soupeři. Jedinou podmínkou je použít mlýnek Comandante a to vlastní, nebo zapůjčený na soutěži. Tak jednoduché to je. Těšíte se?",
+      "actionIcons": {
+        "signup": {
+          "text": "Přihláška"
+        },
+        "rules": {
+          "text": "Pravidla"
+        }
+      }
+    },
+    "kavickar_dzezva": {
+      "name": "Turecká Džezva",
+      "annotation": "Řemeslný pražič a nadšenec do kávy, který se kávě věnuje více jak 7 let. Svojí tvorbou se snaží lidem ukázat, že káva byla i v minulosti pestrá, zajímavá a chutná. Postupně vyzkoušíme přípravy Turecká džezva (jedna z nejstarších příprav kávy z arabských krajin), Lamplota (Ikonický výrobce kávovarů z ČSR), Belgický kávovar (jedna z nejzajímavějších příprav kávy), French Press (konvička nejen na čaj) a Vídeňský kávovar (Rakouská klasika z 19 století proslavená v USA)."
+    },
+    "kavickar_lamplota": {
+      "annotation": "Řemeslný pražič a nadšenec do kávy, který se kávě věnuje více jak 7 let. Svojí tvorbou se snaží lidem ukázat, že káva byla i v minulosti pestrá, zajímavá a chutná. Postupně vyzkoušíme přípravy Turecká džezva (jedna z nejstarších příprav kávy z arabských krajin), Lamplota (Ikonický výrobce kávovarů z ČSR), Belgický kávovar (jedna z nejzajímavějších příprav kávy), French Press (konvička nejen na čaj) a Vídeňský kávovar (Rakouská klasika z 19 století proslavená v USA)."
+    },
+    "kavickar_belgian": {
+      "name": "Belgický kávovar",
+      "annotation": "Řemeslný pražič a nadšenec do kávy, který se kávě věnuje více jak 7 let. Svojí tvorbou se snaží lidem ukázat, že káva byla i v minulosti pestrá, zajímavá a chutná. Postupně vyzkoušíme přípravy Turecká džezva (jedna z nejstarších příprav kávy z arabských krajin), Lamplota (Ikonický výrobce kávovarů z ČSR), Belgický kávovar (jedna z nejzajímavějších příprav kávy), French Press (konvička nejen na čaj) a Vídeňský kávovar (Rakouská klasika z 19 století proslavená v USA)."
+    },
+    "kavickar_frenchpress": {
+      "annotation": "Řemeslný pražič a nadšenec do kávy, který se kávě věnuje více jak 7 let. Svojí tvorbou se snaží lidem ukázat, že káva byla i v minulosti pestrá, zajímavá a chutná. Postupně vyzkoušíme přípravy Turecká džezva (jedna z nejstarších příprav kávy z arabských krajin), Lamplota (Ikonický výrobce kávovarů z ČSR), Belgický kávovar (jedna z nejzajímavějších příprav kávy), French Press (konvička nejen na čaj) a Vídeňský kávovar (Rakouská klasika z 19 století proslavená v USA)."
+    },
+    "kavickar_wien": {
+      "name": "Vídeňský kávovar",
+      "annotation": "Řemeslný pražič a nadšenec do kávy, který se kávě věnuje více jak 7 let. Svojí tvorbou se snaží lidem ukázat, že káva byla i v minulosti pestrá, zajímavá a chutná. Postupně vyzkoušíme přípravy Turecká džezva (jedna z nejstarších příprav kávy z arabských krajin), Lamplota (Ikonický výrobce kávovarů z ČSR), Belgický kávovar (jedna z nejzajímavějších příprav kávy), French Press (konvička nejen na čaj) a Vídeňský kávovar (Rakouská klasika z 19 století proslavená v USA)."
     }
   },
   "promoted": {
@@ -354,10 +388,10 @@
   },
   "programDays": {
     "day1": {
-      "name": "Den 1"
+      "name": "Sobota"
     },
     "day2": {
-      "name": "Den 2"
+      "name": "Neděle"
     }
   },
   "programLoadingText": "Program festivalu pro Vás ještě pražíme.",

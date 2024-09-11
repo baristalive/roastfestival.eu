@@ -18,7 +18,7 @@ export const Tickets = () => {
 
   return (
     <section id="tickets" ref={ref} className="ticket-section watermark5">
-      <div className="mx-auto grid max-w-[1900px] px-8 lg:grid-cols-[1fr,2fr]">
+      <div className="mx-auto grid max-w-[1900px] px-8 pt-32 lg:grid-cols-[1fr,2fr]">
         <div className="md:pl-12">
           <h2 className="text-3xl font-bold 2xl:text-6xl">
             {lang.tickets.title}
