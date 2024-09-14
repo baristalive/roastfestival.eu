@@ -386,6 +386,7 @@
     "workshop": "Workshop",
     "party": "Extras"
   },
+  "programTitle": "Schedule",
   "programLoadingText": "We are still roasting the festival program for you.",
   "programDisclaimer": "This schedule is subject to change",
   "sponsors": {

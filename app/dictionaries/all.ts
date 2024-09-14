@@ -43,6 +43,8 @@ export const dictionaries = {
 };
 
 export type SupportedLanguages = "cz" | "en";
+export const DayIds = ["day1", "day2"] as const;
+export type DayIdsType = typeof DayIds[number]
 
 export type Presenter = {
   web?: string;

@@ -13,7 +13,7 @@ import gsap from "gsap";
 import { Flip } from "gsap/all";
 import { getTimeString } from "@/app/utils/time";
 
-const hours = [...Array(11)].map((_, idx) => idx + 10);
+export const HOURS = [...Array(11)].map((_, idx) => idx + 10);
 
 export const Program = () => {
   const params = useParams();
@@ -52,24 +52,16 @@ export const Program = () => {
             onClick={changeTabTo(idx)}
           >
             <h3 className="z-10 text-xl font-bold 2xl:text-3xl">
-              {
-                lang.programDays[
-                  day.$ref as keyof typeof lang.programDays
-                ].name
-              }
+              {lang.programDays[day.$ref as keyof typeof lang.programDays].name}
             </h3>
             <span className="z-10 text-base 2xl:text-xl">
-              {
-                lang.programDays[
-                  day.$ref as keyof typeof lang.programDays
-                ].date
-              }
+              {lang.programDays[day.$ref as keyof typeof lang.programDays].date}
             </span>
           </a>
         </li>
       ))}
     </ul>
-    )
+  );
 
   return (
     <section
@@ -80,16 +72,14 @@ export const Program = () => {
       {lang.program.map((day, idx) => (
         <div key={day.$ref} id={`program_day_${idx + 1}`} />
       ))}
-      <div className="mx-auto flex max-w-[1900px] flex-col pt-12 pb-4">
+      <div className="mx-auto flex max-w-[1900px] flex-col pb-4 pt-12">
         <div className="flex grid-cols-[1fr,auto,1fr] flex-col items-center lg:grid">
           <h2 className="p-4 text-3xl font-bold lg:pl-20 2xl:text-6xl">
-            Program
+            {lang.programTitle}
           </h2>
-          <div className="p-4 lg:hidden xl:block">
-            {dayToggle}
-          </div>
+          <div className="p-4 lg:hidden xl:block">{dayToggle}</div>
         </div>
-        <div className="grow lg:grid grid-cols-2 xl:block gap-6 mx-2">
+        <div className="mx-2 grow grid-cols-2 gap-6 lg:grid xl:block">
           <>
             {lang.program.every((day) => day.schedule.length === 0) && (
               <div className="mx-auto flex  h-full w-full items-center justify-center gap-4 p-12 py-48">
@@ -112,50 +102,51 @@ export const Program = () => {
               <React.Fragment key={day.$ref}>
                 {day.schedule.length > 0 && (
                   <div
-                    className={`schedule flex gap-2 justify-start items-center flex-col will-change-auto ${idx !== tab ? "hidden lg:flex xl:hidden" : ""}`}
+                    className={`schedule flex flex-col items-center justify-start gap-2 will-change-auto ${idx !== tab ? "hidden lg:flex xl:hidden" : ""}`}
                   >
-                    <div className="hidden lg:block xl:hidden text-center">
-                    <h3 className="z-10 text-xl font-bold 2xl:text-3xl">
-                      {
-                        lang.programDays[
-                          day.$ref as keyof typeof lang.programDays
-                        ].name
-                      }
-                    </h3>
-                    <span className="z-10 text-base 2xl:text-xl">
-                      {
-                        lang.programDays[
-                          day.$ref as keyof typeof lang.programDays
-                        ].date
-                      }
-                    </span></div>
-                    <div className="w-full card elevate relative flex flex-col justify-between rounded-2xl py-4">
-                      <div className="hidden xl:grid grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center">
+                    <div className="hidden text-center lg:block xl:hidden">
+                      <h3 className="z-10 text-xl font-bold 2xl:text-3xl">
+                        {
+                          lang.programDays[
+                            day.$ref as keyof typeof lang.programDays
+                          ].name
+                        }
+                      </h3>
+                      <span className="z-10 text-base 2xl:text-xl">
+                        {
+                          lang.programDays[
+                            day.$ref as keyof typeof lang.programDays
+                          ].date
+                        }
+                      </span>
+                    </div>
+                    <div className="card elevate relative flex w-full flex-col justify-between rounded-2xl py-4">
+                      <div className="hidden grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center xl:grid">
                         <div className="col-span-2"></div>
-                        {hours.map((h) => (
+                        {HOURS.map((h) => (
                           <div className="col-span-2" key={h}>
                             {h}:00
                           </div>
                         ))}
                       </div>
-                      <div className="absolute inset-0 z-0 hidden xl:grid grid-cols-[repeat(24,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20">
+                      <div className="absolute inset-0 z-0 hidden grid-cols-[repeat(24,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20 xl:grid">
                         <div className="col-span-3"></div>
-                        {hours.map((h, idx) => (
+                        {HOURS.map((h, idx) => (
                           <div
                             className={
-                              idx !== hours.length - 1 ? "col-span-2" : ""
+                              idx !== HOURS.length - 1 ? "col-span-2" : ""
                             }
                             key={h}
                           ></div>
                         ))}
                       </div>
-                      {day.schedule.map(t => (
+                      {day.schedule.map((t) => (
                         <div
                           key={t.track}
                           className="program-track relative mx-4 grid grid-cols-[repeat(24,_minmax(0,_1fr))] rounded-2xl py-4 text-xl"
                         >
                           <div
-                            className="col-span-full xl:col-span-3 row-start-1 flex flex-col items-center justify-center p-2 text-center"
+                            className="col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-span-3"
                             style={{ gridRowEnd: t.rows + 1 }}
                           >
                             <StationIcon station={t.track} />
@@ -173,23 +164,27 @@ export const Program = () => {
                             ] as Presenter;
                             return (
                               <div
-                                className="mx-2 xl:mx-0.5 program-slot-wrapper"
+                                className="program-slot-wrapper mx-2 xl:mx-0.5"
                                 key={`${lang.program[tab].$ref}_${presenter?.name}_${idx}`}
-                                style={{
-                                  "--gridColumnStart": `${(s.start - 10) * 2 + 4}`,
-                                  "--gridColumnEnd": `${(s.end - 10) * 2 + 4}`,
-                                } as CSSProperties}
+                                style={
+                                  {
+                                    "--gridColumnStart": `${(s.start - 10) * 2 + 4}`,
+                                    "--gridColumnEnd": `${(s.end - 10) * 2 + 4}`,
+                                  } as CSSProperties
+                                }
                               >
-                                {(presenter === undefined || !presenter.name ) ? (
-                                  null
-                                ) : (
+                                {presenter === undefined ||
+                                !presenter.name ? null : (
                                   <>
                                     <Modal {...presenter}>
-                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1  md:py-2 xl:text-left text-center">
-                                        <div className="col-span-full xl:hidden text-base">
-                                          {getTimeString(s.start)} - {getTimeString(s.end)}
+                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1  text-center md:py-2 xl:text-left">
+                                        <div className="col-span-full text-base xl:hidden">
+                                          {getTimeString(s.start)} -{" "}
+                                          {getTimeString(s.end)}
                                         </div>
-                                        <h4 className="font-bold text-lg">{presenter.name}</h4>
+                                        <h4 className="text-lg font-bold">
+                                          {presenter.name}
+                                        </h4>
                                         {presenter.subheading && (
                                           <i className="text-base">
                                             {presenter.subheading}
@@ -212,7 +207,7 @@ export const Program = () => {
             ))}
           </>
         </div>
-        <div className="lg:hidden mx-auto my-4">{dayToggle}</div>
+        <div className="mx-auto my-4 lg:hidden">{dayToggle}</div>
       </div>
     </section>
   );

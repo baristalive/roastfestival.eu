@@ -450,17 +450,26 @@ header::after {
 .program-track {
   transition: background-color 0.5s;
 }
-.program-track:hover {
+.card .program-track:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .program-slot {
   color: var(--white);
 }
+
 .program-slot-wrapper {
   grid-column: 1 / -1;
 }
+
 @media (min-width: 1280px) {
+  .program-slot-wrapper {
+    grid-column-start: var(--gridColumnStart);
+    grid-column-end: var(--gridColumnEnd);
+  }
+}
+
+@media print {
   .program-slot-wrapper {
     grid-column-start: var(--gridColumnStart);
     grid-column-end: var(--gridColumnEnd);
@@ -477,6 +486,23 @@ header::after {
 
 .program-track:nth-of-type(3n + 2) .program-slot {
   background-color: var(--primary);
+}
+
+.program-track:nth-of-type(3n) .program-slot.no-end {
+  background: linear-gradient(to left, var(--background), var(--black) 20px);
+}
+
+.program-track:nth-of-type(3n + 1) .program-slot.no-end {
+  background: linear-gradient(to left, var(--background), var(--accent) 20px);
+}
+
+.program-track:nth-of-type(3n + 2) .program-slot.no-end {
+  background: linear-gradient(to left, var(--background), var(--primary) 20px);
+}
+
+.no-end {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .pills a.active {
