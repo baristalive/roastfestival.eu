@@ -353,7 +353,11 @@
       }
     },
     "ws_filters": {
-      "subheading": "Workshop: Rozálie Nováková"
+      "subheading": "Workshop: Rozálie Nováková",
+      "logo": "rozi.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_cupping_weird": {
       "logo": "hulk.jpg",
@@ -363,7 +367,11 @@
       }
     },
     "ws_cupping_beginers": {
-      "subheading": "Rozálie Nováková"
+      "subheading": "Rozálie Nováková",
+      "logo": "rozi.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_cupping_lot": {
       "name": "Cupping",
