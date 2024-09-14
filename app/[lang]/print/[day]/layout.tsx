@@ -1,7 +1,6 @@
 import dictionaries, { SupportedLanguages, DayIds, DayIdsType } from "@/app/dictionaries/all";
 
 export async function generateStaticParams() {
-  const days = DayIds
   return Object.keys(dictionaries).flatMap((lang: string) =>  DayIds.map((d) => ({ lang, day: d })));
 }
 

@@ -9,7 +9,7 @@ import dictionaries, {
 } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 import { CSSProperties } from "react";
-import "../../print.css";
+import "./print.css";
 import Link from "next/link";
 type SchedulePropsType = {
   params: { lang: SupportedLanguages; day: DayIdsType };
@@ -37,6 +37,7 @@ const Schedule = ({ params }: SchedulePropsType) => {
               {lang.programDays[day.$ref as keyof typeof lang.programDays].date}
             </span>
           </div>
+          <h2 className="text-4xl pl-6 pr-8 font-bold text-[var(--black)]">Přehled</h2>
         </div>
         <div className="grow" />
         <div className="relative self-start">

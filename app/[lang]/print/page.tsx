@@ -25,7 +25,7 @@ const Print = ({ params }: PrintPropsType) => {
           <React.Fragment key={k}>
             <h2 className="text-3xl">{v.name}</h2>
             <Link
-              href={`./print/full_program/${k}`}
+              href={`./print/${k}/overview`}
               className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
             >
               Celý den
