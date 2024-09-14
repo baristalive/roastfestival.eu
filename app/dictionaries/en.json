@@ -404,7 +404,9 @@
     "espresso_milk": "Honored guests",
     "lecture": "Lectures",
     "workshop": "Workshop",
-    "party": "Extras"
+    "party": "Extras",
+    "overview": "Overview",
+    "robotarna": "Roasters"
   },
   "programTitle": "Schedule",
   "programLoadingText": "We are still roasting the festival program for you.",

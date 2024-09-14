@@ -147,7 +147,7 @@ export const Program = () => {
                         >
                           <div
                             className="col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-span-3"
-                            style={{ gridRowEnd: t.rows + 1 }}
+                            style={{ gridRowEnd: t.schedule.length + 1 }}
                           >
                             <StationIcon station={t.track} />
                             <h3>
@@ -158,7 +158,7 @@ export const Program = () => {
                               }
                             </h3>
                           </div>
-                          {t.schedule.map((s, idx) => {
+                          {t.schedule.flat().map((s, idx) => {
                             const presenter = lang.presenters[
                               s.$ref as keyof typeof lang.presenters
                             ] as Presenter;

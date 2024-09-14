@@ -11,7 +11,7 @@ const Print = ({ params }: PrintPropsType) => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <div className="wrapper h-screen mx-auto">
+    <div className="wrapper mx-auto h-screen">
       <Link
         href={params.lang === "cz" ? "./en" : "./cz"}
         hrefLang={params.lang === "cz" ? "en-US" : "cs-CZ"}
@@ -20,16 +20,24 @@ const Print = ({ params }: PrintPropsType) => {
       >
         {params.lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
-      <div className="flex h-full flex-col items-center justify-center gap-4  watermark3">
+      <div className="watermark3 flex h-full flex-col items-center justify-center  gap-4">
         {Object.entries(lang.programDays).map(([k, v]) => (
           <React.Fragment key={k}>
             <h2 className="text-3xl">{v.name}</h2>
-            <Link
-              href={`./print/${k}/overview`}
-              className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
-            >
-              Celý den
-            </Link>
+            <div className="flex gap-4">
+              <Link
+                href={`./print/${k}/overview`}
+                className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+              >
+                {lang.programCategory.overview}
+              </Link>
+              <Link
+                href={`./print/${k}/robotarna`}
+                className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+              >
+                Robotárna
+              </Link>
+            </div>
           </React.Fragment>
         ))}
       </div>

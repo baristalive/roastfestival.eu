@@ -404,7 +404,9 @@
     "espresso_milk": "Čestní hosté",
     "lecture": "Přednášky",
     "workshop": "Workshop",
-    "party": "Další program"
+    "party": "Další program",
+    "overview": "Přehled",
+    "robotarna": "Pražírny"
   },
   "programDays": {
     "day1": {
