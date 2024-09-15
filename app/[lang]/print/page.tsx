@@ -13,7 +13,7 @@ const Print = ({ params }: PrintPropsType) => {
   return (
     <div className="wrapper mx-auto h-screen">
       <Link
-        href={params.lang === "cz" ? "./en" : "./cz"}
+        href={params.lang === "cz" ? "/en/print" : "/cz/print"}
         hrefLang={params.lang === "cz" ? "en-US" : "cs-CZ"}
         rel="alternate"
         className="lang inverted card z-50 text-lg lowercase"
