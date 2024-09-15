@@ -37,6 +37,18 @@ const Print = ({ params }: PrintPropsType) => {
               >
                 Robotárna
               </Link>
+              <Link
+                href={`./print/${k}/stolarna`}
+                className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+              >
+                {lang.programCategory.workshop}
+              </Link>
+              <Link
+                href={`./print/${k}/kaple`}
+                className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+              >
+                {lang.programCategory.lecture}
+              </Link>
             </div>
           </React.Fragment>
         ))}

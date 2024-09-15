@@ -15,16 +15,19 @@ const preprocess = (data: typeof shared) => {
     Object.entries(data.presenters).map(([id, presenter]) => {
       const schedule = data.program.reduce((accDay, day) => {
         const fromDay = day.schedule.reduce((accTrack, track) => {
-          const fromTrack = track.schedule.reduce((accTrack, slot) => {
-            if (slot.$ref === id) {
-              accTrack.push({
-                start: slot.start,
-                end: slot.end,
-                track: track.track as keyof typeof shared.programCategory,
-                day: day.$ref,
-              });
-            }
-            return accTrack;
+          const fromTrack = track.schedule.reduce((accTrack, row) => {
+            const fromRow = row.reduce((accRow, slot) => {
+              if (slot.$ref === id) {
+                accRow.push({
+                  start: slot.start,
+                  end: slot.end,
+                  track: track.track as keyof typeof shared.programCategory,
+                  day: day.$ref,
+                });
+              }
+              return accRow;
+            }, [] as ProgramItem[]);
+            return [...accTrack, ...fromRow];
           }, [] as ProgramItem[]);
           return [...accTrack, ...fromTrack];
         }, [] as ProgramItem[]);
