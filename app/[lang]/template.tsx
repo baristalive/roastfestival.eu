@@ -1,7 +1,6 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import "../globals.css";
 import { Figtree } from "next/font/google";
 
 const figtree = Figtree({ subsets: ["latin", "latin-ext"] });

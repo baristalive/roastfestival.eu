@@ -13,9 +13,11 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { getTimeString } from "@/app/utils/time";
 import ExportedImage from "next-image-export-optimizer";
-import Flag from "@/app/icons/cz";
+import { getRoomCategory, RoomCategory } from "./utils";
+
+
 type SchedulePropsType = {
-  params: { lang: SupportedLanguages; day: DayIdsType };
+  params: { lang: SupportedLanguages; day: DayIdsType, room: RoomCategory };
 };
 
 const Schedule = ({ params }: SchedulePropsType) => {
@@ -23,8 +25,14 @@ const Schedule = ({ params }: SchedulePropsType) => {
 
   const day = lang.program.filter((d) => d.$ref === params.day)[0];
 
+  const room = getRoomCategory(params.room)
+
+  if (room === undefined) {
+    return null;
+  }
+
   const schedule = day.schedule
-    .filter((s) => ["lecture"].includes(s.track))
+    .filter((s) => [room].includes(s.track as keyof typeof dictionaries.en.programCategory))
     .flatMap((s) => s.schedule)[0];
 
   if (day?.schedule === undefined || day.schedule.length <= 0) {
@@ -33,7 +41,7 @@ const Schedule = ({ params }: SchedulePropsType) => {
 
   return (
     <div className="flex h-full flex-col  justify-between gap-8 px-2 pt-2">
-      <Header category="lecture" />
+      <Header category={room} />
       <div className="watermark2 flex h-full flex-col gap-4">
         {schedule.map((s) => {
           const presenter = lang.presenters[

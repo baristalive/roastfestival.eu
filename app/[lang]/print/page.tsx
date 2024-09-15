@@ -24,7 +24,7 @@ const Print = ({ params }: PrintPropsType) => {
         {Object.entries(lang.programDays).map(([k, v]) => (
           <React.Fragment key={k}>
             <h2 className="text-3xl">{v.name}</h2>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap justify-center">
               <Link
                 href={`./print/${k}/overview`}
                 className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
