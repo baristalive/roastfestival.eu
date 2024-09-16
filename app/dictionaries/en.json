@@ -181,7 +181,8 @@
       "annotation": "Try with Martin Dutkiewič, owner of the Brno café and roastery Punkt. espressobar, more than 10 preparations of one coffee on which he will compare how the preparation affects the resulting taste."
     },
     "ws_roast": {
-      "name": "Roast your own coffee"
+      "name": "Roast your own coffee",
+      "annotation": "\"Roast\" is the name of this festival and in a way its definition. So it goes without saying that we want to introduce this extremely complex discipline to our visitors. You will be given a few dozen grams of coffee of your choice, which you can roast yourself under the guidance of our skilled roasters."
     },
     "talk_what_is": {
       "name": "What is specialty coffee?",

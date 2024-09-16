@@ -286,7 +286,7 @@
       "primaryLink": "instagram",
       "facebook": "https://www.facebook.com/punkt.cafe",
       "modalProps": {
-        "className": "p-10"
+        "className": "p-12"
       }
     },
     "quickborn": {
@@ -413,7 +413,7 @@
       "logo": "punkt.png",
       "facebook": "https://www.facebook.com/punkt.cafe",
       "modalProps": {
-        "className": "p-10",
+        "className": "p-12",
         "showSubheading": false
       }
     },
@@ -424,7 +424,17 @@
         "className": ""
       }
     },
-    "ws_roast": {},
+    "ws_roast": {
+      "instagram": "https://www.instagram.com/ig_coffee_roasters/",
+      "country": "cz",
+      "logo": "roasting.jpg",
+      "subheading": "IG Coffee Roasters",
+      "primaryLink": "instagram",
+      "web": "https://www.prazirnaignac.cz/",
+      "modalProps": {
+        "className": ""
+      }
+    },
     "talk_what_is": {
       "logo": "josef_hulk.jpg",
       "subheading": "Petr\u00a0Chalupek, Josef\u00a0Kučera",
@@ -457,6 +467,9 @@
     },
     "talk_hon": {
       "subheading": "Martin\u00a0Hon",
+      "facebook": "https://www.facebook.com/baristaservis",
+      "instagram": "https://www.instagram.com/baristaservis/",
+      "web": "https://www.baristaservis.cz/",
       "modalProps": {
         "className": ""
       }
@@ -472,8 +485,12 @@
     },
     "talk_kafe_start": {
       "subheading": "Daniel\u00a0Vincens, Josef\u00a0Husár",
+      "instagram": "https://www.instagram.com/ig_coffee_roasters/",
+      "logo": "ig.png",
+      "primaryLink": "instagram",
+      "web": "https://www.prazirnaignac.cz/",
       "modalProps": {
-        "className": ""
+        "className": "p-8"
       }
     },
     "party_1": {

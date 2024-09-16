@@ -181,7 +181,8 @@
       "annotation": "Zkuste s Martinem Dutkiewičem, majitelem brněnské kavárny a pražírny Punkt. espressobar, více než 10 příprav jedné kávy, na kterých porovná, jak se projevuje daná příprava na výsledné chuti."
     },
     "ws_roast": {
-      "name": "Upraž si svoji kávu"
+      "name": "Upraž si svou kávu",
+      "annotation": "\"Roast\" tedy v překladu pražení, je názvem tohoto festivalu a jistým způsobem i jeho definicí. Je tedy samozřejmostí, že tuto nesmírně komplexní disciplínu chceme představit i našim návštěvníkům. Do ruky dostanete pár desítek gramů kávy dle vašeho výběru, které si pod vedením šikovných pražičů z IG coffee roasters sami můžete upražit a odnést domů."
     },
     "talk_what_is": {
       "name": "Co je to výběrovka?",
