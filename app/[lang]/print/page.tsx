@@ -21,13 +21,31 @@ const Print = ({ params }: PrintPropsType) => {
         {params.lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
       <div className="watermark3 flex h-full flex-col items-center justify-center  gap-4">
-        <h2 className="text-3xl">{lang.print.general}</h2>
+        <h2 className="text-3xl">{lang.print.title}</h2>
         <div className="flex flex-wrap justify-center gap-4">
           <Link
-            href={`./print/tickets`}
+            href={`./print/pricelist/tickets`}
             className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
           >
-            {lang.tickets.titleOnTheSpot}
+            {lang.print.categories.tickets}
+          </Link>
+          <Link
+            href={`./print/pricelist/merch`}
+            className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+          >
+            {lang.print.categories.merch}
+          </Link>
+          <Link
+            href={`./print/pricelist/drinks`}
+            className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+          >
+            {lang.print.categories.drinks}
+          </Link>
+          <Link
+            href={`./print/pricelist/rental`}
+            className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+          >
+            {lang.print.categories.rental}
           </Link>
         </div>
         {Object.entries(lang.programDays).map(([k, v]) => (

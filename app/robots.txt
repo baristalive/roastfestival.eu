@@ -1,4 +1,10 @@
 User-Agent: *
+Disallow: /cz/print
+
+User-Agent: *
+Disallow: /en/print
+
+User-Agent: *
 Allow: /
 
 Sitemap: https://roastfestival.eu/sitemap.xml
