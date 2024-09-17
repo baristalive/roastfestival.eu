@@ -469,6 +469,7 @@
   },
   "tickets": {
     "title": "Tickets",
+    "titleOnTheSpot": "Tickets",
     "text": [
       "We offer tickets for the whole festival as well as for individual days.",
       "The price includes unlimited coffee, entry to workshops (depending on room capacity) and lectures",
@@ -564,6 +565,11 @@
         ]
       }
     ]
+  },
+  "print": {
+    "general": "General",
+    "drinks": "Drinks",
+    "merch": "Festival merch"
   },
   "metadata": {
     "description": "Brno Festival of Coffee and Roasters 2024"

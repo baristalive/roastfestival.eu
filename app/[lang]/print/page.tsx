@@ -21,10 +21,19 @@ const Print = ({ params }: PrintPropsType) => {
         {params.lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
       <div className="watermark3 flex h-full flex-col items-center justify-center  gap-4">
+        <h2 className="text-3xl">{lang.print.general}</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            href={`./print/tickets`}
+            className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+          >
+            {lang.tickets.titleOnTheSpot}
+          </Link>
+        </div>
         {Object.entries(lang.programDays).map(([k, v]) => (
           <React.Fragment key={k}>
             <h2 className="text-3xl">{v.name}</h2>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href={`./print/${k}/overview`}
                 className=" nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"

@@ -477,6 +477,7 @@
   },
   "tickets": {
     "title": "Vstupenky",
+    "titleOnTheSpot": "Vstupné",
     "text": [
       "Neomezená konzumace kávy",
       "Účast na workshopech (dle kapacity místnostní)",
@@ -573,6 +574,11 @@
         ]
       }
     ]
+  },
+  "print": {
+    "general": "Obecné",
+    "drinks": "Nápoje",
+    "merch": "Festivalový merch"
   },
   "metadata": {
     "description": "Brněnský festival kávy a pražíren 2024"

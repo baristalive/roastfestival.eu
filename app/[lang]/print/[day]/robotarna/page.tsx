@@ -7,7 +7,6 @@ import dictionaries, {
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import { CSSProperties } from "react";
 import "./print.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
