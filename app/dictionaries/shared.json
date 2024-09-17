@@ -451,6 +451,9 @@
     },
     "talk_neubauer": {
       "subheading": "Štěpán\u00a0Neubauer",
+      "logo": "neubauer.png",
+      "linkedin": "https://www.linkedin.com/in/stepan-neubauer",
+      "twitter": "https://twitter.com/stepanneubauer",
       "modalProps": {
         "className": ""
       }

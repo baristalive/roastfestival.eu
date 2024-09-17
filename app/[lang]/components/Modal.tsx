@@ -12,6 +12,8 @@ import WebIcon from "@/app/icons/web";
 import YoutubeIcon from "@/app/icons/youtube";
 import { getTimeString } from "@/app/utils/time";
 import Flag from "@/app/icons/cz";
+import TwitterIcon from "@/app/icons/twitter";
+import LinkedinIcon from "@/app/icons/linkedin";
 
 export const Modal = ({
   name,
@@ -20,6 +22,8 @@ export const Modal = ({
   facebook,
   instagram,
   youtube,
+  linkedin,
+  twitter,
   web,
   logo,
   schedule,
@@ -103,6 +107,30 @@ export const Modal = ({
         >
           <YoutubeIcon />
           <span className="sr-only">YouTube</span>
+        </a>
+      )}
+      {twitter && (
+        <a
+          href={twitter}
+          title="X (Twitter)"
+          target="_blank"
+          rel="external"
+          className="nav h-[3em] w-[3em] rounded-full bg-[var(--secondary)] flex justify-center items-center text-[var(--white)]"
+        >
+          <TwitterIcon />
+          <span className="sr-only">X (Twitter)</span>
+        </a>
+      )}
+      {linkedin && (
+        <a
+          href={linkedin}
+          title="LinkedIn"
+          target="_blank"
+          rel="external"
+          className="nav h-[3em] w-[3em] rounded-full bg-[var(--secondary)] flex justify-center items-center text-[var(--white)]"
+        >
+          <LinkedinIcon />
+          <span className="sr-only">LinkedIn</span>
         </a>
       )}
     </>

@@ -54,6 +54,8 @@ export type Presenter = {
   instagram?: string;
   facebook?: string;
   youtube?: string;
+  linkedin?: string;
+  twitter?: string;
   name: string;
   logo: string;
   primaryLink: "web" | "instagram" | "facebook";

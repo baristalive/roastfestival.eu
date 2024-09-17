@@ -190,10 +190,11 @@
     },
     "talk_biology": {
       "name": "Lidské tělo a kofein",
-      "annotation": "Říká se, že všeho moc škodí a bohužel to platí i o našem milovaném nápoji. Přednáška doktorky Barbary Šťastné se zaměří na téma jakým způsobem reaguje lidské tělo na kofein a jak ho zpracovává."
+      "annotation": "Říká se, že všeho moc škodí a bohužel to platí i o našem milovaném nápoji. Přednáška lékařky Barbary Šťastné se zaměří na to, jakým způsobem lidské tělo reaguje na kofein, jak ho zpracovává, co mu dodává a kde mu naopak bere. Může nás kofein zabít? A proč má káva onen pověstný povzbudivý efekt? A co ten efekt vlastně je? Na tyto i jiné otázky naleznete na přednášce odpověď."
     },
     "talk_neubauer": {
-      "name": "Analýza průzkumu veřejného mínění: Čím sereme své baristy a čím oni nás"
+      "name": "Analýza průzkumu veřejného mínění: Čím sereme své baristy a čím oni nás",
+      "annotation": "Štěpán Neubauer zná svět profesionálních baristů jako své boty. Káva, jako každá správná světová disciplína, má své diváky, řadové dělníky, nadšence, snoby a profesionální zápasníky. Jejich svět a vnímání kávy se prolíná a občas do sebe naráží. Většinou se tyto světy potkají v kavárnách, odděleny pultem. Na jedné straně zákazník toužící po něčem, čemu říká káva on a na straně druhé barista, který ví, že káva může mít tolik různých podob. Přiďte a přesvědčte se, jak propastné rozdíly mezi těmito dvěma světy můžou být. A možná, možná bude i pikolo."
     },
     "talk_chicas": {
       "name": "Za kávou, slony a tygry do Indie",
