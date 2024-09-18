@@ -187,6 +187,13 @@
       "primaryLink": "web",
       "web": "https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner"
     },
+    "audioagency": {
+      "country": "cz",
+      "logo": "audioagency.png",
+      "name": "Audio Agency - zvuk, světla, pódiat",
+      "primaryLink": "web",
+      "web": "https://www.audioagency.cz/"
+    },
     "liskafe": {
       "country": "cz",
       "instagram": "https://www.instagram.com/lis.kafe",
@@ -673,7 +680,8 @@
         "kudyznudy",
         "engoba",
         "meatfly",
-        "mamu"
+        "mamu",
+        "audioagency"
       ]
     }
   },
