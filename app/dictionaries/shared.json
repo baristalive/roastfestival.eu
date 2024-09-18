@@ -352,6 +352,12 @@
         "className": "p-8"
       }
     },
+    "flatwhite_machines": {
+      "web": "https://www.flatwhitemachines.com/",
+      "primaryLink": "web",
+      "name": "Flatwhite Machines",
+      "logo": "flatwhite_machines.png"
+    },
     "ws_latteart": {
       "logo": "klara.jpg",
       "subheading": "Workshop: Klárka Stehlíková",
@@ -681,7 +687,8 @@
         "engoba",
         "meatfly",
         "mamu",
-        "audioagency"
+        "audioagency",
+        "flatwhite_machines"
       ]
     }
   },
