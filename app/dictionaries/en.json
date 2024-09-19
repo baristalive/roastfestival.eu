@@ -590,7 +590,20 @@
           "price": 50
         }
       ],
-      "drinks": []
+      "drinks": [
+        {
+          "title": "Beer Stern",
+          "price": 60
+        },
+        {
+          "title": "Beer sour",
+          "price": 90
+        },
+        {
+          "title": "Homemade lemonade",
+          "price": 50
+        }
+      ]
     }
   },
   "metadata": {

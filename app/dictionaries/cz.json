@@ -599,7 +599,20 @@
           "price": 50
         }
       ],
-      "drinks": []
+      "drinks": [
+        {
+          "title": "Pivo Stern",
+          "price": 60
+        },
+        {
+          "title": "Pivo sour",
+          "price": 90
+        },
+        {
+          "title": "Domácí limča",
+          "price": 50
+        }
+      ]
     }
   },
   "metadata": {
