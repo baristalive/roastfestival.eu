@@ -702,13 +702,6 @@
               {
                 "start": 10,
                 "end": 20,
-                "$ref": "hayb"
-              }
-            ],
-            [
-              {
-                "start": 10,
-                "end": 20,
                 "$ref": "ig"
               }
             ]
@@ -943,13 +936,6 @@
         {
           "track": "espresso_milk",
           "schedule": [
-            [
-              {
-                "start": 10,
-                "end": 18.5,
-                "$ref": "hayb"
-              }
-            ],
             [
               {
                 "start": 10,
