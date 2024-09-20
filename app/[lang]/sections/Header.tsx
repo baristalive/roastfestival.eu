@@ -49,7 +49,6 @@ export const Header = () => {
         href={lang.contacts.tickets}
         title={lang.buyTickets}
         rel="external"
-        target="_blank"
         className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl will-change-[opacity]"
       >
         {lang.banner}
