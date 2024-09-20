@@ -49,7 +49,6 @@ export const Header = () => {
         href={lang.contacts.tickets}
         title={lang.buyTickets}
         rel="external"
-        target="_blank"
         className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl will-change-[opacity]"
       >
         {lang.banner}
@@ -123,7 +122,6 @@ export const Header = () => {
           href={lang.contacts.tickets}
           title={lang.buyTickets}
           rel="external"
-          target="_blank"
           className="nav"
         >
           <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-24">
