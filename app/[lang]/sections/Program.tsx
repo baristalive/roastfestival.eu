@@ -66,7 +66,7 @@ export const Program = () => {
   return (
     <section
       ref={ref}
-      className={`program-section pb-8 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
+      className={`colab-section pb-8 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="program"
     >
       {lang.program.map((day, idx) => (

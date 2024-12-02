@@ -307,10 +307,10 @@
   ],
   "lastYear": {
     "center": {
-      "description": "1. ročník",
-      "stat": 2023
+      "description": "2. ročník",
+      "stat": 2024
     },
-    "description": "Roast! se letos bude konat již druhý ročník. V roce 2023 měl tento náš festival pilotní zkušební ročník. Chtěli jsme začít malý festival a zjistit, zda je o takovou akci vůbec v Brně zájem. Ukázalo se, že akce tohoto formatu má své místo a proto letos míříme výš.",
+    "description": "Roast! 2025 bude již třetím Roastem, který pro Vás chystáme. V roce 2023, kdy festival vznikl, jsme si vůbec poprvé zkusili, jaké to je připravovat kávový festival a jestli má taková akce v Brně své místo. Zjistili jsme, že má. Do dalšího ročníku, Roastu 2024, festival vyrostl více než dvojnásobně a předčil všechna naše očekávání. Posuďte sami.",
     "side": [
       {
         "description": "pražíren",
@@ -319,7 +319,7 @@
           "x": 30,
           "y": 12
         },
-        "stat": 13
+        "stat": 22
       },
       {
         "description": "workshopů",
@@ -328,16 +328,16 @@
           "x": 65,
           "y": 22
         },
-        "stat": 7
+        "stat": 12
       },
       {
-        "description": "přednášky",
+        "description": "přednášek",
         "props": {
           "r": 12,
           "x": 45,
           "y": 45
         },
-        "stat": 4
+        "stat": 7
       },
       {
         "description": "návštěvníků",
@@ -346,7 +346,7 @@
           "x": 75,
           "y": 75
         },
-        "stat": ">300"
+        "stat": ">700"
       },
       {
         "description": "dny",

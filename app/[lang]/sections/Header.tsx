@@ -94,7 +94,7 @@ export const Header = () => {
           </nav>
         </div>
       </div>
-      <div className="pointer-events-none absolute bottom-1/4 top-0 flex flex-col items-center justify-center text-xl sm:bottom-0 md:text-3xl xl:text-5xl 2xl:text-8xl">
+      <div className="pointer-events-none absolute bottom-0 top-0 flex flex-col items-center justify-center text-xl sm:bottom-0 md:text-3xl xl:text-5xl 2xl:text-8xl">
         <div className="pointer-events-auto mx-auto -mb-[2em] max-w-[1600px]">
           <Logo />
         </div>
@@ -124,9 +124,9 @@ export const Header = () => {
           rel="external"
           className="nav"
         >
-          <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-24">
+          <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-28">
             <span className="fade-in-2 will-change-[opacity]">{lang.buyTickets}</span>
-            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--black)] md:text-xl 2xl:text-3xl will-change-[left]">
+            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--accent)] md:text-xl 2xl:text-3xl will-change-[left]">
               <ArrowIcon />
             </span>
           </nav>

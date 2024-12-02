@@ -10,10 +10,25 @@ type ProgramItem = {
   day: string;
 };
 
+type RawProgramItem = {
+  start: number;
+  end: number;
+  $ref: string;
+  day: string;
+  noEnd: boolean;
+}
+type RawProgramDay = {
+  $ref: string;
+  schedule: {
+    track: string;
+    schedule: RawProgramItem[][];
+  }[]
+}
+
 const preprocess = (data: typeof shared) => {
   const presenters = Object.fromEntries(
     Object.entries(data.presenters).map(([id, presenter]) => {
-      const schedule = data.program.reduce((accDay, day) => {
+      const schedule = (data.program as RawProgramDay[]).reduce((accDay, day) => {
         const fromDay = day.schedule.reduce((accTrack, track) => {
           const fromTrack = track.schedule.reduce((accTrack, row) => {
             const fromRow = row.reduce((accRow, slot) => {
@@ -37,7 +52,7 @@ const preprocess = (data: typeof shared) => {
     }),
   );
 
-  return { ...data, presenters };
+  return { ...data, presenters, program: data.program as RawProgramDay[] };
 };
 
 export const dictionaries = {

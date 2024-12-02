@@ -12,18 +12,22 @@ import {
 
 const largeWallImages = [
   [
-    { src: "DSC_3562.jpg", ...PORTRAIT.lg },
-    { src: "3166.jpg", ...LANDSCAPE.lg },
+    { src: "96-_DSC0558.jpg", ...PORTRAIT.lg },
+    { src: "29-_DSC0387.jpg", ...LANDSCAPE.lg },
   ],
   [
-    { src: "DSC_3346.jpg", ...LANDSCAPE.lg },
+    { src: "506-_DSC1987.jpg", ...LANDSCAPE.lg },
     { card: 0 },
-    { src: "167-_DSC0331.jpg", ...PORTRAIT.lg },
+    { src: "38-_DSC0402.jpg", ...PORTRAIT.lg },
   ],
   [
-    { src: "58-_DSC0116.jpg", ...PORTRAIT.lg },
+    { src: "300-_DSC0610.jpg", ...PORTRAIT.lg },
     { card: 1 },
     { src: "DSC_3536.jpg", ...LANDSCAPE.lg },
+  ],
+  [
+    { src: "PXL_20240921_075204655.jpg", ...PORTRAIT.lg },
+    { src: "_MG_0248.JPG", ...PORTRAIT.lg },
   ],
   [
     { src: "DSC_3481.jpg", ...LANDSCAPE.lg },
@@ -32,26 +36,28 @@ const largeWallImages = [
   ],
   [
     { src: "DSC_3263.jpg", ...PORTRAIT.lg },
-    { src: "60-_DSC0120.jpg", ...LANDSCAPE.lg },
+    { src: "DSC_7482.jpg", ...PORTRAIT.lg },
   ],
 ];
 const smallWallImages = [
   [
-    { src: "DSC_3562.jpg", ...PORTRAIT.sm },
-    { src: "3166.jpg", ...LANDSCAPE.sm },
-    { src: "DSC_3346.jpg", ...LANDSCAPE.sm },
+    { src: "96-_DSC0558.jpg", ...PORTRAIT.sm },
+    { src: "29-_DSC0387.jpg", ...LANDSCAPE.sm },
+    { src: "506-_DSC1987.jpg", ...LANDSCAPE.sm },
     { card: 0 },
     { src: "DSC_3263.jpg", ...PORTRAIT.sm },
-    { src: "167-_DSC0331.jpg", ...PORTRAIT.sm },
+    { src: "38-_DSC0402.jpg", ...PORTRAIT.sm },
+    { src: "PXL_20240921_075204655.jpg", ...PORTRAIT.sm },
   ],
   [
     { src: "DSC_3536.jpg", ...LANDSCAPE.sm },
-    { src: "58-_DSC0116.jpg", ...PORTRAIT.sm },
+    { src: "300-_DSC0610.jpg", ...PORTRAIT.sm },
     { card: 1 },
     { src: "DSC_3481.jpg", ...LANDSCAPE.sm },
     { src: "DSC_3298.jpg", ...PORTRAIT.sm },
     { card: 2 },
-    { src: "60-_DSC0120.jpg", ...LANDSCAPE.sm },
+    { src: "DSC_7482.jpg", ...PORTRAIT.sm },
+    { src: "_MG_0248.JPG", ...PORTRAIT.sm },
   ],
 ];
 
@@ -69,15 +75,15 @@ export const Organizers = () => {
           </h2>
           <Bar mountRef={ref} contextSafe={contextSafe} />
         </div>
-        <div className="cards mx-auto hidden items-center gap-4 p-12 md:flex">
+        <div className="cards mx-auto hidden items-center gap-4 p-12 md:grid grid-cols-6">
           {largeWallImages.map((col, idx) => (
-            <div className="grid max-w-[20%] gap-4" key={`col_${idx}`}>
+            <div className="flex flex-col shrink-1 min-w-0 gap-4" key={`col_${idx}`}>
               {col.map((i, idx2) => {
                 if ("card" in i && i.card !== undefined) {
                   return (
                     <div
                       key={`card_${i.card}`}
-                      className="card elevate rounded-lg px-6 py-8 text-base lg:rounded-2xl 2xl:p-12 2xl:text-xl"
+                      className="card elevate rounded-lg px-6 py-8 text-base lg:rounded-2xl 2xl:px-8 2xl:text-xl"
                     >
                       <p>{lang.organizers.text[i.card]}</p>
                     </div>

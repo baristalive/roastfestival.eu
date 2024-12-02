@@ -3,14 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --primary: #5ca9aa;
-  --background: #fffefb;
-  --black: #2e4052;
-  --grey: #666d74;
-  --white: #fff;
-  --secondary: #2e4052;
-  --accent: #ffc857;
-  --secondary-accent: #412234;
+  --primary: #ffa600;
+  --background: #F7F7F7;
+  --black: #02040F;
+  --white: #F7F7F7;
+  --accent: #840032;
 }
 
 @media (min-width: 768px) {
@@ -246,11 +243,11 @@ svg.elevate {
   filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
 }
 .card {
-  background: var(--background);
+  background: var(--white);
   color: var(--black);
 }
 .card-highlight {
-  background: var(--secondary);
+  background: var(--accent);
   color: var(--white);
 }
 .ticket-sep-highlight {
@@ -258,11 +255,11 @@ svg.elevate {
   margin-top: -1px;
   margin-bottom: -1px;
   background:
-    radial-gradient(0.8rem at left, #0000 90%, var(--secondary)) left,
-    radial-gradient(0.8rem at right, #0000 90%, var(--secondary)) right;
+    radial-gradient(0.8rem at left, #0000 90%, var(--accent)) left,
+    radial-gradient(0.8rem at right, #0000 90%, var(--accent)) right;
   background-size: 51% 100%;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 0 0 var(--secondary));
+  filter: drop-shadow(0 0 0 var(--accent));
 }
 .ticket-sep {
   /* width: 100%; */
@@ -397,13 +394,13 @@ header::before {
   content: "";
   inset: 0;
   background: image-set(
-    url("/images/photos/optimized/banner-opt-384.WEBP") 1x,
-    url("/images/photos/optimized/banner-opt-640.WEBP") 2x
+    url("/images/photos/optimized/_DSC2142-opt-384.WEBP") 1x,
+    url("/images/photos/optimized/_DSC2142-opt-640.WEBP") 2x
   );
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.25;
+  opacity: 0.4;
 }
 header::after {
   position: absolute;
@@ -413,14 +410,14 @@ header::after {
   mask-image: url("/clip.svg"), linear-gradient(#fff 0 0);
   mask-repeat: no-repeat;
   mask-position: center center;
-  mask-size: contain;
+  mask-size: cover;
   mask-composite: exclude;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 @media only screen and (max-width: 800px) {
   header::after {
-    mask-size: cover;
+    mask-size: contain;
   }
 }
 
@@ -510,7 +507,7 @@ header::after {
 }
 
 div.active {
-  background-color: var(--black);
+  background-color: var(--accent);
   border-radius: 9999px;
 }
 

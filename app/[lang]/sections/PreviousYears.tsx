@@ -56,7 +56,7 @@ export const PreviousYears = () => {
       <div>
         <div className="absolute inset-8 z-10 flex items-center justify-center py-12">
           <div className="flex h-full flex-col items-center justify-end gap-8 lg:justify-center">
-            <div className="elevate flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full bg-[var(--black)] p-10 leading-none text-white">
+            <div className="elevate flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full bg-[var(--accent)] p-10 leading-none text-white">
               <div className=" text-6xl font-bold">
                 {lang.lastYear.center.stat}
               </div>

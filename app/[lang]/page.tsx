@@ -34,17 +34,17 @@ const Home = ({ params: { lang } }: HomePropsType) => {
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
       <Header />
-      <InstagramFeed />
-      <Program />
+      {/* <InstagramFeed /> */}
       <Info />
-      <PromotedRoasters />
-      <Tickets />
-      <WhatToExpect />
+      {/* <PromotedRoasters /> */}
+      {/* <Tickets /> */}
+      {/* <WhatToExpect /> */}
       <PreviousYears />
       <Gallery />
-      <Colab />
+      <Program />
+      {/* <Colab /> */}
       <Map />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Organizers />
       <Footer />
     </div>

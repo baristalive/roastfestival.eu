@@ -14,43 +14,43 @@ import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
 const largeWallImages = [
   [
-    { src: "116-_DSC0230.jpg", ...LANDSCAPE.lg },
-    { src: "280-_DSC0568.jpg", ...PORTRAIT.lg },
+    { src: "141-_DSC0855.jpg", ...LANDSCAPE.lg },
+    { src: "188-_DSC1128.jpg", ...PORTRAIT.lg }
   ],
   [
-    { src: "260-_DSC0526.jpg", ...LANDSCAPE.lg },
-    { src: "318-_DSC0639.jpg", ...LANDSCAPE.lg },
-    { src: "198-_DSC0389.jpg", ...LANDSCAPE.lg },
+    { src: "626-_DSC2221.jpg", ...PORTRAIT.lg },
+    { src: "734-_DSC2432.jpg", ...LANDSCAPE.lg }
   ],
   [
-    { src: "94-_DSC0192.jpg", ...LANDSCAPE.lg },
-    { src: "300-_DSC0610.jpg", ...PORTRAIT.lg },
+    { src: "_MG_9521.jpg", ...LANDSCAPE.lg },
+    { src: "_MG_1071.JPG", ...LANDSCAPE.lg },
+    { src: "_MG_9283.JPG", ...LANDSCAPE.lg },
   ],
   [
-    { src: "364-_DSC0717.jpg", ...PORTRAIT.lg },
-    { src: "132-_DSC0253.jpg", ...LANDSCAPE.lg },
+    { src: "_MG_9283.JPG", ...LANDSCAPE.lg },
+    { src: "509-_DSC1990.jpg", ...PORTRAIT.lg },
   ],
   [
-    { src: "359-_DSC0712.jpg", ...LANDSCAPE.lg },
-    { src: "64-_DSC0125.jpg", ...PORTRAIT.lg },
-  ],
+    { src: "_MG_0371.JPG", ...PORTRAIT.lg },
+    { src: "_MG_0579.JPG", ...LANDSCAPE.lg },
+  ]
 ];
 const smallWallImages = [
   [
-    { src: "94-_DSC0192.jpg", ...LANDSCAPE.sm },
-    { src: "116-_DSC0230.jpg", ...LANDSCAPE.sm },
-    { src: "280-_DSC0568.jpg", ...PORTRAIT.sm },
-    { src: "260-_DSC0526.jpg", ...LANDSCAPE.sm },
-    { src: "64-_DSC0125.jpg", ...PORTRAIT.sm },
-    { src: "359-_DSC0712.jpg", ...LANDSCAPE.sm },
+    { src: "188-_DSC1128.jpg", ...PORTRAIT.sm },
+    { src: "141-_DSC0855.jpg", ...LANDSCAPE.sm },
+    { src: "734-_DSC2432.jpg", ...LANDSCAPE.sm },
+    { src: "_MG_0371.JPG", ...PORTRAIT.sm },
+    { src: "_MG_9521.jpg", ...LANDSCAPE.sm },
+    { src: "_MG_1071.JPG", ...LANDSCAPE.sm },
   ],
   [
-    { src: "318-_DSC0639.jpg", ...LANDSCAPE.sm },
-    { src: "300-_DSC0610.jpg", ...PORTRAIT.sm },
-    { src: "198-_DSC0389.jpg", ...LANDSCAPE.sm },
-    { src: "364-_DSC0717.jpg", ...PORTRAIT.sm },
-    { src: "132-_DSC0253.jpg", ...LANDSCAPE.sm },
-  ],
+    { src: "_MG_9283.JPG", ...LANDSCAPE.sm },
+    { src: "509-_DSC1990.jpg", ...PORTRAIT.sm },
+    { src: "_MG_9283.JPG", ...LANDSCAPE.sm },
+    { src: "626-_DSC2221.jpg", ...PORTRAIT.sm },
+    { src: "_MG_0579.JPG", ...LANDSCAPE.sm },
+  ]
 ];
 
 export const Gallery = () => {
@@ -78,9 +78,9 @@ export const Gallery = () => {
   );
   return (
     <section ref={ref} className="gallery-section">
-      <div className="cards mx-auto hidden max-w-[1900px] items-center gap-4 px-12 pb-12 md:flex  will-change-transform">
+      <div className="cards mx-auto hidden max-w-[1900px] items-center gap-4 px-12 pb-12 md:flex will-change-transform">
         {largeWallImages.map((col, idx) => (
-          <div className="flex gap-1 md:grid md:gap-4" key={`col_${idx}`}>
+          <div className="flex gap-1 md:flex-col min-w-0 shrink-1 md:gap-4" key={`col_${idx}`}>
             {col.map((i, idx2) => (
               <ZoomableImage
                 key={`img_${idx2}`}

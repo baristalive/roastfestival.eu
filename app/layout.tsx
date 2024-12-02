@@ -6,7 +6,7 @@ import dictionaries from "./dictionaries/all";
 
 const figtree = Figtree({ subsets: ["latin", "latin-ext"] });
 export const metadata: Metadata = {
-  title: "ROAST!",
+  title: "Roast!",
   description: dictionaries.en.metadata.description,
   alternates: {
     canonical: 'https://roastfestival.eu/',
@@ -15,18 +15,23 @@ export const metadata: Metadata = {
       'cs-CZ': '/cz',
     },
   },
+  manifest: "/manifest.webmanifest",
   icons: [
     {
       rel: 'icon',
       type: 'image/png',
-      sizes: '48x48',
-      url: '/icon-light-48.png',
+      sizes: '96x96',
+      url: '/icon-light-96.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '192x192',
       url: '/icon-light-192.png',
+    },
+    {
+      rel: 'shortcut icon',
+      url: '/favicon.ico'
     },
     {
       rel: 'icon',
@@ -40,6 +45,11 @@ export const metadata: Metadata = {
       url: '/icon-dark.svg',
       media: '(prefers-color-scheme: dark)',
     },
+    {
+      rel: 'apple-touch-icon',
+      sizes: "180x180",
+      url: '/apple-touch-icon.png'
+    }
   ],
 };
 

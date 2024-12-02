@@ -10,6 +10,7 @@ import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import Bar from "@/app/components/Bar";
 import { useGSAP } from "@gsap/react";
+import BeanIcon from "@/app/icons/beanicon";
 
 export const Map = () => {
   const params = useParams();
@@ -89,32 +90,37 @@ export const Map = () => {
                   height: "100%",
                   borderRadius: "1.5rem",
                 }}
-                mapStyle="https://api.maptiler.com/maps/0a4d14d5-c66a-44c7-b95c-7acd8b5831d2/style.json?key=rHR8mWmLUwZBlvh6y60f"
+                mapStyle="https://api.maptiler.com/maps/c303af9a-2cbf-4c95-8aa7-00a95751e11c/style.json?key=PeGeqGWAzLQUdqICcIfc"
               >
                 <Marker
-                  latitude={49.1992978}
-                  longitude={16.6232864}
+                  latitude={49.1996958}
+                  longitude={16.6225864}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:px-6 lg:py-4">
+                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-3">
+                    <div className="inline-block text-[0.6rem]">
+                      <BeanIcon />
+                    </div>
                     {lang.location.stops.kaznice}
                   </div>
                 </Marker>
                 <Marker
                   latitude={49.20001678633428}
-                  longitude={16.626028456324793}
+                  longitude={16.625958456324793}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:px-6 lg:py-4">
+                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-1">
+                  <TramIcon size="2em" />
                     {lang.location.stops.tkalcovska}
                   </div>
                 </Marker>
                 <Marker
-                  latitude={49.19821445765383}
+                  latitude={49.19832445765383}
                   longitude={16.61971675681972}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:px-6 lg:py-4">
+                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-1">
+                      <TramIcon size="2em" />
                     {lang.location.stops.kornerova}
                   </div>
                 </Marker>
@@ -123,7 +129,8 @@ export const Map = () => {
                   longitude={16.61462520981893}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:px-6 lg:py-4">
+                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-1">
+                  <CarIcon size="2em" />
                     {lang.location.parking.lot.title}
                   </div>
                 </Marker>
