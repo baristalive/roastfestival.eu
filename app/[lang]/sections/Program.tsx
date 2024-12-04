@@ -207,7 +207,7 @@ export const Program = () => {
             ))}
           </>
         </div>
-        <div className="mx-auto my-4 lg:hidden">{dayToggle}</div>
+        { lang.program.every((day) => day.schedule.length === 0) || <div className="mx-auto my-4 lg:hidden">{dayToggle}</div> }
       </div>
     </section>
   );
