@@ -1,4 +1,6 @@
 "use client";
+import { use } from 'react';
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -7,10 +9,11 @@ import { Footer } from "@/app/[lang]/sections/Footer";
 import { Info } from "./sections/Info";
 
 type SponsorPropsType = {
-  params: { lang: SupportedLanguages };
+  params: Promise<{ lang: SupportedLanguages }>;
 };
 
-const Sponsor = ({ params: { lang } }: SponsorPropsType) => {
+const Sponsor = ({ params }: SponsorPropsType) => {
+  const { lang } = use(params);
   const [divClass, toggleDivClass] = useState(false);
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {

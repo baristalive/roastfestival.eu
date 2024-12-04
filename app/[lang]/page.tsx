@@ -1,4 +1,5 @@
 "use client";
+import { use } from 'react';
 import Link from "next/link";
 
 import  { SupportedLanguages } from "../dictionaries/all";
@@ -18,10 +19,11 @@ import { Sponsors } from "./sections/Sponsors";
 import InstagramFeed from "./sections/InstagramFeed";
 
 type HomePropsType = {
-  params: { lang: SupportedLanguages };
+  params: Promise<{ lang: SupportedLanguages }>;
 };
 
-const Home = ({ params: { lang } }: HomePropsType) => {
+const Home = ({ params }: HomePropsType) => {
+  const { lang } = use(params);
 
   return (
     <div className="wrapper">

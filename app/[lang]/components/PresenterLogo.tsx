@@ -37,12 +37,13 @@ const PresenterLogo = ({
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  if (!lang.presenters[name as keyof typeof lang.presenters]) {
-    return null;
-  }
   const presenter = lang.presenters[
     name as keyof typeof lang.presenters
-  ] as Presenter;
+  ];
+
+  if (!presenter) {
+    return null;
+  }
 
   if (!presenter[presenter.primaryLink]) {
     console.warn(

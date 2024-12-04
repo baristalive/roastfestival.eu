@@ -1,13 +1,16 @@
 "use client";
+import React, { use } from "react";
+
 import dictionaries, { SupportedLanguages } from "@/app/dictionaries/all";
 import Link from "next/link";
-import React from "react";
 
 type PrintPropsType = {
-  params: { lang: SupportedLanguages };
+  params: Promise<{ lang: SupportedLanguages }>;
 };
 
-const Print = ({ params }: PrintPropsType) => {
+const Print = (props: PrintPropsType) => {
+  const params = use(props.params);
+
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (

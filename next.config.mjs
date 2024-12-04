@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 import createMDX from "@next/mdx";
-import remarkUnwrapImages from "remark-unwrap-images";
+import rehypeUnwrapImages from "rehype-unwrap-images";
 import remarkGfm from "remark-gfm";
 import remarkExtendedTable, {
   extendedTableHandlers,
@@ -9,8 +9,8 @@ import remarkExtendedTable, {
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
-    remarkPlugins: [remarkGfm, remarkExtendedTable, remarkUnwrapImages],
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm, remarkExtendedTable],
+    rehypePlugins: [rehypeUnwrapImages],
     remarkRehypeOptions: { handlers: { ...extendedTableHandlers } },
   },
 });
