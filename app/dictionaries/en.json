@@ -299,10 +299,10 @@
   ],
   "lastYear": {
     "center": {
-      "description": "Year 1",
-      "stat": 2023
+      "description": "Year 2",
+      "stat": 2024
     },
-    "description": "Roast! will be held for the second time this year. In 2023, our festival had a pilot test year. We wanted to start a small festival and see if there was any interest in such an event in Brno. It turned out that an event of this format has its place and that's why we are aiming higher this year.",
+    "description": "Roast! 2025 will be the third Roast we are preparing for you. In 2023, when the festival was founded, we tried for the first time what it is like to prepare a coffee festival and whether such an event has its place in Brno. We found out that it does. By the next edition, Roast 2024, the festival had more than doubled in size and exceeded all our expectations.",
     "side": [
       {
         "description": "roasters",
@@ -311,7 +311,7 @@
           "x": 30,
           "y": 12
         },
-        "stat": 13
+        "stat": 22
       },
       {
         "description": "workshops",
@@ -320,7 +320,7 @@
           "x": 65,
           "y": 22
         },
-        "stat": 7
+        "stat": 12
       },
       {
         "description": "lectures",
@@ -329,7 +329,7 @@
           "x": 45,
           "y": 45
         },
-        "stat": 4
+        "stat": 7
       },
       {
         "description": "visitors",
@@ -338,7 +338,7 @@
           "x": 75,
           "y": 75
         },
-        "stat": ">300"
+        "stat": ">700"
       },
       {
         "description": "days",
