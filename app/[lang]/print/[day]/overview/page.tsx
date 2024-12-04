@@ -1,4 +1,5 @@
 "use client";
+import { use } from 'react';
 
 import { StationIcon } from "@/app/[lang]/components/StationIcon";
 import { HOURS } from "@/app/[lang]/sections/Program";
@@ -13,10 +14,12 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 type SchedulePropsType = {
-  params: { lang: SupportedLanguages; day: DayIdsType };
+  params: Promise<{ lang: SupportedLanguages; day: DayIdsType }>;
 };
 
-const Schedule = ({ params }: SchedulePropsType) => {
+const Schedule = (props: SchedulePropsType) => {
+  const params = use(props.params);
+
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   const day = lang.program.filter((d) => d.$ref === params.day)[0];

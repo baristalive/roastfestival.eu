@@ -6,10 +6,12 @@ export async function generateStaticParams() {
   return ["stolarna", "kaple"].map((room) => ({ room }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: SupportedLanguages, day: DayIdsType, room: "kaple" | "stolarna"  }}) {
-  const lang = dictionaries[params.lang] || dictionaries.en
+export async function generateMetadata({ params }: { params: Promise<{ lang: SupportedLanguages, day: DayIdsType, room: "kaple" | "stolarna"  }>}) {
+  const resolvedParams = await params;
+  const lang = dictionaries[resolvedParams.lang] || dictionaries.en;
+
   return {
-    title: `${lang.programTitle}: ${lang.programDays[params.day]?.name || '?'} - ${lang.programCategory[getRoomCategory(params.room)]}`
+    title: `${lang.programTitle}: ${lang.programDays[resolvedParams.day]?.name || '?'} - ${lang.programCategory[getRoomCategory(resolvedParams.room)]}`
   }
 }
 export default function RootLayout({

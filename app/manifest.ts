@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import dictionaries from "./dictionaries/all";
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Roast!',

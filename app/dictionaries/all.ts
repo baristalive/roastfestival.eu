@@ -24,42 +24,6 @@ type RawProgramDay = {
     schedule: RawProgramItem[][];
   }[]
 }
-
-const preprocess = (data: typeof shared) => {
-  const presenters = Object.fromEntries(
-    Object.entries(data.presenters).map(([id, presenter]) => {
-      const schedule = (data.program as RawProgramDay[]).reduce((accDay, day) => {
-        const fromDay = day.schedule.reduce((accTrack, track) => {
-          const fromTrack = track.schedule.reduce((accTrack, row) => {
-            const fromRow = row.reduce((accRow, slot) => {
-              if (slot.$ref === id) {
-                accRow.push({
-                  start: slot.start,
-                  end: slot.end,
-                  track: track.track as keyof typeof shared.programCategory,
-                  day: day.$ref,
-                });
-              }
-              return accRow;
-            }, [] as ProgramItem[]);
-            return [...accTrack, ...fromRow];
-          }, [] as ProgramItem[]);
-          return [...accTrack, ...fromTrack];
-        }, [] as ProgramItem[]);
-        return [...accDay, ...fromDay];
-      }, [] as ProgramItem[]);
-      return [id, { ...presenter, schedule }];
-    }),
-  );
-
-  return { ...data, presenters, program: data.program as RawProgramDay[] };
-};
-
-export const dictionaries = {
-  cz: deepmerge(preprocess(shared), cz),
-  en: deepmerge(preprocess(shared), en),
-};
-
 export type SupportedLanguages = "cz" | "en";
 export const DayIds = ["day1", "day2"] as const;
 export type DayIdsType = typeof DayIds[number]
@@ -86,10 +50,49 @@ export type Presenter = {
   };
   actionIcons: {
     [key: string]: {
-      href: string;
+      href?: string;
       text: string;
     };
   };
 };
+
+type Presenters = {[key: string]: Presenter}
+type PartialPresenters = {[key: string]: Partial<Presenter>}
+
+const preprocess = (data: typeof shared) => {
+  const presenters = Object.fromEntries(
+    Object.entries(data.presenters).map(([id, presenter]) => {
+      const schedule = (data.program as RawProgramDay[]).reduce((accDay, day) => {
+        const fromDay = day.schedule.reduce((accTrack, track) => {
+          const fromTrack = track.schedule.reduce((accTrack, row) => {
+            const fromRow = row.reduce((accRow, slot) => {
+              if (slot.$ref === id) {
+                accRow.push({
+                  start: slot.start,
+                  end: slot.end,
+                  track: track.track as keyof typeof shared.programCategory,
+                  day: day.$ref,
+                });
+              }
+              return accRow;
+            }, [] as ProgramItem[]);
+            return [...accTrack, ...fromRow];
+          }, [] as ProgramItem[]);
+          return [...accTrack, ...fromTrack];
+        }, [] as ProgramItem[]);
+        return [...accDay, ...fromDay];
+      }, [] as ProgramItem[]);
+      return [id, { ...presenter, schedule }];
+    }),
+  ) as Presenters;
+
+  return { ...data, presenters, program: data.program as RawProgramDay[] };
+};
+
+export const dictionaries = {
+  cz: deepmerge(preprocess(shared), {...cz, presenters: cz.presenters as PartialPresenters}),
+  en: deepmerge(preprocess(shared), {...en, presenters: en.presenters as PartialPresenters}),
+};
+
 
 export default dictionaries;

@@ -4,10 +4,12 @@ export async function generateStaticParams() {
   return DayIds.map((d) => ({ day: d }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: SupportedLanguages, day: DayIdsType  }}) {
-  const lang = dictionaries[params.lang] || dictionaries.en
+export async function generateMetadata({ params }: { params: Promise<{ lang: SupportedLanguages, day: DayIdsType  }>}) {
+  const resolvedParams = await params;
+  const lang = dictionaries[resolvedParams.lang] || dictionaries.en;
+
   return {
-    title: `${lang.programTitle}: ${lang.programDays[params.day]?.name || '?'} - ${lang.programCategory.robotarna}`
+    title: `${lang.programTitle}: ${lang.programDays[resolvedParams.day]?.name || '?'} - ${lang.programCategory.robotarna}`
   }
 }
 

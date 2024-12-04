@@ -1,4 +1,5 @@
 "use client";
+import { use } from 'react';
 
 import { StationIcon } from "@/app/[lang]/components/StationIcon";
 import { HOURS } from "@/app/[lang]/sections/Program";
@@ -16,10 +17,12 @@ import ExportedImage from "next-image-export-optimizer";
 import { getRoomCategory, RoomCategory } from "./utils";
 
 type SchedulePropsType = {
-  params: { lang: SupportedLanguages; day: DayIdsType; room: RoomCategory };
+  params: Promise<{ lang: SupportedLanguages; day: DayIdsType; room: RoomCategory }>;
 };
 
-const Schedule = ({ params }: SchedulePropsType) => {
+const Schedule = (props : SchedulePropsType) => {
+  const params = use(props.params);
+
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   const day = lang.program.filter((d) => d.$ref === params.day)[0];

@@ -394,8 +394,8 @@ header::before {
   content: "";
   inset: 0;
   background: image-set(
-    url("/images/photos/optimized/_DSC2142-opt-384.WEBP") 1x,
-    url("/images/photos/optimized/_DSC2142-opt-640.WEBP") 2x
+    url("/images/photos/optimized/_DSC2142-opt-640.WEBP") 1x,
+    url("/images/photos/optimized/_DSC2142-opt-828.WEBP") 2x
   );
   background-position: center center;
   background-size: cover;

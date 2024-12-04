@@ -1,25 +1,27 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from 'next'
+
 import createMDX from "@next/mdx";
-import remarkUnwrapImages from "remark-unwrap-images";
+import rehypeUnwrapImages from "rehype-unwrap-images";
 import remarkGfm from "remark-gfm";
 import remarkExtendedTable, {
   extendedTableHandlers,
 } from "remark-extended-table";
+import { RuleSetRule } from 'webpack';
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
-    remarkPlugins: [remarkGfm, remarkExtendedTable, remarkUnwrapImages],
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm, remarkExtendedTable],
+    rehypePlugins: [rehypeUnwrapImages],
     remarkRehypeOptions: { handlers: { ...extendedTableHandlers } },
   },
 });
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg"),
+    const fileLoaderRule = config.module.rules.find((rule: RuleSetRule) =>
+      rule.test instanceof RegExp && rule.test?.test?.(".svg"),
     );
 
     config.module.rules.push(
