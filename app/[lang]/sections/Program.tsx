@@ -33,8 +33,13 @@ export const Program = () => {
       const activeBubble = selector<HTMLDivElement>("div.active");
       const activeNav = selector<HTMLAnchorElement>("a.active");
       const state = Flip.getState(".pills");
-      activeNav[0].appendChild(activeBubble[0]);
-      activeNav[1].appendChild(activeBubble[1]);
+
+      if (activeBubble.length !== activeNav.length) {
+        console.warn("Something isn't right, program nav do not match in count", activeBubble, activeNav)
+      }
+      for (let i = 0; i < activeNav.length; i++) {
+        activeNav[i].appendChild(activeBubble[i]);
+      }
 
       Flip.from(state, { duration: 2, ease: "power1.inOut", scale: true });
     },
