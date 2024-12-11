@@ -477,21 +477,16 @@
   },
   "tickets": {
     "title": "Vstupenky",
-    "text": [
-      "Neomezená konzumace kávy",
-      "Účast na workshopech (dle kapacity místnostní)",
-      "Vstup na přednášky",
-      "Sleva pro studenty",
-      "Sleva pro ZTP/P"
-    ],
     "discounted": "Snížená",
     "timeLeft": "Zbývá",
     "soonAvailable": "Dostupné od",
     "soldOut": "Vyprodáno",
+    "alreadyAvailable": "Již v prodeji",
     "priceList": [
       {
         "availability": {
-          "end": "2024-07-07"
+          "start": "2025-01-01",
+          "end": "2025-05-31"
         },
         "subheading": "Předprodej",
         "heading": [
@@ -499,30 +494,41 @@
           {
             "superscript": "st"
           },
-          " ",
           "Crack"
         ],
         "prices": [
           {
             "title": "Celofestivalová",
             "full": 400,
-            "discounted": 300
+            "discounted": 300,
+            "addon": "Hrnek za 100 Kč",
+            "overlay": {
+              "title": "Celofestivalová",
+              "full": 400,
+              "discounted": 300,
+              "addon": "Hrnek zdarma",
+              "availability": {
+                "start": "2024-12-11",
+                "end": "2025-01-01"
+              }
+            }
           },
           {
             "title": "Sobota",
             "full": 300,
-            "discounted": 250
+            "discounted": 250,
+            "addon": "Hrnek za 100 Kč"
           },
           {
             "title": "Neděle",
-            "full": 250
+            "full": 250,
+            "addon": "Hrnek za 100 Kč"
           }
         ]
       },
       {
         "availability": {
-          "start": "2024-07-07",
-          "end": "2024-09-20"
+          "start": "2025-06-01"
         },
         "subheading": "Předprodej",
         "heading": [
@@ -530,45 +536,25 @@
           {
             "superscript": "nd"
           },
-          " ",
           "Crack"
         ],
         "prices": [
           {
             "title": "Celofestivalová",
-            "full": 450,
-            "discounted": 350
-          },
-          {
-            "title": "Sobota",
-            "full": 350,
-            "discounted": 300
-          },
-          {
-            "title": "Neděle",
-            "full": 300
-          }
-        ]
-      },
-      {
-        "subheading": "Poslední možnost",
-        "heading": [
-          "Na místě"
-        ],
-        "prices": [
-          {
-            "title": "Celofestivalová",
             "full": 500,
-            "discounted": 400
+            "discounted": 400,
+            "note": "Hrnek za 150 Kč"
           },
           {
             "title": "Sobota",
             "full": 400,
-            "discounted": 350
+            "discounted": 350,
+            "note": "Hrnek za 150 Kč"
           },
           {
             "title": "Neděle",
-            "full": 350
+            "full": 350,
+            "note": "Hrnek za 150 Kč"
           }
         ]
       }

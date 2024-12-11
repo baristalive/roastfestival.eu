@@ -24,7 +24,7 @@ const Tickets = () => {
 
   const tickets = lang.tickets.priceList.filter(
     (o) => o.availability === undefined,
-  )[0].prices;
+  )[0]?.prices || [];
 
   return (
     <div className="flex w-full justify-center gap-4 items-stretch">

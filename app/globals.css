@@ -166,6 +166,7 @@ footer {
     var(--primary);
 }
 .what-to-expect-section,
+.ticket-section,
 .info-section {
   background: linear-gradient(
       to right,
@@ -185,7 +186,6 @@ footer {
     ),
     var(--primary);
 }
-.ticket-section,
 .program-section {
   background: linear-gradient(
       to right,

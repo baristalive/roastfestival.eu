@@ -34,7 +34,7 @@ export const TicketRowHeader = ({
       {subheading ? (
         <h4 className="text-xl hidden lg:block font-bold 2xl:text-2xl">{subheading}</h4>
       ) : <div className="hidden lg:block h-7 2xl:h-8" />}
-      <h3 className="text-3xl font-bold 2xl:text-6xl">
+      <h3 className="text-3xl font-bold 2xl:text-6xl inline break-words">
         {heading?.map((el, idx) =>
           typeof el === "object" && el?.superscript ? (
             <span className="align-super text-lg 2xl:text-4xl" key={idx}>

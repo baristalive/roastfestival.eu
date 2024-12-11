@@ -198,7 +198,7 @@
     },
     "talk_chicas": {
       "name": "To India for coffee, elephants and tigers",
-      "annotation": "Let's hear how we discovered delicious beans in India, a country that is not exactly the mecca of fine coffee. And not only that, we'll tell you how we met amazing people with a huge passion for protecting nature and experienced first-hand their happy coexistence with wild animals. Let's talk about what it's like to get coffee from a plantation that's open to free-roaming elephants, tigers and monkeys."
+      "annotation": "Let's 1hear how we discovered delicious beans in India, a country that is not exactly the mecca of fine coffee. And not only that, we'll tell you how we met amazing people with a huge passion for protecting nature and experienced first-hand their happy coexistence with wild animals. Let's talk about what it's like to get coffee from a plantation that's open to free-roaming elephants, tigers and monkeys."
     },
     "talk_hon": {
       "name": "Coffee from a technician's point of view",
@@ -469,19 +469,16 @@
   },
   "tickets": {
     "title": "Tickets",
-    "text": [
-      "We offer tickets for the whole festival as well as for individual days.",
-      "The price includes unlimited coffee, entry to workshops (depending on room capacity) and lectures",
-      "A discount on the entrance fee is available for students and ZTP/P (severe health disability requiring special care)."
-    ],
     "discounted": "Discounted",
-    "timeLeft": "Time left:",
+    "timeLeft": "Remaining",
     "soonAvailable": "Available from",
     "soldOut": "Sold out",
+    "alreadyAvailable": "Available now",
     "priceList": [
       {
         "availability": {
-          "end": "2024-07-07"
+          "start": "2025-01-01",
+          "end": "2025-05-31"
         },
         "subheading": "Pre-sale",
         "heading": [
@@ -496,24 +493,35 @@
           {
             "title": "Full event",
             "full": 400,
-            "discounted": 300
+            "discounted": 300,
+            "addon": "Cup 100 Kč",
+            "overlay": {
+              "title": "Full event",
+              "full": 400,
+              "discounted": 300,
+              "addon": "Cup free",
+              "availability": {
+                "start": "2024-12-11",
+                "end": "2025-01-01"
+              }
+            }
           },
           {
             "title": "Saturday",
             "full": 300,
-            "discounted": 250
+            "discounted": 250,
+            "addon": "Cup 100 Kč"
           },
           {
             "title": "Sunday",
             "full": 250,
-            "discounted": 250
+            "addon": "Cup 100 Kč"
           }
         ]
       },
       {
         "availability": {
-          "start": "2024-07-07",
-          "end": "2024-09-19"
+          "start": "2025-06-01"
         },
         "subheading": "Pre-sale",
         "heading": [
@@ -527,39 +535,20 @@
         "prices": [
           {
             "title": "Full event",
-            "full": 450,
-            "discounted": 350
-          },
-          {
-            "title": "Saturday",
-            "full": 350,
-            "discounted": 300
-          },
-          {
-            "title": "Sunday",
-            "full": 300
-          }
-        ]
-      },
-      {
-        "subheading": "Last chance",
-        "heading": [
-          "Walk-up"
-        ],
-        "prices": [
-          {
-            "title": "Full event",
             "full": 500,
-            "discounted": 400
+            "discounted": 400,
+            "note": "Cup 150 Kč"
           },
           {
             "title": "Saturday",
             "full": 400,
-            "discounted": 350
+            "discounted": 350,
+            "note": "Cup 150 Kč"
           },
           {
             "title": "Sunday",
-            "full": 350
+            "full": 350,
+            "note": "Cup 150 Kč"
           }
         ]
       }

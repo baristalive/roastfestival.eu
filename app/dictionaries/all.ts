@@ -48,7 +48,7 @@ export type Presenter = {
     className?: string;
     showSubheading?: boolean;
   };
-  actionIcons: {
+  actionIcons?: {
     [key: string]: {
       href?: string;
       text: string;
@@ -59,7 +59,7 @@ export type Presenter = {
 type Presenters = {[key: string]: Presenter}
 type PartialPresenters = {[key: string]: Partial<Presenter>}
 
-const preprocess = (data: typeof shared) => {
+const preprocessShared = (data: typeof shared) => {
   const presenters = Object.fromEntries(
     Object.entries(data.presenters).map(([id, presenter]) => {
       const schedule = (data.program as RawProgramDay[]).reduce((accDay, day) => {
@@ -89,9 +89,47 @@ const preprocess = (data: typeof shared) => {
   return { ...data, presenters, program: data.program as RawProgramDay[] };
 };
 
+type Tickets = {
+  title: string;
+  discounted: string;
+  timeLeft: string;
+  soonAvailable: string;
+  soldOut: string;
+  alreadyAvailable: string;
+  priceList: {
+    availability: {
+      start?: string;
+      end?: string;
+    };
+    subheading: string;
+    heading: (string | {superscript: string})[];
+    prices: {
+      title: string;
+      full: number;
+      discounted?: number;
+      highlight?: boolean;
+      note?: string;
+      overlay?: {
+        title: string;
+        full: number;
+        discounted?: number;
+        addon?: string;
+        availability: {
+          start?: string;
+          end?: string;
+        };
+      };
+    }[]
+  }[]
+}
+
+const preprocessLocalized = (data: typeof cz | typeof en) => {
+  return {...data, tickets: data.tickets as Tickets, presenters: data.presenters as PartialPresenters}
+}
+
 export const dictionaries = {
-  cz: deepmerge(preprocess(shared), {...cz, presenters: cz.presenters as PartialPresenters}),
-  en: deepmerge(preprocess(shared), {...en, presenters: en.presenters as PartialPresenters}),
+  cz: deepmerge(preprocessShared(shared), preprocessLocalized(cz)),
+  en: deepmerge(preprocessShared(shared), preprocessLocalized(en)),
 };
 
 
