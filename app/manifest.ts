@@ -14,14 +14,14 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#fff',
     icons: [
       {
-        src: "/icon-light-192.png",
-        sizes: "192x192",
+        src: "/icon-light-512.png",
+        sizes: "512x512",
         type: "image/png",
         purpose: "maskable"
       },
       {
-        src: "/icon-light-512.png",
-        sizes: "512x512",
+        src: "/icon-light-1024.png",
+        sizes: "1024x1024",
         type: "image/png",
         purpose: "maskable"
       },
@@ -29,7 +29,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/icon-light.svg",
         sizes: "any",
         type: "image/svg+xml",
-        purpose: "maskable"
+        purpose: "any"
       },
       {
         src: "/icon-dark.svg",
