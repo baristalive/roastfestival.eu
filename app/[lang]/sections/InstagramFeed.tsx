@@ -34,7 +34,7 @@ const INSTAGRAM_PARAMS = new URLSearchParams({
   limit: LIMIT.toString(),
 });
 
-const INSTAGRAM_URL = "https://graph.instagram.com/me/media";
+const INSTAGRAM_URLS = ["https://graph.instagram.com/me/stories", "https://graph.instagram.com/me/media"];
 
 type InstagramMediaType = "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO";
 type InstagramPost = {
@@ -85,7 +85,7 @@ const InstagramFeed = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([] as any[]);
   const [igApiKey, setIgApiKey] = useState("");
   const { contextSafe } = useGSAP();
 
@@ -103,9 +103,9 @@ const InstagramFeed = () => {
     if (igApiKey === "") return;
     INSTAGRAM_PARAMS.set("access_token", igApiKey);
 
-    fetch(`${INSTAGRAM_URL}?${INSTAGRAM_PARAMS}`)
-      .then((resp) => resp.json())
-      .then((data) => setPosts(data?.data));
+    Promise.all(INSTAGRAM_URLS.map(url => fetch(`${url}?${INSTAGRAM_PARAMS}`)))
+      .then(rawResponses => Promise.all(rawResponses.map(resp => resp.json())))
+      .then((data) => setPosts(data.map(d => d?.data).flat().slice(0, LIMIT)));
   }, [igApiKey]);
 
   return (

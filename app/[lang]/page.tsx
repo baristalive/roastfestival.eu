@@ -36,7 +36,7 @@ const Home = ({ params }: HomePropsType) => {
         {lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
       <Header />
-      {/* <InstagramFeed /> */}
+      <InstagramFeed />
       <Info />
       {/* <PromotedRoasters /> */}
       <Tickets />

@@ -166,8 +166,7 @@ footer {
     var(--primary);
 }
 .what-to-expect-section,
-.ticket-section,
-.info-section {
+.ticket-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -181,6 +180,20 @@ footer {
     ),
     radial-gradient(
       circle at right top,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 40rem
+    ),
+    var(--primary);
+}
+.info-section {
+  background: linear-gradient(
+      to right,
+      var(--background),
+      var(--background) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at right bottom,
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0) 40rem
     ),
