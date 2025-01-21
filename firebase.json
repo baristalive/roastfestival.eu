@@ -8,6 +8,13 @@
       "**/node_modules/**"
     ],
     "cleanUrls": true,
+    "redirects": [
+      {
+        "source": "/qrbc",
+        "destination": "https://linktr.ee/roast_festival",
+        "type": 302
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
