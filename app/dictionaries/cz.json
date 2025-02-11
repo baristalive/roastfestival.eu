@@ -12,7 +12,7 @@
     "exhibitors": {
       "button": "Odeslat nabídku",
       "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
-      "title": "Vystavovatelé"
+      "title": "Pražírny a ostatní učinkující"
     },
     "sponsors": {
       "button": "Zjistit podrobnosti",
@@ -25,8 +25,8 @@
   "exhibitors": {
     "cta": "Vyplnit přihlášku",
     "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
-    "title": "Vystavovatelé",
-    "formLink": "https://forms.gle/G6svTJgvdovKcMdo6"
+    "title": "Pražírny a učinkující",
+    "formLink": "https://forms.gle/eLdFwHCQKthC1XxX8"
   },
   "presenters": {
     "baristaroasters": {
@@ -289,12 +289,12 @@
   },
   "info": [
     {
-      "text": "Na našich barech se budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni!",
-      "title": "Espresso bary"
+      "text": "Je libo espresso nebo třeba capucchino? To a mnoho dalšího ochutnáš na našlapaných espresso barech. Během festivalu se zde vystřídá mnoho různých pražíren, které ti připraví svou kávu.",
+      "title": "Espresso, jak má být"
     },
     {
       "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
-      "title": "Brew bary"
+      "title": "Filtry všeho druhu"
     },
     {
       "text": "Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky.",

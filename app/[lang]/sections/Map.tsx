@@ -18,9 +18,9 @@ export const Map = () => {
   const ref = useRef(null);
   const { contextSafe } = useGSAP({ scope: ref });
   return (
-    <section ref={ref} className="where-section watermark2 min-h-screen p-8">
-      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr,auto,1fr] flex-col lg:grid lg:p-12">
-        <div className="flex flex-col">
+    <section ref={ref} className="where-section watermark2 min-h-screen">
+      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr,auto,1fr] flex-col lg:grid px-8">
+        <div className="flex flex-col md:pl-12">
           <h2 className="pb-8 text-3xl font-bold 2xl:text-6xl">
             {lang.location.title}
           </h2>

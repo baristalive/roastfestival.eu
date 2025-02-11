@@ -69,7 +69,7 @@ export const Organizers = () => {
   return (
     <section ref={ref} className="about-us watermark4 pt-20">
       <div className="mx-auto max-w-[1900px]">
-        <div className="p-12 md:p-24">
+        <div className="p-8 md:p-20">
           <h2 className="w-3/4 text-3xl font-bold md:pt-56 lg:pt-24 2xl:pb-8 2xl:text-6xl">
             {lang.organizers.title}
           </h2>
