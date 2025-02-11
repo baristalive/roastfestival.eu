@@ -1,9 +1,7 @@
 "use client";
 import Bar from "@/app/components/Bar";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import { useGSAP } from "@gsap/react";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
 import {
   LANDSCAPE,
   PORTRAIT,
@@ -64,18 +62,16 @@ const smallWallImages = [
 export const Organizers = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-  const { contextSafe } = useGSAP({ scope: ref });
   return (
-    <section ref={ref} className="about-us watermark4 pt-20">
+    <section className="about-us watermark4 pt-20">
       <div className="mx-auto max-w-[1900px]">
         <div className="p-8 md:p-20">
           <h2 className="w-3/4 text-3xl font-bold md:pt-56 lg:pt-24 2xl:pb-8 2xl:text-6xl">
             {lang.organizers.title}
           </h2>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar />
         </div>
-        <div className="cards mx-auto hidden items-center gap-4 p-12 md:grid grid-cols-6">
+        <div className="cards mx-auto hidden items-center justify-center gap-4 p-12 md:grid grid-cols-6">
           {largeWallImages.map((col, idx) => (
             <div className="flex flex-col shrink-1 min-w-0 gap-4" key={`col_${idx}`}>
               {col.map((i, idx2) => {
@@ -101,7 +97,7 @@ export const Organizers = () => {
             </div>
           ))}
         </div>
-        <div className="cards mx-auto flex items-center gap-1 p-2 md:hidden">
+        <div className="cards mx-auto flex items-center justify-center gap-1 p-2 md:hidden">
           {smallWallImages.map((col, idx) => (
             <div className="grid gap-2" key={`col_${idx}`}>
               {col.map((i, idx2) => {
@@ -110,6 +106,7 @@ export const Organizers = () => {
                     <div
                       key={`card_${i.card}`}
                       className="card elevate rounded-lg px-6 py-8 text-base lg:rounded-2xl 2xl:p-12 2xl:text-xl"
+                      style={{ maxWidth: LANDSCAPE.sm.small.width }}
                     >
                       <p>{lang.organizers.text[i.card]}</p>
                     </div>

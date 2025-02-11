@@ -2,8 +2,7 @@
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import React from "react";
 import { TicketCard } from "@/app/components/TicketCard";
 import { TicketRowHeader } from "@/app/components/TicketRowHeader";
 import { getAvailability, AvailabilityRange, Availability } from "@/app/utils/ticket";
@@ -12,18 +11,15 @@ const TICKETS_PER_ROW = 3
 export const Tickets = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-
-  const { contextSafe } = useGSAP()
 
   return (
-    <section id="tickets" ref={ref} className="ticket-section watermark5 h-screen">
-      <div className="mx-auto grid max-w-[1900px] px-8 pt-32 lg:grid-cols-[1fr,2fr]">
+    <section id="tickets"  className="ticket-section watermark5 lg:min-h-screen">
+      <div className="mx-auto grid max-w-[1900px] px-8 lg:pt-32 lg:grid-cols-[1fr,2fr]">
         <div className="md:pl-12">
-          <h2 className="text-3xl font-bold 2xl:text-6xl">
+          <h2 className="text-3xl pt-24 font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.tickets.title}
           </h2>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar />
         </div>
       </div>
       <div className="lg:flex items-center justify-center lg:py-24 px-8 max-w-[1900px] mx-auto">
