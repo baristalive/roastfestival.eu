@@ -12,7 +12,7 @@
     "exhibitors": {
       "button": "Send offer",
       "text": "Are you interested in our event and would you like to participate? We are looking for roasters, cafes and speakers.",
-      "title": "Exhibitors"
+      "title": "Roasters and presenters"
     },
     "sponsors": {
       "button": "Find out more",
@@ -25,8 +25,8 @@
   "exhibitors": {
     "cta": "Sign up",
     "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
-    "title": "Exhibitors",
-    "formLink": "https://forms.gle/TvyZWFom4u763MnG6"
+    "title": "Roasters and presenters",
+    "formLink": "https://forms.gle/TvVbmfVjBe3hQjPH7"
   },
   "presenters": {
     "baristaroasters": {

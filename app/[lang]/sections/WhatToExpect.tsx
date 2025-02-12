@@ -2,29 +2,23 @@
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import BeanIcon from "@/app/icons/beanicon";
 
 export const WhatToExpect = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-
-  const { contextSafe } = useGSAP();
 
   return (
     <section
       id="what-to-expect"
-      ref={ref}
       className="what-to-expect-section lg:pb-24 pt-12 sm:pt-0  watermark3"
     >
       <div className="mx-auto grid max-w-[1900px] px-8 lg:grid-cols-[1fr,1fr]">
         <div className="md:pl-12">
-          <h2 className="text-3xl font-bold 2xl:text-6xl">
+          <h2 className="text-3xl pt-24 font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.whatToExpect.title}
           </h2>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar />
         </div>
       </div>
       <div className="mx-auto grid max-w-[1900px] gap-4 lg:gap-16 px-8 py-12 md:px-12 lg:grid-cols-[1fr,1fr]">

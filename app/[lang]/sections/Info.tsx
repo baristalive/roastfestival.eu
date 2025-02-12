@@ -17,7 +17,7 @@ export const Info = () => {
     lang.info.slice(Math.ceil(lang.info.length / 2)),
   ];
 
-  const { contextSafe } = useGSAP(
+  useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
@@ -52,7 +52,7 @@ export const Info = () => {
               <p key={p}>{p}</p>
             ))}
           </div>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar  />
         </div>
         <div className="cards flex flex-col gap-8 md:grid md:grid-cols-2">
           {info.map((col, idx) => (

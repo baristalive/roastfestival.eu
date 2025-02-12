@@ -6,7 +6,6 @@ import {
   getRemoteConfig,
   getValue,
 } from "firebase/remote-config";
-import { useGSAP } from "@gsap/react";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
@@ -84,10 +83,8 @@ const ContentTileSkeleton = () => (
 const InstagramFeed = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
   const [posts, setPosts] = useState([] as any[]);
   const [igApiKey, setIgApiKey] = useState("");
-  const { contextSafe } = useGSAP();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -118,9 +115,7 @@ const InstagramFeed = () => {
           <div className="space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.social.text}
           </div>
-          <div>
-            <Bar mountRef={ref} contextSafe={contextSafe} />
-          </div>
+          <Bar />
           <div className="my-12 flex gap-4 text-sm md:text-xl 2xl:text-2xl">
             <a
               href={lang.contacts.instagram}

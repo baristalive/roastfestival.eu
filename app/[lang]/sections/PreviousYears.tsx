@@ -12,7 +12,7 @@ export const PreviousYears = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   const ref = useRef(null);
 
-  const { contextSafe } = useGSAP(
+  useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
@@ -74,9 +74,9 @@ export const PreviousYears = () => {
             <div className="mx-auto max-w-screen-lg space-y-10 pb-24 text-base leading-normal lg:pb-0 2xl:text-xl">
               {lang.lastYear.description}
             </div>
-            <Bar mountRef={ref} contextSafe={contextSafe} />
+            <Bar />
           </div>
-          <div className="cards relative z-10 h-full w-full gap-8 text-base lg:text-xs">
+          <div className="cards relative z-10 h-full mx-auto w-full lg:w-full sm:w-1/2 gap-8 text-base md:text-xs">
             <svg
               width="100%"
               height="100%"

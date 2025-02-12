@@ -143,7 +143,7 @@ footer {
       var(--background) 50%,
       rgba(0, 0, 0, 0) 50%
     ),
-    radial-gradient(circle at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 31%),
+    radial-gradient(circle closest-side at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 400%),
     var(--primary);
 }
 .promoted-roasters-section {

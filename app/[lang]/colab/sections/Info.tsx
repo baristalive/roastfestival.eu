@@ -1,9 +1,7 @@
 "use client";
 import Bar from "@/app/components/Bar";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
-import { useGSAP } from "@gsap/react";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
 
 import NavBar from "@/app/components/NavBar";
 import ArrowIcon from "@/app/icons/arrow";
@@ -16,16 +14,13 @@ import czExhibitorsContent from "@/app/dictionaries/colab/exhibitors/content_cz.
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
   const Card = params.lang === "cz" ? czExhibitorsCard : enExhibitorsCard;
   const Content =
     params.lang === "cz" ? czExhibitorsContent : enExhibitorsContent;
 
-  const { contextSafe } = useGSAP({ scope: ref });
   return (
     <>
       <section
-        ref={ref}
         id="info"
         className="colab-section watermark flex flex-col items-center justify-between pb-10"
       >
@@ -38,7 +33,7 @@ export const Info = () => {
             <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal lg:text-xl">
               {lang.exhibitors.text}
             </div>
-            <Bar mountRef={ref} contextSafe={contextSafe} />
+            <Bar  />
           </div>
           <div className="cards flex flex-col gap-8 md:grid-cols-2 2xl:grid">
             <div className="card elevate h-auto rounded-2xl pb-8 text-base md:px-12 2xl:text-3xl">
