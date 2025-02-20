@@ -214,7 +214,7 @@ footer {
     var(--primary);
 
 }
-.previous-year-section {
+.colab-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -228,7 +228,7 @@ footer {
     ),
     var(--primary);
 }
-.gallery-section {
+.previous-year-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -237,7 +237,7 @@ footer {
     ),
     var(--primary);
 }
-.colab-section {
+.gallery-section {
   background: radial-gradient(
       100% 1200px at right top,
       var(--primary) 50%,

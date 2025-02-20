@@ -78,7 +78,7 @@ export const Gallery = () => {
   );
   return (
     <section ref={ref} className="gallery-section">
-      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 md:flex will-change-transform">
+      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 lg:pb-48 md:flex will-change-transform">
         {largeWallImages.map((col, idx) => (
           <div className="flex gap-1 md:flex-col min-w-0 shrink-1 md:gap-4" key={`col_${idx}`}>
             {col.map((i, idx2) => (

@@ -14,7 +14,7 @@ export const Map = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <section className="where-section watermark2 min-h-screen pb-20">
+    <section className="where-section watermark2 min-h-screen pb-48">
       <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr,auto,1fr] flex-col lg:grid px-8">
         <div className="flex flex-col md:pl-12">
           <h2 className="pb-8 text-3xl font-bold 2xl:text-6xl">

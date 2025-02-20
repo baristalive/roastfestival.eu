@@ -12,7 +12,7 @@ export const Colab = () => {
 
   return (
     <section id="colab" className="colab-section">
-      <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-12 lg:grid-cols-[1fr,2fr] 2xl:gap-32 lg:pb-80">
+      <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-12 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="w-3/4 pb-8 text-3xl font-bold 2xl:text-6xl">
             {lang.colab.title}
