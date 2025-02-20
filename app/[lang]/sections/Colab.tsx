@@ -2,8 +2,6 @@
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import PlusIcon from "@/app/icons/plus";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import Bar from "@/app/components/Bar";
 import { StationIcon } from "../components/StationIcon";
 import ArrowIcon from "@/app/icons/arrow";
@@ -11,11 +9,9 @@ import ArrowIcon from "@/app/icons/arrow";
 export const Colab = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-  const { contextSafe } = useGSAP({ scope: ref });
 
   return (
-    <section ref={ref} id="colab" className="colab-section">
+    <section id="colab" className="colab-section">
       <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-12 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="w-3/4 pb-8 text-3xl font-bold 2xl:text-6xl">
@@ -24,7 +20,7 @@ export const Colab = () => {
           <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.colab.description}
           </div>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar  />
         </div>
         <div className="flex grid-cols-2 flex-col items-center justify-center gap-8 text-xl md:grid">
           <div className="card elevate nav md:h-full rounded-2xl p-8 2xl:p-12">

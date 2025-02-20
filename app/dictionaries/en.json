@@ -12,7 +12,7 @@
     "exhibitors": {
       "button": "Send offer",
       "text": "Are you interested in our event and would you like to participate? We are looking for roasters, cafes and speakers.",
-      "title": "Exhibitors"
+      "title": "Roasters and presenters"
     },
     "sponsors": {
       "button": "Find out more",
@@ -25,8 +25,8 @@
   "exhibitors": {
     "cta": "Sign up",
     "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
-    "title": "Exhibitors",
-    "formLink": "https://forms.gle/TvyZWFom4u763MnG6"
+    "title": "Roasters and presenters",
+    "formLink": "https://forms.gle/TvVbmfVjBe3hQjPH7"
   },
   "presenters": {
     "baristaroasters": {
@@ -281,19 +281,19 @@
   },
   "info": [
     {
-      "text": "Our bars will feature a rotation of local and out-of-town roasters of select coffees. You can taste all kinds of milk drinks at two bars. On the third, you'll taste a fine-tuned espresso with no additives. Can't have regular milk? We're ready for that too!",
-      "title": "Espresso bars"
+      "text": "Would you like an espresso or maybe a capucchino? That and much more is waiting to be tasted by you at our especially busy espresso bars. During the festival, there will be many different roasters on rotation, each with their own coffee to show off.",
+      "title": "Espresso done right"
     },
     {
-      "text": "V60, Chemex, Aeropress or Coldbrew? You can also taste these alternative brews at our brew bars. We give roasters complete freedom to choose the brew that best suits their beans.",
-      "title": "Brew bars"
+      "text": "Filtered coffee, this is a different discipline. V60, Chemex, Aeropress or Coldbrew? You can also taste these coffees at our brew bars. We give roasters complete freedom to choose the preparation that best suits their beans.",
+      "title": "Filtered coffee of all kinds"
     },
     {
-      "text": "Would you like to try more than a dozen alternative coffee preparations or test your sensory skills? Our professional baristas will guide you through everything and will be happy to answer any questions you may have.",
-      "title": "Workshops and cuppings"
+      "text": "You don't just want to watch, you want to experience it for yourself? Discover the ins and outs of coffee roasting, cupping, alternative preparations, experimental flavour pairing and much more. Our professional baristas will guide you through everything and will be happy to answer any questions.",
+      "title": "Workshops"
     },
     {
-      "text": "Our special guests will guide you through the nooks and crannies of coffee technology, chemistry and culture you may not have known existed. In the chapel behind the main hall, professionals from the coffee scene and beyond will be waiting for you with comfortable chairs.",
+      "text": "Again this year you can look forward to a wide range of lectures on all possible and impossible topics. Our special guests will guide you through the nooks and crannies of coffee technology, chemistry or culture you may not have known existed.",
       "title": "Lectures"
     }
   ],
@@ -440,7 +440,7 @@
           },
           {
             "title": "Cups and mugs",
-            "text": "We have back-up coffee and beer cups for each participant. A deposit is paid on site. Of course there is a cup rinse available free of charge so you can enjoy your coffee from a clean cup every time."
+            "text": "For each participant there is a reusable coffee and beer cups available and ready to be borrowed. A deposit is paid on site. And of course there is also a cup rinse available free of charge for everyone so we all can enjoy each coffee from a clean cup."
           }
         ]
       },

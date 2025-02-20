@@ -143,7 +143,7 @@ footer {
       var(--background) 50%,
       rgba(0, 0, 0, 0) 50%
     ),
-    radial-gradient(circle at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 31%),
+    radial-gradient(circle closest-side at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 400%),
     var(--primary);
 }
 .promoted-roasters-section {
@@ -214,7 +214,7 @@ footer {
     var(--primary);
 
 }
-.previous-year-section {
+.colab-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -228,7 +228,7 @@ footer {
     ),
     var(--primary);
 }
-.gallery-section {
+.previous-year-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -237,7 +237,7 @@ footer {
     ),
     var(--primary);
 }
-.colab-section {
+.gallery-section {
   background: radial-gradient(
       100% 1200px at right top,
       var(--primary) 50%,

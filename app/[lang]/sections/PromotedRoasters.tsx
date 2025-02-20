@@ -7,16 +7,12 @@ import {
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import React, { useEffect, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
+import React, { useEffect, useState } from "react";
 import PresenterLogo from "../components/PresenterLogo";
 
 export const PromotedRoasters = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-
-  const { contextSafe } = useGSAP();
 
   const [promoted, setPromoted] = useState({
     honored: [] as string[],
@@ -42,7 +38,6 @@ export const PromotedRoasters = () => {
     <section
       className="watermark2 promoted-roasters-section"
       id="promoted"
-      ref={ref}
     >
       <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
@@ -54,7 +49,7 @@ export const PromotedRoasters = () => {
               <p key={p}>{p}</p>
             ))}
           </div>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar />
         </div>
       </div>
       <h2 className="p-8 text-center text-3xl md:px-20 ">
@@ -92,7 +87,7 @@ export const PromotedRoasters = () => {
               <p key={p}>{p}</p>
             ))}
           </div>
-          <Bar mountRef={ref} contextSafe={contextSafe} />
+          <Bar />
         </div>
       </div>
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-stretch justify-center gap-2 text-xl md:gap-20">

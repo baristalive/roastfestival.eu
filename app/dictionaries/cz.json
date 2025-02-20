@@ -12,7 +12,7 @@
     "exhibitors": {
       "button": "Odeslat nabídku",
       "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
-      "title": "Vystavovatelé"
+      "title": "Pražírny a ostatní učinkující"
     },
     "sponsors": {
       "button": "Zjistit podrobnosti",
@@ -25,8 +25,8 @@
   "exhibitors": {
     "cta": "Vyplnit přihlášku",
     "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
-    "title": "Vystavovatelé",
-    "formLink": "https://forms.gle/G6svTJgvdovKcMdo6"
+    "title": "Pražírny a učinkující",
+    "formLink": "https://forms.gle/eLdFwHCQKthC1XxX8"
   },
   "presenters": {
     "baristaroasters": {
@@ -289,19 +289,19 @@
   },
   "info": [
     {
-      "text": "Na našich barech se budou střídat místní i přespolní pražírny výběrových káv. Na dvou barech můžeš ochutnat všemožné mléčné nápoje. Na tom třetím ochutnáš vyladěné espresso bez žádných přídatků. Nemůžeš klasické mléko? I na to jsme připraveni!",
-      "title": "Espresso bary"
+      "text": "Je libo espresso nebo třeba capucchino? To a mnoho dalšího ochutnáš na našlapaných espresso barech. Během festivalu se zde vystřídá mnoho různých pražíren a každá se bude chtít pochlubit svou kávou.",
+      "title": "Espresso, jak má být"
     },
     {
-      "text": "V60, Chemex, Aeropress či Coldbrew? I takovéto alternativní přípravy můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
-      "title": "Brew bary"
+      "text": "Filtrovaná káva, to je sanostatná disciplína. V60, Chemex, Aeropress či Coldbrew? I takovéto přípravy káv můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
+      "title": "Filtry všeho druhu"
     },
     {
-      "text": "Chtěl/a by si vyzkoušet více než desítku alternativních příprav káv, nebo si otestovat své senzorické schopnosti? Naši profesionální baristi tě vším provedou a rádi odpoví na všechny všetečné otázky.",
-      "title": "Workshopy a cuppingy"
+      "text": "Nechceš jen přihlížet, ale chceš to zkusit na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Naši profesionální baristi tě vším provedou a rádi odpoví na všechny dotazy.",
+      "title": "Workshopy"
     },
     {
-      "text": "Naši speciální hosté tě provedou zákoutími kávových technologií, chemie či kultury o kterých jsi možná ani nechtěl vědět, že existují. V kapli za hlavním sálem tě krom pohodlných křesílek budou čekat profesionálové nejen z kávové scény.",
+      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Naši speciální hosté tě provedou zákoutími kávových technologií, chemie či kultury o kterých jsi možná ani nechtěl vědět, že existují.",
       "title": "Přednášky"
     }
   ],
@@ -448,7 +448,7 @@
           },
           {
             "title": "Kelímky a hrníčky",
-            "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach kelímků, tak abyste si mohli vychutnat kávu pokaždé z čistého kelímku."
+            "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach hrníčků, tak abyste si pokaždé mohli vychutnat kávu z čisté nádoby."
           }
         ]
       },
