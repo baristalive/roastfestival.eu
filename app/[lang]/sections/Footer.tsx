@@ -27,8 +27,8 @@ export const Footer = () => {
           </a>
         </div>
       </nav>
-      <div className="mx-auto w-full max-w-[1900px]">
-        <ul className="space-y-4 text-right text-lg">
+      <div className="mx-auto w-full max-w-[1900px] md:px-12">
+        <ul className="space-y-4 text-center md:text-right text-lg">
           <li className="font-regular text-sm">
             Artwork by sugeng riyanto,
             <br /> Muhammad Nur Auliady Pamungkas,
