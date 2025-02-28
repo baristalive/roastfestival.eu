@@ -57,7 +57,7 @@ export const Info = () => {
           </div>
         </div>
       </section>
-      <section className="watermark-large relative bg-transparent">
+      <section className="watermark-large relative mdx-content-section">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:p-12">
           <div className=" h-auto rounded-2xl py-16 text-lg md:px-32">
             <Content />

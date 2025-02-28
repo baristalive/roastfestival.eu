@@ -4,9 +4,9 @@
 
 :root {
   --primary: #ffa600;
-  --background: #F7F7F7;
-  --black: #02040F;
-  --white: #F7F7F7;
+  --background: #f7f7f7;
+  --black: #02040f;
+  --white: #f7f7f7;
   --accent: #840032;
 }
 
@@ -143,7 +143,11 @@ footer {
       var(--background) 50%,
       rgba(0, 0, 0, 0) 50%
     ),
-    radial-gradient(circle closest-side at 60% 20%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 400%),
+    radial-gradient(
+      circle closest-side at 60% 20%,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 400%
+    ),
     var(--primary);
 }
 .promoted-roasters-section {
@@ -212,7 +216,6 @@ footer {
       rgba(0, 0, 0, 0) 40rem
     ),
     var(--primary);
-
 }
 .colab-section {
   background: linear-gradient(
@@ -237,7 +240,8 @@ footer {
     ),
     var(--primary);
 }
-.gallery-section {
+.gallery-section,
+.mdx-content-section {
   background: radial-gradient(
       100% 1200px at right top,
       var(--primary) 50%,
@@ -678,7 +682,7 @@ ol.round-counter li::before {
   left: 0;
   bottom: 0;
   width: 20%;
-  background: linear-gradient(to right, var(--background), rgba(0, 0, 0, 0) );
+  background: linear-gradient(to right, var(--background), rgba(0, 0, 0, 0));
   z-index: 2;
   pointer-events: none;
 }
@@ -689,7 +693,7 @@ ol.round-counter li::before {
   right: 0;
   bottom: 0;
   width: 10%;
-  background: linear-gradient(to right,  rgba(0, 0, 0, 0), var(--primary) );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary));
   z-index: 2;
   pointer-events: none;
 }
