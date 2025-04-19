@@ -33,7 +33,10 @@ const INSTAGRAM_PARAMS = new URLSearchParams({
   limit: LIMIT.toString(),
 });
 
-const INSTAGRAM_URLS = ["https://graph.instagram.com/me/stories", "https://graph.instagram.com/me/media"];
+const INSTAGRAM_URLS = [
+  "https://graph.instagram.com/me/stories",
+  "https://graph.instagram.com/me/media",
+];
 
 type InstagramMediaType = "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO";
 type InstagramPost = {
@@ -100,9 +103,21 @@ const InstagramFeed = () => {
     if (igApiKey === "") return;
     INSTAGRAM_PARAMS.set("access_token", igApiKey);
 
-    Promise.all(INSTAGRAM_URLS.map(url => fetch(`${url}?${INSTAGRAM_PARAMS}`)))
-      .then(rawResponses => Promise.all(rawResponses.map(resp => resp.json())))
-      .then((data) => setPosts(data.map(d => d?.data).flat().slice(0, LIMIT)));
+    Promise.all(
+      INSTAGRAM_URLS.map((url) => fetch(`${url}?${INSTAGRAM_PARAMS}`)),
+    )
+      .then((rawResponses) =>
+        Promise.all(rawResponses.map((resp) => resp.json())),
+      )
+      .then((data) =>
+        setPosts(
+          data
+            .map((d) => d?.data)
+            .flat()
+            .slice(0, LIMIT)
+            .filter((d) => d !== undefined),
+        ),
+      );
   }, [igApiKey]);
 
   return (
@@ -150,7 +165,7 @@ const InstagramFeed = () => {
                   .map((i, idx) => <ContentTileSkeleton key={idx} />)}
           </div>
           <div
-            className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4  pr-4 will-change-transform"
+            className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4 pr-4 will-change-transform"
             aria-hidden
           >
             {posts
