@@ -46,7 +46,7 @@ const Home = ({ params }: HomePropsType) => {
       <Gallery />
       {/* <Program /> */}
       <Map />
-      {/* <Sponsors /> */}
+      <Sponsors />
       <Organizers />
       <Footer />
     </div>
