@@ -544,18 +544,18 @@
             "title": "Celofestivalová",
             "full": 500,
             "discounted": 400,
-            "note": "Hrnek za 150 Kč"
+            "note": "Hrnek za 250 Kč"
           },
           {
             "title": "Sobota",
             "full": 400,
             "discounted": 350,
-            "note": "Hrnek za 150 Kč"
+            "note": "Hrnek za 300 Kč"
           },
           {
             "title": "Neděle",
             "full": 350,
-            "note": "Hrnek za 150 Kč"
+            "note": "Hrnek za 300 Kč"
           }
         ]
       }

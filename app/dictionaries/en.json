@@ -538,18 +538,18 @@
             "title": "Full event",
             "full": 500,
             "discounted": 400,
-            "note": "Cup 150 Kč"
+            "note": "Cup 250 Kč"
           },
           {
             "title": "Saturday",
             "full": 400,
             "discounted": 350,
-            "note": "Cup 150 Kč"
+            "note": "Cup 300 Kč"
           },
           {
             "title": "Sunday",
             "full": 350,
-            "note": "Cup 150 Kč"
+            "note": "Cup 300 Kč"
           }
         ]
       }
