@@ -4,6 +4,7 @@ import {
   Availability,
   AvailabilityRange,
   availabilityRemainingToLocale,
+  toDate,
   toLocaleDateString,
 } from "@/app/utils/ticket";
 import { useParams } from "next/navigation";
@@ -50,8 +51,10 @@ export const TicketRowHeader = ({
           {chipTexts[availability]}
           <span className="ml-1">
             {availability === Availability.AvailableNow
-              ? availabilityRemainingToLocale(
-                  dateRange.end!,
+              ? (dateRange.end !== undefined && toDate(dateRange.end, "start") < new Date())
+                ? lang.tickets.lastDay
+                : availabilityRemainingToLocale(
+                  dateRange.end || lang.dateStart,
                   params.lang as SupportedLanguages,
                 )
               : availability === Availability.Soon

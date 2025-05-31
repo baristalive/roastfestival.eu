@@ -95,6 +95,7 @@ type Tickets = {
   timeLeft: string;
   soonAvailable: string;
   soldOut: string;
+  lastDay: string;
   alreadyAvailable: string;
   priceList: {
     availability: {

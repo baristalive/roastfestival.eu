@@ -471,6 +471,7 @@
     "title": "Tickets",
     "discounted": "Discounted",
     "timeLeft": "Remaining",
+    "lastDay": "last day",
     "soonAvailable": "Available from",
     "soldOut": "Sold out",
     "alreadyAvailable": "Available now",

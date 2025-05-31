@@ -60,7 +60,7 @@ export const TicketCard = ({
               <div className="card rounded-full px-2 text-sm lg:px-4 lg:pb-1 lg:pt-[.3rem] lg:text-base">
                 {lang.tickets.alreadyAvailable}: {lang.tickets.timeLeft}{" "}
                 {availabilityRemainingToLocale(
-                  dateRange.end!,
+                  dateRange.end || lang.dateStart,
                   params.lang as SupportedLanguages,
                 )}
               </div>
