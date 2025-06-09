@@ -42,6 +42,7 @@ const PresenterLogo = ({
   ];
 
   if (!presenter) {
+    console.warn(`Presenter "${name}" doesn't exist in list of presenters`)
     return null;
   }
 

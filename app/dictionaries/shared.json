@@ -93,7 +93,7 @@
     "gills": {
       "logo": "gills.svg",
       "country": "cz",
-      "name": "Gill's Coffee Roastery",
+      "name": "Gill's coffee",
       "primaryLink": "web",
       "web": "https://gills.cz/",
       "instagram": "https://www.instagram.com/gills.cz/",
@@ -210,7 +210,7 @@
     "lot": {
       "country": "sk",
       "logo": "lot.png",
-      "name": "LOT roastery",
+      "name": "LOT",
       "primaryLink": "web",
       "web": "https://www.lotroastery.com/",
       "facebook": "https://www.facebook.com/LOT.roastery",
@@ -341,13 +341,13 @@
       }
     },
     "wildkaffee": {
-      "country": "at",
+      "country": "de",
       "logo": "wildkaffee.png",
-      "name": "Wildkaffee Roastery",
+      "name": "Wildkaffee",
       "primaryLink": "web",
-      "web": "https://wild-kaffee.at/",
+      "web": "https://wild-kaffee.com/",
       "facebook": "https://www.facebook.com/wildkaffee/",
-      "instagram": "https://www.instagram.com/wildkaffee_austria/",
+      "instagram": "https://www.instagram.com/wildkaffee/",
       "modalProps": {
         "showName": false,
         "className": "p-8"
@@ -639,45 +639,110 @@
       "name": "Studio MAMU",
       "primaryLink": "web",
       "web": "https://www.mamustudio.cz/"
+    },
+    "brita": {
+      "logo": "brita.svg",
+      "name": "Brita",
+      "primaryLink": "web",
+      "web": "https://www.brita.cz/"
+    },
+    "gastroin": {
+      "logo": "gastroin.png",
+      "name": "GastroIN",
+      "primaryLink": "web",
+      "web": "https://www.gastroin.cz/"
+    },
+    "kavaspojuje": {
+      "logo": "kavaspojuje.png",
+      "name": "Káva spojuje",
+      "primaryLink": "web",
+      "web": "https://kavaspojuje.cz/"
+    },
+    "triplefive": {
+      "country": "sk",
+      "name": "Triple five roastery",
+      "logo": "triplefive.png",
+      "primaryLink": "web",
+      "web": "https://triplefivecoffee.com/",
+      "instagram": "https://www.instagram.com/triplefivecoffee/",
+      "facebook": "http://www.facebook.com/triplefivecoffee"
+    },
+    "coffeespot": {
+      "country": "cz",
+      "name": "Coffeespot",
+      "logo": "coffeespot.png",
+      "primaryLink": "web",
+      "instagram": "https://www.instagram.com/coffeespot.cz/",
+      "facebook": "https://www.facebook.com/Coffeespot.cz/",
+      "web": "https://www.coffeespot.cz/"
+    },
+    "trafficcoffee": {
+      "country": "cz",
+      "name": "Traffic Coffee",
+      "logo": "traffic_coffee.png",
+      "primaryLink": "instagram",
+      "instagram": "https://www.instagram.com/trafficcoffeeol"
+    },
+    "dalia": {
+      "name": "Dalia Coffee",
+      "country": "cz",
+      "logo": "dalia.png",
+      "primaryLink": "web",
+      "web": "https://www.daliacoffee.cz",
+      "facebook": "https://www.facebook.com/prazirnaDaliaCoffee/",
+      "instagram": "https://www.instagram.com/prazirnadalia/"
+    },
+    "labanda": {
+      "name": "La Banda Caffeina",
+      "country": "cz",
+      "logo": "labanda.png",
+      "primaryLink": "web",
+      "web": "https://www.labandacaffeina.com/",
+      "instagram": "https://www.instagram.com/_labandacaffeina/"
+    },
+    "chcikofein": {
+      "name": "Chci kofein",
+      "country": "cz",
+      "logo": "chcikofein2.png",
+      "primaryLink": "web",
+      "web": "https://www.chcikofein.cz",
+      "instagram": "https://www.instagram.com/chcikofein",
+      "facebook": "https://www.facebook.com/chcikofein"
+    },
+    "mala_prazarna": {
+      "name": "MALA PRAŽARNA",
+      "country": "si",
+      "logo": "mala_prazarna.png",
+      "primaryLink": "instagram",
+      "web": "https://malaprazarna.si ",
+      "instagram": "https://www.instagram.com/malaprazarna"
     }
   },
   "promoted": {
     "others": {
       "items": [
-        "buchta_b",
-        "dimchi",
-        "hodne_nekde",
-        "kaple",
-        "parabellum",
-        "rast"
       ]
     },
     "roasters": {
       "honored": [
-        "hayb"
       ],
       "regular": [
-        "baristaroasters",
-        "black",
-        "dos_mundos",
-        "francin",
-        "gills",
-        "idylika",
         "ig",
-        "kmen",
-        "kolna",
-        "liskafe",
-        "lot",
-        "mamacoffee",
-        "miners",
-        "penerini",
-        "pikola",
+        "hayb",
+        "gills",
+        "baristaroasters",
+        "triplefive",
+        "coffeespot",
+        "trafficcoffee",
         "poppy",
+        "lot",
+        "mala_prazarna",
+        "labanda",
+        "liskafe",
+        "wildkaffee",
         "punkt",
-        "quickborn",
-        "rebelbean",
-        "red_fawn",
-        "wildkaffee"
+        "chcikofein",
+        "dalia"
       ]
     },
     "sponsors": {
