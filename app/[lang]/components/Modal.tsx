@@ -10,8 +10,7 @@ import { StationIcon } from "./StationIcon";
 import ExportedImage from "next-image-export-optimizer";
 import WebIcon from "@/app/icons/web";
 import YoutubeIcon from "@/app/icons/youtube";
-import { getTimeString } from "@/app/utils/time";
-import Flag from "@/app/icons/cz";
+import Flag from "@/app/icons/flag";
 import TwitterIcon from "@/app/icons/twitter";
 import LinkedinIcon from "@/app/icons/linkedin";
 
@@ -67,10 +66,10 @@ export const Modal = ({
           title="Web"
           target="_blank"
           rel="external"
-          className="nav h-[3em] w-[3em] rounded-full bg-[var(--secondary)] p-1 pt-2 text-[var(--white)]"
+          className="nav h-[3em] w-[3em] rounded-full bg-[var(--black)] p-2 pt-[.65rem] text-[var(--white)] text-large"
         >
           <WebIcon />
-          <span className="sr-only">Instagram</span>
+          <span className="sr-only">Web</span>
         </a>
       )}
       {instagram && (
@@ -220,8 +219,7 @@ export const Modal = ({
                         }
                       </h6>
                       <h6 className="text-base xl:text-xl">
-                        {day}: {getTimeString(item.start)} -{" "}
-                        {getTimeString(item.end)}
+                        {day}: {item.start} - {item.end}
                       </h6>
                     </div>
                   );

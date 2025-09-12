@@ -41,10 +41,10 @@ const Home = ({ params }: HomePropsType) => {
       <PromotedRoasters />
       <Tickets />
       <WhatToExpect />
-      <Colab />
+      {/* <Colab /> */}
       <PreviousYears />
       <Gallery />
-      {/* <Program /> */}
+      <Program />
       <Map />
       <Sponsors />
       <Organizers />

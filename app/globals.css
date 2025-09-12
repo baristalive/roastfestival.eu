@@ -203,7 +203,7 @@ footer {
     ),
     var(--primary);
 }
-.program-section {
+.gallery-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -217,7 +217,7 @@ footer {
     ),
     var(--primary);
 }
-.colab-section {
+.previous-year-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -231,7 +231,7 @@ footer {
     ),
     var(--primary);
 }
-.previous-year-section {
+.gallery-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -240,7 +240,7 @@ footer {
     ),
     var(--primary);
 }
-.gallery-section,
+.program-section,
 .mdx-content-section {
   background: radial-gradient(
       100% 1200px at right top,
@@ -526,6 +526,22 @@ header::after {
 div.active {
   background-color: var(--accent);
   border-radius: 9999px;
+}
+
+.selected {
+  position: relative;
+}
+.selected:hover path {
+  stroke-width: 2 !important;
+}
+.selected::after {
+  position: absolute;
+  content: url("/check.svg");
+  z-index: 40;
+  width: 1em;
+  height: 1em;
+  right: 0;
+  top: 0;
 }
 
 .img-overlay {

@@ -11,9 +11,24 @@ import { StationIcon } from "../components/StationIcon";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Flip } from "gsap/all";
-import { getTimeString } from "@/app/utils/time";
 
-export const HOURS = [...Array(11)].map((_, idx) => idx + 10);
+const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
+  String(idxm).padEnd(2, "0"),
+);
+export const GRID_STOPS =
+  "[station] 80px [h950] 1fr " +
+  Array.from(Array(8), (_, idx) =>
+    MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr`),
+  )
+    .flat()
+    .join(" ") +
+  " [h1800] 1fr [h1810]";
+export const HOURS = Array.from(Array(9), (_, idx) => ({
+  title: idx + 10 + ":00",
+  start: `h${idx + 9}50`,
+  end: `h${idx + 10}10`,
+  center: `h${idx + 10}00`,
+}));
 
 export const Program = () => {
   const params = useParams();
@@ -35,7 +50,11 @@ export const Program = () => {
       const state = Flip.getState(".pills");
 
       if (activeBubble.length !== activeNav.length) {
-        console.warn("Something isn't right, program nav do not match in count", activeBubble, activeNav)
+        console.warn(
+          "Something isn't right, program nav do not match in count",
+          activeBubble,
+          activeNav,
+        );
       }
       for (let i = 0; i < activeNav.length; i++) {
         activeNav[i].appendChild(activeBubble[i]);
@@ -71,7 +90,7 @@ export const Program = () => {
   return (
     <section
       ref={ref}
-      className={`colab-section pb-8 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
+      className={`program-section pb-8 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="program"
     >
       {lang.program.map((day, idx) => (
@@ -87,7 +106,7 @@ export const Program = () => {
         <div className="mx-2 grow grid-cols-2 gap-6 lg:grid xl:block">
           <>
             {lang.program.every((day) => day.schedule.length === 0) && (
-              <div className="mx-auto flex  h-full w-full items-center justify-center gap-4 p-12 py-48">
+              <div className="mx-auto flex h-full w-full items-center justify-center gap-4 p-12 py-48">
                 <div className="flex flex-col gap-4 md:flex-row">
                   <StationIcon station="espresso" />
                   <StationIcon station="espresso_milk" />
@@ -126,34 +145,50 @@ export const Program = () => {
                       </span>
                     </div>
                     <div className="card elevate relative flex w-full flex-col justify-between rounded-2xl py-4">
-                      <div className="hidden grid-cols-[repeat(24,_minmax(0,_1fr))] p-4 pt-10 text-center xl:grid">
-                        <div className="col-span-2"></div>
+                      <div
+                        className="hidden p-4 pt-10 text-center xl:grid"
+                        style={{
+                          gridTemplateColumns: GRID_STOPS,
+                        }}
+                      >
                         {HOURS.map((h) => (
-                          <div className="col-span-2" key={h}>
-                            {h}:00
+                          <div
+                            style={{
+                              gridColumnStart: h.start,
+                              gridColumnEnd: h.end,
+                            }}
+                            key={h.title}
+                          >
+                            {h.title}
                           </div>
                         ))}
                       </div>
-                      <div className="absolute inset-0 z-0 hidden grid-cols-[repeat(24,_minmax(0,_1fr))] divide-x-2 divide-dotted divide-gray-200 p-4 pt-20 xl:grid">
-                        <div className="col-span-3"></div>
+                      <div
+                        className="absolute inset-0 z-0 hidden p-4 mt-10 xl:grid"
+                        style={{
+                          gridTemplateColumns: GRID_STOPS,
+                        }}
+                      >
                         {HOURS.map((h, idx) => (
                           <div
-                            className={
-                              idx !== HOURS.length - 1 ? "col-span-2" : ""
-                            }
-                            key={h}
+                            className="border-r-2 border-dotted border-gray-200"
+                            style={{
+                              gridColumnStart: h.start,
+                              gridColumnEnd: h.center,
+                            }}
+                            key={h.title}
                           ></div>
                         ))}
                       </div>
                       {day.schedule.map((t) => (
                         <div
                           key={t.track}
-                          className="program-track relative mx-4 grid grid-cols-[repeat(24,_minmax(0,_1fr))] rounded-2xl py-4 text-xl"
+                          className={`program-track relative mx-4 xl:grid rounded-2xl py-4 text-xl`}
+                          style={{
+                            gridTemplateColumns: GRID_STOPS,
+                          }}
                         >
-                          <div
-                            className="col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-span-3"
-                            style={{ gridRowEnd: t.schedule.length + 1 }}
-                          >
+                          <div className="col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-start-[station] xl:col-end-[h1000] xl:row-end-5">
                             <StationIcon station={t.track} />
                             <h3>
                               {
@@ -173,19 +208,18 @@ export const Program = () => {
                                 key={`${lang.program[tab].$ref}_${presenter?.name}_${idx}`}
                                 style={
                                   {
-                                    "--gridColumnStart": `${(s.start - 10) * 2 + 4}`,
-                                    "--gridColumnEnd": `${(s.end - 10) * 2 + 4}`,
-                                  } as CSSProperties
+                                    gridColumnStart: `h${s.start.replace(":", "")}`,
+                                    gridColumnEnd: `h${s.end.replace(":", "")}`,
+                                  }
                                 }
                               >
                                 {presenter === undefined ||
                                 !presenter.name ? null : (
                                   <>
                                     <Modal {...presenter}>
-                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1  text-center md:py-2 xl:text-left">
+                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-center md:py-2 xl:text-left">
                                         <div className="col-span-full text-base xl:hidden">
-                                          {getTimeString(s.start)} -{" "}
-                                          {getTimeString(s.end)}
+                                          {s.start} - {s.end}
                                         </div>
                                         <h4 className="text-lg font-bold">
                                           {presenter.name}
@@ -212,7 +246,9 @@ export const Program = () => {
             ))}
           </>
         </div>
-        { lang.program.every((day) => day.schedule.length === 0) || <div className="mx-auto my-4 lg:hidden">{dayToggle}</div> }
+        {lang.program.every((day) => day.schedule.length === 0) || (
+          <div className="mx-auto my-4 lg:hidden">{dayToggle}</div>
+        )}
       </div>
     </section>
   );

@@ -4,15 +4,15 @@ import en from "./en.json";
 import shared from "./shared.json";
 
 type ProgramItem = {
-  start: number;
-  end: number;
+  start: string;
+  end: string;
   track: keyof typeof dictionaries.en.programCategory;
   day: string;
 };
 
 type RawProgramItem = {
-  start: number;
-  end: number;
+  start: string;
+  end: string;
   $ref: string;
   day: string;
   noEnd: boolean;

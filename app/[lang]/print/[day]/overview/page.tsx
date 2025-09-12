@@ -1,8 +1,7 @@
 "use client";
-import { use } from 'react';
+import { use } from "react";
 
 import { StationIcon } from "@/app/[lang]/components/StationIcon";
-import { HOURS } from "@/app/[lang]/sections/Program";
 import dictionaries, {
   DayIdsType,
   Presenter,
@@ -13,6 +12,7 @@ import "./print.css";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { GRID_STOPS, HOURS } from "@/app/[lang]/sections/Program";
 type SchedulePropsType = {
   params: Promise<{ lang: SupportedLanguages; day: DayIdsType }>;
 };
@@ -29,34 +29,54 @@ const Schedule = (props: SchedulePropsType) => {
   }
 
   return (
-    <div className="flex h-full flex-col  justify-between px-2 pt-2">
-      <Header category="overview"/>
+    <div className="flex h-full flex-col justify-between px-2 pt-2">
+      <Header category="overview" />
       <div className="watermark2 flex h-full grow flex-col items-center justify-start gap-4 pt-12">
         <div className="relative flex w-full flex-col justify-between pt-4">
-          <div className="grid grid-cols-[repeat(22,_minmax(0,_1fr))_1.5rem] pb-4 text-center">
+          <div
+            className="grid pb-4 text-center"
+            style={{
+              gridTemplateColumns: GRID_STOPS,
+            }}
+          >
             <div className="col-span-"></div>
-            {HOURS.slice(0, -1).map((h) => (
-              <div className="col-span-2" key={h}>
-                {h}:00
+            {HOURS.map((h) => (
+              <div
+                style={{
+                  gridColumnStart: h.start,
+                  gridColumnEnd: h.end,
+                }}
+                key={h.title}
+              >
+                {h.title}
               </div>
             ))}
-            <div className="col-span-2 text-right">
-              {HOURS[HOURS.length - 1]}:00
-            </div>
           </div>
-          <div className="absolute inset-0 z-0 grid grid-cols-[repeat(22,_minmax(0,_1fr))_1.5rem] divide-x-2 divide-dotted divide-gray-200 pt-12">
+          <div
+            className="absolute inset-0 z-0 grid pt-12"
+            style={{
+              gridTemplateColumns: GRID_STOPS,
+            }}
+          >
             <div className="col-span-2"></div>
             {HOURS.map((h, idx) => (
               <div
-                className={idx !== HOURS.length - 1 ? "col-span-2" : ""}
-                key={h}
+                className="border-r-2 border-dotted border-gray-200"
+                style={{
+                  gridColumnStart: h.start,
+                  gridColumnEnd: h.center,
+                }}
+                key={h.title}
               ></div>
             ))}
           </div>
           {day.schedule.map((t) => (
             <div
               key={t.track}
-              className="program-track relative grid grid-cols-[repeat(22,_minmax(0,_1fr))_1.5rem] text-xl"
+              className="program-track relative grid text-xl"
+              style={{
+                gridTemplateColumns: GRID_STOPS,
+              }}
             >
               <div
                 className="col-span-2 row-start-1 flex flex-col items-center justify-center px-2 text-center"
@@ -75,16 +95,14 @@ const Schedule = (props: SchedulePropsType) => {
                 const presenter = lang.presenters[
                   s.$ref as keyof typeof lang.presenters
                 ] as Presenter;
-                return (
+                return presenter === undefined || !presenter.name ? null : (
                   <div
                     className="program-slot-wrapper mx-0.5"
                     key={`${presenter?.name}_${idx}`}
-                    style={
-                      {
-                        "--gridColumnStart": `${(s.start - 10) * 2 + 3}`,
-                        "--gridColumnEnd": `${(s.end - 10) * 2 + 3}`,
-                      } as CSSProperties
-                    }
+                    style={{
+                      gridColumnStart: `h${s.start.replace(":", "")}`,
+                      gridColumnEnd: `h${s.end.replace(":", "")}`,
+                    }}
                   >
                     <div
                       className={`program-slot my-1 overflow-hidden rounded-lg px-3 py-1 text-left ${s.noEnd ? "no-end" : ""}`}

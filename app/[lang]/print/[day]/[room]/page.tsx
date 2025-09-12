@@ -1,18 +1,14 @@
 "use client";
 import { use } from 'react';
 
-import { StationIcon } from "@/app/[lang]/components/StationIcon";
-import { HOURS } from "@/app/[lang]/sections/Program";
 import dictionaries, {
   DayIdsType,
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import { CSSProperties } from "react";
 import "./print.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { getTimeString } from "@/app/utils/time";
 import ExportedImage from "next-image-export-optimizer";
 import { getRoomCategory, RoomCategory } from "./utils";
 
@@ -39,7 +35,7 @@ const Schedule = (props : SchedulePropsType) => {
     )
     .flatMap((s) => s.schedule)[0];
 
-  if (day?.schedule === undefined || day.schedule.length <= 0) {
+  if (day?.schedule === undefined || day.schedule.length <= 0 || schedule === undefined) {
     return null;
   }
 
@@ -67,7 +63,7 @@ const Schedule = (props : SchedulePropsType) => {
               </div>
               <div className="flex flex-col gap-4 py-2 pr-16 pb-16">
                 <div className="text-2xl font-bold">
-                  {getTimeString(s.start)} - {getTimeString(s.end)}
+                  {s.start} - {s.end}
                 </div>
                 <div className="font-normal">
                   <h6 className="text-2xl">{presenter.subheading}</h6>
