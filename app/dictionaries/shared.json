@@ -685,7 +685,7 @@
     {
       "schedule": [
         {
-          "track": "espresso",
+          "track": "espresso_milk",
           "schedule": [
             [
               {
@@ -700,7 +700,12 @@
                 "end": "18:00",
                 "$ref": "five_elephant"
               }
-            ],
+            ]
+          ]
+        },
+        {
+          "track": "espresso",
+          "schedule": [
             [
               {
                 "start": "10:00",
@@ -918,7 +923,7 @@
     {
       "schedule": [
         {
-          "track": "espresso",
+          "track": "espresso_milk",
           "schedule": [
             [
               {
@@ -933,7 +938,12 @@
                 "end": "18:00",
                 "$ref": "five_elephant"
               }
-            ],
+            ]
+          ]
+        },
+        {
+          "track": "espresso",
+          "schedule": [
             [
               {
                 "start": "10:00",
