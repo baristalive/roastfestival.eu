@@ -43,6 +43,7 @@ footer {
 .watermark3::before,
 .watermark4::before,
 .watermark5::before,
+.watermark6::before,
 .watermark-large::before {
   position: absolute;
   inset: 0;
@@ -55,6 +56,7 @@ footer {
 .watermark3,
 .watermark4,
 .watermark5,
+.watermark6,
 .watermark-large {
   position: relative;
   z-index: 0;
@@ -64,6 +66,7 @@ footer {
 .watermark3 > *,
 .watermark4 > *,
 .watermark5 > *,
+.watermark6 > *,
 .watermark-large > * {
   z-index: 1;
 }
@@ -81,6 +84,9 @@ footer {
 }
 .watermark5::before {
   background: url("/watermark5.svg") left 20px no-repeat;
+}
+.watermark6::before {
+  background: url("/watermark6.svg") center center no-repeat;
 }
 .watermark-large::before {
   background:

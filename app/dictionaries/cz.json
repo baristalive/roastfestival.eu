@@ -490,7 +490,8 @@
   "programTile": {
     "title": "Program",
     "loadingText": "Program festivalu pro Vás ještě pražíme.",
-    "content": "Programu se letos urodilo opravdu hodně. Najdete ho na separátní stránce."
+    "content": "Programu se letos urodilo opravdu hodně. Najdete ho na separátní stránce.",
+    "filter": "Filtr"
   },
   "programDisclaimer": "Změna programu vyhrazena",
   "sponsors": {

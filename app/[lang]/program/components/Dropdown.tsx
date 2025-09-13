@@ -49,7 +49,7 @@ const Dropdown = () => {
               aria-expanded="true"
               aria-controls="dropdown-filter"
             >
-              <div className="text-lg">Filter</div>
+              <div className="text-lg">{lang.programTile.filter}</div>
               <div className="lg:flex gap-3 hidden">
               {AllDays.filter((d) => selectedDays.includes(d)).map((d) => (
                 <div

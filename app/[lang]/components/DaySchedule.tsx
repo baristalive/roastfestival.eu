@@ -97,18 +97,16 @@ const DaySchedule = ({
               gridTemplateColumns: gridStops,
             }}
           >
-            {showTrackHeader && (
-              <div className="col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-start-[station] xl:col-end-[h1000] xl:row-end-5">
-                <StationIcon station={t.track} />
-                <h3>
-                  {
-                    lang.programCategory[
-                      t.track as keyof typeof lang.programCategory
-                    ]
-                  }
-                </h3>
-              </div>
-            )}
+            <div className={`col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-start-[station] xl:col-end-[h1000] xl:row-end-5 ${showTrackHeader ? "": "xl:hidden"}`}>
+              <StationIcon station={t.track} />
+              <h3>
+                {
+                  lang.programCategory[
+                    t.track as keyof typeof lang.programCategory
+                  ]
+                }
+              </h3>
+            </div>
             {t.schedule.flat().map((s, idx) => {
               const presenter = lang.presenters[
                 s.$ref as keyof typeof lang.presenters
