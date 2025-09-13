@@ -1,7 +1,7 @@
-import dictionaries, { SupportedLanguages, DayIds, DayIdsType } from "@/app/dictionaries/all";
+import { AllDays } from "@/app/dictionaries/all";
 
 export async function generateStaticParams() {
-  return DayIds.map((d) => ({ day: d }));
+  return AllDays.map((d) => ({ day: d }));
 }
 
 

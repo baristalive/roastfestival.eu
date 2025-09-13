@@ -2,19 +2,17 @@
 import { use } from "react";
 
 import { StationIcon } from "@/app/[lang]/components/StationIcon";
-import { HOURS } from "@/app/[lang]/sections/Program";
 import dictionaries, {
-  DayIdsType,
+  Day,
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
 import "./print.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { getTimeString } from "@/app/utils/time";
 import BeanCounter from "./BeanCounter";
 type SchedulePropsType = {
-  params: Promise<{ lang: SupportedLanguages; day: DayIdsType }>;
+  params: Promise<{ lang: SupportedLanguages; day: Day }>;
 };
 
 const Schedule = (props: SchedulePropsType) => {
@@ -38,7 +36,7 @@ const Schedule = (props: SchedulePropsType) => {
     .filter((s) => ["espresso_milk"].includes(s.track))
     .flatMap((s) => ({ track: s.track, schedule: s.schedule.flat() }))[0];
 
-  if (day?.schedule === undefined || day.schedule.length <= 0) {
+  if (day?.schedule === undefined || day.schedule.length <= 0 || special === undefined) {
     return null;
   }
 
@@ -70,7 +68,7 @@ const Schedule = (props: SchedulePropsType) => {
                   className={`program-slot my-1 overflow-hidden rounded-lg py-2 text-center ${s.noEnd ? "no-end" : ""}`}
                 >
                   <div className="col-span-full text-lg">
-                    {getTimeString(s.start)} - {getTimeString(s.end)}
+                    {s.start} - {s.end}
                   </div>
                   <h4 className="text-2xl font-bold">{presenter.name}</h4>
                   {presenter.subheading && (
@@ -122,7 +120,7 @@ const Schedule = (props: SchedulePropsType) => {
                         className={`program-slot my-1 overflow-hidden rounded-lg px-3 py-2 text-center ${s.noEnd ? "no-end" : ""}`}
                       >
                         <div className="col-span-full text-lg">
-                          {getTimeString(s.start)} - {getTimeString(s.end)}
+                          {s.start} - {s.end}
                         </div>
                         <h4 className="text-2xl font-bold">{presenter.name}</h4>
                         {presenter.subheading && (

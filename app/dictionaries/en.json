@@ -29,14 +29,33 @@
     "formLink": "https://forms.gle/TvVbmfVjBe3hQjPH7"
   },
   "presenters": {
+    "101": {
+      "annotation": "At 101.ROASTERY, we believe that good coffee tastes great anytime, anywhere. That's why we carefully select the best beans, roast them with the utmost precision, and fine-tune every step to ensure that the resulting flavor is always perfect. Whether you enjoy your coffee with us or at home, you can be sure that it's just right. ☕"
+    },
     "baristaroasters": {
-      "annotation": "We are a specialty coffee roaster from the south of Slovakia. We love coffee and we try to choose interesting coffees, whether it is the story or the taste, to give our customers the uniqueness that is hidden in the selection of coffees."
+      "annotation": "We are a small roastery from southern Slovakia. We have been roasting select coffee for 6 years. We strive to find the most interesting coffees, whether in terms of their story or flavor profile, so that they are memorable and provide an experience."
     },
     "black": {
       "annotation": "Specialty coffee is a product we have trusted since our beginnings in 2017. We started with a small espresso bar but our curiosity took us further. Today we are a local roaster from Bratislava with global ambitions. We are building a brand that is worth following for its uncompromising commitment to unique varieties, interesting flavours and innovative roasting style. Because although we are black. we're constantly striving to make every day a little brighter and more special."
     },
     "buchta_b": {},
+    "coffeespot": {
+      "annotation": "We are a select roastery from Babice. Since 2011, we have been selecting and roasting only the best beans for you, so that you can feel that we have put everything into our coffee from the very first sip, and bid it a bittersweet farewell with the last. We enjoy what we do and who makes up our roastery. Thanks to this, we have a really close relationship both here among ourselves and with our suppliers from all over the world. And over the years, we dare say that we have the same relationship with our customers. We roast small batches every day to ensure that our coffee is always fresh. Nothing leaves our doors that we haven't tasted and approved."
+    },
+    "coffeeculture": {
+      "annotation": [
+        "Coffee Culture, an Ostrava-based coffee project run by two enthusiasts of the world of specialty coffee. Our goal is to bring specialty coffee to the widest possible audience.",
+        "We regularly focus on fresh coffee harvests from around the world. The key for us is to recognize the maximum potential of each one and then bring it out to the fullest during roasting.",
+        "Our customers are cafés and enthusiasts who already know their way around specialty coffee, but also cafés that want to improve their output. We help them with both education and technical support. Many of them have found their niche in a professional approach to barista work and the diverse flavors of specialty Arabica coffees."
+      ]
+    },
     "comandante": {},
+    "chcikofein": {
+      "annotation": "We are Miro and Maru – husband and wife, coffee addicts, and a little bit crazy, roasting coffee for like-minded enthusiasts. We roast in a one-kilogram roaster because we like to experiment, and a smaller roaster allows us to do that. It also means we can change our range more often, and from time to time you will find some real limited editions."
+    },
+    "dalia": {
+      "annotation": "A roastery from Silůvky near Brno, we roast excellent select coffee on a modern Coffee Crafters hot-air roaster. Come and taste both classic and experimental coffees at our brew bar."
+    },
     "dimchi": {},
     "dos_mundos": {
       "annotation": [
@@ -56,7 +75,7 @@
       ]
     },
     "gills": {
-      "annotation": "We are coffee enthusiasts from Brno who have been roasting the finest coffee from around the world for you almost every day for over ten years. Every bean that passes under our hands is lovingly selected to ensure that every cup is always an experience for you."
+      "annotation": "We are one of the oldest and friendliest coffee roasters in the center of Brno, run by Marek and Martin. Over the years, we have figured out what we want, and now we are bringing it to you at the festival."
     },
     "hayb": {
       "annotation": "Hi, How Are You Brewing? We’re HAYB - speciality coffee roasters based in Warsaw, Poland. We like fun processings, risky bean experiments, but we also enjoy the stable quality of ordinary daily brews - both the funky and the classic ones. We want those beans to bring some colour to your cup - every day and on special occasions. We roast with the deepest respect for the origin. No compromise on taste. No compromise on quality. This job drives us energetically not only due to caffeine. All done for you to deal with your coffee with ease and joy, having fun with various possibilities that good coffee can give you. Effortlessly!"
@@ -91,11 +110,14 @@
       ]
     },
     "kudyznudy": {},
+    "labanda": {
+      "annotation": "La Banda Caffeina – a caffeine cartel for everyone who isn't afraid of strong flavors and even stronger decisions. Each bean is the result of a secret operation between fire and time, creating a pure taste and aroma that will put you in a trance. Join our gang and drink coffee without compromise forever."
+    },
     "liskafe": {
       "annotation": "We have been operating since 2022 and we are probably one of the smallest roasters in Brno. We work only with a selection of coffees and we are currently most interested in fermented and fruit-infused coffees, which is why you will find several of them in our offer. And since we roast in small volumes and try to change our coffee portfolio often, almost everything is a bit of a limit. If you'd like to taste our coffee, drop by the Mug café, which is at the end of the 12 bus in Brno."
     },
     "lot": {
-      "annotation": "LOT Coffee Roastery, founded by husband and wife team Lukáš and Simona LOT in Bratislava, invites you on a journey of discovering exceptional coffee. Each bean that we carefully select and roast carries a story waiting to be discovered. Our logo, with the distinctive letter \"O\", is a symbol of the origin and authenticity we put into each cup. If you're curious about what a coffee with a soul that reflects care and honesty tastes like, stop in and see us. LOT Roastery is more than just coffee - it's a story you'll want to taste."
+      "annotation": "We are Lot – a coffee roastery from Bratislava, where we believe that great coffee is no accident. Every step, from selecting the beans to roasting, is done with the aim of capturing the true flavor and character of coffee. If you're looking for pink, you'll find us. See you in Brno!"
     },
     "mamacoffee": {
       "annotation": "At mamacoffee, we combine the highest quality coffee with fair and sustainable trading. We focus on working directly with the farmers to deliver not only a great cup of coffee, but also the unique stories behind it. You can buy coffee and much more from our e-shop or from one of the 7 cafes we operate in Prague. Where, in addition to delicious coffee, you can also enjoy pastries from our own artisan bakery."
@@ -133,131 +155,148 @@
     "quickborn": {
       "annotation": "Quickborn Roastery is a specialty coffee roastery that brings a unique experience directly to you, wherever you are. With our stylish horsebox and portable bars, we can create an authentic coffee atmosphere in the most unusual places."
     },
+    "mala_prazarna": {
+      "annotation": "We re a small coffee roastery located in the heard of Ljubljana, Slovenia. Our happy place is next to our local coffee community. Finding the best coffees we can, gives us the biggest high. It will be our first time in Brno and we cant wait ti meet you all "
+    },
     "rast": {},
+    "ohmybean": {
+      "annotation": "We are Oh My Bean, and we have dedicated our lives to coffee. We roast it for our own cafés and dozens of others in Czechia and abroad, we take care of your caffeine supplies at home or at work, and above all, we are here for you so that you don't get lost in the world of coffee. We advise, explain, and show you. We believe that choosing, preparing, and drinking good coffee is not just for the chosen few, but for everyone."
+    },
     "rebelbean": {
       "annotation": "Rebelbean is a roaster of specialty coffee, it also is their own network of cafes and most importantly it's an energy for everyone who is not afraid to be a Rebel and go for their ideas and dreams. We live and do business in Brno and we are happy to be able to supply energy to this festival."
     },
-    "red_fawn": {
-      "annotation": "Red Fawn is a family roastery from Trnava. It was founded by two brothers driven by a passion for fine coffee. The never-ending journey for exceptional taste in a cup is our daily motivation. We do not compromise on quality, uniqueness or our values. We believe that true value is created by the right intention and approach. Our goal is to deliver coffees that are an experience and a source of creativity for our customers."
-    },
     "wildkaffee": {
-      "annotation": "We are the Wildkaffee roastery from the Zugspitze region around Garmisch-Partenkirchen. Since 2010, we have only processed selected types of coffee from all over the world in our roastery. Direct contact with the farmers in the countries of origin is our highest priority, as is the best coffee quality. At the Wildkaffee roastery, we want to revisit the keyword quality in coffee every day, because for us, the best quality also means the best coffee taste. Only the best beans should find their way into our customers' cups."
+      "annotation": "Wildkaffee is a specialty coffee roastery based in Farchant, near Garmisch-Partenkirchen in Germany. Established in 2010 by Stefanie and Leonhard Wild, the company is guided by four core principles: quality, innovation, transparency and sustainability. Each roast is a considered expression of these values, a reflection of thoughtful sourcing, precise technique and a deep respect for the art of coffee. With bases in Austria and Thailand, and a growing presence around the globe, Wildkaffee coffees are enjoyed by discerning partners and coffee lovers worldwide."
     },
-    "ws_latteart": {
-      "name": "Espresso and Latteart",
-      "annotation": "Learn how to properly prepare the perfect espresso and make latte art like a professionals in a café. You will be guided through the workshop by barista Klárka Stehlíková, whom you can meet in Brno's Monogram café, among other places."
+    "red_fawn": {
+      "annotation": "We are Red Fawn from Trnava – two brothers who love specialty coffee. We roast sweet and juicy coffees that don't taste like a compromise. Fresh harvests, pure taste full of fruit and character. Come and taste the experience, not just caffeine."
     },
-    "ws_filters": {
-      "name": "Home preparation of filter coffee",
-      "annotation": "Let's take a look together at the ins and outs of home brewing filter coffee, specifically the V60 and the aeropress. We'll show that a clean balanced filter isn't just about a big investment in the best equipment, it's about water, a recipe and a few basic rules. And of course about passion!  We'll also talk about varieties and coffee processing and how it affects the flavor profile. We'll also brush up a bit on high school chemistry and touch on extraction. You will be guided through the course by Rozálie Nováková, an actively competing barista who has been working in coffee for over eight years. Rozálie has worked in a number of companies, including Mazelab coffee and Kofio."
+    "trafficcoffee": {
+      "annotation": "We are Traffic Coffee – a roastery from Olomouc, where we create select coffee with character. We roast traditional beans as well as bold experiments such as barrel-aged coffee from aromatic alcohol barrels. Both coffee conservatives and adventurers will find something to their liking here."
     },
-    "ws_cupping_weird": {
-      "name": "Cupping strangely processed coffees",
-      "annotation": "Is it still coffee? A question we often ask ourselves when tasting all kinds of fermented or infused coffees. Some say it is the future of coffee and others reject such processing. Whatever the case, come with us to taste a unique selection of these incredible beans."
+    "tripple_five": {
+      "annotation": "We are a specialty coffee roaster in Bratislava. We carefully select the highest quality varieties from different corners of the world. Through careful roasting, we strive to bring out the full flavor that each bean has to offer."
     },
-    "ws_cupping_beginers": {
-      "name": "Fundamentals of cupping",
-      "annotation": "Cupping is the easiest way to taste and compare multiple coffees. This tasting method contains a number of rules and procedures so that every tasting is the same and we can compare the different coffees very easily. In this workshop we will focus on these rules and procedures so that you can easily prepare cupping at home and get into the secrets and benefits of this method."
+    "the_roses": {
+      "annotation": "A family business run by brothers Vojtěch and Matyáš Růžička together with their father Oldřich. Since 2017, they have been focusing on specialty coffee with an emphasis on quality, fair trade, and sustainability. We purchase coffee directly from producers around the world, operate cafés, a training center for baristas, and a roastery."
+    },
+    "ws_home": {
+      "name": "How NOT to make a filter",
+      "annotation": "Taste and see how poor filter preparation affects the flavor. We will answer the question of why we prepare drip coffee within certain parameters and put into context the variables that affect the flavor of coffee, whether positively or negatively."
+    },
+    "ws_sensory": {
+      "name": "Sensory training - supercharge your senses",
+      "annotation": "We see with our eyes and taste with our whole body. This workshop will focus on sensory perception and teach you how to perceive taste, smell, and touch more accurately—and how to connect your senses into a single whole. You will discover that even ordinary water can have dozens of flavor nuances and that sensory perception is not the preserve of sommeliers or baristas, but of each and every one of us. Through practical training, you will open the door to a deeper understanding not only of coffee, but also of food, wine, and life itself."
+    },
+    "ws_yerba": {
+      "name": "After this Yerba Maté workshop, you'll stop drinking coffee",
+      "annotation": "Discover why Yerba Maté is conquering the world as a healthier alternative to coffee. This workshop will reveal why Yerba Maté surpasses coffee in terms of energy, concentration, and lifestyle. Come and taste the change directly from the founder of the largest Yerba Maté brand in Czechia and Slovakia. You will learn how to prepare Yerba and how to benefit from it in the long term."
+    },
+    "ws_water": {
+      "name": "Water – more important than coffee itself",
+      "annotation": "Let's take a closer look at water. Although it is not widely known, water is more important than anything else when it comes to making coffee. Have you ever wondered why the filter coffee tasted great at the café, but the same beans suddenly didn't taste as good at home? Here's the answer."
+    },
+    "ws_whisky": {
+      "name": "The story of whiskey",
+      "annotation": "The story of whisky's journey from barrel to glass. The workshop will also include whisky tasting by Tomáš Dyntar and pairing with specialty coffee."
+    },
+    "ws_cupping_penerini": {
+      "annotation": "Come and taste coffee from the Peneriny roastery. Cupping is lead by the Peneriny roastery staff."
+    },
+    "ws_cupping_traffic": {
+      "annotation": "Come and taste coffee from the Traffic Coffee roastery. Cupping is lead by the Traffic Coffee roastery staff."
+    },
+    "ws_roasting": {
+      "name": "Roast your own beans",
+      "annotation": "Every roaster has, in addition to their beloved large roaster, a small test roaster. This is used to roast samples from importers and farmers. During the workshop, you will learn how to work with such a small roaster. You will receive a few dozen grams of coffee of your choice, which you can roast and take home with you."
+    },
+    "ws_esko": {
+      "name": "Your own espresso",
+      "annotation": "In two consecutive workshops (Espresso and Latte Art), we will look at the basics of preparing specialty coffee. How to set up the grinder correctly, why we use scales, and how to prepare milk for latte art correctly."
+    },
+    "ws_qb": {
+      "name": "Cupping uncensored",
+      "annotation": "Discover how coffee tastes when you remove all filters. At the workshop, you will learn the basic rules of cupping—a professional method of coffee tasting that reveals its aromas, flavors, and flaws. Together, we will go through the entire process step by step. At the end, you will taste unusual coffees—Arabica, Canephora, and rare Liberica."
+    },
+    "ws_choco": {
+      "name": "Discover the beauty and diversity of chocolate",
+      "annotation": "Did you know that high-quality chocolate can be very similar to high-quality coffee? In this workshop, you will learn about the history of chocolate, how it is made, and the different types available. All this will be accompanied by a guided tasting."
+    },
+    "ws_kaple": {
+      "name": "Tasting and wine sensory analysis",
+      "annotation": "Something like cupping, but in the world of wine. Join us as we take a look at the forms of tasting and identifying wine defects."
+    },
+    "ws_hradsky": {
+      "name": "Dripper Showdown",
+      "annotation": "At a time when a new dripper for preparing filtered coffee is created every week, it is not easy to navigate the range on offer. In this workshop, you will prepare coffee together using five different drippers and have the opportunity to compare how each one affects the taste, aroma, and overall character of the cup. You will see for yourself how small differences between drippers can change the resulting coffee experience, and you may discover which dripper is right for you."
+    },
+    "ws_latte": {
+      "name": "Your own cappuccino",
+      "annotation": "In two consecutive workshops (Espresso and Latte Art), we will look at the basics of preparing specialty coffee. How to set up the grinder correctly, why we use scales, and how to prepare milk for latte art correctly."
+    },
+    "ws_cupping_chicas": {
+      "annotation": "Come and taste coffee from the Chicas Industry coffee importers. Cupping is lead by the Chicas Industry staff."
     },
     "ws_cupping_lot": {
-      "annotation": "LOT Coffee Roastery, founded by husband and wife team Lukáš and Simona LOT in Bratislava, invites you on a journey of discovering exceptional coffee. Each bean that we carefully select and roast carries a story waiting to be discovered. Our logo, with the distinctive letter \"O\", is a symbol of the origin and authenticity we put into each cup. If you're curious about what a coffee with a soul that reflects care and honesty tastes like, stop in and see us. LOT Roastery is more than just coffee - it's a story you'll want to taste."
-    },
-    "ws_wine_coffee": {
-      "name": "Authentic Wine and specialty coffee, sensory and pairing",
-      "annotation": "Wine and coffee are closer than you'd expect. Have you ever noticed that the taste descriptions on wine and coffee labels are suspiciously similar? Let's put a few authentic wines from the Chapel Wine Bar side by side with specialty coffee."
-    },
-    "ws_wine_cheese": {
-      "name": "Coffee and cheese. Wine pairings, only without the wine ",
-      "annotation": "Pairing wine with various foods, cured meats or, in our case, cheeses, is inherent to wine. The magic lies in the connection of flavours that can usually enhance or destroy the experience of both delicacies. What happens when we take the \"rules\" of wine pairing and replace wine with coffee? Jiří Vyzourek, owner of the Brno wine bar Kaple and Miroslav Meňhert, roaster and owner of the family micro-roastery Chci coffein, have the answer to this question for us."
+      "annotation": "Come and taste coffee from the LOT roastery. Cupping is lead by the LOT roastery staff."
     },
     "ws_cupping_punkt": {
-      "annotation": [
-        "We were born as a Punkt café. in the first specialty coffee wave, like a little Berlin on Bayerova Street in Brno. With the arrival of the new branch on Štefánikova Street, we gradually started to build a roastery. At both spots you can taste our daily production, which we regularly supplement with funky limits in our offer. Slowly but surely, we are succeeding in getting our coffee beyond our premises into homes and businesses",
-        "We'll see you at the festival on Saturday at the espresso bar and Sunday at the brew bar. We look forward to seeing you there."
-      ]
-    },
-    "ws_martin": {
-      "name": "10+ preparations of one coffee",
-      "annotation": "Try with Martin Dutkiewič, owner of the Brno café and roastery Punkt. espressobar, more than 10 preparations of one coffee on which he will compare how the preparation affects the resulting taste."
-    },
-    "ws_roast": {
-      "name": "Roast your own coffee",
-      "annotation": "\"Roast\" is the name of this festival and in a way its definition. So it goes without saying that we want to introduce this extremely complex discipline to our visitors. You will be given a few dozen grams of coffee of your choice, which you can roast yourself under the guidance of our skilled roasters."
-    },
-    "talk_what_is": {
-      "name": "What is specialty coffee?",
-      "annotation": "What is specialty coffee and why we are so fascinated by it. Together with Brno roasters and baristas Josef and Petr, we will look at the coffee processing chain and the various aspects that differentiate specialty coffee from the commodity beans sold in supermarkets and non-progressive cafes. We'll explore what coffee waves mean, what a quality coffee shop looks like and what we need to make this drink at home."
+      "annotation": "Come and taste coffee from the Punkt roastery. Cupping is lead by the Punkt roastery staff."
     },
     "talk_biology": {
-      "name": "The human body and caffeine",
-      "annotation": "They say that too much of anything is bad for you, and unfortunately this is also true of our beloved drink. The talk by medical doctor Barbara Šťastná will focus on how the human body reacts to caffeine, how it processes it, what it provides and where it takes it away. Can caffeine kill us? And why does coffee have that proverbial stimulating effect? And what is this effect? These and other questions will be answered in this talk."
+      "name": "Coffee for everyone (even children?)!",
+      "annotation": "We all love coffee, but what does caffeine do to our bodies? And what happens when caffeine is consumed by children? Pediatrician Dr. Barbara Šťastná will talk about how much caffeine adults and children consume today and what it does to us.",
+      "bio": "Medical doctor Barbara Šťastná, a pediatrician working for Jihomoravské dětské léčebny (South Moravian children's sanatories). Among other things, Barbara is a trainer at the Loono organization, a fencer and archer at a summer camp for children, and an amateur tailor."
     },
-    "talk_neubauer": {
-      "name": "Opinion poll analysis: What annoys your barista and vice versa",
-      "annotation": "Štěpán Neubauer knows the world of professional baristas like the back of his hand. Coffee, like any proper world discipline, has its spectators, ordinary workers, enthusiasts, snobs and professional wrestlers. Their worlds and perceptions of coffee intermingle and sometimes collide. Mostly these worlds meet in cafes, separated by the counter. On the one side, a customer craving something he calls coffee and on the other, a barista who knows that coffee can take so many different forms. Come and see how huge the differences between these two worlds can be. And maybe, just maybe, there will be piccolo."
+    "talk_green": {
+      "name": "Seven burning questions about green coffee",
+      "annotation": "Importer Tereza from Chicas Industry covers seven of the hottest topics in the world of green coffee—and devotes exactly seven minutes to each one. From the difference between fermentation and infusion, to the myth of the \"poor farmer\", to the question of whether we are asking too much of coffee. Fast-paced, sharp points, and seven different perspectives that may change your view of the coffee world.",
+      "bio": "I am a mom, entrepreneur, lover of foreign cultures and languages, and formerly a frequent traveler. I have been involved with coffee since 2011, and with specialty coffee since 2014. Since 2019, together with my colleague Karolína, I have been developing the Chicas Industry project focused on importing green coffee."
     },
-    "talk_chicas": {
-      "name": "To India for coffee, elephants and tigers",
-      "annotation": "Let's 1hear how we discovered delicious beans in India, a country that is not exactly the mecca of fine coffee. And not only that, we'll tell you how we met amazing people with a huge passion for protecting nature and experienced first-hand their happy coexistence with wild animals. Let's talk about what it's like to get coffee from a plantation that's open to free-roaming elephants, tigers and monkeys."
+    "talk_humberto": {
+      "name": "Celebrating Coffee’s Transformative Power",
+      "annotation": "We will discuss the impact of coffee and how it can transform people's lives across the entire supply chain. This includes its effects at origin, as well as the roles of importers, roasters, baristas, and guests.",
+      "bio": "Humberto Ribes, a Spanish barista living in Berlin. Currently Head of Coffee at the Five Elephant roastery in Berlin. Among other things, Humberto is a talented photographer. "
     },
-    "talk_hon": {
-      "name": "Coffee from a technician's point of view",
-      "annotation": "Anyone who has ever opened a café in Brno or South Moravia must know Martin Hon. The owner of the cafe \"Kafe na písku\" but mainly a great technician who can fix almost anything. In an open discussion, we will focus on the technology of professional and home coffee machines and other equipment necessary to prepare a perfect cup of coffee."
+    "talk_ks": {
+      "name": "Coffee journalism on the rise",
+      "subheading": "The editorial team of Káva spojuje",
+      "annotation": "How do you write about coffee and gastronomy in a way that readers will enjoy? The editors of Káva spojuje magazine will openly reveal everything that goes on \"behind the keyboard\" – from finding topics to behind-the-scenes interviews to what never makes it past the editors' scrutiny. Come take a peek into the editorial kitchen and ask anything you want to know about journalism.",
+      "bio": "We believe that \"coffee connects\". We are an online editorial team that aims to become a trusted voice connecting the coffee community across the Czech Republic."
     },
-    "talk_hejlik": {
-      "name": "Gastro in the regions",
-      "annotation": "Theatre and film actor, creator of Lukáš Hejlík's Gastromap project and many others. One of the most significant figures of modern Czech gastronomy from the customer's point of view. In an open discussion with Lukáš we will focus on Regional gastronomy in Brno and South Moravia. "
+    "talk_helena": {
+      "name": "Coffee quality from farm to cup",
+      "annotation": "What goes into turning a coffee bean into a aromatic cup on your table? Helena Oliviero from Italy's SCA will guide you through the journey of coffee, from cultivation on plantations, through harvesting and processing, to roasting and preparation. You will learn how each step affects the final taste and why quality is not created in the cup, but long before that.",
+      "bio": "Helena Oliviero is a multiple winner of coffee competitions, a Q-Grader, and an experienced trainer who discovered her passion for coffee while working part-time in Tuscany. After years spent in various European countries, she has become a respected expert and inspiration for baristas and coffee lovers around the world. In her work, she also addresses the issue of gender inequality in the coffee industry and encourages women to have the courage to change stereotypes."
     },
-    "talk_kafe_start": {
-      "name": "Economic aspects of opening a coffee shop.",
-      "annotation": "Almost all of us dream of opening our own business where everything will be better and more to our liking. Both Daniel and Josef have owned cafes for over 10 years and have helped many new cafe owners. We're going to take a look at this issue from an economic and legal point of view. We'll go over what to look for, possible pitfalls, and various tips and tricks that can help us on our way to building our own coffee shop."
+    "talk_alice": {
+      "name": "Bean There, Roast That, Roasting through play, myths, and alchemy",
+      "annotation": "Just pour in the green beans, turn on the roaster, and you're a roaster, right? Basically, yes. In this lecture, we will show that coffee roasting is not just about \"feeling\", but about consistency, data, and understanding the processes. We will break down the basics and add tips on how to approach roasting with perspective and ease.",
+      "bio": "A coffee professional with more than 15 years of experience in gastronomy. Alice comes from Slovakia but has also lived in Greece and Germany for some time. She is currently the head roaster at the Rebelbean roastery in Brno. She also coached two-time Czech Barista Championship winner Denis Kramář."
     },
-    "party_1": {
-      "annotation": "Two diametrically different people of the same zodiac sign, with the same sense of humour and the same therapist. The endless conflict between steak and tofu uncompromisingly and clearly divides the roles in their musical universe. The graceful fairy's profound lyrics correspond strikingly with the imaginative guitar line of the charismatic daredevil, resulting in an original work of an unidentifiable, yet highly appealing genre."
+    "talk_tanzanie": {
+      "name": "Coffee in Africa - how to do business in Africa",
+      "annotation": "He escaped from computers, spreadsheets, and figures straight to Africa. Ladislav Kolář from Jindřichův Hradec turned his life upside down and went from being a successful financier and co-owner of a brokerage company to a coffee grower. In Tanzania, he manages his own coffee plantation covering almost 30 hectares, provides jobs for local people, and also supports schools.",
+      "bio": "The Kolář family from Kolda Coffee. Owners of a 28-hectare plantation in the Mbeya region of Tanzania, they planted their first tree in 2012 and harvested their first coffee beans in 2016. Today, they have 86,000 trees on their farm, support sustainable agriculture, keep bees, build water retention areas, and work with the local community."
     },
-    "party_2": {
-      "annotation": "The musical ensemble Vážky is a group consisting of Jolana Svobodová (cajon), Radek Mattuš (guitar), Jan Chromý (guitar) and Vojtěch Kuchar (melodica), last but not least.... Its birth dates back to 2023, when they sat and smoked beer in a picturesque Brno pub (where they still play for fun). The story would be unnecessarily long and not very comprehensive, so I'll just write that they play original songs, but there aren't that many of them, that's why they sometimes reach into the drawer of so-called \"covers.\""
+    "talk_madalin": {
+      "name": "About competitions",
+      "annotation": "About the course and participation in Austrian coffee competitions and the WBC in Milan. Just a week before the Roast! Festival, the Austria Coffee Championship takes place. How did the competition go? We will find out from the Austrian Barista of the Year 2020, Madalin Truica.",
+      "bio": "Madalin Truica, a coffee professional working as Head Barista at The Pelican Coffee Company in Vienna. He was born in Romania but grew up in Germany and has been involved in the coffee community for at least 10 years. In 2020, he won the Austria Barista Championship."
     },
-    "party_3": {
-      "annotation": "Love guitar songs in Czech with a hint of funk-rock will move you, but also put you in a weightless state. Aldente is the musical project of Matyáš Svozil, a 26-year-old singer, guitarist and producer from Brno. In the band he performs together with guitarist Ondra Kejval, bassist Dominik Martinec and drummer Mark Herman."
+    "talk_tripplesenzory": {
+      "name": "Sensory battle – what do wine, beer, and coffee have in common?",
+      "annotation": "What do good wine, decent beer, and specialty coffee have in common? And how do their worlds differ? A brewer, winemaker, and roaster will share their experiences with the sensory properties of these three traditional beverages and show that the world of flavors is much more diverse than you might think.",
+      "bio": "The panel discussion will feature Michaela Neméthová, \"beer doctor\", certified BJCP judge, and brewer. Also participating will be Jiří Vyzourek, whose great passion is natural wines, which he deals with professionally at the Kaple wine bar in Brno. Last but not least, they will be joined by Jan Židů, roaster and owner of the Au Lait espresso bar in Brno, who will take care of \"the coffee part\"."
     },
-    "party_4": {
-      "annotation": "Association of two Brno artists who combine songs with electronic music"
+    "talk_influencers": {
+      "name": "Like, share, drink – gastroinfluencing on social media",
+      "annotation": "Instagram, TikTok, YouTube – where does food taste best today? Three different food influencers reveal how food and drink are presented on social media, what is just a well-arranged illusion, and what is genuine passion. A discussion about authenticity and creative content.",
+      "bio": "Well-known Brno Instagram reporter Pavel Černý will meet with his \"colleagues in the field\", coffee YouTuber and podcaster Tomáš Taussig and gastro-freelancer and social media manager Petra Vlková."
     },
-    "party_competition": {
-      "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Are you excited?",
-      "actionIcons": {
-        "signup": {
-          "text": "Sign up"
-        },
-        "rules": {
-          "text": "Rules"
-        }
-      }
-    },
-    "party_after": {
-      "annotation": "DJ Dubins usually performs as part of the duo Desky&Tape, who try to pass on their love of analogue technology and quality music. You can most often find them blasting reggae or punk, but they're not afraid of indie or folk either. This time Dubins will play alone and on two turntables he will alternate records, which with their old-school sound will fit perfectly into the space of the Brno Penitentiary."
-    },
-    "party_finale": {
-      "annotation": "It's out, we'll be competing for some great prizes on Sunday 22 September. Since latte art battles are already abundant in Brno, we decided to give space to taste, and the taste of coffee from Fifty Beans An hour beforehand you will get a coffee and your task will be to make it better than your opponents. The only condition is to use a Comandante grinder, either your own or one borrowed at the competition. It's that simple. Are you excited?"
-    },
-    "kavickar_dzezva": {
-      "name": "Turkish Cezve",
-      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
-    },
-    "kavickar_lamplota": {
-      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
-    },
-    "kavickar_belgian": {
-      "name": "Belgian Coffee Maker",
-      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
-    },
-    "kavickar_frenchpress": {
-      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
-    },
-    "kavickar_wien": {
-      "name": "Vienna Coffee Maker",
-      "annotation": "An artisan roaster and coffee enthusiast who has been involved in coffee for over 7 years. He tries to show people through his work that coffee has been varied, interesting and tasty in the past. We will try Turkish Cezve (one of the oldest coffee preparations from Arabic countries), Lamplota (Iconic coffee maker from Czechoslovakia), Belgian Coffee Maker (one of the most interesting coffee preparations), French Press and Vienna Coffee Maker (Austrian classic from the 19th century, famous in the USA)."
+    "party_soutez": {
+      "name": "Competition in coffee brewing",
+      "annotation": "Details are brewing as we speak. Stay tuned."
     }
   },
   "promoted": {
@@ -392,12 +431,17 @@
     "title": "Organizers"
   },
   "place": "Káznice, Brno",
+  "filterCategories": {
+    "day": "Day"
+  },
   "programDays": {
     "day1": {
-      "name": "Saturday"
+      "name": "Saturday",
+      "shortName": "Sat"
     },
     "day2": {
-      "name": "Sunday"
+      "name": "Sunday",
+      "shortName": "Sun"
     }
   },
   "programCategory": {
@@ -410,8 +454,14 @@
     "overview": "Overview",
     "robotarna": "Roasters"
   },
-  "programTitle": "Schedule",
-  "programLoadingText": "We are still roasting the festival program for you.",
+  "programTile": {
+    "title": "Schedule",
+    "loadingText": "We are still roasting the festival program for you.",
+    "content": "The schedule is really extensive this year. You can find it on a separate page.",
+    "filter": "Filter"
+  },
+  "programTitle": "",
+  "programLoadingText": "",
   "programDisclaimer": "This schedule is subject to change",
   "sponsors": {
     "cta": "Contact us"

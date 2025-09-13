@@ -111,7 +111,7 @@ export const Header = () => {
               Info
             </nav>
           </a>
-          <a href="#program" className="nav">
+          <a href={`/${params.lang}/program`} className="nav">
             <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
               Program
             </nav>

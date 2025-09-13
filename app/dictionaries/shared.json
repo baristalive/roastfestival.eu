@@ -359,33 +359,53 @@
       "name": "Flatwhite Machines",
       "logo": "flatwhite_machines.png"
     },
-    "ws_latteart": {
-      "logo": "klara.jpg",
-      "subheading": "Workshop: Klárka Stehlíková",
-      "modalProps": {
-        "className": ""
-      }
+    "ws_home": {
+      "subheading": "Tadeáš\u00a0Kacer"
     },
-    "ws_filters": {
-      "subheading": "Workshop: Rozálie Nováková",
-      "logo": "rozi.jpg",
-      "modalProps": {
-        "className": ""
-      }
+    "ws_sensory": {
+      "subheading": "Patrik\u00a0Sláma"
     },
-    "ws_cupping_weird": {
-      "logo": "hulk.jpg",
-      "subheading": "Petr Chaloupek",
-      "modalProps": {
-        "className": ""
-      }
+    "ws_yerba": {
+      "subheading": "Adrian\u00a0Drozdek"
     },
-    "ws_cupping_beginers": {
-      "subheading": "Rozálie Nováková",
-      "logo": "rozi.jpg",
-      "modalProps": {
-        "className": ""
-      }
+    "ws_water": {
+      "subheading": "Rozálie\u00a0Nováková"
+    },
+    "ws_whisky": {
+      "subheading": "Tomáš\u00a0Dyntar"
+    },
+    "ws_cupping_penerini": {
+      "name": "Cupping",
+      "subheading": "Penerini"
+    },
+    "ws_cupping_traffic": {
+      "name": "Cupping",
+      "subheading": "Traffic Coffee"
+    },
+    "ws_roasting": {
+      "subheading": "Martin\u00a0Dutkiewic, Alfréd\u00a0Hawle"
+    },
+    "ws_esko": {
+      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
+    },
+    "ws_qb": {
+      "subheading": "Miroslav\u00a0Dubský"
+    },
+    "ws_choco": {
+      "subheading": "Veronika\u00a0Pospíšilová, Marek\u00a0Pospíšil"
+    },
+    "ws_kaple": {
+      "subheading": "Jiří\u00a0Vyzourek"
+    },
+    "ws_hradsky": {
+      "subheading": "David\u00a0Hradský"
+    },
+    "ws_latte": {
+      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
+    },
+    "ws_cupping_chicas": {
+      "name": "Cupping",
+      "subheading": "Chicas Industry"
     },
     "ws_cupping_lot": {
       "name": "Cupping",
@@ -397,26 +417,6 @@
       "instagram": "https://www.instagram.com/lot.roastery",
       "modalProps": {
         "showSubheading": false
-      }
-    },
-    "ws_wine_coffee": {
-      "logo": "kaple.png",
-      "subheading": "Kaple",
-      "web": "https://kaplebrno.cz/",
-      "facebook": "https://www.facebook.com/KapleBrno",
-      "instagram": "https://www.instagram.com/kaplebrno",
-      "modalProps": {
-        "className": ""
-      }
-    },
-    "ws_wine_cheese": {
-      "logo": "kaple.png",
-      "subheading": "Kaple a Chcikofein",
-      "web": "https://kaplebrno.cz/",
-      "facebook": "https://www.facebook.com/KapleBrno",
-      "instagram": "https://www.instagram.com/kaplebrno",
-      "modalProps": {
-        "className": ""
       }
     },
     "ws_cupping_punkt": {
@@ -431,31 +431,6 @@
         "showSubheading": false
       }
     },
-    "ws_martin": {
-      "logo": "martin.jpg",
-      "subheading": "Martin Dutkiewič",
-      "modalProps": {
-        "className": ""
-      }
-    },
-    "ws_roast": {
-      "instagram": "https://www.instagram.com/ig_coffee_roasters/",
-      "country": "cz",
-      "logo": "roasting.jpg",
-      "subheading": "IG Coffee Roasters",
-      "primaryLink": "instagram",
-      "web": "https://www.prazirnaignac.cz/",
-      "modalProps": {
-        "className": ""
-      }
-    },
-    "talk_what_is": {
-      "logo": "josef_hulk.jpg",
-      "subheading": "Petr\u00a0Chalupek, Josef\u00a0Kučera",
-      "modalProps": {
-        "className": ""
-      }
-    },
     "talk_biology": {
       "logo": "lor.jpg",
       "subheading": "MUDr.\u00a0Barbara\u00a0Šťastná",
@@ -463,161 +438,31 @@
         "className": ""
       }
     },
-    "talk_neubauer": {
-      "subheading": "Štěpán\u00a0Neubauer",
-      "logo": "neubauer.png",
-      "linkedin": "https://www.linkedin.com/in/stepan-neubauer",
-      "twitter": "https://twitter.com/stepanneubauer",
-      "modalProps": {
-        "className": ""
-      }
+    "talk_green": {
+      "subheading": "Tereza\u00a0Prejdová"
     },
-    "talk_chicas": {
-      "logo": "chicas.png",
-      "web": "https://chicasindustry.com/",
-      "facebook": "https://www.facebook.com/chicasindustry",
-      "instagram": "https://www.instagram.com/chicas_industry/",
-      "subheading": "Chicas\u00a0Industry",
-      "modalProps": {
-        "className": "p-10"
-      }
+    "talk_humberto": {
+      "subheading": "Humberto\u00a0Ribes"
     },
-    "talk_hon": {
-      "subheading": "Martin\u00a0Hon",
-      "logo": "hon.jpg",
-      "facebook": "https://www.facebook.com/baristaservis",
-      "instagram": "https://www.instagram.com/baristaservis/",
-      "web": "https://www.baristaservis.cz/",
-      "modalProps": {
-        "className": ""
-      }
+    "talk_ks": {
     },
-    "talk_hejlik": {
-      "logo": "hejlik.jpg",
-      "web": "https://gastromapa.hejlik.cz/",
-      "instagram": "https://www.instagram.com/lukashejlik",
-      "subheading": "Lukáš\u00a0Hejlík",
-      "modalProps": {
-        "className": ""
-      }
+    "talk_helena": {
+      "subheading": "Helena\u00a0Oliviero (SCA Italy)"
     },
-    "talk_kafe_start": {
-      "subheading": "Daniel\u00a0Vincens, Josef\u00a0Husár",
-      "instagram": "https://www.instagram.com/ig_coffee_roasters/",
-      "logo": "ig.png",
-      "primaryLink": "instagram",
-      "web": "https://www.prazirnaignac.cz/",
-      "modalProps": {
-        "className": "p-8"
-      }
+    "talk_alice": {
+      "subheading": "Alica\u00a0Banszka"
     },
-    "party_1": {
-      "name": "Lenka v Davu",
-      "youtube": "https://www.youtube.com/@LENKAVDAVU",
-      "instagram": "https://www.instagram.com/lenkavdavu/",
-      "facebook": "https://www.facebook.com/lenkavdavu",
-      "logo": "lenka_v_davu.jpg",
-      "modalProps": {
-        "className": ""
-      }
+    "talk_tanzanie": {
+      "subheading": "Ladislav\u00a0Kolář, Helena\u00a0Kolářovová"
     },
-    "party_2": {
-      "name": "Vážky",
-      "logo": "vazky.jpg",
-      "modalProps": {
-        "className": ""
-      }
+    "talk_madalin": {
+      "subheading": "Madalin\u00a0Truica"
     },
-    "party_3": {
-      "name": "Aldente",
-      "youtube": "https://www.youtube.com/channel/UCCUS00ikBYL9WihvBBGNm-Q",
-      "instagram": "https://www.instagram.com/aldente902",
-      "facebook": "https://www.facebook.com/kapela.aldente",
-      "logo": "aldente.jpg",
-      "modalProps": {
-        "className": ""
-      }
+    "talk_tripplesenzory": {
+      "subheading": "Jiří\u00a0Vyzourek, Michaela\u00a0Neméthová, Honza\u00a0Židů"
     },
-    "party_4": {
-      "name": "TOPOLaHOLIČ",
-      "youtube": "https://www.youtube.com/@TOPOLaHOLIC",
-      "logo": "topol_a_holic.jpg",
-      "modalProps": {
-        "className": ""
-      }
-    },
-    "party_competition": {
-      "logo": "brew_battle.jpg",
-      "name": "Brew Battle",
-      "instagram": "https://www.instagram.com/barista_battle_brno/",
-      "actionIcons": {
-        "signup": {
-          "href": "https://forms.gle/Q8RD72BpJoQZmT78A"
-        },
-        "rules": {
-          "href": "https://drive.google.com/file/d/1JPGUBdBMt02SnJDH8vSDC3_SdcovqXmJ/view"
-        }
-      },
-      "modalProps": {
-        "showName": false,
-        "className": ""
-      }
-    },
-    "party_after": {
-      "logo": "desky_pasky.jpg",
-      "name": "Desky a Pásky (DJ)",
-      "modalProps": {
-        "className": ""
-      }
-    },
-    "party_finale": {
-      "name": "Brew Battle Finale",
-      "logo": "brew_battle.jpg",
-      "instagram": "https://www.instagram.com/barista_battle_brno/",
-      "actionIcons": {
-        "signup": {
-          "href": "https://forms.gle/Q8RD72BpJoQZmT78A"
-        },
-        "rules": {
-          "href": "https://drive.google.com/file/d/1JPGUBdBMt02SnJDH8vSDC3_SdcovqXmJ/view"
-        }
-      },
-      "modalProps": {
-        "showName": false,
-        "className": ""
-      }
-    },
-    "kavickar_dzezva": {
-      "subheading": "Pravý\u00a0Kávičkár",
-      "logo": "kavickar.jpg",
-      "instagram": "www.instagram.com/pravy.kavickar",
-      "web": "https://kavakavickar.blogspot.com/"
-    },
-    "kavickar_lamplota": {
-      "name": "Lamplota",
-      "subheading": "Pravý\u00a0Kávičkár",
-      "logo": "kavickar.jpg",
-      "instagram": "www.instagram.com/pravy.kavickar",
-      "web": "https://kavakavickar.blogspot.com/"
-    },
-    "kavickar_belgian": {
-      "subheading": "Pravý\u00a0Kávičkár",
-      "logo": "kavickar.jpg",
-      "instagram": "www.instagram.com/pravy.kavickar",
-      "web": "https://kavakavickar.blogspot.com/"
-    },
-    "kavickar_frenchpress": {
-      "name": "French press",
-      "subheading": "Pravý\u00a0Kávičkár",
-      "logo": "kavickar.jpg",
-      "instagram": "www.instagram.com/pravy.kavickar",
-      "web": "https://kavakavickar.blogspot.com/"
-    },
-    "kavickar_wien": {
-      "subheading": "Pravý\u00a0Kávičkár",
-      "logo": "kavickar.jpg",
-      "instagram": "www.instagram.com/pravy.kavickar",
-      "web": "https://kavakavickar.blogspot.com/"
+    "talk_influencers": {
+      "subheading": "Pavel\u00a0Černý, Tomáš\u00a0Taussig, Petra\u00a0Vlková"
     },
     "engoba": {
       "country": "cz",
@@ -658,7 +503,7 @@
       "primaryLink": "web",
       "web": "https://kavaspojuje.cz/"
     },
-    "triplefive": {
+    "tripple_five": {
       "country": "sk",
       "name": "Triple five roastery",
       "logo": "triplefive.png",
@@ -710,28 +555,101 @@
       "facebook": "https://www.facebook.com/chcikofein"
     },
     "mala_prazarna": {
-      "name": "MALA PRAŽARNA",
+      "name": "Mala Pražarna",
       "country": "si",
       "logo": "mala_prazarna.png",
       "primaryLink": "instagram",
       "web": "https://malaprazarna.si ",
       "instagram": "https://www.instagram.com/malaprazarna"
-    }
+    },
+    "five_elephant": {
+      "name": "Five Elephant.",
+      "country": "de",
+      "web": "https://www.fiveelephant.com/",
+      "primaryLink": "web",
+      "instagram": "https://www.instagram.com/fiveelephant/",
+      "logo": "fiveelephant.png"
+    },
+    "ohmybean": {
+      "name": "Oh My Bean",
+      "country": "cz",
+      "web": "https://www.ohmybean.coffee/",
+      "primaryLink": "web",
+      "instagram": "https://www.instagram.com/ohmybean_coffee/",
+      "logo": "ohmybean.png"
+    },
+    "101": {
+      "name": "101 Roastery",
+      "country": "cz",
+      "web": "https://www.101roastery.cz/",
+      "primaryLink": "web",
+      "instagram": "https://www.instagram.com/101.roastery/",
+      "logo": "101.svg"
+    },
+    "coffeeculture": {
+      "name": "Coffee Culture",
+      "instagram": "https://www.instagram.com/coffeeculture_cz/",
+      "logo": "coffeeculture.png",
+      "web": "https://www.coffee-culture.cz/en/",
+      "primaryLink": "web"
+    },
+    "the_roses": {
+      "name": "The Roses",
+      "web": "https://theroses.cz/",
+      "instagram": "https://www.instagram.com/therosescz",
+      "primaryLink": "web",
+      "logo": "the_roses.png"
+    },
+    "party_stop_time": {
+      "name": "StopTime",
+      "logo": "stoptime.svg",
+      "instagram": "https://www.instagram.com/stop.time.band",
+      "facebook": "https://www.facebook.com/stoptimebandcz"
+    },
+    "party_jazz_damu": {
+      "name": "Jazz Baía",
+      "logo": "jazz_baia.png",
+      "modalProps": {
+        "className": ""
+      },
+      "web": "https://jazzbaia.com/",
+      "primaryLink": "web",
+      "instagram": "https://www.instagram.com/jazzbaia/",
+      "facebook": "https://www.facebook.com/jazzbaia/",
+      "youtube": "https://www.youtube.com/@JazzBaia-cf5wg"
+    },
+    "party_vazky": {
+      "name": "Hudební soubor Váški",
+      "logo": "vaski.png",
+      "modalProps": {
+        "className": ""
+      }
+    },
+    "party_druha_kapelka": {
+      "name": "Disonant",
+      "logo": "disonant.jpg",
+      "facebook": "https://www.facebook.com/DisonantBand/",
+      "youtube": "https://music.youtube.com/channel/UCAUKcnigrur1hu25nFrlgxg",
+      "web": "https://ampl.ink/aZNaw",
+      "instagram": "https://www.instagram.com/disonant.music",
+      "modalProps": {
+        "className": ""
+      }
+    },
+    "party_soutez": {}
   },
   "promoted": {
     "others": {
-      "items": [
-      ]
+      "items": []
     },
     "roasters": {
       "honored": [
+        "five_elephant",
+        "ig"
       ],
       "regular": [
-        "ig",
-        "hayb",
         "gills",
         "baristaroasters",
-        "triplefive",
         "coffeespot",
         "trafficcoffee",
         "poppy",
@@ -740,9 +658,16 @@
         "labanda",
         "liskafe",
         "wildkaffee",
+        "red_fawn",
         "punkt",
+        "dalia",
+        "tripple_five",
+        "ohmybean",
+        "101",
+        "penerini",
         "chcikofein",
-        "dalia"
+        "coffeeculture",
+        "the_roses"
       ]
     },
     "sponsors": {
@@ -757,26 +682,511 @@
   },
   "program": [
     {
-      "schedule": [],
+      "schedule": [
+        {
+          "track": "espresso_milk",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "ig"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "five_elephant"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "espresso",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "gills"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "baristaroasters"
+              }
+            ],
+            [
+              {
+                "start": "10:30",
+                "end": "14:00",
+                "$ref": "tripple_five"
+              },
+              {
+                "start": "14:30",
+                "end": "18:00",
+                "$ref": "coffeespot"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "trafficcoffee"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "poppy"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "brew",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "baristaroasters"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "gills"
+              }
+            ],
+            [
+              {
+                "start": "10:30",
+                "end": "14:00",
+                "$ref": "mala_prazarna"
+              },
+              {
+                "start": "14:30",
+                "end": "18:00",
+                "$ref": "labanda"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "liskafe"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "wildkaffee"
+              }
+            ],
+            [
+              {
+                "start": "10:30",
+                "end": "14:00",
+                "$ref": "coffeespot"
+              },
+              {
+                "start": "14:30",
+                "end": "18:00",
+                "$ref": "lot"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "red_fawn"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "punkt"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "workshop",
+          "schedule": [
+            [
+              {
+                "start": "10:20",
+                "end": "11:20",
+                "$ref": "ws_home"
+              },
+              {
+                "start": "11:50",
+                "end": "12:50",
+                "$ref": "ws_sensory"
+              },
+              {
+                "start": "13:20",
+                "end": "14:00",
+                "$ref": "ws_yerba"
+              },
+              {
+                "start": "14:50",
+                "end": "16:20",
+                "$ref": "ws_water"
+              },
+              {
+                "start": "16:40",
+                "end": "17:40",
+                "$ref": "ws_whisky"
+              }
+            ],
+            [
+              {
+                "start": "10:20",
+                "end": "11:30",
+                "$ref": "ws_cupping_lot"
+              },
+              {
+                "start": "11:40",
+                "end": "12:50",
+                "$ref": "ws_roasting"
+              },
+              {
+                "start": "13:20",
+                "end": "14:30",
+                "$ref": "ws_cupping_penerini"
+              },
+              {
+                "start": "14:40",
+                "end": "15:50",
+                "$ref": "ws_esko"
+              },
+              {
+                "start": "16:00",
+                "end": "17:10",
+                "$ref": "ws_cupping_traffic"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "lecture",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "11:10",
+                "$ref": "talk_biology"
+              },
+              {
+                "start": "11:20",
+                "end": "12:30",
+                "$ref": "talk_green"
+              },
+              {
+                "start": "12:40",
+                "end": "13:50",
+                "$ref": "talk_humberto"
+              },
+              {
+                "start": "14:00",
+                "end": "15:00",
+                "$ref": "talk_ks"
+              },
+              {
+                "start": "15:10",
+                "end": "16:20",
+                "$ref": "talk_helena"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "party",
+          "schedule": [
+            [
+              {
+                "start": "11:30",
+                "end": "12:30",
+                "$ref": "party_stop_time"
+              },
+              {
+                "start": "16:30",
+                "end": "17:30",
+                "$ref": "party_jazz_damu"
+              }
+            ]
+          ]
+        }
+      ],
       "$ref": "day1"
     },
     {
-      "schedule": [],
+      "schedule": [
+        {
+          "track": "espresso_milk",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "ig"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "five_elephant"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "espresso",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "lot"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "wildkaffee"
+              }
+            ],
+            [
+              {
+                "start": "10:30",
+                "end": "14:00",
+                "$ref": "ohmybean"
+              },
+              {
+                "start": "14:30",
+                "end": "18:00",
+                "$ref": "punkt"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "101"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "penerini"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "brew",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "mala_prazarna"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "trafficcoffee"
+              }
+            ],
+            [
+              {
+                "start": "10:30",
+                "end": "14:00",
+                "$ref": "tripple_five"
+              },
+              {
+                "start": "14:30",
+                "end": "18:00",
+                "$ref": "ohmybean"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "chcikofein"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "dalia"
+              }
+            ],
+            [
+              {
+                "start": "10:30",
+                "end": "14:00",
+                "$ref": "poppy"
+              },
+              {
+                "start": "14:30",
+                "end": "18:00",
+                "$ref": "101"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "13:30",
+                "$ref": "coffeeculture"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "the_roses"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "workshop",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "11:00",
+                "$ref": "ws_home"
+              },
+              {
+                "start": "11:20",
+                "end": "12:20",
+                "$ref": "ws_qb"
+              },
+              {
+                "start": "12:50",
+                "end": "13:50",
+                "$ref": "ws_choco"
+              },
+              {
+                "start": "14:10",
+                "end": "15:10",
+                "$ref": "ws_sensory"
+              },
+              {
+                "start": "15:40",
+                "end": "16:40",
+                "$ref": "ws_hradsky"
+              },
+              {
+                "start": "17:00",
+                "end": "18:00",
+                "$ref": "ws_kaple"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "11:30",
+                "$ref": "ws_water"
+              },
+              {
+                "start": "11:40",
+                "end": "12:50",
+                "$ref": "ws_roasting"
+              },
+              {
+                "start": "13:00",
+                "end": "14:10",
+                "$ref": "ws_cupping_chicas"
+              },
+              {
+                "start": "14:10",
+                "end": "15:50",
+                "$ref": "ws_latte"
+              },
+              {
+                "start": "16:00",
+                "end": "17:10",
+                "$ref": "ws_cupping_lot"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "lecture",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "11:10",
+                "$ref": "talk_alice"
+              },
+              {
+                "start": "11:20",
+                "end": "12:10",
+                "$ref": "talk_tanzanie"
+              },
+              {
+                "start": "12:30",
+                "end": "13:40",
+                "$ref": "talk_madalin"
+              },
+              {
+                "start": "14:00",
+                "end": "15:10",
+                "$ref": "talk_tripplesenzory"
+              },
+              {
+                "start": "16:00",
+                "end": "17:10",
+                "$ref": "talk_influencers"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "party",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "12:00",
+                "$ref": "party_soutez"
+              },
+              {
+                "start": "12:30",
+                "end": "13:30",
+                "$ref": "party_vazky"
+              },
+              {
+                "start": "14:00",
+                "end": "16:00",
+                "$ref": "party_soutez"
+              },
+              {
+                "start": "16:30",
+                "end": "17:30",
+                "$ref": "party_druha_kapelka"
+              }
+            ]
+          ]
+        }
+      ],
       "$ref": "day2"
     }
   ],
+  "filterCategories": {
+    "track": "Track"
+  },
   "programDays": {
     "day1": {
-      "date": "21/9"
+      "date": "20/9"
     },
     "day2": {
-      "date": "22/9"
+      "date": "21/9"
     }
   },
   "programCategory": {
     "brew": null,
     "espresso": null,
-    "espresso_milk": null,
     "lecture": null,
     "workshop": null
   },

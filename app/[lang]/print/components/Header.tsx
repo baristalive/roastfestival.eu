@@ -11,7 +11,7 @@ const Header = ({category}: {category: keyof typeof dictionaries.en.programCateg
     <div className="flex items-center gap-4">
       <div className="flex items-center gap-4 rounded-full border-2 border-[var(--black)] p-1">
         <h2 className="pl-6 pr-8 text-4xl font-bold text-[var(--black)]">
-          {lang.programTitle}
+          {lang.programTile.title}
         </h2>
         <div className="rounded-full bg-[var(--primary)] px-12 py-2 text-center text-[var(--white)]">
           <h3 className="text-3xl font-bold">

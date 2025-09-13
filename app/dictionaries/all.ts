@@ -4,29 +4,44 @@ import en from "./en.json";
 import shared from "./shared.json";
 
 type ProgramItem = {
-  start: number;
-  end: number;
+  start: string;
+  end: string;
   track: keyof typeof dictionaries.en.programCategory;
   day: string;
 };
 
 type RawProgramItem = {
-  start: number;
-  end: number;
+  start: string;
+  end: string;
   $ref: string;
   day: string;
   noEnd: boolean;
 }
-type RawProgramDay = {
-  $ref: string;
+export enum Track {
+  Espresso = "espresso",
+  Filter = "brew",
+  Workshop = "workshop",
+  Lecture = "lecture",
+  Party = "party",
+  Honor = "espresso_milk",
+}
+
+export enum Day {
+  Saturday = "day1",
+  Sunday = "day2",
+}
+
+export const AllDays = [Day.Saturday, Day.Sunday]
+export const AllTracks = [Track.Honor, Track.Espresso, Track.Filter, Track.Lecture, Track.Workshop, Track.Party]
+
+export type RawProgramDay = {
+  $ref: Day;
   schedule: {
-    track: string;
+    track: Track;
     schedule: RawProgramItem[][];
   }[]
 }
 export type SupportedLanguages = "cz" | "en";
-export const DayIds = ["day1", "day2"] as const;
-export type DayIdsType = typeof DayIds[number]
 
 export type Presenter = {
   web?: string;
@@ -37,6 +52,7 @@ export type Presenter = {
   twitter?: string;
   name: string;
   logo: string;
+  bio?: string;
   primaryLink: "web" | "instagram" | "facebook";
   subheading?: string;
   annotation?: string | string[];
