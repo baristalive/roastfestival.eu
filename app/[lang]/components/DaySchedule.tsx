@@ -14,8 +14,10 @@ import Modal from "./Modal";
 const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
   String(idxm).padEnd(2, "0"),
 );
+
+const GRID_STOPS_PREFIX = "[station] 100px "
 const GRID_STOPS =
-  "[station] 100px [h950] 1fr " +
+  "[h950] 1fr " +
   Array.from(Array(8), (_, idx) =>
     MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr`),
   )
@@ -44,15 +46,16 @@ const DaySchedule = ({
   if (schedule.length === 0) {
     return null;
   }
+  const gridStops = showTrackHeader ? GRID_STOPS_PREFIX + GRID_STOPS : GRID_STOPS
 
   return (
     <div
       className={`relative flex w-full flex-col justify-between py-4 will-change-auto ${className}`}
     >
       <div
-        className="hidden p-4 pt-10 text-center xl:grid"
+        className="hidden p-4 text-center xl:grid"
         style={{
-          gridTemplateColumns: GRID_STOPS,
+          gridTemplateColumns: gridStops,
         }}
       >
         {HOURS.map((h) => (
@@ -68,9 +71,9 @@ const DaySchedule = ({
         ))}
       </div>
       <div
-        className="absolute inset-0 bottom-[2em] top-[4.5em] z-0 hidden p-4 xl:grid"
+        className="absolute inset-0 bottom-[2em] top-[2.5em] z-0 hidden p-4 xl:grid"
         style={{
-          gridTemplateColumns: GRID_STOPS,
+          gridTemplateColumns: gridStops,
         }}
       >
         {HOURS.map((h, idx) => (
@@ -91,7 +94,7 @@ const DaySchedule = ({
             key={t.track}
             className={`program-track relative mx-4 rounded-2xl py-4 text-xl xl:grid`}
             style={{
-              gridTemplateColumns: GRID_STOPS,
+              gridTemplateColumns: gridStops,
             }}
           >
             {showTrackHeader && (

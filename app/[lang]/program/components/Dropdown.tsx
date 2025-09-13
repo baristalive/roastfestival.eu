@@ -50,6 +50,7 @@ const Dropdown = () => {
               aria-controls="dropdown-filter"
             >
               <div className="text-lg">Filter</div>
+              <div className="lg:flex gap-3 hidden">
               {AllDays.filter((d) => selectedDays.includes(d)).map((d) => (
                 <div
                   key={d}
@@ -69,6 +70,7 @@ const Dropdown = () => {
                   <StationIcon station={t} />
                 </div>
               ))}
+              </div>
               <svg
                 className="-mr-1 ml-2 h-5 w-5"
                 viewBox="0 0 20 20"

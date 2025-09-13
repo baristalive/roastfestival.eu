@@ -150,7 +150,7 @@ footer {
     ),
     var(--primary);
 }
-.promoted-roasters-section {
+.program-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -169,7 +169,7 @@ footer {
     ),
     var(--primary);
 }
-.what-to-expect-section,
+.promoted-roasters-section,
 .ticket-section {
   background: linear-gradient(
       to right,
@@ -217,7 +217,7 @@ footer {
     ),
     var(--primary);
 }
-.previous-year-section {
+.what-to-expect-section {
   background: linear-gradient(
       to right,
       var(--background),
@@ -231,7 +231,7 @@ footer {
     ),
     var(--primary);
 }
-.gallery-section {
+.previous-year-section{
   background: linear-gradient(
       to right,
       var(--background),
@@ -240,7 +240,7 @@ footer {
     ),
     var(--primary);
 }
-.program-section,
+.gallery-section,
 .mdx-content-section {
   background: radial-gradient(
       100% 1200px at right top,

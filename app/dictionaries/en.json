@@ -445,8 +445,13 @@
     "overview": "Overview",
     "robotarna": "Roasters"
   },
-  "programTitle": "Schedule",
-  "programLoadingText": "We are still roasting the festival program for you.",
+  "programTile": {
+    "title": "Schedule",
+    "loadingText": "We are still roasting the festival program for you.",
+    "content": "The schedule is really extensive this year. You can find it on a separate page."
+  },
+  "programTitle": "",
+  "programLoadingText": "",
   "programDisclaimer": "This schedule is subject to change",
   "sponsors": {
     "cta": "Contact us"

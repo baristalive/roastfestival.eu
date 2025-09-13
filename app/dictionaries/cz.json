@@ -476,8 +476,11 @@
       "shortName": "Ne"
     }
   },
-  "programTitle": "Program",
-  "programLoadingText": "Program festivalu pro Vás ještě pražíme.",
+  "programTile": {
+    "title": "Program",
+    "loadingText": "Program festivalu pro Vás ještě pražíme.",
+    "content": "Programu se letos urodilo opravdu hodně. Najdete ho na separátní stránce."
+  },
   "programDisclaimer": "Změna programu vyhrazena",
   "sponsors": {
     "cta": "Napište nám"

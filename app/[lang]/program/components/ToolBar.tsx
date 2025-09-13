@@ -14,7 +14,8 @@ const ToolBar = () => {
         <div className="flex gap-x-6 justify-end flex-wrap ">
           <Dropdown />
         </div>
-        <div className="text-4xl py-2 hidden xl:block"><List /></div>
+        <div className='text-4xl w-[calc(1em+1rem)]'></div>
+        {/* <div className="text-4xl py-2 hidden xl:block"><List /></div> */}
       </nav>
     </div>
   )

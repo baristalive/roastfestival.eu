@@ -38,13 +38,13 @@ const Home = ({ params }: HomePropsType) => {
       <Header />
       <InstagramFeed />
       <Info />
+      <Program />
       <PromotedRoasters />
       <Tickets />
       <WhatToExpect />
       {/* <Colab /> */}
       <PreviousYears />
       <Gallery />
-      <Program />
       <Map />
       <Sponsors />
       <Organizers />
