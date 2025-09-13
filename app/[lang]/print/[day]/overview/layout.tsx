@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Sup
   
   const lang = dictionaries[resolvedParams.lang] || dictionaries.en;
   return {
-    title: `${lang.programTitle}: ${lang.programDays[resolvedParams.day]?.name || '?'} - ${lang.programCategory.overview}`
+    title: `${lang.programTile.title}: ${lang.programDays[resolvedParams.day]?.name || '?'} - ${lang.programCategory.overview}`
   }
 }
 

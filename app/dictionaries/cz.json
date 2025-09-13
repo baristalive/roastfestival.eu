@@ -200,26 +200,26 @@
       "annotation": "Objev, proč Yerba Maté dobývá svět jako zdravější alternativa kávy. Workshop odhalí, proč Yerba Maté překonává kávu v energii, soustředění i životním stylu. Přijď ochutnat změnu přímo od zakladatele největší značky Yerba Maté v Česku a na Slovensku. Naučíš se jak si Yerbu připravit a jak s ní dlouhodobě profitovat."
     },
     "ws_water": {
-      "name": "CHYBÍ NÁZEV",
-      "annotation": ""
+      "name": "Voda - důležitější než kafe samotné",
+      "annotation": "Pojďme se podívat vodě na zoubek. Byť se o tom bohužel tolik neví, voda je při přípravě kávy důležitější než všechno ostatní. Už jste někdy přemýšleli nad tím, proč filtr v kavárně chutnal skvěle, ale doma ta stejná zrnka najednou ne? Tak tady si na to odpovíme"
     },
     "ws_whisky": {
       "name": "Příběh whisky",
       "annotation": "Příběh cesty Whisky od sudu až do skleničky. Součástí workshopu bude i degustace whisky od Tomáše Dyntara a její párování s výběrovou kávou."
     },
     "ws_cupping_penerini": {
-      "annotation": ""
+      "annotation": "Přijď ochutnat kávu z pražírny Penerini. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z Penerini."
     },
     "ws_cupping_traffic": {
-      "annotation": ""
+      "annotation": "Přijď ochutnat kávu z pražírny Traffic Coffee. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z Traffic Coffee."
     },
     "ws_roasting": {
-      "name": "CHYBÍ NÁZEV",
-      "annotation": ""
+      "name": "Upraž si svý zrní",
+      "annotation": "Každý pražič i pražička má kromě svého velkého miláčka, maličkou testovací pražičku - takzvanou samplovku. Na ní se praží vzorky od importérů a farmářů. Během workshopu se naučíte jakým způsobem se s takovou malou pražičkou pracuje. Dostanete pár desítek gramů kávy dle svého výběru a můžete si jí upražit a odnést domů."
     },
     "ws_esko": {
-      "name": "CHYBÍ NÁZEV",
-      "annotation": ""
+      "name": "Vlastní espresso jako z výběrové kavárny",
+      "annotation": "Ve dvou na sebe navazujících workshopech (Espresso a Latteart) se podíváme na základy přípravy výběrové kávy. Jak správně nastavit mlýnek, proč používáme váhy a jak správně našlehat mléko na latteart."
     },
     "ws_qb": {
       "name": "Cupping bez cenzury",
@@ -230,66 +230,76 @@
       "annotation": "Věděli jste, že kvalitní čokoláda může být velmi podobná kvalitní kávě? V tomto workshopu si povíte něco o historii čokolády, o tom, jak se vyrábí, a o různých druzích. To vše bude doprovázeno řízenou degustací."
     },
     "ws_kaple": {
-      "name": "Degustace a vinná senzorika.",
+      "name": "Degustace a vinná senzorika",
       "annotation": "Něco jako cupping akorát ve vinném světě. Podívejte se s námi na formy degustace a identifikaci vinných vad."
     },
     "ws_hradsky": {
-      "name": "CHYBÍ NÁZEV",
-      "annotation": ""
+      "name": "Dripper Showdown",
+      "annotation": "V době, kdy každý týden vzniká nový dripper pro přípravu filtrované kávy, se v nabídce není snadné vyznat. Na tomto workshopu si společně připravíte kávu pomocí pěti různých dripperů a budete mít možnost porovnat, jak každý z nich ovlivňuje chuť, aroma a celkový charakter šálku. Sami si vyzkoušíte, jak malé rozdíly mezi drippery dokážou změnit výsledný zážitek z kávy, a možná objevíte, který dripper je pro vás ten pravý."
     },
     "ws_latte": {
-      "name": "CHYBÍ NÁZEV",
-      "annotation": ""
+      "name": "Vlastní cappuccino jako z výběrové kavárny",
+      "annotation": "Ve dvou na sebe navazujících workshopech (Espresso a Latteart) se podíváme na základy přípravy výběrové kávy. Jak správně nastavit mlýnek, proč používáme váhy a jak správně našlehat mléko na latteart."
     },
     "ws_cupping_chicas": {
-      "annotation": ""
+      "annotation": "Přijď ochutnat kávu od importérů Chicas Industry. Ochutnávka formou cuppingu pod taktovkou Chicas Industry."
     },
     "ws_cupping_lot": {
-      "annotation": ""
+      "annotation": "Přijď ochutnat kávu z pražírny LOT. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z LOT."
     },
     "ws_cupping_punkt": {
-      "annotation": ""
+      "annotation": "Přijď ochutnat kávu z pražírny Punkt. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z Punkt."
     },
     "talk_biology": {
       "name": "Kávu všem (i dětem?)!",
-      "annotation": "Všichni milujeme kávu, co ale kofein dělá s naším tělem? A co způsobí, když kofein přijímá dětský organismus? O tom, kolik kofeinu v dnešní době zkonzumují dospělí, ale i děti, a o tom, co to s námi provádí bude povídat dětská lékařka MUDr. Barbara Šťastná."
+      "annotation": "Všichni milujeme kávu, co ale kofein dělá s naším tělem? A co způsobí, když kofein přijímá dětský organismus? O tom, kolik kofeinu v dnešní době zkonzumují dospělí, ale i děti, a o tom, co to s námi provádí bude povídat dětská lékařka MUDr. Barbara Šťastná.",
+      "bio": "Lékařka Barbara Šťastná, pediatrička pracující pro Jihomoravské dětské léčebny. Mimo jiném je Barbara školitelka v organizaci Loono, šermířka a lukostřelkyně na letním děckém táboře a amatérská švadlena. "
     },
     "talk_green": {
       "name": "Sedm palčivých témat o zelené kávě",
-      "annotation": "Importérka Tereza z Chicas Industry si vezme na paškál sedm nejžhavějších témat ze světa zelené kávy – a každému z nich věnuje přesně sedm minut. Od rozdílu mezi fermentacemi a infuzemi, přes mýtus „chudého farmáře“, až po otázku, jestli už někdy nežádáme od kávy až příliš informací. Rychlé tempo, ostré pointy a sedm různých pohledů, které vám možná změní optiku na kávový svět."
+      "annotation": "Importérka Tereza z Chicas Industry si vezme na paškál sedm nejžhavějších témat ze světa zelené kávy – a každému z nich věnuje přesně sedm minut. Od rozdílu mezi fermentacemi a infuzemi, přes mýtus „chudého farmáře“, až po otázku, jestli už někdy nežádáme od kávy až příliš informací. Rychlé tempo, ostré pointy a sedm různých pohledů, které vám možná změní optiku na kávový svět.",
+      "bio": "Tereza je máma podnikatelka, milovnice cizích kultur a jazyků, dřív hodně cestovatelka. Kolem kávy se motá od roku 2011, kolem té výběrové zejména od roku 2014. Od roku 2019 spolu s kolegyní Karolínou rozvíjí projekt Chicas Industry zaměřený na import zelené kávy."
     },
     "talk_humberto": {
-      "name": "Celebrating Coffee’s Transformative Power",
-      "annotation": "We will discuss the impact of coffee and how it can transform people's lives across the entire supply chain. This includes its effects at origin, as well as the roles of importers, roasters, baristas, and guests."
+      "name": "Transformativní síla kávy",
+      "annotation": "Diskuse o dopadu kávy a jejím vlivu na životy lidí ve zpracovatelském řetězci. Hovořit budeme o místě původu, roli importérů, pražíren baristů i hostů",
+      "bio": "Humberto Ribes, španělský barista žijící v Berlíně. Aktuální Head of Coffee v Berlínských kavárnách a pražírně Five Elephant. Mimo jiné je Humberto talentovaný fotograf."
     },
     "talk_ks": {
       "name": "Co to vlastně meleme aneb kávová novinařina na vzestupu",
       "subheading": "Redakce Káva spojuje",
-      "annotation": "Jak se píše o kávě a gastronomii tak, aby to čtenáře bavilo? Redaktoři magazínu Káva spojuje otevřeně prozradí, co všechno se skrývá „za klávesnicí“ – od hledání témat, přes zákulisí rozhovorů až po to, co nikdy neprojde editorským sítem. Přijďte nahlédnout do redakční kuchyně a zeptat se na to, co vás na novinařině zajímá."
+      "annotation": "Jak se píše o kávě a gastronomii tak, aby to čtenáře bavilo? Redaktoři magazínu Káva spojuje otevřeně prozradí, co všechno se skrývá „za klávesnicí“ – od hledání témat, přes zákulisí rozhovorů až po to, co nikdy neprojde editorským sítem. Přijďte nahlédnout do redakční kuchyně a zeptat se na to, co vás na novinařině zajímá.",
+      "bio": "Věříme, že \"káva spojuje\". Jsme online redakce, která si klade za cíl stát se důvěryhodným hlasem propojujícím kávovou komunitu napříč Českem."
     },
     "talk_helena": {
       "name": "Kvalita kávy z farmy až po šálek",
-      "annotation": "Co všechno stojí za tím, než se z kávového zrnka stane voňavý šálek na vašem stole? Helena Oliviero z italské SCA vás provede cestou kávy od pěstování na plantážích, přes sklizeň a zpracování až po pražení a přípravu. Dozvíte se, jak jednotlivé kroky ovlivňují výslednou chuť a proč kvalita nevzniká až v šálku, ale už dávno předtím."
+      "annotation": "Co všechno stojí za tím, než se z kávového zrnka stane voňavý šálek na vašem stole? Helena Oliviero z italské SCA vás provede cestou kávy od pěstování na plantážích, přes sklizeň a zpracování až po pražení a přípravu. Dozvíte se, jak jednotlivé kroky ovlivňují výslednou chuť a proč kvalita nevzniká až v šálku, ale už dávno předtím.",
+      "bio": "Helena Oliviero je několikanásobná vítězka kávových soutěží, Q-Graderka a zkušená školitelka, která svou vášeň pro kávu objevila už během brigády v Toskánsku. Po letech strávených v různých evropských zemích se stala respektovanou odbornicí a inspirací pro baristy i milovníky kávy po celém světě. Ve své práci zároveň otevírá téma genderových nerovností v kávovém průmyslu a povzbuzuje ženy k odvaze měnit stereotypy."
     },
     "talk_alice": {
       "name": "Bean There, Roast That, Praženie hrou mýty a alchýmia",
-      "annotation": "Stačí nasypať zelené zrná, zapnúť pražičku a ste pražiar, však? V podstate áno. V tejto prednáške si ukážeme, že praženie kávy nestojí len na ‘feelingu’, ale na konzistencii, dátach a pochopení procesov.. Rozoberieme základy a pridáme tipy, ako k praženiu pristupovať s nadhľadom aj hravo."
+      "annotation": "Stačí nasypať zelené zrná, zapnúť pražičku a ste pražiar, však? V podstate áno. V tejto prednáške si ukážeme, že praženie kávy nestojí len na ‘feelingu’, ale na konzistencii, dátach a pochopení procesov.. Rozoberieme základy a pridáme tipy, ako k praženiu pristupovať s nadhľadom aj hravo.",
+      "bio": "Kávová profesionálka s více než 15 lety zkušeností z gastronomie. Alice pochází ze slovenska ale žila nějakou dobu i v Řecku a Německu. Aktuálně je head pražička v brněnské pražírně Rebelbean. Zároveň jako trenérka koučovala dvojnásobného mistra soutěže Barista Roku Denise Kramáře."
     },
     "talk_tanzanie": {
       "name": "S kávou do Afriky - přednáška o podnikání v Africe",
-      "annotation": "Utekl od počítače, tabulek i čísel rovnou do Afriky. Ladislav Kolář z Jindřichova Hradce otočil svůj život na ruby a z úspěšného finančníka a spolumajitele makléřské společnosti se stal pěstitelem kávy. V Tanzanii spravuje vlastní kávovníkovou plantáž o velikosti téměř 30 hektarů. Dal práci místním lidem a podporuje také školy."
+      "annotation": "Utekl od počítače, tabulek i čísel rovnou do Afriky. Ladislav Kolář z Jindřichova Hradce otočil svůj život na ruby a z úspěšného finančníka a spolumajitele makléřské společnosti se stal pěstitelem kávy. V Tanzanii spravuje vlastní kávovníkovou plantáž o velikosti téměř 30 hektarů. Dal práci místním lidem a podporuje také školy.",
+      "bio": "Manželé kolářovi z Kolda coffee. Majitelé 28 hektarové plantáže v oblasti Mbeya - Tanzánie, zasadili první stromeček v roce 2012 a sklidili první kávová zrnka v roce 2016. Dnes mají na farmě už 86 000 stromků, podporují udržovatelné zemědělství, včelaří, budují vodní plochy pro zadržování vody a spolupracují s místní komunitou."
     },
     "talk_madalin": {
       "name": "O soutěžích",
-      "annotation": "O průběhu a účasti na rakouských kávových soutěžích a WBC v Miláně. Jen týden před Roast! Festivalem probýhá Austria Coffee Championship. Jak soutěž probýhala a je k čemu gratulovat? To se dozvíme od rakouského baristy roku 2020 Madalina Truici."
+      "annotation": "O průběhu a účasti na rakouských kávových soutěžích a WBC v Miláně. Jen týden před Roast! Festivalem probýhá Austria Coffee Championship. Jak soutěž probýhala a je k čemu gratulovat? To se dozvíme od rakouského baristy roku 2020 Madalina Truici.",
+      "bio": "Madalin Truica, kávový profesionál pracující jako Head Barista v The Pelican Coffee Company ve Vídni. Narodil se v Rumunsku ale vyrostl v Německu a v kávové komunitě figuruje nejméně 10 let. V roce 2020 získal mistrovský titul na Austria Barista Championship."
     },
     "talk_tripplesenzory": {
       "name": "Senzorický souboj aneb co má společného víno, pivo a káva?",
-      "annotation": "Co spojuje chuť dobrého vína, poctivého piva a výběrové kávy? A v čem se jejich světy naopak rozcházejí? Sládkyně, vinař a pražič se podělí o své zkušenosti se senzorikou tří tradičních nápojů a ukážou, že svět chutí je mnohem pestřejší, než si možná myslíte."
+      "annotation": "Co spojuje chuť dobrého vína, poctivého piva a výběrové kávy? A v čem se jejich světy naopak rozcházejí? Sládkyně, vinař a pražič se podělí o své zkušenosti se senzorikou tří tradičních nápojů a ukážou, že svět chutí je mnohem pestřejší, než si možná myslíte.",
+      "bio": "Panelové debaty se zúčastní Michaela Neméthová, „doktorka piva“, certifikovaný BJCP judge a sládkyně. Dále Jiří Vyzourek, jehož velkou vášní jsou naturální vína, kterými se profesionálně zabývá ve winebaru Kaple v Brně. V neposlední řadě se k nim připojí Jan Židů, pražič a majitel espresso baru Au Lait v Brně, který se postará o „tu kávovou část“."
     },
     "talk_influencers": {
-      "name": "Like, share, drink – gastroinfluencing na sociálních sítích",
-      "annotation": "Instagram, TikTok, YouTube – kde dnes vlastně chutná jídlo nejvíc? Tři různí influenceři z gastra prozradí, jak funguje prezentace jídla a pití na sítích, co je jen dobře naaranžovaná iluze a co skutečná vášeň. Diskuse o autenticitě a kreativním obsahu."
+      "name": "Like, share, drink – gastroinfluencing na sociálních sítích ",
+      "annotation": "Instagram, TikTok, YouTube – kde dnes vlastně chutná jídlo nejvíc? Tři různí influenceři z gastra prozradí, jak funguje prezentace jídla a pití na sítích, co je jen dobře naaranžovaná iluze a co skutečná vášeň. Diskuse o autenticitě a kreativním obsahu.",
+      "bio": "Známý brněnský instagramový zpravodaj Pavel Černý se setká s \"kolegy z oboru\", kávovým youtuberem a podcasterem Tomášem Taussigem a gastro-freelancerkou a správkyní sociálních sítí Petrou Vlkovou."
     },
     "party_stop_time": {
       "annotation": [
@@ -318,7 +328,8 @@
       "annotation": "Od tichých melodických momentů až po monumentální zdi zvuku. Čtyřčlenné uskupení z Brna se stylem ukotveným v alternative rocku s elementy shoegaze a širokou paletou dalších hudebních vlivů. Kapela si zakládá na českých textech s motivy melancholie a hudbě s citem pro atmosféru."
     },
     "party_soutez": {
-      "name": "CHYBÍ NÁZEV"
+      "name": "Soutěž v přípravě kávy",
+      "annotation": "Detaily připravujeme. Chviličku strpení."
     }
   },
   "promoted": {

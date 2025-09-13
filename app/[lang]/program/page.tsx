@@ -49,7 +49,7 @@ const Home = () => {
         </div>
         <div className="flex grid-cols-[1fr,auto,1fr] flex-col items-center lg:grid">
           <h2 className="p-4 text-3xl font-bold 2xl:text-6xl pt-32 2xl:pt-4">
-            {lang.programTitle}
+            {lang.programTile.title}
           </h2>
         </div>
         <div className="flex justify-center">

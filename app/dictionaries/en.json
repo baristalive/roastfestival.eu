@@ -181,113 +181,122 @@
       "annotation": "A family business run by brothers Vojtěch and Matyáš Růžička together with their father Oldřich. Since 2017, they have been focusing on specialty coffee with an emphasis on quality, fair trade, and sustainability. We purchase coffee directly from producers around the world, operate cafés, a training center for baristas, and a roastery."
     },
     "ws_home": {
-      "name": "",
-      "annotation": ""
+      "name": "How NOT to make a filter",
+      "annotation": "Taste and see how poor filter preparation affects the flavor. We will answer the question of why we prepare drip coffee within certain parameters and put into context the variables that affect the flavor of coffee, whether positively or negatively."
     },
     "ws_sensory": {
-      "name": "",
-      "annotation": ""
+      "name": "Sensory training - supercharge your senses",
+      "annotation": "We see with our eyes and taste with our whole body. This workshop will focus on sensory perception and teach you how to perceive taste, smell, and touch more accurately—and how to connect your senses into a single whole. You will discover that even ordinary water can have dozens of flavor nuances and that sensory perception is not the preserve of sommeliers or baristas, but of each and every one of us. Through practical training, you will open the door to a deeper understanding not only of coffee, but also of food, wine, and life itself."
     },
     "ws_yerba": {
-      "name": "",
-      "annotation": ""
+      "name": "After this Yerba Maté workshop, you'll stop drinking coffee",
+      "annotation": "Discover why Yerba Maté is conquering the world as a healthier alternative to coffee. This workshop will reveal why Yerba Maté surpasses coffee in terms of energy, concentration, and lifestyle. Come and taste the change directly from the founder of the largest Yerba Maté brand in Czechia and Slovakia. You will learn how to prepare Yerba and how to benefit from it in the long term."
     },
     "ws_water": {
-      "name": "",
-      "annotation": ""
+      "name": "Water – more important than coffee itself",
+      "annotation": "Let's take a closer look at water. Although it is not widely known, water is more important than anything else when it comes to making coffee. Have you ever wondered why the filter coffee tasted great at the café, but the same beans suddenly didn't taste as good at home? Here's the answer."
     },
     "ws_whisky": {
-      "name": "",
-      "annotation": ""
+      "name": "The story of whiskey",
+      "annotation": "The story of whisky's journey from barrel to glass. The workshop will also include whisky tasting by Tomáš Dyntar and pairing with specialty coffee."
     },
     "ws_cupping_penerini": {
-      "name": "",
-      "annotation": ""
+      "annotation": "Come and taste coffee from the Peneriny roastery. Cupping is lead by the Peneriny roastery staff."
     },
     "ws_cupping_traffic": {
-      "name": "",
-      "annotation": ""
+      "annotation": "Come and taste coffee from the Traffic Coffee roastery. Cupping is lead by the Traffic Coffee roastery staff."
     },
     "ws_roasting": {
-      "name": "",
-      "annotation": ""
+      "name": "Roast your own beans",
+      "annotation": "Every roaster has, in addition to their beloved large roaster, a small test roaster. This is used to roast samples from importers and farmers. During the workshop, you will learn how to work with such a small roaster. You will receive a few dozen grams of coffee of your choice, which you can roast and take home with you."
     },
     "ws_esko": {
-      "name": "",
-      "annotation": ""
+      "name": "Your own espresso",
+      "annotation": "In two consecutive workshops (Espresso and Latte Art), we will look at the basics of preparing specialty coffee. How to set up the grinder correctly, why we use scales, and how to prepare milk for latte art correctly."
     },
     "ws_qb": {
-      "name": "",
-      "annotation": ""
+      "name": "Cupping uncensored",
+      "annotation": "Discover how coffee tastes when you remove all filters. At the workshop, you will learn the basic rules of cupping—a professional method of coffee tasting that reveals its aromas, flavors, and flaws. Together, we will go through the entire process step by step. At the end, you will taste unusual coffees—Arabica, Canephora, and rare Liberica."
     },
     "ws_choco": {
-      "name": "",
-      "annotation": ""
+      "name": "Discover the beauty and diversity of chocolate",
+      "annotation": "Did you know that high-quality chocolate can be very similar to high-quality coffee? In this workshop, you will learn about the history of chocolate, how it is made, and the different types available. All this will be accompanied by a guided tasting."
     },
     "ws_kaple": {
-      "name": "",
-      "annotation": ""
+      "name": "Tasting and wine sensory analysis",
+      "annotation": "Something like cupping, but in the world of wine. Join us as we take a look at the forms of tasting and identifying wine defects."
     },
     "ws_hradsky": {
-      "name": "",
-      "annotation": ""
+      "name": "Dripper Showdown",
+      "annotation": "At a time when a new dripper for preparing filtered coffee is created every week, it is not easy to navigate the range on offer. In this workshop, you will prepare coffee together using five different drippers and have the opportunity to compare how each one affects the taste, aroma, and overall character of the cup. You will see for yourself how small differences between drippers can change the resulting coffee experience, and you may discover which dripper is right for you."
     },
     "ws_latte": {
-      "name": "",
-      "annotation": ""
+      "name": "Your own cappuccino",
+      "annotation": "In two consecutive workshops (Espresso and Latte Art), we will look at the basics of preparing specialty coffee. How to set up the grinder correctly, why we use scales, and how to prepare milk for latte art correctly."
     },
     "ws_cupping_chicas": {
-      "name": "",
-      "annotation": ""
+      "annotation": "Come and taste coffee from the Chicas Industry coffee importers. Cupping is lead by the Chicas Industry staff."
     },
     "ws_cupping_lot": {
-      "name": "",
-      "annotation": ""
+      "annotation": "Come and taste coffee from the LOT roastery. Cupping is lead by the LOT roastery staff."
     },
     "ws_cupping_punkt": {
-      "name": "",
-      "annotation": ""
+      "annotation": "Come and taste coffee from the Punkt roastery. Cupping is lead by the Punkt roastery staff."
     },
     "talk_biology": {
       "name": "Coffee for everyone (even children?)!",
-      "annotation": "We all love coffee, but what does caffeine do to our bodies? And what happens when caffeine is consumed by children? Pediatrician Dr. Barbara Šťastná will talk about how much caffeine adults and children consume today and what it does to us."
+      "annotation": "We all love coffee, but what does caffeine do to our bodies? And what happens when caffeine is consumed by children? Pediatrician Dr. Barbara Šťastná will talk about how much caffeine adults and children consume today and what it does to us.",
+      "bio": "Medical doctor Barbara Šťastná, a pediatrician working for Jihomoravské dětské léčebny (South Moravian children's sanatories). Among other things, Barbara is a trainer at the Loono organization, a fencer and archer at a summer camp for children, and an amateur tailor."
     },
     "talk_green": {
       "name": "Seven burning questions about green coffee",
-      "annotation": "Importer Tereza from Chicas Industry covers seven of the hottest topics in the world of green coffee—and devotes exactly seven minutes to each one. From the difference between fermentation and infusion, to the myth of the \"poor farmer\", to the question of whether we are asking too much of coffee. Fast-paced, sharp points, and seven different perspectives that may change your view of the coffee world."
+      "annotation": "Importer Tereza from Chicas Industry covers seven of the hottest topics in the world of green coffee—and devotes exactly seven minutes to each one. From the difference between fermentation and infusion, to the myth of the \"poor farmer\", to the question of whether we are asking too much of coffee. Fast-paced, sharp points, and seven different perspectives that may change your view of the coffee world.",
+      "bio": "I am a mom, entrepreneur, lover of foreign cultures and languages, and formerly a frequent traveler. I have been involved with coffee since 2011, and with specialty coffee since 2014. Since 2019, together with my colleague Karolína, I have been developing the Chicas Industry project focused on importing green coffee."
     },
     "talk_humberto": {
       "name": "Celebrating Coffee’s Transformative Power",
-      "annotation": "We will discuss the impact of coffee and how it can transform people's lives across the entire supply chain. This includes its effects at origin, as well as the roles of importers, roasters, baristas, and guests."
+      "annotation": "We will discuss the impact of coffee and how it can transform people's lives across the entire supply chain. This includes its effects at origin, as well as the roles of importers, roasters, baristas, and guests.",
+      "bio": "Humberto Ribes, a Spanish barista living in Berlin. Currently Head of Coffee at the Five Elephant roastery in Berlin. Among other things, Humberto is a talented photographer. "
     },
     "talk_ks": {
       "name": "Coffee journalism on the rise",
       "subheading": "The editorial team of Káva spojuje",
-      "annotation": "How do you write about coffee and gastronomy in a way that readers will enjoy? The editors of Káva spojuje magazine will openly reveal everything that goes on \"behind the keyboard\" – from finding topics to behind-the-scenes interviews to what never makes it past the editors' scrutiny. Come take a peek into the editorial kitchen and ask anything you want to know about journalism."
+      "annotation": "How do you write about coffee and gastronomy in a way that readers will enjoy? The editors of Káva spojuje magazine will openly reveal everything that goes on \"behind the keyboard\" – from finding topics to behind-the-scenes interviews to what never makes it past the editors' scrutiny. Come take a peek into the editorial kitchen and ask anything you want to know about journalism.",
+      "bio": "We believe that \"coffee connects\". We are an online editorial team that aims to become a trusted voice connecting the coffee community across the Czech Republic."
     },
     "talk_helena": {
       "name": "Coffee quality from farm to cup",
-      "annotation": "What goes into turning a coffee bean into a aromatic cup on your table? Helena Oliviero from Italy's SCA will guide you through the journey of coffee, from cultivation on plantations, through harvesting and processing, to roasting and preparation. You will learn how each step affects the final taste and why quality is not created in the cup, but long before that."
+      "annotation": "What goes into turning a coffee bean into a aromatic cup on your table? Helena Oliviero from Italy's SCA will guide you through the journey of coffee, from cultivation on plantations, through harvesting and processing, to roasting and preparation. You will learn how each step affects the final taste and why quality is not created in the cup, but long before that.",
+      "bio": "Helena Oliviero is a multiple winner of coffee competitions, a Q-Grader, and an experienced trainer who discovered her passion for coffee while working part-time in Tuscany. After years spent in various European countries, she has become a respected expert and inspiration for baristas and coffee lovers around the world. In her work, she also addresses the issue of gender inequality in the coffee industry and encourages women to have the courage to change stereotypes."
     },
     "talk_alice": {
       "name": "Bean There, Roast That, Roasting through play, myths, and alchemy",
-      "annotation": "Just pour in the green beans, turn on the roaster, and you're a roaster, right? Basically, yes. In this lecture, we will show that coffee roasting is not just about \"feeling\", but about consistency, data, and understanding the processes. We will break down the basics and add tips on how to approach roasting with perspective and ease."
+      "annotation": "Just pour in the green beans, turn on the roaster, and you're a roaster, right? Basically, yes. In this lecture, we will show that coffee roasting is not just about \"feeling\", but about consistency, data, and understanding the processes. We will break down the basics and add tips on how to approach roasting with perspective and ease.",
+      "bio": "A coffee professional with more than 15 years of experience in gastronomy. Alice comes from Slovakia but has also lived in Greece and Germany for some time. She is currently the head roaster at the Rebelbean roastery in Brno. She also coached two-time Czech Barista Championship winner Denis Kramář."
     },
     "talk_tanzanie": {
       "name": "Coffee in Africa - how to do business in Africa",
-      "annotation": "He escaped from computers, spreadsheets, and figures straight to Africa. Ladislav Kolář from Jindřichův Hradec turned his life upside down and went from being a successful financier and co-owner of a brokerage company to a coffee grower. In Tanzania, he manages his own coffee plantation covering almost 30 hectares, provides jobs for local people, and also supports schools."
+      "annotation": "He escaped from computers, spreadsheets, and figures straight to Africa. Ladislav Kolář from Jindřichův Hradec turned his life upside down and went from being a successful financier and co-owner of a brokerage company to a coffee grower. In Tanzania, he manages his own coffee plantation covering almost 30 hectares, provides jobs for local people, and also supports schools.",
+      "bio": "The Kolář family from Kolda Coffee. Owners of a 28-hectare plantation in the Mbeya region of Tanzania, they planted their first tree in 2012 and harvested their first coffee beans in 2016. Today, they have 86,000 trees on their farm, support sustainable agriculture, keep bees, build water retention areas, and work with the local community."
     },
     "talk_madalin": {
       "name": "About competitions",
-      "annotation": "About the course and participation in Austrian coffee competitions and the WBC in Milan. Just a week before the Roast! Festival, the Austria Coffee Championship takes place. How did the competition go? We will find out from the Austrian Barista of the Year 2020, Madalin Truica."
+      "annotation": "About the course and participation in Austrian coffee competitions and the WBC in Milan. Just a week before the Roast! Festival, the Austria Coffee Championship takes place. How did the competition go? We will find out from the Austrian Barista of the Year 2020, Madalin Truica.",
+      "bio": "Madalin Truica, a coffee professional working as Head Barista at The Pelican Coffee Company in Vienna. He was born in Romania but grew up in Germany and has been involved in the coffee community for at least 10 years. In 2020, he won the Austria Barista Championship."
     },
     "talk_tripplesenzory": {
       "name": "Sensory battle – what do wine, beer, and coffee have in common?",
-      "annotation": "What do good wine, decent beer, and specialty coffee have in common? And how do their worlds differ? A brewer, winemaker, and roaster will share their experiences with the sensory properties of these three traditional beverages and show that the world of flavors is much more diverse than you might think."
+      "annotation": "What do good wine, decent beer, and specialty coffee have in common? And how do their worlds differ? A brewer, winemaker, and roaster will share their experiences with the sensory properties of these three traditional beverages and show that the world of flavors is much more diverse than you might think.",
+      "bio": "The panel discussion will feature Michaela Neméthová, \"beer doctor\", certified BJCP judge, and brewer. Also participating will be Jiří Vyzourek, whose great passion is natural wines, which he deals with professionally at the Kaple wine bar in Brno. Last but not least, they will be joined by Jan Židů, roaster and owner of the Au Lait espresso bar in Brno, who will take care of \"the coffee part\"."
     },
     "talk_influencers": {
       "name": "Like, share, drink – gastroinfluencing on social media",
-      "annotation": "Instagram, TikTok, YouTube – where does food taste best today? Three different food influencers reveal how food and drink are presented on social media, what is just a well-arranged illusion, and what is genuine passion. A discussion about authenticity and creative content."
+      "annotation": "Instagram, TikTok, YouTube – where does food taste best today? Three different food influencers reveal how food and drink are presented on social media, what is just a well-arranged illusion, and what is genuine passion. A discussion about authenticity and creative content.",
+      "bio": "Well-known Brno Instagram reporter Pavel Černý will meet with his \"colleagues in the field\", coffee YouTuber and podcaster Tomáš Taussig and gastro-freelancer and social media manager Petra Vlková."
+    },
+    "party_soutez": {
+      "name": "Competition in coffee brewing",
+      "annotation": "Details are brewing as we speak. Stay tuned."
     }
   },
   "promoted": {

@@ -363,16 +363,16 @@
       "subheading": "Tadeáš\u00a0Kacer"
     },
     "ws_sensory": {
-      "subheading": "Chicas Industry"
+      "subheading": "Patrik\u00a0Sláma"
     },
     "ws_yerba": {
-      "subheading": ""
+      "subheading": "Adrian\u00a0Drozdek"
     },
     "ws_water": {
-      "subheading": ""
+      "subheading": "Rozálie\u00a0Nováková"
     },
     "ws_whisky": {
-      "subheading": ""
+      "subheading": "Tomáš\u00a0Dyntar"
     },
     "ws_cupping_penerini": {
       "name": "Cupping",
@@ -383,25 +383,25 @@
       "subheading": "Traffic Coffee"
     },
     "ws_roasting": {
-      "subheading": ""
+      "subheading": "Martin\u00a0Dutkiewic, Alfréd\u00a0Hawle"
     },
     "ws_esko": {
-      "subheading": ""
+      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
     },
     "ws_qb": {
-      "subheading": ""
+      "subheading": "Miroslav\u00a0Dubský"
     },
     "ws_choco": {
-      "subheading": ""
+      "subheading": "Veronika\u00a0Pospíšilová, Marek\u00a0Pospíšil"
     },
     "ws_kaple": {
-      "subheading": ""
+      "subheading": "Jiří\u00a0Vyzourek"
     },
     "ws_hradsky": {
       "subheading": "David\u00a0Hradský"
     },
     "ws_latte": {
-      "subheading": ""
+      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
     },
     "ws_cupping_chicas": {
       "name": "Cupping",
@@ -445,7 +445,6 @@
       "subheading": "Humberto\u00a0Ribes"
     },
     "talk_ks": {
-      "subheading": "Káva spojuje: "
     },
     "talk_helena": {
       "subheading": "Helena\u00a0Oliviero (SCA Italy)"
@@ -463,7 +462,7 @@
       "subheading": "Jiří\u00a0Vyzourek, Michaela\u00a0Neméthová, Honza\u00a0Židů"
     },
     "talk_influencers": {
-      "subheading": "Kam v Brně: Tom\u00a0Tau, Petra\u00a0Vlková"
+      "subheading": "Pavel\u00a0Černý, Tomáš\u00a0Taussig, Petra\u00a0Vlková"
     },
     "engoba": {
       "country": "cz",
@@ -1136,8 +1135,8 @@
                 "$ref": "talk_tripplesenzory"
               },
               {
-                "start": "16:40",
-                "end": "17:50",
+                "start": "16:00",
+                "end": "17:10",
                 "$ref": "talk_influencers"
               }
             ]

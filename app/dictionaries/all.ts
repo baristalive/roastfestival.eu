@@ -52,6 +52,7 @@ export type Presenter = {
   twitter?: string;
   name: string;
   logo: string;
+  bio?: string;
   primaryLink: "web" | "instagram" | "facebook";
   subheading?: string;
   annotation?: string | string[];

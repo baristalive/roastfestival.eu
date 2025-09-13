@@ -18,6 +18,7 @@ export const Modal = ({
   name,
   annotation,
   subheading,
+  bio,
   facebook,
   instagram,
   youtube,
@@ -51,7 +52,13 @@ export const Modal = ({
   const actionIconButtons = !actionIcons ? null : (
     <>
       {Object.entries(actionIcons).map(([k, v]) => (
-        <a key={k} href={v.href} className="py-4 px-8 rounded-full bg-[var(--secondary)] text-[var(--white)]" target="_blank" rel="external">
+        <a
+          key={k}
+          href={v.href}
+          className="rounded-full bg-[var(--secondary)] px-8 py-4 text-[var(--white)]"
+          target="_blank"
+          rel="external"
+        >
           {v.text}
         </a>
       ))}
@@ -66,7 +73,7 @@ export const Modal = ({
           title="Web"
           target="_blank"
           rel="external"
-          className="nav h-[3em] w-[3em] rounded-full bg-[var(--black)] p-2 pt-[.65rem] text-[var(--white)] text-large"
+          className="nav text-large h-[3em] w-[3em] rounded-full bg-[var(--black)] p-2 pt-[.65rem] text-[var(--white)]"
         >
           <WebIcon />
           <span className="sr-only">Web</span>
@@ -114,7 +121,7 @@ export const Modal = ({
           title="X (Twitter)"
           target="_blank"
           rel="external"
-          className="nav h-[3em] w-[3em] rounded-full bg-[var(--secondary)] flex justify-center items-center text-[var(--white)]"
+          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--white)]"
         >
           <TwitterIcon />
           <span className="sr-only">X (Twitter)</span>
@@ -126,7 +133,7 @@ export const Modal = ({
           title="LinkedIn"
           target="_blank"
           rel="external"
-          className="nav h-[3em] w-[3em] rounded-full bg-[var(--secondary)] flex justify-center items-center text-[var(--white)]"
+          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--white)]"
         >
           <LinkedinIcon />
           <span className="sr-only">LinkedIn</span>
@@ -236,8 +243,15 @@ export const Modal = ({
                   <p className="text-base xl:text-lg">{annotation}</p>
                 )}
               </div>
+              {bio && (
+                <div className="flex-grow p-2 font-normal xl:p-10 xl:pt-0">
+                  <h6 className="text-xl font-semibold">{subheading}</h6>
+                  <p className="text-base xl:text-lg leading-5">{bio}</p>
+                </div>
+              )}
               <div className="flex w-full items-center justify-center gap-4 py-2">
-              {actionIconButtons}{socialLinks}
+                {actionIconButtons}
+                {socialLinks}
               </div>
             </div>
           </div>
