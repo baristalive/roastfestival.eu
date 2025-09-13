@@ -41,6 +41,10 @@ export const ZoomableImage = (
   props: Omit<ExportedImageProps, "alt" | "children"> & Image,
 ) => {
   const ref = useRef(null);
+  if (!props.src || props.src === "") {
+    return null;
+  }
+
   return (
     <>
       <ExportedImage
