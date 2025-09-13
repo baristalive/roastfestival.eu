@@ -5,30 +5,12 @@ import {
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import React, { MouseEvent, useRef, useState, CSSProperties } from "react";
-import { Modal } from "../components/Modal";
+import React, { MouseEvent, useRef, useState } from "react";
 import { StationIcon } from "../components/StationIcon";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Flip } from "gsap/all";
-
-const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
-  String(idxm).padEnd(2, "0"),
-);
-export const GRID_STOPS =
-  "[station] 80px [h950] 1fr " +
-  Array.from(Array(8), (_, idx) =>
-    MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr`),
-  )
-    .flat()
-    .join(" ") +
-  " [h1800] 1fr [h1810]";
-export const HOURS = Array.from(Array(9), (_, idx) => ({
-  title: idx + 10 + ":00",
-  start: `h${idx + 9}50`,
-  end: `h${idx + 10}10`,
-  center: `h${idx + 10}00`,
-}));
+import DaySchedule from "../components/DaySchedule";
 
 export const Program = () => {
   const params = useParams();
@@ -123,126 +105,12 @@ export const Program = () => {
               </div>
             )}
             {lang.program.map((day, idx) => (
-              <React.Fragment key={day.$ref}>
-                {day.schedule.length > 0 && (
-                  <div
-                    className={`schedule flex flex-col items-center justify-start gap-2 will-change-auto ${idx !== tab ? "hidden lg:flex xl:hidden" : ""}`}
-                  >
-                    <div className="hidden text-center lg:block xl:hidden">
-                      <h3 className="z-10 text-xl font-bold 2xl:text-3xl">
-                        {
-                          lang.programDays[
-                            day.$ref as keyof typeof lang.programDays
-                          ].name
-                        }
-                      </h3>
-                      <span className="z-10 text-base 2xl:text-xl">
-                        {
-                          lang.programDays[
-                            day.$ref as keyof typeof lang.programDays
-                          ].date
-                        }
-                      </span>
-                    </div>
-                    <div className="card elevate relative flex w-full flex-col justify-between rounded-2xl py-4">
-                      <div
-                        className="hidden p-4 pt-10 text-center xl:grid"
-                        style={{
-                          gridTemplateColumns: GRID_STOPS,
-                        }}
-                      >
-                        {HOURS.map((h) => (
-                          <div
-                            style={{
-                              gridColumnStart: h.start,
-                              gridColumnEnd: h.end,
-                            }}
-                            key={h.title}
-                          >
-                            {h.title}
-                          </div>
-                        ))}
-                      </div>
-                      <div
-                        className="absolute inset-0 z-0 hidden p-4 mt-10 xl:grid"
-                        style={{
-                          gridTemplateColumns: GRID_STOPS,
-                        }}
-                      >
-                        {HOURS.map((h, idx) => (
-                          <div
-                            className="border-r-2 border-dotted border-gray-200"
-                            style={{
-                              gridColumnStart: h.start,
-                              gridColumnEnd: h.center,
-                            }}
-                            key={h.title}
-                          ></div>
-                        ))}
-                      </div>
-                      {day.schedule.map((t) => (
-                        <div
-                          key={t.track}
-                          className={`program-track relative mx-4 xl:grid rounded-2xl py-4 text-xl`}
-                          style={{
-                            gridTemplateColumns: GRID_STOPS,
-                          }}
-                        >
-                          <div className="col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-start-[station] xl:col-end-[h1000] xl:row-end-5">
-                            <StationIcon station={t.track} />
-                            <h3>
-                              {
-                                lang.programCategory[
-                                  t.track as keyof typeof lang.programCategory
-                                ]
-                              }
-                            </h3>
-                          </div>
-                          {t.schedule.flat().map((s, idx) => {
-                            const presenter = lang.presenters[
-                              s.$ref as keyof typeof lang.presenters
-                            ] as Presenter;
-                            return (
-                              <div
-                                className="program-slot-wrapper mx-2 xl:mx-0.5"
-                                key={`${lang.program[tab].$ref}_${presenter?.name}_${idx}`}
-                                style={
-                                  {
-                                    gridColumnStart: `h${s.start.replace(":", "")}`,
-                                    gridColumnEnd: `h${s.end.replace(":", "")}`,
-                                  }
-                                }
-                              >
-                                {presenter === undefined ||
-                                !presenter.name ? null : (
-                                  <>
-                                    <Modal {...presenter}>
-                                      <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-center md:py-2 xl:text-left">
-                                        <div className="col-span-full text-base xl:hidden">
-                                          {s.start} - {s.end}
-                                        </div>
-                                        <h4 className="text-lg font-bold">
-                                          {presenter.name}
-                                        </h4>
-                                        {presenter.subheading && (
-                                          <i className="text-base">
-                                            {presenter.subheading}
-                                          </i>
-                                        )}
-                                      </div>
-                                    </Modal>
-                                  </>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      ))}
-                      <div className="mx-auto">{lang.programDisclaimer}</div>
-                    </div>
-                  </div>
-                )}
-              </React.Fragment>
+              <DaySchedule
+                schedule={day.schedule}
+                dayRef={day.$ref as keyof typeof lang.programDays}
+                className={idx !== tab ? "hidden lg:flex xl:hidden" : ""}
+                key={day.$ref}
+              />
             ))}
           </>
         </div>

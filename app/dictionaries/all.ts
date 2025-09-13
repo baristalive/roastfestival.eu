@@ -17,7 +17,7 @@ type RawProgramItem = {
   day: string;
   noEnd: boolean;
 }
-type RawProgramDay = {
+export type RawProgramDay = {
   $ref: string;
   schedule: {
     track: string;
