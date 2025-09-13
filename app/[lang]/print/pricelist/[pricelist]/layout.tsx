@@ -1,4 +1,4 @@
-import dictionaries, { DayIdsType, SupportedLanguages } from "@/app/dictionaries/all";
+import dictionaries, { SupportedLanguages } from "@/app/dictionaries/all";
 import React from "react";
 
 export async function generateStaticParams() {

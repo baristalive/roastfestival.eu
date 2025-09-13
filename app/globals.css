@@ -414,6 +414,10 @@ header > div {
 .dropdown:focus-within .dropdown-menu {
   display:block;
 }
+.dropdown-menu:focus-within {
+  display:block;
+}
+
 header::before {
   position: absolute;
   content: "";

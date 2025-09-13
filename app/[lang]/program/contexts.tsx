@@ -1,6 +1,6 @@
+import { AllDays, AllTracks, Day, Track } from "@/app/dictionaries/all";
 import { createContext } from "react";
-import { AllDays, AllTracks } from "./consts";
 
-export const FilterTracks = createContext(AllTracks)
+export const FilterTracks = createContext({selectedTracks: AllTracks, setSelectedTracks: (value: Track[]) => {}})
 
-export const FilterDays = createContext(AllDays)
+export const FilterDays = createContext({selectedDays: AllDays, setSelectedDays: (value: Day[]) => {}})

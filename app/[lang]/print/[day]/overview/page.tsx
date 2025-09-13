@@ -1,10 +1,8 @@
 "use client";
 import { use } from "react";
 
-import { StationIcon } from "@/app/[lang]/components/StationIcon";
 import dictionaries, {
-  DayIdsType,
-  Presenter,
+  Day,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
 import { CSSProperties } from "react";
@@ -14,7 +12,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import DaySchedule from "@/app/[lang]/components/DaySchedule";
 type SchedulePropsType = {
-  params: Promise<{ lang: SupportedLanguages; day: DayIdsType }>;
+  params: Promise<{ lang: SupportedLanguages; day: Day }>;
 };
 
 const Schedule = (props: SchedulePropsType) => {
@@ -31,7 +29,7 @@ const Schedule = (props: SchedulePropsType) => {
   return (
     <div className="flex flex-col px-2 pt-2">
       <Header category="overview" />
-      <DaySchedule schedule={day.schedule} dayRef={params.day} className="watermark2" />
+      <DaySchedule schedule={day.schedule} className="watermark2" />
       <Footer />
     </div>
   );

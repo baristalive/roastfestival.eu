@@ -17,16 +17,31 @@ type RawProgramItem = {
   day: string;
   noEnd: boolean;
 }
+export enum Track {
+  Espresso = "espresso",
+  Filter = "brew",
+  Workshop = "workshop",
+  Lecture = "lecture",
+  Party = "party",
+  Honor = "espresso_milk",
+}
+
+export enum Day {
+  Saturday = "day1",
+  Sunday = "day2",
+}
+
+export const AllDays = [Day.Saturday, Day.Sunday]
+export const AllTracks = [Track.Honor, Track.Espresso, Track.Filter, Track.Lecture, Track.Workshop, Track.Party]
+
 export type RawProgramDay = {
-  $ref: string;
+  $ref: Day;
   schedule: {
-    track: string;
+    track: Track;
     schedule: RawProgramItem[][];
   }[]
 }
 export type SupportedLanguages = "cz" | "en";
-export const DayIds = ["day1", "day2"] as const;
-export type DayIdsType = typeof DayIds[number]
 
 export type Presenter = {
   web?: string;

@@ -463,6 +463,9 @@
     "overview": "Přehled",
     "robotarna": "Pražírny"
   },
+  "filterCategories": {
+    "day": "Den"
+  },
   "programDays": {
     "day1": {
       "name": "Sobota",

@@ -107,7 +107,6 @@ export const Program = () => {
             {lang.program.map((day, idx) => (
               <DaySchedule
                 schedule={day.schedule}
-                dayRef={day.$ref as keyof typeof lang.programDays}
                 className={idx !== tab ? "hidden lg:flex xl:hidden" : ""}
                 key={day.$ref}
               />

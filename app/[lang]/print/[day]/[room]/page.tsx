@@ -2,7 +2,7 @@
 import { use } from 'react';
 
 import dictionaries, {
-  DayIdsType,
+  Day,
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
@@ -13,7 +13,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { getRoomCategory, RoomCategory } from "./utils";
 
 type SchedulePropsType = {
-  params: Promise<{ lang: SupportedLanguages; day: DayIdsType; room: RoomCategory }>;
+  params: Promise<{ lang: SupportedLanguages; day: Day; room: RoomCategory }>;
 };
 
 const Schedule = (props : SchedulePropsType) => {

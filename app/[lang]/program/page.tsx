@@ -2,10 +2,8 @@
 import { use, useState } from "react";
 import Link from "next/link";
 
-import dictionaries, { SupportedLanguages } from "../../dictionaries/all";
-import { Program } from "../sections/Program";
+import dictionaries, { AllDays, AllTracks, SupportedLanguages } from "../../dictionaries/all";
 import { FilterDays, FilterTracks } from "./contexts";
-import { AllDays, AllTracks } from "./consts";
 import ToolBar from "./components/ToolBar";
 import { useParams } from "next/navigation";
 import DaySchedule from "../components/DaySchedule";
@@ -34,8 +32,8 @@ const Home = () => {
       </Link>
       <div>
         <div className="flex justify-center">
-          <FilterDays value={selectedDays}>
-            <FilterTracks value={selectedTracks}>
+          <FilterDays value={{ selectedDays, setSelectedDays }}>
+            <FilterTracks value={{ selectedTracks, setSelectedTracks }}>
               <ToolBar />
             </FilterTracks>
           </FilterDays>
@@ -45,14 +43,18 @@ const Home = () => {
             {lang.programTitle}
           </h2>
         </div>
-        {lang.program.map((day) => (
-          <DaySchedule
-            schedule={day.schedule}
-            dayRef={day.$ref as keyof typeof lang.programDays}
-            key={day.$ref}
-            className="-z-10"
-          />
-        ))}
+        <div className="flex overflow-x-scroll">
+          {lang.program.filter(day => selectedDays.includes(day.$ref)).map((day, idx) => (
+            <div className="min-w-[min(100vw,_1600px)]" key={day.$ref}>
+              <DaySchedule
+                schedule={day.schedule}
+                tracks={selectedTracks}
+                showTrackHeader={idx === 0}
+                className="-z-10"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

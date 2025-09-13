@@ -3,7 +3,7 @@ import { use } from "react";
 
 import { StationIcon } from "@/app/[lang]/components/StationIcon";
 import dictionaries, {
-  DayIdsType,
+  Day,
   Presenter,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
@@ -12,7 +12,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import BeanCounter from "./BeanCounter";
 type SchedulePropsType = {
-  params: Promise<{ lang: SupportedLanguages; day: DayIdsType }>;
+  params: Promise<{ lang: SupportedLanguages; day: Day }>;
 };
 
 const Schedule = (props: SchedulePropsType) => {

@@ -1,10 +1,10 @@
-import dictionaries, { SupportedLanguages, DayIds, DayIdsType } from "@/app/dictionaries/all";
+import dictionaries, { SupportedLanguages, AllDays, Day } from "@/app/dictionaries/all";
 
 export async function generateStaticParams() {
-  return DayIds.map((d) => ({ day: d }));
+  return AllDays.map((d) => ({ day: d }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: SupportedLanguages, day: DayIdsType  }>}) {
+export async function generateMetadata({ params }: { params: Promise<{ lang: SupportedLanguages, day: Day  }>}) {
   const resolvedParams = await params;
   const lang = dictionaries[resolvedParams.lang] || dictionaries.en;
 

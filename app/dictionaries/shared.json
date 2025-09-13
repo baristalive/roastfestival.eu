@@ -1174,6 +1174,9 @@
       "$ref": "day2"
     }
   ],
+  "filterCategories": {
+    "track": "Track"
+  },
   "programDays": {
     "day1": {
       "date": "20/9"
