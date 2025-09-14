@@ -1,6 +1,10 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import dictionaries from "./dictionaries/all";
+
+export const viewport: Viewport = {
+  themeColor: "#f7f7f7"
+}
 
 export const metadata: Metadata = {
   title: "Roast!",

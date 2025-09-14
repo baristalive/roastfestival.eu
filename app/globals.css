@@ -142,6 +142,7 @@ footer {
     ),
     var(--primary);
 }
+
 .social-section {
   background: linear-gradient(
       to right,
@@ -155,6 +156,18 @@ footer {
       rgba(0, 0, 0, 0) 400%
     ),
     var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .social-section {
+    background: linear-gradient(
+        to right,
+        var(--background),
+        var(--background) 50%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      var(--primary);
+  }
 }
 .program-section {
   background: linear-gradient(
