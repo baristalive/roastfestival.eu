@@ -73,7 +73,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="wrapper watermark2">
+    <div className="wrapper watermark2  h-screen">
       <Link
         href={params.lang === "cz" ? "./en" : "./cz"}
         hrefLang={params.lang === "cz" ? "en-US" : "cs-CZ"}
@@ -85,7 +85,7 @@ const Home = () => {
       <div className="flex flex-col-reverse">
         {scheduleView !== "loading" && (
           <div
-            className={`flex overflow-x-scroll schedule_style_${scheduleView}`}
+            className={`flex overflow-scroll schedule_style_${scheduleView}`}
           >
             {lang.program
               .filter((day) => selectedDays.includes(day.$ref))
