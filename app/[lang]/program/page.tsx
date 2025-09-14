@@ -85,7 +85,7 @@ const Home = () => {
       <div className="flex flex-col-reverse">
         {scheduleView !== "loading" && (
           <div
-            className={`flex overflow-scroll schedule_style_${scheduleView}`}
+            className={`flex overflow-scroll scroll-smooth schedule_style_${scheduleView}`}
           >
             {lang.program
               .filter((day) => selectedDays.includes(day.$ref))
