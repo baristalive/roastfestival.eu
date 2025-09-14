@@ -1,12 +1,22 @@
 import Home from '@/app/icons/home'
-import React from 'react'
-import Filter from '@/app/icons/filter'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 import Dropdown from './Dropdown'
-import NavBar from '@/app/components/NavBar'
 import List from '@/app/icons/list'
+import { ScheduleView } from '../contexts'
 
 const ToolBar = () => {
+  const {view, setView} = useContext(ScheduleView);
+
+  const handleViewChange = () => {
+    if (!window) return;
+    if (view === "list" || (view === "responsive" && window.innerWidth < 1024)) {
+      setView("schedule")
+    }
+    if (view === "schedule" || (view === "responsive" && window.innerWidth >= 1024)) {
+      setView("list")
+    }
+  }
   return (
     <div className="card elevate rounded-b-[2rem] p-2 fixed w-full xl:w-1/2">
       <nav className="flex gap-4 justify-between px-2">
@@ -14,8 +24,7 @@ const ToolBar = () => {
         <div className="flex gap-x-6 justify-end flex-wrap ">
           <Dropdown />
         </div>
-        <div className='text-4xl w-[calc(1em+1rem)]'></div>
-        {/* <div className="text-4xl py-2 hidden xl:block"><List /></div> */}
+        <div className="text-4xl py-2 cursor-pointer" onClick={handleViewChange}><List /></div>
       </nav>
     </div>
   )

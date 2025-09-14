@@ -10,20 +10,21 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { StationIcon } from "./StationIcon";
 import Modal from "./Modal";
+import { ScheduleViewType } from "../program/contexts";
 
 const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
   String(idxm).padEnd(2, "0"),
 );
 
-const GRID_STOPS_PREFIX = "[station] 100px "
+const GRID_STOPS_PREFIX = "[station] max(10vw, 100px) "
 const GRID_STOPS =
-  "[h950] 1fr " +
+  "[h950] 1fr max(1vw, 30px) " +
   Array.from(Array(8), (_, idx) =>
-    MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr`),
+    MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr max(1vw, 30px)`),
   )
     .flat()
     .join(" ") +
-  " [h1800] 1fr [h1810]";
+  " [h1800] 1fr max(1vw, 30px) [h1810]";
 const HOURS = Array.from(Array(9), (_, idx) => ({
   title: idx + 10 + ":00",
   start: `h${idx + 9}50`,
@@ -35,8 +36,9 @@ const DaySchedule = ({
   schedule,
   className = "",
   showTrackHeader = false,
+  appearance = "responsive",
   tracks = AllTracks,
-}: { className?: string; tracks?: Track[]; showTrackHeader?: boolean } & Pick<
+}: { className?: string; tracks?: Track[]; showTrackHeader?: boolean; appearance?: ScheduleViewType } & Pick<
   RawProgramDay,
   "schedule"
 >) => {
@@ -50,10 +52,10 @@ const DaySchedule = ({
 
   return (
     <div
-      className={`relative flex w-full flex-col justify-between py-4 will-change-auto ${className}`}
+      className={`relative flex w-full flex-col justify-between py-4 will-change-auto ${className} `}
     >
       <div
-        className="hidden p-4 text-center xl:grid"
+        className={`p-4 text-center schedule_header_style_${appearance}`}
         style={{
           gridTemplateColumns: gridStops,
         }}
@@ -71,7 +73,7 @@ const DaySchedule = ({
         ))}
       </div>
       <div
-        className="absolute inset-0 bottom-[2em] top-[2.5em] z-0 hidden p-4 xl:grid"
+        className={`absolute inset-0 bottom-[2em] top-[2.5em] z-0 p-4 schedule_header_style_${appearance}`}
         style={{
           gridTemplateColumns: gridStops,
         }}
@@ -92,12 +94,12 @@ const DaySchedule = ({
         .map((t) => (
           <div
             key={t.track}
-            className={`program-track relative mx-4 rounded-2xl py-4 text-xl xl:grid`}
+            className={`program-track relative mx-4 rounded-2xl py-4 text-xl schedule_content_style_${appearance}`}
             style={{
               gridTemplateColumns: gridStops,
             }}
           >
-            <div className={`col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center xl:col-start-[station] xl:col-end-[h1000] xl:row-end-5 ${showTrackHeader ? "": "xl:hidden"}`}>
+            <div className={`col-span-full row-start-1 flex flex-col items-center justify-center p-2 text-center col-start-[station] col-end-[h1000] row-end-5 ${showTrackHeader ? "": "hidden"}`}>
               <StationIcon station={t.track} />
               <h3>
                 {
@@ -123,8 +125,8 @@ const DaySchedule = ({
                   {presenter === undefined || !presenter.name ? null : (
                     <>
                       <Modal {...presenter}>
-                        <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 text-center md:py-2 xl:text-left">
-                          <div className="col-span-full text-base xl:hidden">
+                        <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 md:py-2">
+                          <div className={`col-span-full text-base schedule_item_style_${appearance}`}>
                             {s.start} - {s.end}
                           </div>
                           <h4 className="text-lg font-bold">
