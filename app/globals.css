@@ -492,58 +492,6 @@ header::after {
 .hide .hidden-link {
   display: none;
 }
-.program-track {
-  transition: background-color 0.5s;
-}
-.card .program-track:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.program-slot {
-  color: var(--white);
-}
-
-.program-slot-wrapper {
-  grid-column: 1 / -1;
-}
-
-@media (min-width: 1280px) {
-  .program-slot-wrapper {
-    grid-column-start: var(--gridColumnStart);
-    grid-column-end: var(--gridColumnEnd);
-  }
-}
-
-@media print {
-  .program-slot-wrapper {
-    grid-column-start: var(--gridColumnStart);
-    grid-column-end: var(--gridColumnEnd);
-  }
-}
-
-.program-track:nth-of-type(3n) .program-slot {
-  background-color: var(--black);
-}
-
-.program-track:nth-of-type(3n + 1) .program-slot {
-  background-color: var(--accent);
-}
-
-.program-track:nth-of-type(3n + 2) .program-slot {
-  background-color: var(--primary);
-}
-
-.program-track:nth-of-type(3n) .program-slot.no-end {
-  background: linear-gradient(to left, var(--background), var(--black) 20px);
-}
-
-.program-track:nth-of-type(3n + 1) .program-slot.no-end {
-  background: linear-gradient(to left, var(--background), var(--accent) 20px);
-}
-
-.program-track:nth-of-type(3n + 2) .program-slot.no-end {
-  background: linear-gradient(to left, var(--background), var(--primary) 20px);
-}
 
 .no-end {
   border-top-right-radius: 0;
@@ -745,42 +693,64 @@ ol.round-counter li::before {
   pointer-events: none;
 }
 
-.schedule_content_style_list,
-.schedule_content_style_responsive,
-.schedule_item_style_list,
-.schedule_item_style_responsive {
+.schedule-style-list .schedule-content,
+.schedule-style-list .schedule-item {
   display: block;
   text-align: center;
 }
 
-.schedule_content_style_schedule,
-.schedule_header_style_schedule {
+.schedule-style-schedule .schedule-track,
+.schedule-style-schedule .schedule-header {
   display: grid;
 }
-.schedule_header_style_responsive,
-.schedule_header_style_list,
-.schedule_item_style_schedule {
+.schedule-style-list .schedule-header,
+.schedule-style-schedule .schedule-subitem {
   display: none;
 }
-.schedule_item_wrapper_style_list, .schedule_item_wrapper_style_responsive {
-  min-width: 90vw;
+.schedule-style-schedule .schedule-item {
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+}
+
+@media (max-width: 1280px) {
+  .schedule-style-list .schedule-wrapper {
+    min-width: 80vw;
+  }
 }
 @media (min-width: 1280px) {
-  .schedule_item_wrapper_style_list {
+  .schedule-style-list .schedule-item-wrapper {
     min-width: 30vw;
   }
-  .schedule_item_wrapper_style_responsive {
-    min-width: auto;
-  }
-  .schedule_header_style_responsive,
-  .schedule_content_style_responsive {
-    display: grid;
-  }
-  .schedule_item_style_responsive {
-    display: none;
-  }
-  .schedule_style_list {
+  .schedule-style-list {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.schedule-item {
+  color: var(--white);
+}
+
+.schedule-track:nth-of-type(3n) .schedule-item {
+  background-color: var(--black);
+}
+
+.schedule-track:nth-of-type(3n + 1) .schedule-item {
+  background-color: var(--accent);
+}
+
+.schedule-track:nth-of-type(3n + 2) .schedule-item {
+  background-color: var(--primary);
+}
+
+.schedule-track:nth-of-type(3n) .schedule-item.no-end {
+  background: linear-gradient(to left, var(--background), var(--black) 20px);
+}
+
+.schedule-track:nth-of-type(3n + 1) .schedule-item.no-end {
+  background: linear-gradient(to left, var(--background), var(--accent) 20px);
+}
+
+.schedule-track:nth-of-type(3n + 2) .schedule-item.no-end {
+  background: linear-gradient(to left, var(--background), var(--primary) 20px);
 }

@@ -52,11 +52,7 @@ const Home = () => {
 
   const handleScheduleView = () => {
     if (!window) return;
-    const newView =
-      scheduleView === "list" ||
-      (scheduleView === "responsive" && window.innerWidth < 1024)
-        ? "schedule"
-        : "list";
+    const newView = scheduleView === "list" ? "schedule" : "list";
     setScheduleView(newView);
     localStorage.setItem(SCHEDULE_VIEW, newView);
   };
@@ -68,12 +64,14 @@ const Home = () => {
     const tracks =
       localStorage.getItem(SCHEDULE_FILTER_TRACKS)?.split(",") || AllTracks;
     setSelectedTracks(tracks as Track[]);
-    const view = localStorage.getItem(SCHEDULE_VIEW) || window.innerWidth < 1024 ? "list" : "schedule";
+    const view =
+      localStorage.getItem(SCHEDULE_VIEW) ||
+      (window.innerWidth < 1024 ? "list" : "schedule");
     setScheduleView(view as ScheduleViewType);
   }, []);
 
   return (
-    <div className="wrapper watermark2  h-screen">
+    <div className="wrapper watermark2 h-screen">
       <Link
         href={params.lang === "cz" ? "/en/program" : "/cz/program"}
         hrefLang={params.lang === "cz" ? "en-US" : "cs-CZ"}
@@ -85,13 +83,13 @@ const Home = () => {
       <div className="flex flex-col-reverse">
         {scheduleView !== "loading" && (
           <div
-            className={`flex overflow-scroll scroll-smooth schedule_style_${scheduleView}`}
+            className={`flex overflow-scroll scroll-smooth schedule-style-${scheduleView}`}
           >
             {lang.program
               .filter((day) => selectedDays.includes(day.$ref))
               .map((day, idx) => (
                 <div
-                  className={`flex flex-col p-4 schedule_item_wrapper_style_${scheduleView}`}
+                  className={`flex flex-col p-4`}
                   key={day.$ref}
                 >
                   <div className="sticky flex w-full flex-col">

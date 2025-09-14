@@ -18,9 +18,9 @@ const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
 
 const GRID_STOPS_PREFIX = "[station] max(10vw, 100px) ";
 const GRID_STOPS =
-  "[h950] 1fr max(1vw, 30px) " +
+  "[h950] 1fr max(1vw, 25px) " +
   Array.from(Array(8), (_, idx) =>
-    MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr max(1vw, 30px)`),
+    MINUTE_STRINGS.map((m) => `[h${idx + 10}${m}] 1fr max(1vw, 25px)`),
   )
     .flat()
     .join(" ") +
@@ -36,7 +36,7 @@ const DaySchedule = ({
   schedule,
   className = "",
   showTrackHeader = false,
-  appearance = "responsive",
+  appearance = "loading",
   tracks = AllTracks,
 }: {
   className?: string;
@@ -56,10 +56,10 @@ const DaySchedule = ({
 
   return (
     <div
-      className={`relative flex w-full flex-col justify-between py-4 will-change-auto ${className} `}
+      className={`relative flex w-full flex-col justify-between py-4 will-change-auto schedule-wrapper ${className}`}
     >
       <div
-        className={`p-4 text-center schedule_header_style_${appearance}`}
+        className={`schedule-header p-4 text-center`}
         style={{
           gridTemplateColumns: gridStops,
         }}
@@ -77,7 +77,7 @@ const DaySchedule = ({
         ))}
       </div>
       <div
-        className={`absolute inset-0 bottom-[2em] top-[2.5em] z-0 p-4 schedule_header_style_${appearance}`}
+        className={`schedule-header absolute inset-0 bottom-[2em] top-[2.5em] z-0 p-4`}
         style={{
           gridTemplateColumns: gridStops,
         }}
@@ -98,7 +98,7 @@ const DaySchedule = ({
         .map((t) => (
           <div
             key={t.track}
-            className={`program-track relative mx-4 rounded-2xl py-4 text-xl schedule_content_style_${appearance}`}
+            className={`schedule-track relative mx-4 rounded-2xl py-4 text-xl`}
             style={{
               gridTemplateColumns: gridStops,
             }}
@@ -126,7 +126,7 @@ const DaySchedule = ({
                 ] as Presenter;
                 return (
                   <div
-                    className="program-slot-wrapper mx-2 xl:mx-0.5"
+                    className="schedule-item-wrapper"
                     key={`${presenter?.name}_${idx}`}
                     style={{
                       gridColumnStart: `h${s.start.replace(":", "")}`,
@@ -136,9 +136,9 @@ const DaySchedule = ({
                     {presenter === undefined || !presenter.name ? null : (
                       <>
                         <Modal {...presenter}>
-                          <div className="program-slot elevate my-1 overflow-hidden rounded-lg px-3 py-1 md:py-2">
+                          <div className="schedule-item elevate my-1 overflow-hidden rounded-lg px-3 py-1 md:py-2">
                             <div
-                              className={`col-span-full text-base schedule_item_style_${appearance}`}
+                              className={`schedule-subitem col-span-full text-base`}
                             >
                               {s.start} - {s.end}
                             </div>
