@@ -68,7 +68,7 @@ const Home = () => {
     const tracks =
       localStorage.getItem(SCHEDULE_FILTER_TRACKS)?.split(",") || AllTracks;
     setSelectedTracks(tracks as Track[]);
-    const view = localStorage.getItem(SCHEDULE_VIEW) || "responsive";
+    const view = localStorage.getItem(SCHEDULE_VIEW) || window.innerWidth < 1024 ? "list" : "schedule";
     setScheduleView(view as ScheduleViewType);
   }, []);
 
