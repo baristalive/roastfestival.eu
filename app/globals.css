@@ -766,7 +766,10 @@ ol.round-counter li::before {
   min-width: 90vw;
 }
 @media (min-width: 1280px) {
-  .schedule_item_wrapper_style_list, .schedule_item_wrapper_style_responsive {
+  .schedule_item_wrapper_style_list {
+    min-width: 30vw;
+  }
+  .schedule_item_wrapper_style_responsive {
     min-width: auto;
   }
   .schedule_header_style_responsive,

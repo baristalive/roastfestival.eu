@@ -18,24 +18,8 @@ enum FilterKind {
 const Dropdown = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const { selectedTracks, setSelectedTracks } = useContext(FilterTracks);
-  const { selectedDays, setSelectedDays } = useContext(FilterDays);
-
-  const changeState = <T,>(item: T, state: T[], setState: (v: T[]) => void) => {
-    if (state.includes(item)) {
-      setState(state.filter((i) => i !== item));
-    } else {
-      setState([...state, item]);
-    }
-  };
-
-  const handleFilterClick = (type: FilterKind, item: string) => {
-    if (type === FilterKind.day) {
-      changeState(item as Day, selectedDays, setSelectedDays);
-    } else {
-      changeState(item as Track, selectedTracks, setSelectedTracks);
-    }
-  };
+  const { selectedTracks, toggleSelectedTracks } = useContext(FilterTracks);
+  const { selectedDays, toggleSelectedDays } = useContext(FilterDays);
 
   return (
     <div className="flex w-full flex-col justify-center">
@@ -98,7 +82,7 @@ const Dropdown = () => {
                     key={day.$ref}
                     onClick={(e) => {
                       e.preventDefault();
-                      handleFilterClick(FilterKind.day, day.$ref);
+                      toggleSelectedDays(day.$ref);
                     }}
                   >
                     <input
@@ -143,7 +127,7 @@ const Dropdown = () => {
                     key={track}
                     onClick={(e) => {
                       e.preventDefault();
-                      handleFilterClick(FilterKind.track, track);
+                      toggleSelectedTracks(track);
                     }}
                   >
                     <input

@@ -45,7 +45,7 @@ const DaySchedule = ({
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  if (schedule.length === 0) {
+  if (schedule.length === 0 || appearance === "loading") {
     return null;
   }
   const gridStops = showTrackHeader ? GRID_STOPS_PREFIX + GRID_STOPS : GRID_STOPS
