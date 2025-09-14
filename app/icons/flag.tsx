@@ -8,9 +8,9 @@ const flags = {
   ),
   sk: (
     <>
-      <path fill="#0052b4" d="m0 160 256-32 256 32v192l-256 32L0 352z" />
+      <path fill="#0052b4" d="m0 160 260-32 256 32v192l-256 32L0 352z" />
       <path fill="#eee" d="M0 0h512v160H0z" />
-      <path fill="#d80027" d="M0 352h512v160H0z" />
+      <path fill="#d80027" d="M0 352h512v168H0z" />
       <path
         fill="#eee"
         d="M64 63v217c0 104 144 137 144 137s144-33 144-137V63z"
@@ -46,11 +46,23 @@ const flags = {
   ),
   de: (
     <>
-    <path fill="#D80027" d="M0 136h512v240H0z"/>
-    <path fill="#FFDA44" d="M0 344h512v168H0z"/>
-    <path fill="#333" d="M0 0h512v168H0z"/>
+      <path fill="#D80027" d="M0 136h520v240H0z" />
+      <path fill="#FFDA44" d="M0 344h520v168H0z" />
+      <path fill="#333" d="M0 0h512v168H0z" />
     </>
-  )
+  ),
+  si: (
+    <>
+      <path fill="#0052B4" d="M0 136h512v240H0z" />
+      <path fill="#D80027" d="M0 344h512v168H0z" />
+      <path fill="#EEE" d="M0 0h512v168H0z" />
+      <path fill="#0052B4" d="M222.6 202.7V100.2H89v102.5z" />
+      <path
+        fill="#EEE"
+        d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"
+      />
+    </>
+  ),
 };
 
 const Flag = ({ country }: { country: keyof typeof flags }) => (
@@ -59,7 +71,8 @@ const Flag = ({ country }: { country: keyof typeof flags }) => (
     width="3em"
     height="3em"
     viewBox="0 0 512 512"
-  >{flags[country]}
+  >
+    {flags[country]}
   </svg>
 );
 

@@ -11,6 +11,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Sup
   }
 }
 
+export function generateViewport() {
+  return {
+    themeColor: '#ffa600',
+  }
+}
+
 export default function RootLayout({
   children,
 }: {

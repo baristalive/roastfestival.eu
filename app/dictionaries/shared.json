@@ -27,7 +27,6 @@
       "facebook": "https://www.facebook.com/baristaroasters",
       "instagram": "https://www.instagram.com/barista_roasters",
       "modalProps": {
-        "showName": false
       }
     },
     "black": {
@@ -39,7 +38,6 @@
       "facebook": "https://www.facebook.com/black.svk",
       "instagram": "https://www.instagram.com/black.svk",
       "modalProps": {
-        "showName": false
       }
     },
     "buchta_b": {
@@ -76,7 +74,6 @@
       "facebook": "https://www.facebook.com/prazirnadosmundos",
       "instagram": "https://www.instagram.com/dosmundos_vinohrady",
       "modalProps": {
-        "showName": false
       }
     },
     "francin": {
@@ -87,7 +84,6 @@
       "web": "https://www.francin.cz/",
       "facebook": "https://www.facebook.com/francin.praha/",
       "modalProps": {
-        "showName": false
       }
     },
     "gills": {
@@ -99,7 +95,6 @@
       "instagram": "https://www.instagram.com/gills.cz/",
       "facebook": "https://www.facebook.com/gills.cz/",
       "modalProps": {
-        "showName": false,
         "className": "p-8"
       }
     },
@@ -112,7 +107,6 @@
       "facebook": "https://www.facebook.com/haybcoffee/",
       "instagram": "https://www.instagram.com/haybcoffee",
       "modalProps": {
-        "showName": false
       }
     },
     "hodne_nekde": {
@@ -132,7 +126,6 @@
       "facebook": "https://www.facebook.com/idylika/",
       "instagram": "https://www.instagram.com/idylika/",
       "modalProps": {
-        "showName": false
       }
     },
     "ig": {
@@ -143,7 +136,6 @@
       "primaryLink": "instagram",
       "web": "https://www.prazirnaignac.cz/",
       "modalProps": {
-        "showName": false,
         "className": "p-8"
       }
     },
@@ -165,7 +157,6 @@
       "facebook": "https://www.facebook.com/kmen.coffee",
       "instagram": "https://www.instagram.com/kmen.coffee",
       "modalProps": {
-        "showName": false
       }
     },
     "kolna": {
@@ -177,8 +168,7 @@
       "facebook": "https://www.facebook.com/kolnaroastery/",
       "instagram": "https://www.instagram.com/kolnaroastery/",
       "modalProps": {
-        "className": "p-8",
-        "showName": false
+        "className": "p-8"
       }
     },
     "kudyznudy": {
@@ -204,7 +194,6 @@
       "web": "https://www.liskafe.cz/",
       "facebook": "https://www.facebook.com/liskafe",
       "modalProps": {
-        "showName": false
       }
     },
     "lot": {
@@ -216,7 +205,6 @@
       "facebook": "https://www.facebook.com/LOT.roastery",
       "instagram": "https://www.instagram.com/lot.roastery",
       "modalProps": {
-        "showName": false
       }
     },
     "mamacoffee": {
@@ -228,7 +216,6 @@
       "facebook": "https://www.facebook.com/mamacoffee",
       "instagram": "https://www.instagram.com/mama_coffee",
       "modalProps": {
-        "showName": false
       }
     },
     "miners": {
@@ -239,7 +226,6 @@
       "web": "https://www.theminers.eu",
       "instagram": "https://www.instagram.com/theminerscoffee",
       "modalProps": {
-        "showName": false
       }
     },
     "parabellum": {
@@ -259,7 +245,6 @@
       "web": "https://eshop.penerini.cz/",
       "instagram": "https://www.instagram.com/penerini_roastery_cz/",
       "modalProps": {
-        "showName": false
       }
     },
     "pikola": {
@@ -271,7 +256,6 @@
       "instagram": "https://www.instagram.com/pikola_kafe/",
       "facebook": "https://www.facebook.com/PikolaKafe",
       "modalProps": {
-        "showName": false
       }
     },
     "poppy": {
@@ -283,7 +267,6 @@
       "facebook": "https://facebook.com/poppybeanscoffee",
       "instagram": "https://instagram.com/poppybeanscoffee",
       "modalProps": {
-        "showName": false
       }
     },
     "punkt": {
@@ -306,7 +289,6 @@
       "facebook": "https://www.facebook.com/quickbornroastery",
       "instagram": "https://www.instagram.com/quickborn_roastery",
       "modalProps": {
-        "showName": false
       }
     },
     "rast": {
@@ -326,7 +308,6 @@
       "facebook": "https://www.facebook.com/rebelbeancz/",
       "instagram": "https://www.instagram.com/rebelbeancz/",
       "modalProps": {
-        "showName": false
       }
     },
     "red_fawn": {
@@ -337,7 +318,6 @@
       "name": "Red Fawn",
       "primaryLink": "instagram",
       "modalProps": {
-        "showName": false
       }
     },
     "wildkaffee": {
@@ -349,8 +329,7 @@
       "facebook": "https://www.facebook.com/wildkaffee/",
       "instagram": "https://www.instagram.com/wildkaffee/",
       "modalProps": {
-        "showName": false,
-        "className": "p-8"
+        "className": "p-12"
       }
     },
     "flatwhite_machines": {
@@ -360,51 +339,73 @@
       "logo": "flatwhite_machines.png"
     },
     "ws_home": {
+      "country": "cz",
       "subheading": "Tadeáš\u00a0Kacer"
     },
     "ws_sensory": {
+      "country": "cz",
       "subheading": "Patrik\u00a0Sláma"
     },
     "ws_yerba": {
+      "country": "cz",
       "subheading": "Adrian\u00a0Drozdek"
     },
     "ws_water": {
+      "country": "cz",
       "subheading": "Rozálie\u00a0Nováková"
     },
     "ws_whisky": {
+      "country": "cz",
       "subheading": "Tomáš\u00a0Dyntar"
     },
     "ws_cupping_penerini": {
       "name": "Cupping",
-      "subheading": "Penerini"
+      "country": "cz",
+      "subheading": "Penerini",
+      "logo": "penerini.png",
+      "primaryLink": "web",
+      "web": "https://eshop.penerini.cz/",
+      "instagram": "https://www.instagram.com/penerini_roastery_cz/"
     },
     "ws_cupping_traffic": {
       "name": "Cupping",
-      "subheading": "Traffic Coffee"
+      "country": "cz",
+      "subheading": "Traffic Coffee",
+      "logo": "traffic_coffee.png",
+      "primaryLink": "instagram",
+      "instagram": "https://www.instagram.com/trafficcoffeeol"
     },
     "ws_roasting": {
+      "country": "cz",
       "subheading": "Martin\u00a0Dutkiewic, Alfréd\u00a0Hawle"
     },
     "ws_esko": {
+      "country": "cz",
       "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
     },
     "ws_qb": {
+      "country": "cz",
       "subheading": "Miroslav\u00a0Dubský"
     },
     "ws_choco": {
+      "country": "cz",
       "subheading": "Veronika\u00a0Pospíšilová, Marek\u00a0Pospíšil"
     },
     "ws_kaple": {
+      "country": "cz",
       "subheading": "Jiří\u00a0Vyzourek"
     },
     "ws_hradsky": {
+      "country": "cz",
       "subheading": "David\u00a0Hradský"
     },
     "ws_latte": {
+      "country": "cz",
       "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
     },
     "ws_cupping_chicas": {
       "name": "Cupping",
+      "country": "cz",
       "subheading": "Chicas Industry"
     },
     "ws_cupping_lot": {
@@ -416,7 +417,6 @@
       "facebook": "https://www.facebook.com/LOT.roastery",
       "instagram": "https://www.instagram.com/lot.roastery",
       "modalProps": {
-        "showSubheading": false
       }
     },
     "ws_cupping_punkt": {
@@ -427,24 +427,26 @@
       "logo": "punkt.png",
       "facebook": "https://www.facebook.com/punkt.cafe",
       "modalProps": {
-        "className": "p-12",
-        "showSubheading": false
+        "className": "p-12"
       }
     },
     "talk_biology": {
       "logo": "lor.jpg",
+      "country": "cz",
       "subheading": "MUDr.\u00a0Barbara\u00a0Šťastná",
       "modalProps": {
         "className": ""
       }
     },
     "talk_green": {
+      "country": "cz",
       "subheading": "Tereza\u00a0Prejdová"
     },
     "talk_humberto": {
       "subheading": "Humberto\u00a0Ribes"
     },
     "talk_ks": {
+      "country": "cz"
     },
     "talk_helena": {
       "subheading": "Helena\u00a0Oliviero (SCA Italy)"
@@ -453,15 +455,18 @@
       "subheading": "Alica\u00a0Banszka"
     },
     "talk_tanzanie": {
+      "country": "cz",
       "subheading": "Ladislav\u00a0Kolář, Helena\u00a0Kolářovová"
     },
     "talk_madalin": {
       "subheading": "Madalin\u00a0Truica"
     },
     "talk_tripplesenzory": {
+      "country": "cz",
       "subheading": "Jiří\u00a0Vyzourek, Michaela\u00a0Neméthová, Honza\u00a0Židů"
     },
     "talk_influencers": {
+      "country": "cz",
       "subheading": "Pavel\u00a0Černý, Tomáš\u00a0Taussig, Petra\u00a0Vlková"
     },
     "engoba": {
@@ -498,6 +503,7 @@
       "web": "https://www.gastroin.cz/"
     },
     "kavaspojuje": {
+      "country": "cz",
       "logo": "kavaspojuje.png",
       "name": "Káva spojuje",
       "primaryLink": "web",
@@ -510,7 +516,10 @@
       "primaryLink": "web",
       "web": "https://triplefivecoffee.com/",
       "instagram": "https://www.instagram.com/triplefivecoffee/",
-      "facebook": "http://www.facebook.com/triplefivecoffee"
+      "facebook": "http://www.facebook.com/triplefivecoffee",
+      "modalProps": {
+        "className": "p-12"
+      }
     },
     "coffeespot": {
       "country": "cz",
@@ -535,7 +544,10 @@
       "primaryLink": "web",
       "web": "https://www.daliacoffee.cz",
       "facebook": "https://www.facebook.com/prazirnaDaliaCoffee/",
-      "instagram": "https://www.instagram.com/prazirnadalia/"
+      "instagram": "https://www.instagram.com/prazirnadalia/",
+      "modalProps": {
+        "className": "p-12"
+      }
     },
     "labanda": {
       "name": "La Banda Caffeina",
@@ -543,7 +555,10 @@
       "logo": "labanda.png",
       "primaryLink": "web",
       "web": "https://www.labandacaffeina.com/",
-      "instagram": "https://www.instagram.com/_labandacaffeina/"
+      "instagram": "https://www.instagram.com/_labandacaffeina/",
+      "modalProps": {
+        "className": "p-12"
+      }
     },
     "chcikofein": {
       "name": "Chci kofein",
@@ -560,7 +575,10 @@
       "logo": "mala_prazarna.png",
       "primaryLink": "instagram",
       "web": "https://malaprazarna.si ",
-      "instagram": "https://www.instagram.com/malaprazarna"
+      "instagram": "https://www.instagram.com/malaprazarna",
+      "modalProps": {
+        "className": "p-8"
+      }
     },
     "five_elephant": {
       "name": "Five Elephant.",
@@ -587,6 +605,7 @@
       "logo": "101.svg"
     },
     "coffeeculture": {
+      "country": "cz",
       "name": "Coffee Culture",
       "instagram": "https://www.instagram.com/coffeeculture_cz/",
       "logo": "coffeeculture.png",
@@ -594,6 +613,7 @@
       "primaryLink": "web"
     },
     "the_roses": {
+      "country": "cz",
       "name": "The Roses",
       "web": "https://theroses.cz/",
       "instagram": "https://www.instagram.com/therosescz",

@@ -122,8 +122,8 @@ const InstagramFeed = () => {
 
   return (
     <section className="social-section watermark">
-      <div className="mx-auto grid max-w-[1900px] items-end gap-12 p-8 lg:grid-cols-[1fr,3fr] 2xl:gap-32">
-        <div className="flex flex-col md:p-12">
+      <div className="mx-auto grid max-w-[1900px] items-end gap-12 py-8 lg:grid-cols-[1fr,3fr] 2xl:gap-32">
+        <div className="flex flex-col md:p-12 px-8">
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.social.title}
           </h2>

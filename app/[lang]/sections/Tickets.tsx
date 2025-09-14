@@ -22,7 +22,7 @@ export const Tickets = () => {
           <Bar />
         </div>
       </div>
-      <div className="lg:flex items-center justify-center lg:py-24 px-8 max-w-[1900px] mx-auto">
+      <div className="lg:flex items-center justify-center pb-8 lg:py-24 px-8 max-w-[1900px] mx-auto">
         <div className="grid grid-cols-2 items-start justify-center gap-8 sm:grid-cols-3 lg:grid-cols-4">
           {lang.tickets.priceList.map((row, rowIdx) => {
             const availability = getAvailability(
