@@ -33,13 +33,13 @@ export const Info = () => {
             <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal lg:text-xl">
               {lang.exhibitors.text}
             </div>
-            <Bar  />
+            <Bar />
           </div>
           <div className="cards flex flex-col gap-8 md:grid-cols-2 2xl:grid">
             <div className="card elevate h-auto rounded-2xl pb-8 text-base md:px-12 2xl:text-3xl">
               <Card />
             </div>
-            <div className="card nav elevate flex h-full flex-col rounded-2xl pb-4 md:px-12 ">
+            <div className="card nav elevate flex h-full flex-col rounded-2xl pb-4 md:px-12">
               <a
                 href={lang.exhibitors.formLink}
                 rel="external"
@@ -57,9 +57,9 @@ export const Info = () => {
           </div>
         </div>
       </section>
-      <section className="watermark-large relative mdx-content-section">
+      <section className="watermark-large mdx-content-section relative">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:p-12">
-          <div className=" h-auto rounded-2xl py-16 text-lg md:px-32">
+          <div className="h-auto rounded-2xl py-16 text-lg md:px-32">
             <Content />
           </div>
         </div>

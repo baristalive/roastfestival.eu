@@ -10,7 +10,7 @@ import "react-medium-image-zoom/dist/styles.css";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h2: ({ children }: PropsWithChildren) => (
-      <h2 className="clear-both mb-4 mt-6 px-8 text-2xl font-bold md:mt-12 md:px-0  lg:text-3xl">
+      <h2 className="clear-both mb-4 mt-6 px-8 text-2xl font-bold md:mt-12 md:px-0 lg:text-3xl">
         {children}
       </h2>
     ),
@@ -55,12 +55,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       node,
       ...rest
     }: PropsWithChildren & { node?: Element | undefined }) => (
-      <td {...rest} className="text-nowrap  p-4 px-8 text-center">
+      <td {...rest} className="text-nowrap p-4 px-8 text-center">
         {children}
       </td>
     ),
     tr: ({ children }: PropsWithChildren) => (
-      <tr className="divide-x divide-dashed last:rounded-b-2xl  even:bg-slate-50">
+      <tr className="divide-x divide-dashed last:rounded-b-2xl even:bg-slate-50">
         {children}
       </tr>
     ),
@@ -79,7 +79,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
               src={`/images/photos/${src!}`}
               alt={altText}
               {...rest}
-              {...(sizing === "landscape" ? { zoomed: LANDSCAPE.lg.zoomed, small: LANDSCAPE.sm.small} : { zoomed: PORTRAIT.lg.zoomed, small: PORTRAIT.sm.small})}
+              {...(sizing === "landscape"
+                ? { zoomed: LANDSCAPE.lg.zoomed, small: LANDSCAPE.sm.small }
+                : { zoomed: PORTRAIT.lg.zoomed, small: PORTRAIT.sm.small })}
             />
           </div>
           <div className="block md:hidden">

@@ -22,10 +22,13 @@ const eslintConfig = [
           varsIgnorePattern: "^_",
         },
       ],
-      'perfectionist/sort-interfaces': ['error'],
-      'perfectionist/sort-objects': ['error', {
-        type: 'natural',
-      }],
+      "perfectionist/sort-interfaces": ["error"],
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          type: "natural",
+        },
+      ],
     },
     settings: {
       perfectionist: {

@@ -123,7 +123,7 @@ const InstagramFeed = () => {
   return (
     <section className="social-section watermark">
       <div className="mx-auto grid max-w-[1900px] items-end gap-12 py-8 lg:grid-cols-[1fr,3fr] 2xl:gap-32">
-        <div className="flex flex-col md:p-12 px-8">
+        <div className="flex flex-col px-8 md:p-12">
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.social.title}
           </h2>
@@ -157,9 +157,7 @@ const InstagramFeed = () => {
         <div className="animate-hover-pause carousel flex overflow-hidden py-4">
           <div className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4 pr-4 will-change-transform">
             {posts
-              ? posts.map((p) => (
-                  <ContentTile {...p} key={p.id} />
-                ))
+              ? posts.map((p) => <ContentTile {...p} key={p.id} />)
               : Array(LIMIT)
                   .fill(0)
                   .map((_, idx) => <ContentTileSkeleton key={idx} />)}
@@ -169,9 +167,7 @@ const InstagramFeed = () => {
             aria-hidden
           >
             {posts
-              ? posts.map((p) => (
-                  <ContentTile {...p} key={p.id} />
-                ))
+              ? posts.map((p) => <ContentTile {...p} key={p.id} />)
               : Array(LIMIT)
                   .fill(0)
                   .map((_, idx) => <ContentTileSkeleton key={idx} />)}

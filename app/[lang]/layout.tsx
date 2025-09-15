@@ -4,17 +4,23 @@ export async function generateStaticParams() {
   return Object.keys(dictionaries).map((lang: string) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: SupportedLanguages }>}) {
-  const { lang } = await params
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: SupportedLanguages }>;
+}) {
+  const { lang } = await params;
   return {
-    description: dictionaries[lang]?.metadata.description || dictionaries.en.metadata.description
-  }
+    description:
+      dictionaries[lang]?.metadata.description ||
+      dictionaries.en.metadata.description,
+  };
 }
 
 export function generateViewport() {
   return {
-    themeColor: '#ffa600',
-  }
+    themeColor: "#ffa600",
+  };
 }
 
 export default function RootLayout({

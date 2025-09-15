@@ -7,22 +7,20 @@ export enum Availability {
   Available,
 }
 
-type DateType = "start" | "end"
+type DateType = "start" | "end";
 
 export type AvailabilityRange = {
   start?: string;
   end?: string;
 };
 
-export const toDate = (date: string, type: DateType ) => {
+export const toDate = (date: string, type: DateType) => {
   const d = new Date(date);
   if (type === "start") {
-    d.setHours(0, 0, 0)
-  } else (
-    d.setHours(23, 59, 59)
-  )
-  return d
-}
+    d.setHours(0, 0, 0);
+  } else d.setHours(23, 59, 59);
+  return d;
+};
 
 export const getAvailability = (availability: AvailabilityRange = {}) => {
   const today = new Date();
@@ -76,5 +74,9 @@ export const availabilityRemainingToLocale = (
   const remaining = new Date(date).getTime() - new Date().getTime();
   const days = Math.ceil(remaining / (1000 * 60 * 60 * 24));
 
-  return formatter.formatToParts(days, "day").slice(1).map(p => p.value).join("")
+  return formatter
+    .formatToParts(days, "day")
+    .slice(1)
+    .map((p) => p.value)
+    .join("");
 };

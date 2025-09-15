@@ -36,13 +36,17 @@ const Schedule = (props: SchedulePropsType) => {
     .filter((s) => ["espresso_milk"].includes(s.track))
     .flatMap((s) => ({ schedule: s.schedule.flat(), track: s.track }))[0];
 
-  if (day?.schedule === undefined || day.schedule.length <= 0 || special === undefined) {
+  if (
+    day?.schedule === undefined ||
+    day.schedule.length <= 0 ||
+    special === undefined
+  ) {
     return null;
   }
 
   return (
-    <div className="flex h-full flex-col  justify-between px-2 pt-2">
-      <Header category="robotarna"/>
+    <div className="flex h-full flex-col justify-between px-2 pt-2">
+      <Header category="robotarna" />
       <div className="watermark2 item-center flex h-full flex-col justify-center gap-4 pt-12 text-center">
         <div className="mx-auto text-4xl">
           <StationIcon station={special.track} />

@@ -1,8 +1,8 @@
 "use client";
-import { use } from 'react';
+import { use } from "react";
 import Link from "next/link";
 
-import  { SupportedLanguages } from "../dictionaries/all";
+import { SupportedLanguages } from "../dictionaries/all";
 import { Header } from "./sections/Header";
 import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";

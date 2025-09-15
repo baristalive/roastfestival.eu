@@ -22,12 +22,12 @@ const Tickets = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  const tickets = lang.tickets.priceList.filter(
-    (o) => o.availability === undefined,
-  )[0]?.prices || [];
+  const tickets =
+    lang.tickets.priceList.filter((o) => o.availability === undefined)[0]
+      ?.prices || [];
 
   return (
-    <div className="flex w-full justify-center gap-4 items-stretch">
+    <div className="flex w-full items-stretch justify-center gap-4">
       {tickets.map((price, idx) => (
         <div key={idx} className="flex w-full flex-col rounded-2xl text-center">
           <div
@@ -70,16 +70,16 @@ const Pricelist = () => {
             {lang.print.categories[c]}
           </h1>
           <div className="mx-auto flex w-full flex-col items-stretch gap-8 px-20">
-          {c === "tickets" ? (
-            <Tickets />
-          ) : (
-                <div className="card z-20 flex w-full flex-col divide-y-2 divide-current rounded-2xl px-10">
+            {c === "tickets" ? (
+              <Tickets />
+            ) : (
+              <div className="card z-20 flex w-full flex-col divide-y-2 divide-current rounded-2xl px-10">
                 {lang.print.priceList[
                   c as keyof typeof lang.print.priceList
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex justify-between py-10 text-center  "
+                    className="flex justify-between py-10 text-center"
                   >
                     <span className="text-left text-4xl font-bold">
                       {item.title}
@@ -88,7 +88,7 @@ const Pricelist = () => {
                   </div>
                 ))}
               </div>
-          )}
+            )}
           </div>
         </React.Fragment>
       ))}

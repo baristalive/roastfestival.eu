@@ -233,7 +233,11 @@ export const Modal = ({
                   );
                 })}
               </div>
-              {talkLang && <div className="p-2 font-semibold text-base xl:text-lg xl:mx-10 border-[var(--primary)] border border-l-8 rounded-lg">{lang.programTile.talkInLanguage[talkLang]}</div>}
+              {talkLang && (
+                <div className="rounded-lg border border-l-8 border-[var(--primary)] p-2 text-base font-semibold xl:mx-10 xl:text-lg">
+                  {lang.programTile.talkInLanguage[talkLang]}
+                </div>
+              )}
               <div className="flex-grow p-2 font-normal xl:p-10">
                 {Array.isArray(annotation) ? (
                   annotation.map((p) => (

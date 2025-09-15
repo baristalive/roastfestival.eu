@@ -1,10 +1,7 @@
 "use client";
 import { use } from "react";
 
-import dictionaries, {
-  Day,
-  SupportedLanguages,
-} from "@/app/dictionaries/all";
+import dictionaries, { Day, SupportedLanguages } from "@/app/dictionaries/all";
 import "./print.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";

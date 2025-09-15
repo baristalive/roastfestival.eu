@@ -40,7 +40,7 @@ export const Info = () => {
     <section
       ref={ref}
       id="info"
-      className="info-section watermark2 flex pb-48 flex-col items-center justify-between gap-8"
+      className="info-section watermark2 flex flex-col items-center justify-between gap-8 pb-48"
     >
       <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
@@ -52,7 +52,7 @@ export const Info = () => {
               <p key={p}>{p}</p>
             ))}
           </div>
-          <Bar  />
+          <Bar />
         </div>
         <div className="cards flex flex-col gap-8 md:grid md:grid-cols-2">
           {info.map((col, idx) => (

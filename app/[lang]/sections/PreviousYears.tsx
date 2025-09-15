@@ -57,7 +57,7 @@ export const PreviousYears = () => {
         <div className="absolute inset-8 z-10 flex items-center justify-center py-12">
           <div className="flex h-full flex-col items-center justify-end gap-8 lg:justify-center">
             <div className="elevate flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full bg-[var(--accent)] p-10 leading-none text-white">
-              <div className=" text-6xl font-bold">
+              <div className="text-6xl font-bold">
                 {lang.lastYear.center.stat}
               </div>
               <div className="text-2xl font-normal">
@@ -76,7 +76,7 @@ export const PreviousYears = () => {
             </div>
             <Bar />
           </div>
-          <div className="cards relative z-10 h-full mx-auto w-full lg:w-full sm:w-1/2 gap-8 text-base md:text-xs">
+          <div className="cards relative z-10 mx-auto h-full w-full gap-8 text-base sm:w-1/2 md:text-xs lg:w-full">
             <svg
               width="100%"
               height="100%"

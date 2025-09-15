@@ -11,7 +11,7 @@ export const LANDSCAPE = {
   sm: {
     small: { height: 170, width: 256 },
     zoomed: { height: 342, width: 512 },
-  }
+  },
 };
 export const PORTRAIT = {
   lg: {
@@ -21,7 +21,7 @@ export const PORTRAIT = {
   sm: {
     small: { height: 348, width: 256 },
     zoomed: { height: 768, width: 512 },
-  }
+  },
 };
 
 type Image = {

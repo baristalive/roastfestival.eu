@@ -20,10 +20,10 @@ export const Colab = () => {
           <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.colab.description}
           </div>
-          <Bar  />
+          <Bar />
         </div>
         <div className="flex grid-cols-2 flex-col items-center justify-center gap-8 text-xl md:grid">
-          <div className="card elevate nav md:h-full rounded-2xl p-8 2xl:p-12">
+          <div className="card elevate nav rounded-2xl p-8 md:h-full 2xl:p-12">
             <a
               href={`/${params.lang}/colab`}
               title={lang.colab.exhibitors.title}
@@ -33,7 +33,7 @@ export const Colab = () => {
               <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
                 {lang.colab.exhibitors.title}
               </h3>
-              <div className="flex flex-wrap gap-2 py-2 md:py-8 text-xl 2xl:-ml-4 2xl:text-3xl ">
+              <div className="flex flex-wrap gap-2 py-2 text-xl md:py-8 2xl:-ml-4 2xl:text-3xl">
                 <StationIcon station="espresso" />
                 <StationIcon station="espresso_milk" />
                 <StationIcon station="brew" />
@@ -44,14 +44,14 @@ export const Colab = () => {
                 {lang.colab.exhibitors.text}
               </p>
               <div className="grow" />
-              <div className="text-md mt-2 md:mt-8 text-[var(--black)]">
+              <div className="text-md mt-2 text-[var(--black)] md:mt-8">
                 <div className="float-right">
                   <ArrowIcon />
                 </div>
               </div>
             </a>
           </div>
-          <div className="card elevate nav md:h-full rounded-2xl p-8 2xl:p-12">
+          <div className="card elevate nav rounded-2xl p-8 md:h-full 2xl:p-12">
             <a
               href={`/${params.lang}/sponsors`}
               title={lang.colab.sponsors.title}
@@ -61,14 +61,14 @@ export const Colab = () => {
               <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
                 {lang.colab.sponsors.title}
               </h3>
-              <div className="flex gap-2 py-2 md:py-8 text-xl 2xl:text-3xl">
+              <div className="flex gap-2 py-2 text-xl md:py-8 2xl:text-3xl">
                 <PlusIcon />
               </div>
               <p className="py-2 text-base 2xl:text-xl">
                 {lang.colab.sponsors.text}
               </p>
               <div className="grow" />
-              <div className="text-md mt-2 md:mt-8 text-[var(--black)]">
+              <div className="text-md mt-2 text-[var(--black)] md:mt-8">
                 <div className="float-right">
                   <ArrowIcon />
                 </div>

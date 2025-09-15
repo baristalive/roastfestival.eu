@@ -15,11 +15,11 @@ import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 const largeWallImages = [
   [
     { src: "141-_DSC0855.jpg", ...LANDSCAPE.lg },
-    { src: "188-_DSC1128.jpg", ...PORTRAIT.lg }
+    { src: "188-_DSC1128.jpg", ...PORTRAIT.lg },
   ],
   [
     { src: "626-_DSC2221.jpg", ...PORTRAIT.lg },
-    { src: "734-_DSC2432.jpg", ...LANDSCAPE.lg }
+    { src: "734-_DSC2432.jpg", ...LANDSCAPE.lg },
   ],
   [
     { src: "_MG_9521.jpg", ...LANDSCAPE.lg },
@@ -33,7 +33,7 @@ const largeWallImages = [
   [
     { src: "_MG_0371.JPG", ...PORTRAIT.lg },
     { src: "_MG_0579.JPG", ...LANDSCAPE.lg },
-  ]
+  ],
 ];
 const smallWallImages = [
   [
@@ -50,7 +50,7 @@ const smallWallImages = [
     { src: "_MG_9283.JPG", ...LANDSCAPE.sm },
     { src: "626-_DSC2221.jpg", ...PORTRAIT.sm },
     { src: "_MG_0579.JPG", ...LANDSCAPE.sm },
-  ]
+  ],
 ];
 
 export const Gallery = () => {
@@ -78,9 +78,12 @@ export const Gallery = () => {
   );
   return (
     <section ref={ref} className="gallery-section">
-      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 md:flex will-change-transform">
+      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 will-change-transform md:flex">
         {largeWallImages.map((col, idx) => (
-          <div className="flex gap-1 md:flex-col min-w-0 shrink-1 md:gap-4" key={`col_${idx}`}>
+          <div
+            className="shrink-1 flex min-w-0 gap-1 md:flex-col md:gap-4"
+            key={`col_${idx}`}
+          >
             {col.map((i, idx2) => (
               <ZoomableImage
                 key={`img_${idx2}`}
@@ -92,7 +95,7 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="cards mx-auto flex max-w-[1900px] items-center justify-center  gap-1 p-2 pb-12 md:hidden  will-change-transform">
+      <div className="cards mx-auto flex max-w-[1900px] items-center justify-center gap-1 p-2 pb-12 will-change-transform md:hidden">
         {smallWallImages.map((col, idx) => (
           <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
             {col.map((i, idx2) => (

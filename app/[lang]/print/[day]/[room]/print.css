@@ -1,28 +1,28 @@
 @page {
-    size: A3 portrait;
+  size: A3 portrait;
 }
 
 @media print {
-    body {
-        margin: 5mm 5mm 5mm 5mm;
-        height: calc(100% - 10mm);
-    }
-    html {
-        height: 100vh;
-    }
+  body {
+    margin: 5mm 5mm 5mm 5mm;
+    height: calc(100% - 10mm);
+  }
+  html {
+    height: 100vh;
+  }
 }
 
 .logo {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .row:first-of-type .logo {
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
 }
 
 .row:last-of-type .logo {
-    border-bottom-left-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-    align-self: flex-start;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  align-self: flex-start;
 }

@@ -24,7 +24,7 @@ export const Sponsors = () => {
           <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.promoted.sponsors.title}
           </h2>
-          <Bar  />
+          <Bar />
         </div>
       </div>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">

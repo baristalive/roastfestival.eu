@@ -1,0 +1,6 @@
+public
+.next
+out
+.firebase
+**/.git
+**/node_modules

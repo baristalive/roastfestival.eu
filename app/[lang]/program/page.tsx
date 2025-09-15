@@ -87,10 +87,7 @@ const Home = () => {
             {lang.program
               .filter((day) => selectedDays.includes(day.$ref))
               .map((day, idx) => (
-                <div
-                  className={`flex flex-col p-4`}
-                  key={day.$ref}
-                >
+                <div className={`flex flex-col p-4`} key={day.$ref}>
                   <div className="sticky flex w-full flex-col">
                     <h3 className="ml-4 text-3xl font-medium">
                       {lang.programDays[day.$ref].name}{" "}

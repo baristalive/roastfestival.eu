@@ -47,9 +47,9 @@ export const Info = () => {
           </div>
         </div>
       </section>
-      <section className="watermark-large relative mdx-content-section">
+      <section className="watermark-large mdx-content-section relative">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:p-12">
-          <div className=" h-auto rounded-2xl py-16 text-lg md:px-32">
+          <div className="h-auto rounded-2xl py-16 text-lg md:px-32">
             <Content />
           </div>
         </div>

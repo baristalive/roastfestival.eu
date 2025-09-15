@@ -71,9 +71,12 @@ export const Organizers = () => {
           </h2>
           <Bar />
         </div>
-        <div className="cards mx-auto hidden items-center justify-center gap-4 p-12 md:grid grid-cols-6">
+        <div className="cards mx-auto hidden grid-cols-6 items-center justify-center gap-4 p-12 md:grid">
           {largeWallImages.map((col, idx) => (
-            <div className="flex flex-col shrink-1 min-w-0 gap-4" key={`col_${idx}`}>
+            <div
+              className="shrink-1 flex min-w-0 flex-col gap-4"
+              key={`col_${idx}`}
+            >
               {col.map((i, idx2) => {
                 if ("card" in i && i.card !== undefined) {
                   return (

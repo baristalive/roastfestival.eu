@@ -15,7 +15,7 @@ export const Map = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <section className="where-section watermark2 min-h-screen pb-48">
-      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr,auto,1fr] flex-col lg:grid px-8">
+      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr,auto,1fr] flex-col px-8 lg:grid">
         <div className="flex flex-col md:pl-12">
           <h2 className="pb-8 text-3xl font-bold 2xl:text-6xl">
             {lang.location.title}
@@ -93,7 +93,7 @@ export const Map = () => {
                   longitude={16.6225864}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-3">
+                  <div className="flex items-center gap-3 px-4 py-2 lg:py-3 lg:pr-5">
                     <div className="inline-block text-[0.6rem]">
                       <BeanIcon />
                     </div>
@@ -105,8 +105,8 @@ export const Map = () => {
                   longitude={16.625958456324793}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-1">
-                  <TramIcon size="2em" />
+                  <div className="flex items-center gap-1 px-4 py-2 lg:py-3 lg:pr-5">
+                    <TramIcon size="2em" />
                     {lang.location.stops.tkalcovska}
                   </div>
                 </Marker>
@@ -115,8 +115,8 @@ export const Map = () => {
                   longitude={16.61971675681972}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-1">
-                      <TramIcon size="2em" />
+                  <div className="flex items-center gap-1 px-4 py-2 lg:py-3 lg:pr-5">
+                    <TramIcon size="2em" />
                     {lang.location.stops.kornerova}
                   </div>
                 </Marker>
@@ -125,8 +125,8 @@ export const Map = () => {
                   longitude={16.61462520981893}
                   anchor="bottom"
                 >
-                  <div className="px-4 py-2 lg:pr-5 lg:py-3 flex items-center gap-1">
-                  <CarIcon size="2em" />
+                  <div className="flex items-center gap-1 px-4 py-2 lg:py-3 lg:pr-5">
+                    <CarIcon size="2em" />
                     {lang.location.parking.lot.title}
                   </div>
                 </Marker>
@@ -141,7 +141,7 @@ export const Map = () => {
         <div>
           <div className="card elevate relative z-0 mx-4 flex flex-col gap-4 rounded-b-2xl p-8 text-base lg:mx-0 lg:mt-4 lg:rounded-e-2xl lg:rounded-bl-none 2xl:mt-32 2xl:p-12 2xl:text-xl">
             <h3 className="font-bold">{lang.location.howToTitle}</h3>
-            <div className="grid grid-cols-[auto,1fr]  gap-2 lg:gap-4">
+            <div className="grid grid-cols-[auto,1fr] gap-2 lg:gap-4">
               <div className="">
                 <TramIcon size="2em" />
               </div>

@@ -2,7 +2,11 @@ import dictionaries, { SupportedLanguages } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 import { useParams } from "next/navigation";
 
-const Header = ({category}: {category: keyof typeof dictionaries.en.programCategory}) => {
+const Header = ({
+  category,
+}: {
+  category: keyof typeof dictionaries.en.programCategory;
+}) => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const day = lang.program.filter((d) => d.$ref === params.day)[0];

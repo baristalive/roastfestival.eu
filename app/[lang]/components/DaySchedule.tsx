@@ -136,22 +136,22 @@ const DaySchedule = ({
                     {presenter === undefined || !presenter.name ? null : (
                       <>
                         <Modal {...presenter}>
-                          <div className="schedule-item elevate my-1 rounded-lg px-3 py-1 md:py-2 relative">
+                          <div className="schedule-item elevate relative my-1 rounded-lg px-3 py-1 md:py-2">
                             <div
                               className={`schedule-subitem col-span-full text-base`}
                             >
                               {s.start} - {s.end}
                             </div>
-                            <h4 className="text-lg font-bold line-clamp-4">
+                            <h4 className="line-clamp-4 text-lg font-bold">
                               {presenter.name}
                             </h4>
                             {presenter.subheading && (
-                              <i className="text-base line-clamp-2">
+                              <i className="line-clamp-2 text-base">
                                 {presenter.subheading}
                               </i>
                             )}
                             {presenter.lang && (
-                              <div className="schedule-item-adornment mr-2 rounded-full bg-[var(--white)] p-3 aspect-square uppercase text-[var(--black)] absolute elevate font-bold">
+                              <div className="schedule-item-adornment elevate absolute mr-2 aspect-square rounded-full bg-[var(--white)] p-3 font-bold uppercase text-[var(--black)]">
                                 {presenter.lang}
                               </div>
                             )}

@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 import createMDX from "@next/mdx";
 import rehypeUnwrapImages from "rehype-unwrap-images";
@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import remarkExtendedTable, {
   extendedTableHandlers,
 } from "remark-extended-table";
-import { RuleSetRule } from 'webpack';
+import { RuleSetRule } from "webpack";
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
@@ -43,8 +43,9 @@ const nextConfig: NextConfig = {
   transpilePackages: ["next-image-export-optimizer"],
   webpack(config) {
     // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule: RuleSetRule) =>
-      rule.test instanceof RegExp && rule.test?.test?.(".svg"),
+    const fileLoaderRule = config.module.rules.find(
+      (rule: RuleSetRule) =>
+        rule.test instanceof RegExp && rule.test?.test?.(".svg"),
     );
 
     config.module.rules.push(

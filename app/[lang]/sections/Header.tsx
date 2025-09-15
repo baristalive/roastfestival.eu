@@ -45,15 +45,16 @@ export const Header = () => {
       ref={ref}
       className="elevate z-10 flex h-svh flex-col items-center justify-between py-8"
     >
-      {lang.banner && <a
-        href={lang.contacts.tickets}
-        title={lang.buyTickets}
-        rel="external"
-        className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl will-change-[opacity]"
-      >
-        {lang.banner}
-      </a>
-}
+      {lang.banner && (
+        <a
+          href={lang.contacts.tickets}
+          title={lang.buyTickets}
+          rel="external"
+          className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold will-change-[opacity] md:text-xl"
+        >
+          {lang.banner}
+        </a>
+      )}
       <div className="mb-auto flex w-full max-w-[1900px] justify-between px-12 pt-2 text-sm md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
         <div className="fade-in font-medium leading-snug will-change-[opacity]">
           {lang.date}
@@ -104,7 +105,7 @@ export const Header = () => {
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl will-change-[opacity]">
+      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug will-change-[opacity] md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
         <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
             <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
@@ -125,8 +126,10 @@ export const Header = () => {
           className="nav"
         >
           <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-28">
-            <span className="fade-in-2 will-change-[opacity]">{lang.buyTickets}</span>
-            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--accent)] md:text-xl 2xl:text-3xl will-change-[left]">
+            <span className="fade-in-2 will-change-[opacity]">
+              {lang.buyTickets}
+            </span>
+            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--accent)] will-change-[left] md:text-xl 2xl:text-3xl">
               <ArrowIcon />
             </span>
           </nav>
