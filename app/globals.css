@@ -754,3 +754,15 @@ ol.round-counter li::before {
 .schedule-track:nth-of-type(3n + 2) .schedule-item.no-end {
   background: linear-gradient(to left, var(--background), var(--primary) 20px);
 }
+
+.schedule-style-schedule .schedule-item-adornment {
+  left: 100%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.schedule-style-list .schedule-item-adornment {
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}

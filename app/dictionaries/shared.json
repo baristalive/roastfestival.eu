@@ -26,8 +26,7 @@
       "web": "https://www.baristaroasters.sk/",
       "facebook": "https://www.facebook.com/baristaroasters",
       "instagram": "https://www.instagram.com/barista_roasters",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "black": {
       "logo": "black.png",
@@ -37,8 +36,7 @@
       "web": "https://www.black.sk/",
       "facebook": "https://www.facebook.com/black.svk",
       "instagram": "https://www.instagram.com/black.svk",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "buchta_b": {
       "logo": "buchta_b.png",
@@ -73,8 +71,7 @@
       "web": "https://www.dos-mundos.cz",
       "facebook": "https://www.facebook.com/prazirnadosmundos",
       "instagram": "https://www.instagram.com/dosmundos_vinohrady",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "francin": {
       "logo": "fracin.png",
@@ -83,8 +80,7 @@
       "primaryLink": "web",
       "web": "https://www.francin.cz/",
       "facebook": "https://www.facebook.com/francin.praha/",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "gills": {
       "logo": "gills.svg",
@@ -106,8 +102,7 @@
       "web": "https://haybcoffee.pl/",
       "facebook": "https://www.facebook.com/haybcoffee/",
       "instagram": "https://www.instagram.com/haybcoffee",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "hodne_nekde": {
       "country": "cz",
@@ -125,8 +120,7 @@
       "web": "https://idylika.sk",
       "facebook": "https://www.facebook.com/idylika/",
       "instagram": "https://www.instagram.com/idylika/",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "ig": {
       "instagram": "https://www.instagram.com/ig_coffee_roasters/",
@@ -156,8 +150,7 @@
       "web": "https://kmen.coffee/",
       "facebook": "https://www.facebook.com/kmen.coffee",
       "instagram": "https://www.instagram.com/kmen.coffee",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "kolna": {
       "country": "cz",
@@ -193,8 +186,7 @@
       "primaryLink": "instagram",
       "web": "https://www.liskafe.cz/",
       "facebook": "https://www.facebook.com/liskafe",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "lot": {
       "country": "sk",
@@ -204,8 +196,7 @@
       "web": "https://www.lotroastery.com/",
       "facebook": "https://www.facebook.com/LOT.roastery",
       "instagram": "https://www.instagram.com/lot.roastery",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "mamacoffee": {
       "country": "cz",
@@ -215,8 +206,7 @@
       "web": "https://www.mamacoffee.cz/",
       "facebook": "https://www.facebook.com/mamacoffee",
       "instagram": "https://www.instagram.com/mama_coffee",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "miners": {
       "country": "cz",
@@ -225,8 +215,7 @@
       "primaryLink": "web",
       "web": "https://www.theminers.eu",
       "instagram": "https://www.instagram.com/theminerscoffee",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "parabellum": {
       "country": "cz",
@@ -244,8 +233,7 @@
       "primaryLink": "web",
       "web": "https://eshop.penerini.cz/",
       "instagram": "https://www.instagram.com/penerini_roastery_cz/",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "pikola": {
       "country": "cz",
@@ -255,8 +243,7 @@
       "web": "https://kafepikola.cz",
       "instagram": "https://www.instagram.com/pikola_kafe/",
       "facebook": "https://www.facebook.com/PikolaKafe",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "poppy": {
       "country": "cz",
@@ -266,8 +253,7 @@
       "web": "https://poppybeans.cz/",
       "facebook": "https://facebook.com/poppybeanscoffee",
       "instagram": "https://instagram.com/poppybeanscoffee",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "punkt": {
       "country": "cz",
@@ -288,8 +274,7 @@
       "web": "https://quickborn.sk/",
       "facebook": "https://www.facebook.com/quickbornroastery",
       "instagram": "https://www.instagram.com/quickborn_roastery",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "rast": {
       "country": "cz",
@@ -307,8 +292,7 @@
       "web": "https://www.rebelbean.cz/",
       "facebook": "https://www.facebook.com/rebelbeancz/",
       "instagram": "https://www.instagram.com/rebelbeancz/",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "red_fawn": {
       "country": "sk",
@@ -317,8 +301,7 @@
       "logo": "red_fawn.png",
       "name": "Red Fawn",
       "primaryLink": "instagram",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "wildkaffee": {
       "country": "de",
@@ -340,23 +323,42 @@
     },
     "ws_home": {
       "country": "cz",
-      "subheading": "Tadeáš\u00a0Kacer"
+      "subheading": "Tadeáš\u00a0Kacer",
+      "instagram": "https://www.instagram.com/tadeaskacer",
+      "logo": "kacer.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_sensory": {
       "country": "cz",
-      "subheading": "Patrik\u00a0Sláma"
+      "subheading": "Patrik\u00a0Sláma",
+      "linkedin": "https://www.linkedin.com/in/patrik-sl%C3%A1ma-93071a1a5",
+      "logo": "slama.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_yerba": {
       "country": "cz",
-      "subheading": "Adrian\u00a0Drozdek"
+      "subheading": "Adrian\u00a0Drozdek",
+      "logo": "drozdek.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_water": {
       "country": "cz",
-      "subheading": "Rozálie\u00a0Nováková"
+      "subheading": "Rozálie\u00a0Nováková",
+      "logo": "rozi.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_whisky": {
       "country": "cz",
-      "subheading": "Tomáš\u00a0Dyntar"
+      "subheading": "Tomáš\u00a0Dyntar",
+      "web": "https://eshop.thomasdyntar.com/"
     },
     "ws_cupping_penerini": {
       "name": "Cupping",
@@ -373,7 +375,10 @@
       "subheading": "Traffic Coffee",
       "logo": "traffic_coffee.png",
       "primaryLink": "instagram",
-      "instagram": "https://www.instagram.com/trafficcoffeeol"
+      "instagram": "https://www.instagram.com/trafficcoffeeol",
+      "modalProps": {
+        "className": "p-8"
+      }
     },
     "ws_roasting": {
       "country": "cz",
@@ -381,7 +386,11 @@
     },
     "ws_esko": {
       "country": "cz",
-      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
+      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek",
+      "logo": "josef_hulk.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_qb": {
       "country": "cz",
@@ -393,7 +402,12 @@
     },
     "ws_kaple": {
       "country": "cz",
-      "subheading": "Jiří\u00a0Vyzourek"
+      "subheading": "Jiří\u00a0Vyzourek",
+      "instagram": "https://www.instagram.com/jvyzourek",
+      "logo": "jirka.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_hradsky": {
       "country": "cz",
@@ -401,12 +415,22 @@
     },
     "ws_latte": {
       "country": "cz",
-      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek"
+      "subheading": "Josef\u00a0Kučera, Petr\u00a0Chaloupek",
+      "logo": "josef_hulk.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_cupping_chicas": {
       "name": "Cupping",
       "country": "cz",
-      "subheading": "Chicas Industry"
+      "subheading": "Chicas Industry",
+      "facebook": "https://www.facebook.com/chicasindustry",
+      "instagram": "https://www.instagram.com/chicas_industry/",
+      "logo": "chicas.png",
+      "modalProps": {
+        "className": "p-10"
+      }
     },
     "ws_cupping_lot": {
       "name": "Cupping",
@@ -416,8 +440,7 @@
       "web": "https://www.lotroastery.com/",
       "facebook": "https://www.facebook.com/LOT.roastery",
       "instagram": "https://www.instagram.com/lot.roastery",
-      "modalProps": {
-      }
+      "modalProps": {}
     },
     "ws_cupping_punkt": {
       "name": "Cupping",
@@ -440,26 +463,57 @@
     },
     "talk_green": {
       "country": "cz",
-      "subheading": "Tereza\u00a0Prejdová"
+      "subheading": "Tereza\u00a0Prejdová",
+      "logo": "terka.png",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_humberto": {
-      "subheading": "Humberto\u00a0Ribes"
+      "subheading": "Humberto\u00a0Ribes",
+      "lang": "en",
+      "country": "es",
+      "instagram": "https://www.instagram.com/humbertoribes/",
+      "logo": "humberto.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_ks": {
-      "country": "cz"
+      "country": "cz",
+      "logo": "kavaspojuje.png",
+      "web": "https://kavaspojuje.cz/"
     },
     "talk_helena": {
-      "subheading": "Helena\u00a0Oliviero (SCA Italy)"
+      "subheading": "Helena\u00a0Oliviero (SCA Italy)",
+      "lang": "en",
+      "country": "it",
+      "instagram": "https://www.instagram.com/helenaoliviero",
+      "logo": "helena.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_alice": {
-      "subheading": "Alica\u00a0Banszka"
+      "subheading": "Alica\u00a0Banszka",
+      "country": "sk",
+      "logo": "alice.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_tanzanie": {
       "country": "cz",
       "subheading": "Ladislav\u00a0Kolář, Helena\u00a0Kolářovová"
     },
     "talk_madalin": {
-      "subheading": "Madalin\u00a0Truica"
+      "subheading": "Madalin\u00a0Truica",
+      "lang": "en",
+      "instagram": "https://www.instagram.com/vladalin83",
+      "logo": "madalin.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_tripplesenzory": {
       "country": "cz",
@@ -535,7 +589,10 @@
       "name": "Traffic Coffee",
       "logo": "traffic_coffee.png",
       "primaryLink": "instagram",
-      "instagram": "https://www.instagram.com/trafficcoffeeol"
+      "instagram": "https://www.instagram.com/trafficcoffeeol",
+      "modalProps": {
+        "className": "p-8"
+      }
     },
     "dalia": {
       "name": "Dalia Coffee",
@@ -663,10 +720,7 @@
       "items": []
     },
     "roasters": {
-      "honored": [
-        "five_elephant",
-        "ig"
-      ],
+      "honored": ["five_elephant", "ig"],
       "regular": [
         "gills",
         "baristaroasters",
@@ -691,13 +745,7 @@
       ]
     },
     "sponsors": {
-      "items": [
-        "ig",
-        "mamu",
-        "audioagency",
-        "brita",
-        "kavaspojuje"
-      ]
+      "items": ["ig", "mamu", "audioagency", "brita", "kavaspojuje"]
     }
   },
   "program": [

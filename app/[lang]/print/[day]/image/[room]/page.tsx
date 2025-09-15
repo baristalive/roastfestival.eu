@@ -65,10 +65,10 @@ const Schedule = (props: SchedulePropsType) => {
         className="flex aspect-square h-[1080px] w-[1080px] flex-col justify-center gap-8 bg-[var(--primary)] px-2 pt-10"
         style={{ backgroundImage: `url('/watermark${watermark}.svg')`, backgroundPosition: "center center"}}
       >
-        <h1 className="w-full text-center text-9xl font-bold uppercase text-[var(--white)]">
+        <h1 className="w-full text-center text-8xl font-bold uppercase text-[var(--white)]">
           {lang.programCategory[room]}
         </h1>
-        <h2 className="w-full text-center text-8xl font-semibold text-[var(--white)] mb-10">
+        <h2 className="w-full text-center text-6xl font-semibold text-[var(--white)] mb-10">
           {lang.programDays[params.day].name}{" "}
           {lang.programDays[params.day].date}
         </h2>
@@ -85,15 +85,20 @@ const Schedule = (props: SchedulePropsType) => {
                 style={style as CSSProperties}
               >
                 {t.schedule.map((i, idx) => (
-                  <div className="flex flex-col gap-10" style={lineStyle} key={idx}>
+                  <div className="flex flex-col gap-6" style={lineStyle} key={idx}>
                     {i.map((s) => {
                       const presenter = lang.presenters[s.$ref as keyof typeof lang.presenters] as Presenter;
                       return (
-                        <div className="schedule-item elevate my-1 overflow-hidden rounded-lg p-4" key={`${t.track}_${idx}_${s.$ref}`}>
-                          <h4 className="mb-3 text-4xl font-bold">
+                        <div className="schedule-item elevate my-1 rounded-lg p-2 relative flex flex-col items-center" key={`${t.track}_${idx}_${s.$ref}`}>
+                          <h4 className="mb-1 text-2xl font-bold relative">
+                            {presenter.lang && (
+                              <span className="ml-2 rounded-full bg-[var(--white)] w-8 h-8 p-1 aspect-square text-base inline-block uppercase text-[var(--black)] elevate font-bold absolute left-full">
+                                {presenter.lang}
+                              </span>
+                            )}
                             {presenter.name}
                           </h4>
-                          <i className="text-2xl">
+                          <i className="text-lg">
                             {s.start} - {s.end} {presenter.subheading && `| ${presenter.subheading}`}
                           </i>
                         </div>
@@ -106,12 +111,12 @@ const Schedule = (props: SchedulePropsType) => {
           })}
       </div>
       <button
-        className="elevate absolute left-10 top-10 rounded-lg bg-black px-8 py-4 text-2xl text-white"
+        className="elevate absolute left-10 top-10 rounded-lg bg-black px-4 py-2 text-base text-white"
         onClick={handleButtonClick}
       >
         Uložit
       </button>
-      <select className="elevate absolute left-10 top-32 rounded-lg bg-[var(--primary)] px-8 py-4 text-2xl text-white" id="watermark" name="watermark" onChange={e => setWatermark(Number(e.target.value))}>
+      <select className="elevate absolute left-10 top-24 rounded-lg bg-[var(--primary)] px-4 py-2 text-base text-white" id="watermark" name="watermark" onChange={e => setWatermark(Number(e.target.value))}>
         <option value="2">Watermark 2</option>
         <option value="3">Watermark 3</option>
         <option value="4">Watermark 4</option>

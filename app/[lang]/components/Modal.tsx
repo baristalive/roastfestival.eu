@@ -26,6 +26,7 @@ export const Modal = ({
   twitter,
   web,
   logo,
+  lang: talkLang,
   schedule,
   country,
   modalProps,
@@ -232,6 +233,7 @@ export const Modal = ({
                   );
                 })}
               </div>
+              {talkLang && <div className="p-2 font-semibold text-base xl:text-lg xl:mx-10 border-[var(--primary)] border border-l-8 rounded-lg">{lang.programTile.talkInLanguage[talkLang]}</div>}
               <div className="flex-grow p-2 font-normal xl:p-10">
                 {Array.isArray(annotation) ? (
                   annotation.map((p) => (
@@ -246,7 +248,7 @@ export const Modal = ({
               {bio && (
                 <div className="flex-grow p-2 font-normal xl:p-10 xl:pt-0">
                   <h6 className="text-xl font-semibold">{subheading}</h6>
-                  <p className="text-base xl:text-lg leading-5">{bio}</p>
+                  <p className="text-base leading-5 xl:text-lg">{bio}</p>
                 </div>
               )}
               <div className="flex w-full items-center justify-center gap-4 py-2">

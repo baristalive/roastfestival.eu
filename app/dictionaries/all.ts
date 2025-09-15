@@ -16,7 +16,7 @@ type RawProgramItem = {
   $ref: string;
   day: string;
   noEnd: boolean;
-}
+};
 export enum Track {
   Espresso = "espresso",
   Filter = "brew",
@@ -31,16 +31,23 @@ export enum Day {
   Sunday = "day2",
 }
 
-export const AllDays = [Day.Saturday, Day.Sunday]
-export const AllTracks = [Track.Honor, Track.Espresso, Track.Filter, Track.Lecture, Track.Workshop, Track.Party]
+export const AllDays = [Day.Saturday, Day.Sunday];
+export const AllTracks = [
+  Track.Honor,
+  Track.Espresso,
+  Track.Filter,
+  Track.Lecture,
+  Track.Workshop,
+  Track.Party,
+];
 
 export type RawProgramDay = {
   $ref: Day;
   schedule: {
     track: Track;
     schedule: RawProgramItem[][];
-  }[]
-}
+  }[];
+};
 export type SupportedLanguages = "cz" | "en";
 
 export type Presenter = {
@@ -58,6 +65,7 @@ export type Presenter = {
   annotation?: string | string[];
   schedule: ProgramItem[];
   cover?: string;
+  lang?: "en";
   country?: "cz" | "sk" | "at" | "pl";
   modalProps?: {
     showName?: boolean;
@@ -72,32 +80,35 @@ export type Presenter = {
   };
 };
 
-type Presenters = {[key: string]: Presenter}
-type PartialPresenters = {[key: string]: Partial<Presenter>}
+type Presenters = { [key: string]: Presenter };
+type PartialPresenters = { [key: string]: Partial<Presenter> };
 
 const preprocessShared = (data: typeof shared) => {
   const presenters = Object.fromEntries(
     Object.entries(data.presenters).map(([id, presenter]) => {
-      const schedule = (data.program as RawProgramDay[]).reduce((accDay, day) => {
-        const fromDay = day.schedule.reduce((accTrack, track) => {
-          const fromTrack = track.schedule.reduce((accTrack, row) => {
-            const fromRow = row.reduce((accRow, slot) => {
-              if (slot.$ref === id) {
-                accRow.push({
-                  start: slot.start,
-                  end: slot.end,
-                  track: track.track as keyof typeof shared.programCategory,
-                  day: day.$ref,
-                });
-              }
-              return accRow;
+      const schedule = (data.program as RawProgramDay[]).reduce(
+        (accDay, day) => {
+          const fromDay = day.schedule.reduce((accTrack, track) => {
+            const fromTrack = track.schedule.reduce((accTrack, row) => {
+              const fromRow = row.reduce((accRow, slot) => {
+                if (slot.$ref === id) {
+                  accRow.push({
+                    start: slot.start,
+                    end: slot.end,
+                    track: track.track as keyof typeof shared.programCategory,
+                    day: day.$ref,
+                  });
+                }
+                return accRow;
+              }, [] as ProgramItem[]);
+              return [...accTrack, ...fromRow];
             }, [] as ProgramItem[]);
-            return [...accTrack, ...fromRow];
+            return [...accTrack, ...fromTrack];
           }, [] as ProgramItem[]);
-          return [...accTrack, ...fromTrack];
-        }, [] as ProgramItem[]);
-        return [...accDay, ...fromDay];
-      }, [] as ProgramItem[]);
+          return [...accDay, ...fromDay];
+        },
+        [] as ProgramItem[],
+      );
       return [id, { ...presenter, schedule }];
     }),
   ) as Presenters;
@@ -119,7 +130,7 @@ type Tickets = {
       end?: string;
     };
     subheading: string;
-    heading: (string | {superscript: string})[];
+    heading: (string | { superscript: string })[];
     prices: {
       title: string;
       full: number;
@@ -136,18 +147,21 @@ type Tickets = {
           end?: string;
         };
       };
-    }[]
-  }[]
-}
+    }[];
+  }[];
+};
 
 const preprocessLocalized = (data: typeof cz | typeof en) => {
-  return {...data, tickets: data.tickets as Tickets, presenters: data.presenters as PartialPresenters}
-}
+  return {
+    ...data,
+    tickets: data.tickets as Tickets,
+    presenters: data.presenters as PartialPresenters,
+  };
+};
 
 export const dictionaries = {
   cz: deepmerge(preprocessShared(shared), preprocessLocalized(cz)),
   en: deepmerge(preprocessShared(shared), preprocessLocalized(en)),
 };
-
 
 export default dictionaries;

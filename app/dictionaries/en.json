@@ -458,7 +458,10 @@
     "title": "Schedule",
     "loadingText": "We are still roasting the festival program for you.",
     "content": "The schedule is really extensive this year. You can find it on a separate page.",
-    "filter": "Filter"
+    "filter": "Filter",
+    "talkInLanguage": {
+      "en": "Talk in English"
+    }
   },
   "programTitle": "",
   "programLoadingText": "",

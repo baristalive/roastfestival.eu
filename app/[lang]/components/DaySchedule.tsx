@@ -56,7 +56,7 @@ const DaySchedule = ({
 
   return (
     <div
-      className={`relative flex w-full flex-col justify-between py-4 will-change-auto schedule-wrapper ${className}`}
+      className={`schedule-wrapper relative flex w-full flex-col justify-between py-4 will-change-auto ${className}`}
     >
       <div
         className={`schedule-header p-4 text-center`}
@@ -136,19 +136,24 @@ const DaySchedule = ({
                     {presenter === undefined || !presenter.name ? null : (
                       <>
                         <Modal {...presenter}>
-                          <div className="schedule-item elevate my-1 overflow-hidden rounded-lg px-3 py-1 md:py-2">
+                          <div className="schedule-item elevate my-1 rounded-lg px-3 py-1 md:py-2 relative">
                             <div
                               className={`schedule-subitem col-span-full text-base`}
                             >
                               {s.start} - {s.end}
                             </div>
-                            <h4 className="text-lg font-bold">
+                            <h4 className="text-lg font-bold line-clamp-4">
                               {presenter.name}
                             </h4>
                             {presenter.subheading && (
-                              <i className="text-base">
+                              <i className="text-base line-clamp-2">
                                 {presenter.subheading}
                               </i>
+                            )}
+                            {presenter.lang && (
+                              <div className="schedule-item-adornment mr-2 rounded-full bg-[var(--white)] p-3 aspect-square uppercase text-[var(--black)] absolute elevate font-bold">
+                                {presenter.lang}
+                              </div>
                             )}
                           </div>
                         </Modal>
