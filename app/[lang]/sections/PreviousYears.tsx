@@ -20,13 +20,13 @@ export const PreviousYears = () => {
         gsap.utils.toArray(".cards g").map((c, idx) => {
           gsap.set(c as Element, { y: `+=${4 + idx * 0.5}rem` });
           gsap.to(c as Element, {
-            y: `-=${4 + idx}rem`,
             scrollTrigger: {
-              trigger: ref.current,
+              end: "bottom top",
               scrub: 2,
               start: "top bottom",
-              end: "bottom top",
+              trigger: ref.current,
             },
+            y: `-=${4 + idx}rem`,
           });
         });
       });
@@ -34,13 +34,13 @@ export const PreviousYears = () => {
         gsap.utils.toArray(".cards g").map((c, idx) => {
           gsap.set(c as Element, { y: `+=${(idx + 1) * 0.2}rem` });
           gsap.to(c as Element, {
-            y: `-=${(idx + 1) * 0.5}rem`,
             scrollTrigger: {
-              trigger: ref.current,
+              end: "bottom top",
               scrub: 2,
               start: "top bottom",
-              end: "bottom top",
+              trigger: ref.current,
             },
+            y: `-=${(idx + 1) * 0.5}rem`,
           });
         });
       });

@@ -12,13 +12,13 @@ const Bar = () => {
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
         gsap.to(ref.current, {
-          width: "6rem",
           scrollTrigger: {
-            trigger: ref.current,
+            end: "top 20%",
             scrub: 2,
             start: "bottom bottom",
-            end: "top 20%",
+            trigger: ref.current,
           },
+          width: "6rem",
         });
       });
     },

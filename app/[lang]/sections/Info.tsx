@@ -24,13 +24,13 @@ export const Info = () => {
       mm.add("(min-width: 768px)", () => {
         gsap.set(".cards", { y: "+=30rem" });
         gsap.to(".cards", {
-          y: "-=30rem",
           scrollTrigger: {
-            trigger: ref.current,
+            end: "bottom top",
             scrub: 2,
             start: "top bottom",
-            end: "bottom top",
+            trigger: ref.current,
           },
+          y: "-=30rem",
         });
       });
     },

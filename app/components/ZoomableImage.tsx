@@ -4,23 +4,23 @@ import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 import Zoom from "react-medium-image-zoom";
 
 export const LANDSCAPE = {
-  sm: {
-    small: { width: 256, height: 170 },
-    zoomed: { width: 512, height: 342 },
-  },
   lg: {
-    small: { width: 512, height: 342 },
-    zoomed: { width: 1080, height: 720 },
+    small: { height: 342, width: 512 },
+    zoomed: { height: 720, width: 1080 },
+  },
+  sm: {
+    small: { height: 170, width: 256 },
+    zoomed: { height: 342, width: 512 },
   }
 };
 export const PORTRAIT = {
-  sm: {
-    small: { width: 256, height: 348 },
-    zoomed: { width: 512, height: 768 },
-  },
   lg: {
-    small: { width: 512, height: 768 },
-    zoomed: { width: 1080, height: 1623 },
+    small: { height: 768, width: 512 },
+    zoomed: { height: 1623, width: 1080 },
+  },
+  sm: {
+    small: { height: 348, width: 256 },
+    zoomed: { height: 768, width: 512 },
   }
 };
 
@@ -59,13 +59,13 @@ export const ZoomableImage = (
         zoomMargin={16}
         classDialog="zoom"
         zoomImg={{
-          src: props.src,
-          height: props.zoomed.height,
-          width: props.zoomed.width,
           alt: props.alt || "",
+          height: props.zoomed.height,
+          src: props.src,
           srcSet:
             (ref.current as HTMLImageElement | null)?.getAttribute("srcset") ||
             "",
+          width: props.zoomed.width,
         }}
       >
         <span className="card elevate img-overlay block rounded-lg lg:rounded-2xl">

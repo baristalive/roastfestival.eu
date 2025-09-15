@@ -11,10 +11,10 @@ import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
 export const TicketRowHeader = ({
-  subheading,
-  heading,
   availability,
   dateRange,
+  heading,
+  subheading,
 }: {
   subheading?: string;
   heading?: (string | { superscript: string })[];
@@ -26,8 +26,8 @@ export const TicketRowHeader = ({
 
   const chipTexts = {
     [Availability.AvailableNow]: lang.tickets.timeLeft,
-    [Availability.Soon]: lang.tickets.soonAvailable,
-    [Availability.SoldOut]: lang.tickets.soldOut
+    [Availability.SoldOut]: lang.tickets.soldOut,
+    [Availability.Soon]: lang.tickets.soonAvailable
   }
 
   return (

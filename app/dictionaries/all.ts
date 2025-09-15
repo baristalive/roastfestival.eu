@@ -93,10 +93,10 @@ const preprocessShared = (data: typeof shared) => {
               const fromRow = row.reduce((accRow, slot) => {
                 if (slot.$ref === id) {
                   accRow.push({
-                    start: slot.start,
-                    end: slot.end,
-                    track: track.track as keyof typeof shared.programCategory,
                     day: day.$ref,
+                    end: slot.end,
+                    start: slot.start,
+                    track: track.track as keyof typeof shared.programCategory,
                   });
                 }
                 return accRow;
@@ -154,8 +154,8 @@ type Tickets = {
 const preprocessLocalized = (data: typeof cz | typeof en) => {
   return {
     ...data,
-    tickets: data.tickets as Tickets,
     presenters: data.presenters as PartialPresenters,
+    tickets: data.tickets as Tickets,
   };
 };
 

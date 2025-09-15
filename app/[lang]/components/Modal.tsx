@@ -15,23 +15,23 @@ import TwitterIcon from "@/app/icons/twitter";
 import LinkedinIcon from "@/app/icons/linkedin";
 
 export const Modal = ({
-  name,
+  actionIcons,
   annotation,
-  subheading,
   bio,
+  children,
+  country,
   facebook,
   instagram,
-  youtube,
+  lang: talkLang,
   linkedin,
+  logo,
+  modalProps,
+  name,
+  schedule,
+  subheading,
   twitter,
   web,
-  logo,
-  lang: talkLang,
-  schedule,
-  country,
-  modalProps,
-  actionIcons,
-  children,
+  youtube,
 }: PropsWithChildren<Presenter>) => {
   const [showModal, setShowModal] = React.useState(false);
   const params = useParams();

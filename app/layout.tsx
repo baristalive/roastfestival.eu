@@ -7,27 +7,25 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: "Roast!",
-  description: dictionaries.en.metadata.description,
   alternates: {
     canonical: 'https://roastfestival.eu/',
     languages: {
-      'en-US': '/en',
       'cs-CZ': '/cz',
+      'en-US': '/en',
     },
   },
-  manifest: "/manifest.webmanifest",
+  description: dictionaries.en.metadata.description,
   icons: [
     {
       rel: 'icon',
-      type: 'image/png',
       sizes: '96x96',
+      type: 'image/png',
       url: '/icon-light-96.png',
     },
     {
       rel: 'icon',
-      type: 'image/png',
       sizes: '192x192',
+      type: 'image/png',
       url: '/icon-light-192.png',
     },
     {
@@ -35,16 +33,16 @@ export const metadata: Metadata = {
       url: '/favicon.ico'
     },
     {
+      media: '(prefers-color-scheme: light)',
       rel: 'icon',
       type: 'image/svg+xml',
       url: '/icon-light.svg',
-      media: '(prefers-color-scheme: light)',
     },
     {
+      media: '(prefers-color-scheme: dark)',
       rel: 'icon',
       type: 'image/svg+xml',
       url: '/icon-dark.svg',
-      media: '(prefers-color-scheme: dark)',
     },
     {
       rel: 'apple-touch-icon',
@@ -52,6 +50,8 @@ export const metadata: Metadata = {
       url: '/apple-touch-icon.png'
     }
   ],
+  manifest: "/manifest.webmanifest",
+  title: "Roast!",
 };
 
 export async function generateStaticParams() {

@@ -2,8 +2,8 @@ const BeanCounter = ({ id }: { id: number }) => {
   const style = {
     fill: "currentcolor",
     fillOpacity: 1,
-    strokeWidth: 0,
     strokeDasharray: "none",
+    strokeWidth: 0,
   };
   switch (id) {
     case 1:

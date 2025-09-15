@@ -125,7 +125,7 @@ const Home = () => {
               }}
             >
               <ScheduleView
-                value={{ view: scheduleView, setView: handleScheduleView }}
+                value={{ setView: handleScheduleView, view: scheduleView }}
               >
                 <ToolBar />
               </ScheduleView>

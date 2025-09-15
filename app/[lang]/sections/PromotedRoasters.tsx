@@ -12,17 +12,17 @@ export const PromotedRoasters = () => {
 
   const [promoted, setPromoted] = useState({
     honored: [] as string[],
-    regular: [] as string[],
     others: [] as string[],
+    regular: [] as string[],
   });
 
   useEffect(() => {
     setPromoted({
       honored:
         lang.promoted.roasters.honored?.sort(() => Math.random() - 0.5) || [],
+      others: lang.promoted.others.items?.sort(() => Math.random() - 0.5) || [],
       regular:
         lang.promoted.roasters.regular?.sort(() => Math.random() - 0.5) || [],
-      others: lang.promoted.others.items?.sort(() => Math.random() - 0.5) || [],
     });
   }, [
     lang.promoted.roasters.honored,
@@ -68,8 +68,8 @@ export const PromotedRoasters = () => {
               key={p}
               imgProps={{
                 className: "mx-auto h-auto max-h-[10rem] w-full max-w-[10rem]",
-                width: 160,
                 height: 160,
+                width: 160,
               }}
             />
           ))}
@@ -99,14 +99,14 @@ export const PromotedRoasters = () => {
                 showName={true}
                 imgProps={{
                   className: "h-auto max-h-[10rem] max-w-[10rem]",
-                  width: 160,
                   height: 160,
+                  width: 160,
                 }}
                 aProps={{
                   className:
                     "flex h-full flex-col items-center justify-between gap-4",
-                  target: "_blank",
                   rel: "external",
+                  target: "_blank",
                 }}
               />
             ))}

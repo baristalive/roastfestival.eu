@@ -5,39 +5,39 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Roast!',
-    short_name: 'Roast!',
-    description: dictionaries.en.metadata.description,
-    start_url: '/',
-    display: 'browser',
     background_color: '#fff',
-    theme_color: '#fff',
+    description: dictionaries.en.metadata.description,
+    display: 'browser',
     icons: [
       {
-        src: "/icon-light-512.png",
+        purpose: "maskable",
         sizes: "512x512",
-        type: "image/png",
-        purpose: "maskable"
+        src: "/icon-light-512.png",
+        type: "image/png"
       },
       {
-        src: "/icon-light-1024.png",
+        purpose: "maskable",
         sizes: "1024x1024",
-        type: "image/png",
-        purpose: "maskable"
+        src: "/icon-light-1024.png",
+        type: "image/png"
       },
       {
+        purpose: "any",
+        sizes: "any",
         src: "/icon-light.svg",
-        sizes: "any",
-        type: "image/svg+xml",
-        purpose: "any"
+        type: "image/svg+xml"
       },
       {
-        src: "/icon-dark.svg",
+        purpose: "monochrome",
         sizes: "any",
-        type: "image/svg+xml",
-        purpose: "monochrome"
+        src: "/icon-dark.svg",
+        type: "image/svg+xml"
       }
     ],
+    name: 'Roast!',
+    short_name: 'Roast!',
+    start_url: '/',
+    theme_color: '#fff',
   }
 
 }

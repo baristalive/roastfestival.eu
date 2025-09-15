@@ -76,15 +76,15 @@ export const Map = () => {
             <div className="h-[30rem] rounded-3xl text-base text-black lg:aspect-[2/3] lg:h-[90vh] 2xl:text-xl">
               <ReactMap
                 initialViewState={{
-                  longitude: 16.6225864,
                   latitude: 49.1995978,
+                  longitude: 16.6225864,
                   zoom: 15,
                 }}
                 scrollZoom={false}
                 style={{
-                  width: "100%",
-                  height: "100%",
                   borderRadius: "1.5rem",
+                  height: "100%",
+                  width: "100%",
                 }}
                 mapStyle="https://api.maptiler.com/maps/c303af9a-2cbf-4c95-8aa7-00a95751e11c/style.json?key=PeGeqGWAzLQUdqICcIfc"
               >

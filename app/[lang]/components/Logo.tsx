@@ -32,11 +32,11 @@ const Logo = () => {
       });
       gsap.set("path", { opacity: 0 });
       gsap.to("path", {
+        ease: "elastic.inOut",
         opacity: 0.8,
         stagger: { each: 0.02, from: "random" },
-        ease: "elastic.inOut",
       });
-      gsap.to("path", { opacity: 1, delay: 1.5, ease: "none" });
+      gsap.to("path", { delay: 1.5, ease: "none", opacity: 1 });
     },
     { scope: container },
   );

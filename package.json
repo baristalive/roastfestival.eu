@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && next-image-export-optimizer",
     "serve": "serve out",
-    "lint": "next lint"
+    "lint": "next lint --file *.ts --file *.mjs --file *.js",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
@@ -56,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-perfectionist": "^4.15.0",
     "npm-check-updates": "^17.1.11",
     "realfavicon": "^0.4.12",
     "serve": "^14.2.4"

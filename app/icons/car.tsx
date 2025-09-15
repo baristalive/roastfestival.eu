@@ -5,11 +5,11 @@ const CarIcon = ({ size = 34 }: { size?: string | number }) => (
     height={size}
     fill="currentColor"
     style={{
-      borderRadius: "17px",
-      padding: "2px",
-      display: "inline-block",
       background: "rgb(var(--foreground-rgb))",
+      borderRadius: "17px",
       color: "rgb(var(--background-rgb))",
+      display: "inline-block",
+      padding: "2px",
     }}
     viewBox="-120 -120 752 752"
   >

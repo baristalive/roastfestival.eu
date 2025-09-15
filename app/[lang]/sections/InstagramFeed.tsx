@@ -17,12 +17,12 @@ import Bar from "@/app/components/Bar";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUzZ7UIBkSWiS8HGOvOGJU_neEJftyyy4",
+  appId: "1:635139009990:web:936b1cd8582998e00056c7",
   authDomain: "roastfestival.firebaseapp.com",
+  measurementId: "G-RGNDY5N337",
+  messagingSenderId: "635139009990",
   projectId: "roastfestival",
   storageBucket: "roastfestival.appspot.com",
-  messagingSenderId: "635139009990",
-  appId: "1:635139009990:web:936b1cd8582998e00056c7",
-  measurementId: "G-RGNDY5N337",
 };
 const app = initializeApp(firebaseConfig);
 

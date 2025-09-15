@@ -21,19 +21,19 @@ export const Header = () => {
       gsap.set("h1", { opacity: 0, y: "+=20px" });
       gsap.to("h1", {
         delay: 1.5,
-        y: 0,
-        opacity: 1,
         ease: "back.out",
+        opacity: 1,
+        y: 0,
       });
       gsap.set([".fade-in", ".fade-in-2"], { opacity: 0 });
       gsap.to(".fade-in", { delay: 1, duration: 1, opacity: 1 });
       gsap.set(".slide-in", { left: 0 });
       const tl = gsap.timeline();
       tl.to(".slide-in", {
-        duration: 0.5,
         delay: 1,
-        left: "calc(100% - 3em)",
+        duration: 0.5,
         ease: "bounce.out",
+        left: "calc(100% - 3em)",
       });
       tl.to(".fade-in-2", { duration: 1, opacity: 1 });
     },

@@ -1,34 +1,4 @@
 const FLAGS = {
-  cz: (
-    <>
-      <path fill="#eee" d="M0 0h512v256l-265 45.2z" />
-      <path fill="#d80027" d="M256 256h302v260H0z" />
-      <path fill="#0052b4" d="M0 0v512l256-256L0 0z" />
-    </>
-  ),
-  sk: (
-    <>
-      <path fill="#0052b4" d="m0 160 260-32 256 32v192l-256 32L0 352z" />
-      <path fill="#eee" d="M0 0h512v160H0z" />
-      <path fill="#d80027" d="M0 352h512v168H0z" />
-      <path
-        fill="#eee"
-        d="M64 63v217c0 104 144 137 144 137s144-33 144-137V63z"
-      />
-      <path
-        fill="#d80027"
-        d="M96 95v185a83 78 0 0 0 9 34h206a83 77 0 0 0 9-34V95z"
-      />
-      <path
-        fill="#eee"
-        d="M288 224h-64v-32h32v-32h-32v-32h-32v32h-32v32h32v32h-64v32h64v32h32v-32h64z"
-      />
-      <path
-        fill="#0052b4"
-        d="M152 359a247 231 0 0 0 56 24c12-3 34-11 56-24a123 115 0 0 0 47-45 60 56 0 0 0-34-10l-14 2a60 56 0 0 0-110 0 60 56 0 0 0-14-2c-12 0-24 4-34 10a123 115 0 0 0 47 45z"
-      />
-    </>
-  ),
   at: (
     <>
       <path
@@ -38,10 +8,11 @@ const FLAGS = {
       <path fill="#eee" d="M0 167h512v178H0z" />
     </>
   ),
-  pl: (
+  cz: (
     <>
-      <path fill="#d80027" d="m0 256 256.4-44.3L512 256v256H0z" />
-      <path fill="#eee" d="M0 0h512v256H0z" />
+      <path fill="#eee" d="M0 0h512v256l-265 45.2z" />
+      <path fill="#d80027" d="M256 256h302v260H0z" />
+      <path fill="#0052b4" d="M0 0v512l256-256L0 0z" />
     </>
   ),
   de: (
@@ -51,15 +22,24 @@ const FLAGS = {
       <path fill="#333" d="M0 0h512v168H0z" />
     </>
   ),
-  si: (
+  en: (
     <>
-      <path fill="#0052B4" d="M0 136h512v240H0z" />
-      <path fill="#D80027" d="M0 344h512v168H0z" />
-      <path fill="#EEE" d="M0 0h512v168H0z" />
-      <path fill="#0052B4" d="M222.6 202.7V100.2H89v102.5z" />
+      <path fill="var(--flag-palette-blue, #0052b4)" d="M0 0h512v512H0z" />
       <path
-        fill="#EEE"
-        d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"
+        fill="var(--flag-palette-white, #eeeeee)"
+        d="M464 512h48v-48L304 256 512 48V0h-48L256 208 48 0H0v48l208 208L0 464v48h48l208-208z"
+      />
+      <path
+        fill="var(--flag-palette-white, #eeeeee)"
+        d="M512 320V192H320V0H192v192H0v128h192v192h128V320z"
+      />
+      <path
+        fill="var(--flag-palette-bright-red, #d80027)"
+        d="M512 288v-64H288V0h-64v224H0v64h224v224h64V288z"
+      />
+      <path
+        fill="var(--flag-palette-bright-red, #d80027)"
+        d="M0 32V0l192 192h-32zm512 448v32L320 320h32zM32 512H0l192-192v32zM480 0h32L320 192v-32z"
       />
     </>
   ),
@@ -116,24 +96,44 @@ const FLAGS = {
       <path fill="#6DA544" d="M0 512V0h168v512z" />
     </>
   ),
-  en: (
+  pl: (
     <>
-      <path fill="var(--flag-palette-blue, #0052b4)" d="M0 0h512v512H0z" />
+      <path fill="#d80027" d="m0 256 256.4-44.3L512 256v256H0z" />
+      <path fill="#eee" d="M0 0h512v256H0z" />
+    </>
+  ),
+  si: (
+    <>
+      <path fill="#0052B4" d="M0 136h512v240H0z" />
+      <path fill="#D80027" d="M0 344h512v168H0z" />
+      <path fill="#EEE" d="M0 0h512v168H0z" />
+      <path fill="#0052B4" d="M222.6 202.7V100.2H89v102.5z" />
       <path
-        fill="var(--flag-palette-white, #eeeeee)"
-        d="M464 512h48v-48L304 256 512 48V0h-48L256 208 48 0H0v48l208 208L0 464v48h48l208-208z"
+        fill="#EEE"
+        d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"
+      />
+    </>
+  ),
+  sk: (
+    <>
+      <path fill="#0052b4" d="m0 160 260-32 256 32v192l-256 32L0 352z" />
+      <path fill="#eee" d="M0 0h512v160H0z" />
+      <path fill="#d80027" d="M0 352h512v168H0z" />
+      <path
+        fill="#eee"
+        d="M64 63v217c0 104 144 137 144 137s144-33 144-137V63z"
       />
       <path
-        fill="var(--flag-palette-white, #eeeeee)"
-        d="M512 320V192H320V0H192v192H0v128h192v192h128V320z"
+        fill="#d80027"
+        d="M96 95v185a83 78 0 0 0 9 34h206a83 77 0 0 0 9-34V95z"
       />
       <path
-        fill="var(--flag-palette-bright-red, #d80027)"
-        d="M512 288v-64H288V0h-64v224H0v64h224v224h64V288z"
+        fill="#eee"
+        d="M288 224h-64v-32h32v-32h-32v-32h-32v32h-32v32h32v32h-64v32h64v32h32v-32h64z"
       />
       <path
-        fill="var(--flag-palette-bright-red, #d80027)"
-        d="M0 32V0l192 192h-32zm512 448v32L320 320h32zM32 512H0l192-192v32zM480 0h32L320 192v-32z"
+        fill="#0052b4"
+        d="M152 359a247 231 0 0 0 56 24c12-3 34-11 56-24a123 115 0 0 0 47-45 60 56 0 0 0-34-10l-14 2a60 56 0 0 0-110 0 60 56 0 0 0-14-2c-12 0-24 4-34 10a123 115 0 0 0 47 45z"
       />
     </>
   ),

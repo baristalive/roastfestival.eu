@@ -6,8 +6,8 @@ const AtIcon = () => (
     height="3em"
     fill="currentColor"
     style={{
-      borderRadius: "50%",
       background: "var(--background)",
+      borderRadius: "50%",
       color: "var(--primary)",
     }}
   >

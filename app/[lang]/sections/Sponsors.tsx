@@ -34,8 +34,8 @@ export const Sponsors = () => {
             key={p}
             imgProps={{
               className: "max-h-[18rem] max-w-[20rem]",
-              width: 320,
               height: 288,
+              width: 320,
             }}
           />
         ))}

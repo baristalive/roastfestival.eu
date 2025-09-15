@@ -10,12 +10,12 @@ import {
 } from "@/app/utils/ticket";
 
 export const TicketCard = ({
-  title,
-  price,
   availability,
-  href,
-  highlight = false,
   dateRange,
+  highlight = false,
+  href,
+  price,
+  title,
 }: {
   title: string;
   price: {

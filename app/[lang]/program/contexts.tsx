@@ -14,6 +14,6 @@ export const FilterDays = createContext({
 export type ScheduleViewType = "schedule" | "list" | "loading";
 
 export const ScheduleView = createContext({
-  view: "responsive" as ScheduleViewType,
   setView: () => {},
+  view: "responsive" as ScheduleViewType,
 });

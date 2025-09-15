@@ -8,6 +8,7 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.config({
     extends: ["next/core-web-vitals", "next/typescript", "prettier"],
+    plugins: ["perfectionist"],
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
@@ -17,10 +18,19 @@ const eslintConfig = [
           caughtErrors: "all",
           caughtErrorsIgnorePattern: "^_",
           destructuredArrayIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
           ignoreRestSiblings: true,
+          varsIgnorePattern: "^_",
         },
       ],
+      'perfectionist/sort-interfaces': ['error'],
+      'perfectionist/sort-objects': ['error', {
+        type: 'natural',
+      }],
+    },
+    settings: {
+      perfectionist: {
+        type: "natural",
+      },
     },
   }),
 ];

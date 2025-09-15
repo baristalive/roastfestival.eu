@@ -26,15 +26,15 @@ const Schedule = (props: SchedulePropsType) => {
     .filter((s) => ["brew", "espresso"].includes(s.track))
     .flatMap((s) =>
       s.schedule.map((t, idx) => ({
-        track: s.track,
         idx,
         schedule: t,
+        track: s.track,
       })),
     );
 
   const special = day.schedule
     .filter((s) => ["espresso_milk"].includes(s.track))
-    .flatMap((s) => ({ track: s.track, schedule: s.schedule.flat() }))[0];
+    .flatMap((s) => ({ schedule: s.schedule.flat(), track: s.track }))[0];
 
   if (day?.schedule === undefined || day.schedule.length <= 0 || special === undefined) {
     return null;

@@ -64,13 +64,13 @@ export const Gallery = () => {
       mm.add("(min-width: 1024px)", () => {
         gsap.set(".cards", { y: "+=20rem" });
         gsap.to(".cards", {
-          y: "-=40rem",
           scrollTrigger: {
-            trigger: ref.current,
+            end: "bottom top",
             scrub: 2,
             start: "top bottom",
-            end: "bottom top",
+            trigger: ref.current,
           },
+          y: "-=40rem",
         });
       });
     },

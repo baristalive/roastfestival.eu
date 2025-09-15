@@ -9,14 +9,14 @@ import {
 } from "react";
 
 const PresenterLogo = ({
-  name,
+  aProps = { rel: "external", target: "_blank" },
+  divProps = { className: "p-2" },
   imgProps = {
     className: "h-auto max-h-[16rem] w-full max-w-[16rem]",
-    width: 256,
     height: 256,
+    width: 256,
   },
-  aProps = { target: "_blank", rel: "external" },
-  divProps = { className: "p-2" },
+  name,
   showName = false,
 }: {
   name: string;

@@ -26,17 +26,17 @@ const GRID_STOPS =
     .join(" ") +
   " [h1800] 1fr max(1vw, 30px) [h1810]";
 const HOURS = Array.from(Array(9), (_, idx) => ({
-  title: idx + 10 + ":00",
-  start: `h${idx + 9}50`,
-  end: `h${idx + 10}10`,
   center: `h${idx + 10}00`,
+  end: `h${idx + 10}10`,
+  start: `h${idx + 9}50`,
+  title: idx + 10 + ":00",
 }));
 
 const DaySchedule = ({
-  schedule,
-  className = "",
-  showTrackHeader = false,
   appearance = "loading",
+  className = "",
+  schedule,
+  showTrackHeader = false,
   tracks = AllTracks,
 }: {
   className?: string;
@@ -67,8 +67,8 @@ const DaySchedule = ({
         {HOURS.map((h) => (
           <div
             style={{
-              gridColumnStart: h.start,
               gridColumnEnd: h.end,
+              gridColumnStart: h.start,
             }}
             key={h.title}
           >
@@ -86,8 +86,8 @@ const DaySchedule = ({
           <div
             className="border-r-2 border-dotted border-gray-200"
             style={{
-              gridColumnStart: h.start,
               gridColumnEnd: h.center,
+              gridColumnStart: h.start,
             }}
             key={h.title}
           ></div>
@@ -129,8 +129,8 @@ const DaySchedule = ({
                     className="schedule-item-wrapper"
                     key={`${presenter?.name}_${idx}`}
                     style={{
-                      gridColumnStart: `h${s.start.replace(":", "")}`,
                       gridColumnEnd: `h${s.end.replace(":", "")}`,
+                      gridColumnStart: `h${s.start.replace(":", "")}`,
                     }}
                   >
                     {presenter === undefined || !presenter.name ? null : (
