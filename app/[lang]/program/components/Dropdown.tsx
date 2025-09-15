@@ -4,16 +4,9 @@ import { useParams } from "next/navigation";
 import dictionaries, {
   AllDays,
   AllTracks,
-  Day,
   SupportedLanguages,
-  Track,
 } from "@/app/dictionaries/all";
 import { StationIcon } from "../../components/StationIcon";
-
-enum FilterKind {
-  track,
-  day,
-}
 
 const Dropdown = () => {
   const params = useParams();
@@ -34,26 +27,28 @@ const Dropdown = () => {
               aria-controls="dropdown-filter"
             >
               <div className="text-lg">{lang.programTile.filter}</div>
-              <div className="lg:flex gap-3 hidden">
-              {AllDays.filter((d) => selectedDays.includes(d)).map((d) => (
-                <div
-                  key={d}
-                  className="rounded-md bg-[var(--accent)] px-2 py-2 text-[var(--white)]"
-                >
-                  {
-                    lang.programDays[d as keyof typeof lang.programDays]
-                      .shortName
-                  }
-                </div>
-              ))}
-              {AllTracks.filter((t) => selectedTracks.includes(t)).map((t) => (
-                <div
-                  key={t}
-                  className="rounded-md bg-[var(--primary)] px-2 py-1 text-[var(--white)]"
-                >
-                  <StationIcon station={t} />
-                </div>
-              ))}
+              <div className="hidden gap-3 lg:flex">
+                {AllDays.filter((d) => selectedDays.includes(d)).map((d) => (
+                  <div
+                    key={d}
+                    className="rounded-md bg-[var(--accent)] px-2 py-2 text-[var(--white)]"
+                  >
+                    {
+                      lang.programDays[d as keyof typeof lang.programDays]
+                        .shortName
+                    }
+                  </div>
+                ))}
+                {AllTracks.filter((t) => selectedTracks.includes(t)).map(
+                  (t) => (
+                    <div
+                      key={t}
+                      className="rounded-md bg-[var(--primary)] px-2 py-1 text-[var(--white)]"
+                    >
+                      <StationIcon station={t} />
+                    </div>
+                  ),
+                )}
               </div>
               <svg
                 className="-mr-1 ml-2 h-5 w-5"
@@ -76,7 +71,7 @@ const Dropdown = () => {
             >
               <ul className="p-2">
                 <p className="p-2 text-lg">{lang.filterCategories.day}</p>
-                {lang.program.map((day, idx) => (
+                {lang.program.map((day) => (
                   <li
                     className="flex cursor-pointer items-center gap-2 text-nowrap rounded-md px-4 py-2 hover:bg-[var(--accent)] hover:text-[var(--white)]"
                     key={day.$ref}
@@ -121,7 +116,7 @@ const Dropdown = () => {
               </ul>
               <ul className="p-2">
                 <p className="p-2 text-lg">{lang.filterCategories.track}</p>
-                {AllTracks.map((track, idx) => (
+                {AllTracks.map((track) => (
                   <li
                     className="flex cursor-pointer items-center gap-2 text-nowrap rounded-md px-4 py-1 hover:bg-[var(--primary)] hover:text-[var(--white)]"
                     key={track}

@@ -11,7 +11,6 @@ import {
 
 export const TicketCard = ({
   title,
-  subheading,
   price,
   availability,
   href,
@@ -19,7 +18,6 @@ export const TicketCard = ({
   dateRange,
 }: {
   title: string;
-  subheading?: string;
   price: {
     full: number;
     discounted?: number;

@@ -6,7 +6,7 @@ import List from '@/app/icons/list'
 import { ScheduleView } from '../contexts'
 
 const ToolBar = () => {
-  const {view, setView} = useContext(ScheduleView);
+  const {setView} = useContext(ScheduleView);
 
   return (
     <div className="card elevate rounded-b-[2rem] p-2 fixed w-full xl:w-1/2">

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import dictionaries from "@/app/dictionaries/all";
 
 export async function generateStaticParams() {

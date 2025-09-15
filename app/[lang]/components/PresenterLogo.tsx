@@ -1,7 +1,4 @@
-import dictionaries, {
-  Presenter,
-  SupportedLanguages,
-} from "@/app/dictionaries/all";
+import dictionaries, { SupportedLanguages } from "@/app/dictionaries/all";
 import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 import { useParams } from "next/navigation";
 import {
@@ -37,12 +34,10 @@ const PresenterLogo = ({
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  const presenter = lang.presenters[
-    name as keyof typeof lang.presenters
-  ];
+  const presenter = lang.presenters[name as keyof typeof lang.presenters];
 
   if (!presenter) {
-    console.warn(`Presenter "${name}" doesn't exist in list of presenters`)
+    console.warn(`Presenter "${name}" doesn't exist in list of presenters`);
     return null;
   }
 

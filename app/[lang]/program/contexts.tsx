@@ -3,12 +3,12 @@ import { createContext } from "react";
 
 export const FilterTracks = createContext({
   selectedTracks: AllTracks,
-  toggleSelectedTracks: (value: Track) => {},
+  toggleSelectedTracks: (_value: Track) => {},
 });
 
 export const FilterDays = createContext({
   selectedDays: AllDays,
-  toggleSelectedDays: (value: Day) => {},
+  toggleSelectedDays: (_value: Day) => {},
 });
 
 export type ScheduleViewType = "schedule" | "list" | "loading";

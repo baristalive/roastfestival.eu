@@ -82,7 +82,7 @@ const DaySchedule = ({
           gridTemplateColumns: gridStops,
         }}
       >
-        {HOURS.map((h, idx) => (
+        {HOURS.map((h) => (
           <div
             className="border-r-2 border-dotted border-gray-200"
             style={{

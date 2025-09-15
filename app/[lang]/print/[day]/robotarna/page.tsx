@@ -86,7 +86,7 @@ const Schedule = (props: SchedulePropsType) => {
               gridTemplateColumns: `repeat(${schedule.length}, minmax(0, 1fr))`,
             }}
           >
-            {schedule.map((t, idx) => (
+            {schedule.map((t) => (
               <div
                 key={t.track}
                 className="program-track flex flex-col gap-2 px-2 text-xl"

@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import dictionaries, {
@@ -18,7 +18,6 @@ import {
 import ToolBar from "./components/ToolBar";
 import { useParams } from "next/navigation";
 import DaySchedule from "../components/DaySchedule";
-import NavBar from "@/app/components/NavBar";
 
 const SCHEDULE_FILTER_DAYS = "schedule_filter_days";
 const SCHEDULE_FILTER_TRACKS = "schedule_filter_tracks";

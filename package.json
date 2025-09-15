@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build && next-image-export-optimizer",
     "serve": "serve out",
-    "lint": "next lint",
-    "prettier": "prettier . --write"
+    "lint": "next lint"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",

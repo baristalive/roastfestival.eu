@@ -5,9 +5,7 @@ import dictionaries, {
   Day,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import { CSSProperties } from "react";
 import "./print.css";
-import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import DaySchedule from "@/app/[lang]/components/DaySchedule";

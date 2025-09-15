@@ -1,16 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
-import {
-  dictionaries,
-  Presenter,
-  SupportedLanguages,
-} from "@/app/dictionaries/all";
-import React, { MouseEvent, useRef, useState } from "react";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { StationIcon } from "../components/StationIcon";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { Flip } from "gsap/all";
-import DaySchedule from "../components/DaySchedule";
 import ArrowIcon from "@/app/icons/arrow";
 import PlusIcon from "@/app/icons/plus";
 
@@ -25,12 +16,12 @@ export const Program = () => {
     >
       <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-12 lg:grid-cols-3 2xl:gap-32">
         <div />
-        <div className=" aspect-square text-center">
+        <div className="aspect-square text-center">
           <a
             href={`/${params.lang}/program`}
             title={lang.colab.sponsors.title}
             rel="next"
-            className="flex h-full flex-col relative card elevate nav rounded-full items-center justify-center px-10"
+            className="card elevate nav relative flex h-full flex-col items-center justify-center rounded-full px-10"
           >
             <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
               {lang.programTile.title}
@@ -46,7 +37,7 @@ export const Program = () => {
             <p className="py-2 text-base 2xl:text-xl">
               {lang.programTile.content}
             </p>
-            <div className="text-4xl mt-2 text-[var(--black)] md:mt-8 absolute right-0 bottom-0">
+            <div className="absolute bottom-0 right-0 mt-2 text-4xl text-[var(--black)] md:mt-8">
               <div className="float-right">
                 <ArrowIcon />
               </div>

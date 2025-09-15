@@ -2,11 +2,7 @@
 
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
-import {
-  dictionaries,
-  Presenter,
-  SupportedLanguages,
-} from "@/app/dictionaries/all";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import React, { useEffect, useState } from "react";
 import PresenterLogo from "../components/PresenterLogo";
 

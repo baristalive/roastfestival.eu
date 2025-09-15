@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import {
   fetchAndActivate,
@@ -86,7 +86,7 @@ const ContentTileSkeleton = () => (
 const InstagramFeed = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const [posts, setPosts] = useState([] as any[]);
+  const [posts, setPosts] = useState([] as InstagramPost[]);
   const [igApiKey, setIgApiKey] = useState("");
 
   useEffect(() => {
@@ -157,24 +157,24 @@ const InstagramFeed = () => {
         <div className="animate-hover-pause carousel flex overflow-hidden py-4">
           <div className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4 pr-4 will-change-transform">
             {posts
-              ? posts.map((p: InstagramPost) => (
+              ? posts.map((p) => (
                   <ContentTile {...p} key={p.id} />
                 ))
               : Array(LIMIT)
                   .fill(0)
-                  .map((i, idx) => <ContentTileSkeleton key={idx} />)}
+                  .map((_, idx) => <ContentTileSkeleton key={idx} />)}
           </div>
           <div
             className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4 pr-4 will-change-transform"
             aria-hidden
           >
             {posts
-              ? posts.map((p: InstagramPost) => (
+              ? posts.map((p) => (
                   <ContentTile {...p} key={p.id} />
                 ))
               : Array(LIMIT)
                   .fill(0)
-                  .map((i, idx) => <ContentTileSkeleton key={idx} />)}
+                  .map((_, idx) => <ContentTileSkeleton key={idx} />)}
           </div>
         </div>
       </div>

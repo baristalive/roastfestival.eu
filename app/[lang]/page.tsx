@@ -7,7 +7,6 @@ import { Header } from "./sections/Header";
 import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
-import { Colab } from "./sections/Colab";
 import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 import { Map } from "./sections/Map";
