@@ -329,7 +329,15 @@
     },
     "party_soutez": {
       "name": "Soutěž v přípravě kávy",
-      "annotation": "Detaily připravujeme. Chviličku strpení."
+      "annotation": "Soutěž zaměřená na alternativní přípravu kávy. Soutěžící obdrží balíček kávových zrn hodinu před svým kolem a jejich úkolem je připravit minimálně 150 ml nápoje pouze za použití vody a kávy. Na přípravu mají přesně 10 minut. Soutěž probíhá ve třech kolech a v každém z nich rozhoduje porota, který soutěžící postoupí dál. V případě nerozhodného výsledku rozhodne hlavní porotce.",
+      "actionIcons": {
+        "signup": {
+          "text": "Přihláška"
+        },
+        "rules": {
+          "text": "Pravidla"
+        }
+      }
     }
   },
   "promoted": {

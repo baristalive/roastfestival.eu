@@ -343,6 +343,7 @@
       "country": "cz",
       "subheading": "Adrian\u00a0Drozdek",
       "logo": "drozdek.jpg",
+      "linkedin": "https://www.linkedin.com/in/adrian-drozdek-31b242118/",
       "modalProps": {
         "className": ""
       }
@@ -394,7 +395,13 @@
     },
     "ws_qb": {
       "country": "cz",
-      "subheading": "Miroslav\u00a0Dubský"
+      "logo": "dubsky.jpg",
+      "subheading": "Miroslav\u00a0Dubský",
+      "linkedin": "https://www.linkedin.com/in/miroslavdubsky",
+      "web": "https://qb.coffee/",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_choco": {
       "country": "cz",
@@ -467,7 +474,9 @@
       "logo": "terka.png",
       "modalProps": {
         "className": ""
-      }
+      },
+      "linkedin": "https://www.linkedin.com/in/tereza-prejdov%C3%A1-5b4aa639",
+      "web": "https://chicasindustry.cz/"
     },
     "talk_humberto": {
       "subheading": "Humberto\u00a0Ribes",
@@ -498,6 +507,7 @@
       "subheading": "Alica\u00a0Banszka",
       "country": "sk",
       "logo": "alice.jpg",
+      "instagram": "https://www.instagram.com/alica.banszka/",
       "modalProps": {
         "className": ""
       }
@@ -713,7 +723,21 @@
         "className": ""
       }
     },
-    "party_soutez": {}
+    "party_soutez": {
+      "logo": "brew_battle.jpg",
+      "instagram": "https://www.instagram.com/barista_battle_brno/",
+      "actionIcons": {
+        "signup": {
+          "href": "https://forms.gle/4qLFHCgsYNoTK35N9"
+        },
+        "rules": {
+          "href": "https://drive.google.com/file/d/1235_jLejZ-VFJ2NVxtBTs8CSPtEBx-F1/view"
+        }
+      },
+      "modalProps": {
+        "className": ""
+      }
+    }
   },
   "promoted": {
     "others": {

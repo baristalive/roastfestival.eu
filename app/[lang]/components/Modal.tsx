@@ -56,7 +56,7 @@ export const Modal = ({
         <a
           key={k}
           href={v.href}
-          className="rounded-full bg-[var(--secondary)] px-8 py-4 text-[var(--white)]"
+          className="rounded-full bg-[var(--primary)] px-8 py-4 text-[var(--white)]"
           target="_blank"
           rel="external"
         >
@@ -122,7 +122,7 @@ export const Modal = ({
           title="X (Twitter)"
           target="_blank"
           rel="external"
-          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--white)]"
+          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--black)] text-[var(--white)]"
         >
           <TwitterIcon />
           <span className="sr-only">X (Twitter)</span>
@@ -134,7 +134,7 @@ export const Modal = ({
           title="LinkedIn"
           target="_blank"
           rel="external"
-          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--white)]"
+          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--black)] text-[var(--white)]"
         >
           <LinkedinIcon />
           <span className="sr-only">LinkedIn</span>

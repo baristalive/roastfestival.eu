@@ -296,7 +296,15 @@
     },
     "party_soutez": {
       "name": "Competition in coffee brewing",
-      "annotation": "Details are brewing as we speak. Stay tuned."
+      "annotation": "A competition focused on alternative coffee preparation. Contestants receive a package of coffee beans one hour before their round, and their task is to prepare at least 150 ml of the beverage using only water and coffee. They have exactly 10 minutes to prepare it. The competition takes place in three rounds, and in each round, the jury decides which contestant will advance. In the event of a tie, the head judge will decide..",
+      "actionIcons": {
+        "signup": {
+          "text": "Sign up"
+        },
+        "rules": {
+          "text": "Rules"
+        }
+      }
     }
   },
   "promoted": {
