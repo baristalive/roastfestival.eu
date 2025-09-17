@@ -996,8 +996,8 @@
           "schedule": [
             [
               {
-                "start": "11:30",
-                "end": "12:30",
+                "start": "12:30",
+                "end": "13:30",
                 "$ref": "party_stop_time"
               },
               {
