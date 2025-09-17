@@ -583,7 +583,8 @@
       },
       {
         "availability": {
-          "start": "2025-06-01"
+          "start": "2025-06-01",
+          "end": "2025-09-19"
         },
         "subheading": "Pre-sale",
         "heading": [
@@ -611,6 +612,26 @@
             "title": "Sunday",
             "full": 350,
             "note": "Cup 300 Kč"
+          }
+        ]
+      },
+      {
+        "subheading": "Last chance",
+        "heading": ["Walk-up"],
+        "prices": [
+          {
+            "title": "Full event",
+            "full": 600,
+            "discounted": 500
+          },
+          {
+            "title": "Saturday",
+            "full": 500,
+            "discounted": 450
+          },
+          {
+            "title": "Sunday",
+            "full": 450
           }
         ]
       }

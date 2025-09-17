@@ -613,7 +613,8 @@
       },
       {
         "availability": {
-          "start": "2025-06-01"
+          "start": "2025-06-01",
+          "end": "2025-09-19"
         },
         "subheading": "Předprodej",
         "heading": [
@@ -640,6 +641,26 @@
             "title": "Neděle",
             "full": 350,
             "note": "Hrnek za 300 Kč"
+          }
+        ]
+      },
+      {
+        "subheading": "Poslední možnost",
+        "heading": ["Na místě"],
+        "prices": [
+          {
+            "title": "Celofestivalová",
+            "full": 600,
+            "discounted": 500
+          },
+          {
+            "title": "Sobota",
+            "full": 500,
+            "discounted": 450
+          },
+          {
+            "title": "Neděle",
+            "full": 450
           }
         ]
       }
