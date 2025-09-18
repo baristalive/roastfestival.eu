@@ -669,39 +669,37 @@
   "print": {
     "title": "Obecné",
     "categories": {
-      "drinks": "Nápoje",
+      "pub": "Ceník - Hospoda",
       "merch": "Festivalový merch",
       "rental": "Půjčovna",
       "tickets": "Vstupné"
     },
     "priceList": {
-      "merch": [
+      "info": [
         {
           "title": "Tričko",
-          "price": 390
+          "price": 450
         },
         {
           "title": "Hrníček",
-          "price": 190
+          "price": 350
         }
       ],
-      "rental": [
-        {
-          "title": "Kelímek (záloha)",
-          "price": 50
-        }
-      ],
-      "drinks": [
+      "pub": [
         {
           "title": "Pivo Stern",
           "price": 60
         },
         {
-          "title": "Pivo sour",
-          "price": 90
+          "title": "Whisky láhev",
+          "price": 950
         },
         {
-          "title": "Domácí limča",
+          "title": "Kelímek 0,5l (záloha)",
+          "price": 50
+        },
+        {
+          "title": "Kelímek na kávu (záloha)",
           "price": 50
         }
       ]

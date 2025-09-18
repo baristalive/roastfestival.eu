@@ -979,7 +979,7 @@
                 "$ref": "talk_humberto"
               },
               {
-                "start": "14:00",
+                "start": "14:10",
                 "end": "15:00",
                 "$ref": "talk_ks"
               },
@@ -1222,8 +1222,8 @@
                 "$ref": "talk_madalin"
               },
               {
-                "start": "14:00",
-                "end": "15:10",
+                "start": "14:10",
+                "end": "15:20",
                 "$ref": "talk_tripplesenzory"
               },
               {
