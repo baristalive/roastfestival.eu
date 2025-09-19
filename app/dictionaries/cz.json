@@ -8,10 +8,10 @@
   "back": "Zpět na hlavní stránku",
   "buyTickets": "Chci vstupenky",
   "colab": {
-    "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc. Třeba tě naše nabídka zaujme. A pokud ne, ozvi se nám na email, třeba něco vymyslíme.",
+    "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc.",
     "exhibitors": {
-      "button": "Odeslat nabídku",
-      "text": "Zaujala tě naše akce a chtěl by ses jí účastnit? Hledáme pražírny, kavárny a přednášející.",
+      "button": "Informace pro pražírny",
+      "text": "Informace pro přihlášené pražírny nalezneš zde.",
       "title": "Pražírny a ostatní učinkující"
     },
     "sponsors": {

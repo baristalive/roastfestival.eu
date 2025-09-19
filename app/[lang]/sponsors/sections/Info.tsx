@@ -18,7 +18,7 @@ export const Info = () => {
     <>
       <section
         id="info"
-        className="colab-section watermark flex flex-col items-center justify-between pb-10"
+        className="previous-year-section watermark flex flex-col items-center justify-between pb-10"
       >
         <NavBar backToSection="colab" />
         <div className="flex max-w-[1900px] grid-cols-[1fr,2fr] flex-col gap-8 p-8 lg:grid">

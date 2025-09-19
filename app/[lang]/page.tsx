@@ -16,6 +16,7 @@ import { WhatToExpect } from "./sections/WhatToExpect";
 import { PromotedRoasters } from "./sections/PromotedRoasters";
 import { Sponsors } from "./sections/Sponsors";
 import InstagramFeed from "./sections/InstagramFeed";
+import { Colab } from "./sections/Colab";
 
 type HomePropsType = {
   params: Promise<{ lang: SupportedLanguages }>;
@@ -41,11 +42,11 @@ const Home = ({ params }: HomePropsType) => {
       <PromotedRoasters />
       <Tickets />
       <WhatToExpect />
-      {/* <Colab /> */}
       <PreviousYears />
       <Gallery />
       <Map />
       <Sponsors />
+      <Colab />
       <Organizers />
       <Footer />
     </div>

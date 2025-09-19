@@ -8,10 +8,10 @@
   "back": "Back to home page",
   "buyTickets": "I want tickets",
   "colab": {
-    "description": "Roast! would be nothing without the participation of roasters, exhibitors, speakers and sponsors. If you fall into this category, be sure to click to find out more. Maybe you'll be interested in what we have to offer. And if not, drop us an email and maybe we can work something out.",
+    "description": "Roast! would be nothing without the participation of roasters, exhibitors, speakers and sponsors. If you fall into this category, be sure to click to find out more.",
     "exhibitors": {
-      "button": "Send offer",
-      "text": "Are you interested in our event and would you like to participate? We are looking for roasters, cafes and speakers.",
+      "button": "Infopoint for roasters",
+      "text": "Click here for all the necessary information for roasters.",
       "title": "Roasters and presenters"
     },
     "sponsors": {
