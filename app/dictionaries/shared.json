@@ -622,7 +622,7 @@
       "logo": "labanda.png",
       "primaryLink": "web",
       "web": "https://www.labandacaffeina.com/",
-      "instagram": "https://www.instagram.com/_labandacaffeina/",
+      "instagram": "https://www.instagram.com/labandacaffeina/",
       "modalProps": {
         "className": "p-12"
       }
