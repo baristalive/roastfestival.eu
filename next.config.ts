@@ -1,21 +1,34 @@
 import type { NextConfig } from "next";
 
 import createMDX from "@next/mdx";
-import rehypeUnwrapImages from "rehype-unwrap-images";
-import remarkGfm from "remark-gfm";
-import remarkExtendedTable, {
-  extendedTableHandlers,
-} from "remark-extended-table";
 import { RuleSetRule } from "webpack";
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
-    rehypePlugins: [rehypeUnwrapImages],
-    remarkPlugins: [remarkGfm, remarkExtendedTable],
-    remarkRehypeOptions: { handlers: { ...extendedTableHandlers } },
+    rehypePlugins: ["rehype-unwrap-images", "rehype-extended-table"],
+    remarkPlugins: ["remark-gfm"]
   },
 });
+
+const svgWebpackLoader = {
+  loader: "@svgr/webpack",
+  options: {
+    svgoConfig: {
+      plugins: [
+        {
+          name: "preset-default",
+          params: {
+            overrides: {
+              cleanupIds: false,
+              removeViewBox: false,
+            },
+          },
+        },
+      ],
+    },
+  },
+}
 
 const nextConfig: NextConfig = {
   env: {
@@ -41,6 +54,15 @@ const nextConfig: NextConfig = {
   },
   output: "export",
   transpilePackages: ["next-image-export-optimizer"],
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: [svgWebpackLoader],
+        as: '*.js',
+      }
+    }
+  },
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(
@@ -60,26 +82,7 @@ const nextConfig: NextConfig = {
         issuer: fileLoaderRule.issuer,
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
         test: /\.svg$/i,
-        use: [
-          {
-            loader: "@svgr/webpack",
-            options: {
-              svgoConfig: {
-                plugins: [
-                  {
-                    name: "preset-default",
-                    params: {
-                      overrides: {
-                        cleanupIds: false,
-                        removeViewBox: false,
-                      },
-                    },
-                  },
-                ],
-              },
-            },
-          },
-        ],
+        use: [svgWebpackLoader],
       },
       {
         test: /\.md$/i,

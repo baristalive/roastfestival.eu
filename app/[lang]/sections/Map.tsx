@@ -15,7 +15,7 @@ export const Map = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <section className="where-section watermark2 min-h-screen pb-48">
-      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr,auto,1fr] flex-col px-8 lg:grid">
+      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr_auto_1fr] flex-col px-8 lg:grid">
         <div className="flex flex-col md:pl-12">
           <h2 className="pb-8 text-3xl font-bold 2xl:text-6xl">
             {lang.location.title}
@@ -26,7 +26,7 @@ export const Map = () => {
           <div className="grow">
             <Bar />
           </div>
-          <div className="card elevate mx-4 mt-32 flex flex-col gap-2 rounded-t-2xl p-8 text-center text-base lg:mx-0 lg:mb-32 lg:mt-0 lg:gap-4 lg:rounded-s-2xl lg:rounded-tr-none lg:text-right 2xl:p-12 2xl:text-xl">
+          <div className="card elevate mx-4 mt-32 flex flex-col gap-2 rounded-t-2xl p-8 text-center text-base lg:mx-0 lg:mt-0 lg:mb-32 lg:gap-4 lg:rounded-s-2xl lg:rounded-tr-none lg:text-right 2xl:p-12 2xl:text-xl">
             <h3 className="font-bold">{lang.location.addressTitle}</h3>
             <p>Káznice Brno</p>
             <p>
