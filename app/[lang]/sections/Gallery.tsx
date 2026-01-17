@@ -54,7 +54,7 @@ export const Gallery = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section className="gallery-section">
+    <section>
       <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 md:flex">
         {largeWallImages.map((col, idx) => (
           <div

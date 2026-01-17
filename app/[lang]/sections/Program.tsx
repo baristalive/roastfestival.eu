@@ -11,7 +11,7 @@ export const Program = () => {
 
   return (
     <section
-      className={`program-section watermark6 py-8 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
+      className={`py-8 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="program"
     >
       <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-12 lg:grid-cols-3 2xl:gap-32">

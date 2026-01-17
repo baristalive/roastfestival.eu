@@ -70,7 +70,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="wrapper watermark2 h-screen">
+    <div className="wrapper h-screen">
       <Link
         href={params.lang === "cz" ? "/en/program" : "/cz/program"}
         hrefLang={params.lang === "cz" ? "en-US" : "cs-CZ"}

@@ -11,7 +11,7 @@ export const WhatToExpect = () => {
   return (
     <section
       id="what-to-expect"
-      className="what-to-expect-section watermark3 pt-12 sm:pt-0 lg:pb-24"
+      className="pt-12 sm:pt-0 lg:pb-24"
     >
       <div className="mx-auto grid max-w-[1900px] px-8 lg:grid-cols-[1fr,1fr]">
         <div className="md:pl-12">

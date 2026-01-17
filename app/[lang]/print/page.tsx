@@ -23,7 +23,7 @@ const Print = (props: PrintPropsType) => {
       >
         {params.lang === "cz" ? "Switch to English" : "Přepnout do češtiny"}
       </Link>
-      <div className="watermark3 flex h-full flex-col items-center justify-center gap-4">
+      <div className="flex h-full flex-col items-center justify-center gap-4">
         {Object.entries(lang.programDays).map(([k, v]) => (
           <React.Fragment key={k}>
             <h2 className="text-3xl">{v.name} [INSTAGRAM]</h2>

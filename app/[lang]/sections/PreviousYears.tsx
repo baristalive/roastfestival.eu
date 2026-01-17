@@ -11,7 +11,7 @@ export const PreviousYears = () => {
   return (
     <section
       id="prev-year"
-      className="previous-year-section watermark4 relative z-0 flex flex-col items-center justify-between"
+      className="relative z-0 flex flex-col items-center justify-between"
     >
       <div>
         <div className="absolute inset-8 z-10 flex items-center justify-center py-12">

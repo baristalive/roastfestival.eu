@@ -17,7 +17,7 @@ export const Tickets = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="tickets" className="ticket-section watermark5">
+    <section id="tickets">
       <div className="mx-auto grid max-w-[1900px] px-8 lg:grid-cols-[1fr,2fr]">
         <div className="md:pl-12">
           <h2 className="pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
