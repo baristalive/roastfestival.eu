@@ -1,6 +1,6 @@
 "use client";
 import CarIcon from "@/app/icons/car";
-import MapIcon from "@/app/icons/map.svg";
+import MapIcon from "@/app/icons/map";
 import TramIcon from "@/app/icons/tram";
 import WebIcon from "@/app/icons/web";
 import "maplibre-gl/dist/maplibre-gl.css";
