@@ -1,44 +1,19 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Bar from "@/app/components/Bar";
 
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
 
   const info = [
     lang.info.slice(0, Math.ceil(lang.info.length / 2)),
     lang.info.slice(Math.ceil(lang.info.length / 2)),
   ];
 
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
-      const mm = gsap.matchMedia();
-      mm.add("(min-width: 768px)", () => {
-        gsap.set(".cards", { y: "+=30rem" });
-        gsap.to(".cards", {
-          scrollTrigger: {
-            end: "bottom top",
-            scrub: 2,
-            start: "top bottom",
-            trigger: ref.current,
-          },
-          y: "-=30rem",
-        });
-      });
-    },
-    { scope: ref },
-  );
   return (
     <section
-      ref={ref}
       id="info"
       className="info-section watermark2 flex flex-col items-center justify-between gap-8 pb-48"
     >

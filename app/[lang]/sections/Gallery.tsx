@@ -1,9 +1,5 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
 import "react-medium-image-zoom/dist/styles.css";
 import {
   LANDSCAPE,
@@ -56,29 +52,10 @@ const smallWallImages = [
 export const Gallery = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
-      const mm = gsap.matchMedia();
-      mm.add("(min-width: 1024px)", () => {
-        gsap.set(".cards", { y: "+=20rem" });
-        gsap.to(".cards", {
-          scrollTrigger: {
-            end: "bottom top",
-            scrub: 2,
-            start: "top bottom",
-            trigger: ref.current,
-          },
-          y: "-=40rem",
-        });
-      });
-    },
-    { scope: ref },
-  );
+
   return (
-    <section ref={ref} className="gallery-section">
-      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 will-change-transform md:flex">
+    <section className="gallery-section">
+      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 md:flex">
         {largeWallImages.map((col, idx) => (
           <div
             className="shrink-1 flex min-w-0 gap-1 md:flex-col md:gap-4"
@@ -95,7 +72,7 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="cards mx-auto flex max-w-[1900px] items-center justify-center gap-1 p-2 pb-12 will-change-transform md:hidden">
+      <div className="cards mx-auto flex max-w-[1900px] items-center justify-center gap-1 p-2 pb-12 md:hidden">
         {smallWallImages.map((col, idx) => (
           <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
             {col.map((i, idx2) => (

@@ -1,55 +1,15 @@
 "use client";
 import { useParams } from "next/navigation";
-import React, { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+import React from "react";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import Bar from "@/app/components/Bar";
 
 export const PreviousYears = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
-      const mm = gsap.matchMedia();
-      mm.add("(min-width: 1024px)", () => {
-        gsap.utils.toArray(".cards g").map((c, idx) => {
-          gsap.set(c as Element, { y: `+=${4 + idx * 0.5}rem` });
-          gsap.to(c as Element, {
-            scrollTrigger: {
-              end: "bottom top",
-              scrub: 2,
-              start: "top bottom",
-              trigger: ref.current,
-            },
-            y: `-=${4 + idx}rem`,
-          });
-        });
-      });
-      mm.add("(max-width: 1024px)", () => {
-        gsap.utils.toArray(".cards g").map((c, idx) => {
-          gsap.set(c as Element, { y: `+=${(idx + 1) * 0.2}rem` });
-          gsap.to(c as Element, {
-            scrollTrigger: {
-              end: "bottom top",
-              scrub: 2,
-              start: "top bottom",
-              trigger: ref.current,
-            },
-            y: `-=${(idx + 1) * 0.5}rem`,
-          });
-        });
-      });
-    },
-    { scope: ref },
-  );
   return (
     <section
-      ref={ref}
       id="prev-year"
       className="previous-year-section watermark4 relative z-0 flex flex-col items-center justify-between"
     >

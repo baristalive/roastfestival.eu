@@ -1,8 +1,5 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import FacebookIcon from "@/app/icons/facebook";
@@ -14,35 +11,9 @@ import Link from "next/link";
 export const Header = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
-
-  useGSAP(
-    () => {
-      gsap.set("h1", { opacity: 0, y: "+=20px" });
-      gsap.to("h1", {
-        delay: 1.5,
-        ease: "back.out",
-        opacity: 1,
-        y: 0,
-      });
-      gsap.set([".fade-in", ".fade-in-2"], { opacity: 0 });
-      gsap.to(".fade-in", { delay: 1, duration: 1, opacity: 1 });
-      gsap.set(".slide-in", { left: 0 });
-      const tl = gsap.timeline();
-      tl.to(".slide-in", {
-        delay: 1,
-        duration: 0.5,
-        ease: "bounce.out",
-        left: "calc(100% - 3em)",
-      });
-      tl.to(".fade-in-2", { duration: 1, opacity: 1 });
-    },
-    { scope: ref },
-  );
 
   return (
     <header
-      ref={ref}
       className="elevate z-10 flex h-svh flex-col items-center justify-between py-8"
     >
       {lang.banner && (
@@ -50,18 +21,18 @@ export const Header = () => {
           href={lang.contacts.tickets}
           title={lang.buyTickets}
           rel="external"
-          className="fade-in elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold will-change-[opacity] md:text-xl"
+          className="elevate z-10 -mt-8 block w-full bg-[var(--secondary)] p-4 pb-3 text-center text-sm font-semibold md:text-xl"
         >
           {lang.banner}
         </a>
       )}
       <div className="mb-auto flex w-full max-w-[1900px] justify-between px-12 pt-2 text-sm md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
-        <div className="fade-in font-medium leading-snug will-change-[opacity]">
+        <div className="font-medium leading-snug">
           {lang.date}
           <br />
           {lang.place}
         </div>
-        <div className="fade-in text-right font-medium leading-snug will-change-[opacity]">
+        <div className="text-right font-medium leading-snug">
           <nav className="">
             <div className="flex justify-end gap-4">
               <a
@@ -100,12 +71,12 @@ export const Header = () => {
           <Logo />
         </div>
         <div className="pt-12 text-center lg:pt-6">
-          <h1 className="mx-auto inline-block max-w-min font-bold lowercase leading-none will-change-[opacity,_transform]">
+          <h1 className="mx-auto inline-block max-w-min font-bold lowercase leading-none">
             {lang.title}
           </h1>
         </div>
       </div>
-      <div className="fade-in flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug will-change-[opacity] md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
+      <div className="flex w-full max-w-[1900px] flex-col gap-8 px-12 text-center font-medium leading-snug md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
         <div className="flex flex-col gap-8">
           <a href="#info" className="nav">
             <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
@@ -126,10 +97,10 @@ export const Header = () => {
           className="nav"
         >
           <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-28">
-            <span className="fade-in-2 will-change-[opacity]">
+            <span>
               {lang.buyTickets}
             </span>
-            <span className="slide-in absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--accent)] will-change-[left] md:text-xl 2xl:text-3xl">
+            <span className="absolute right-0 top-1/2 -translate-y-1/2 text-sm text-[var(--accent)] md:text-xl 2xl:text-3xl" style={{left: "calc(100% - 3em)"}}>
               <ArrowIcon />
             </span>
           </nav>
