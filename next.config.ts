@@ -12,7 +12,6 @@ const withMDX = createMDX({
 });
 
 const nextConfig: NextConfig = {
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   env: {
     nextImageExportOptimizer_exportFolderName: "optimized",
     nextImageExportOptimizer_exportFolderPath: "out",
@@ -35,6 +34,7 @@ const nextConfig: NextConfig = {
     loader: "custom",
   },
   output: "export",
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   transpilePackages: ["next-image-export-optimizer"],
 };
 

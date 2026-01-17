@@ -42,7 +42,7 @@ export const TicketCard = ({
       >
         <div className="nav flex flex-col rounded-2xl text-center">
           <div
-            className={`${highlight ? "card-highlight" : "card"} elevate flex flex-col items-start justify-center gap-2 rounded-t-2xl px-4 pb-2 pt-4 2xl:px-8 2xl:pb-0 2xl:pt-8`}
+            className={`${highlight ? "card-highlight" : "card"} elevate flex flex-col items-start justify-center gap-2 rounded-t-2xl px-4 pt-4 pb-2 2xl:px-8 2xl:pt-8 2xl:pb-0`}
           >
             <span className="text-left text-xl font-bold 2xl:text-2xl">
               {title}
@@ -55,7 +55,7 @@ export const TicketCard = ({
                 `${lang.tickets.discounted}: ${price.discounted} Kč`}
             </span>
             {highlight && (
-              <div className="card rounded-full px-2 text-sm lg:px-4 lg:pb-1 lg:pt-[.3rem] lg:text-base">
+              <div className="card rounded-full px-2 text-sm lg:px-4 lg:pt-[.3rem] lg:pb-1 lg:text-base">
                 {lang.tickets.alreadyAvailable}: {lang.tickets.timeLeft}{" "}
                 {availabilityRemainingToLocale(
                   dateRange.end || lang.dateStart,
@@ -71,7 +71,7 @@ export const TicketCard = ({
             <div className="beans relative h-full w-full rounded-b-xl">
               {price.addon && (
                 <div
-                  className={`elevate absolute -bottom-4 -right-4 flex h-24 w-24 flex-col justify-center rounded-full p-4 font-semibold ${highlight ? "card" : "bg-[var(--accent)] text-[var(--white)]"}`}
+                  className={`elevate absolute -right-4 -bottom-4 flex h-24 w-24 flex-col justify-center rounded-full p-4 font-semibold ${highlight ? "card" : "bg-(--accent) text-(--white)"}`}
                 >
                   {price.addon}
                 </div>

@@ -55,10 +55,10 @@ export const Gallery = () => {
 
   return (
     <section>
-      <div className="cards mx-auto hidden max-w-[1900px] items-center justify-center gap-4 px-12 pb-12 md:flex">
+      <div className="cards mx-auto hidden max-w-475 items-center justify-center gap-4 px-12 pb-12 md:flex">
         {largeWallImages.map((col, idx) => (
           <div
-            className="shrink-1 flex min-w-0 gap-1 md:flex-col md:gap-4"
+            className="flex min-w-0 shrink gap-1 md:flex-col md:gap-4"
             key={`col_${idx}`}
           >
             {col.map((i, idx2) => (
@@ -72,7 +72,7 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="cards mx-auto flex max-w-[1900px] items-center justify-center gap-1 p-2 pb-12 md:hidden">
+      <div className="cards mx-auto flex max-w-475 items-center justify-center gap-1 p-2 pb-12 md:hidden">
         {smallWallImages.map((col, idx) => (
           <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
             {col.map((i, idx2) => (

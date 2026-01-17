@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next-image-export-optimizer",
     "serve": "serve out",
-    "lint": "next lint --file *.ts --file *.mjs --file *.js",
+    "lint": "eslint",
     "prettier": "prettier --write ."
   },
   "dependencies": {

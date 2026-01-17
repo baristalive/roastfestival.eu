@@ -3,38 +3,27 @@
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import PresenterLogo from "../components/PresenterLogo";
 
 export const PromotedRoasters = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  const [promoted, setPromoted] = useState({
-    honored: [] as string[],
-    others: [] as string[],
-    regular: [] as string[],
-  });
-
-  useEffect(() => {
-    setPromoted({
-      honored:
-        lang.promoted.roasters.honored?.sort(() => Math.random() - 0.5) || [],
-      others: lang.promoted.others.items?.sort(() => Math.random() - 0.5) || [],
-      regular:
-        lang.promoted.roasters.regular?.sort(() => Math.random() - 0.5) || [],
-    });
-  }, [
-    lang.promoted.roasters.honored,
-    lang.promoted.roasters.regular,
-    lang.promoted.others,
-  ]);
+  const [promoted] = useState(() => ({
+    honored:
+      lang.promoted.roasters.honored?.toSorted(() => Math.random() - 0.5) || [],
+    others:
+      lang.promoted.others.items?.toSorted(() => Math.random() - 0.5) || [],
+    regular:
+      lang.promoted.roasters.regular?.toSorted(() => Math.random() - 0.5) || [],
+  }));
 
   return (
     <section id="promoted">
-      <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
+      <div className="mx-auto grid max-w-475 items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
+          <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.promoted.roasters.title}
           </h2>
           <div className="space-y-10 text-base leading-normal 2xl:text-xl">
@@ -55,7 +44,7 @@ export const PromotedRoasters = () => {
               <PresenterLogo name={p} key={p} />
             ))}
           </div>
-          <h2 className="px-8 pb-2 pt-16 text-center text-3xl md:px-20 md:pb-24">
+          <h2 className="px-8 pt-16 pb-2 text-center text-3xl md:px-20 md:pb-24">
             {lang.promoted.roasters.regularTitle}
           </h2>
         </>
@@ -78,9 +67,9 @@ export const PromotedRoasters = () => {
       </div>
       {promoted.others.length > 0 && (
         <>
-          <div className="mx-auto grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
+          <div className="mx-auto grid max-w-475 items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
             <div className="md:p-12">
-              <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
+              <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
                 {lang.promoted.others.title}
               </h2>
               <div className="space-y-10 text-base leading-normal 2xl:text-xl">

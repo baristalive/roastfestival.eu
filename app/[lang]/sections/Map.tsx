@@ -15,12 +15,12 @@ export const Map = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <section className="min-h-screen pb-48">
-      <div className="mx-auto flex max-w-[1900px] grid-cols-[1fr_auto_1fr] flex-col px-8 lg:grid">
+      <div className="mx-auto flex max-w-475 grid-cols-[1fr_auto_1fr] flex-col px-8 lg:grid">
         <div className="flex flex-col md:pl-12">
           <h2 className="pb-8 text-3xl font-bold 2xl:text-6xl">
             {lang.location.title}
           </h2>
-          <div className="max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
+          <div className="max-w-5xl space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.location.howToTitle}
           </div>
           <div className="grow">
@@ -39,13 +39,13 @@ export const Map = () => {
                 href={lang.contacts.kaznice_loc}
                 rel="external"
                 title="Káznice Brno - Google Maps"
-                className="h-[3em] w-[3em] rounded-full border border-[var(--black)] fill-current p-[.65rem] 2xl:p-4"
+                className="h-[3em] w-[3em] rounded-full border border-(--black) fill-current p-[.65rem] 2xl:p-4"
               >
                 <MapIcon />
                 <span className="sr-only">Káznice Brno - Google Maps</span>
               </a>
               <a
-                className="h-[3em] w-[3em] rounded-full border border-[var(--black)] fill-current p-2 2xl:p-4"
+                className="h-[3em] w-[3em] rounded-full border border-(--black) fill-current p-2 2xl:p-4"
                 href={lang.contacts.kaznice_web}
                 title="Káznice Brno - Web"
                 rel="external"
@@ -58,7 +58,7 @@ export const Map = () => {
         </div>
         <div className="z-10">
           <div className="card elevate relative rounded-3xl p-2 2xl:p-3">
-            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%_-_3rem)] items-center justify-between rounded-full text-base leading-none 2xl:text-xl">
+            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%-3rem)] items-center justify-between rounded-full text-base leading-none 2xl:text-xl">
               <h4 className="py-5 pl-4 font-semibold 2xl:py-6 2xl:pl-8">
                 {lang.location.stops.kaznice}, Brno
               </h4>
@@ -66,14 +66,14 @@ export const Map = () => {
                 href={lang.contacts.kaznice_loc}
                 rel="external"
                 title="Káznice Brno - Google Maps"
-                className="mr-1 h-[3em] w-[3em] rounded-full border border-[var(--black)] bg-[var(--black)] fill-current p-[.65rem] font-medium text-[var(--white)] lg:mr-2 2xl:p-4"
+                className="mr-1 h-[3em] w-[3em] rounded-full border border-(--black) bg-(--black) fill-current p-[.65rem] font-medium text-(--white) lg:mr-2 2xl:p-4"
               >
                 <MapIcon />
                 <span className="sr-only">Káznice Brno - Google Maps</span>
               </a>
             </div>
 
-            <div className="h-[30rem] rounded-3xl text-base text-black lg:aspect-[2/3] lg:h-[90vh] 2xl:text-xl">
+            <div className="h-120 rounded-3xl text-base text-black lg:aspect-2/3 lg:h-[90vh] 2xl:text-xl">
               <ReactMap
                 initialViewState={{
                   latitude: 49.1995978,

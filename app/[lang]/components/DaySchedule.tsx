@@ -77,7 +77,7 @@ const DaySchedule = ({
         ))}
       </div>
       <div
-        className={`schedule-header absolute inset-0 bottom-[2em] top-[2.5em] z-0 p-4`}
+        className={`schedule-header absolute inset-0 top-[2.5em] bottom-[2em] z-0 p-4`}
         style={{
           gridTemplateColumns: gridStops,
         }}
@@ -151,7 +151,7 @@ const DaySchedule = ({
                               </i>
                             )}
                             {presenter.lang && (
-                              <div className="schedule-item-adornment elevate absolute mr-2 aspect-square rounded-full bg-[var(--white)] p-3 font-bold uppercase text-[var(--black)]">
+                              <div className="schedule-item-adornment elevate absolute mr-2 aspect-square rounded-full bg-(--white) p-3 font-bold text-(--black) uppercase">
                                 {presenter.lang}
                               </div>
                             )}

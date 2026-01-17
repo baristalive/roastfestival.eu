@@ -30,31 +30,31 @@ const Print = (props: PrintPropsType) => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href={`./print/${k}/image/espresso_milk`}
-                className="nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+                className="nav rounded-2xl bg-(--black) p-4 px-8 text-lg text-(--white)"
               >
                 Čestní hosté
               </Link>
               <Link
                 href={`./print/${k}/image/espresso`}
-                className="nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+                className="nav rounded-2xl bg-(--black) p-4 px-8 text-lg text-(--white)"
               >
                 Espresso bar
               </Link>
               <Link
                 href={`./print/${k}/image/brew`}
-                className="nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+                className="nav rounded-2xl bg-(--black) p-4 px-8 text-lg text-(--white)"
               >
                 Brew bar
               </Link>
               <Link
                 href={`./print/${k}/image/stolarna`}
-                className="nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+                className="nav rounded-2xl bg-(--black) p-4 px-8 text-lg text-(--white)"
               >
                 {lang.programCategory.workshop}
               </Link>
               <Link
                 href={`./print/${k}/image/kaple`}
-                className="nav rounded-2xl bg-[var(--black)] p-4 px-8 text-lg text-[var(--white)]"
+                className="nav rounded-2xl bg-(--black) p-4 px-8 text-lg text-(--white)"
               >
                 {lang.programCategory.lecture}
               </Link>

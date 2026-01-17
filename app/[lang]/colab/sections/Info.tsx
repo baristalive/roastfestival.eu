@@ -24,12 +24,12 @@ export const Info = () => {
         className="flex flex-col items-center justify-between pb-10"
       >
         <NavBar backToSection="colab" />
-        <div className="flex max-w-[1900px] grid-cols-[2fr,1fr] flex-col gap-8 p-8 lg:grid">
+        <div className="flex max-w-475 grid-cols-[2fr,1fr] flex-col gap-8 p-8 lg:grid">
           <div className="md:p-12">
-            <h2 className="w-3/4 break-words pb-8 text-3xl font-bold md:break-normal md:pt-56 lg:pt-20 2xl:text-6xl">
+            <h2 className="w-3/4 pb-8 text-3xl font-bold wrap-break-word md:pt-56 md:break-normal lg:pt-20 2xl:text-6xl">
               {lang.exhibitors.title}
             </h2>
-            <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal lg:text-xl">
+            <div className="mx-auto max-w-5xl space-y-10 text-base leading-normal lg:text-xl">
               {lang.exhibitors.text}
             </div>
             <Bar />
@@ -57,7 +57,7 @@ export const Info = () => {
         </div>
       </section>
       <section className="relative">
-        <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:p-12">
+        <div className="mx-auto flex max-w-300 flex-col gap-8 md:p-12">
           <div className="h-auto rounded-2xl py-16 text-lg md:px-32">
             <Content />
           </div>

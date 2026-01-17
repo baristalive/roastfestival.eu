@@ -9,8 +9,13 @@ import "react-medium-image-zoom/dist/styles.css";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    a: ({ children, ...rest }: PropsWithChildren) => (
+      <a className="font-bold text-[var(--primary)] underline" {...rest}>
+        {children}
+      </a>
+    ),
     h2: ({ children }: PropsWithChildren) => (
-      <h2 className="clear-both mb-4 mt-6 px-8 text-2xl font-bold md:mt-12 md:px-0 lg:text-3xl">
+      <h2 className="clear-both mt-6 mb-4 px-8 text-2xl font-bold md:mt-12 md:px-0 lg:text-3xl">
         {children}
       </h2>
     ),
@@ -19,57 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h3>
     ),
-    li: ({ children }: PropsWithChildren) => (
-      <li className="px-2 text-base md:px-0 lg:text-xl">{children}</li>
-    ),
-    p: ({ children }: PropsWithChildren) => (
-      <p className="mb-4 px-8 text-base md:px-0 lg:text-xl">{children}</p>
-    ),
-    ol: ({ children }: PropsWithChildren) => (
-      <ol className="round-counter mb-4 list-outside list-decimal px-6 md:px-0">
-        {children}
-      </ol>
-    ),
-    ul: ({ children }: PropsWithChildren) => (
-      <ul className="mb-4 list-inside list-disc px-8">{children}</ul>
-    ),
-    table: ({ children }: PropsWithChildren) => (
-      <div className="flex items-center justify-center">
-        <table className="elevate my-4 block border-collapse overflow-x-auto rounded-2xl md:table">
-          {children}
-        </table>
-      </div>
-    ),
-    th: ({ children }: PropsWithChildren) => (
-      <th className="text-nowrap p-4 px-8 text-center first:rounded-tl-2xl last:rounded-tr-2xl">
-        {children}
-      </th>
-    ),
-    thead: ({ children }: PropsWithChildren) => (
-      <thead className="bg-[var(--primary)] px-4 text-center text-[var(--white)]">
-        {children}
-      </thead>
-    ),
-    td: ({
-      children,
-      node,
-      ...rest
-    }: PropsWithChildren & { node?: Element | undefined }) => (
-      <td {...rest} className="text-nowrap p-4 px-8 text-center">
-        {children}
-      </td>
-    ),
-    tr: ({ children }: PropsWithChildren) => (
-      <tr className="divide-x divide-dashed last:rounded-b-2xl even:bg-slate-50">
-        {children}
-      </tr>
-    ),
-    tbody: ({ children }: PropsWithChildren) => (
-      <tbody className="tbody rounded-b-2xl after:block after:pt-4 after:content-['']">
-        {children}
-      </tbody>
-    ),
-    img: ({ src, alt, ...rest }: { src?: string; alt?: string }) => {
+    img: ({ alt, src, ...rest }: { src?: string; alt?: string }) => {
       const [altText, sizing] = (alt || "|").split("|");
 
       return (
@@ -80,8 +35,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
               alt={altText}
               {...rest}
               {...(sizing === "landscape"
-                ? { zoomed: LANDSCAPE.lg.zoomed, small: LANDSCAPE.sm.small }
-                : { zoomed: PORTRAIT.lg.zoomed, small: PORTRAIT.sm.small })}
+                ? { small: LANDSCAPE.sm.small, zoomed: LANDSCAPE.lg.zoomed }
+                : { small: PORTRAIT.sm.small, zoomed: PORTRAIT.lg.zoomed })}
             />
           </div>
           <div className="block md:hidden">
@@ -95,10 +50,55 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         </>
       );
     },
-    a: ({ children, ...rest }: PropsWithChildren) => (
-      <a className="font-bold text-[var(--primary)] underline" {...rest}>
+    li: ({ children }: PropsWithChildren) => (
+      <li className="px-2 text-base md:px-0 lg:text-xl">{children}</li>
+    ),
+    ol: ({ children }: PropsWithChildren) => (
+      <ol className="round-counter mb-4 list-outside list-decimal px-6 md:px-0">
         {children}
-      </a>
+      </ol>
+    ),
+    p: ({ children }: PropsWithChildren) => (
+      <p className="mb-4 px-8 text-base md:px-0 lg:text-xl">{children}</p>
+    ),
+    table: ({ children }: PropsWithChildren) => (
+      <div className="flex items-center justify-center">
+        <table className="elevate my-4 block border-collapse overflow-x-auto rounded-2xl md:table">
+          {children}
+        </table>
+      </div>
+    ),
+    tbody: ({ children }: PropsWithChildren) => (
+      <tbody className="tbody rounded-b-2xl after:block after:pt-4 after:content-['']">
+        {children}
+      </tbody>
+    ),
+    td: ({
+      children,
+      node,
+      ...rest
+    }: PropsWithChildren & { node?: Element | undefined }) => (
+      <td {...rest} className="p-4 px-8 text-center text-nowrap">
+        {children}
+      </td>
+    ),
+    th: ({ children }: PropsWithChildren) => (
+      <th className="p-4 px-8 text-center text-nowrap first:rounded-tl-2xl last:rounded-tr-2xl">
+        {children}
+      </th>
+    ),
+    thead: ({ children }: PropsWithChildren) => (
+      <thead className="bg-[var(--primary)] px-4 text-center text-[var(--white)]">
+        {children}
+      </thead>
+    ),
+    tr: ({ children }: PropsWithChildren) => (
+      <tr className="divide-x divide-dashed last:rounded-b-2xl even:bg-slate-50">
+        {children}
+      </tr>
+    ),
+    ul: ({ children }: PropsWithChildren) => (
+      <ul className="mb-4 list-inside list-disc px-8">{children}</ul>
     ),
     ...components,
   };

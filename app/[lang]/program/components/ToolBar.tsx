@@ -13,7 +13,7 @@ const ToolBar = () => {
       <nav className="flex justify-between gap-4 px-2">
         <Link
           href="/"
-          className="inline-block flex items-center justify-center p-2 text-4xl"
+          className="flex inline-block items-center justify-center p-2 text-4xl"
         >
           <Home />
         </Link>

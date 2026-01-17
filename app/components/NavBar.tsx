@@ -14,7 +14,7 @@ const NavBar = ({ backToSection }: { backToSection?: string }) => {
         rel="prev"
         className="cta nav elevate relative rounded-full px-8 py-2 pl-12 md:py-4 md:pl-24 2xl:px-12 2xl:py-6 2xl:pl-24"
       >
-        <span className="absolute left-0 top-1/2 -translate-y-1/2 rotate-180 text-sm text-[var(--black)] md:text-2xl 2xl:text-3xl">
+        <span className="absolute top-1/2 left-0 -translate-y-1/2 rotate-180 text-sm text-[var(--black)] md:text-2xl 2xl:text-3xl">
           <ArrowIcon />
         </span>
         <span className="">{lang.back}</span>

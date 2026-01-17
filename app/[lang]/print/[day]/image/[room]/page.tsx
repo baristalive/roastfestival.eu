@@ -60,16 +60,16 @@ const Schedule = (props: SchedulePropsType) => {
     <div className="image flex h-screen items-center justify-center">
       <div
         ref={ref}
-        className="flex aspect-square h-[1080px] w-[1080px] flex-col justify-center gap-8 bg-[var(--primary)] px-2 pt-10"
+        className="flex aspect-square h-270 w-270 flex-col justify-center gap-8 bg-(--primary) px-2 pt-10"
         style={{
           backgroundImage: `url('/watermark${watermark}.svg')`,
           backgroundPosition: "center center",
         }}
       >
-        <h1 className="w-full text-center text-8xl font-bold uppercase text-[var(--white)]">
+        <h1 className="w-full text-center text-8xl font-bold text-(--white) uppercase">
           {lang.programCategory[room]}
         </h1>
-        <h2 className="mb-10 w-full text-center text-6xl font-semibold text-[var(--white)]">
+        <h2 className="mb-10 w-full text-center text-6xl font-semibold text-(--white)">
           {lang.programDays[params.day].name}{" "}
           {lang.programDays[params.day].date}
         </h2>
@@ -100,12 +100,12 @@ const Schedule = (props: SchedulePropsType) => {
                     ] as Presenter;
                     return (
                       <div
-                        className="elevate relative my-1 flex flex-col items-center rounded-lg bg-[var(--accent)] p-2 text-center text-[var(--white)]"
+                        className="elevate relative my-1 flex flex-col items-center rounded-lg bg-(--accent) p-2 text-center text-(--white)"
                         key={`${t.track}_${idx}_${s.$ref}`}
                       >
                         <h4 className="relative mb-1 text-2xl font-bold">
                           {presenter.lang && (
-                            <span className="elevate absolute left-full ml-2 inline-block aspect-square h-8 w-8 rounded-full bg-[var(--white)] p-1 text-base font-bold uppercase text-[var(--black)]">
+                            <span className="elevate absolute left-full ml-2 inline-block aspect-square h-8 w-8 rounded-full bg-(--white) p-1 text-base font-bold text-(--black) uppercase">
                               {presenter.lang}
                             </span>
                           )}
@@ -125,13 +125,13 @@ const Schedule = (props: SchedulePropsType) => {
         })}
       </div>
       <button
-        className="elevate absolute left-10 top-10 rounded-lg bg-black px-4 py-2 text-base text-white"
+        className="elevate absolute top-10 left-10 rounded-lg bg-black px-4 py-2 text-base text-white"
         onClick={handleButtonClick}
       >
         Uložit
       </button>
       <select
-        className="elevate absolute left-10 top-24 rounded-lg bg-[var(--primary)] px-4 py-2 text-base text-white"
+        className="elevate absolute top-24 left-10 rounded-lg bg-(--primary) px-4 py-2 text-base text-white"
         id="watermark"
         name="watermark"
         onChange={(e) => setWatermark(Number(e.target.value))}

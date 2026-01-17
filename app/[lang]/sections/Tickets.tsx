@@ -18,7 +18,7 @@ export const Tickets = () => {
 
   return (
     <section id="tickets">
-      <div className="mx-auto grid max-w-[1900px] px-8 lg:grid-cols-[1fr,2fr]">
+      <div className="mx-auto grid max-w-475 px-8 lg:grid-cols-[1fr,2fr]">
         <div className="md:pl-12">
           <h2 className="pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.tickets.title}
@@ -26,7 +26,7 @@ export const Tickets = () => {
           <Bar />
         </div>
       </div>
-      <div className="mx-auto max-w-[1900px] items-center justify-center px-8 pb-8 lg:flex lg:py-24">
+      <div className="mx-auto max-w-475 items-center justify-center px-8 pb-8 lg:flex lg:py-24">
         <div className="grid grid-cols-2 items-start justify-center gap-8 sm:grid-cols-3 lg:grid-cols-4">
           {lang.tickets.priceList.map((row, rowIdx) => {
             const availability = getAvailability(

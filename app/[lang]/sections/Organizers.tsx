@@ -64,7 +64,7 @@ export const Organizers = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
     <section>
-      <div className="mx-auto max-w-[1900px]">
+      <div className="mx-auto max-w-475">
         <div className="p-8 md:p-20">
           <h2 className="w-3/4 text-3xl font-bold md:pt-56 lg:pt-24 2xl:pb-8 2xl:text-6xl">
             {lang.organizers.title}
@@ -74,7 +74,7 @@ export const Organizers = () => {
         <div className="cards mx-auto hidden grid-cols-6 items-center justify-center gap-4 p-12 md:grid">
           {largeWallImages.map((col, idx) => (
             <div
-              className="shrink-1 flex min-w-0 flex-col gap-4"
+              className="flex min-w-0 shrink flex-col gap-4"
               key={`col_${idx}`}
             >
               {col.map((i, idx2) => {

@@ -17,12 +17,12 @@ export const Info = () => {
       id="info"
       className="flex flex-col items-center justify-between gap-8 pb-48"
     >
-      <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
+      <div className="grid max-w-475 items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
         <div className="md:p-12">
-          <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
+          <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.about.title}
           </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
+          <div className="mx-auto max-w-5xl space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.about.text.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -33,7 +33,7 @@ export const Info = () => {
           {info.map((col, idx) => (
             <div
               key={`col_${idx}`}
-              className={`flex flex-col gap-8 ${idx ? "md:pt-[var(--vertical-offset)]" : ""}`}
+              className={`flex flex-col gap-8 ${idx ? "md:pt-(--vertical-offset)" : ""}`}
             >
               {col.map((s) => (
                 <div

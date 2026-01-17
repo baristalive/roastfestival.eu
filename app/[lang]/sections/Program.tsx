@@ -14,7 +14,7 @@ export const Program = () => {
       className={`py-8 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="program"
     >
-      <div className="mx-auto grid max-w-[1900px] gap-12 px-8 pb-12 lg:grid-cols-3 2xl:gap-32">
+      <div className="mx-auto grid max-w-475 gap-12 px-8 pb-12 lg:grid-cols-3 2xl:gap-32">
         <div />
         <div className="aspect-square text-center">
           <a
@@ -37,7 +37,7 @@ export const Program = () => {
             <p className="py-2 text-base 2xl:text-xl">
               {lang.programTile.content}
             </p>
-            <div className="absolute bottom-0 right-0 mt-2 text-4xl text-[var(--black)] md:mt-8">
+            <div className="absolute right-0 bottom-0 mt-2 text-4xl text-(--black) md:mt-8">
               <div className="float-right">
                 <ArrowIcon />
               </div>

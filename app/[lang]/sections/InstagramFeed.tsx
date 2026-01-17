@@ -68,10 +68,10 @@ const ContentTile = (post: InstagramPost) => {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={imageSrc}
-          className="absolute left-0 top-0 z-0 h-full w-full rounded-2xl object-cover"
+          className="absolute top-0 left-0 z-0 h-full w-full rounded-2xl object-cover"
           alt={post.caption}
         />
-        <div className="absolute right-3 top-3 z-20 text-xl text-[var(--white)]">
+        <div className="absolute top-3 right-3 z-20 text-xl text-(--white)">
           <Badge type={post.media_type} />
         </div>
       </div>
@@ -122,9 +122,9 @@ const InstagramFeed = () => {
 
   return (
     <section>
-      <div className="mx-auto grid max-w-[1900px] items-end gap-12 py-8 lg:grid-cols-[1fr,3fr] 2xl:gap-32">
+      <div className="mx-auto grid max-w-475 items-end gap-12 py-8 lg:grid-cols-[1fr,3fr] 2xl:gap-32">
         <div className="flex flex-col px-8 md:p-12">
-          <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
+          <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.social.title}
           </h2>
           <div className="space-y-10 text-base leading-normal 2xl:text-xl">

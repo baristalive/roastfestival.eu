@@ -147,16 +147,16 @@ export const Modal = ({
     <>
       <div className="fixed inset-0 z-10 bg-[color-mix(in_srgb,_var(--primary)_45%,_transparent)]"></div>
       <div
-        className="fixed inset-0 z-20 flex animate-[fadeIn_200ms] items-end overflow-y-auto overflow-x-hidden bg-transparent text-left outline-none focus:outline-none md:items-center md:justify-center"
+        className="fixed inset-0 z-20 flex animate-[fadeIn_200ms] items-end overflow-x-hidden overflow-y-auto bg-transparent text-left outline-none focus:outline-none md:items-center md:justify-center"
         onClick={() => setShowModal(false)}
       >
         <button
-          className="leading-1 absolute right-2 top-2 z-30 h-[40px] w-[40px] rounded-full bg-[var(--black)] p-0 text-2xl font-bold leading-4 text-white"
+          className="absolute top-2 right-2 z-30 h-[40px] w-[40px] rounded-full bg-[var(--black)] p-0 text-2xl leading-1 leading-4 font-bold text-white"
           onClick={() => setShowModal(false)}
         >
           ×
         </button>
-        <div className="h-full w-full bg-transparent p-1 focus:outline-none lg:h-auto lg:w-auto lg:min-w-[500px] lg:max-w-[80%] xl:max-w-[60%]">
+        <div className="h-full w-full bg-transparent p-1 focus:outline-none lg:h-auto lg:w-auto lg:max-w-[80%] lg:min-w-[500px] xl:max-w-[60%]">
           <div
             className="flex flex-col items-start justify-center gap-2"
             onClick={(e) => {
@@ -182,7 +182,7 @@ export const Modal = ({
                       height={240}
                     />
                     {country && (
-                      <div className="elevate absolute bottom-0 right-0 overflow-hidden rounded-full border-0">
+                      <div className="elevate absolute right-0 bottom-0 overflow-hidden rounded-full border-0">
                         <Flag country={country} />
                       </div>
                     )}

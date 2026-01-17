@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import dictionaries, {
@@ -23,14 +23,35 @@ const SCHEDULE_FILTER_DAYS = "schedule_filter_days";
 const SCHEDULE_FILTER_TRACKS = "schedule_filter_tracks";
 const SCHEDULE_VIEW = "schedule_view";
 
+const getLocalStorage = <T,>(
+  key: string,
+  defaultValue: T,
+  parse?: (value: string) => T,
+): T => {
+  if (typeof window === "undefined") return defaultValue;
+  const stored = localStorage.getItem(key);
+  if (!stored) return defaultValue;
+  return parse ? parse(stored) : (stored.split(",") as T);
+};
+
 const Home = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  const [selectedDays, setSelectedDays] = useState(AllDays);
-  const [selectedTracks, setSelectedTracks] = useState(AllTracks);
-  const [scheduleView, setScheduleView] = useState(
-    "loading" as ScheduleViewType,
+  const [selectedDays, setSelectedDays] = useState(() =>
+    getLocalStorage(SCHEDULE_FILTER_DAYS, AllDays),
+  );
+  const [selectedTracks, setSelectedTracks] = useState(() =>
+    getLocalStorage(SCHEDULE_FILTER_TRACKS, AllTracks),
+  );
+  const [scheduleView, setScheduleView] = useState(() =>
+    getLocalStorage(
+      SCHEDULE_VIEW,
+      (typeof window !== "undefined" && window.innerWidth < 1024
+        ? "list"
+        : "schedule") as ScheduleViewType,
+      (v) => v as ScheduleViewType,
+    ),
   );
 
   const handleSelectedDays = (day: Day) => {
@@ -56,19 +77,6 @@ const Home = () => {
     localStorage.setItem(SCHEDULE_VIEW, newView);
   };
 
-  useEffect(() => {
-    const days =
-      localStorage.getItem(SCHEDULE_FILTER_DAYS)?.split(",") || AllDays;
-    setSelectedDays(days as Day[]);
-    const tracks =
-      localStorage.getItem(SCHEDULE_FILTER_TRACKS)?.split(",") || AllTracks;
-    setSelectedTracks(tracks as Track[]);
-    const view =
-      localStorage.getItem(SCHEDULE_VIEW) ||
-      (window.innerWidth < 1024 ? "list" : "schedule");
-    setScheduleView(view as ScheduleViewType);
-  }, []);
-
   return (
     <div className="wrapper h-screen">
       <Link
@@ -93,7 +101,7 @@ const Home = () => {
                       {lang.programDays[day.$ref].name}{" "}
                       {lang.programDays[day.$ref].date}
                     </h3>
-                    <div className="mr-2 h-4 rounded-t-lg border-2 border-b-0 border-dotted border-[var(--primary)]" />
+                    <div className="mr-2 h-4 rounded-t-lg border-2 border-b-0 border-dotted border-(--primary)" />
                   </div>
                   <DaySchedule
                     schedule={day.schedule}
