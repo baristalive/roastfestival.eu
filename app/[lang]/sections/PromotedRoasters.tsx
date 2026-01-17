@@ -3,21 +3,16 @@
 import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import { useState } from "react";
-import PresenterLogo from "../components/PresenterLogo";
+import dynamic from "next/dynamic";
+import { shuffle } from "@/app/utils/array";
+
+const PresenterLogo = dynamic(() => import("../components/PresenterLogo"), {
+  ssr: false,
+});
 
 export const PromotedRoasters = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-
-  const [promoted] = useState(() => ({
-    honored:
-      lang.promoted.roasters.honored?.toSorted(() => Math.random() - 0.5) || [],
-    others:
-      lang.promoted.others.items?.toSorted(() => Math.random() - 0.5) || [],
-    regular:
-      lang.promoted.roasters.regular?.toSorted(() => Math.random() - 0.5) || [],
-  }));
 
   return (
     <section id="promoted">
@@ -34,13 +29,13 @@ export const PromotedRoasters = () => {
           <Bar />
         </div>
       </div>
-      {promoted.honored.length > 0 && (
+      {lang.promoted.roasters.honored.length > 0 && (
         <>
           <h2 className="p-8 text-center text-3xl md:px-20">
             {lang.promoted.roasters.honoredTitle}
           </h2>
           <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">
-            {promoted.honored.map((p) => (
+            {shuffle(lang.promoted.roasters.honored).map((p) => (
               <PresenterLogo name={p} key={p} />
             ))}
           </div>
@@ -51,7 +46,7 @@ export const PromotedRoasters = () => {
       )}
       <div className="py-10">
         <div className="mx-auto grid max-w-screen-2xl grid-cols-2 flex-wrap items-center justify-center gap-2 gap-y-4 text-center text-xl sm:flex md:gap-20">
-          {promoted.regular.map((p) => (
+          {shuffle(lang.promoted.roasters.regular).map((p) => (
             <PresenterLogo
               name={p}
               key={p}
@@ -65,7 +60,7 @@ export const PromotedRoasters = () => {
           <div className="p-2 text-base 2xl:text-xl">a další...</div>
         </div>
       </div>
-      {promoted.others.length > 0 && (
+      {lang.promoted.others.items.length > 0 && (
         <>
           <div className="mx-auto grid max-w-475 items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
             <div className="md:p-12">
@@ -81,7 +76,7 @@ export const PromotedRoasters = () => {
             </div>
           </div>
           <div className="mx-auto flex max-w-screen-2xl flex-wrap items-stretch justify-center gap-2 text-xl md:gap-20">
-            {promoted.others.map((p) => (
+            {shuffle(lang.promoted.others.items).map((p) => (
               <PresenterLogo
                 name={p}
                 key={p}
