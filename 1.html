@@ -1,0 +1,2858 @@
+<html lang="en">
+  <head>
+    <script class="injected-ffc2e83d85">
+      (function () {
+        "use strict";
+        function l(a) {
+          var c = 0;
+          return function () {
+            return c < a.length ? { done: !1, value: a[c++] } : { done: !0 };
+          };
+        }
+        function r(a) {
+          var c =
+            typeof Symbol != "undefined" &&
+            Symbol.iterator &&
+            a[Symbol.iterator];
+          if (c) return c.call(a);
+          if (typeof a.length == "number") return { next: l(a) };
+          throw Error(String(a) + " is not an iterable or ArrayLike");
+        }
+        var t =
+          typeof Object.defineProperties == "function"
+            ? Object.defineProperty
+            : function (a, c, g) {
+                if (a == Array.prototype || a == Object.prototype) return a;
+                a[c] = g.value;
+                return a;
+              };
+        function u(a) {
+          a = [
+            "object" == typeof globalThis && globalThis,
+            a,
+            "object" == typeof window && window,
+            "object" == typeof self && self,
+            "object" == typeof global && global,
+          ];
+          for (var c = 0; c < a.length; ++c) {
+            var g = a[c];
+            if (g && g.Math == Math) return g;
+          }
+          throw Error("Cannot find global object");
+        }
+        var v = u(this);
+        function x(a, c) {
+          if (c)
+            a: {
+              var g = v;
+              a = a.split(".");
+              for (var h = 0; h < a.length - 1; h++) {
+                var m = a[h];
+                if (!(m in g)) break a;
+                g = g[m];
+              }
+              a = a[a.length - 1];
+              h = g[a];
+              c = c(h);
+              c != h &&
+                c != null &&
+                t(g, a, { configurable: !0, writable: !0, value: c });
+            }
+        }
+        function y(a) {
+          if (!(a instanceof Object))
+            throw new TypeError("Iterator result " + a + " is not an object");
+        }
+        function z() {
+          this.o = !1;
+          this.j = null;
+          this.u = void 0;
+          this.g = 1;
+          this.i = this.l = 0;
+          this.C = this.h = null;
+        }
+        function A(a) {
+          if (a.o) throw new TypeError("Generator is already running");
+          a.o = !0;
+        }
+        z.prototype.v = function (a) {
+          this.u = a;
+        };
+        function B(a, c) {
+          a.h = { K: c, L: !0 };
+          a.g = a.l || a.i;
+        }
+        z.prototype.N = function () {
+          return this.g;
+        };
+        z.prototype.getNextAddress = z.prototype.N;
+        z.prototype.O = function () {
+          return this.u;
+        };
+        z.prototype.getYieldResult = z.prototype.O;
+        z.prototype.return = function (a) {
+          this.h = { return: a };
+          this.g = this.i;
+        };
+        z.prototype["return"] = z.prototype.return;
+        z.prototype.P = function (a) {
+          this.h = { B: a };
+          this.g = this.i;
+        };
+        z.prototype.jumpThroughFinallyBlocks = z.prototype.P;
+        z.prototype.A = function (a, c) {
+          this.g = c;
+          return { value: a };
+        };
+        z.prototype.yield = z.prototype.A;
+        z.prototype.T = function (a, c) {
+          a = r(a);
+          var g = a.next();
+          y(g);
+          if (g.done) ((this.u = g.value), (this.g = c));
+          else return ((this.j = a), this.A(g.value, c));
+        };
+        z.prototype.yieldAll = z.prototype.T;
+        z.prototype.B = function (a) {
+          this.g = a;
+        };
+        z.prototype.jumpTo = z.prototype.B;
+        z.prototype.F = function () {
+          this.g = 0;
+        };
+        z.prototype.jumpToEnd = z.prototype.F;
+        z.prototype.H = function (a, c) {
+          this.l = a;
+          c != void 0 && (this.i = c);
+        };
+        z.prototype.setCatchFinallyBlocks = z.prototype.H;
+        z.prototype.S = function (a) {
+          this.l = 0;
+          this.i = a || 0;
+        };
+        z.prototype.setFinallyBlock = z.prototype.S;
+        z.prototype.G = function (a, c) {
+          this.g = a;
+          this.l = c || 0;
+        };
+        z.prototype.leaveTryBlock = z.prototype.G;
+        z.prototype.D = function (a) {
+          this.l = a || 0;
+          a = this.h.K;
+          this.h = null;
+          return a;
+        };
+        z.prototype.enterCatchBlock = z.prototype.D;
+        z.prototype.J = function (a, c, g) {
+          g ? (this.C[g] = this.h) : (this.C = [this.h]);
+          this.l = a || 0;
+          this.i = c || 0;
+        };
+        z.prototype.enterFinallyBlock = z.prototype.J;
+        z.prototype.R = function (a, c) {
+          c = this.C.splice(c || 0)[0];
+          (c = this.h = this.h || c)
+            ? c.L
+              ? (this.g = this.l || this.i)
+              : c.B != void 0 && this.i < c.B
+                ? ((this.g = c.B), (this.h = null))
+                : (this.g = this.i)
+            : (this.g = a);
+        };
+        z.prototype.leaveFinallyBlock = z.prototype.R;
+        z.prototype.M = function (a) {
+          return new C(a);
+        };
+        z.prototype.forIn = z.prototype.M;
+        function C(a) {
+          this.i = a;
+          this.g = [];
+          for (var c in a) this.g.push(c);
+          this.g.reverse();
+        }
+        C.prototype.h = function () {
+          for (; this.g.length > 0; ) {
+            var a = this.g.pop();
+            if (a in this.i) return a;
+          }
+          return null;
+        };
+        C.prototype.getNext = C.prototype.h;
+        function F(a) {
+          this.g = new z();
+          this.h = a;
+        }
+        function G(a, c) {
+          A(a.g);
+          var g = a.g.j;
+          if (g)
+            return H(
+              a,
+              "return" in g
+                ? g["return"]
+                : function (h) {
+                    return { value: h, done: !0 };
+                  },
+              c,
+              a.g.return,
+            );
+          a.g.return(c);
+          return I(a);
+        }
+        function H(a, c, g, h) {
+          try {
+            var m = c.call(a.g.j, g);
+            y(m);
+            if (!m.done) return ((a.g.o = !1), m);
+            var n = m.value;
+          } catch (f) {
+            return ((a.g.j = null), B(a.g, f), I(a));
+          }
+          a.g.j = null;
+          h.call(a.g, n);
+          return I(a);
+        }
+        function I(a) {
+          for (; a.g.g; )
+            try {
+              var c = a.h(a.g);
+              if (c) return ((a.g.o = !1), { value: c.value, done: !1 });
+            } catch (g) {
+              ((a.g.u = void 0), B(a.g, g));
+            }
+          a.g.o = !1;
+          if (a.g.h) {
+            c = a.g.h;
+            a.g.h = null;
+            if (c.L) throw c.K;
+            return { value: c.return, done: !0 };
+          }
+          return { value: void 0, done: !0 };
+        }
+        function J(a) {
+          this.next = function (c) {
+            A(a.g);
+            a.g.j ? (c = H(a, a.g.j.next, c, a.g.v)) : (a.g.v(c), (c = I(a)));
+            return c;
+          };
+          this.throw = function (c) {
+            A(a.g);
+            a.g.j
+              ? (c = H(a, a.g.j["throw"], c, a.g.v))
+              : (B(a.g, c), (c = I(a)));
+            return c;
+          };
+          this.return = function (c) {
+            return G(a, c);
+          };
+          this[Symbol.iterator] = function () {
+            return this;
+          };
+        }
+        function K(a) {
+          function c(h) {
+            return a.next(h);
+          }
+          function g(h) {
+            return a.throw(h);
+          }
+          return new Promise(function (h, m) {
+            function n(f) {
+              f.done
+                ? h(f.value)
+                : Promise.resolve(f.value).then(c, g).then(n, m);
+            }
+            n(a.next());
+          });
+        }
+        x("Symbol", function (a) {
+          function c(n) {
+            if (this instanceof c)
+              throw new TypeError("Symbol is not a constructor");
+            return new g(h + (n || "") + "_" + m++, n);
+          }
+          function g(n, f) {
+            this.g = n;
+            t(this, "description", {
+              configurable: !0,
+              writable: !0,
+              value: f,
+            });
+          }
+          if (a) return a;
+          g.prototype.toString = function () {
+            return this.g;
+          };
+          var h = "jscomp_symbol_" + ((Math.random() * 1e9) >>> 0) + "_",
+            m = 0;
+          return c;
+        });
+        x("Symbol.iterator", function (a) {
+          if (a) return a;
+          a = Symbol("Symbol.iterator");
+          t(Array.prototype, a, {
+            configurable: !0,
+            writable: !0,
+            value: function () {
+              return L(l(this));
+            },
+          });
+          return a;
+        });
+        function L(a) {
+          a = { next: a };
+          a[Symbol.iterator] = function () {
+            return this;
+          };
+          return a;
+        }
+        x("Promise", function (a) {
+          function c(f) {
+            this.h = 0;
+            this.i = void 0;
+            this.g = [];
+            this.u = !1;
+            var b = this.j();
+            try {
+              f(b.resolve, b.reject);
+            } catch (d) {
+              b.reject(d);
+            }
+          }
+          function g() {
+            this.g = null;
+          }
+          function h(f) {
+            return f instanceof c
+              ? f
+              : new c(function (b) {
+                  b(f);
+                });
+          }
+          if (a) return a;
+          g.prototype.h = function (f) {
+            if (this.g == null) {
+              this.g = [];
+              var b = this;
+              this.i(function () {
+                b.l();
+              });
+            }
+            this.g.push(f);
+          };
+          var m = v.setTimeout;
+          g.prototype.i = function (f) {
+            m(f, 0);
+          };
+          g.prototype.l = function () {
+            for (; this.g && this.g.length; ) {
+              var f = this.g;
+              this.g = [];
+              for (var b = 0; b < f.length; ++b) {
+                var d = f[b];
+                f[b] = null;
+                try {
+                  d();
+                } catch (e) {
+                  this.j(e);
+                }
+              }
+            }
+            this.g = null;
+          };
+          g.prototype.j = function (f) {
+            this.i(function () {
+              throw f;
+            });
+          };
+          c.prototype.j = function () {
+            function f(e) {
+              return function (k) {
+                d || ((d = !0), e.call(b, k));
+              };
+            }
+            var b = this,
+              d = !1;
+            return { resolve: f(this.F), reject: f(this.l) };
+          };
+          c.prototype.F = function (f) {
+            if (f === this)
+              this.l(new TypeError("A Promise cannot resolve to itself"));
+            else if (f instanceof c) this.H(f);
+            else {
+              a: switch (typeof f) {
+                case "object":
+                  var b = f != null;
+                  break a;
+                case "function":
+                  b = !0;
+                  break a;
+                default:
+                  b = !1;
+              }
+              b ? this.D(f) : this.o(f);
+            }
+          };
+          c.prototype.D = function (f) {
+            var b = void 0;
+            try {
+              b = f.then;
+            } catch (d) {
+              this.l(d);
+              return;
+            }
+            typeof b == "function" ? this.J(b, f) : this.o(f);
+          };
+          c.prototype.l = function (f) {
+            this.v(2, f);
+          };
+          c.prototype.o = function (f) {
+            this.v(1, f);
+          };
+          c.prototype.v = function (f, b) {
+            if (this.h != 0)
+              throw Error(
+                "Cannot settle(" +
+                  f +
+                  ", " +
+                  b +
+                  "): Promise already settled in state" +
+                  this.h,
+              );
+            this.h = f;
+            this.i = b;
+            this.h === 2 && this.G();
+            this.C();
+          };
+          c.prototype.G = function () {
+            var f = this;
+            m(function () {
+              if (f.A()) {
+                var b = v.console;
+                typeof b !== "undefined" && b.error(f.i);
+              }
+            }, 1);
+          };
+          c.prototype.A = function () {
+            if (this.u) return !1;
+            var f = v.CustomEvent,
+              b = v.Event,
+              d = v.dispatchEvent;
+            if (typeof d === "undefined") return !0;
+            typeof f === "function"
+              ? (f = new f("unhandledrejection", { cancelable: !0 }))
+              : typeof b === "function"
+                ? (f = new b("unhandledrejection", { cancelable: !0 }))
+                : ((f = v.document.createEvent("CustomEvent")),
+                  f.initCustomEvent("unhandledrejection", !1, !0, f));
+            f.promise = this;
+            f.reason = this.i;
+            return d(f);
+          };
+          c.prototype.C = function () {
+            if (this.g != null) {
+              for (var f = 0; f < this.g.length; ++f) n.h(this.g[f]);
+              this.g = null;
+            }
+          };
+          var n = new g();
+          c.prototype.H = function (f) {
+            var b = this.j();
+            f.I(b.resolve, b.reject);
+          };
+          c.prototype.J = function (f, b) {
+            var d = this.j();
+            try {
+              f.call(b, d.resolve, d.reject);
+            } catch (e) {
+              d.reject(e);
+            }
+          };
+          c.prototype.then = function (f, b) {
+            function d(p, w) {
+              return typeof p == "function"
+                ? function (D) {
+                    try {
+                      e(p(D));
+                    } catch (E) {
+                      k(E);
+                    }
+                  }
+                : w;
+            }
+            var e,
+              k,
+              q = new c(function (p, w) {
+                e = p;
+                k = w;
+              });
+            this.I(d(f, e), d(b, k));
+            return q;
+          };
+          c.prototype.catch = function (f) {
+            return this.then(void 0, f);
+          };
+          c.prototype.I = function (f, b) {
+            function d() {
+              switch (e.h) {
+                case 1:
+                  f(e.i);
+                  break;
+                case 2:
+                  b(e.i);
+                  break;
+                default:
+                  throw Error("Unexpected state: " + e.h);
+              }
+            }
+            var e = this;
+            this.g == null ? n.h(d) : this.g.push(d);
+            this.u = !0;
+          };
+          c.resolve = h;
+          c.reject = function (f) {
+            return new c(function (b, d) {
+              d(f);
+            });
+          };
+          c.race = function (f) {
+            return new c(function (b, d) {
+              for (var e = r(f), k = e.next(); !k.done; k = e.next())
+                h(k.value).I(b, d);
+            });
+          };
+          c.all = function (f) {
+            var b = r(f),
+              d = b.next();
+            return d.done
+              ? h([])
+              : new c(function (e, k) {
+                  function q(D) {
+                    return function (E) {
+                      p[D] = E;
+                      w--;
+                      w == 0 && e(p);
+                    };
+                  }
+                  var p = [],
+                    w = 0;
+                  do
+                    (p.push(void 0),
+                      w++,
+                      h(d.value).I(q(p.length - 1), k),
+                      (d = b.next()));
+                  while (!d.done);
+                });
+          };
+          return c;
+        });
+        function M(a, c) {
+          return Object.prototype.hasOwnProperty.call(a, c);
+        }
+        x("Object.is", function (a) {
+          return a
+            ? a
+            : function (c, g) {
+                return c === g
+                  ? c !== 0 || 1 / c === 1 / g
+                  : c !== c && g !== g;
+              };
+        });
+        x("Array.prototype.includes", function (a) {
+          return a
+            ? a
+            : function (c, g) {
+                var h = this;
+                h instanceof String && (h = String(h));
+                var m = h.length;
+                g = g || 0;
+                for (g < 0 && (g = Math.max(g + m, 0)); g < m; g++) {
+                  var n = h[g];
+                  if (n === c || Object.is(n, c)) return !0;
+                }
+                return !1;
+              };
+        });
+        x("String.prototype.includes", function (a) {
+          return a
+            ? a
+            : function (c, g) {
+                if (this == null)
+                  throw new TypeError(
+                    "The 'this' value for String.prototype.includes must not be null or undefined",
+                  );
+                if (c instanceof RegExp)
+                  throw new TypeError(
+                    "First argument to String.prototype.includes must not be a regular expression",
+                  );
+                return this.indexOf(c, g || 0) !== -1;
+              };
+        });
+        x("WeakMap", function (a) {
+          function c(d) {
+            this.g = (b += Math.random() + 1).toString();
+            if (d) {
+              d = r(d);
+              for (var e; !(e = d.next()).done; )
+                ((e = e.value), this.set(e[0], e[1]));
+            }
+          }
+          function g() {}
+          function h(d) {
+            var e = typeof d;
+            return (e === "object" && d !== null) || e === "function";
+          }
+          function m(d) {
+            if (!M(d, f)) {
+              var e = new g();
+              t(d, f, { value: e });
+            }
+          }
+          function n(d) {
+            var e = Object[d];
+            e &&
+              (Object[d] = function (k) {
+                if (k instanceof g) return k;
+                Object.isExtensible(k) && m(k);
+                return e(k);
+              });
+          }
+          if (
+            (function () {
+              if (!a || !Object.seal) return !1;
+              try {
+                var d = Object.seal({}),
+                  e = Object.seal({}),
+                  k = new a([
+                    [d, 2],
+                    [e, 3],
+                  ]);
+                if (k.get(d) != 2 || k.get(e) != 3) return !1;
+                k.delete(d);
+                k.set(e, 4);
+                return !k.has(d) && k.get(e) == 4;
+              } catch (q) {
+                return !1;
+              }
+            })()
+          )
+            return a;
+          var f = "$jscomp_hidden_" + Math.random();
+          n("freeze");
+          n("preventExtensions");
+          n("seal");
+          var b = 0;
+          c.prototype.set = function (d, e) {
+            if (!h(d)) throw Error("Invalid WeakMap key");
+            m(d);
+            if (!M(d, f)) throw Error("WeakMap key fail: " + d);
+            d[f][this.g] = e;
+            return this;
+          };
+          c.prototype.get = function (d) {
+            return h(d) && M(d, f) ? d[f][this.g] : void 0;
+          };
+          c.prototype.has = function (d) {
+            return h(d) && M(d, f) && M(d[f], this.g);
+          };
+          c.prototype.delete = function (d) {
+            return h(d) && M(d, f) && M(d[f], this.g)
+              ? delete d[f][this.g]
+              : !1;
+          };
+          return c;
+        });
+        x("Map", function (a) {
+          function c() {
+            var b = {};
+            return (b.m = b.next = b.head = b);
+          }
+          function g(b, d) {
+            var e = b[1];
+            return L(function () {
+              if (e) {
+                for (; e.head != b[1]; ) e = e.m;
+                for (; e.next != e.head; )
+                  return ((e = e.next), { done: !1, value: d(e) });
+                e = null;
+              }
+              return { done: !0, value: void 0 };
+            });
+          }
+          function h(b, d) {
+            var e = d && typeof d;
+            e == "object" || e == "function"
+              ? n.has(d)
+                ? (e = n.get(d))
+                : ((e = "" + ++f), n.set(d, e))
+              : (e = "p_" + d);
+            var k = b[0][e];
+            if (k && M(b[0], e))
+              for (b = 0; b < k.length; b++) {
+                var q = k[b];
+                if ((d !== d && q.key !== q.key) || d === q.key)
+                  return { id: e, list: k, index: b, entry: q };
+              }
+            return { id: e, list: k, index: -1, entry: void 0 };
+          }
+          function m(b) {
+            this[0] = {};
+            this[1] = c();
+            this.size = 0;
+            if (b) {
+              b = r(b);
+              for (var d; !(d = b.next()).done; )
+                ((d = d.value), this.set(d[0], d[1]));
+            }
+          }
+          if (
+            (function () {
+              if (
+                !a ||
+                typeof a != "function" ||
+                !a.prototype.entries ||
+                typeof Object.seal != "function"
+              )
+                return !1;
+              try {
+                var b = Object.seal({ x: 4 }),
+                  d = new a(r([[b, "s"]]));
+                if (
+                  d.get(b) != "s" ||
+                  d.size != 1 ||
+                  d.get({ x: 4 }) ||
+                  d.set({ x: 4 }, "t") != d ||
+                  d.size != 2
+                )
+                  return !1;
+                var e = d.entries(),
+                  k = e.next();
+                if (k.done || k.value[0] != b || k.value[1] != "s") return !1;
+                k = e.next();
+                return k.done ||
+                  k.value[0].x != 4 ||
+                  k.value[1] != "t" ||
+                  !e.next().done
+                  ? !1
+                  : !0;
+              } catch (q) {
+                return !1;
+              }
+            })()
+          )
+            return a;
+          var n = new WeakMap();
+          m.prototype.set = function (b, d) {
+            b = b === 0 ? 0 : b;
+            var e = h(this, b);
+            e.list || (e.list = this[0][e.id] = []);
+            e.entry
+              ? (e.entry.value = d)
+              : ((e.entry = {
+                  next: this[1],
+                  m: this[1].m,
+                  head: this[1],
+                  key: b,
+                  value: d,
+                }),
+                e.list.push(e.entry),
+                (this[1].m.next = e.entry),
+                (this[1].m = e.entry),
+                this.size++);
+            return this;
+          };
+          m.prototype.delete = function (b) {
+            b = h(this, b);
+            return b.entry && b.list
+              ? (b.list.splice(b.index, 1),
+                b.list.length || delete this[0][b.id],
+                (b.entry.m.next = b.entry.next),
+                (b.entry.next.m = b.entry.m),
+                (b.entry.head = null),
+                this.size--,
+                !0)
+              : !1;
+          };
+          m.prototype.clear = function () {
+            this[0] = {};
+            this[1] = this[1].m = c();
+            this.size = 0;
+          };
+          m.prototype.has = function (b) {
+            return !!h(this, b).entry;
+          };
+          m.prototype.get = function (b) {
+            return (b = h(this, b).entry) && b.value;
+          };
+          m.prototype.entries = function () {
+            return g(this, function (b) {
+              return [b.key, b.value];
+            });
+          };
+          m.prototype.keys = function () {
+            return g(this, function (b) {
+              return b.key;
+            });
+          };
+          m.prototype.values = function () {
+            return g(this, function (b) {
+              return b.value;
+            });
+          };
+          m.prototype.forEach = function (b, d) {
+            for (var e = this.entries(), k; !(k = e.next()).done; )
+              ((k = k.value), b.call(d, k[1], k[0], this));
+          };
+          m.prototype[Symbol.iterator] = m.prototype.entries;
+          var f = 0;
+          return m;
+        });
+        x("Set", function (a) {
+          function c(g) {
+            this.g = new Map();
+            if (g) {
+              g = r(g);
+              for (var h; !(h = g.next()).done; ) this.add(h.value);
+            }
+            this.size = this.g.size;
+          }
+          if (
+            (function () {
+              if (
+                !a ||
+                typeof a != "function" ||
+                !a.prototype.entries ||
+                typeof Object.seal != "function"
+              )
+                return !1;
+              try {
+                var g = Object.seal({ x: 4 }),
+                  h = new a(r([g]));
+                if (
+                  !h.has(g) ||
+                  h.size != 1 ||
+                  h.add(g) != h ||
+                  h.size != 1 ||
+                  h.add({ x: 4 }) != h ||
+                  h.size != 2
+                )
+                  return !1;
+                var m = h.entries(),
+                  n = m.next();
+                if (n.done || n.value[0] != g || n.value[1] != g) return !1;
+                n = m.next();
+                return n.done ||
+                  n.value[0] == g ||
+                  n.value[0].x != 4 ||
+                  n.value[1] != n.value[0]
+                  ? !1
+                  : m.next().done;
+              } catch (f) {
+                return !1;
+              }
+            })()
+          )
+            return a;
+          c.prototype.add = function (g) {
+            g = g === 0 ? 0 : g;
+            this.g.set(g, g);
+            this.size = this.g.size;
+            return this;
+          };
+          c.prototype.delete = function (g) {
+            g = this.g.delete(g);
+            this.size = this.g.size;
+            return g;
+          };
+          c.prototype.clear = function () {
+            this.g.clear();
+            this.size = 0;
+          };
+          c.prototype.has = function (g) {
+            return this.g.has(g);
+          };
+          c.prototype.entries = function () {
+            return this.g.entries();
+          };
+          c.prototype.values = function () {
+            return this.g.values();
+          };
+          c.prototype.keys = c.prototype.values;
+          c.prototype[Symbol.iterator] = c.prototype.values;
+          c.prototype.forEach = function (g, h) {
+            var m = this;
+            this.g.forEach(function (n) {
+              return g.call(h, n, n, m);
+            });
+          };
+          return c;
+        });
+        (function () {
+          function a() {
+            return n
+              ? Promise.resolve(n)
+              : f
+                ? f
+                : (f = fetch(
+                    "https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json",
+                  )
+                    .then(function (b) {
+                      if (!b.ok)
+                        throw Error(
+                          "HTTP error! status: " +
+                            b.status +
+                            " fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json",
+                        );
+                      return b.json();
+                    })
+                    .then(function (b) {
+                      if (!Array.isArray(b))
+                        throw new TypeError(
+                          "Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.",
+                        );
+                      return (n = b);
+                    })
+                    .catch(function (b) {
+                      console.error(
+                        "IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",
+                        b,
+                      );
+                      f = null;
+                      throw b;
+                    }));
+          }
+          function c(b) {
+            var d, e, k, q;
+            return K(
+              new J(
+                new F(function (p) {
+                  switch (p.g) {
+                    case 1:
+                      d = (b.textContent || "").trim();
+                      if (
+                        !d ||
+                        (b.classList.contains("js-replaced-missing-icon") &&
+                          d === "radio_button_unchecked")
+                      )
+                        return p.return();
+                      e = window.getComputedStyle(b);
+                      if (e.display === "none" || e.visibility === "hidden")
+                        return p.return();
+                      p.H(2);
+                      return p.A(a(), 4);
+                    case 4:
+                      k = p.u;
+                      p.G(3);
+                      break;
+                    case 2:
+                      return (
+                        p.D(),
+                        console.warn(
+                          'IconChecker: Skipping check for icon "' +
+                            d +
+                            '" as valid names could not be loaded.',
+                        ),
+                        p.return()
+                      );
+                    case 3:
+                      ((q = k.includes(d))
+                        ? b.classList.contains("js-replaced-missing-icon") &&
+                          b.classList.remove("js-replaced-missing-icon")
+                        : (d === "radio_button_unchecked" &&
+                            b.classList.contains("js-replaced-missing-icon")) ||
+                          ((b.textContent = "radio_button_unchecked"),
+                          b.classList.add("js-replaced-missing-icon")),
+                        p.F());
+                  }
+                }),
+              ),
+            );
+          }
+          function g(b) {
+            b = b === void 0 ? document.body : b;
+            b.querySelectorAll(m).forEach(function (d) {
+              c(d);
+            });
+          }
+          function h() {
+            a().catch(function () {});
+            document.fonts.ready
+              .then(function () {
+                requestAnimationFrame(function () {
+                  g(document.body);
+                  new MutationObserver(function (b) {
+                    var d = new Set();
+                    b = r(b);
+                    for (var e = b.next(); !e.done; e = b.next())
+                      if (((e = e.value), e.type === "childList"))
+                        e.addedNodes.forEach(function (q) {
+                          q.nodeType === Node.ELEMENT_NODE &&
+                            (q.matches(m) && d.add(q),
+                            q.querySelectorAll(m).forEach(function (p) {
+                              d.add(p);
+                            }));
+                        });
+                      else if (
+                        e.type === "attributes" &&
+                        e.attributeName === "class"
+                      ) {
+                        var k = e.target;
+                        e.target.nodeType === Node.ELEMENT_NODE &&
+                          k.matches(m) &&
+                          d.add(k);
+                      } else
+                        e.type === "characterData" &&
+                          e.target.parentNode &&
+                          ((e = e.target.parentNode),
+                          e.nodeType === Node.ELEMENT_NODE &&
+                            e.matches(m) &&
+                            d.add(e));
+                    d.size > 0 &&
+                      setTimeout(function () {
+                        d.forEach(function (q) {
+                          c(q);
+                        });
+                      }, 500);
+                  }).observe(document.body, {
+                    childList: !0,
+                    subtree: !0,
+                    attributes: !0,
+                    attributeFilter: ["class"],
+                    characterData: !0,
+                  });
+                });
+              })
+              .catch(function (b) {
+                console.error(
+                  "IconChecker: Font loading error. Scanning icons anyway.",
+                  b,
+                );
+                requestAnimationFrame(function () {
+                  g(document.body);
+                });
+              });
+          }
+          var m = [
+              "material-icons",
+              "material-symbols-outlined",
+              "material-symbols-rounded",
+              "material-symbols-sharp",
+            ]
+              .map(function (b) {
+                return "." + b;
+              })
+              .join(","),
+            n = null,
+            f = null;
+          document.readyState === "loading"
+            ? document.addEventListener("DOMContentLoaded", function () {
+                h();
+              })
+            : h();
+        })();
+      }).call(this);
+    </script>
+
+    <meta
+      name="surface-hint"
+      content="desktop-responsive"
+      data-hint="injected-ffc2e83d85"
+    />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Roast! Coffee Festival 2026 | Brno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              midnight: "#04151f",
+              cream: "#efd6ac",
+              teal: "#04a777",
+              burgundy: "#89023e",
+              orange: "#f75c03",
+            },
+            fontFamily: {
+              display: ["Anton", "sans-serif"],
+              mono: ["Space Mono", "monospace"],
+              massive: ["Work Sans", "sans-serif"],
+            },
+            boxShadow: {
+              block: "12px 12px 0px 0px #04151f",
+              "block-hover": "6px 6px 0px 0px #04151f",
+              neon: "0 0 10px #f75c03, 0 0 20px #f75c03",
+            },
+            backgroundImage: {
+              zigzag:
+                "linear-gradient(135deg, #04a777 25%, transparent 25%), linear-gradient(225deg, #04a777 25%, transparent 25%), linear-gradient(45deg, #04a777 25%, transparent 25%), linear-gradient(315deg, #04a777 25%, transparent 25%)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #04151f;
+        overflow-x: hidden;
+      }
+
+      /* Zig Zag Pattern Utility */
+      .zigzag-pattern {
+        background-color: #efd6ac;
+        background-image:
+          linear-gradient(135deg, #f75c03 25%, transparent 25%),
+          linear-gradient(225deg, #f75c03 25%, transparent 25%),
+          linear-gradient(45deg, #f75c03 25%, transparent 25%),
+          linear-gradient(315deg, #f75c03 25%, transparent 25%);
+        background-position:
+          10px 0,
+          10px 0,
+          0 0,
+          0 0;
+        background-size: 20px 20px;
+        background-repeat: repeat;
+        opacity: 0.1;
+      }
+
+      /* Massive Text Styling */
+      .mega-text {
+        font-size: 25vw;
+        line-height: 0.75;
+        -webkit-text-stroke: 4px #04151f;
+        paint-order: stroke fill;
+        text-shadow: 20px 20px 0px #89023e;
+      }
+
+      .mega-text:hover {
+        animation: shake 0.5s infinite;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+
+      /* Brutalist Grid Layout */
+      .bento-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 100vh;
+        width: 100%;
+      }
+
+      /* Marquee */
+      .marquee-wrapper {
+        width: 100%;
+        overflow: hidden;
+        background: #04151f;
+        border-top: 8px solid #04151f;
+        border-bottom: 8px solid #04151f;
+      }
+      .marquee-inner {
+        display: inline-block;
+        white-space: nowrap;
+        /* animation: scroll 15s linear infinite; */
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 16px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #04151f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f75c03;
+        border: 4px solid #04151f;
+      }
+
+      .clip-jagged-bottom {
+        clip-path: polygon(
+          0% 0%,
+          100% 0%,
+          100% 95%,
+          95% 100%,
+          90% 95%,
+          85% 100%,
+          80% 95%,
+          75% 100%,
+          70% 95%,
+          65% 100%,
+          60% 95%,
+          55% 100%,
+          50% 95%,
+          45% 100%,
+          40% 95%,
+          35% 100%,
+          30% 95%,
+          25% 100%,
+          20% 95%,
+          15% 100%,
+          10% 95%,
+          5% 100%,
+          0% 95%
+        );
+      }
+
+      .clip-jagged-top {
+        clip-path: polygon(
+          0% 5%,
+          5% 0%,
+          10% 5%,
+          15% 0%,
+          20% 5%,
+          25% 0%,
+          30% 5%,
+          35% 0%,
+          40% 5%,
+          45% 0%,
+          50% 5%,
+          55% 0%,
+          60% 5%,
+          65% 0%,
+          70% 5%,
+          75% 0%,
+          80% 5%,
+          85% 0%,
+          90% 5%,
+          95% 0%,
+          100% 5%,
+          100% 100%,
+          0% 100%
+        );
+      }
+    </style>
+    <style>
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      } /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --tw-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family:
+          Space Mono,
+          monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input:where([type="button"]),
+      input:where([type="reset"]),
+      input:where([type="submit"]) {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      dialog {
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+        vertical-align: middle;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      [hidden]:where(:not([hidden="until-found"])) {
+        display: none;
+      }
+      .container {
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .container {
+          max-width: 640px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 768px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1024px;
+        }
+      }
+      @media (min-width: 1280px) {
+        .container {
+          max-width: 1280px;
+        }
+      }
+      @media (min-width: 1536px) {
+        .container {
+          max-width: 1536px;
+        }
+      }
+      .pointer-events-none {
+        pointer-events: none;
+      }
+      .pointer-events-auto {
+        pointer-events: auto;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .relative {
+        position: relative;
+      }
+      .inset-0 {
+        inset: 0px;
+      }
+      .inset-x-0 {
+        left: 0px;
+        right: 0px;
+      }
+      .-bottom-20 {
+        bottom: -5rem;
+      }
+      .-left-20 {
+        left: -5rem;
+      }
+      .-right-20 {
+        right: -5rem;
+      }
+      .-top-20 {
+        top: -5rem;
+      }
+      .bottom-0 {
+        bottom: 0px;
+      }
+      .bottom-10 {
+        bottom: 2.5rem;
+      }
+      .left-0 {
+        left: 0px;
+      }
+      .left-1\/2 {
+        left: 50%;
+      }
+      .left-10 {
+        left: 2.5rem;
+      }
+      .right-8 {
+        right: 2rem;
+      }
+      .top-0 {
+        top: 0px;
+      }
+      .top-1\/2 {
+        top: 50%;
+      }
+      .top-1\/3 {
+        top: 33.333333%;
+      }
+      .top-8 {
+        top: 2rem;
+      }
+      .top-\[72px\] {
+        top: 72px;
+      }
+      .z-0 {
+        z-index: 0;
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .z-20 {
+        z-index: 20;
+      }
+      .z-30 {
+        z-index: 30;
+      }
+      .z-40 {
+        z-index: 40;
+      }
+      .z-50 {
+        z-index: 50;
+      }
+      .mx-4 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .my-8 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .mb-12 {
+        margin-bottom: 3rem;
+      }
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .mt-4 {
+        margin-top: 1rem;
+      }
+      .mt-8 {
+        margin-top: 2rem;
+      }
+      .block {
+        display: block;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .flex {
+        display: flex;
+      }
+      .grid {
+        display: grid;
+      }
+      .hidden {
+        display: none;
+      }
+      .h-1\/2 {
+        height: 50%;
+      }
+      .h-16 {
+        height: 4rem;
+      }
+      .h-2 {
+        height: 0.5rem;
+      }
+      .h-4 {
+        height: 1rem;
+      }
+      .h-48 {
+        height: 12rem;
+      }
+      .h-96 {
+        height: 24rem;
+      }
+      .h-\[calc\(100vh-72px\)\] {
+        height: calc(100vh - 72px);
+      }
+      .h-full {
+        height: 100%;
+      }
+      .min-h-screen {
+        min-height: 100vh;
+      }
+      .w-16 {
+        width: 4rem;
+      }
+      .w-32 {
+        width: 8rem;
+      }
+      .w-4 {
+        width: 1rem;
+      }
+      .w-64 {
+        width: 16rem;
+      }
+      .w-full {
+        width: 100%;
+      }
+      .min-w-\[100px\] {
+        min-width: 100px;
+      }
+      .flex-grow {
+        flex-grow: 1;
+      }
+      .origin-bottom-left {
+        transform-origin: bottom left;
+      }
+      .-translate-x-1\/2 {
+        --tw-translate-x: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .-translate-y-1\/2 {
+        --tw-translate-y: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .-translate-y-\[150\%\] {
+        --tw-translate-y: -150%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .translate-y-full {
+        --tw-translate-y: 100%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .-rotate-12 {
+        --tw-rotate: -12deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .-rotate-6 {
+        --tw-rotate: -6deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .-rotate-90 {
+        --tw-rotate: -90deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .rotate-12 {
+        --tw-rotate: 12deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .rotate-45 {
+        --tw-rotate: 45deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .rotate-90 {
+        --tw-rotate: 90deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .transform {
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+          transform: none;
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+      }
+      .animate-bounce {
+        animation: bounce 1s infinite;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .gap-0 {
+        gap: 0px;
+      }
+      .gap-2 {
+        gap: 0.5rem;
+      }
+      .gap-4 {
+        gap: 1rem;
+      }
+      .gap-6 {
+        gap: 1.5rem;
+      }
+      .gap-8 {
+        gap: 2rem;
+      }
+      .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .whitespace-nowrap {
+        white-space: nowrap;
+      }
+      .rounded-none {
+        border-radius: 0px;
+      }
+      .border-4 {
+        border-width: 4px;
+      }
+      .border-8 {
+        border-width: 8px;
+      }
+      .border-y-8 {
+        border-top-width: 8px;
+        border-bottom-width: 8px;
+      }
+      .border-b-8 {
+        border-bottom-width: 8px;
+      }
+      .border-l-4 {
+        border-left-width: 4px;
+      }
+      .border-l-8 {
+        border-left-width: 8px;
+      }
+      .border-r-4 {
+        border-right-width: 4px;
+      }
+      .border-r-8 {
+        border-right-width: 8px;
+      }
+      .border-t-4 {
+        border-top-width: 4px;
+      }
+      .border-t-8 {
+        border-top-width: 8px;
+      }
+      .border-cream {
+        --tw-border-opacity: 1;
+        border-color: rgb(239 214 172 / var(--tw-border-opacity, 1));
+      }
+      .border-midnight {
+        --tw-border-opacity: 1;
+        border-color: rgb(4 21 31 / var(--tw-border-opacity, 1));
+      }
+      .border-teal {
+        --tw-border-opacity: 1;
+        border-color: rgb(4 167 119 / var(--tw-border-opacity, 1));
+      }
+      .border-transparent {
+        border-color: transparent;
+      }
+      .bg-burgundy {
+        --tw-bg-opacity: 1;
+        background-color: rgb(137 2 62 / var(--tw-bg-opacity, 1));
+      }
+      .bg-cream {
+        --tw-bg-opacity: 1;
+        background-color: rgb(239 214 172 / var(--tw-bg-opacity, 1));
+      }
+      .bg-midnight {
+        --tw-bg-opacity: 1;
+        background-color: rgb(4 21 31 / var(--tw-bg-opacity, 1));
+      }
+      .bg-orange {
+        --tw-bg-opacity: 1;
+        background-color: rgb(247 92 3 / var(--tw-bg-opacity, 1));
+      }
+      .bg-teal {
+        --tw-bg-opacity: 1;
+        background-color: rgb(4 167 119 / var(--tw-bg-opacity, 1));
+      }
+      .bg-\[radial-gradient\(circle_at_center\2c
+        _var\(--tw-gradient-stops\)\)\] {
+        background-image: radial-gradient(
+          circle at center,
+          var(--tw-gradient-stops)
+        );
+      }
+      .from-cream {
+        --tw-gradient-from: #efd6ac var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(239 214 172 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      }
+      .to-transparent {
+        --tw-gradient-to: transparent var(--tw-gradient-to-position);
+      }
+      .bg-\[length\:20px_20px\] {
+        background-size: 20px 20px;
+      }
+      .p-10 {
+        padding: 2.5rem;
+      }
+      .p-2 {
+        padding: 0.5rem;
+      }
+      .p-4 {
+        padding: 1rem;
+      }
+      .p-6 {
+        padding: 1.5rem;
+      }
+      .p-8 {
+        padding: 2rem;
+      }
+      .px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .pt-4 {
+        padding-top: 1rem;
+      }
+      .pt-\[72px\] {
+        padding-top: 72px;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .font-display {
+        font-family: Anton, sans-serif;
+      }
+      .font-massive {
+        font-family:
+          Work Sans,
+          sans-serif;
+      }
+      .font-mono {
+        font-family:
+          Space Mono,
+          monospace;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+      .text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+      }
+      .text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+      }
+      .text-8xl {
+        font-size: 6rem;
+        line-height: 1;
+      }
+      .text-\[10rem\] {
+        font-size: 10rem;
+      }
+      .text-\[10vw\] {
+        font-size: 10vw;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .font-black {
+        font-weight: 900;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .leading-none {
+        line-height: 1;
+      }
+      .tracking-wide {
+        letter-spacing: 0.025em;
+      }
+      .tracking-widest {
+        letter-spacing: 0.1em;
+      }
+      .text-burgundy {
+        --tw-text-opacity: 1;
+        color: rgb(137 2 62 / var(--tw-text-opacity, 1));
+      }
+      .text-cream {
+        --tw-text-opacity: 1;
+        color: rgb(239 214 172 / var(--tw-text-opacity, 1));
+      }
+      .text-midnight {
+        --tw-text-opacity: 1;
+        color: rgb(4 21 31 / var(--tw-text-opacity, 1));
+      }
+      .text-orange {
+        --tw-text-opacity: 1;
+        color: rgb(247 92 3 / var(--tw-text-opacity, 1));
+      }
+      .text-teal {
+        --tw-text-opacity: 1;
+        color: rgb(4 167 119 / var(--tw-text-opacity, 1));
+      }
+      .antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .opacity-20 {
+        opacity: 0.2;
+      }
+      .opacity-50 {
+        opacity: 0.5;
+      }
+      .mix-blend-normal {
+        mix-blend-mode: normal;
+      }
+      .shadow-\[8px_8px_0px_0px_\#f75c03\] {
+        --tw-shadow: 8px 8px 0px 0px #f75c03;
+        --tw-shadow-colored: 8px 8px 0px 0px var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-block {
+        --tw-shadow: 12px 12px 0px 0px #04151f;
+        --tw-shadow-colored: 12px 12px 0px 0px var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .drop-shadow-\[8px_8px_0px_\#efd6ac\] {
+        --tw-drop-shadow: drop-shadow(8px 8px 0px #efd6ac);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+      .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .transition-colors {
+        transition-property:
+          color,
+          background-color,
+          border-color,
+          fill,
+          stroke,
+          -webkit-text-decoration-color;
+        transition-property:
+          color, background-color, border-color, text-decoration-color, fill,
+          stroke;
+        transition-property:
+          color,
+          background-color,
+          border-color,
+          text-decoration-color,
+          fill,
+          stroke,
+          -webkit-text-decoration-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .duration-300 {
+        transition-duration: 300ms;
+      }
+      .hover\:-translate-y-2:hover {
+        --tw-translate-y: -0.5rem;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:translate-x-1:hover {
+        --tw-translate-x: 0.25rem;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:translate-y-1:hover {
+        --tw-translate-y: 0.25rem;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:scale-105:hover {
+        --tw-scale-x: 1.05;
+        --tw-scale-y: 1.05;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:border-midnight:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(4 21 31 / var(--tw-border-opacity, 1));
+      }
+      .hover\:border-orange:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(247 92 3 / var(--tw-border-opacity, 1));
+      }
+      .hover\:border-teal:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(4 167 119 / var(--tw-border-opacity, 1));
+      }
+      .hover\:bg-burgundy:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(137 2 62 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-cream:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(239 214 172 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-midnight:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(4 21 31 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-orange:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(247 92 3 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-teal:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(4 167 119 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:text-cream:hover {
+        --tw-text-opacity: 1;
+        color: rgb(239 214 172 / var(--tw-text-opacity, 1));
+      }
+      .hover\:text-midnight:hover {
+        --tw-text-opacity: 1;
+        color: rgb(4 21 31 / var(--tw-text-opacity, 1));
+      }
+      .hover\:shadow-block-hover:hover {
+        --tw-shadow: 6px 6px 0px 0px #04151f;
+        --tw-shadow-colored: 6px 6px 0px 0px var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .group:hover .group-hover\:rotate-180 {
+        --tw-rotate: 180deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .group:hover .group-hover\:bg-orange {
+        --tw-bg-opacity: 1;
+        background-color: rgb(247 92 3 / var(--tw-bg-opacity, 1));
+      }
+      @media (min-width: 768px) {
+        .md\:col-span-3 {
+          grid-column: span 3 / span 3;
+        }
+        .md\:col-span-6 {
+          grid-column: span 6 / span 6;
+        }
+        .md\:mt-\[-40px\] {
+          margin-top: -40px;
+        }
+        .md\:block {
+          display: block;
+        }
+        .md\:flex {
+          display: flex;
+        }
+        .md\:hidden {
+          display: none;
+        }
+        .md\:h-auto {
+          height: auto;
+        }
+        .md\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .md\:flex-row {
+          flex-direction: row;
+        }
+        .md\:border-l-8 {
+          border-left-width: 8px;
+        }
+        .md\:border-t-0 {
+          border-top-width: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-midnight relative antialiased">
+    <!-- NAVIGATION (Bold & Boxy) -->
+    <nav class="border-midnight fixed top-0 z-50 flex w-full border-b-8">
+      <div
+        class="bg-orange border-midnight flex min-w-[100px] items-center justify-center border-r-8 p-4"
+      >
+        <span class="material-symbols-outlined text-4xl font-black"
+          >local_cafe</span
+        >
+      </div>
+      <div class="bg-cream flex flex-grow items-center justify-between px-6">
+        <span class="font-display text-3xl tracking-wide">ROAST!</span>
+        <div class="hidden gap-0 font-mono text-lg font-bold md:flex">
+          <a
+            href="#program"
+            class="hover:bg-teal hover:text-cream border-midnight border-r-4 border-l-4 px-6 py-2 transition-colors"
+            >PROGRAM</a
+          >
+          <a
+            href="#roasters"
+            class="hover:bg-burgundy hover:text-cream border-midnight border-r-4 px-6 py-2 transition-colors"
+            >ROASTERS</a
+          >
+          <a
+            href="#location"
+            class="hover:bg-orange hover:text-cream border-midnight border-r-4 px-6 py-2 transition-colors"
+            >LOCATION</a
+          >
+        </div>
+        <button
+          class="bg-midnight text-cream font-display hover:bg-burgundy hover:border-midnight hidden border-4 border-transparent px-6 py-2 text-xl transition-all hover:scale-105 md:block"
+        >
+          TICKETS
+        </button>
+        <button class="text-midnight md:hidden" onclick="toggleMenu()">
+          <span class="material-symbols-outlined text-4xl">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="bg-teal border-midnight fixed inset-0 z-40 flex translate-y-full transform flex-col items-center justify-center gap-6 border-8 p-8 transition-transform duration-300"
+    >
+      <button
+        onclick="toggleMenu()"
+        class="bg-midnight text-cream absolute top-8 right-8 p-2"
+      >
+        <span class="material-symbols-outlined text-4xl">close</span>
+      </button>
+      <a
+        href="#"
+        class="font-display text-midnight hover:text-cream hover:bg-midnight px-4 text-6xl"
+        >PROGRAM</a
+      >
+      <a
+        href="#"
+        class="font-display text-midnight hover:text-cream hover:bg-midnight px-4 text-6xl"
+        >ROASTERS</a
+      >
+      <a
+        href="#"
+        class="font-display text-midnight hover:text-cream hover:bg-midnight px-4 text-6xl"
+        >TICKETS</a
+      >
+    </div>
+
+    <!-- BOLD HERO SECTION -->
+    <main class="bg-cream relative flex min-h-screen flex-col pt-[72px]">
+      <!-- Grid Background -->
+      <div
+        class="absolute inset-0 top-[72px] grid h-[calc(100vh-72px)] w-full grid-cols-1 md:grid-cols-12"
+      >
+        <!-- Left Panel (Orange) -->
+        <div
+          class="bg-orange border-midnight relative hidden border-r-8 md:col-span-3 md:block"
+        >
+          <div class="zigzag-pattern absolute inset-0 opacity-20"></div>
+          <div
+            class="absolute bottom-10 left-10 origin-bottom-left -rotate-90 transform whitespace-nowrap"
+          >
+            <span class="font-massive text-midnight text-8xl opacity-20"
+              >NO FLUFF</span
+            >
+          </div>
+        </div>
+
+        <!-- Center Panel (Teal) -->
+        <div
+          class="bg-teal border-midnight relative flex flex-col items-center justify-center overflow-hidden border-r-8 md:col-span-6"
+        >
+          <!-- Decorative slanted lines -->
+          <div
+            class="bg-cream border-midnight absolute -top-20 -right-20 z-0 h-full w-64 rotate-12 transform border-l-8"
+          ></div>
+          <div
+            class="bg-burgundy border-midnight absolute -bottom-20 -left-20 z-0 h-full w-32 rotate-12 transform border-r-8"
+          ></div>
+        </div>
+
+        <!-- Right Panel (Cream) -->
+        <div class="bg-cream relative hidden md:col-span-3 md:block">
+          <div
+            class="border-midnight bg-burgundy flex h-1/2 items-center justify-center border-b-8"
+          >
+            <span
+              class="material-symbols-outlined text-orange animate-pulse text-[10rem]"
+              >bolt</span
+            >
+          </div>
+          <div class="bg-cream flex h-1/2 flex-col justify-end p-8">
+            <div class="text-right">
+              <p class="text-burgundy font-mono text-xl font-bold">SEPTEMBER</p>
+              <p class="font-display text-midnight text-8xl leading-none">
+                19-20
+              </p>
+              <p class="text-teal font-mono text-xl font-bold">BRNO, 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO CONTENT OVERLAY (Absolute center) -->
+      <div
+        class="pointer-events-none absolute inset-x-0 top-[72px] bottom-0 z-10 flex flex-col items-center justify-center overflow-hidden"
+      >
+        <!-- Floating Label -->
+        <div
+          class="bg-cream border-midnight shadow-block hover:shadow-block-hover pointer-events-auto mb-4 -rotate-6 transform cursor-pointer border-4 px-6 py-2 transition-all hover:translate-x-1 hover:translate-y-1"
+        >
+          <span
+            class="text-burgundy font-mono text-xl font-bold tracking-widest"
+            >BRNO COFFEE FESTIVAL</span
+          >
+        </div>
+
+        <!-- MAIN TITLE -->
+        <h1
+          class="font-massive mega-text text-cream pointer-events-auto relative z-20 mix-blend-normal"
+        >
+          ROAST<span class="text-orange">!</span>
+        </h1>
+
+        <!-- Info Bar Mobile Only (replaces side panels on mobile) -->
+        <div
+          class="bg-midnight text-cream border-teal pointer-events-auto mt-4 w-full border-y-8 p-4 text-center md:hidden"
+        >
+          <p class="font-display text-4xl">SEPT 19-20</p>
+          <p class="text-teal font-mono">KÁZNICE, BRNO</p>
+        </div>
+
+        <!-- CTA Container -->
+        <div
+          class="pointer-events-auto z-30 mt-8 flex flex-col items-center gap-6 md:mt-[-40px] md:flex-row"
+        >
+          <!-- Countdown Box -->
+          <div
+            class="bg-midnight text-cream border-cream border-4 p-4 shadow-[8px_8px_0px_0px_#f75c03]"
+          >
+            <div class="flex gap-4 font-mono text-2xl font-bold">
+              <div class="text-center">
+                <span id="days" class="text-teal block text-4xl">239</span>
+                <span class="text-xs">DAYS</span>
+              </div>
+              <div class="text-center">
+                <span id="hours" class="text-teal block text-4xl">13</span>
+                <span class="text-xs">HRS</span>
+              </div>
+              <div class="text-center">
+                <span id="minutes" class="text-teal block text-4xl">27</span>
+                <span class="text-xs">MIN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Button -->
+          <a
+            href="#"
+            class="bg-orange text-midnight border-midnight font-display shadow-block hover:shadow-block-hover hover:bg-cream group flex items-center gap-2 border-4 px-10 py-6 text-4xl transition-all hover:translate-x-1 hover:translate-y-1"
+          >
+            GET TICKETS
+            <span
+              class="material-symbols-outlined text-4xl transition-transform group-hover:rotate-180"
+              >star</span
+            >
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- MARQUEE STRIP -->
+    <div
+      class="marquee-wrapper border-midnight bg-burgundy relative z-20 border-b-8 py-4"
+    >
+      <div class="marquee-inner">
+        <span class="font-display text-cream mx-4 text-5xl"
+          >NO DECAF ALLOWED •
+        </span>
+        <span
+          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
+          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
+          >PURE CAFFEINE •
+        </span>
+        <span class="font-display text-cream mx-4 text-5xl">LIVE MUSIC • </span>
+        <span
+          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
+          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
+          >ARTISAN ROASTERS •
+        </span>
+        <span class="font-display text-cream mx-4 text-5xl">BRNO 2026 • </span>
+        <span
+          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
+          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
+          >TASTE THE ROAST •
+        </span>
+        <span class="font-display text-cream mx-4 text-5xl"
+          >NO DECAF ALLOWED •
+        </span>
+        <span
+          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
+          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
+          >PURE CAFFEINE •
+        </span>
+        <span class="font-display text-cream mx-4 text-5xl">LIVE MUSIC • </span>
+        <span
+          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
+          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
+          >ARTISAN ROASTERS •
+        </span>
+      </div>
+    </div>
+
+    <!-- CONTENT SECTION (Pop Art Cards) -->
+    <section class="bg-orange clip-jagged-bottom px-4 py-20">
+      <div class="container mx-auto">
+        <h2
+          class="font-display text-midnight mb-12 text-center text-8xl drop-shadow-[8px_8px_0px_#efd6ac]"
+        >
+          WHATS ON
+        </h2>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <!-- Card 1 -->
+          <div
+            class="bg-cream border-midnight shadow-block hover:shadow-block-hover border-8 p-6 transition-all hover:-translate-y-2"
+          >
+            <div
+              class="bg-teal border-midnight relative mb-6 flex h-48 items-center justify-center overflow-hidden border-4"
+            >
+              <div
+                class="from-cream absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] to-transparent bg-[length:20px_20px] opacity-20"
+              ></div>
+              <span class="material-symbols-outlined text-midnight text-8xl"
+                >water_drop</span
+              >
+            </div>
+            <h3 class="font-display mb-2 text-4xl">CUPPINGS</h3>
+            <p class="text-burgundy mb-4 font-mono font-bold">
+              TASTE THE WORLD
+            </p>
+            <p class="border-midnight border-t-4 pt-4 font-mono text-sm">
+              Guided tastings of over 50 samples from top European roasteries.
+              Spit or swallow, your choice.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-burgundy border-midnight shadow-block hover:shadow-block-hover border-8 p-6 transition-all hover:-translate-y-2"
+          >
+            <div
+              class="bg-orange border-midnight mb-6 flex h-48 items-center justify-center overflow-hidden border-4"
+            >
+              <span class="material-symbols-outlined text-midnight text-8xl"
+                >science</span
+              >
+            </div>
+            <h3 class="font-display text-cream mb-2 text-4xl">WORKSHOPS</h3>
+            <p class="text-teal mb-4 font-mono font-bold">LEARN THE CRAFT</p>
+            <p
+              class="text-cream border-midnight border-t-4 pt-4 font-mono text-sm"
+            >
+              From V60 mastery to espresso extraction theory. Learn from the
+              nerds who know it best.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-teal border-midnight shadow-block hover:shadow-block-hover border-8 p-6 transition-all hover:-translate-y-2"
+          >
+            <div
+              class="bg-cream border-midnight mb-6 flex h-48 items-center justify-center overflow-hidden border-4"
+            >
+              <span class="material-symbols-outlined text-midnight text-8xl"
+                >styler</span
+              >
+            </div>
+            <h3 class="font-display mb-2 text-4xl">MERCH</h3>
+            <p class="text-burgundy mb-4 font-mono font-bold">LOOK GOOD</p>
+            <p class="border-midnight border-t-4 pt-4 font-mono text-sm">
+              Limited edition tees, totes, and brewing gear. Stuff you actually
+              want to wear.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP SECTION (No background image, pure block color) -->
+    <section
+      id="location"
+      class="bg-midnight border-teal border-b-8 px-4 py-20"
+    >
+      <div
+        class="border-cream container mx-auto grid grid-cols-1 gap-0 border-8 md:grid-cols-2"
+      >
+        <div class="bg-cream flex flex-col justify-center p-10">
+          <h2 class="font-display text-midnight mb-6 text-6xl">THE VENUE</h2>
+          <div class="space-y-4 font-mono text-lg">
+            <p class="bg-teal text-midnight inline-block px-2 font-bold">
+              KÁZNICE BRNO
+            </p>
+            <p>Bratislavská 68</p>
+            <p>602 00 Brno-střed</p>
+            <p class="text-burgundy pt-4 font-bold">
+              TRAM 2, 4, 9 -&gt; KÖRNEROVA
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-teal border-midnight group relative h-96 cursor-pointer overflow-hidden border-t-8 md:h-auto md:border-t-0 md:border-l-8"
+        >
+          <!-- Using a stylized map representation instead of real map to fit style -->
+          <div
+            class="bg-teal group-hover:bg-orange absolute inset-0 flex items-center justify-center transition-colors"
+          >
+            <div
+              class="bg-midnight absolute top-1/2 left-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-none"
+            ></div>
+            <div
+              class="bg-midnight absolute top-1/2 h-2 w-full -translate-y-1/2 rotate-45 transform"
+            ></div>
+            <div
+              class="bg-midnight absolute top-1/2 h-2 w-full -translate-y-1/2 -rotate-12 transform"
+            ></div>
+            <div
+              class="bg-midnight absolute top-1/3 h-2 w-full -translate-y-1/2 rotate-90 transform"
+            ></div>
+            <span
+              class="material-symbols-outlined text-cream absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[150%] transform animate-bounce text-6xl"
+              >location_on</span
+            >
+          </div>
+          <div
+            class="bg-midnight text-cream absolute bottom-0 left-0 p-2 font-mono text-xs"
+          >
+            CLICK TO NAVIGATE -&gt;
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-midnight text-cream py-12 text-center">
+      <h2
+        class="font-massive text-midnight text-stroke-cream text-[10vw] leading-none"
+        style="-webkit-text-stroke: 2px #efd6ac"
+      >
+        ROAST!
+      </h2>
+      <div class="my-8 flex justify-center gap-8">
+        <a
+          href="#"
+          class="border-cream hover:bg-orange hover:border-orange hover:text-midnight flex h-16 w-16 items-center justify-center border-4 transition-all"
+        >
+          <span class="material-symbols-outlined text-3xl">public</span>
+        </a>
+        <a
+          href="#"
+          class="border-cream hover:bg-teal hover:border-teal hover:text-midnight flex h-16 w-16 items-center justify-center border-4 transition-all"
+        >
+          <span class="material-symbols-outlined text-3xl"
+            >alternate_email</span
+          >
+        </a>
+      </div>
+      <p class="font-mono text-sm opacity-50">© 2026. LOUD &amp; PROUD.</p>
+    </footer>
+
+    <script>
+      // Menu Toggle
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        if (menu.classList.contains("translate-y-full")) {
+          menu.classList.remove("translate-y-full");
+        } else {
+          menu.classList.add("translate-y-full");
+        }
+      }
+
+      // Countdown
+      const targetDate = new Date("September 19, 2026 09:00:00").getTime();
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) return;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("days").innerText =
+          days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerText =
+          hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerText =
+          minutes < 10 ? "0" + minutes : minutes;
+      }
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+    <script>
+      /* Google Maps Bootstrap Placeholder - Not actively used in visual design but kept for potential expansion */
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k],
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        key: "AIzaSyBB_SVKlC9CcEjDt1H01_B7Gjmb8FiIaGw",
+        v: "weekly",
+      });
+    </script>
+    <!--
+        No external images used.
+    -->
+  </body>
+</html>
