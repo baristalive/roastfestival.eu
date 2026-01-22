@@ -1060,14 +1060,14 @@
     />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Roast! Coffee Festival 2026 | Brno</title>
+    <title>ROAST! | Artsy Coffee Chaos 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@900&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee&amp;family=Space+Mono:wght@400;700&amp;family=Syne:wght@800&amp;display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
       rel="stylesheet"
     />
     <script>
@@ -1082,18 +1082,14 @@
               orange: "#f75c03",
             },
             fontFamily: {
-              display: ["Anton", "sans-serif"],
+              funky: ["Bungee", "cursive"],
               mono: ["Space Mono", "monospace"],
-              massive: ["Work Sans", "sans-serif"],
+              heavy: ["Syne", "sans-serif"],
             },
             boxShadow: {
-              block: "12px 12px 0px 0px #04151f",
-              "block-hover": "6px 6px 0px 0px #04151f",
-              neon: "0 0 10px #f75c03, 0 0 20px #f75c03",
-            },
-            backgroundImage: {
-              zigzag:
-                "linear-gradient(135deg, #04a777 25%, transparent 25%), linear-gradient(225deg, #04a777 25%, transparent 25%), linear-gradient(45deg, #04a777 25%, transparent 25%), linear-gradient(315deg, #04a777 25%, transparent 25%)",
+              blob: "15px 15px 0px 0px #04151f",
+              "blob-teal": "15px 15px 0px 0px #04a777",
+              "blob-burgundy": "15px 15px 0px 0px #89023e",
             },
           },
         },
@@ -1101,173 +1097,135 @@
     </script>
     <style>
       body {
-        background-color: #04151f;
+        background-color: #efd6ac; /* Cream base */
+        color: #04151f;
         overflow-x: hidden;
+        cursor: crosshair;
       }
 
-      /* Zig Zag Pattern Utility */
-      .zigzag-pattern {
-        background-color: #efd6ac;
-        background-image:
-          linear-gradient(135deg, #f75c03 25%, transparent 25%),
-          linear-gradient(225deg, #f75c03 25%, transparent 25%),
-          linear-gradient(45deg, #f75c03 25%, transparent 25%),
-          linear-gradient(315deg, #f75c03 25%, transparent 25%);
-        background-position:
-          10px 0,
-          10px 0,
-          0 0,
-          0 0;
-        background-size: 20px 20px;
-        background-repeat: repeat;
-        opacity: 0.1;
+      /* Abstract Artsy Blobs */
+      .blob {
+        position: absolute;
+        z-index: 0;
+        filter: blur(40px);
+        opacity: 0.6;
+        animation: drift 10s infinite alternate ease-in-out;
       }
 
-      /* Massive Text Styling */
-      .mega-text {
-        font-size: 40vh;
-        line-height: 0.75;
-        -webkit-text-stroke: 4px #04151f;
-        paint-order: stroke fill;
-        text-shadow: 20px 20px 0px #89023e;
+      @keyframes drift {
+        from {
+          transform: translate(0, 0) scale(1);
+        }
+        to {
+          transform: translate(50px, 30px) scale(1.1);
+        }
       }
 
-      .mega-text:hover {
-        animation: shake 0.5s infinite;
+      .splash {
+        clip-path: polygon(
+          20% 0%,
+          80% 0%,
+          100% 20%,
+          100% 80%,
+          80% 100%,
+          20% 100%,
+          0% 80%,
+          0% 20%
+        );
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 
-      @keyframes shake {
+      .splash:hover {
+        clip-path: polygon(
+          10% 25%,
+          35% 10%,
+          65% 10%,
+          90% 25%,
+          90% 75%,
+          65% 90%,
+          35% 90%,
+          10% 75%
+        );
+        transform: rotate(3deg) scale(1.05);
+      }
+
+      /* Funky Text Stroking */
+      .text-stroke {
+        -webkit-text-stroke: 2px #04151f;
+        color: transparent;
+      }
+
+      .glitch-text {
+        position: relative;
+        display: inline-block;
+      }
+
+      .glitch-text::before,
+      .glitch-text::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .glitch-text::before {
+        color: #04a777;
+        transform: translate(-4px, -2px);
+      }
+      .glitch-text::after {
+        color: #89023e;
+        transform: translate(4px, 2px);
+      }
+
+      .hero-title {
+        font-size: clamp(4rem, 15vw, 14rem);
+        line-height: 0.8;
+      }
+
+      /* Artsy Borders */
+      .border-rough {
+        border: 4px solid #04151f;
+        border-radius: 40px 10px 50px 20px / 10px 40px 20px 50px;
+      }
+
+      /* Custom Hover Scramble */
+      .scramble:hover {
+        animation: jitter 0.1s infinite;
+      }
+
+      @keyframes jitter {
         0% {
-          transform: translate(1px, 1px) rotate(0deg);
+          transform: translate(0, 0);
         }
-        10% {
-          transform: translate(-1px, -2px) rotate(-1deg);
-        }
-        20% {
-          transform: translate(-3px, 0px) rotate(1deg);
-        }
-        30% {
-          transform: translate(3px, 2px) rotate(0deg);
-        }
-        40% {
-          transform: translate(1px, -1px) rotate(1deg);
+        25% {
+          transform: translate(2px, -2px);
         }
         50% {
-          transform: translate(-1px, 2px) rotate(-1deg);
+          transform: translate(-2px, 2px);
         }
-        60% {
-          transform: translate(-3px, 1px) rotate(0deg);
-        }
-        70% {
-          transform: translate(3px, 1px) rotate(-1deg);
-        }
-        80% {
-          transform: translate(-1px, -1px) rotate(1deg);
-        }
-        90% {
-          transform: translate(1px, 2px) rotate(0deg);
+        75% {
+          transform: translate(1px, 1px);
         }
         100% {
-          transform: translate(1px, -2px) rotate(-1deg);
+          transform: translate(0, 0);
         }
       }
 
-      /* Brutalist Grid Layout */
-      .bento-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        height: 100vh;
-        width: 100%;
-      }
-
-      /* Marquee */
-      .marquee-wrapper {
-        width: 100%;
-        overflow: hidden;
-        background: #04151f;
-        border-top: 8px solid #04151f;
-        border-bottom: 8px solid #04151f;
-      }
-      .marquee-inner {
-        display: inline-block;
-        white-space: nowrap;
-        /* animation: scroll 15s linear infinite; */
-      }
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 16px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #04151f;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #f75c03;
-        border: 4px solid #04151f;
-      }
-
-      .clip-jagged-bottom {
+      .no-decaf-badge {
         clip-path: polygon(
-          0% 0%,
-          100% 0%,
-          100% 95%,
-          95% 100%,
-          90% 95%,
-          85% 100%,
-          80% 95%,
-          75% 100%,
-          70% 95%,
-          65% 100%,
-          60% 95%,
-          55% 100%,
-          50% 95%,
-          45% 100%,
-          40% 95%,
-          35% 100%,
-          30% 95%,
-          25% 100%,
-          20% 95%,
-          15% 100%,
-          10% 95%,
-          5% 100%,
-          0% 95%
-        );
-      }
-
-      .clip-jagged-top {
-        clip-path: polygon(
-          0% 5%,
-          5% 0%,
-          10% 5%,
-          15% 0%,
-          20% 5%,
-          25% 0%,
-          30% 5%,
-          35% 0%,
-          40% 5%,
-          45% 0%,
-          50% 5%,
-          55% 0%,
-          60% 5%,
-          65% 0%,
-          70% 5%,
-          75% 0%,
-          80% 5%,
-          85% 0%,
-          90% 5%,
-          95% 0%,
-          100% 5%,
-          100% 100%,
-          0% 100%
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
         );
       }
     </style>
@@ -1634,54 +1592,50 @@
       .inset-0 {
         inset: 0px;
       }
-      .inset-x-0 {
-        left: 0px;
-        right: 0px;
+      .-bottom-10 {
+        bottom: -2.5rem;
       }
-      .-bottom-20 {
-        bottom: -5rem;
+      .-left-10 {
+        left: -2.5rem;
       }
       .-left-20 {
         left: -5rem;
       }
+      .-right-10 {
+        right: -2.5rem;
+      }
+      .-right-16 {
+        right: -4rem;
+      }
       .-right-20 {
         right: -5rem;
+      }
+      .-top-10 {
+        top: -2.5rem;
       }
       .-top-20 {
         top: -5rem;
       }
-      .bottom-0 {
-        bottom: 0px;
+      .bottom-40 {
+        bottom: 10rem;
       }
-      .bottom-10 {
-        bottom: 2.5rem;
+      .left-1\/3 {
+        left: 33.333333%;
       }
-      .left-0 {
-        left: 0px;
+      .left-6 {
+        left: 1.5rem;
       }
-      .left-1\/2 {
-        left: 50%;
-      }
-      .left-10 {
-        left: 2.5rem;
-      }
-      .right-8 {
-        right: 2rem;
-      }
-      .top-0 {
-        top: 0px;
+      .right-6 {
+        right: 1.5rem;
       }
       .top-1\/2 {
         top: 50%;
       }
-      .top-1\/3 {
-        top: 33.333333%;
+      .top-20 {
+        top: 5rem;
       }
-      .top-8 {
-        top: 2rem;
-      }
-      .top-\[72px\] {
-        top: 72px;
+      .top-6 {
+        top: 1.5rem;
       }
       .z-0 {
         z-index: 0;
@@ -1689,29 +1643,22 @@
       .z-10 {
         z-index: 10;
       }
-      .z-20 {
-        z-index: 20;
-      }
-      .z-30 {
-        z-index: 30;
-      }
-      .z-40 {
-        z-index: 40;
-      }
       .z-50 {
         z-index: 50;
       }
-      .mx-4 {
-        margin-left: 1rem;
-        margin-right: 1rem;
+      .order-first {
+        order: -9999;
+      }
+      .mx-10 {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
       }
       .mx-auto {
         margin-left: auto;
         margin-right: auto;
       }
-      .my-8 {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+      .mb-10 {
+        margin-bottom: 2.5rem;
       }
       .mb-12 {
         margin-bottom: 3rem;
@@ -1725,14 +1672,17 @@
       .mb-6 {
         margin-bottom: 1.5rem;
       }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .mt-12 {
+        margin-top: 3rem;
+      }
+      .mt-20 {
+        margin-top: 5rem;
+      }
       .mt-4 {
         margin-top: 1rem;
-      }
-      .mt-8 {
-        margin-top: 2rem;
-      }
-      .block {
-        display: block;
       }
       .inline-block {
         display: inline-block;
@@ -1746,35 +1696,35 @@
       .hidden {
         display: none;
       }
-      .h-1\/2 {
-        height: 50%;
-      }
       .h-16 {
         height: 4rem;
       }
-      .h-2 {
-        height: 0.5rem;
+      .h-24 {
+        height: 6rem;
+      }
+      .h-32 {
+        height: 8rem;
       }
       .h-4 {
         height: 1rem;
       }
-      .h-48 {
-        height: 12rem;
+      .h-64 {
+        height: 16rem;
+      }
+      .h-80 {
+        height: 20rem;
       }
       .h-96 {
         height: 24rem;
-      }
-      .h-\[calc\(100vh-72px\)\] {
-        height: calc(100vh - 72px);
-      }
-      .h-full {
-        height: 100%;
       }
       .min-h-screen {
         min-height: 100vh;
       }
       .w-16 {
         width: 4rem;
+      }
+      .w-24 {
+        width: 6rem;
       }
       .w-32 {
         width: 8rem;
@@ -1785,62 +1735,55 @@
       .w-64 {
         width: 16rem;
       }
+      .w-80 {
+        width: 20rem;
+      }
+      .w-96 {
+        width: 24rem;
+      }
       .w-full {
         width: 100%;
       }
-      .min-w-\[100px\] {
-        min-width: 100px;
+      .max-w-6xl {
+        max-width: 72rem;
       }
-      .flex-grow {
-        flex-grow: 1;
-      }
-      .origin-bottom-left {
-        transform-origin: bottom left;
-      }
-      .-translate-x-1\/2 {
-        --tw-translate-x: -50%;
+      .translate-x-1 {
+        --tw-translate-x: 0.25rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .-translate-y-1\/2 {
-        --tw-translate-y: -50%;
+      .translate-y-1 {
+        --tw-translate-y: 0.25rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .-translate-y-\[150\%\] {
-        --tw-translate-y: -150%;
+      .translate-y-10 {
+        --tw-translate-y: 2.5rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .translate-y-full {
-        --tw-translate-y: 100%;
+      .-rotate-1 {
+        --tw-rotate: -1deg;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .-rotate-12 {
-        --tw-rotate: -12deg;
+      .-rotate-2 {
+        --tw-rotate: -2deg;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .-rotate-6 {
-        --tw-rotate: -6deg;
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
-          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
-          scaleY(var(--tw-scale-y));
-      }
-      .-rotate-90 {
-        --tw-rotate: -90deg;
+      .rotate-1 {
+        --tw-rotate: 1deg;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
@@ -1853,6 +1796,20 @@
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
+      .rotate-2 {
+        --tw-rotate: 2deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .rotate-3 {
+        --tw-rotate: 3deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
       .rotate-45 {
         --tw-rotate: 45deg;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -1860,32 +1817,8 @@
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .rotate-90 {
-        --tw-rotate: 90deg;
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
-          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
-          scaleY(var(--tw-scale-y));
-      }
-      .transform {
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
-          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
-          scaleY(var(--tw-scale-y));
-      }
-      @keyframes bounce {
-        0%,
-        100% {
-          transform: translateY(-25%);
-          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-        }
-        50% {
-          transform: none;
-          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        }
-      }
-      .animate-bounce {
-        animation: bounce 1s infinite;
+      .animate-\[scroll_40s_linear_infinite\] {
+        animation: scroll 40s linear infinite;
       }
       @keyframes pulse {
         50% {
@@ -1904,11 +1837,11 @@
       .flex-col {
         flex-direction: column;
       }
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
       .items-center {
         align-items: center;
-      }
-      .justify-end {
-        justify-content: flex-end;
       }
       .justify-center {
         justify-content: center;
@@ -1916,25 +1849,23 @@
       .justify-between {
         justify-content: space-between;
       }
-      .gap-0 {
-        gap: 0px;
+      .gap-10 {
+        gap: 2.5rem;
       }
-      .gap-2 {
-        gap: 0.5rem;
+      .gap-12 {
+        gap: 3rem;
+      }
+      .gap-20 {
+        gap: 5rem;
+      }
+      .gap-3 {
+        gap: 0.75rem;
       }
       .gap-4 {
         gap: 1rem;
       }
-      .gap-6 {
-        gap: 1.5rem;
-      }
       .gap-8 {
         gap: 2rem;
-      }
-      .space-y-4 > :not([hidden]) ~ :not([hidden]) {
-        --tw-space-y-reverse: 0;
-        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
       }
       .overflow-hidden {
         overflow: hidden;
@@ -1942,8 +1873,11 @@
       .whitespace-nowrap {
         white-space: nowrap;
       }
-      .rounded-none {
-        border-radius: 0px;
+      .rounded-full {
+        border-radius: 9999px;
+      }
+      .border-2 {
+        border-width: 2px;
       }
       .border-4 {
         border-width: 4px;
@@ -1951,30 +1885,16 @@
       .border-8 {
         border-width: 8px;
       }
-      .border-y-8 {
-        border-top-width: 8px;
-        border-bottom-width: 8px;
-      }
-      .border-b-8 {
-        border-bottom-width: 8px;
-      }
-      .border-l-4 {
-        border-left-width: 4px;
-      }
-      .border-l-8 {
-        border-left-width: 8px;
-      }
-      .border-r-4 {
-        border-right-width: 4px;
-      }
-      .border-r-8 {
-        border-right-width: 8px;
-      }
-      .border-t-4 {
+      .border-y-4 {
         border-top-width: 4px;
+        border-bottom-width: 4px;
       }
       .border-t-8 {
         border-top-width: 8px;
+      }
+      .border-burgundy {
+        --tw-border-opacity: 1;
+        border-color: rgb(137 2 62 / var(--tw-border-opacity, 1));
       }
       .border-cream {
         --tw-border-opacity: 1;
@@ -1984,12 +1904,13 @@
         --tw-border-opacity: 1;
         border-color: rgb(4 21 31 / var(--tw-border-opacity, 1));
       }
+      .border-orange {
+        --tw-border-opacity: 1;
+        border-color: rgb(247 92 3 / var(--tw-border-opacity, 1));
+      }
       .border-teal {
         --tw-border-opacity: 1;
         border-color: rgb(4 167 119 / var(--tw-border-opacity, 1));
-      }
-      .border-transparent {
-        border-color: transparent;
       }
       .bg-burgundy {
         --tw-bg-opacity: 1;
@@ -2011,29 +1932,11 @@
         --tw-bg-opacity: 1;
         background-color: rgb(4 167 119 / var(--tw-bg-opacity, 1));
       }
-      .bg-\[radial-gradient\(circle_at_center\2c
-        _var\(--tw-gradient-stops\)\)\] {
-        background-image: radial-gradient(
-          circle at center,
-          var(--tw-gradient-stops)
-        );
+      .p-1 {
+        padding: 0.25rem;
       }
-      .from-cream {
-        --tw-gradient-from: #efd6ac var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(239 214 172 / 0) var(--tw-gradient-to-position);
-        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-      }
-      .to-transparent {
-        --tw-gradient-to: transparent var(--tw-gradient-to-position);
-      }
-      .bg-\[length\:20px_20px\] {
-        background-size: 20px 20px;
-      }
-      .p-10 {
-        padding: 2.5rem;
-      }
-      .p-2 {
-        padding: 0.5rem;
+      .p-12 {
+        padding: 3rem;
       }
       .p-4 {
         padding: 1rem;
@@ -2044,25 +1947,17 @@
       .p-8 {
         padding: 2rem;
       }
-      .px-10 {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-      }
-      .px-2 {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-      .px-4 {
-        padding-left: 1rem;
-        padding-right: 1rem;
+      .px-12 {
+        padding-left: 3rem;
+        padding-right: 3rem;
       }
       .px-6 {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
-      .py-12 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+      .px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
       .py-2 {
         padding-top: 0.5rem;
@@ -2072,6 +1967,14 @@
         padding-top: 5rem;
         padding-bottom: 5rem;
       }
+      .py-24 {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      .py-32 {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+      }
       .py-4 {
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -2080,11 +1983,15 @@
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
       }
-      .pt-4 {
-        padding-top: 1rem;
+      .py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
-      .pt-\[72px\] {
-        padding-top: 72px;
+      .pt-20 {
+        padding-top: 5rem;
+      }
+      .text-left {
+        text-align: left;
       }
       .text-center {
         text-align: center;
@@ -2092,18 +1999,18 @@
       .text-right {
         text-align: right;
       }
-      .font-display {
-        font-family: Anton, sans-serif;
-      }
-      .font-massive {
-        font-family:
-          Work Sans,
-          sans-serif;
+      .font-funky {
+        font-family: Bungee, cursive;
       }
       .font-mono {
         font-family:
           Space Mono,
           monospace;
+      }
+      .font-sans {
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       }
       .text-2xl {
         font-size: 1.5rem;
@@ -2125,15 +2032,11 @@
         font-size: 3.75rem;
         line-height: 1;
       }
-      .text-8xl {
-        font-size: 6rem;
-        line-height: 1;
+      .text-\[10px\] {
+        font-size: 10px;
       }
-      .text-\[10rem\] {
-        font-size: 10rem;
-      }
-      .text-\[10vw\] {
-        font-size: 10vw;
+      .text-\[12rem\] {
+        font-size: 12rem;
       }
       .text-lg {
         font-size: 1.125rem;
@@ -2157,11 +2060,23 @@
       .font-bold {
         font-weight: 700;
       }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .leading-loose {
+        line-height: 2;
+      }
       .leading-none {
         line-height: 1;
       }
-      .tracking-wide {
-        letter-spacing: 0.025em;
+      .leading-relaxed {
+        line-height: 1.625;
+      }
+      .leading-tight {
+        line-height: 1.25;
+      }
+      .tracking-tighter {
+        letter-spacing: -0.05em;
       }
       .tracking-widest {
         letter-spacing: 0.1em;
@@ -2193,31 +2108,27 @@
       .opacity-20 {
         opacity: 0.2;
       }
+      .opacity-40 {
+        opacity: 0.4;
+      }
       .opacity-50 {
         opacity: 0.5;
       }
-      .mix-blend-normal {
-        mix-blend-mode: normal;
+      .opacity-70 {
+        opacity: 0.7;
       }
-      .shadow-\[8px_8px_0px_0px_\#f75c03\] {
-        --tw-shadow: 8px 8px 0px 0px #f75c03;
-        --tw-shadow-colored: 8px 8px 0px 0px var(--tw-shadow-color);
+      .opacity-80 {
+        opacity: 0.8;
+      }
+      .opacity-0 {
+        opacity: 0;
+      }
+      .shadow-blob-teal {
+        --tw-shadow: 15px 15px 0px 0px #04a777;
+        --tw-shadow-colored: 15px 15px 0px 0px var(--tw-shadow-color);
         box-shadow:
           var(--tw-ring-offset-shadow, 0 0 #0000),
           var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-      }
-      .shadow-block {
-        --tw-shadow: 12px 12px 0px 0px #04151f;
-        --tw-shadow-colored: 12px 12px 0px 0px var(--tw-shadow-color);
-        box-shadow:
-          var(--tw-ring-offset-shadow, 0 0 #0000),
-          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-      }
-      .drop-shadow-\[8px_8px_0px_\#efd6ac\] {
-        --tw-drop-shadow: drop-shadow(8px 8px 0px #efd6ac);
-        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
-          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
       }
       .transition-all {
         transition-property: all;
@@ -2251,18 +2162,18 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
       }
-      .duration-300 {
-        transition-duration: 300ms;
+      .duration-1000 {
+        transition-duration: 1000ms;
       }
-      .hover\:-translate-y-2:hover {
-        --tw-translate-y: -0.5rem;
+      .hover\:translate-x-1:hover {
+        --tw-translate-x: 0.25rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .hover\:translate-x-1:hover {
-        --tw-translate-x: 0.25rem;
+      .hover\:translate-x-2:hover {
+        --tw-translate-x: 0.5rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
@@ -2275,17 +2186,27 @@
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .hover\:scale-105:hover {
-        --tw-scale-x: 1.05;
-        --tw-scale-y: 1.05;
+      .hover\:translate-y-2:hover {
+        --tw-translate-y: 0.5rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y))
           rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .hover\:border-midnight:hover {
-        --tw-border-opacity: 1;
-        border-color: rgb(4 21 31 / var(--tw-border-opacity, 1));
+      .hover\:rotate-0:hover {
+        --tw-rotate: 0deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:scale-110:hover {
+        --tw-scale-x: 1.1;
+        --tw-scale-y: 1.1;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
       }
       .hover\:border-orange:hover {
         --tw-border-opacity: 1;
@@ -2295,18 +2216,6 @@
         --tw-border-opacity: 1;
         border-color: rgb(4 167 119 / var(--tw-border-opacity, 1));
       }
-      .hover\:bg-burgundy:hover {
-        --tw-bg-opacity: 1;
-        background-color: rgb(137 2 62 / var(--tw-bg-opacity, 1));
-      }
-      .hover\:bg-cream:hover {
-        --tw-bg-opacity: 1;
-        background-color: rgb(239 214 172 / var(--tw-bg-opacity, 1));
-      }
-      .hover\:bg-midnight:hover {
-        --tw-bg-opacity: 1;
-        background-color: rgb(4 21 31 / var(--tw-bg-opacity, 1));
-      }
       .hover\:bg-orange:hover {
         --tw-bg-opacity: 1;
         background-color: rgb(247 92 3 / var(--tw-bg-opacity, 1));
@@ -2315,17 +2224,13 @@
         --tw-bg-opacity: 1;
         background-color: rgb(4 167 119 / var(--tw-bg-opacity, 1));
       }
-      .hover\:text-cream:hover {
-        --tw-text-opacity: 1;
-        color: rgb(239 214 172 / var(--tw-text-opacity, 1));
-      }
       .hover\:text-midnight:hover {
         --tw-text-opacity: 1;
         color: rgb(4 21 31 / var(--tw-text-opacity, 1));
       }
-      .hover\:shadow-block-hover:hover {
-        --tw-shadow: 6px 6px 0px 0px #04151f;
-        --tw-shadow-colored: 6px 6px 0px 0px var(--tw-shadow-color);
+      .hover\:shadow-none:hover {
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
         box-shadow:
           var(--tw-ring-offset-shadow, 0 0 #0000),
           var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2337,522 +2242,467 @@
           skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
           scaleY(var(--tw-scale-y));
       }
-      .group:hover .group-hover\:bg-orange {
-        --tw-bg-opacity: 1;
-        background-color: rgb(247 92 3 / var(--tw-bg-opacity, 1));
+      .group:hover .group-hover\:scale-125 {
+        --tw-scale-x: 1.25;
+        --tw-scale-y: 1.25;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .group:hover .group-hover\:text-cream {
+        --tw-text-opacity: 1;
+        color: rgb(239 214 172 / var(--tw-text-opacity, 1));
+      }
+      .group:hover .group-hover\:text-teal {
+        --tw-text-opacity: 1;
+        color: rgb(4 167 119 / var(--tw-text-opacity, 1));
       }
       @media (min-width: 768px) {
-        .md\:col-span-3 {
-          grid-column: span 3 / span 3;
-        }
-        .md\:col-span-6 {
-          grid-column: span 6 / span 6;
-        }
-        .md\:mt-\[-40px\] {
-          margin-top: -40px;
-        }
-        .md\:block {
-          display: block;
+        .md\:-right-32 {
+          right: -8rem;
         }
         .md\:flex {
           display: flex;
         }
-        .md\:hidden {
-          display: none;
+        .md\:h-48 {
+          height: 12rem;
         }
-        .md\:h-auto {
-          height: auto;
-        }
-        .md\:grid-cols-12 {
-          grid-template-columns: repeat(12, minmax(0, 1fr));
+        .md\:w-48 {
+          width: 12rem;
         }
         .md\:grid-cols-2 {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-        .md\:grid-cols-3 {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
         .md\:flex-row {
           flex-direction: row;
         }
-        .md\:border-l-8 {
-          border-left-width: 8px;
+        .md\:text-8xl {
+          font-size: 6rem;
+          line-height: 1;
         }
-        .md\:border-t-0 {
-          border-top-width: 0px;
+        .md\:text-9xl {
+          font-size: 8rem;
+          line-height: 1;
+        }
+        .md\:text-lg {
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .lg\:order-none {
+          order: 0;
+        }
+        .lg\:col-span-4 {
+          grid-column: span 4 / span 4;
+        }
+        .lg\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .lg\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .lg\:grid-cols-4 {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+    </style>
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
         }
       }
     </style>
   </head>
-  <body class="text-midnight relative antialiased">
-    <!-- NAVIGATION (Bold & Boxy) -->
-    <nav class="border-midnight fixed top-0 z-50 flex w-full border-b-8">
+  <body class="font-sans antialiased">
+    <!-- FLOATING BLOBS -->
+    <div
+      class="blob bg-teal w-96 h-96 top-20 -left-20"
+      style="transform: translate(28.5234px, 0.518359px)"
+    ></div>
+    <div
+      class="blob bg-burgundy w-80 h-80 bottom-40 -right-20"
+      style="animation-delay: -2s; transform: translate(57.0467px, 1.03672px)"
+    ></div>
+    <div
+      class="blob bg-orange w-64 h-64 top-1/2 left-1/3"
+      style="animation-delay: -5s; transform: translate(85.5701px, 1.55508px)"
+    ></div>
+
+    <!-- NAVIGATION -->
+    <nav
+      class="fixed top-6 left-6 right-6 z-50 flex justify-between items-center pointer-events-none"
+    >
       <div
-        class="bg-orange border-midnight flex min-w-[100px] items-center justify-center border-r-8 p-4"
+        class="bg-midnight text-cream p-4 border-rough pointer-events-auto shadow-hard flex items-center gap-4 group cursor-pointer hover:bg-orange transition-colors"
       >
-        <span class="material-symbols-outlined text-4xl font-black"
-          >local_cafe</span
+        <span
+          class="material-symbols-outlined text-3xl group-hover:rotate-180 transition-transform"
+          >cyclone</span
         >
+        <span class="font-funky text-2xl tracking-tighter">ROAST!</span>
       </div>
-      <div class="bg-cream flex flex-grow items-center justify-between px-6">
-        <span class="font-display text-3xl tracking-wide">ROAST!</span>
-        <div class="hidden gap-0 font-mono text-lg font-bold md:flex">
-          <a
-            href="#program"
-            class="hover:bg-teal hover:text-cream border-midnight border-r-4 border-l-4 px-6 py-2 transition-colors"
-            >PROGRAM</a
-          >
-          <a
-            href="#roasters"
-            class="hover:bg-burgundy hover:text-cream border-midnight border-r-4 px-6 py-2 transition-colors"
-            >ROASTERS</a
-          >
-          <a
-            href="#location"
-            class="hover:bg-orange hover:text-cream border-midnight border-r-4 px-6 py-2 transition-colors"
-            >LOCATION</a
-          >
-        </div>
+      <div class="hidden md:flex gap-4 pointer-events-auto">
+        <a
+          href="#roasters"
+          class="bg-cream border-2 border-midnight px-6 py-2 font-funky text-xs hover:bg-teal transition-all -rotate-2"
+          >ROASTERS</a
+        >
+        <a
+          href="#brno"
+          class="bg-cream border-2 border-midnight px-6 py-2 font-funky text-xs hover:bg-orange transition-all rotate-1"
+          >BRNO</a
+        >
         <button
-          class="bg-midnight text-cream font-display hover:bg-burgundy hover:border-midnight hidden border-4 border-transparent px-6 py-2 text-xl transition-all hover:scale-105 md:block"
+          class="bg-burgundy text-cream px-8 py-2 font-funky text-xs shadow-blob-teal hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
         >
           TICKETS
-        </button>
-        <button class="text-midnight md:hidden" onclick="toggleMenu()">
-          <span class="material-symbols-outlined text-4xl">menu</span>
         </button>
       </div>
     </nav>
 
-    <!-- MOBILE MENU -->
-    <div
-      id="mobile-menu"
-      class="bg-teal border-midnight fixed inset-0 z-40 flex translate-y-full transform flex-col items-center justify-center gap-6 border-8 p-8 transition-transform duration-300"
+    <!-- HERO SECTION -->
+    <main
+      class="min-h-screen relative flex items-center justify-center pt-20 px-6"
     >
-      <button
-        onclick="toggleMenu()"
-        class="bg-midnight text-cream absolute top-8 right-8 p-2"
-      >
-        <span class="material-symbols-outlined text-4xl">close</span>
-      </button>
-      <a
-        href="#"
-        class="font-display text-midnight hover:text-cream hover:bg-midnight px-4 text-6xl"
-        >PROGRAM</a
-      >
-      <a
-        href="#"
-        class="font-display text-midnight hover:text-cream hover:bg-midnight px-4 text-6xl"
-        >ROASTERS</a
-      >
-      <a
-        href="#"
-        class="font-display text-midnight hover:text-cream hover:bg-midnight px-4 text-6xl"
-        >TICKETS</a
-      >
-    </div>
-
-    <!-- BOLD HERO SECTION -->
-    <main class="bg-cream relative flex min-h-screen flex-col pt-[72px]">
-      <!-- Grid Background -->
-      <div
-        class="absolute inset-0 top-[72px] grid h-[calc(100vh-72px)] w-full grid-cols-1 md:grid-cols-12"
-      >
-        <!-- Left Panel (Orange) -->
-        <div
-          class="bg-orange border-midnight relative hidden border-r-8 md:col-span-3 md:block"
-        >
-          <div class="zigzag-pattern absolute inset-0 opacity-20"></div>
+      <div class="container mx-auto relative z-10 text-center">
+        <!-- Dynamic Artsy Badge -->
+        <div class="inline-block mb-10 relative">
           <div
-            class="absolute bottom-10 left-10 origin-bottom-left -rotate-90 transform whitespace-nowrap"
+            class="absolute inset-0 bg-midnight rotate-3 translate-x-1 translate-y-1"
+          ></div>
+          <div
+            class="relative bg-orange text-midnight font-mono font-black py-2 px-6 border-2 border-midnight -rotate-2"
           >
-            <span class="font-massive text-midnight text-8xl opacity-20"
-              >NO FLUFF</span
-            >
+            SEPTEMBER 19.20 // BRNO, CZ
           </div>
         </div>
 
-        <!-- Center Panel (Teal) -->
-        <div
-          class="bg-teal border-midnight relative flex flex-col items-center justify-center overflow-hidden border-r-8 md:col-span-6"
-        >
-          <!-- Decorative slanted lines -->
-          <div
-            class="bg-cream border-midnight absolute -top-20 -right-20 z-0 h-full w-64 rotate-12 transform border-l-8"
-          ></div>
-          <div
-            class="bg-burgundy border-midnight absolute -bottom-20 -left-20 z-0 h-full w-32 rotate-12 transform border-r-8"
-          ></div>
-        </div>
+        <div class="relative inline-block">
+          <!-- Massive Text -->
+          <h1 class="hero-title font-funky glitch-text" data-text="ROAST!">
+            ROAST!
+          </h1>
 
-        <!-- Right Panel (Cream) -->
-        <div class="bg-cream relative hidden md:col-span-3 md:block">
+          <!-- Floating Element -->
           <div
-            class="border-midnight bg-burgundy flex h-1/2 items-center justify-center border-b-8"
+            class="absolute -top-10 -right-16 md:-right-32 no-decaf-badge bg-burgundy w-32 h-32 md:w-48 md:h-48 flex items-center justify-center p-4 rotate-12 animate-pulse"
           >
             <span
-              class="material-symbols-outlined text-orange animate-pulse text-[10rem]"
-              >bolt</span
+              class="font-funky text-cream text-center text-xs md:text-lg leading-tight"
+              >NO<br />DECAF<br />HERE</span
             >
           </div>
-          <div class="bg-cream flex h-1/2 flex-col justify-end p-8">
-            <div class="text-right">
-              <p class="text-burgundy font-mono text-xl font-bold">SEPTEMBER</p>
-              <p class="font-display text-midnight text-8xl leading-none">
-                19-20
+        </div>
+
+        <!-- Description Block -->
+        <div
+          class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-6xl mx-auto"
+        >
+          <div class="lg:col-span-4 text-left">
+            <div class="bg-teal p-8 border-rough shadow-pop-midnight splash">
+              <h3 class="font-funky text-2xl mb-4">ARTSY BY DESIGN</h3>
+              <p class="font-mono text-sm leading-relaxed font-bold">
+                Forget the rules. We're splashing coffee culture across Brno
+                with a messy, artsy celebration of the bean.
               </p>
-              <p class="text-teal font-mono text-xl font-bold">BRNO, 2026</p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- HERO CONTENT OVERLAY (Absolute center) -->
-      <div
-        class="pointer-events-none absolute inset-x-0 top-[72px] bottom-0 z-10 flex flex-col items-center justify-center overflow-hidden"
-      >
-        <!-- Floating Label -->
-        <div
-          class="bg-cream border-midnight shadow-block hover:shadow-block-hover pointer-events-auto mb-4 -rotate-6 transform cursor-pointer border-4 px-6 py-2 transition-all hover:translate-x-1 hover:translate-y-1"
-        >
-          <span
-            class="text-burgundy font-mono text-xl font-bold tracking-widest"
-            >BRNO COFFEE FESTIVAL</span
-          >
-        </div>
-
-        <!-- MAIN TITLE -->
-        <h1
-          class="font-massive mega-text text-cream pointer-events-auto relative z-20 mix-blend-normal"
-        >
-          ROAST<span class="text-orange">!</span>
-        </h1>
-
-        <!-- Info Bar Mobile Only (replaces side panels on mobile) -->
-        <div
-          class="bg-midnight text-cream border-teal pointer-events-auto mt-4 w-full border-y-8 p-4 text-center md:hidden"
-        >
-          <p class="font-display text-4xl">SEPT 19-20</p>
-          <p class="text-teal font-mono">KÁZNICE, BRNO</p>
-        </div>
-
-        <!-- CTA Container -->
-        <div
-          class="pointer-events-auto z-30 mt-8 flex flex-col items-center gap-6 md:mt-[-40px] md:flex-row"
-        >
-          <!-- Countdown Box -->
           <div
-            class="bg-midnight text-cream border-cream border-4 p-4 shadow-[8px_8px_0px_0px_#f75c03]"
+            class="lg:col-span-4 flex justify-center order-first lg:order-none"
           >
-            <div class="flex gap-4 font-mono text-2xl font-bold">
-              <div class="text-center">
-                <span id="days" class="text-teal block text-4xl">239</span>
-                <span class="text-xs">DAYS</span>
-              </div>
-              <div class="text-center">
-                <span id="hours" class="text-teal block text-4xl">13</span>
-                <span class="text-xs">HRS</span>
-              </div>
-              <div class="text-center">
-                <span id="minutes" class="text-teal block text-4xl">27</span>
-                <span class="text-xs">MIN</span>
-              </div>
+            <div
+              class="w-24 h-24 bg-midnight rounded-full flex items-center justify-center border-4 border-orange group hover:scale-110 transition-transform cursor-pointer"
+            >
+              <span
+                class="material-symbols-outlined text-cream text-5xl group-hover:text-teal"
+                >play_arrow</span
+              >
             </div>
           </div>
 
-          <!-- Main Button -->
-          <a
-            href="#"
-            class="bg-orange text-midnight border-midnight font-display shadow-block hover:shadow-block-hover hover:bg-cream group flex items-center gap-2 border-4 px-10 py-6 text-4xl transition-all hover:translate-x-1 hover:translate-y-1"
-          >
-            GET TICKETS
-            <span
-              class="material-symbols-outlined text-4xl transition-transform group-hover:rotate-180"
-              >star</span
+          <div class="lg:col-span-4 text-right">
+            <div class="bg-burgundy p-8 border-rough shadow-blob-teal splash">
+              <h3 class="font-funky text-2xl text-cream mb-4">LOCAL HEROES</h3>
+              <p class="font-mono text-sm text-cream leading-relaxed font-bold">
+                Brno's icons meet the best of Berlin, London, and Warsaw. A
+                chaotic mix of foreign and local flavor.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 flex flex-wrap justify-center gap-10">
+          <div class="flex items-center gap-3">
+            <span class="w-4 h-4 bg-orange rounded-full"></span>
+            <span class="font-mono font-black uppercase text-xs"
+              >24+ Roasters</span
             >
-          </a>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-4 h-4 bg-teal rounded-full"></span>
+            <span class="font-mono font-black uppercase text-xs"
+              >12 EU Cities</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-4 h-4 bg-burgundy rounded-full"></span>
+            <span class="font-mono font-black uppercase text-xs"
+              >Pure Caffeine</span
+            >
+          </div>
         </div>
       </div>
     </main>
 
-    <!-- MARQUEE STRIP -->
+    <!-- HORIZONTAL SCROLL STRIP -->
     <div
-      class="marquee-wrapper border-midnight bg-burgundy relative z-20 border-b-8 py-4"
+      class="bg-midnight py-6 border-y-4 border-midnight overflow-hidden whitespace-nowrap"
     >
-      <div class="marquee-inner">
-        <span class="font-display text-cream mx-4 text-5xl"
-          >NO DECAF ALLOWED •
-        </span>
-        <span
-          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
-          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
-          >PURE CAFFEINE •
-        </span>
-        <span class="font-display text-cream mx-4 text-5xl">LIVE MUSIC • </span>
-        <span
-          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
-          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
-          >ARTISAN ROASTERS •
-        </span>
-        <span class="font-display text-cream mx-4 text-5xl">BRNO 2026 • </span>
-        <span
-          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
-          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
-          >TASTE THE ROAST •
-        </span>
-        <span class="font-display text-cream mx-4 text-5xl"
-          >NO DECAF ALLOWED •
-        </span>
-        <span
-          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
-          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
-          >PURE CAFFEINE •
-        </span>
-        <span class="font-display text-cream mx-4 text-5xl">LIVE MUSIC • </span>
-        <span
-          class="font-display text-midnight text-stroke-cream mx-4 text-5xl"
-          style="-webkit-text-stroke: 2px #efd6ac; color: transparent"
-          >ARTISAN ROASTERS •
-        </span>
+      <div
+        class="inline-block animate-[scroll_40s_linear_infinite] font-funky text-4xl text-cream uppercase"
+      >
+        <span class="mx-10 text-orange">London</span> •
+        <span class="mx-10 text-teal">Berlin</span> •
+        <span class="mx-10 text-burgundy">Warsaw</span> •
+        <span class="mx-10 text-cream">Brno</span> •
+        <span class="mx-10 text-orange">Copenhagen</span> •
+        <span class="mx-10 text-teal">Paris</span> •
+        <span class="mx-10 text-burgundy">Budapest</span> •
+        <span class="mx-10 text-orange">London</span> •
+        <span class="mx-10 text-teal">Berlin</span> •
+        <span class="mx-10 text-burgundy">Warsaw</span> •
+        <span class="mx-10 text-cream">Brno</span> •
+        <span class="mx-10 text-orange">Copenhagen</span> •
+        <span class="mx-10 text-teal">Paris</span> •
+        <span class="mx-10 text-burgundy">Budapest</span> •
       </div>
     </div>
 
-    <!-- CONTENT SECTION (Pop Art Cards) -->
-    <section class="bg-orange clip-jagged-bottom px-4 py-20">
+    <!-- ARTSY CONTENT GRID -->
+    <section
+      class="py-24 px-6 relative transition-all duration-1000 opacity-0 translate-y-10"
+      id="roasters"
+    >
       <div class="container mx-auto">
-        <h2
-          class="font-display text-midnight mb-12 text-center text-8xl drop-shadow-[8px_8px_0px_#efd6ac]"
-        >
-          WHATS ON
-        </h2>
-
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Card 1 -->
           <div
-            class="bg-cream border-midnight shadow-block hover:shadow-block-hover border-8 p-6 transition-all hover:-translate-y-2"
+            class="bg-cream border-4 border-midnight p-8 rotate-1 hover:rotate-0 transition-all hover:bg-orange group"
           >
-            <div
-              class="bg-teal border-midnight relative mb-6 flex h-48 items-center justify-center overflow-hidden border-4"
-            >
-              <div
-                class="from-cream absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] to-transparent bg-[length:20px_20px] opacity-20"
-              ></div>
-              <span class="material-symbols-outlined text-midnight text-8xl"
-                >water_drop</span
-              >
-            </div>
-            <h3 class="font-display mb-2 text-4xl">CUPPINGS</h3>
-            <p class="text-burgundy mb-4 font-mono font-bold">
-              TASTE THE WORLD
-            </p>
-            <p class="border-midnight border-t-4 pt-4 font-mono text-sm">
-              Guided tastings of over 50 samples from top European roasteries.
-              Spit or swallow, your choice.
+            <h4 class="font-funky text-5xl mb-4 group-hover:text-cream">01</h4>
+            <h5 class="font-funky text-xl mb-2">LOCAL</h5>
+            <p class="font-mono font-bold text-xs uppercase opacity-70">
+              The Home Guard of Brno. Father's, Rebel Bean, and the icons of CZ
+              coffee.
             </p>
           </div>
 
           <!-- Card 2 -->
           <div
-            class="bg-burgundy border-midnight shadow-block hover:shadow-block-hover border-8 p-6 transition-all hover:-translate-y-2"
+            class="bg-teal border-4 border-midnight p-8 -rotate-2 hover:rotate-0 transition-all hover:translate-y-2"
           >
-            <div
-              class="bg-orange border-midnight mb-6 flex h-48 items-center justify-center overflow-hidden border-4"
-            >
-              <span class="material-symbols-outlined text-midnight text-8xl"
-                >science</span
-              >
-            </div>
-            <h3 class="font-display text-cream mb-2 text-4xl">WORKSHOPS</h3>
-            <p class="text-teal mb-4 font-mono font-bold">LEARN THE CRAFT</p>
-            <p
-              class="text-cream border-midnight border-t-4 pt-4 font-mono text-sm"
-            >
-              From V60 mastery to espresso extraction theory. Learn from the
-              nerds who know it best.
+            <h4 class="font-funky text-5xl mb-4">02</h4>
+            <h5 class="font-funky text-xl mb-2">FOREIGN</h5>
+            <p class="font-mono font-bold text-xs uppercase text-midnight">
+              London Acid, Berlin Minimalists, Warsaw Experimenters.
             </p>
           </div>
 
           <!-- Card 3 -->
           <div
-            class="bg-teal border-midnight shadow-block hover:shadow-block-hover border-8 p-6 transition-all hover:-translate-y-2"
+            class="bg-burgundy border-4 border-midnight p-8 rotate-3 hover:rotate-0 transition-all text-cream"
           >
-            <div
-              class="bg-cream border-midnight mb-6 flex h-48 items-center justify-center overflow-hidden border-4"
-            >
-              <span class="material-symbols-outlined text-midnight text-8xl"
-                >styler</span
-              >
-            </div>
-            <h3 class="font-display mb-2 text-4xl">MERCH</h3>
-            <p class="text-burgundy mb-4 font-mono font-bold">LOOK GOOD</p>
-            <p class="border-midnight border-t-4 pt-4 font-mono text-sm">
-              Limited edition tees, totes, and brewing gear. Stuff you actually
-              want to wear.
+            <h4 class="font-funky text-5xl mb-4 text-orange">03</h4>
+            <h5 class="font-funky text-xl mb-2">VENUE</h5>
+            <p class="font-mono font-bold text-xs uppercase">
+              Káznice Heritage Site. A former prison, now a coffee temple.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-midnight border-4 border-midnight p-8 -rotate-1 hover:rotate-0 transition-all text-cream"
+          >
+            <h4 class="font-funky text-5xl mb-4 text-teal">04</h4>
+            <h5 class="font-funky text-xl mb-2">PASSES</h5>
+            <p class="font-mono font-bold text-xs uppercase opacity-70">
+              Grab them before they roast. Limited weekend capacity.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MAP SECTION (No background image, pure block color) -->
+    <!-- BRNO SPLASH SECTION -->
     <section
-      id="location"
-      class="bg-midnight border-teal border-b-8 px-4 py-20"
+      class="bg-midnight text-cream py-32 relative overflow-hidden transition-all duration-1000 opacity-0 translate-y-10"
+      id="brno"
     >
       <div
-        class="border-cream container mx-auto grid grid-cols-1 gap-0 border-8 md:grid-cols-2"
+        class="absolute -top-20 -right-20 bg-orange w-96 h-96 splash opacity-20 rotate-45"
+      ></div>
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-20"
       >
-        <div class="bg-cream flex flex-col justify-center p-10">
-          <h2 class="font-display text-midnight mb-6 text-6xl">THE VENUE</h2>
-          <div class="space-y-4 font-mono text-lg">
-            <p class="bg-teal text-midnight inline-block px-2 font-bold">
-              KÁZNICE BRNO
-            </p>
-            <p>Bratislavská 68</p>
-            <p>602 00 Brno-střed</p>
-            <p class="text-burgundy pt-4 font-bold">
-              TRAM 2, 4, 9 -&gt; KÖRNEROVA
-            </p>
+        <div>
+          <h2 class="font-funky text-6xl md:text-9xl mb-8 leading-none">
+            BRNO<br /><span class="text-teal">CULTURE</span>
+          </h2>
+          <div class="bg-cream text-midnight p-1 border-4 border-teal rotate-1">
+            <div class="border-2 border-midnight p-6">
+              <p class="font-mono font-black text-lg mb-4">
+                Bratislavská 68, Káznice
+              </p>
+              <p class="font-sans text-sm font-bold opacity-80 mb-6">
+                The sixth chapter of our artsy coffee connection. Located in
+                Brno's historic prison site, where the grit of the walls meets
+                the elegance of the brew.
+              </p>
+              <button
+                class="bg-midnight text-cream px-8 py-4 font-funky text-xs hover:bg-orange hover:text-midnight transition-colors w-full"
+              >
+                DIRECTIONS
+              </button>
+            </div>
           </div>
         </div>
-        <div
-          class="bg-teal border-midnight group relative h-96 cursor-pointer overflow-hidden border-t-8 md:h-auto md:border-t-0 md:border-l-8"
-        >
-          <!-- Using a stylized map representation instead of real map to fit style -->
+        <div class="relative flex justify-center">
+          <!-- Artsy Stacked Graphics -->
           <div
-            class="bg-teal group-hover:bg-orange absolute inset-0 flex items-center justify-center transition-colors"
+            class="w-80 h-80 bg-burgundy splash absolute -top-10 -left-10 z-0"
+          ></div>
+          <div
+            class="w-80 h-80 bg-teal splash absolute -bottom-10 -right-10 z-0"
+          ></div>
+          <div
+            class="relative z-10 border-8 border-cream bg-midnight p-12 text-center shadow-hard overflow-hidden group"
           >
-            <div
-              class="bg-midnight absolute top-1/2 left-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-none"
-            ></div>
-            <div
-              class="bg-midnight absolute top-1/2 h-2 w-full -translate-y-1/2 rotate-45 transform"
-            ></div>
-            <div
-              class="bg-midnight absolute top-1/2 h-2 w-full -translate-y-1/2 -rotate-12 transform"
-            ></div>
-            <div
-              class="bg-midnight absolute top-1/3 h-2 w-full -translate-y-1/2 rotate-90 transform"
-            ></div>
             <span
-              class="material-symbols-outlined text-cream absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[150%] transform animate-bounce text-6xl"
+              class="material-symbols-outlined text-[12rem] text-orange group-hover:scale-125 transition-transform"
               >location_on</span
             >
+            <h4 class="font-funky text-2xl mt-4">KÁZNICE</h4>
           </div>
-          <div
-            class="bg-midnight text-cream absolute bottom-0 left-0 p-2 font-mono text-xs"
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKETS CTA -->
+    <section
+      class="py-24 bg-orange transition-all duration-1000 opacity-0 translate-y-10"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="font-funky text-5xl md:text-8xl text-midnight mb-12">
+          DON'T SLEEP ON IT!
+        </h2>
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+          <button
+            class="bg-midnight text-cream px-12 py-8 font-funky text-2xl border-4 border-midnight shadow-blob-teal hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all"
           >
-            CLICK TO NAVIGATE -&gt;
+            GET TICKETS
+          </button>
+          <div
+            class="bg-cream border-4 border-midnight p-8 text-midnight flex flex-col justify-center rotate-2"
+          >
+            <span class="font-mono font-black text-xl">PRO PASS • 55€</span>
+            <span class="font-mono text-[10px] uppercase font-bold"
+              >Limited to 100 enthusiasts</span
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-midnight text-cream py-12 text-center">
-      <h2
-        class="font-massive text-midnight text-stroke-cream text-[10vw] leading-none"
-        style="-webkit-text-stroke: 2px #efd6ac"
+    <footer
+      class="bg-midnight text-cream py-20 px-6 border-t-8 border-burgundy"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12"
       >
-        ROAST!
-      </h2>
-      <div class="my-8 flex justify-center gap-8">
-        <a
-          href="#"
-          class="border-cream hover:bg-orange hover:border-orange hover:text-midnight flex h-16 w-16 items-center justify-center border-4 transition-all"
-        >
-          <span class="material-symbols-outlined text-3xl">public</span>
-        </a>
-        <a
-          href="#"
-          class="border-cream hover:bg-teal hover:border-teal hover:text-midnight flex h-16 w-16 items-center justify-center border-4 transition-all"
-        >
-          <span class="material-symbols-outlined text-3xl"
-            >alternate_email</span
+        <div>
+          <h3 class="font-funky text-4xl mb-4">ROAST!</h3>
+          <p class="font-mono text-xs opacity-50 uppercase tracking-widest">
+            Brno Coffee Collective © 2026
+          </p>
+        </div>
+        <div class="flex gap-8">
+          <a
+            href="#"
+            class="w-16 h-16 border-4 border-cream rounded-full flex items-center justify-center hover:bg-teal hover:border-teal hover:text-midnight transition-all"
           >
-        </a>
+            <span class="material-symbols-outlined">alternate_email</span>
+          </a>
+          <a
+            href="#"
+            class="w-16 h-16 border-4 border-cream rounded-full flex items-center justify-center hover:bg-orange hover:border-orange hover:text-midnight transition-all"
+          >
+            <span class="material-symbols-outlined">public</span>
+          </a>
+        </div>
+        <div
+          class="text-right font-mono text-[10px] uppercase font-bold opacity-40 leading-loose"
+        >
+          Established 2020<br />
+          Made with caffeine in Brno<br />
+          No Decaf Allowed
+        </div>
       </div>
-      <p class="font-mono text-sm opacity-50">© 2026. LOUD &amp; PROUD.</p>
     </footer>
 
     <script>
-      // Menu Toggle
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        if (menu.classList.contains("translate-y-full")) {
-          menu.classList.remove("translate-y-full");
-        } else {
-          menu.classList.add("translate-y-full");
-        }
-      }
+      // Funky Mouse Blob Interaction
+      const blobs = document.querySelectorAll(".blob");
+      document.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
 
-      // Countdown
-      const targetDate = new Date("September 19, 2026 09:00:00").getTime();
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance < 0) return;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-        document.getElementById("days").innerText =
-          days < 10 ? "0" + days : days;
-        document.getElementById("hours").innerText =
-          hours < 10 ? "0" + hours : hours;
-        document.getElementById("minutes").innerText =
-          minutes < 10 ? "0" + minutes : minutes;
-      }
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
-    </script>
-    <script>
-      /* Google Maps Bootstrap Placeholder - Not actively used in visual design but kept for potential expansion */
-      ((g) => {
-        var h,
-          a,
-          k,
-          p = "The Google Maps JavaScript API",
-          c = "google",
-          l = "importLibrary",
-          q = "__ib__",
-          m = document,
-          b = window;
-        b = b[c] || (b[c] = {});
-        var d = b.maps || (b.maps = {}),
-          r = new Set(),
-          e = new URLSearchParams(),
-          u = () =>
-            h ||
-            (h = new Promise(async (f, n) => {
-              await (a = m.createElement("script"));
-              e.set("libraries", [...r] + "");
-              for (k in g)
-                e.set(
-                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
-                  g[k],
-                );
-              e.set("callback", c + ".maps." + q);
-              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-              d[q] = f;
-              a.onerror = () => (h = n(Error(p + " could not load.")));
-              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-              m.head.append(a);
-            }));
-        d[l]
-          ? console.warn(p + " only loads once. Ignoring:", g)
-          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
-      })({
-        key: "AIzaSyBB_SVKlC9CcEjDt1H01_B7Gjmb8FiIaGw",
-        v: "weekly",
+        blobs.forEach((blob, index) => {
+          const shift = (index + 1) * 30;
+          blob.style.transform = `translate(${x * shift}px, ${y * shift}px)`;
+        });
       });
+
+      // Simple Intersection Observer for funky reveals
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((el) => {
+        el.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-10",
+        );
+        observer.observe(el);
+      });
+
+      // Animation for the scrolling strip
+      const style = document.createElement("style");
+      style.innerHTML = `
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+        `;
+      document.head.appendChild(style);
     </script>
-    <!--
-        No external images used.
-    -->
   </body>
 </html>
