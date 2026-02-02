@@ -546,3 +546,8 @@ ol.round-counter li::before {
   top: 50%;
   transform: translate(0, -50%);
 }
+
+/* Flip Card Styles */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}

@@ -481,50 +481,40 @@
     "title": "What to expect?",
     "content": [
       {
-        "title": "Main program",
-        "items": [
-          {
-            "title": "Unlimited coffee consumption",
-            "text": "With the price of admission, you can sample coffees from all the roasters present throughout the festival."
-          },
-          {
-            "title": "Lectures",
-            "text": "You can expect lectures from well-known café owners, coffee roasters and other personalities from the industry. Take the unique opportunity to meet those who make it possible for you to enjoy the finest coffee. Admission to the lectures is included in the price of admission."
-          },
-          {
-            "title": "Workshops",
-            "text": "Try out different coffee brewing methods or roast your own coffee. Capacity of the workshops is limited, so come early. Participation in the workshops is included in the price of admission."
-          },
-          {
-            "title": "Cuppings",
-            "text": "Are you curious about how the taste descriptions of individual coffees are created? Come and taste coffee as it is tasted and evaluated by professionals. Participation is included in the price of admission."
-          },
-          {
-            "title": "Cups and mugs",
-            "text": "For each participant there is a reusable coffee and beer cups available and ready to be borrowed. A deposit is paid on site. And of course there is also a cup rinse available free of charge for everyone so we all can enjoy each coffee from a clean cup."
-          }
-        ]
+        "title": "Unlimited coffee consumption",
+        "text": "With the price of admission, you can sample coffees from all the roasters present throughout the festival."
       },
       {
-        "title": "Accompanying program",
-        "items": [
-          {
-            "title": "Chill-out zone",
-            "text": "If you want to relax during the festival, we have a relaxation area with deck chairs and seating."
-          },
-          {
-            "title": "Snack bar",
-            "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
-          },
-          {
-            "title": "Specialty coffee to buy",
-            "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
-          },
-          {
-            "title": "Festival merchandise",
-            "text": "As well as coffee, we also have various other coffee products available for purchase. Plus, special Roast! Festival merch."
-          }
-        ]
+        "title": "Lectures",
+        "text": "You can expect lectures from well-known café owners, coffee roasters and other personalities from the industry. Take the unique opportunity to meet those who make it possible for you to enjoy the finest coffee. Admission to the lectures is included in the price of admission."
+      },
+      {
+        "title": "Workshops",
+        "text": "Try out different coffee brewing methods or roast your own coffee. Capacity of the workshops is limited, so come early. Participation in the workshops is included in the price of admission."
+      },
+      {
+        "title": "Cuppings",
+        "text": "Are you curious about how the taste descriptions of individual coffees are created? Come and taste coffee as it is tasted and evaluated by professionals. Participation is included in the price of admission."
+      },
+      {
+        "title": "Cups and mugs",
+        "text": "For each participant there is a reusable coffee and beer cups available and ready to be borrowed. A deposit is paid on site. And of course there is also a cup rinse available free of charge for everyone so we all can enjoy each coffee from a clean cup."
+      },
+      {
+        "title": "Chill-out zone",
+        "text": "If you want to relax during the festival, we have a relaxation area with deck chairs and seating."
+      },
+      {
+        "title": "Snack bar",
+        "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
+      },
+      {
+        "title": "Specialty coffee to buy",
+        "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
+      },
+      {
+        "title": "Festival merchandise",
+        "text": "As well as coffee, we also have various other coffee products available for purchase. Plus, special Roast! Festival merch."
       }
     ]
   },

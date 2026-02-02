@@ -9,7 +9,7 @@ import { Footer } from "./sections/Footer";
 // import { Map } from "./sections/Map";
 // import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
-// import { WhatToExpect } from "./sections/WhatToExpect";
+import { WhatToExpect } from "./sections/WhatToExpect";
 // import { PromotedRoasters } from "./sections/PromotedRoasters";
 // import { Sponsors } from "./sections/Sponsors";
 // import InstagramFeed from "./sections/InstagramFeed";
@@ -24,9 +24,9 @@ const Home = () => {
       <Info />
       {/* <Program /> */}
       {/* <PromotedRoasters /> */}
+      <WhatToExpect />
       <Tickets />
-      {/* <WhatToExpect />
-      <PreviousYears />
+      {/* <PreviousYears />
       <Gallery />
       <Map />
       <Sponsors />

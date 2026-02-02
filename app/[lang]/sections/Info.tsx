@@ -7,25 +7,25 @@ export const Info = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="about" className="bg-dots bg-mint-cream relative px-6 py-32">
+    <section id="about" className="bg-dots bg-ivory relative px-6 py-32">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           {/* Feature Card 1 - Main */}
           <div className="animate-pop punk-border pop-shadow bg-primary -rotate-1 transform p-10 transition-transform duration-300 hover:rotate-0 md:col-span-7">
-            <h2 className="font-display text-onyx mb-6 text-6xl leading-[0.85] font-black uppercase md:text-8xl">
+            <h2 className="font-display text-evergreen mb-6 text-6xl leading-[0.85] font-black uppercase md:text-8xl">
               {lang.about.title.split(" ").slice(0, 2).join(" ")} <br />
               <span className="text-accent">
                 {lang.about.title.split(" ").slice(2).join(" ") || "ROAST!"}
               </span>
             </h2>
-            <p className="text-onyx max-w-lg text-xl font-bold md:text-2xl">
+            <p className="text-evergreen max-w-lg text-xl font-bold md:text-2xl">
               {lang.about.text[0]}
             </p>
           </div>
 
           {/* Stat Card */}
           <div className="animate-pop punk-border pop-shadow bg-accent flex rotate-2 flex-col items-center justify-center p-10 text-center transition-transform duration-300 hover:rotate-0 md:col-span-5">
-            <span className="font-display text-onyx text-[120px] leading-none font-black">
+            <span className="font-display text-evergreen text-[120px] leading-none font-black">
               30+
             </span>
             <span className="font-display text-3xl font-bold tracking-tighter uppercase">
