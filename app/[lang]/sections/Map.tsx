@@ -7,160 +7,139 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { useParams } from "next/navigation";
 import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
-import Bar from "@/app/components/Bar";
 import BeanIcon from "@/app/icons/beanicon";
 
 export const Map = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <section className="min-h-screen pb-48">
-      <div className="mx-auto flex max-w-475 grid-cols-[1fr_auto_1fr] flex-col px-8 lg:grid">
-        <div className="flex flex-col md:pl-12">
-          <h2 className="pb-8 text-3xl font-bold 2xl:text-6xl">
-            {lang.location.title}
-          </h2>
-          <div className="max-w-5xl space-y-10 text-base leading-normal 2xl:text-xl">
-            {lang.location.howToTitle}
-          </div>
-          <div className="grow">
-            <Bar />
-          </div>
-          <div className="card elevate mx-4 mt-32 flex flex-col gap-2 rounded-t-2xl p-8 text-center text-base lg:mx-0 lg:mt-0 lg:mb-32 lg:gap-4 lg:rounded-s-2xl lg:rounded-tr-none lg:text-right 2xl:p-12 2xl:text-xl">
-            <h3 className="font-bold">{lang.location.addressTitle}</h3>
-            <p>Káznice Brno</p>
-            <p>
-              Bratislavská 249/68,
-              <br />
-              602 00 Brno-Střed-Zábrdovice
-            </p>
-            <div className="mt-3 flex justify-center gap-4 lg:justify-end">
-              <a
-                href={lang.contacts.kaznice_loc}
-                rel="external"
-                title="Káznice Brno - Google Maps"
-                className="h-[3em] w-[3em] rounded-full border border-(--black) fill-current p-[.65rem] 2xl:p-4"
-              >
-                <MapIcon />
-                <span className="sr-only">Káznice Brno - Google Maps</span>
-              </a>
-              <a
-                className="h-[3em] w-[3em] rounded-full border border-(--black) fill-current p-2 2xl:p-4"
-                href={lang.contacts.kaznice_web}
-                title="Káznice Brno - Web"
-                rel="external"
-              >
-                <WebIcon />
-                <span className="sr-only">Káznice Brno - Web</span>
-              </a>
+    <section id="location" className="relative">
+      {/* Full-bleed Map */}
+      <div className="h-125 lg:h-225">
+        <ReactMap
+          initialViewState={{
+            latitude: 49.1995978,
+            longitude: 16.6225864,
+            zoom: 15,
+          }}
+          scrollZoom={false}
+          style={{
+            height: "100%",
+            width: "100%",
+          }}
+          mapStyle="https://api.maptiler.com/maps/019c202e-e943-71a2-9307-527f7fee6b56/style.json?key=PeGeqGWAzLQUdqICcIfc"
+        >
+          <Marker latitude={49.1996958} longitude={16.6225864} anchor="bottom">
+            <div className="map-marker-punk text-ivory bg-accent flex flex-col items-center gap-2 px-4 py-2">
+              <span className="font-display w-min text-center font-bold">
+                {lang.location.stops.kaznice}
+              </span>
+              <div className="h-12 w-12">
+                <BeanIcon />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="z-10">
-          <div className="card elevate relative rounded-3xl p-2 2xl:p-3">
-            <div className="card elevate absolute top-3 z-50 m-3 flex w-[calc(100%-3rem)] items-center justify-between rounded-full text-base leading-none 2xl:text-xl">
-              <h4 className="py-5 pl-4 font-semibold 2xl:py-6 2xl:pl-8">
-                {lang.location.stops.kaznice}, Brno
-              </h4>
-              <a
-                href={lang.contacts.kaznice_loc}
-                rel="external"
-                title="Káznice Brno - Google Maps"
-                className="mr-1 h-[3em] w-[3em] rounded-full border border-(--black) bg-(--black) fill-current p-[.65rem] font-medium text-(--white) lg:mr-2 2xl:p-4"
-              >
-                <MapIcon />
-                <span className="sr-only">Káznice Brno - Google Maps</span>
-              </a>
+          </Marker>
+          <Marker
+            latitude={49.20001678633428}
+            longitude={16.625958456324793}
+            anchor="bottom"
+          >
+            <div className="map-marker-punk bg-ivory flex flex-col items-center gap-2 px-4 py-2">
+              <span className="font-display w-min text-center font-bold">
+                {lang.location.stops.tkalcovska}
+              </span>
+              <TramIcon size="2em" />
             </div>
+          </Marker>
+          <Marker
+            latitude={49.19832445765383}
+            longitude={16.61971675681972}
+            anchor="bottom"
+          >
+            <div className="map-marker-punk bg-ivory flex flex-col items-center gap-2 px-4 py-2">
+              <span className="font-display w-min text-center font-bold">
+                {lang.location.stops.kornerova}
+              </span>
+              <TramIcon size="2em" />
+            </div>
+          </Marker>
+          <Marker
+            latitude={49.198594269474306}
+            longitude={16.61462520981893}
+            anchor="bottom"
+          >
+            <div className="map-marker-punk bg-ivory flex flex-col items-center gap-2 px-4 py-2">
+              <span className="font-display w-min text-center font-bold">
+                {lang.location.parking.lot.title}
+              </span>
+              <CarIcon size="2em" />
+            </div>
+          </Marker>
+          <NavigationControl position="bottom-right" showCompass={false} />
+        </ReactMap>
+      </div>
 
-            <div className="h-120 rounded-3xl text-base text-black lg:aspect-2/3 lg:h-[90vh] 2xl:text-xl">
-              <ReactMap
-                initialViewState={{
-                  latitude: 49.1995978,
-                  longitude: 16.6225864,
-                  zoom: 15,
-                }}
-                scrollZoom={false}
-                style={{
-                  borderRadius: "1.5rem",
-                  height: "100%",
-                  width: "100%",
-                }}
-                mapStyle="https://api.maptiler.com/maps/c303af9a-2cbf-4c95-8aa7-00a95751e11c/style.json?key=PeGeqGWAzLQUdqICcIfc"
-              >
-                <Marker
-                  latitude={49.1996958}
-                  longitude={16.6225864}
-                  anchor="bottom"
+      {/* Floating Panels */}
+      <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 lg:p-6">
+        {/* Top floating panel - Venue Info */}
+        <div className="pointer-events-auto self-start">
+          <div className="bg-accent text-ivory punk-border pop-shadow p-4 shadow-lg lg:p-6">
+            <div className="mb-3 flex items-center justify-between gap-6">
+              <h2 className="font-display text-2xl leading-none font-black uppercase lg:text-3xl">
+                {lang.location.stops.kaznice}
+              </h2>
+              <div className="flex gap-2">
+                <a
+                  href={lang.contacts.kaznice_loc}
+                  rel="external"
+                  title="Káznice Brno - Google Maps"
+                  className="bg-evergreen text-ivory border-evergreen hover:bg-accent flex h-10 w-10 items-center justify-center border-2 fill-current transition-colors"
                 >
-                  <div className="flex items-center gap-3 px-4 py-2 lg:py-3 lg:pr-5">
-                    <div className="inline-block text-[0.6rem]">
-                      <BeanIcon />
-                    </div>
-                    {lang.location.stops.kaznice}
-                  </div>
-                </Marker>
-                <Marker
-                  latitude={49.20001678633428}
-                  longitude={16.625958456324793}
-                  anchor="bottom"
+                  <MapIcon />
+                  <span className="sr-only">Káznice Brno - Google Maps</span>
+                </a>
+                <a
+                  href={lang.contacts.kaznice_web}
+                  rel="external"
+                  title="Káznice Brno - Web"
+                  className="bg-evergreen text-ivory border-evergreen hover:bg-accent flex h-10 w-10 items-center justify-center border-2 fill-current transition-colors"
                 >
-                  <div className="flex items-center gap-1 px-4 py-2 lg:py-3 lg:pr-5">
-                    <TramIcon size="2em" />
-                    {lang.location.stops.tkalcovska}
-                  </div>
-                </Marker>
-                <Marker
-                  latitude={49.19832445765383}
-                  longitude={16.61971675681972}
-                  anchor="bottom"
-                >
-                  <div className="flex items-center gap-1 px-4 py-2 lg:py-3 lg:pr-5">
-                    <TramIcon size="2em" />
-                    {lang.location.stops.kornerova}
-                  </div>
-                </Marker>
-                <Marker
-                  latitude={49.198594269474306}
-                  longitude={16.61462520981893}
-                  anchor="bottom"
-                >
-                  <div className="flex items-center gap-1 px-4 py-2 lg:py-3 lg:pr-5">
-                    <CarIcon size="2em" />
-                    {lang.location.parking.lot.title}
-                  </div>
-                </Marker>
-                <NavigationControl
-                  position="bottom-right"
-                  showCompass={false}
-                />
-              </ReactMap>
+                  <WebIcon />
+                  <span className="sr-only">Káznice Brno - Web</span>
+                </a>
+              </div>
             </div>
+            <p className="text-base">Bratislavská 249/68, 602 00 Brno</p>
           </div>
         </div>
-        <div>
-          <div className="card elevate relative z-0 mx-4 flex flex-col gap-4 rounded-b-2xl p-8 text-base lg:mx-0 lg:mt-4 lg:rounded-e-2xl lg:rounded-bl-none 2xl:mt-32 2xl:p-12 2xl:text-xl">
-            <h3 className="font-bold">{lang.location.howToTitle}</h3>
-            <div className="grid grid-cols-[auto,1fr] gap-2 lg:gap-4">
-              <div className="">
-                <TramIcon size="2em" />
+
+        {/* Bottom floating panel - Transport */}
+        <div className="pointer-events-auto self-start">
+          <div className="bg-secondary text-evergreen punk-border pop-shadow p-4 shadow-lg lg:p-6">
+            <h3 className="font-display mb-4 text-lg font-black uppercase lg:text-xl">
+              {lang.location.howToTitle}
+            </h3>
+            <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
+              {/* Tram */}
+              <div className="flex items-start gap-3">
+                <div className="bg-evergreen text-secondary flex h-8 w-8 shrink-0 items-center justify-center">
+                  <TramIcon size="1.25em" />
+                </div>
+                <div className="text-base">
+                  <p className="font-bold">MHD</p>
+                  <p>{lang.location.stops.tkalcovska} — 4, 7, 2</p>
+                  <p>{lang.location.stops.kornerova} — 4, 7, 2</p>
+                </div>
               </div>
-              <div>
-                <p>{lang.location.stops.tkalcovska} - 4, 7, 2</p>
-                <p>{lang.location.stops.kornerova} - 4, 7, 2</p>
-              </div>
-              <div className="">
-                <CarIcon size="2em" />
-              </div>
-              <div>
-                <p className="font-bold">{lang.location.parking.lot.title}</p>
-                <p className="pb-2">{lang.location.parking.lot.description}</p>
-                <p className="font-bold">{lang.location.parking.zones.title}</p>
-                {lang.location.parking.zones.pricing.map((z) => (
-                  <ul key={z.title}>
-                    <li className="">{z.title}</li>
-                  </ul>
-                ))}
+              {/* Parking */}
+              <div className="flex items-start gap-3">
+                <div className="bg-evergreen text-secondary flex h-8 w-8 shrink-0 items-center justify-center">
+                  <CarIcon size="1.25em" />
+                </div>
+                <div className="text-base">
+                  <p className="font-bold">{lang.location.parking.lot.title}</p>
+                  <p>{lang.location.parking.lot.description}</p>
+                </div>
               </div>
             </div>
           </div>

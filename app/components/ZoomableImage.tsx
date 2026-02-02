@@ -67,15 +67,16 @@ export const ZoomableImage = (
         classDialog="zoom"
         zoomImg={{
           alt: props.alt || "",
+          className: "punk-border",
           height: props.zoomed.height,
           src: props.src,
           srcSet,
           width: props.zoomed.width,
         }}
       >
-        <span className="card elevate img-overlay block rounded-lg lg:rounded-2xl">
+        <span className="img-overlay punk-border pop-shadow animate-pop block">
           <ExportedImage
-            className="h-auto max-w-full rounded-lg lg:rounded-2xl"
+            className="punk-border pop-shadow animate-pop h-auto max-w-full"
             src={props.src}
             height={props.small.height}
             width={props.small.width}

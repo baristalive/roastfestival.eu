@@ -1,12 +1,12 @@
 "use client";
 import { Header } from "./sections/Header";
 import { Marquee } from "./sections/Marquee";
-// import { Gallery } from "./sections/Gallery";
+import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
 // import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
-// import { Map } from "./sections/Map";
+import { Map } from "./sections/Map";
 import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
@@ -26,12 +26,12 @@ const Home = () => {
       {/* <PromotedRoasters /> */}
       <Colab />
       <WhatToExpect />
-      <PreviousYears />
       <Tickets />
-      {/* <Gallery />
       <Map />
-      <Sponsors />
-      <Organizers /> */}
+      <PreviousYears />
+      <Gallery />
+      {/* <Sponsors /> */}
+      {/* <Organizers /> */}
       <Footer />
     </div>
   );

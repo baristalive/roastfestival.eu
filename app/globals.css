@@ -150,82 +150,8 @@ body,
   background: var(--black);
 }
 
-:not(svg).elevate {
-  box-shadow:
-    0px 8px 10px -5px rgba(0, 0, 0, 0.2),
-    0px 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
-}
-.elevate-inset {
-  box-shadow:
-    inset 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
-    inset 0px 16px 24px 2px rgba(0, 0, 0, 0.14),
-    inset 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
-}
-svg.elevate {
-  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
-}
-.card {
-  background: var(--white);
-  color: var(--black);
-}
-.card-highlight {
-  background: var(--accent);
-  color: var(--white);
-}
-.ticket-sep-highlight {
-  height: 1.6rem;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  background:
-    radial-gradient(0.8rem at left, #0000 90%, var(--accent)) left,
-    radial-gradient(0.8rem at right, #0000 90%, var(--accent)) right;
-  background-size: 51% 100%;
-  background-repeat: no-repeat;
-  filter: drop-shadow(0 0 0 var(--accent));
-}
-.ticket-sep {
-  /* width: 100%; */
-  height: 1.6rem;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  background:
-    radial-gradient(0.8rem at left, #0000 90%, var(--background)) left,
-    radial-gradient(0.8rem at right, #0000 90%, var(--background)) right;
-  background-size: 51% 100%;
-  background-repeat: no-repeat;
-  filter: drop-shadow(0 0 0 var(--background));
-}
-.beans {
-  background: url("/beans.svg") center 1px / cover no-repeat;
-}
-.availability__soon {
-  opacity: 0.5;
-}
-.availability__sold-out,
-.availability__sold-out {
-  position: relative;
-  opacity: 0.5;
-}
-.availability__sold-out::before,
-.availability__sold-out::before {
-  position: absolute;
-  content: "";
-  left: -1rem;
-  right: -1rem;
-  top: 50%;
-  border-top: 0.2rem solid var(--black);
-  transform: rotate(3deg);
-}
-
 .maplibregl-marker {
   font-size: large;
-  background: var(--white);
-  border-radius: 1.5rem;
-  box-shadow:
-    0px 8px 10px -5px rgba(0, 0, 0, 0.2),
-    0px 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
 }
 @media (max-width: 1024px) {
   .maplibregl-marker {
@@ -233,16 +159,38 @@ svg.elevate {
   }
 }
 
-.maplibregl-marker::before {
+.map-marker-punk {
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 0px 0px var(--black);
+  position: relative;
+}
+
+.map-marker-punk::before {
   content: "";
   position: absolute;
-  top: calc(100% - 0.25rem);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  border-top: 10px solid var(--white);
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-top: 20px solid var(--black);
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+}
+
+.map-marker-punk::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  border-top: 16px solid var(--color-ivory);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+.map-marker-punk.bg-accent::after {
+  border-top-color: var(--color-accent);
 }
 .maplibregl-ctrl-group {
   box-shadow: none !important;
@@ -254,49 +202,26 @@ svg.elevate {
 .maplibregl-ctrl-zoom-in,
 .maplibregl-ctrl-zoom-out {
   background-color: var(--white) !important;
-  /* filter: invert(1); */
-  border-radius: 50% !important;
-  height: 64px !important;
-  width: 64px !important;
-  margin: 10px 0 !important;
-  box-shadow:
-    0px 8px 10px -5px rgba(0, 0, 0, 0.2),
-    0px 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 0 !important;
+  border: 3px solid var(--black) !important;
+  height: 48px !important;
+  width: 48px !important;
+  margin: 8px 8px !important;
+  box-shadow: 4px 4px 0px 0px var(--black);
+  transition: all 0.15s ease !important;
+}
+.maplibregl-ctrl-zoom-in:hover,
+.maplibregl-ctrl-zoom-out:hover {
+  background-color: var(--color-secondary) !important;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--black);
 }
 @media (max-width: 1024px) {
   .maplibregl-ctrl-zoom-in,
   .maplibregl-ctrl-zoom-out {
-    height: 42px !important;
-    width: 42px !important;
+    height: 40px !important;
+    width: 40px !important;
   }
-}
-
-.lang {
-  position: fixed;
-  z-index: 3;
-  text-orientation: sideways;
-  writing-mode: vertical-rl;
-  left: -5px;
-  bottom: 2rem;
-  padding: 1rem 0.5rem 1rem calc(0.5rem + 5px);
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  text-align: center;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  border-left: 0;
-  transition: transform 0.5s;
-}
-.lang:hover {
-  transform: translateX(5px);
-}
-
-.dropdown:focus-within .dropdown-menu {
-  display: block;
-}
-.dropdown-menu:focus-within {
-  display: block;
 }
 
 @keyframes slideUp {
@@ -319,61 +244,34 @@ svg.elevate {
   }
 }
 
-.selected {
-  position: relative;
-}
-.selected:hover path {
-  stroke-width: 2 !important;
-}
-.selected::after {
-  position: absolute;
-  content: url("/check.svg");
-  z-index: 40;
-  width: 1em;
-  height: 1em;
-  right: 0;
-  top: 0;
-}
-
 .img-overlay {
   position: relative;
-  transition: 500ms scale;
+  transition: 100ms scale;
   will-change: scale;
+  transform: translateZ(1);
 }
 .img-overlay:not(.zoomed)::before {
-  transition: 500ms all;
+  transition: 100ms all;
 }
 .img-overlay::before {
   content: "";
-  inset: 0;
-  background-color: color-mix(in srgb, var(--primary) 45%, transparent);
+  background-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   position: absolute;
-  border-radius: 0.5rem;
-  pointer-events: none;
   inset: 0;
-}
-@media (min-width: 1024px) {
-  .img-overlay::before {
-    border-radius: 1rem;
-  }
 }
 .img-overlay:hover::before {
   opacity: 0;
 }
 .img-overlay:hover {
   scale: 1.05;
-  z-index: 50;
+  z-index: 10;
 }
 .zoom [data-rmiz-modal-overlay="visible"] {
-  background-color: color-mix(in srgb, var(--primary) 65%, transparent);
+  background-color: color-mix(in srgb, var(--color-primary) 65%, transparent);
 }
 .zoom [data-rmiz-btn-unzoom] {
   background-color: var(--black);
   color: var(--white);
-}
-
-.zoom [data-rmiz-modal-img] {
-  border-radius: 1rem;
 }
 
 ol.round-counter {
@@ -408,42 +306,6 @@ ol.round-counter li::before {
   background: var(--white);
 }
 
-.ticket {
-  position: relative;
-  background: var(--white);
-  border: 2px solid var(--black);
-  border-radius: 0.5em;
-  z-index: 0;
-}
-.ticket::before {
-  position: absolute;
-  content: "";
-  top: calc(50% - 1em);
-  left: -2px;
-  z-index: 1;
-  height: 2em;
-  width: 0.75em;
-  border: 2px solid var(--black);
-  border-left: 0;
-  background-color: var(--white);
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-}
-.ticket::after {
-  position: absolute;
-  content: "";
-  top: calc(50% - 1em);
-  right: -2px;
-  z-index: 1;
-  height: 2em;
-  width: 0.75em;
-  border: 2px solid var(--black);
-  border-right: 0;
-  background-color: var(--primary);
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
-}
-
 @keyframes scrolling {
   0% {
     transform: translateX(0);
@@ -455,32 +317,6 @@ ol.round-counter li::before {
 
 .animate-hover-pause:hover div {
   animation-play-state: paused;
-}
-
-.carousel {
-  position: relative;
-}
-.carousel::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 20%;
-  background: linear-gradient(to right, var(--background), rgba(0, 0, 0, 0));
-  z-index: 2;
-  pointer-events: none;
-}
-.carousel::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 10%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary));
-  z-index: 2;
-  pointer-events: none;
 }
 
 .schedule-style-list .schedule-content,

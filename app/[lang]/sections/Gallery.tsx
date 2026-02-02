@@ -54,11 +54,11 @@ export const Gallery = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section>
-      <div className="cards mx-auto hidden max-w-475 items-center justify-center gap-4 px-12 pb-12 md:flex">
+    <section className="bg-secondary">
+      <div className="mx-auto hidden items-center justify-center gap-8 p-12 md:flex">
         {largeWallImages.map((col, idx) => (
           <div
-            className="flex min-w-0 shrink gap-1 md:flex-col md:gap-4"
+            className="flex min-w-0 shrink flex-col gap-8"
             key={`col_${idx}`}
           >
             {col.map((i, idx2) => (
@@ -72,7 +72,7 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="cards mx-auto flex max-w-475 items-center justify-center gap-1 p-2 pb-12 md:hidden">
+      <div className="mx-auto flex items-center justify-center gap-8 p-2 pb-12 md:hidden">
         {smallWallImages.map((col, idx) => (
           <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
             {col.map((i, idx2) => (
