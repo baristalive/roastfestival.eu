@@ -415,6 +415,14 @@
     "subscribe": "Chci vědět víc!",
     "followUs": "Sleduj nás"
   },
+  "caffeineCounter": {
+    "jitterLevel": "Úroveň třesu",
+    "pressForEnergy": "Přidej energii",
+    "calmDown": "Ještě!",
+    "espresso": "+ Espresso",
+    "detox": "Zklidni se!",
+    "sideEffects": "Vedlejší účinky: vysoké dávky způsobují cestování časem, extrémní produktivitu a velmi rychlé mluvení."
+  },
   "learnMore": "chci vědět víc",
   "location": {
     "addressTitle": "Adresa",

@@ -394,6 +394,14 @@
     "followUs": "Follow us",
     "addCaffeine": "Add caffeine!"
   },
+  "caffeineCounter": {
+    "jitterLevel": "Jitter Level",
+    "pressForEnergy": "Press for energy",
+    "calmDown": "More!",
+    "espresso": "+ Espresso",
+    "detox": "Calm down",
+    "sideEffects": "Side effects include: seeing through time, extreme productivity, and talking very fast."
+  },
   "learnMore": "learn more",
   "location": {
     "addressTitle": "Address",

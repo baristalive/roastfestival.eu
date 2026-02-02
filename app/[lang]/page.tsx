@@ -3,6 +3,7 @@ import { Header } from "./sections/Header";
 import { Marquee } from "./sections/Marquee";
 import { Gallery } from "./sections/Gallery";
 import { Program } from "./sections/Program";
+import { Navigation } from "@/app/[lang]/components/Navigation";
 import { Info } from "./sections/Info";
 // import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
@@ -19,22 +20,25 @@ import { StayTuned } from "./sections/StayTuned";
 const Home = () => {
   return (
     <div className="wrapper">
-      <Header />
-      <Marquee />
-      {/* <InstagramFeed /> */}
-      <Info />
-      <Program />
-      {/* <PromotedRoasters /> */}
-      <Colab />
-      <WhatToExpect />
-      <StayTuned />
-      <Tickets />
-      <Map />
-      <PreviousYears />
-      <Gallery />
-      {/* <Sponsors /> */}
-      {/* <Organizers /> */}
-      <Footer />
+      <Navigation />
+      <main>
+        <Header />
+        <Marquee />
+        {/* <InstagramFeed /> */}
+        <Info />
+        <Program />
+        {/* <PromotedRoasters /> */}
+        <Colab />
+        <WhatToExpect />
+        <StayTuned />
+        <Tickets />
+        <Map />
+        <PreviousYears />
+        <Gallery />
+        {/* <Sponsors /> */}
+        {/* <Organizers /> */}
+        <Footer />
+      </main>
     </div>
   );
 };

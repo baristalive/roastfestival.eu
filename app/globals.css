@@ -409,3 +409,66 @@ ol.round-counter li::before {
 .animate-bean-pulse {
   animation: beanPulse 1.5s ease-in-out infinite;
 }
+
+/* Caffeine Jitter Effects - using translate property to not conflict with transform */
+@keyframes jitter-light {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: 0.3px -0.3px;
+  }
+  50% {
+    translate: -0.3px 0.3px;
+  }
+  75% {
+    translate: 0.3px 0.3px;
+  }
+}
+
+@keyframes jitter-heavy {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  16% {
+    translate: -0.8px 0.5px;
+  }
+  33% {
+    translate: 0.8px -0.8px;
+  }
+  50% {
+    translate: -0.5px 0.8px;
+  }
+  66% {
+    translate: 0.8px 0.5px;
+  }
+  83% {
+    translate: -0.8px -0.5px;
+  }
+}
+
+/* Apply jitter based on data attribute */
+html[data-caffeine-shake="1"] section *:not(.animate-progress-load),
+html[data-caffeine-shake="1"] nav *,
+html[data-caffeine-shake="1"] header * {
+  animation: jitter-light 0.1s linear infinite;
+}
+
+html[data-caffeine-shake="2"] section *:not(.animate-progress-load),
+html[data-caffeine-shake="2"] nav *,
+html[data-caffeine-shake="2"] header * {
+  animation: jitter-heavy 0.08s linear infinite;
+}
+
+/* Hue rotation for extreme caffeine levels */
+html {
+  --caffeine-hue-shift: 0deg;
+}
+
+html[data-caffeine-shake="2"] main,
+html[data-caffeine-shake="2"] nav {
+  filter: hue-rotate(var(--caffeine-hue-shift));
+  transition: filter 0.3s ease;
+}

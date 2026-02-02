@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { BeanGrid } from "@/app/[lang]/components/BeanGrid";
-import { Navigation } from "@/app/[lang]/components/Navigation";
 
 export const Header = () => {
   const params = useParams();
@@ -34,70 +33,65 @@ export const Header = () => {
   }, []);
 
   return (
-    <>
-      <Navigation />
+    <header className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20">
+      <div className="absolute inset-0 -z-10 grid grid-cols-8">
+        <div className="bg-accent bg-lines"></div>
+        <div className="bg-primary bg-dots col-span-4"></div>
+        <div className="bg-secondary col-span-3"></div>
+      </div>
 
-      {/* Hero Section */}
-      <header className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 -z-10 grid grid-cols-8">
-          <div className="bg-accent bg-lines"></div>
-          <div className="bg-primary bg-dots col-span-4"></div>
-          <div className="bg-secondary col-span-3"></div>
-        </div>
+      {/* Interactive Bean Grid - positioned over the right stripe */}
+      <div className="absolute top-0 right-0 bottom-0 w-[37.5%]">
+        <BeanGrid />
+      </div>
 
-        {/* Interactive Bean Grid - positioned over the right stripe */}
-        <div className="absolute top-0 right-0 bottom-0 w-[37.5%]">
-          <BeanGrid />
-        </div>
-
-        <div className="pointer-events-none relative container mx-auto flex flex-col items-center px-6 text-center">
-          <div className="punk-border pop-shadow-small normal mb-8 translate-z-1 rotate-2 px-6 py-2">
-            <span className="font-display text-mahagony text-xl font-black tracking-tighter uppercase md:text-2xl">
-              {lang.date}
-            </span>
-          </div>
-
-          <h1 className="font-display text-onyx relative mb-6 text-[15vw] leading-[0.8] font-black tracking-tight select-none">
-            <span className="text-stroke-outline relative z-10 block">
-              Roast!
-            </span>
-            <span
-              className="text-stroke absolute top-4 left-4 -z-10 transition-transform duration-150 ease-out"
-              style={{
-                transform: `translate(${mouseOffset.x}px, ${mouseOffset.y}px)`,
-              }}
-            >
-              Roast!
-            </span>
-          </h1>
-
-          <div className="font-display text-mahagony max-w-2xl text-2xl font-bold tracking-tight uppercase md:text-4xl">
-            {lang.tagline.top}
-          </div>
-          <div className="text-wheat font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight uppercase md:text-4xl">
-            {lang.tagline.bottom}
-          </div>
-
-          <div className="flex flex-col items-center gap-6 md:flex-row">
-            <a
-              href="#tickets"
-              className="group pointer-events-auto relative inline-block"
-            >
-              <div className="bg-evergreen absolute inset-0 translate-x-2 translate-y-2 transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
-              <div className="punk-border font-display bg-accent text-ivory relative px-10 py-5 text-2xl font-black tracking-tighter uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
-                {lang.buyTickets || "Get Tickets"}
-              </div>
-            </a>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <span className="material-symbols-outlined text-mahagony text-4xl font-bold">
-            arrow_downward
+      <div className="pointer-events-none relative container mx-auto flex flex-col items-center px-6 text-center">
+        <div className="punk-border pop-shadow-small normal mb-8 translate-z-1 rotate-2 px-6 py-2">
+          <span className="font-display text-mahagony text-xl font-black tracking-tighter uppercase md:text-2xl">
+            {lang.date}
           </span>
         </div>
-      </header>
-    </>
+
+        <h1 className="font-display text-onyx relative mb-6 text-[15vw] leading-[0.8] font-black tracking-tight select-none">
+          <span className="text-stroke-outline relative z-10 block">
+            Roast!
+          </span>
+          <span
+            className="text-stroke absolute top-4 left-4 -z-10 transition-transform duration-150 ease-out"
+            style={{
+              transform: `translate(${mouseOffset.x}px, ${mouseOffset.y}px)`,
+            }}
+          >
+            Roast!
+          </span>
+        </h1>
+
+        <div className="font-display text-mahagony max-w-2xl text-2xl font-bold tracking-tight uppercase md:text-4xl">
+          {lang.tagline.top}
+        </div>
+        <div className="text-wheat font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight uppercase md:text-4xl">
+          {lang.tagline.bottom}
+        </div>
+
+        <div className="flex flex-col items-center gap-6 md:flex-row">
+          <a
+            href="#tickets"
+            className="group pointer-events-auto relative inline-block"
+          >
+            <div className="bg-evergreen absolute inset-0 translate-x-2 translate-y-2 transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
+            <div className="punk-border font-display bg-accent text-ivory relative px-10 py-5 text-2xl font-black tracking-tighter uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
+              {lang.buyTickets || "Get Tickets"}
+            </div>
+          </a>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <span className="material-symbols-outlined text-mahagony text-4xl font-bold">
+          arrow_downward
+        </span>
+      </div>
+    </header>
   );
 };

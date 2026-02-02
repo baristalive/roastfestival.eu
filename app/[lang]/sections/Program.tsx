@@ -41,17 +41,15 @@ export const Program = () => {
               <BeanIcon />
             </span>
           </div>
-          <div className="flex w-full items-start gap-12">
-            <div className="bg-ivory w-full">
-              <div className="animate-pop punk-border pop-shadow bg-primary/10 relative h-12 w-full border-2">
-                <div className="bg-primary border-evergreen animate-progress-load h-full border-r-4" />
-                <p className="text-evergreen absolute inset-0 flex items-center justify-start pl-6 text-base font-bold">
-                  20%
-                </p>
-              </div>
+          <div className="bg-ivory mb-12 w-full">
+            <div className="animate-pop punk-border pop-shadow bg-primary/10 relative h-12 w-full border-2">
+              <div className="bg-primary border-evergreen animate-progress-load h-full border-r-4" />
+              <p className="text-evergreen absolute inset-0 flex items-center justify-start pl-6 text-base font-bold">
+                20%
+              </p>
             </div>
-            <CaffeinCounter />
           </div>
+          <CaffeinCounter />
         </div>
       </div>
     </section>
