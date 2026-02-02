@@ -1,110 +1,106 @@
 "use client";
+
 import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import FacebookIcon from "@/app/icons/facebook";
-import InstagramIcon from "@/app/icons/instagram";
-import ArrowIcon from "@/app/icons/arrow";
-import Logo from "../components/Logo";
-import Link from "next/link";
+import { BeanGrid } from "@/app/[lang]/components/BeanGrid";
+import { Navigation } from "@/app/[lang]/components/Navigation";
 
 export const Header = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
+  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      // Calculate offset from center, normalized to -1 to 1
+      const normalizedX = (e.clientX - centerX) / centerX;
+      const normalizedY = (e.clientY - centerY) / centerY;
+
+      // Move opposite to cursor, with a max offset of 20px
+      setMouseOffset({
+        x: -normalizedX * 10,
+        y: -normalizedY * 10,
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <header className="elevate z-10 flex h-svh flex-col items-center justify-between py-8">
-      {lang.banner && (
-        <a
-          href={lang.contacts.tickets}
-          title={lang.buyTickets}
-          rel="external"
-          className="elevate z-10 -mt-8 block w-full bg-(--secondary) p-4 pb-3 text-center text-sm font-semibold md:text-xl"
-        >
-          {lang.banner}
-        </a>
-      )}
-      <div className="mb-auto flex w-full max-w-475 justify-between px-12 pt-2 text-sm md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
-        <div className="leading-snug font-medium">
-          {lang.date}
-          <br />
-          {lang.place}
-        </div>
-        <div className="text-right leading-snug font-medium">
-          <nav className="">
-            <div className="flex justify-end gap-4">
-              <a
-                href={lang.contacts.facebook}
-                title="Facebook"
-                rel="external"
-                className="nav"
-                target="_blank"
-              >
-                <FacebookIcon />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a
-                href={lang.contacts.instagram}
-                title="Instagram"
-                rel="external"
-                className="nav"
-                target="_blank"
-              >
-                <InstagramIcon />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <Link
-                href={params.lang === "cz" ? "./en" : "./cz"}
-                rel="alternate"
-                className="nav table-cell h-[3em] w-[3em] rounded-full border border-current py-2 text-center align-middle leading-[1.6em] lowercase md:py-4 md:leading-[1.4em] 2xl:py-6 2xl:leading-[1.1em]"
-              >
-                {params.lang === "cz" ? "en" : "cz"}
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div className="pointer-events-none absolute top-0 bottom-0 flex flex-col items-center justify-center text-xl sm:bottom-0 md:text-3xl xl:text-5xl 2xl:text-8xl">
-        <div className="pointer-events-auto mx-auto -mb-[2em] max-w-400">
-          <Logo />
-        </div>
-        <div className="pt-12 text-center lg:pt-6">
-          <h1 className="mx-auto inline-block max-w-min leading-none font-bold lowercase">
-            {lang.title}
-          </h1>
-        </div>
-      </div>
-      <div className="flex w-full max-w-475 flex-col gap-8 px-12 text-center leading-snug font-medium md:flex-row md:items-end md:justify-between md:text-xl 2xl:px-20 2xl:py-8 2xl:text-3xl">
-        <div className="flex flex-col gap-8">
-          <a href="#info" className="nav">
-            <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
-              Info
-            </nav>
-          </a>
-          <a href={`/${params.lang}/program`} className="nav">
-            <nav className="rounded-full border border-current px-4 py-2 lowercase md:px-6 md:py-4 2xl:px-12 2xl:py-6">
-              Program
-            </nav>
-          </a>
+    <>
+      <Navigation />
+
+      {/* Hero Section */}
+      <header className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0 -z-10 grid grid-cols-8">
+          <div className="bg-accent bg-lines"></div>
+          <div className="bg-primary bg-dots col-span-4"></div>
+          <div className="bg-secondary col-span-3"></div>
         </div>
 
-        <a
-          href={lang.contacts.tickets}
-          title={lang.buyTickets}
-          rel="external"
-          className="nav"
-        >
-          <nav className="cta elevate relative rounded-full border border-current px-8 py-2 lowercase md:py-4 md:pr-24 2xl:px-12 2xl:py-6 2xl:pr-28">
-            <span>{lang.buyTickets}</span>
-            <span
-              className="absolute top-1/2 right-0 -translate-y-1/2 text-sm text-(--accent) md:text-xl 2xl:text-3xl"
-              style={{ left: "calc(100% - 3em)" }}
-            >
-              <ArrowIcon />
+        {/* Interactive Bean Grid - positioned over the right stripe */}
+        <div className="absolute top-0 right-0 bottom-0 w-[37.5%]">
+          <BeanGrid />
+        </div>
+
+        <div className="pointer-events-none relative container mx-auto flex flex-col items-center px-6 text-center">
+          <div className="punk-border pop-shadow-small normal mb-8 translate-z-1 rotate-2 px-6 py-2">
+            <span className="font-display text-mahagony text-xl font-black tracking-tighter uppercase md:text-2xl">
+              {lang.date}
             </span>
-          </nav>
-        </a>
-      </div>
-    </header>
+          </div>
+
+          <h1 className="font-display text-onyx relative mb-6 text-[15vw] leading-[0.8] font-black tracking-tight select-none">
+            <span className="text-stroke-outline relative z-10 block">
+              Roast!
+            </span>
+            <span
+              className="text-stroke absolute top-4 left-4 -z-10 transition-transform duration-150 ease-out"
+              style={{
+                transform: `translate(${mouseOffset.x}px, ${mouseOffset.y}px)`,
+              }}
+            >
+              Roast!
+            </span>
+          </h1>
+
+          <div className="font-display text-mahagony max-w-2xl text-2xl font-bold tracking-tight uppercase md:text-4xl">
+            {lang.tagline.top}
+          </div>
+          <div className="text-wheat font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight uppercase md:text-4xl">
+            {lang.tagline.bottom}
+          </div>
+
+          <div className="flex flex-col items-center gap-6 md:flex-row">
+            <a
+              href="#tickets"
+              className="group pointer-events-auto relative inline-block"
+            >
+              <div className="bg-evergreen absolute inset-0 translate-x-2 translate-y-2 transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
+              <div className="punk-border font-display bg-accent text-ivory relative px-10 py-5 text-2xl font-black tracking-tighter uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
+                {lang.buyTickets || "Get Tickets"}
+              </div>
+            </a>
+            {/* <div className="font-display text-mahagony text-sm font-bold tracking-widest uppercase">
+              No Fluff / All Roast
+            </div> */}
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <span className="material-symbols-outlined text-mahagony text-4xl font-bold">
+            arrow_downward
+          </span>
+        </div>
+      </header>
+    </>
   );
 };

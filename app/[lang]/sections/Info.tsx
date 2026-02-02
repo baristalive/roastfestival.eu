@@ -1,51 +1,63 @@
 "use client";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import Bar from "@/app/components/Bar";
 
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  const info = [
-    lang.info.slice(0, Math.ceil(lang.info.length / 2)),
-    lang.info.slice(Math.ceil(lang.info.length / 2)),
-  ];
-
   return (
-    <section
-      id="info"
-      className="flex flex-col items-center justify-between gap-8 pb-48"
-    >
-      <div className="grid max-w-475 items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
-        <div className="md:p-12">
-          <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
-            {lang.about.title}
-          </h2>
-          <div className="mx-auto max-w-5xl space-y-10 text-base leading-normal 2xl:text-xl">
-            {lang.about.text.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
+    <section id="info" className="bg-dots bg-mint-cream relative px-6 py-24">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+          {/* Feature Card 1 - Main */}
+          <div className="animate-pop punk-border pop-shadow bg-primary -rotate-1 transform p-10 transition-transform duration-300 hover:rotate-0 md:col-span-7">
+            <h2 className="font-display text-onyx mb-6 text-6xl leading-[0.85] font-black uppercase md:text-8xl">
+              {lang.about.title.split(" ").slice(0, 2).join(" ")} <br />
+              <span className="text-accent">
+                {lang.about.title.split(" ").slice(2).join(" ") || "ROAST!"}
+              </span>
+            </h2>
+            <p className="text-onyx max-w-lg text-xl font-bold md:text-2xl">
+              {lang.about.text[0]}
+            </p>
           </div>
-          <Bar />
-        </div>
-        <div className="cards flex flex-col gap-8 md:grid md:grid-cols-2">
-          {info.map((col, idx) => (
+
+          {/* Stat Card */}
+          <div className="animate-pop punk-border pop-shadow bg-accent flex rotate-2 flex-col items-center justify-center p-10 text-center transition-transform duration-300 hover:rotate-0 md:col-span-5">
+            <span className="font-display text-onyx text-[120px] leading-none font-black">
+              50+
+            </span>
+            <span className="font-display text-3xl font-bold tracking-tighter uppercase">
+              {params.lang === "cz" ? "Micro-Pražíren" : "Micro-Roasters"}
+            </span>
+          </div>
+
+          {/* Info Cards from dictionary */}
+          {lang.info.slice(0, 2).map((item, idx) => (
             <div
-              key={`col_${idx}`}
-              className={`flex flex-col gap-8 ${idx ? "md:pt-(--vertical-offset)" : ""}`}
+              key={item.title}
+              className={`animate-pop punk-border pop-shadow group bg-secondary text-onyx flex flex-col justify-between p-8 md:col-span-${idx === 0 ? "4" : "8"}`}
             >
-              {col.map((s) => (
+              <div className="relative z-10">
                 <div
-                  className="card elevate h-auto rounded-2xl p-8 2xl:p-12"
-                  key={s.title}
+                  className={`mb-4 h-4 w-16 ${idx === 0 ? "bg-accent" : "bg-onyx"}`}
+                ></div>
+                <h3 className="font-display text-4xl font-black uppercase">
+                  {item.title}
+                </h3>
+                <p className="mt-8 text-lg font-light opacity-80">
+                  {item.text}
+                </p>
+              </div>
+              {idx === 1 && (
+                <a
+                  href={`/${params.lang}/program`}
+                  className="font-display bg-primary text-mint-cream hover:bg-accent mt-8 inline-block px-8 py-3 text-xl font-black uppercase transition-colors"
                 >
-                  <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
-                    {s.title}
-                  </h3>
-                  <p className="text-base 2xl:text-xl">{s.text}</p>
-                </div>
-              ))}
+                  {lang.learnMore || "Explore"}
+                </a>
+              )}
             </div>
           ))}
         </div>

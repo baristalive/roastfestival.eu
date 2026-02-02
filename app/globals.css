@@ -1,20 +1,123 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-midnight: #04151f;
-  --color-cream: #efd6ac;
-  --color-teal: #04a777;
-  --color-burgundy: #89023e;
-  --color-orange: #f75c03;
+  --color-palm-leaf: #84994f;
+  --color-oxidized-iron: #a72703;
+  --color-jasmine: #ffe797;
+  --color-ivory: #faffef;
+  --color-evergreen: #1c2800;
+
+  --color-primary: var(--color-palm-leaf);
+  --color-secondary: var(--color-jasmine);
+  --color-accent: var(--color-oxidized-iron);
+  --black: var(--color-evergreen);
+  --white: var(--color-ivory);
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "Outfit", sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pop: pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
-:root {
-  --primary: var(--color-orange);
-  --background: var(--color-cream);
-  --black: var(--color-midnight);
-  --white: var(--color-cream);
-  --accent: var(--color-burgundy);
-  --secondary: var(--color-teal);
+/* Pop Art Ben-Day Dots Pattern */
+.bg-dots {
+  background-image: radial-gradient(
+    circle,
+    rgba(4, 21, 31, 0.1) 2px,
+    transparent 2px
+  );
+  background-size: 24px 24px;
+}
+.bg-lines {
+  background-image: linear-gradient(
+    -45deg,
+    transparent 9px,
+    rgba(4, 21, 31, 0.1) 10px,
+    transparent 11px
+  );
+  background-size: 16px 16px;
+}
+
+/* Bean Pattern Texture */
+.bg-beans-logo-pattern {
+  background-image: url("/icon-dark.svg");
+  background-repeat: repeat;
+  background-size: 100px auto;
+}
+.bg-beans2-pattern {
+  background-image: url("/beans.svg");
+  background-repeat: repeat;
+  background-size: 200px auto;
+}
+
+/* Pop Art Shadows */
+.pop-shadow {
+  box-shadow: 12px 12px 0px 0px var(--black);
+}
+
+.pop-shadow-small {
+  box-shadow: 6px 6px 0px 0px var(--black);
+}
+
+.pop-shadow-hover:hover {
+  box-shadow: 4px 4px 0px 0px var(--black);
+  transform: translate(8px, 8px);
+}
+
+/* Text Stroke Effect */
+.text-stroke {
+  -webkit-text-stroke: 2px var(--black);
+  color: transparent;
+}
+
+.text-stroke-outline {
+  -webkit-text-stroke: 0.03em var(--black);
+  paint-order: stroke fill;
+}
+
+/* Punk Border */
+.punk-border {
+  border: 4px solid var(--black);
+}
+
+/* Marquee Container */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 4px solid var(--black);
+  border-bottom: 4px solid var(--black);
 }
 
 @media (min-width: 768px) {
@@ -27,23 +130,14 @@ html {
   scroll-behavior: smooth;
 }
 
-section,
 body,
-.modal {
+.normal {
   color: var(--black);
-  background: var(--background);
-}
-
-header,
-footer {
-  color: var(--white);
-  background: var(--primary);
-}
-
-.cta {
   background: var(--white);
-  fill: var(--black);
-  color: var(--primary);
+}
+.inverted {
+  color: var(--white);
+  background: var(--black);
 }
 
 footer {
@@ -196,22 +290,7 @@ svg.elevate {
 .lang:hover {
   transform: translateX(5px);
 }
-header {
-  position: relative;
-}
 
-header > div {
-  z-index: 1;
-}
-
-@media (hover: hover) {
-  .nav {
-    transition: transform 0.5s;
-  }
-  .nav:hover {
-    transform: translateY(-5px);
-  }
-}
 .dropdown:focus-within .dropdown-menu {
   display: block;
 }

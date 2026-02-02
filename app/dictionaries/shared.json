@@ -8,8 +8,12 @@
     "kaznice_web": "https://kaznice.art/",
     "tickets": "https://goout.net/cs/roast-2025/szfbqox/"
   },
-  "date": "20-21/9/2025",
-  "dateStart": "2025-09-20",
+  "date": "12-13/09/2026",
+  "dateStart": "2026-09-12",
+  "tagline": {
+    "top": "The Anti-Boring Coffee Festival.",
+    "bottom": "Pure Caffeine Chaos."
+  },
   "location": {
     "stops": {
       "kaznice": "Káznice",
