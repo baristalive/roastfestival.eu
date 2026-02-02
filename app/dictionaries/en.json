@@ -345,59 +345,42 @@
     }
   ],
   "lastYear": {
-    "center": {
-      "description": "Year 2",
-      "stat": 2024
-    },
-    "description": "Roast! 2025 will be the third Roast we are preparing for you. In 2023, when the festival was founded, we tried for the first time what it is like to prepare a coffee festival and whether such an event has its place in Brno. We found out that it does. By the next edition, Roast 2024, the festival had more than doubled in size and exceeded all our expectations.",
-    "side": [
+    "title": "The Journey",
+    "subtitle": "Growing stronger each year",
+    "years": [
       {
-        "description": "roasters",
-        "props": {
-          "r": 12,
-          "x": 30,
-          "y": 12
-        },
-        "stat": 22
+        "year": 2023,
+        "tagline": "The Beginning",
+        "stats": {
+          "roasters": 8,
+          "attendees": 320,
+          "workshops": 4
+        }
       },
       {
-        "description": "workshops",
-        "props": {
-          "r": 12,
-          "x": 65,
-          "y": 22
-        },
-        "stat": 12
+        "year": 2024,
+        "tagline": "The Breakthrough",
+        "stats": {
+          "roasters": 22,
+          "attendees": 780,
+          "workshops": 12
+        }
       },
       {
-        "description": "lectures",
-        "props": {
-          "r": 12,
-          "x": 45,
-          "y": 45
-        },
-        "stat": 7
-      },
-      {
-        "description": "visitors",
-        "props": {
-          "r": 17,
-          "x": 75,
-          "y": 75
-        },
-        "stat": ">700"
-      },
-      {
-        "description": "days",
-        "props": {
-          "r": 12,
-          "x": 25,
-          "y": 82
-        },
-        "stat": 2
+        "year": 2025,
+        "tagline": "The Explosion",
+        "stats": {
+          "roasters": 35,
+          "attendees": 1500,
+          "workshops": 20
+        }
       }
     ],
-    "title": "Previous year"
+    "labels": {
+      "roasters": "Roasters",
+      "attendees": "Visitors",
+      "workshops": "Workshops"
+    }
   },
   "social": {
     "title": "Newsroom",

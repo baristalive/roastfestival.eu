@@ -19,6 +19,7 @@
   --animate-float: float 6s ease-in-out infinite;
   --animate-pop: pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   --animate-marquee: marquee 50s linear infinite;
+  --animate-progress-load: progress-load 1.5s ease-out forwards;
 
   @keyframes float {
     0%,
@@ -47,6 +48,15 @@
     }
     100% {
       transform: translateX(-50%);
+    }
+  }
+
+  @keyframes progress-load {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 20%;
     }
   }
 }
@@ -550,4 +560,19 @@ ol.round-counter li::before {
 /* Flip Card Styles */
 .flip-card-inner.flipped {
   transform: rotateY(180deg);
+}
+
+/* Bean Loading Animation */
+@keyframes beanPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-bean-pulse {
+  animation: beanPulse 1.5s ease-in-out infinite;
 }

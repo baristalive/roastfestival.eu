@@ -370,59 +370,39 @@
     }
   ],
   "lastYear": {
-    "center": {
-      "description": "2. ročník",
-      "stat": 2024
-    },
-    "description": "Roast! 2025 bude již třetím Roastem, který pro Vás chystáme. V roce 2023, kdy festival vznikl, jsme si vůbec poprvé zkusili, jaké to je připravovat kávový festival a jestli má taková akce v Brně své místo. Zjistili jsme, že má. Do dalšího ročníku, Roastu 2024, festival vyrostl více než dvojnásobně a předčil všechna naše očekávání. Posuďte sami.",
-    "side": [
+    "title": "Roast! roste",
+    "subtitle": "Rosteme to jako kávovník! A ty s námi!",
+    "years": [
       {
-        "description": "pražíren",
-        "props": {
-          "r": 12,
-          "x": 30,
-          "y": 12
-        },
-        "stat": 22
+        "year": 2023,
+        "tagline": "Začátky",
+        "stats": {
+          "roasters": 8,
+          "attendees": 300
+        }
       },
       {
-        "description": "workshopů",
-        "props": {
-          "r": 12,
-          "x": 65,
-          "y": 22
-        },
-        "stat": 12
+        "year": 2024,
+        "tagline": "Průlom",
+        "stats": {
+          "roasters": 22,
+          "attendees": 500
+        }
       },
       {
-        "description": "přednášek",
-        "props": {
-          "r": 12,
-          "x": 45,
-          "y": 45
-        },
-        "stat": 7
-      },
-      {
-        "description": "návštěvníků",
-        "props": {
-          "r": 17,
-          "x": 75,
-          "y": 75
-        },
-        "stat": ">700"
-      },
-      {
-        "description": "dny",
-        "props": {
-          "r": 12,
-          "x": 25,
-          "y": 82
-        },
-        "stat": 2
+        "year": 2025,
+        "tagline": "Exploze",
+        "stats": {
+          "roasters": 28,
+          "attendees": 700
+        }
       }
     ],
-    "title": "Předchozí ročník"
+    "labels": {
+      "roasters": "Pražíren",
+      "attendees": "Návštěvníků",
+      "workshops": "Workshopů"
+    }
   },
   "social": {
     "title": "Novinky",

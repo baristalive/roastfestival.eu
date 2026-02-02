@@ -2,12 +2,12 @@
 import { Header } from "./sections/Header";
 import { Marquee } from "./sections/Marquee";
 // import { Gallery } from "./sections/Gallery";
-// import { Program } from "./sections/Program";
+import { Program } from "./sections/Program";
 import { Info } from "./sections/Info";
 // import { Organizers } from "./sections/Organizers";
 import { Footer } from "./sections/Footer";
 // import { Map } from "./sections/Map";
-// import { PreviousYears } from "./sections/PreviousYears";
+import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
 // import { PromotedRoasters } from "./sections/PromotedRoasters";
@@ -22,16 +22,15 @@ const Home = () => {
       <Marquee />
       {/* <InstagramFeed /> */}
       <Info />
-      {/* <Program /> */}
+      <Program />
       {/* <PromotedRoasters /> */}
       <Colab />
       <WhatToExpect />
+      <PreviousYears />
       <Tickets />
-      {/* <PreviousYears />
-      <Gallery />
+      {/* <Gallery />
       <Map />
       <Sponsors />
-      <Colab />
       <Organizers /> */}
       <Footer />
     </div>

@@ -8,7 +8,7 @@ export const Colab = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="colab" className="relative mb-12 overflow-hidden">
+    <section id="colab" className="relative overflow-hidden pb-12">
       {/* Split background */}
       <div className="absolute inset-0 flex">
         <div className="bg-primary flex-1" />
@@ -18,7 +18,7 @@ export const Colab = () => {
       {/* Center V divider */}
       <div className="pointer-events-none absolute inset-0 flex items-end justify-center">
         <svg
-          className="h-full w-full max-w-[200px] md:max-w-[300px]"
+          className="h-full w-full max-w-50 md:max-w-75"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
@@ -28,8 +28,8 @@ export const Colab = () => {
 
       <div className="relative z-10">
         {/* Section header */}
-        <div className="bg-ivory py-12 text-center lg:py-16">
-          <h2 className="font-display text-evergreen mb-4 text-5xl leading-[0.85] font-black uppercase md:text-7xl lg:text-8xl">
+        <div className="bg-ivory bg-dots py-12 text-center lg:py-16">
+          <h2 className="font-display text-evergreen mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
             {lang.colab.title}
           </h2>
           <p className="text-evergreen/80 mx-auto max-w-2xl px-6 text-lg md:text-xl">
