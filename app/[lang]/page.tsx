@@ -13,7 +13,7 @@ import { WhatToExpect } from "./sections/WhatToExpect";
 // import { PromotedRoasters } from "./sections/PromotedRoasters";
 // import { Sponsors } from "./sections/Sponsors";
 // import InstagramFeed from "./sections/InstagramFeed";
-// import { Colab } from "./sections/Colab";
+import { Colab } from "./sections/Colab";
 
 const Home = () => {
   return (
@@ -24,6 +24,7 @@ const Home = () => {
       <Info />
       {/* <Program /> */}
       {/* <PromotedRoasters /> */}
+      <Colab />
       <WhatToExpect />
       <Tickets />
       {/* <PreviousYears />

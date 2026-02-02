@@ -10,13 +10,13 @@
   "colab": {
     "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc.",
     "exhibitors": {
-      "button": "Informace pro pražírny",
-      "text": "Informace pro přihlášené pražírny nalezneš zde.",
-      "title": "Pražírny a ostatní učinkující"
+      "button": "Informace pro pražírny a gastro",
+      "text": "Chceš být součástí a předvést své umění?",
+      "title": "Pražírny a krmení"
     },
     "sponsors": {
       "button": "Zjistit podrobnosti",
-      "text": "Jste firma, která ráda podpoří kulturní akci? Odměnou Vám může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
+      "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
       "title": "Sponzoři"
     },
     "title": "Spolupráce"
