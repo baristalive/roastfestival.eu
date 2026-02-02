@@ -14,6 +14,7 @@ import { WhatToExpect } from "./sections/WhatToExpect";
 // import { Sponsors } from "./sections/Sponsors";
 // import InstagramFeed from "./sections/InstagramFeed";
 import { Colab } from "./sections/Colab";
+import { StayTuned } from "./sections/StayTuned";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       {/* <PromotedRoasters /> */}
       <Colab />
       <WhatToExpect />
+      <StayTuned />
       <Tickets />
       <Map />
       <PreviousYears />

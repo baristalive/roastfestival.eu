@@ -52,7 +52,7 @@ export const Info = () => {
               </div>
               {idx === 1 && (
                 <a
-                  href={`/${params.lang}/program`}
+                  href="#what-to-expect"
                   className="font-display bg-primary text-mint-cream hover:bg-accent mt-8 inline-block px-8 py-3 text-xl font-black uppercase transition-colors"
                 >
                   {lang.learnMore || "Explore"}

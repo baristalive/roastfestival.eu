@@ -19,17 +19,15 @@ export const Tickets = () => {
   return (
     <section id="tickets" className="bg-primary text-ivory px-6 py-32">
       <div className="container mx-auto">
-        <div className="mb-16 flex flex-col items-end justify-between gap-8 md:flex-row">
-          <div>
-            <h2 className="font-display text-6xl leading-none font-black uppercase">
-              {lang.tickets.title.split(" ")[0]} <br />
-              <span className="text-secondary text-2xl tracking-wider">
-                {params.lang === "cz"
-                  ? "Limitka! Víc nebude!"
-                  : "Limited Availability"}
-              </span>
-            </h2>
-          </div>
+        <div className="mb-16 text-center">
+          <h2 className="font-display text-ivory mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+            {lang.tickets.title}
+          </h2>
+          <p className="text-secondary text-2xl tracking-wider uppercase">
+            {params.lang === "cz"
+              ? "Limitka! Víc nebude!"
+              : "Limited Availability"}
+          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">

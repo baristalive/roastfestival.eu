@@ -25,20 +25,18 @@ export const Colab = () => {
           <polygon points="0,0 50,100 100,0" className="fill-evergreen" />
         </svg>
       </div>
+      <div className="relative pt-24 text-center lg:pt-32">
+        <h2 className="font-display text-ivory mb-8 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+          {lang.colab.title}
+        </h2>
+        <p className="text-ivory/80 mx-auto max-w-2xl px-6 text-2xl tracking-wider uppercase">
+          {lang.colab.description}
+        </p>
+      </div>
 
-      <div className="relative z-10">
-        {/* Section header */}
-        <div className="bg-ivory bg-dots py-12 text-center lg:py-16">
-          <h2 className="font-display text-evergreen mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
-            {lang.colab.title}
-          </h2>
-          <p className="text-evergreen/80 mx-auto max-w-2xl px-6 text-lg md:text-xl">
-            {lang.colab.description}
-          </p>
-        </div>
-
+      <div className="relative">
         {/* Crossroads paths */}
-        <div className="container mx-auto flex flex-col py-16 lg:flex-row lg:py-24">
+        <div className="container mx-auto flex flex-col py-16 lg:flex-row lg:pb-24">
           {/* Left path - Exhibitors */}
           <a
             href={`/${params.lang}/colab`}

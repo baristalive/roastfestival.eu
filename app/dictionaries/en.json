@@ -386,6 +386,14 @@
     "title": "Newsroom",
     "text": "Roast! is preset on social networks as well. Follow us!"
   },
+  "stayTuned": {
+    "title": "Can't wait?",
+    "subtitle": "Subscribe to our newsletter and stay up to date with everything happening at Roast!",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "followUs": "Follow us",
+    "addCaffeine": "Add caffeine!"
+  },
   "learnMore": "learn more",
   "location": {
     "addressTitle": "Address",

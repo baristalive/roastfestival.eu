@@ -408,6 +408,13 @@
     "title": "Novinky",
     "text": "Roast! najdete i na sociálních sítích. Sledujte nás!"
   },
+  "stayTuned": {
+    "title": "Nemůžeš se dočkat?",
+    "subtitle": "Přihlas se k odběru novinek a buď v obraze o všech, co se na chystají na Roast!",
+    "emailPlaceholder": "Tvůj e-mail",
+    "subscribe": "Chci vědět víc!",
+    "followUs": "Sleduj nás"
+  },
   "learnMore": "chci vědět víc",
   "location": {
     "addressTitle": "Adresa",
