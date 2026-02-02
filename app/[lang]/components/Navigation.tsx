@@ -25,14 +25,14 @@ export const Navigation = () => {
     <nav
       className={`fixed top-0 z-50 flex w-full items-center justify-between px-6 py-4 transition-all duration-300 ${
         isScrolled
-          ? "bg-evergreen text-ivory shadow-lg backdrop-blur-sm"
+          ? "bg-evergreen shadow-lg backdrop-blur-sm"
           : "bg-transparent"
       }`}
     >
       <div className="group">
         <Link
           href={`/${params.lang}`}
-          className="block h-12 w-12 text-center transition-transform duration-300 group-hover:rotate-12"
+          className={`block h-12 w-12 text-center transition-transform duration-300 group-hover:rotate-12 ${isScrolled ? "text-primary" : ""}`}
         >
           <BeanIcon />
         </Link>
@@ -41,19 +41,19 @@ export const Navigation = () => {
       <div className="hidden items-center gap-8 text-sm font-bold tracking-widest uppercase md:flex">
         <a
           href="#about"
-          className={`transition-colors ${isScrolled ? "text-cream hover:text-orange" : "hover:text-burgundy"}`}
+          className={`transition-colors ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
         >
           The Vibe
         </a>
         <a
           href="#lineup"
-          className={`transition-colors ${isScrolled ? "text-cream hover:text-orange" : "hover:text-teal"}`}
+          className={`transition-colors ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
         >
           Lineup
         </a>
         <a
           href="#tickets"
-          className={`transition-colors ${isScrolled ? "text-cream hover:text-orange" : "hover:text-orange"}`}
+          className={`transition-colors ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
         >
           Tickets
         </a>

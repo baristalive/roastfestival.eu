@@ -2,8 +2,6 @@ const AtIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="-100 -100 712 712"
-    width="3em"
-    height="3em"
     fill="currentColor"
     style={{
       background: "var(--background)",

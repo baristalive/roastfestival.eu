@@ -1,7 +1,7 @@
 {
   "about": {
     "text": [
-      "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na Vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
+      "Pravidla? Neexistují. Žádné bílé ubrusy. Prostě kávové zrno té nejvyšší kvality. Bez skrupulí a vytáček. Nezáleží zda se teprve rozkoukáváš nebo máš vše v malíku. Káva je tu pro tebe a k tomu společnost těch, co ji upražili."
     ],
     "title": "Co je roast!?"
   },
@@ -361,20 +361,12 @@
   },
   "info": [
     {
-      "text": "Je libo espresso nebo třeba cappuccino? To a mnoho dalšího ochutnáš na našlapaných espresso barech. Během festivalu se zde vystřídá mnoho různých pražíren a každá se bude chtít pochlubit svou kávou.",
-      "title": "Espresso, jak má být"
+      "text": "Je libo espresso, cappuccino nebo fancy filtr? To a mnoho dalšího ochutnáš na našich našlapaných barech. Během festivalu se zde vystřídá mnoho různých pražíren a každá se bude chtít pochlubit svou kávou.",
+      "title": "Pod tlakem i bez"
     },
     {
-      "text": "Filtrovaná káva, to je samostatná disciplína. V60, Chemex, Aeropress či Coldbrew? I takovéto přípravy káv můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
-      "title": "Filtry všeho druhu"
-    },
-    {
-      "text": "Nechceš jen přihlížet, ale chceš to zkusit na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Naši profesionální baristi tě vším provedou a rádi odpoví na všechny dotazy.",
-      "title": "Workshopy"
-    },
-    {
-      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Naši speciální hosté tě provedou zákoutími kávových technologií, chemie či kultury o kterých jsi možná ani nechtěl vědět, že existují.",
-      "title": "Přednášky"
+      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Nechceš jen přihlížet, ale radši si to zkusíš na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Vybraní hosté - profíci tě vším provedou a rádi odpoví na všechny dotazy.",
+      "title": "Workshopy a Přednášky"
     }
   ],
   "lastYear": {

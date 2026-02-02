@@ -18,10 +18,10 @@ export const BeanGrid = () => {
   }, []);
 
   // Create a grid of beans - adjust count based on desired density
-  const beanCount = 200;
+  const beanCount = 500;
 
   return (
-    <div className="pointer-events-none absolute inset-0 grid grid-cols-8 gap-8 overflow-hidden p-8 md:grid-cols-10 lg:grid-cols-12">
+    <div className="pointer-events-none absolute inset-0 flex flex-wrap gap-8 overflow-hidden p-8">
       {Array.from({ length: beanCount }).map((_, i) => (
         <div
           key={i}

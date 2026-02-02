@@ -88,9 +88,6 @@ export const Header = () => {
                 {lang.buyTickets || "Get Tickets"}
               </div>
             </a>
-            {/* <div className="font-display text-mahagony text-sm font-bold tracking-widest uppercase">
-              No Fluff / All Roast
-            </div> */}
           </div>
         </div>
 

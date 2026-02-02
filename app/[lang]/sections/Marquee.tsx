@@ -1,14 +1,13 @@
 "use client";
 
+import BeanIcon from "@/app/icons/beanicon";
+import { Fragment } from "react";
+
 const marqueeItems = [
   { color: "text-secondary", text: "No Filter Needed" },
-  { color: "text-accent", text: "★" },
   { color: "text-secondary", text: "Strictly Specialty" },
-  { color: "text-accent", text: "★" },
   { color: "text-primary", text: "Punk Brewing" },
-  { color: "text-accent", text: "★" },
   { color: "text-secondary", text: "Fancy chow" },
-  { color: "text-accent", text: "★" },
 ];
 
 export const Marquee = () => {
@@ -16,12 +15,18 @@ export const Marquee = () => {
   const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
 
   const items = repeatedItems.map((item, idx) => (
-    <span
-      key={idx}
-      className={`font-display mx-8 text-3xl font-black uppercase ${item.color}`}
-    >
-      {item.text}
-    </span>
+    <Fragment key={idx}>
+      <span
+        className={`font-display mx-8 text-3xl font-black uppercase ${item.color}`}
+      >
+        {item.text}
+      </span>
+      <span
+        className={`font-display text-accent mx-8 h-10 w-10 text-3xl font-black uppercase`}
+      >
+        <BeanIcon />
+      </span>
+    </Fragment>
   ));
 
   return (
