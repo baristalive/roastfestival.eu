@@ -1,6 +1,5 @@
 "use client";
 
-import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import dynamic from "next/dynamic";
@@ -21,7 +20,6 @@ export const Sponsors = () => {
           <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
             {lang.promoted.sponsors.title}
           </h2>
-          <Bar />
         </div>
       </div>
       <div className="mx-auto my-10 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 gap-y-4 text-xl md:gap-20">

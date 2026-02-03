@@ -1,6 +1,5 @@
 "use client";
 
-import Bar from "@/app/components/Bar";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import dynamic from "next/dynamic";
@@ -26,7 +25,6 @@ export const PromotedRoasters = () => {
               <p key={p}>{p}</p>
             ))}
           </div>
-          <Bar />
         </div>
       </div>
       {lang.promoted.roasters.honored.length > 0 && (
@@ -72,7 +70,6 @@ export const PromotedRoasters = () => {
                   <p key={p}>{p}</p>
                 ))}
               </div>
-              <Bar />
             </div>
           </div>
           <div className="mx-auto flex max-w-screen-2xl flex-wrap items-stretch justify-center gap-2 text-xl md:gap-20">

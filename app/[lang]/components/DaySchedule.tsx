@@ -10,7 +10,7 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { StationIcon } from "./StationIcon";
 import Modal from "./Modal";
-import { ScheduleViewType } from "../program/contexts";
+import { ScheduleViewType } from "../_program/contexts";
 
 const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
   String(idxm).padEnd(2, "0"),

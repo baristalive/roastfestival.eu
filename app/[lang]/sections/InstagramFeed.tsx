@@ -13,7 +13,6 @@ import CarouselIcon from "@/app/icons/carousel";
 import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import VideoIcon from "@/app/icons/video";
-import Bar from "@/app/components/Bar";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUzZ7UIBkSWiS8HGOvOGJU_neEJftyyy4",
@@ -130,7 +129,6 @@ const InstagramFeed = () => {
           <div className="space-y-10 text-base leading-normal 2xl:text-xl">
             {lang.social.text}
           </div>
-          <Bar />
           <div className="my-12 flex gap-4 text-sm md:text-xl 2xl:text-2xl">
             <a
               href={lang.contacts.instagram}
