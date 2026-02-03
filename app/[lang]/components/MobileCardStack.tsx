@@ -23,7 +23,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
 
   const patterns = [
     "bg-primary text-secondary",
-    "bg-secondary text-evergreen",
+    "bg-secondary text-black",
     "bg-primary text-secondary",
     "bg-accent text-secondary",
   ];
@@ -188,9 +188,9 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
           <button
             key={item.title}
             onClick={() => goToCard(index)}
-            className={`border-evergreen h-3 w-3 rounded-full border-2 transition-all ${
+            className={`h-3 w-3 rounded-full border-2 border-black transition-all ${
               index === currentIndex
-                ? "bg-evergreen scale-110"
+                ? "scale-110 bg-black"
                 : flippedCards.has(index)
                   ? "bg-primary"
                   : "bg-transparent"
@@ -205,26 +205,24 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex - 1)}
           disabled={currentIndex === 0}
-          className="punk-border font-display bg-secondary text-evergreen cursor-pointer px-4 py-2 text-sm font-bold uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
-          style={{ boxShadow: "4px 4px 0 0 var(--black)" }}
+          className="punk-border font-display bg-secondary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           ←
         </button>
-        <span className="font-display text-evergreen text-lg font-bold tabular-nums">
+        <span className="font-display text-lg font-bold text-black tabular-nums">
           {currentIndex + 1} / {items.length}
         </span>
         <button
           onClick={() => goToCard(currentIndex + 1)}
           disabled={currentIndex === items.length - 1}
-          className="punk-border font-display bg-secondary text-evergreen cursor-pointer px-4 py-2 text-sm font-bold uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
-          style={{ boxShadow: "4px 4px 0 0 var(--black)" }}
+          className="punk-border font-display bg-secondary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           →
         </button>
       </div>
 
       {/* Flip hint */}
-      <p className="font-body text-evergreen text-sm opacity-60">
+      <p className="font-body text-sm text-black opacity-60">
         {isFlipped ? "Tap to hide" : "Tap card to reveal"}
       </p>
     </div>

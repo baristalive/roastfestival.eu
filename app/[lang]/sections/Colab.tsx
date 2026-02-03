@@ -12,7 +12,7 @@ export const Colab = () => {
       {/* Split background */}
       <div className="absolute inset-0 hidden lg:flex">
         <div className="bg-primary flex-1" />
-        <div className="bg-evergreen flex-1" />
+        <div className="flex-1 bg-black" />
       </div>
 
       {/* Center V divider */}
@@ -22,14 +22,14 @@ export const Colab = () => {
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          <polygon points="0,0 50,100 100,0" className="fill-evergreen" />
+          <polygon points="0,0 50,100 100,0" className="fill-black" />
         </svg>
       </div>
       <div className="bg-primary relative pt-24 pb-24 text-center lg:bg-[unset] lg:pt-32 lg:pb-0">
-        <h2 className="font-display text-ivory mb-8 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
+        <h2 className="font-display mb-8 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
           {lang.colab.title}
         </h2>
-        <p className="text-ivory/80 text-md mx-auto max-w-2xl px-6 tracking-wider uppercase md:text-2xl">
+        <p className="text-md mx-auto max-w-2xl px-6 tracking-wider text-white/80 uppercase md:text-2xl">
           {lang.colab.description}
         </p>
       </div>
@@ -61,12 +61,12 @@ export const Colab = () => {
                 <div className="bg-accent h-1 flex-1 origin-left transition-transform duration-300 group-hover:scale-x-110" />
               </div>
 
-              <h3 className="font-display text-ivory mb-6 text-xl font-black uppercase md:text-5xl lg:text-6xl">
+              <h3 className="font-display mb-6 text-xl font-black text-white uppercase md:text-5xl lg:text-6xl">
                 {lang.colab.exhibitors.title}
               </h3>
 
               {/* Station icons */}
-              <div className="text-ivory/90 mb-6 flex flex-wrap gap-3 text-2xl md:text-3xl">
+              <div className="mb-6 flex flex-wrap gap-3 text-2xl text-white/90 md:text-3xl">
                 <StationIcon station="espresso" />
                 <StationIcon station="espresso_milk" />
                 <StationIcon station="brew" />
@@ -74,12 +74,12 @@ export const Colab = () => {
                 <StationIcon station="workshop" />
               </div>
 
-              <p className="text-ivory/80 mb-8 max-w-md text-base leading-relaxed md:text-lg">
+              <p className="mb-8 max-w-md text-base leading-relaxed text-white/80 md:text-lg">
                 {lang.colab.exhibitors.text}
               </p>
 
               {/* CTA */}
-              <span className="font-display border-ivory text-ivory group-hover:bg-ivory group-hover:text-primary inline-block border-2 px-6 py-3 text-sm font-bold tracking-wider uppercase transition-all duration-300">
+              <span className="font-display group-hover:text-primary inline-block border-2 border-white px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-all duration-300 group-hover:bg-white">
                 {lang.colab.exhibitors.button}
               </span>
             </div>
@@ -90,7 +90,7 @@ export const Colab = () => {
             href={`/${params.lang}/sponsors`}
             title={lang.colab.sponsors.title}
             rel="next"
-            className="group bg-evergreen relative flex-1 px-6 py-8 lg:px-12 lg:py-0"
+            className="group relative flex-1 bg-black px-6 py-8 lg:px-12 lg:py-0"
           >
             <div className="relative text-right">
               {/* Direction arrow */}
@@ -109,12 +109,12 @@ export const Colab = () => {
                 </svg>
               </div>
 
-              <h3 className="font-display text-ivory mb-6 text-xl font-black uppercase md:text-5xl lg:text-6xl">
+              <h3 className="font-display mb-6 text-xl font-black text-white uppercase md:text-5xl lg:text-6xl">
                 {lang.colab.sponsors.title}
               </h3>
 
               {/* Plus icons */}
-              <div className="text-ivory/90 mb-6 flex justify-end gap-3 text-2xl md:text-3xl">
+              <div className="mb-6 flex justify-end gap-3 text-2xl text-white/90 md:text-3xl">
                 <svg
                   className="h-8 w-8"
                   viewBox="0 0 24 24"
@@ -147,12 +147,12 @@ export const Colab = () => {
                 </svg>
               </div>
 
-              <p className="text-ivory/80 mb-8 ml-auto max-w-md text-base leading-relaxed md:text-lg">
+              <p className="mb-8 ml-auto max-w-md text-base leading-relaxed text-white/80 md:text-lg">
                 {lang.colab.sponsors.text}
               </p>
 
               {/* CTA */}
-              <span className="font-display border-ivory text-ivory group-hover:bg-ivory group-hover:text-accent inline-block border-2 px-6 py-3 text-sm font-bold tracking-wider uppercase transition-all duration-300">
+              <span className="font-display group-hover:text-accent inline-block border-2 border-white px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-all duration-300 group-hover:bg-white">
                 {lang.colab.sponsors.button}
               </span>
             </div>

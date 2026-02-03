@@ -101,7 +101,7 @@ const Home = () => {
                       {lang.programDays[day.$ref].name}{" "}
                       {lang.programDays[day.$ref].date}
                     </h3>
-                    <div className="mr-2 h-4 rounded-t-lg border-2 border-b-0 border-dotted border-(--primary)" />
+                    <div className="border-primary mr-2 h-4 rounded-t-lg border-2 border-b-0 border-dotted" />
                   </div>
                   <DaySchedule
                     schedule={day.schedule}

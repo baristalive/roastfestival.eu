@@ -10,7 +10,7 @@ export const Footer = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <footer className="border-accent bg-evergreen text-primary border-t-8 px-6 py-20">
+    <footer className="border-accent text-primary border-t-8 bg-black px-6 py-20">
       <div className="container mx-auto text-center">
         <h2 className="font-display text-accent mb-8 text-3xl font-black tracking-tighter uppercase md:text-6xl">
           {params.lang === "cz" ? "Nebuď De‑Caf." : "Don't Be a De‑Caf."}

@@ -36,11 +36,11 @@ const YearBlock = ({
 }) => {
   return (
     <div
-      className={`flex w-full flex-col items-center gap-4 p-12 ${highlight ? "bg-accent bg-lines" : "bg-evergreen"}`}
+      className={`flex w-full flex-col items-center gap-4 p-12 ${highlight ? "bg-accent bg-lines" : "bg-black"}`}
     >
       {/* Year */}
       <span
-        className={`font-display text-5xl font-black lg:text-7xl ${highlight ? "text-evergreen" : "text-secondary"}`}
+        className={`font-display text-5xl font-black lg:text-7xl ${highlight ? "text-black" : "text-secondary"}`}
       >
         {year}
       </span>
@@ -50,7 +50,7 @@ const YearBlock = ({
         {Array.from({ length: beanCount }).map((_, i) => (
           <div
             key={i}
-            className={`h-12 w-12 ${highlight ? "text-evergreen" : "text-primary"}`}
+            className={`h-12 w-12 ${highlight ? "text-black" : "text-primary"}`}
           >
             <BeanIcon />
           </div>
@@ -59,7 +59,7 @@ const YearBlock = ({
 
       {/* Stats */}
       <div
-        className={`flex gap-6 text-center ${highlight ? "text-evergreen" : "text-primary"}`}
+        className={`flex gap-6 text-center ${highlight ? "text-black" : "text-primary"}`}
       >
         <div>
           <span className="font-display block text-2xl font-black lg:text-3xl">
@@ -94,7 +94,7 @@ export const PreviousYears = () => {
       <div className="mx-auto">
         {/* Title */}
         <div className="mb-16 text-center lg:mb-20">
-          <h2 className="font-display text-ivory mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
+          <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
             {lang.lastYear.title}
           </h2>
           <p className="text-secondary text-md tracking-wider uppercase md:text-2xl">

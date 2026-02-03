@@ -34,7 +34,7 @@ export const CaffeinCounter = () => {
   }, [count]);
 
   return (
-    <div className="bg-evergreen text-ivory punk-border flex flex-wrap items-center justify-center gap-4 border-4 p-4 shadow-[12px_12px_0_0_var(--color-accent)] md:gap-12 lg:p-10">
+    <div className="punk-border flex flex-wrap items-center justify-center gap-4 border-4 bg-black p-4 text-white shadow-[12px_12px_0_0_var(--color-accent)] md:gap-12 lg:p-10">
       <div className="text-center md:min-w-42">
         <div className="font-display text-accent text-[12rem] leading-none">
           {count}
@@ -49,7 +49,7 @@ export const CaffeinCounter = () => {
         </h3>
         <button
           onClick={increment}
-          className="font-display text-ivory bg-primary active:bg-accent active:text-evergreen relative w-full p-6 text-xl font-bold tracking-tighter uppercase transition-colors md:text-4xl"
+          className="font-display bg-primary active:bg-accent relative w-full p-6 text-xl font-bold tracking-tighter text-white uppercase transition-colors active:text-black md:text-4xl"
           aria-label="Add caffeine"
         >
           {count > 20
@@ -59,7 +59,7 @@ export const CaffeinCounter = () => {
         {count >= 10 && (
           <button
             onClick={reset}
-            className="font-display text-evergreen bg-secondary hover:bg-accent hover:text-ivory mt-2 w-full px-4 py-3 text-lg font-bold uppercase transition-colors"
+            className="font-display bg-secondary hover:bg-accent mt-2 w-full px-4 py-3 text-lg font-bold text-black uppercase transition-colors hover:text-white"
             aria-label="Reset caffeine"
           >
             {lang.caffeineCounter.detox}

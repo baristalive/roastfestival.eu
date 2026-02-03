@@ -4,9 +4,6 @@ const PortafilterIcon = () => (
     viewBox="0 0 32 32"
     width="2em"
     height="2em"
-    style={{
-      color: "rgb(var(--foreground-rgb))",
-    }}
   >
     <g>
       <path

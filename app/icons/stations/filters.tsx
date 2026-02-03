@@ -6,9 +6,6 @@ const FiltersIcon = () => (
     width="2em"
     height="2em"
     viewBox="0 0 512 512"
-    style={{
-      color: "rgb(var(--foreground-rgb))",
-    }}
   >
     <g>
       <g>

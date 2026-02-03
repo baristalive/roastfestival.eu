@@ -10,18 +10,18 @@ export const Program = () => {
 
   return (
     <section
-      className={`bg-ivory bg-dots py-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
+      className={`bg-dots bg-white py-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="lineup"
     >
       <div className="container mx-auto lg:px-6">
         <div className="mx-auto flex flex-col items-center p-6 text-center lg:p-12">
-          <h2 className="font-display text-evergreen mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
+          <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-black uppercase md:text-6xl">
             {lang.programTile.title}
           </h2>
-          <p className="text-evergreen/80 mb-8 text-2xl tracking-wider uppercase">
+          <p className="mb-8 text-2xl tracking-wider text-black/80 uppercase">
             {lang.programTile.loadingText}
           </p>
-          <div className="text-evergreen mb-6 flex gap-4">
+          <div className="mb-6 flex gap-4 text-black">
             <span
               className="animate-bean-pulse w-12"
               style={{ animationDelay: "0s" }}
@@ -41,10 +41,10 @@ export const Program = () => {
               <BeanIcon />
             </span>
           </div>
-          <div className="bg-ivory mb-12 w-full">
+          <div className="mb-12 w-full bg-white">
             <div className="animate-pop punk-border pop-shadow bg-primary/10 relative h-12 w-full border-2">
-              <div className="bg-primary border-evergreen animate-progress-load h-full border-r-4" />
-              <p className="text-evergreen absolute inset-0 flex items-center justify-start pl-6 text-base font-bold">
+              <div className="bg-primary animate-progress-load h-full border-r-4 border-black" />
+              <p className="absolute inset-0 flex items-center justify-start pl-6 text-base font-bold text-black">
                 20%
               </p>
             </div>

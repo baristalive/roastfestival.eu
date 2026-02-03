@@ -36,10 +36,10 @@ export const WhatToExpect = () => {
   const totalCount = allItems.length;
 
   return (
-    <section id="what-to-expect" className="bg-ivory bg-lines py-16 lg:py-24">
+    <section id="what-to-expect" className="bg-lines bg-white py-16 lg:py-24">
       <div className="container mx-auto">
         <div className="mb-8 text-center lg:mb-12">
-          <h2 className="font-display text-evergreen mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
+          <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-black uppercase md:text-6xl">
             {lang.whatToExpect.title}
           </h2>
         </div>

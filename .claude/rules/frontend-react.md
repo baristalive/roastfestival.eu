@@ -81,8 +81,28 @@ app/
 
    ```css
    .punk-border {
-     border: 4px solid var(--black);
+     border: 4px solid var(--color-black);
    }
+   ```
+
+6. **Use direct utility classes, not arbitrary value syntax**:
+
+   ```tsx
+   // ✓ Correct - use semantic utility classes
+   className = "bg-primary text-white border-black";
+
+   // ✗ Avoid - arbitrary value syntax with CSS variables
+   className = "bg-(--primary) text-(--white) border-(--black)";
+   ```
+
+7. **Use semantic `black`/`white` tokens, not base color names**:
+
+   ```tsx
+   // ✓ Correct - semantic tokens
+   className = "bg-white text-black";
+
+   // ✗ Avoid - base color names in components
+   className = "bg-ivory text-evergreen";
    ```
 
 ### TypeScript Patterns
@@ -168,28 +188,34 @@ const lang = dictionaries[params.lang as SupportedLanguages];
 - Don't add unnecessary abstractions for one-time use
 - Don't use `className` string concatenation with `+` - use template literals
 - Don't forget to handle loading and error states
+- Don't use arbitrary value syntax like `bg-(--primary)` - use `bg-primary` instead
+- Don't use base palette color names in components - use semantic tokens (`text-black` not `text-evergreen`)
 
 ## Design System Colors
 
-### Base Palette
+**Always use semantic color tokens in components** (`primary`, `secondary`, `accent`, `black`, `white`). Never use base palette names directly (`palm-leaf`, `evergreen`, `ivory`, etc.).
 
-| Token           | Hex       | Usage                        |
-| --------------- | --------- | ---------------------------- |
-| `palm-leaf`     | `#84994f` | Primary green                |
-| `oxidized-iron` | `#a72703` | Accent red/rust              |
-| `jasmine`       | `#ffe797` | Secondary yellow             |
-| `ivory`         | `#faffef` | Light background (white)     |
-| `evergreen`     | `#1c2800` | Dark text/background (black) |
+All color CSS variables use the `--color-` prefix (e.g., `--color-primary`, `--color-black`).
 
-### Semantic Tokens
+### Base Palette (internal use only)
 
-| Token       | Maps To         | Usage                           |
-| ----------- | --------------- | ------------------------------- |
-| `primary`   | `palm-leaf`     | Primary brand color, CTAs       |
-| `secondary` | `jasmine`       | Secondary highlights, hovers    |
-| `accent`    | `oxidized-iron` | Emphasis, important elements    |
-| `black`     | `evergreen`     | Text on light, dark backgrounds |
-| `white`     | `ivory`         | Text on dark, light backgrounds |
+| Token           | Hex       | Description      |
+| --------------- | --------- | ---------------- |
+| `palm-leaf`     | `#84994f` | Green            |
+| `oxidized-iron` | `#a72703` | Red/rust         |
+| `jasmine`       | `#ffe797` | Yellow           |
+| `ivory`         | `#faffef` | Light cream      |
+| `evergreen`     | `#1c2800` | Dark green/black |
+
+### Semantic Tokens (use these in components)
+
+| Token       | CSS Variable        | Usage                           |
+| ----------- | ------------------- | ------------------------------- |
+| `primary`   | `--color-primary`   | Primary brand color, CTAs       |
+| `secondary` | `--color-secondary` | Secondary highlights, hovers    |
+| `accent`    | `--color-accent`    | Emphasis, important elements    |
+| `black`     | `--color-black`     | Text on light, dark backgrounds |
+| `white`     | `--color-white`     | Text on dark, light backgrounds |
 
 ### Fonts
 
@@ -215,8 +241,7 @@ const lang = dictionaries[params.lang as SupportedLanguages];
 ### Pop Art Shadows
 
 - `pop-shadow` - Large offset shadow (12px)
-- `pop-shadow-small` - Small offset shadow (6px)
-- `pop-shadow-hover` - Interactive shadow with translate on hover
+- `pop-shadow-small` - Small offset shadow (4px)
 
 ### Text Effects
 
@@ -227,8 +252,6 @@ const lang = dictionaries[params.lang as SupportedLanguages];
 
 - `bg-dots` - Ben-Day dots pattern (pop art style)
 - `bg-lines` - Diagonal lines pattern
-- `bg-beans-logo-pattern` - Repeating logo pattern
-- `bg-beans2-pattern` - Repeating beans pattern
 
 ### Borders & Containers
 
@@ -246,6 +269,6 @@ After making changes, verify:
 
 1. No TypeScript errors (`npx tsc --noEmit`)
 2. Linting passes (`npm run lint`)
-3. Visual check in browser (`npm run dev`)
+3. Visual check in browser (see @.claude/rules/instructions.md )
 4. Responsive behavior at different breakpoints
 5. Both language versions work (`/cz` and `/en`)

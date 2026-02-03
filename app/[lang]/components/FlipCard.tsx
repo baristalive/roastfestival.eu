@@ -19,7 +19,7 @@ export const FlipCard = ({
 }: FlipCardProps) => {
   const patterns = [
     "bg-primary text-secondary",
-    "bg-secondary text-evergreen",
+    "bg-secondary text-black",
     "bg-primary text-secondary",
     "bg-accent text-secondary",
   ];

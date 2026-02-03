@@ -151,7 +151,7 @@ const DaySchedule = ({
                               </i>
                             )}
                             {presenter.lang && (
-                              <div className="schedule-item-adornment elevate absolute mr-2 aspect-square rounded-full bg-(--white) p-3 font-bold text-(--black) uppercase">
+                              <div className="schedule-item-adornment elevate absolute mr-2 aspect-square rounded-full bg-white p-3 font-bold text-black uppercase">
                                 {presenter.lang}
                               </div>
                             )}

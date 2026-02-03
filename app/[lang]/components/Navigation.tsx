@@ -41,9 +41,7 @@ export const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 z-50 flex w-full items-center justify-between px-6 py-4 transition-all duration-300 ${
-        isScrolled
-          ? "bg-evergreen shadow-lg backdrop-blur-sm"
-          : "bg-transparent"
+        isScrolled ? "bg-black shadow-lg backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="group">
@@ -79,10 +77,10 @@ export const Navigation = () => {
           href={params.lang === "cz" ? "./en" : "./cz"}
           rel="alternate"
           onClick={handleLanguageSwitch}
-          className={`border-evergreen translate-z-1 border-4 px-3 py-1 transition-all hover:-rotate-2 ${
+          className={`translate-z-1 border-4 border-black px-3 py-1 transition-all hover:-rotate-2 ${
             isScrolled
-              ? "border-secondary text-secondary hover:bg-secondary hover:text-evergreen"
-              : "hover:bg-accent hover:text-ivory"
+              ? "border-secondary text-secondary hover:bg-secondary hover:text-black"
+              : "hover:bg-accent hover:text-white"
           }`}
         >
           {params.lang === "cz" ? "EN" : "CZ"}
@@ -92,14 +90,12 @@ export const Navigation = () => {
       <a href={lang.contacts.tickets} className="group relative inline-block">
         <div
           className={`absolute inset-0 translate-x-1 translate-y-1 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5 ${
-            isScrolled ? "bg-accent" : "bg-evergreen"
+            isScrolled ? "bg-accent" : "bg-black"
           }`}
         ></div>
         <div
-          className={`text-ivory relative border-4 px-6 py-2 font-bold tracking-tighter uppercase transition-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${
-            isScrolled
-              ? "border-accent bg-evergreen"
-              : "border-evergreen bg-accent"
+          className={`relative border-4 px-6 py-2 font-bold tracking-tighter text-white uppercase transition-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${
+            isScrolled ? "border-accent bg-black" : "bg-accent border-black"
           }`}
         >
           {lang.buyTickets || "Book Now"}

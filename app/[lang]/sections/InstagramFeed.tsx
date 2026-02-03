@@ -70,7 +70,7 @@ const ContentTile = (post: InstagramPost) => {
           className="absolute top-0 left-0 z-0 h-full w-full rounded-2xl object-cover"
           alt={post.caption}
         />
-        <div className="absolute top-3 right-3 z-20 text-xl text-(--white)">
+        <div className="absolute top-3 right-3 z-20 text-xl text-white">
           <Badge type={post.media_type} />
         </div>
       </div>

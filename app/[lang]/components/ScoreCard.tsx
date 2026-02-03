@@ -22,21 +22,21 @@ export const ScoreCard = ({
     <div className="flex aspect-square w-[20em] flex-col items-center justify-center gap-4 px-6 py-4 transition-colors">
       <div className="flex items-baseline gap-1">
         <span
-          className={`font-display text-evergreen text-5xl font-black tabular-nums lg:text-6xl ${
+          className={`font-display text-5xl font-black text-black tabular-nums lg:text-6xl ${
             isComplete ? "" : ""
           }`}
         >
           {revealed}
         </span>
         <span
-          className={`font-display text-evergreen text-2xl font-bold lg:text-3xl ${
+          className={`font-display text-2xl font-bold text-black lg:text-3xl ${
             isComplete ? "opacity-60" : "opacity-40"
           }`}
         >
           /
         </span>
         <span
-          className={`font-display text-evergreen text-2xl font-bold tabular-nums lg:text-3xl ${
+          className={`font-display text-2xl font-bold text-black tabular-nums lg:text-3xl ${
             isComplete ? "opacity-60" : "opacity-40"
           }`}
         >
@@ -48,8 +48,7 @@ export const ScoreCard = ({
           e.stopPropagation();
           onRevealAll(!isComplete);
         }}
-        className={`punk-border font-display bg-accent text-secondary cursor-pointer px-4 py-2 text-sm font-bold uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 lg:text-base`}
-        style={{ boxShadow: "4px 4px 0 0 var(--black)" }}
+        className={`punk-border font-display bg-accent text-secondary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 lg:text-base`}
       >
         {isComplete ? hideLabel : revealLabel}
       </button>

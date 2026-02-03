@@ -1,5 +1,5 @@
 .logo {
-  background-color: var(--primary);
+  background-color: var(--color-primary);
 }
 
 .row:first-of-type .logo {
@@ -22,6 +22,6 @@
   gap: 1rem;
 }
 .schedule-item {
-  background-color: var(--accent) !important;
+  background-color: var(--color-accent) !important;
   text-align: center;
 }

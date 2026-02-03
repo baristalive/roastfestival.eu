@@ -47,7 +47,7 @@ export const Header = () => {
       </div>
 
       <div className="pointer-events-none relative container mx-auto flex flex-col items-center px-6 text-center">
-        <div className="punk-border pop-shadow-small normal mb-8 translate-z-1 rotate-2 px-6 py-2">
+        <div className="punk-border pop-shadow normal mb-8 translate-z-1 rotate-2 px-6 py-2">
           <span className="font-display text-mahagony text-xl font-black tracking-tighter uppercase md:text-2xl">
             {lang.date}
           </span>
@@ -67,20 +67,16 @@ export const Header = () => {
           </span>
         </h1>
 
-        <div className="font-display text-evergreen max-w-2xl text-2xl font-bold tracking-tight uppercase md:text-4xl">
+        <div className="font-display max-w-2xl text-2xl font-bold tracking-tight text-black uppercase md:text-4xl">
           {lang.tagline.top}
         </div>
-        <div className="text-evergreen font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight uppercase md:text-4xl">
+        <div className="font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight text-black uppercase md:text-4xl">
           {lang.tagline.bottom}
         </div>
 
         <div className="hidden md:flex">
-          <a
-            href="#tickets"
-            className="group pointer-events-auto relative inline-block"
-          >
-            <div className="bg-evergreen absolute inset-0 translate-x-2 translate-y-2 transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="punk-border font-display bg-accent text-ivory relative px-10 py-5 text-2xl font-black tracking-tighter uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
+          <a href="#tickets" className="group pointer-events-auto inline-block">
+            <div className="punk-border pop-shadow font-display bg-accent px-10 py-5 text-2xl font-black tracking-tighter text-white uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
               {lang.buyTickets || "Get Tickets"}
             </div>
           </a>
@@ -89,7 +85,7 @@ export const Header = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="text-evergreen rotate-90 text-4xl font-bold">
+        <div className="rotate-90 text-4xl font-bold text-black">
           <ArrowIcon />
         </div>
       </div>

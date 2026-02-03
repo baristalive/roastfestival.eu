@@ -30,7 +30,7 @@ export const BeanGrid = () => {
           onMouseLeave={() => handleMouseLeave(i)}
         >
           <div
-            className={`text-evergreen h-12 w-12 transition-opacity ${
+            className={`h-12 w-12 text-black transition-opacity ${
               hoveredBeans.has(i)
                 ? "opacity-0 duration-100"
                 : "opacity-10 delay-1000 duration-300"

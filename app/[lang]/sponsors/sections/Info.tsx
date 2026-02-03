@@ -15,16 +15,16 @@ export const Info = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="info" className="bg-evergreen bg-lines pt-8 pb-16 lg:pb-24">
+      <section id="info" className="bg-lines bg-black pt-8 pb-16 lg:pb-24">
         <SubpageNav backToSection="colab" selfHref="sponsors" />
 
         <div className="container mx-auto px-6">
           {/* Title */}
           <div className="mb-12 lg:mb-16">
-            <h1 className="font-display text-ivory mb-6 text-3xl leading-[0.85] font-black uppercase md:text-6xl lg:text-7xl">
+            <h1 className="font-display mb-6 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl lg:text-7xl">
               {lang.colab.sponsors.title}
             </h1>
-            <p className="text-ivory/80 max-w-3xl text-lg leading-relaxed lg:text-2xl">
+            <p className="max-w-3xl text-lg leading-relaxed text-white/80 lg:text-2xl">
               {lang.colab.sponsors.text}
             </p>
           </div>
@@ -35,7 +35,7 @@ export const Info = () => {
             rel="external"
             target="_blank"
             title={lang.sponsors.cta}
-            className="bg-accent text-ivory punk-border pop-shadow group inline-flex flex-col items-center justify-center gap-6 p-8 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
+            className="bg-accent punk-border pop-shadow group inline-flex flex-col items-center justify-center gap-6 p-8 text-white transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
           >
             <div className="text-6xl transition-transform group-hover:translate-x-2 lg:text-7xl">
               <ArrowIcon />
@@ -48,8 +48,8 @@ export const Info = () => {
       </section>
 
       {/* Content Section */}
-      <section className="bg-ivory bg-dots py-16 lg:py-24">
-        <div className="text-evergreen container mx-auto px-6">
+      <section className="bg-dots bg-white py-16 lg:py-24">
+        <div className="container mx-auto px-6 text-black">
           <Content />
         </div>
       </section>

@@ -10,7 +10,7 @@ import "react-medium-image-zoom/dist/styles.css";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     a: ({ children, ...rest }: PropsWithChildren) => (
-      <a className="font-bold text-(--primary) underline" {...rest}>
+      <a className="text-primary font-bold underline" {...rest}>
         {children}
       </a>
     ),
@@ -81,7 +81,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <th className="p-4 px-8 text-center text-nowrap">{children}</th>
     ),
     thead: ({ children }: PropsWithChildren) => (
-      <thead className="text-ivory bg-primary px-4 text-center">
+      <thead className="bg-primary px-4 text-center text-white">
         {children}
       </thead>
     ),

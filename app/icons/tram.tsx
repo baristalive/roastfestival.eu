@@ -6,9 +6,6 @@ const TramIcon = ({ size = 34 }: { size?: string | number }) => (
     viewBox="-100 -100 648 712"
     fill="currentColor"
     style={{
-      background: "rgb(var(--foreground-rgb))",
-      borderRadius: "17px",
-      color: "rgb(var(--background-rgb))",
       display: "inline-block",
       padding: "2px",
     }}

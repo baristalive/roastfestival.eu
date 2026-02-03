@@ -25,10 +25,10 @@ export const Info = () => {
         <div className="container mx-auto mt-12 px-6">
           {/* Title */}
           <div className="mb-12 lg:mb-16">
-            <h1 className="font-display text-ivory mb-6 text-3xl leading-[0.85] font-black uppercase md:text-6xl lg:text-7xl">
+            <h1 className="font-display mb-6 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl lg:text-7xl">
               {lang.exhibitors.title}
             </h1>
-            <p className="text-ivory/80 text-lg leading-relaxed lg:text-2xl">
+            <p className="text-lg leading-relaxed text-white/80 lg:text-2xl">
               {lang.exhibitors.text}
             </p>
           </div>
@@ -36,7 +36,7 @@ export const Info = () => {
           {/* Cards Grid */}
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Info Card */}
-            <div className="bg-ivory text-evergreen punk-border pop-shadow p-8 lg:p-10">
+            <div className="punk-border pop-shadow bg-white p-8 text-black lg:p-10">
               <Card />
             </div>
 
@@ -46,7 +46,7 @@ export const Info = () => {
               rel="external"
               target="_blank"
               title={lang.exhibitors.cta}
-              className="bg-accent text-ivory punk-border pop-shadow group flex flex-col items-center justify-center gap-6 p-8 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
+              className="bg-accent punk-border pop-shadow group flex flex-col items-center justify-center gap-6 p-8 text-white transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
             >
               <div className="text-6xl lg:text-7xl">
                 <ArrowIcon />
@@ -60,14 +60,14 @@ export const Info = () => {
       </section>
 
       {/* Content Section */}
-      <section className="bg-ivory bg-dots py-16 lg:py-24">
-        <div className="text-evergreen container mx-auto px-6">
+      <section className="bg-dots bg-white py-16 lg:py-24">
+        <div className="container mx-auto px-6 text-black">
           <Content />
         </div>
       </section>
 
       {/* Bottom Navigation */}
-      <section className="bg-evergreen py-12 lg:py-16">
+      <section className="bg-black py-12 lg:py-16">
         <SubpageNav backToSection="colab" centered />
       </section>
     </>

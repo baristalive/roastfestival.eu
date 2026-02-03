@@ -20,7 +20,7 @@ const Dropdown = () => {
         <div className="dropdown relative inline-block text-left" tabIndex={0}>
           <span className="">
             <button
-              className="elevate-inset inline-flex h-full w-full items-center justify-center gap-3 rounded-full border border-(--white) px-4 py-2 transition duration-150 ease-in-out hover:border-(--primary) focus:border-(--primary)"
+              className="elevate-inset focus:border-primary hover:border-primary inline-flex h-full w-full items-center justify-center gap-3 rounded-full border border-white px-4 py-2 transition duration-150 ease-in-out"
               type="button"
               aria-haspopup="true"
               aria-expanded="true"
@@ -31,7 +31,7 @@ const Dropdown = () => {
                 {AllDays.filter((d) => selectedDays.includes(d)).map((d) => (
                   <div
                     key={d}
-                    className="rounded-md bg-(--accent) px-2 py-2 text-(--white)"
+                    className="bg-accent rounded-md px-2 py-2 text-white"
                   >
                     {
                       lang.programDays[d as keyof typeof lang.programDays]
@@ -43,7 +43,7 @@ const Dropdown = () => {
                   (t) => (
                     <div
                       key={t}
-                      className="rounded-md bg-(--primary) px-2 py-1 text-(--white)"
+                      className="bg-primary rounded-md px-2 py-1 text-white"
                     >
                       <StationIcon station={t} />
                     </div>
@@ -73,7 +73,7 @@ const Dropdown = () => {
                 <p className="p-2 text-lg">{lang.filterCategories.day}</p>
                 {lang.program.map((day) => (
                   <li
-                    className="flex cursor-pointer items-center gap-2 rounded-md px-4 py-2 text-nowrap hover:bg-(--accent) hover:text-(--white)"
+                    className="hover:bg-accent flex cursor-pointer items-center gap-2 rounded-md px-4 py-2 text-nowrap hover:text-white"
                     key={day.$ref}
                     onClick={(e) => {
                       e.preventDefault();
@@ -83,7 +83,7 @@ const Dropdown = () => {
                     <input
                       type="checkbox"
                       id={`filter_${day.$ref}`}
-                      className="peer relative h-6 w-6 shrink-0 appearance-none rounded-sm border-2 border-(--accent) checked:bg-(--accent)"
+                      className="peer border-accent checked:bg-accent relative h-6 w-6 shrink-0 appearance-none rounded-sm border-2"
                       checked={selectedDays.includes(day.$ref)}
                       readOnly
                     />
@@ -100,7 +100,7 @@ const Dropdown = () => {
                       </p>
                     </label>
                     <svg
-                      className="absolute hidden h-6 w-6 text-(--white) peer-checked:block"
+                      className="absolute hidden h-6 w-6 text-white peer-checked:block"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="none"
@@ -118,7 +118,7 @@ const Dropdown = () => {
                 <p className="p-2 text-lg">{lang.filterCategories.track}</p>
                 {AllTracks.map((track) => (
                   <li
-                    className="flex cursor-pointer items-center gap-2 rounded-md px-4 py-1 text-nowrap hover:bg-(--primary) hover:text-(--white)"
+                    className="hover:bg-primary flex cursor-pointer items-center gap-2 rounded-md px-4 py-1 text-nowrap hover:text-white"
                     key={track}
                     onClick={(e) => {
                       e.preventDefault();
@@ -128,7 +128,7 @@ const Dropdown = () => {
                     <input
                       type="checkbox"
                       id={`filter_${track}`}
-                      className="peer relative h-6 w-6 shrink-0 appearance-none rounded-sm border-2 border-(--primary) checked:bg-(--primary)"
+                      className="peer border-primary checked:bg-primary relative h-6 w-6 shrink-0 appearance-none rounded-sm border-2"
                       checked={selectedTracks.includes(track)}
                       readOnly
                     />
@@ -144,7 +144,7 @@ const Dropdown = () => {
                       }
                     </label>
                     <svg
-                      className="absolute hidden h-6 w-6 text-(--white) peer-checked:block"
+                      className="absolute hidden h-6 w-6 text-white peer-checked:block"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="none"

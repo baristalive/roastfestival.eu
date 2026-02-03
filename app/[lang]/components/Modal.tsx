@@ -56,7 +56,7 @@ export const Modal = ({
         <a
           key={k}
           href={v.href}
-          className="rounded-full bg-[var(--primary)] px-8 py-4 text-[var(--white)]"
+          className="bg-primary rounded-full px-8 py-4 text-white"
           target="_blank"
           rel="external"
         >
@@ -74,7 +74,7 @@ export const Modal = ({
           title="Web"
           target="_blank"
           rel="external"
-          className="nav text-large h-[3em] w-[3em] rounded-full bg-[var(--black)] p-2 pt-[.65rem] text-[var(--white)]"
+          className="nav text-large h-[3em] w-[3em] rounded-full bg-black p-2 pt-[.65rem] text-white"
         >
           <WebIcon />
           <span className="sr-only">Web</span>
@@ -122,7 +122,7 @@ export const Modal = ({
           title="X (Twitter)"
           target="_blank"
           rel="external"
-          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--black)] text-[var(--white)]"
+          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-black text-white"
         >
           <TwitterIcon />
           <span className="sr-only">X (Twitter)</span>
@@ -134,7 +134,7 @@ export const Modal = ({
           title="LinkedIn"
           target="_blank"
           rel="external"
-          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-[var(--black)] text-[var(--white)]"
+          className="nav flex h-[3em] w-[3em] items-center justify-center rounded-full bg-black text-white"
         >
           <LinkedinIcon />
           <span className="sr-only">LinkedIn</span>
@@ -145,18 +145,18 @@ export const Modal = ({
 
   const modal = (
     <>
-      <div className="fixed inset-0 z-10 bg-[color-mix(in_srgb,_var(--primary)_45%,_transparent)]"></div>
+      <div className="fixed inset-0 z-10 bg-[color-mix(in_srgb,var(--color-primary)_45%,transparent)]"></div>
       <div
         className="fixed inset-0 z-20 flex animate-[fadeIn_200ms] items-end overflow-x-hidden overflow-y-auto bg-transparent text-left outline-none focus:outline-none md:items-center md:justify-center"
         onClick={() => setShowModal(false)}
       >
         <button
-          className="absolute top-2 right-2 z-30 h-[40px] w-[40px] rounded-full bg-[var(--black)] p-0 text-2xl leading-1 leading-4 font-bold text-white"
+          className="absolute top-2 right-2 z-30 h-10 w-10 rounded-full bg-black p-0 text-2xl leading-1 font-bold text-white"
           onClick={() => setShowModal(false)}
         >
           ×
         </button>
-        <div className="h-full w-full bg-transparent p-1 focus:outline-none lg:h-auto lg:w-auto lg:max-w-[80%] lg:min-w-[500px] xl:max-w-[60%]">
+        <div className="h-full w-full bg-transparent p-1 focus:outline-none lg:h-auto lg:w-auto lg:max-w-[80%] lg:min-w-125 xl:max-w-[60%]">
           <div
             className="flex flex-col items-start justify-center gap-2"
             onClick={(e) => {
@@ -234,11 +234,11 @@ export const Modal = ({
                 })}
               </div>
               {talkLang && (
-                <div className="rounded-lg border border-l-8 border-[var(--primary)] p-2 text-base font-semibold xl:mx-10 xl:text-lg">
+                <div className="border-primary rounded-lg border border-l-8 p-2 text-base font-semibold xl:mx-10 xl:text-lg">
                   {lang.programTile.talkInLanguage[talkLang]}
                 </div>
               )}
-              <div className="flex-grow p-2 font-normal xl:p-10">
+              <div className="grow p-2 font-normal xl:p-10">
                 {Array.isArray(annotation) ? (
                   annotation.map((p) => (
                     <p className="mb-4 text-base xl:text-lg" key={p}>
@@ -250,7 +250,7 @@ export const Modal = ({
                 )}
               </div>
               {bio && (
-                <div className="flex-grow p-2 font-normal xl:p-10 xl:pt-0">
+                <div className="grow p-2 font-normal xl:p-10 xl:pt-0">
                   <h6 className="text-xl font-semibold">{subheading}</h6>
                   <p className="text-base leading-5 xl:text-lg">{bio}</p>
                 </div>
