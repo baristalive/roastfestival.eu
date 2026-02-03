@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+const SCROLL_STORAGE_KEY = "lang-switch-scroll";
+
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 
@@ -20,6 +22,21 @@ export const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Restore scroll position after language switch
+  useEffect(() => {
+    const savedScroll = sessionStorage.getItem(SCROLL_STORAGE_KEY);
+    if (savedScroll) {
+      sessionStorage.removeItem(SCROLL_STORAGE_KEY);
+      const scrollY = parseInt(savedScroll, 10);
+      window.scrollTo(0, scrollY);
+      window.dispatchEvent(new Event("scroll"));
+    }
+  }, []);
+
+  const handleLanguageSwitch = () => {
+    sessionStorage.setItem(SCROLL_STORAGE_KEY, window.scrollY.toString());
+  };
 
   return (
     <nav
@@ -61,6 +78,7 @@ export const Navigation = () => {
         <Link
           href={params.lang === "cz" ? "./en" : "./cz"}
           rel="alternate"
+          onClick={handleLanguageSwitch}
           className={`border-evergreen translate-z-1 border-4 px-3 py-1 transition-all hover:-rotate-2 ${
             isScrolled
               ? "border-secondary text-secondary hover:bg-secondary hover:text-evergreen"
