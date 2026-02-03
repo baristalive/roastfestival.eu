@@ -38,7 +38,7 @@ export const Map = () => {
   return (
     <section id="location" className="relative">
       {/* Full-bleed Map */}
-      <div className="h-[120vh] lg:h-225">
+      <div className="h-screen lg:h-225">
         <ReactMap
           key={isMobile ? "mobile" : "desktop"}
           initialViewState={{
@@ -104,9 +104,9 @@ export const Map = () => {
       </div>
 
       {/* Floating Panels */}
-      <div className="pointer-events-none absolute inset-0 flex flex-col gap-12 p-4 md:justify-between lg:p-6">
+      <div className="pointer-events-none absolute inset-0 flex flex-col gap-8 p-4 md:justify-between lg:p-6">
         {/* Top floating panel - Venue Info */}
-        <div className="pointer-events-auto self-start">
+        <div className="pointer-events-auto md:self-start">
           <div className="bg-accent text-ivory punk-border pop-shadow p-4 shadow-lg lg:p-6">
             <div className="mb-3 flex items-center justify-between gap-6">
               <h2 className="font-display text-2xl leading-none font-black uppercase lg:text-3xl">
@@ -147,7 +147,7 @@ export const Map = () => {
               {/* Tram */}
               <div className="flex items-start gap-3">
                 <div className="bg-evergreen text-secondary flex h-8 w-8 shrink-0 items-center justify-center">
-                  <TramIcon size="1.25em" />
+                  <TramIcon size="2em" />
                 </div>
                 <div className="text-base">
                   <p className="font-bold">MHD</p>
@@ -158,7 +158,7 @@ export const Map = () => {
               {/* Parking */}
               <div className="flex items-start gap-3">
                 <div className="bg-evergreen text-secondary flex h-8 w-8 shrink-0 items-center justify-center">
-                  <CarIcon size="1.25em" />
+                  <CarIcon size="2em" />
                 </div>
                 <div className="text-base">
                   <p className="font-bold">{lang.location.parking.lot.title}</p>

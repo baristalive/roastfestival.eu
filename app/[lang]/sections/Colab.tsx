@@ -25,11 +25,11 @@ export const Colab = () => {
           <polygon points="0,0 50,100 100,0" className="fill-evergreen" />
         </svg>
       </div>
-      <div className="bg-primary relative pt-24 text-center lg:bg-[unset] lg:pt-32">
+      <div className="bg-primary relative pt-24 pb-24 text-center lg:bg-[unset] lg:pt-32 lg:pb-0">
         <h2 className="font-display text-ivory mb-8 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
           {lang.colab.title}
         </h2>
-        <p className="text-ivory/80 mx-auto max-w-2xl px-6 text-xl tracking-wider uppercase md:text-2xl">
+        <p className="text-ivory/80 text-md mx-auto max-w-2xl px-6 tracking-wider uppercase md:text-2xl">
           {lang.colab.description}
         </p>
       </div>
@@ -61,7 +61,7 @@ export const Colab = () => {
                 <div className="bg-accent h-1 flex-1 origin-left transition-transform duration-300 group-hover:scale-x-110" />
               </div>
 
-              <h3 className="font-display text-ivory mb-6 text-4xl font-black uppercase md:text-5xl lg:text-6xl">
+              <h3 className="font-display text-ivory mb-6 text-xl font-black uppercase md:text-5xl lg:text-6xl">
                 {lang.colab.exhibitors.title}
               </h3>
 
@@ -109,7 +109,7 @@ export const Colab = () => {
                 </svg>
               </div>
 
-              <h3 className="font-display text-ivory mb-6 text-4xl font-black uppercase md:text-5xl lg:text-6xl">
+              <h3 className="font-display text-ivory mb-6 text-xl font-black uppercase md:text-5xl lg:text-6xl">
                 {lang.colab.sponsors.title}
               </h3>
 

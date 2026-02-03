@@ -94,10 +94,10 @@ export const PreviousYears = () => {
       <div className="mx-auto">
         {/* Title */}
         <div className="mb-16 text-center lg:mb-20">
-          <h2 className="font-display text-ivory mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+          <h2 className="font-display text-ivory mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
             {lang.lastYear.title}
           </h2>
-          <p className="text-secondary text-2xl tracking-wider uppercase">
+          <p className="text-secondary text-md tracking-wider uppercase md:text-2xl">
             {lang.lastYear.subtitle}
           </p>
         </div>

@@ -21,12 +21,12 @@ export const SubpageNav = ({
 
   return (
     <nav
-      className={`container mx-auto flex items-center px-6 ${centered ? "justify-center" : "mb-8 justify-between"}`}
+      className={`container mx-auto flex items-center px-6 ${centered ? "justify-center" : "mb-8 justify-between gap-6"}`}
     >
       <Link
         href={`/${params.lang}${backToSection ? `#${backToSection}` : ""}`}
         rel="prev"
-        className="bg-ivory text-evergreen punk-border pop-shadow-small font-display inline-flex translate-z-1 items-center gap-3 px-6 py-3 text-sm font-bold tracking-wider uppercase transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+        className="bg-ivory text-evergreen punk-border pop-shadow-small font-display inline-flex translate-z-1 items-center gap-3 px-2 text-sm font-bold tracking-wider uppercase transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none md:px-6 md:py-1"
       >
         <span className="rotate-180">
           <ArrowIcon />

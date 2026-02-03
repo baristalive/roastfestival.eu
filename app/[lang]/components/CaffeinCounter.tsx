@@ -34,7 +34,7 @@ export const CaffeinCounter = () => {
   }, [count]);
 
   return (
-    <div className="bg-evergreen text-ivory punk-border flex flex-wrap items-center justify-center gap-12 border-4 p-4 shadow-[12px_12px_0_0_var(--color-accent)] lg:p-10">
+    <div className="bg-evergreen text-ivory punk-border flex flex-wrap items-center justify-center gap-4 border-4 p-4 shadow-[12px_12px_0_0_var(--color-accent)] md:gap-12 lg:p-10">
       <div className="text-center md:min-w-42">
         <div className="font-display text-accent text-[12rem] leading-none">
           {count}
@@ -43,13 +43,13 @@ export const CaffeinCounter = () => {
           {lang.caffeineCounter.jitterLevel}
         </div>
       </div>
-      <div className="max-w-md text-left">
-        <h3 className="font-display mb-6 text-4xl uppercase">
+      <div className="max-w-md text-center md:text-left">
+        <h3 className="font-display mb-6 text-xl uppercase md:text-4xl">
           {lang.caffeineCounter.pressForEnergy}
         </h3>
         <button
           onClick={increment}
-          className="font-display text-ivory bg-primary active:bg-accent active:text-evergreen relative w-full p-6 text-4xl font-bold tracking-tighter uppercase transition-colors"
+          className="font-display text-ivory bg-primary active:bg-accent active:text-evergreen relative w-full p-6 text-xl font-bold tracking-tighter uppercase transition-colors md:text-4xl"
           aria-label="Add caffeine"
         >
           {count > 20

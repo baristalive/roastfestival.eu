@@ -21,10 +21,10 @@ export const Info = () => {
         <div className="container mx-auto px-6">
           {/* Title */}
           <div className="mb-12 lg:mb-16">
-            <h1 className="font-display text-ivory mb-6 text-5xl leading-[0.85] font-black uppercase md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-ivory mb-6 text-3xl leading-[0.85] font-black uppercase md:text-6xl lg:text-7xl">
               {lang.colab.sponsors.title}
             </h1>
-            <p className="text-ivory/80 max-w-3xl text-xl leading-relaxed lg:text-2xl">
+            <p className="text-ivory/80 max-w-3xl text-lg leading-relaxed lg:text-2xl">
               {lang.colab.sponsors.text}
             </p>
           </div>

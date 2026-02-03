@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { FlipCard } from "@/app/[lang]/components/FlipCard";
 import { ScoreCard } from "@/app/[lang]/components/ScoreCard";
+import { MobileCardStack } from "@/app/[lang]/components/MobileCardStack";
 
 export const WhatToExpect = () => {
   const params = useParams();
@@ -38,31 +39,37 @@ export const WhatToExpect = () => {
     <section id="what-to-expect" className="bg-ivory bg-lines py-16 lg:py-24">
       <div className="container mx-auto">
         <div className="mb-8 text-center lg:mb-12">
-          <h2 className="font-display text-evergreen mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+          <h2 className="font-display text-evergreen mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
             {lang.whatToExpect.title}
           </h2>
         </div>
-        <div className="mx-auto mb-12 flex items-center"></div>
+        {/* Mobile: Swipeable Card Stack */}
+        <div className="md:hidden">
+          <MobileCardStack items={allItems} />
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-6 lg:gap-8">
-          {allItems.map((item, index) => (
-            <Fragment key={item.title}>
-              {Math.ceil(allItems.length / 2) === index && (
-                <ScoreCard
-                  onRevealAll={handleRevealAll}
-                  revealed={revealedCount}
-                  total={totalCount}
+        {/* Desktop: Grid Layout */}
+        <div className="hidden md:block">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+            {allItems.map((item, index) => (
+              <Fragment key={item.title}>
+                {Math.ceil(allItems.length / 2) === index && (
+                  <ScoreCard
+                    onRevealAll={handleRevealAll}
+                    revealed={revealedCount}
+                    total={totalCount}
+                  />
+                )}
+                <FlipCard
+                  title={item.title}
+                  text={item.text}
+                  index={index}
+                  isFlipped={flippedCards.has(index)}
+                  onFlip={() => handleFlip(index)}
                 />
-              )}
-              <FlipCard
-                title={item.title}
-                text={item.text}
-                index={index}
-                isFlipped={flippedCards.has(index)}
-                onFlip={() => handleFlip(index)}
-              />
-            </Fragment>
-          ))}
+              </Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </section>
