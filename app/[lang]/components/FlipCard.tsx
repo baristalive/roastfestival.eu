@@ -1,6 +1,7 @@
 "use client";
 
 import BeanIcon from "@/app/icons/beanicon";
+import { PATTERNS } from "@/app/utils/consts";
 
 export type FlipCardProps = {
   index: number;
@@ -9,7 +10,6 @@ export type FlipCardProps = {
   text: string;
   title: string;
 };
-
 export const FlipCard = ({
   index,
   isFlipped,
@@ -17,13 +17,7 @@ export const FlipCard = ({
   text,
   title,
 }: FlipCardProps) => {
-  const patterns = [
-    "bg-primary text-white",
-    "bg-secondary text-black",
-    "bg-primary text-white",
-    "bg-accent text-primary",
-  ];
-  const patternClass = patterns[index % patterns.length];
+  const patternClass = PATTERNS[index % PATTERNS.length];
 
   return (
     <div

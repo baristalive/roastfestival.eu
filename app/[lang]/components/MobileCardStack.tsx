@@ -2,6 +2,9 @@
 
 import { useState, useRef } from "react";
 import BeanIcon from "@/app/icons/beanicon";
+import { PATTERNS } from "@/app/utils/consts";
+import TouchIcon from "@/app/icons/touch";
+import ArrowIcon from "@/app/icons/arrow";
 
 type CardItem = {
   title: string;
@@ -20,13 +23,6 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
   const [skipTransition, setSkipTransition] = useState(false);
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
-
-  const patterns = [
-    "bg-primary text-secondary",
-    "bg-secondary text-black",
-    "bg-primary text-secondary",
-    "bg-accent text-secondary",
-  ];
 
   const handleFlip = () => {
     setFlippedCards((prev) => {
@@ -100,7 +96,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
 
   const isFlipped = flippedCards.has(currentIndex);
   const currentItem = items[currentIndex];
-  const patternClass = patterns[currentIndex % patterns.length];
+  const patternClass = PATTERNS[currentIndex % PATTERNS.length];
 
   return (
     <div className="flex flex-col items-center gap-6 p-6">
@@ -114,7 +110,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         {/* Background cards for stack effect */}
         {currentIndex < items.length - 2 && (
           <div
-            className={`punk-border absolute inset-0 ${patterns[(currentIndex + 2) % patterns.length]}`}
+            className={`punk-border absolute inset-0 ${PATTERNS[(currentIndex + 2) % PATTERNS.length]}`}
             style={{
               opacity: 0.5,
               transform: "translateX(8px) translateY(8px) scale(0.92)",
@@ -123,7 +119,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         )}
         {currentIndex < items.length - 1 && (
           <div
-            className={`punk-border absolute inset-0 ${patterns[(currentIndex + 1) % patterns.length]}`}
+            className={`punk-border absolute inset-0 ${PATTERNS[(currentIndex + 1) % PATTERNS.length]}`}
             style={{
               opacity: 0.7,
               transform: "translateX(4px) translateY(4px) scale(0.96)",
@@ -155,11 +151,13 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
               className={`punk-border pop-shadow absolute inset-0 flex items-center justify-center p-4 ${patternClass}`}
               style={{ backfaceVisibility: "hidden" }}
             >
-              <div className="flex flex-col items-center gap-2 text-center">
-                <div className="h-20 w-20 opacity-60">
+              <div className="flex flex-col items-center gap-8 text-center opacity-60">
+                <div className="h-32 w-32">
                   <BeanIcon />
                 </div>
-                <span className="font-display text-4xl font-bold">?</span>
+                <div className="h-16 w-16 -rotate-20">
+                  <TouchIcon />
+                </div>
               </div>
             </div>
 
@@ -171,10 +169,10 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
                 transform: "rotateY(180deg)",
               }}
             >
-              <h3 className="font-display mb-3 text-lg leading-tight font-bold">
+              <h3 className="font-display mb-3 text-2xl leading-tight font-bold">
                 {currentItem.title}
               </h3>
-              <p className="text-base leading-snug opacity-80">
+              <p className="text-xl leading-snug opacity-80">
                 {currentItem.text}
               </p>
             </div>
@@ -205,9 +203,9 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex - 1)}
           disabled={currentIndex === 0}
-          className="punk-border font-display bg-secondary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
+          className="punk-border font-display aspect-square rotate-180 cursor-pointer rounded-full px-4 py-2 text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          ←
+          <ArrowIcon />
         </button>
         <span className="font-display text-lg font-bold text-black tabular-nums">
           {currentIndex + 1} / {items.length}
@@ -215,15 +213,17 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex + 1)}
           disabled={currentIndex === items.length - 1}
-          className="punk-border font-display bg-secondary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
+          className="punk-border font-display aspect-square cursor-pointer rounded-full px-4 py-2 text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          →
+          <ArrowIcon />
         </button>
       </div>
 
       {/* Flip hint */}
       <p className="font-body text-sm text-black opacity-60">
-        {isFlipped ? "Tap to hide" : "Tap card to reveal"}
+        {isFlipped
+          ? "Tap to hide, swipe to next"
+          : "Tap card to reveal, swipe to next"}
       </p>
     </div>
   );
