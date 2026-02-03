@@ -10,17 +10,17 @@ import "react-medium-image-zoom/dist/styles.css";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     a: ({ children, ...rest }: PropsWithChildren) => (
-      <a className="font-bold text-[var(--primary)] underline" {...rest}>
+      <a className="font-bold text-(--primary) underline" {...rest}>
         {children}
       </a>
     ),
     h2: ({ children }: PropsWithChildren) => (
-      <h2 className="clear-both mt-6 mb-4 px-8 text-2xl font-bold md:mt-12 md:px-0 lg:text-3xl">
+      <h2 className="font-display mt-24 mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
         {children}
       </h2>
     ),
     h3: ({ children }: PropsWithChildren) => (
-      <h3 className="clear-both mb-4 px-8 pt-24 text-2xl font-bold md:px-0 lg:text-2xl">
+      <h3 className="font-display clear-both mb-6 text-lg font-black tracking-tighter uppercase md:text-xl lg:text-2xl">
         {children}
       </h3>
     ),
@@ -59,19 +59,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </ol>
     ),
     p: ({ children }: PropsWithChildren) => (
-      <p className="mb-4 px-8 text-base md:px-0 lg:text-xl">{children}</p>
+      <p className="mb-12 px-8 text-base md:px-0 lg:text-xl">{children}</p>
     ),
     table: ({ children }: PropsWithChildren) => (
       <div className="flex items-center justify-center">
-        <table className="elevate my-4 block border-collapse overflow-x-auto rounded-2xl md:table">
+        <table className="punk-border pop-shadow bg-secondary block border-collapse overflow-x-auto md:table">
           {children}
         </table>
       </div>
-    ),
-    tbody: ({ children }: PropsWithChildren) => (
-      <tbody className="tbody rounded-b-2xl after:block after:pt-4 after:content-['']">
-        {children}
-      </tbody>
     ),
     td: ({
       children,
@@ -83,22 +78,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </td>
     ),
     th: ({ children }: PropsWithChildren) => (
-      <th className="p-4 px-8 text-center text-nowrap first:rounded-tl-2xl last:rounded-tr-2xl">
-        {children}
-      </th>
+      <th className="p-4 px-8 text-center text-nowrap">{children}</th>
     ),
     thead: ({ children }: PropsWithChildren) => (
-      <thead className="bg-[var(--primary)] px-4 text-center text-[var(--white)]">
+      <thead className="text-ivory bg-primary px-4 text-center">
         {children}
       </thead>
     ),
     tr: ({ children }: PropsWithChildren) => (
-      <tr className="divide-x divide-dashed last:rounded-b-2xl even:bg-slate-50">
-        {children}
-      </tr>
+      <tr className="even:bg-primary/20 divide-x divide-dashed">{children}</tr>
     ),
     ul: ({ children }: PropsWithChildren) => (
-      <ul className="mb-4 list-inside list-disc px-8">{children}</ul>
+      <ul className="mb-4 list-disc pl-6">{children}</ul>
     ),
     ...components,
   };

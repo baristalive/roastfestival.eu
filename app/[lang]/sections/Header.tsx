@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { BeanGrid } from "@/app/[lang]/components/BeanGrid";
+import ArrowIcon from "@/app/icons/arrow";
 
 export const Header = () => {
   const params = useParams();
@@ -88,9 +89,9 @@ export const Header = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <span className="material-symbols-outlined text-mahagony text-4xl font-bold">
-          arrow_downward
-        </span>
+        <div className="text-evergreen rotate-90 text-4xl font-bold">
+          <ArrowIcon />
+        </div>
       </div>
     </header>
   );

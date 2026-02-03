@@ -1,10 +1,8 @@
 "use client";
-import Bar from "@/app/components/Bar";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import { useParams } from "next/navigation";
-
-import NavBar from "@/app/components/NavBar";
 import ArrowIcon from "@/app/icons/arrow";
+import { SubpageNav } from "@/app/components/SubpageNav";
 
 import enSponsorsContent from "@/app/dictionaries/colab/sponsors/content_en.mdx";
 import czSponsorsContent from "@/app/dictionaries/colab/sponsors/content_cz.mdx";
@@ -16,46 +14,49 @@ export const Info = () => {
 
   return (
     <>
-      <section
-        id="info"
-        className="flex flex-col items-center justify-between pb-10"
-      >
-        <NavBar backToSection="colab" />
-        <div className="flex max-w-475 grid-cols-[1fr,2fr] flex-col gap-8 p-8 lg:grid">
-          <div className="md:p-12">
-            <h2 className="w-3/4 pb-8 text-3xl font-bold wrap-break-word md:pt-56 md:break-normal lg:pt-20 2xl:text-6xl">
+      {/* Hero Section */}
+      <section id="info" className="bg-evergreen bg-lines pt-8 pb-16 lg:pb-24">
+        <SubpageNav backToSection="colab" selfHref="sponsors" />
+
+        <div className="container mx-auto px-6">
+          {/* Title */}
+          <div className="mb-12 lg:mb-16">
+            <h1 className="font-display text-ivory mb-6 text-5xl leading-[0.85] font-black uppercase md:text-6xl lg:text-7xl">
               {lang.colab.sponsors.title}
-            </h2>
-            <div className="mx-auto max-w-5xl space-y-10 text-base leading-normal lg:text-xl">
+            </h1>
+            <p className="text-ivory/80 max-w-3xl text-xl leading-relaxed lg:text-2xl">
               {lang.colab.sponsors.text}
-            </div>
-            <Bar />
+            </p>
           </div>
-          <div className="cards flex flex-col items-center">
-            <div className="card nav elevate flex h-full flex-col rounded-2xl pb-4 md:px-12">
-              <a
-                href={lang.sponsors.signUpLink}
-                rel="external"
-                className="flex h-full flex-col items-center justify-center p-4 px-32"
-              >
-                <div className="text-6xl">
-                  <ArrowIcon />
-                </div>
-                <h2 className="mt-6 text-3xl font-bold">{lang.sponsors.cta}</h2>
-              </a>
+
+          {/* CTA Card */}
+          <a
+            href={lang.sponsors.signUpLink}
+            rel="external"
+            target="_blank"
+            title={lang.sponsors.cta}
+            className="bg-accent text-ivory punk-border pop-shadow group inline-flex flex-col items-center justify-center gap-6 p-8 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
+          >
+            <div className="text-6xl transition-transform group-hover:translate-x-2 lg:text-7xl">
+              <ArrowIcon />
             </div>
-          </div>
+            <span className="font-display text-center text-2xl font-black tracking-wider uppercase lg:text-3xl">
+              {lang.sponsors.cta}
+            </span>
+          </a>
         </div>
       </section>
-      <section className="relative">
-        <div className="mx-auto flex max-w-300 flex-col gap-8 md:p-12">
-          <div className="h-auto rounded-2xl py-16 text-lg md:px-32">
-            <Content />
-          </div>
+
+      {/* Content Section */}
+      <section className="bg-ivory bg-dots py-16 lg:py-24">
+        <div className="text-evergreen container mx-auto px-6">
+          <Content />
         </div>
       </section>
-      <section className="flex min-h-64 items-center justify-center">
-        <NavBar backToSection="colab" />
+
+      {/* Bottom Navigation */}
+      <section className="bg-primary py-12 lg:py-16">
+        <SubpageNav backToSection="colab" centered />
       </section>
     </>
   );

@@ -299,10 +299,6 @@ ol.round-counter li::before {
   border-radius: 50%;
 }
 
-.tbody > tr {
-  background: var(--white);
-}
-
 @keyframes scrolling {
   0% {
     transform: translateX(0);

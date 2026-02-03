@@ -53,12 +53,19 @@ app/
 
    ```css
    @theme inline {
-     --color-primary: #f75c03;
-     --font-family-display: "Syne", sans-serif;
-     --animate-custom: custom-animation 1s ease infinite;
+     --color-palm-leaf: #84994f;
+     --color-primary: var(--color-palm-leaf);
+     --font-display: "Syne", sans-serif;
+     --animate-float: float 6s ease-in-out infinite;
 
-     @keyframes custom-animation {
-       /* keyframes here */
+     @keyframes float {
+       0%,
+       100% {
+         transform: translateY(0px);
+       }
+       50% {
+         transform: translateY(-20px);
+       }
      }
    }
    ```
@@ -66,7 +73,7 @@ app/
 2. **Prefer Tailwind utilities** over custom CSS classes
 
 3. **Use semantic color names** matching the design system:
-   - `bg-midnight`, `text-cream`, `border-teal`, etc.
+   - `bg-primary`, `text-secondary`, `border-accent`, `bg-black`, `text-white`, etc.
 
 4. **Responsive design**: Mobile-first with `md:` and `lg:` breakpoints
 
@@ -122,7 +129,7 @@ const lang = dictionaries[params.lang as SupportedLanguages];
 
    ```tsx
    className =
-     "flex flex-col gap-4 p-8 text-xl font-bold text-midnight bg-cream rounded-lg shadow-lg";
+     "flex flex-col gap-4 p-8 text-xl font-bold text-black bg-white rounded-lg pop-shadow";
    ```
 
 2. **Conditional classes** with template literals:
@@ -140,7 +147,7 @@ const lang = dictionaries[params.lang as SupportedLanguages];
 4. **Hover/focus states**:
 
    ```tsx
-   className = "transition-colors hover:bg-orange focus:ring-2";
+   className = "transition-colors hover:bg-secondary focus:ring-2";
    ```
 
 ## Best Practices
@@ -164,20 +171,74 @@ const lang = dictionaries[params.lang as SupportedLanguages];
 
 ## Design System Colors
 
-| Token      | Hex       | Usage                       |
-| ---------- | --------- | --------------------------- |
-| `midnight` | `#04151f` | Primary dark, text on light |
-| `cream`    | `#efd6ac` | Background, text on dark    |
-| `teal`     | `#04a777` | Accent, success states      |
-| `burgundy` | `#89023e` | Accent, emphasis            |
-| `orange`   | `#f75c03` | Primary action, CTA         |
+### Base Palette
+
+| Token           | Hex       | Usage                        |
+| --------------- | --------- | ---------------------------- |
+| `palm-leaf`     | `#84994f` | Primary green                |
+| `oxidized-iron` | `#a72703` | Accent red/rust              |
+| `jasmine`       | `#ffe797` | Secondary yellow             |
+| `ivory`         | `#faffef` | Light background (white)     |
+| `evergreen`     | `#1c2800` | Dark text/background (black) |
+
+### Semantic Tokens
+
+| Token       | Maps To         | Usage                           |
+| ----------- | --------------- | ------------------------------- |
+| `primary`   | `palm-leaf`     | Primary brand color, CTAs       |
+| `secondary` | `jasmine`       | Secondary highlights, hovers    |
+| `accent`    | `oxidized-iron` | Emphasis, important elements    |
+| `black`     | `evergreen`     | Text on light, dark backgrounds |
+| `white`     | `ivory`         | Text on dark, light backgrounds |
+
+### Fonts
+
+| Token     | Font Family | Usage            |
+| --------- | ----------- | ---------------- |
+| `display` | Syne        | Headings, titles |
+| `body`    | Outfit      | Body text, UI    |
 
 ## Animation Guidelines
 
 - Use CSS animations defined in `@theme inline` for performance
 - Keep animations subtle and purposeful
 - Respect `prefers-reduced-motion` when possible
-- Common patterns: `animate-float`, `animate-pop`, `animate-marquee`
+- Available animations:
+  - `animate-float` - Gentle up/down floating (6s cycle)
+  - `animate-pop` - Scale-in entrance effect (0.3s)
+  - `animate-marquee` - Horizontal scroll for tickers (50s)
+  - `animate-progress-load` - Progress bar fill animation (1.5s)
+  - `animate-bean-pulse` - Pulsing opacity for loading states (1.5s)
+
+## Custom Utility Classes
+
+### Pop Art Shadows
+
+- `pop-shadow` - Large offset shadow (12px)
+- `pop-shadow-small` - Small offset shadow (6px)
+- `pop-shadow-hover` - Interactive shadow with translate on hover
+
+### Text Effects
+
+- `text-stroke` - Outlined text with transparent fill
+- `text-stroke-outline` - Subtle stroke with filled text
+
+### Backgrounds & Patterns
+
+- `bg-dots` - Ben-Day dots pattern (pop art style)
+- `bg-lines` - Diagonal lines pattern
+- `bg-beans-logo-pattern` - Repeating logo pattern
+- `bg-beans2-pattern` - Repeating beans pattern
+
+### Borders & Containers
+
+- `punk-border` - 4px solid black border
+- `marquee-container` - Styled overflow container with top/bottom borders
+
+### Interactive Elements
+
+- `img-overlay` - Image with green overlay that fades on hover
+- `map-marker-punk` - Styled map markers with speech bubble pointer
 
 ## Testing Changes
 

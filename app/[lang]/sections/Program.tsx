@@ -11,7 +11,7 @@ export const Program = () => {
   return (
     <section
       className={`bg-ivory bg-dots pt-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
-      id="program"
+      id="lineup"
     >
       <div className="container mx-auto px-6">
         <div className="mx-auto flex flex-col items-center p-8 text-center lg:p-12">
