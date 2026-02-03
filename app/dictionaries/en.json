@@ -1,7 +1,7 @@
 {
   "about": {
     "text": [
-      "We ripped up the rulebook. No beige tablecloths. No jargon. Just the world's most aggressive beans and the people who roast them. It doesn't matter if you are a professional in the industry, a coffee enthusiast or if you tasted your first V60 yesterday and are just getting acquainted."
+      "We ripped up the rulebook. No beige tablecloths. Just the topmost quality beans. No chit-chat. No pretense. It doesn't matter if you are just getting acquainted or have it down to fine art. Coffee's here for you to enjoy. Plus company of those who roasted it for you."
     ],
     "title": "What is roast!?"
   },
@@ -10,16 +10,16 @@
   "colab": {
     "description": "Roast! would be nothing without the participation of roasters, exhibitors, speakers and sponsors. If you fall into this category, be sure to click to find out more.",
     "exhibitors": {
-      "button": "Infopoint for roasters",
-      "text": "Click here for all the necessary information for roasters.",
-      "title": "Roasters and presenters"
+      "button": "Infopoint for roasters and food-artists",
+      "text": "Wanna participate and show off?",
+      "title": "Roasters and foodies"
     },
     "sponsors": {
       "button": "Find out more",
       "text": "Are you a company that likes to support cultural events? You can be rewarded with a logo on the event, promotional materials, tickets and interesting packages for your employees.",
       "title": "Sponsors"
     },
-    "title": "Cooperation"
+    "title": "Let's join forces!"
   },
   "contact": "Contact us",
   "exhibitors": {
@@ -328,33 +328,24 @@
   },
   "info": [
     {
-      "text": "Would you like an espresso or maybe a cappuccino? That and much more is waiting to be tasted by you at our especially busy espresso bars. During the festival, there will be many different roasters on rotation, each with their own coffee to show off.",
-      "title": "Espresso done right"
+      "text": "Would you like an espresso, cappuccino or a fancy filter? That and much more is waiting for you at our especially busy bars. There will be many different roasters on rotation throughout the festival, each with their own coffee to show off.",
+      "title": "Under pressure or without"
     },
     {
-      "text": "Filtered coffee, this is a different discipline. V60, Chemex, Aeropress or Coldbrew? You can also taste these coffees at our brew bars. We give roasters complete freedom to choose the preparation that best suits their beans.",
-      "title": "Filtered coffee of all kinds"
-    },
-    {
-      "text": "You don't just want to watch, you want to experience it for yourself? Discover the ins and outs of coffee roasting, cupping, alternative preparations, experimental flavour pairing and much more. Our professional baristas will guide you through everything and will be happy to answer any questions.",
-      "title": "Workshops"
-    },
-    {
-      "text": "Again this year you can look forward to a wide range of lectures on all possible and impossible topics. Our special guests will guide you through the nooks and crannies of coffee technology, chemistry or culture you may not have known existed.",
-      "title": "Lectures"
+      "text": "This year is no diferent - you can look forward to a wide range of lectures on all possible and impossible topics. What do you say? You don't just want to watch, you want to experience it for yourself? Reveal the mysteries of coffee roasting, cuppings, alternative preparations, experimental sensory pairings and much more. Selected guests - professionals will be your guides and gladly answer all your questions.",
+      "title": "Hands-on / hands-off"
     }
   ],
   "lastYear": {
-    "title": "The Journey",
-    "subtitle": "Growing stronger each year",
+    "title": "Roast! grows",
+    "subtitle": "We grow like a coffee tree! Together!",
     "years": [
       {
         "year": 2023,
         "tagline": "The Beginning",
         "stats": {
           "roasters": 8,
-          "attendees": 320,
-          "workshops": 4
+          "attendees": 300
         }
       },
       {
@@ -362,29 +353,26 @@
         "tagline": "The Breakthrough",
         "stats": {
           "roasters": 22,
-          "attendees": 780,
-          "workshops": 12
+          "attendees": 500
         }
       },
       {
         "year": 2025,
         "tagline": "The Explosion",
         "stats": {
-          "roasters": 35,
-          "attendees": 1500,
-          "workshops": 20
+          "roasters": 28,
+          "attendees": 700
         }
       }
     ],
     "labels": {
       "roasters": "Roasters",
-      "attendees": "Visitors",
-      "workshops": "Workshops"
+      "attendees": "Visitors"
     }
   },
   "social": {
     "title": "Newsroom",
-    "text": "Roast! is preset on social networks as well. Follow us!"
+    "text": "Roast! is alive on social networks as well. Follow us!"
   },
   "stayTuned": {
     "title": "Can't wait?",
