@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-palm-leaf: #84994f;
-  --color-oxidized-iron: #a72703;
-  --color-jasmine: #ffe797;
-  --color-ivory: #faffef;
-  --color-evergreen: #1c2800;
+  --color-purple: #9929ea;
+  --color-bubblegum-fizz: #ff5fcf;
+  --color-light-gold: #faeb92;
+  --color-lavender-veil: #f7ebff;
+  --color-coffee-bean: #0d0017;
 
-  --color-primary: var(--color-palm-leaf);
-  --color-secondary: var(--color-jasmine);
-  --color-accent: var(--color-oxidized-iron);
-  --color-black: var(--color-evergreen);
-  --color-white: var(--color-ivory);
+  --color-primary: var(--color-purple);
+  --color-secondary: var(--color-bubblegum-fizz);
+  --color-accent: var(--color-light-gold);
+  --color-white: var(--color-lavender-veil);
+  --color-black: var(--color-coffee-bean);
 
   --font-display: "Syne", sans-serif;
   --font-body: "Outfit", sans-serif;
@@ -164,6 +164,7 @@ body,
 .map-marker-punk {
   border: 3px solid var(--color-black);
   box-shadow: 4px 4px 0px 0px var(--color-black);
+  --bg: "currentBackgroundColor";
   position: relative;
 }
 
@@ -186,7 +187,7 @@ body,
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  border-top: 16px solid var(--color-white);
+  border-top: 16px solid var(--background, var(--color-white));
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
 }

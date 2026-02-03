@@ -48,7 +48,7 @@ export const ScoreCard = ({
           e.stopPropagation();
           onRevealAll(!isComplete);
         }}
-        className={`punk-border font-display bg-accent text-secondary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 lg:text-base`}
+        className={`punk-border font-display bg-accent text-primary pop-shadow-small cursor-pointer px-4 py-2 text-sm font-bold uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 lg:text-base`}
       >
         {isComplete ? hideLabel : revealLabel}
       </button>

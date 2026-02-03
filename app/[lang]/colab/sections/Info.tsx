@@ -46,7 +46,7 @@ export const Info = () => {
               rel="external"
               target="_blank"
               title={lang.exhibitors.cta}
-              className="bg-accent punk-border pop-shadow group flex flex-col items-center justify-center gap-6 p-8 text-white transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
+              className="bg-accent punk-border pop-shadow group flex flex-col items-center justify-center gap-6 p-8 text-black transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
             >
               <div className="text-6xl lg:text-7xl">
                 <ArrowIcon />

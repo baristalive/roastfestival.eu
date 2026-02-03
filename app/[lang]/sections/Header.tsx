@@ -76,7 +76,7 @@ export const Header = () => {
 
         <div className="hidden md:flex">
           <a href="#tickets" className="group pointer-events-auto inline-block">
-            <div className="punk-border pop-shadow font-display bg-accent px-10 py-5 text-2xl font-black tracking-tighter text-white uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
+            <div className="punk-border pop-shadow font-display bg-accent px-10 py-5 text-2xl font-black tracking-tighter text-black uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
               {lang.buyTickets || "Get Tickets"}
             </div>
           </a>

@@ -18,10 +18,10 @@ export const FlipCard = ({
   title,
 }: FlipCardProps) => {
   const patterns = [
-    "bg-primary text-secondary",
+    "bg-primary text-white",
     "bg-secondary text-black",
-    "bg-primary text-secondary",
-    "bg-accent text-secondary",
+    "bg-primary text-white",
+    "bg-accent text-primary",
   ];
   const patternClass = patterns[index % patterns.length];
 

@@ -152,7 +152,7 @@ export const Colab = () => {
               </p>
 
               {/* CTA */}
-              <span className="font-display group-hover:text-accent inline-block border-2 border-white px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-all duration-300 group-hover:bg-white">
+              <span className="font-display inline-block border-2 border-white px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-all duration-300 group-hover:bg-white group-hover:text-black">
                 {lang.colab.sponsors.button}
               </span>
             </div>

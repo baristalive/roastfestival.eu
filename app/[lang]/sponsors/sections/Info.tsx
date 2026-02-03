@@ -35,7 +35,7 @@ export const Info = () => {
             rel="external"
             target="_blank"
             title={lang.sponsors.cta}
-            className="bg-accent punk-border pop-shadow group inline-flex flex-col items-center justify-center gap-6 p-8 text-white transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
+            className="bg-accent punk-border pop-shadow group inline-flex flex-col items-center justify-center gap-6 p-8 text-black transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
           >
             <div className="text-6xl transition-transform group-hover:translate-x-2 lg:text-7xl">
               <ArrowIcon />

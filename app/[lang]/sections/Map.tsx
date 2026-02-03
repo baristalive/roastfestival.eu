@@ -54,7 +54,14 @@ export const Map = () => {
           mapStyle="https://api.maptiler.com/maps/019c202e-e943-71a2-9307-527f7fee6b56/style.json?key=PeGeqGWAzLQUdqICcIfc"
         >
           <Marker latitude={49.1996958} longitude={16.6225864} anchor="bottom">
-            <div className="map-marker-punk bg-accent flex flex-col items-center gap-2 px-4 py-2 text-white">
+            <div
+              className="map-marker-punk bg-primary flex flex-col items-center gap-2 px-4 py-2 text-white"
+              style={
+                {
+                  "--background": "var(--color-primary)",
+                } as React.CSSProperties
+              }
+            >
               <span className="font-display w-min text-center font-bold">
                 {lang.location.stops.kaznice}
               </span>
@@ -107,7 +114,7 @@ export const Map = () => {
       <div className="pointer-events-none absolute inset-0 flex flex-col gap-8 p-4 md:justify-between lg:p-6">
         {/* Top floating panel - Venue Info */}
         <div className="pointer-events-auto md:self-start">
-          <div className="bg-accent punk-border pop-shadow p-4 text-white shadow-lg lg:p-6">
+          <div className="bg-primary punk-border pop-shadow p-4 text-black shadow-lg lg:p-6">
             <div className="mb-3 flex items-center justify-between gap-6">
               <h2 className="font-display text-2xl leading-none font-black uppercase lg:text-3xl">
                 {lang.location.stops.kaznice}
@@ -117,7 +124,7 @@ export const Map = () => {
                   href={lang.contacts.kaznice_loc}
                   rel="external"
                   title="Káznice Brno - Google Maps"
-                  className="hover:bg-accent flex h-10 w-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
+                  className="hover:bg-primary flex h-10 w-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
                 >
                   <MapIcon />
                   <span className="sr-only">Káznice Brno - Google Maps</span>
@@ -126,7 +133,7 @@ export const Map = () => {
                   href={lang.contacts.kaznice_web}
                   rel="external"
                   title="Káznice Brno - Web"
-                  className="hover:bg-accent flex h-10 w-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
+                  className="hover:bg-primary flex h-10 w-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
                 >
                   <WebIcon />
                   <span className="sr-only">Káznice Brno - Web</span>

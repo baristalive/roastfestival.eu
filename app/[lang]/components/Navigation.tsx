@@ -94,8 +94,10 @@ export const Navigation = () => {
           }`}
         ></div>
         <div
-          className={`relative border-4 px-6 py-2 font-bold tracking-tighter text-white uppercase transition-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${
-            isScrolled ? "border-accent bg-black" : "bg-accent border-black"
+          className={`relative border-4 px-6 py-2 font-bold tracking-tighter uppercase transition-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${
+            isScrolled
+              ? "border-accent text-accent bg-black"
+              : "bg-accent border-black text-black"
           }`}
         >
           {lang.buyTickets || "Book Now"}
