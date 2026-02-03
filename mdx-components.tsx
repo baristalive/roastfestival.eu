@@ -51,10 +51,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       );
     },
     li: ({ children }: PropsWithChildren) => (
-      <li className="px-2 text-base md:px-0 lg:text-xl">{children}</li>
+      <li className="px-2 text-base lg:text-xl">{children}</li>
     ),
     ol: ({ children }: PropsWithChildren) => (
-      <ol className="round-counter mb-4 list-outside list-decimal px-6 md:px-0">
+      <ol className="round-counter mb-4 list-outside list-decimal">
         {children}
       </ol>
     ),

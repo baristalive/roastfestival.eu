@@ -38,22 +38,22 @@ export const Navigation = () => {
         </Link>
       </div>
 
-      <div className="hidden items-center gap-8 text-sm font-bold tracking-widest uppercase md:flex">
+      <div className="flex items-center gap-8 text-sm font-bold tracking-widest uppercase">
         <a
           href="#about"
-          className={`transition-colors ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
+          className={`hidden transition-colors md:inline-block ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
         >
           The Vibe
         </a>
         <a
           href="#lineup"
-          className={`transition-colors ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
+          className={`hidden transition-colors md:inline-block ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
         >
           Lineup
         </a>
         <a
           href="#tickets"
-          className={`transition-colors ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
+          className={`hidden transition-colors md:inline-block ${isScrolled ? "text-primary hover:text-accent" : "hover:text-secondary"}`}
         >
           Tickets
         </a>
