@@ -102,7 +102,7 @@ export const PreviousYears = () => {
           </p>
         </div>
       </div>
-      <div className="flex w-full items-center justify-stretch">
+      <div className="flex w-full flex-col items-center justify-stretch xl:flex-row">
         {years.map((yearData, index) => (
           <YearBlock
             key={yearData.year}

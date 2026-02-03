@@ -158,6 +158,11 @@ body,
     font-size: small;
   }
 }
+.maplibregl-ctrl-attrib {
+  border-radius: 0 !important;
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 0px 0px var(--black);
+}
 
 .map-marker-punk {
   border: 3px solid var(--black);

@@ -10,12 +10,12 @@ export const Program = () => {
 
   return (
     <section
-      className={`bg-ivory bg-dots pt-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
+      className={`bg-ivory bg-dots py-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="lineup"
     >
-      <div className="container mx-auto px-6">
-        <div className="mx-auto flex flex-col items-center p-8 text-center lg:p-12">
-          <h2 className="font-display text-evergreen mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+      <div className="container mx-auto lg:px-6">
+        <div className="mx-auto flex flex-col items-center p-6 text-center lg:p-12">
+          <h2 className="font-display text-evergreen mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
             {lang.programTile.title}
           </h2>
           <p className="text-evergreen/80 mb-8 text-2xl tracking-wider uppercase">

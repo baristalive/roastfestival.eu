@@ -5,21 +5,45 @@ import TramIcon from "@/app/icons/tram";
 import WebIcon from "@/app/icons/web";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 
+const BASE_LAT = 49.1995978;
+const BASE_LNG = 16.6225864;
+const MOBILE_LAT_OFFSET = 0.0015; // ~150 meters north on mobile
+
 export const Map = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
+
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(max-width: 768px)").matches;
+  });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
+  const mapCenter = {
+    latitude: isMobile ? BASE_LAT + MOBILE_LAT_OFFSET : BASE_LAT,
+    longitude: BASE_LNG,
+  };
+
   return (
     <section id="location" className="relative">
       {/* Full-bleed Map */}
-      <div className="h-125 lg:h-225">
+      <div className="h-[120vh] lg:h-225">
         <ReactMap
+          key={isMobile ? "mobile" : "desktop"}
           initialViewState={{
-            latitude: 49.1995978,
-            longitude: 16.6225864,
+            latitude: mapCenter.latitude,
+            longitude: mapCenter.longitude,
             zoom: 15,
           }}
           scrollZoom={false}
@@ -80,7 +104,7 @@ export const Map = () => {
       </div>
 
       {/* Floating Panels */}
-      <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 lg:p-6">
+      <div className="pointer-events-none absolute inset-0 flex flex-col gap-12 p-4 md:justify-between lg:p-6">
         {/* Top floating panel - Venue Info */}
         <div className="pointer-events-auto self-start">
           <div className="bg-accent text-ivory punk-border pop-shadow p-4 shadow-lg lg:p-6">

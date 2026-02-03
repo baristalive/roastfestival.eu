@@ -20,7 +20,7 @@ export const Tickets = () => {
     <section id="tickets" className="bg-primary text-ivory px-6 py-32">
       <div className="container mx-auto">
         <div className="mb-16 text-center">
-          <h2 className="font-display text-ivory mb-4 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+          <h2 className="font-display text-ivory mb-4 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
             {lang.tickets.title}
           </h2>
           <p className="text-secondary text-2xl tracking-wider uppercase">

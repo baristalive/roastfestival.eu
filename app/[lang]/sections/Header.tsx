@@ -35,14 +35,14 @@ export const Header = () => {
 
   return (
     <header className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 -z-10 grid grid-cols-8">
-        <div className="bg-accent bg-lines"></div>
-        <div className="bg-primary bg-dots col-span-4"></div>
-        <div className="bg-secondary col-span-3"></div>
+      <div className="absolute inset-0 -z-10 grid grid-cols-2 md:grid-cols-8">
+        <div className="bg-accent bg-lines hidden md:block"></div>
+        <div className="bg-primary bg-dots md:col-span-4"></div>
+        <div className="bg-secondary md:col-span-3"></div>
       </div>
 
       {/* Interactive Bean Grid - positioned over the right stripe */}
-      <div className="absolute top-0 right-0 bottom-0 w-[37.5%]">
+      <div className="absolute top-0 right-0 bottom-0 w-1/2 md:w-[37.5%]">
         <BeanGrid />
       </div>
 
@@ -58,7 +58,7 @@ export const Header = () => {
             Roast!
           </span>
           <span
-            className="text-stroke absolute top-4 left-4 -z-10 transition-transform duration-150 ease-out"
+            className="text-stroke absolute top-1 left-1 -z-10 transition-transform duration-150 ease-out lg:top-4 lg:left-4"
             style={{
               transform: `translate(${mouseOffset.x}px, ${mouseOffset.y}px)`,
             }}
@@ -67,14 +67,14 @@ export const Header = () => {
           </span>
         </h1>
 
-        <div className="font-display text-mahagony max-w-2xl text-2xl font-bold tracking-tight uppercase md:text-4xl">
+        <div className="font-display text-evergreen max-w-2xl text-2xl font-bold tracking-tight uppercase md:text-4xl">
           {lang.tagline.top}
         </div>
-        <div className="text-wheat font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight uppercase md:text-4xl">
+        <div className="text-evergreen font-display normal mt-4 mb-12 max-w-2xl translate-z-1 -rotate-2 px-4 py-2 text-2xl font-bold tracking-tight uppercase md:text-4xl">
           {lang.tagline.bottom}
         </div>
 
-        <div className="flex flex-col items-center gap-6 md:flex-row">
+        <div className="hidden md:flex">
           <a
             href="#tickets"
             className="group pointer-events-auto relative inline-block"

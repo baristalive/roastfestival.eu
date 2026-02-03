@@ -72,9 +72,9 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="mx-auto flex items-center justify-center gap-8 p-2 pb-12 md:hidden">
+      <div className="mx-auto flex items-center justify-center gap-3 p-2 pb-12 md:hidden">
         {smallWallImages.map((col, idx) => (
-          <div className="flex flex-col gap-1 md:grid" key={`col_${idx}`}>
+          <div className="flex flex-col gap-3 md:grid" key={`col_${idx}`}>
             {col.map((i, idx2) => (
               <ZoomableImage
                 key={`img_${idx2}`}

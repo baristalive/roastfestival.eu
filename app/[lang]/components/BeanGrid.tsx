@@ -21,7 +21,7 @@ export const BeanGrid = () => {
   const beanCount = 500;
 
   return (
-    <div className="pointer-events-none absolute inset-0 flex flex-wrap gap-8 overflow-hidden p-8">
+    <div className="pointer-events-none absolute inset-0 flex flex-wrap gap-3 overflow-hidden p-3 md:gap-8 md:p-8">
       {Array.from({ length: beanCount }).map((_, i) => (
         <div
           key={i}

@@ -34,8 +34,8 @@ export const CaffeinCounter = () => {
   }, [count]);
 
   return (
-    <div className="bg-evergreen text-ivory punk-border flex flex-wrap items-center justify-center gap-12 border-4 p-10 shadow-[12px_12px_0_0_var(--color-accent)]">
-      <div className="min-w-42 text-center">
+    <div className="bg-evergreen text-ivory punk-border flex flex-wrap items-center justify-center gap-12 border-4 p-4 shadow-[12px_12px_0_0_var(--color-accent)] lg:p-10">
+      <div className="text-center md:min-w-42">
         <div className="font-display text-accent text-[12rem] leading-none">
           {count}
         </div>

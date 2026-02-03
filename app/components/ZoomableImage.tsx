@@ -74,9 +74,9 @@ export const ZoomableImage = (
           width: props.zoomed.width,
         }}
       >
-        <span className="img-overlay punk-border pop-shadow animate-pop block">
+        <span className="img-overlay punk-border animate-pop block">
           <ExportedImage
-            className="punk-border pop-shadow animate-pop h-auto max-w-full"
+            className="punk-border md:pop-shadow animate-pop h-auto max-w-full"
             src={props.src}
             height={props.small.height}
             width={props.small.width}

@@ -8,9 +8,9 @@ export const Colab = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="colab" className="relative overflow-hidden pb-12">
+    <section id="colab" className="relative overflow-hidden lg:pb-12">
       {/* Split background */}
-      <div className="absolute inset-0 flex">
+      <div className="absolute inset-0 hidden lg:flex">
         <div className="bg-primary flex-1" />
         <div className="bg-evergreen flex-1" />
       </div>
@@ -25,18 +25,18 @@ export const Colab = () => {
           <polygon points="0,0 50,100 100,0" className="fill-evergreen" />
         </svg>
       </div>
-      <div className="relative pt-24 text-center lg:pt-32">
-        <h2 className="font-display text-ivory mb-8 text-5xl leading-[0.85] font-black uppercase md:text-6xl">
+      <div className="bg-primary relative pt-24 text-center lg:bg-[unset] lg:pt-32">
+        <h2 className="font-display text-ivory mb-8 text-3xl leading-[0.85] font-black uppercase md:text-6xl">
           {lang.colab.title}
         </h2>
-        <p className="text-ivory/80 mx-auto max-w-2xl px-6 text-2xl tracking-wider uppercase">
+        <p className="text-ivory/80 mx-auto max-w-2xl px-6 text-xl tracking-wider uppercase md:text-2xl">
           {lang.colab.description}
         </p>
       </div>
 
       <div className="relative">
         {/* Crossroads paths */}
-        <div className="container mx-auto flex flex-col py-16 lg:flex-row lg:pb-24">
+        <div className="bg-primary container mx-auto flex flex-col lg:flex-row lg:bg-[unset] lg:py-16 lg:pb-24">
           {/* Left path - Exhibitors */}
           <a
             href={`/${params.lang}/colab`}
@@ -90,7 +90,7 @@ export const Colab = () => {
             href={`/${params.lang}/sponsors`}
             title={lang.colab.sponsors.title}
             rel="next"
-            className="group relative flex-1 px-6 py-8 lg:px-12 lg:py-0"
+            className="group bg-evergreen relative flex-1 px-6 py-8 lg:px-12 lg:py-0"
           >
             <div className="relative text-right">
               {/* Direction arrow */}
