@@ -3,9 +3,9 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "dev": "concurrently \"npm run build:watch\" \"firebase emulators:start --only functions\"",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
+    "dev": "concurrently \"npm run build:watch\" \"GOOGLE_APPLICATION_CREDENTIALS=.firebase-adminsdk.json firebase emulators:start --only functions\"",
+    "serve": "npm run build && GOOGLE_APPLICATION_CREDENTIALS=.firebase-adminsdk.json firebase emulators:start --only functions",
+    "shell": "npm run build && GOOGLE_APPLICATION_CREDENTIALS=.firebase-adminsdk.json firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"

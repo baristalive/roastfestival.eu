@@ -6,3 +6,4 @@ node_modules/
 
 # Local Emulator Suite secrets
 .secret.local
+.firebase-adminsdk.json
