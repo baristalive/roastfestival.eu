@@ -1,29 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { initializeApp } from "firebase/app";
+import { useEffect, useState } from "react";
 import {
   fetchAndActivate,
   getRemoteConfig,
   getValue,
 } from "firebase/remote-config";
 import { useParams } from "next/navigation";
-import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import CarouselIcon from "@/app/icons/carousel";
 import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import VideoIcon from "@/app/icons/video";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCUzZ7UIBkSWiS8HGOvOGJU_neEJftyyy4",
-  appId: "1:635139009990:web:936b1cd8582998e00056c7",
-  authDomain: "roastfestival.firebaseapp.com",
-  measurementId: "G-RGNDY5N337",
-  messagingSenderId: "635139009990",
-  projectId: "roastfestival",
-  storageBucket: "roastfestival.appspot.com",
-};
-const app = initializeApp(firebaseConfig);
+import { app } from "@/app/utils/firebase";
 
 const LIMIT = 5;
 

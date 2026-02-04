@@ -1,13 +1,34 @@
 "use client";
 import { useState } from "react";
 import { useParams } from "next/navigation";
+
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import InstagramIcon from "@/app/icons/instagram";
+import { subscribe } from "@/app/utils/firebase";
+import DoubleTickIcon from "@/app/icons/doubletick";
 
 export const StayTuned = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus("loading");
+    try {
+      await subscribe({ email });
+      setStatus("success");
+      setEmail("");
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setStatus("error");
+    }
+  };
 
   return (
     <section id="stay-tuned" className="bg-lines bg-white pb-16 lg:pb-24">
@@ -23,21 +44,43 @@ export const StayTuned = () => {
           <div className="flex w-full max-w-xl flex-col gap-8 lg:gap-6">
             {/* Newsletter signup */}
             <div className="flex flex-1 flex-col gap-4">
-              <div className="punk-border pop-shadow flex overflow-hidden bg-white">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={lang.stayTuned.emailPlaceholder}
-                  className="flex-1 bg-transparent px-4 py-3 text-base font-medium text-black outline-none placeholder:text-black/50"
-                />
-                <button
-                  type="button"
-                  className="bg-primary hover:bg-primary/90 font-display px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors"
+              {status === "success" ? (
+                <div className="punk-border pop-shadow flex items-center justify-center gap-4 bg-white">
+                  <div className="h-12 w-12 text-black">
+                    <DoubleTickIcon />
+                  </div>
+                  <p className="font-display py-3 text-base font-medium text-black uppercase">
+                    Thanks for subscribing!
+                  </p>
+                </div>
+              ) : (
+                <form
+                  onSubmit={handleSubmit}
+                  className="punk-border pop-shadow flex overflow-hidden bg-white"
                 >
-                  {lang.stayTuned.subscribe}
-                </button>
-              </div>
+                  <input
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={lang.stayTuned.emailPlaceholder}
+                    disabled={status === "loading"}
+                    className="flex-1 bg-transparent px-4 py-3 text-base font-medium text-black outline-none placeholder:text-black/50 disabled:opacity-50"
+                  />
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="bg-primary hover:bg-primary/90 font-display cursor-pointer px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {status === "loading" ? "..." : lang.stayTuned.subscribe}
+                  </button>
+                </form>
+              )}
+              {status === "error" && (
+                <p className="text-sm text-red-600">
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </div>
 
             <a
