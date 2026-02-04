@@ -46,7 +46,7 @@ export const Header = () => {
         <BeanGrid />
       </div>
 
-      <div className="pointer-events-none relative container mx-auto flex flex-col items-center px-6 text-center">
+      <div className="pointer-events-none relative container mx-auto flex grow flex-col items-center justify-center px-6 text-center">
         <div className="punk-border pop-shadow normal mb-8 translate-z-1 rotate-2 px-6 py-2">
           <span className="font-display text-mahagony text-xl font-black tracking-tighter uppercase md:text-2xl">
             {lang.date}
@@ -84,7 +84,7 @@ export const Header = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="animate-bounce pb-8">
         <div className="rotate-90 text-4xl font-bold text-black">
           <ArrowIcon />
         </div>

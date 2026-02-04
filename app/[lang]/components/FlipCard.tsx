@@ -1,6 +1,7 @@
 "use client";
 
 import BeanIcon from "@/app/icons/beanicon";
+import CursorQuestionIcon from "@/app/icons/cursorquestion";
 import { PATTERNS } from "@/app/utils/consts";
 
 export type FlipCardProps = {
@@ -34,13 +35,13 @@ export const FlipCard = ({
           className={`punk-border pop-shadow absolute inset-0 flex items-center justify-center p-4 ${patternClass}`}
           style={{ backfaceVisibility: "hidden" }}
         >
-          <div className="flex flex-col items-center gap-2 text-center">
-            <div className="h-16 w-16 opacity-60 lg:h-32 lg:w-32">
+          <div className="flex flex-col items-center gap-2 text-center opacity-60">
+            <div className="h-16 w-16 lg:h-32 lg:w-32">
               <BeanIcon />
             </div>
-            <span className="font-display text-3xl font-bold lg:text-4xl">
-              ?
-            </span>
+            <div className="h-16 w-16">
+              <CursorQuestionIcon />
+            </div>
           </div>
         </div>
 
