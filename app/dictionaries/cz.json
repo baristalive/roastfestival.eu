@@ -559,7 +559,7 @@
       {
         "availability": {
           "start": "2026-01-01",
-          "end": "2025-01-31"
+          "end": "2026-06-30"
         },
         "heading": "1st Crack",
         "price": 400,
@@ -571,8 +571,8 @@
       },
       {
         "availability": {
-          "start": "2026-02-01",
-          "end": "2026-09-11"
+          "start": "2026-07-01",
+          "end": "2026-09-09"
         },
         "heading": "2nd Crack",
         "price": 500,
