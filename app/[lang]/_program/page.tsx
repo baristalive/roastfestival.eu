@@ -17,7 +17,7 @@ import {
 } from "./contexts";
 import ToolBar from "./components/ToolBar";
 import { useParams } from "next/navigation";
-import DaySchedule from "../components/DaySchedule";
+import DaySchedule from "./components/DaySchedule";
 
 const SCHEDULE_FILTER_DAYS = "schedule_filter_days";
 const SCHEDULE_FILTER_TRACKS = "schedule_filter_tracks";

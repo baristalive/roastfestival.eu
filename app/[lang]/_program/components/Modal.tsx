@@ -6,7 +6,7 @@ import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import { useParams } from "next/navigation";
 import React, { PropsWithChildren, useEffect } from "react";
-import { StationIcon } from "./StationIcon";
+import { StationIcon } from "../../../components/StationIcon";
 import ExportedImage from "next-image-export-optimizer";
 import WebIcon from "@/app/icons/web";
 import YoutubeIcon from "@/app/icons/youtube";

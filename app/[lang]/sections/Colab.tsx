@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import { StationIcon } from "../components/StationIcon";
+import { StationIcon } from "@/app/components/StationIcon";
 
 export const Colab = () => {
   const params = useParams();

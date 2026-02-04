@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import dictionaries from "./dictionaries/all";
 
 export const viewport: Viewport = {
-  themeColor: "#f7f7f7",
+  themeColor: "#9929ea",
 };
 
 export const metadata: Metadata = {

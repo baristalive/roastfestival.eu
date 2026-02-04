@@ -6,7 +6,7 @@ import dictionaries, {
   AllTracks,
   SupportedLanguages,
 } from "@/app/dictionaries/all";
-import { StationIcon } from "../../components/StationIcon";
+import { StationIcon } from "@/app/components/StationIcon";
 
 const Dropdown = () => {
   const params = useParams();

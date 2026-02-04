@@ -1,5 +1,3 @@
-import { SupportedLanguages } from "../dictionaries/all";
-
 export enum Availability {
   AvailableNow,
   SoldOut,
@@ -54,28 +52,7 @@ export const getAvailability = (availability: AvailabilityRange = {}) => {
   return Availability.Available;
 };
 
-export const availabilityToClassName = (availability: Availability) => {
-  if (availability === Availability.Soon) return "availability__soon";
-  if (availability === Availability.SoldOut) return "availability__sold-out";
-  return "";
-};
 export const toLocaleDateString = (dateString: string) => {
   const date = new Date(dateString);
   return `${date.getDate()}/${date.getMonth() + 1}`;
-};
-
-export const availabilityRemainingToLocale = (
-  date: string,
-  lang: SupportedLanguages,
-) => {
-  const locale = lang === "cz" ? "cs-CZ" : "en-EN";
-  const formatter = new Intl.RelativeTimeFormat(locale, { numeric: "always" });
-  const remaining = new Date(date).getTime() - new Date().getTime();
-  const days = Math.ceil(remaining / (1000 * 60 * 60 * 24));
-
-  return formatter
-    .formatToParts(days, "day")
-    .slice(1)
-    .map((p) => p.value)
-    .join("");
 };

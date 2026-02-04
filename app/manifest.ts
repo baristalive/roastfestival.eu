@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    background_color: "#fff",
+    background_color: "#9929ea",
     description: dictionaries.en.metadata.description,
     display: "browser",
     icons: [

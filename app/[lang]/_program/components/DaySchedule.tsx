@@ -8,9 +8,9 @@ import {
 } from "@/app/dictionaries/all";
 import { useParams } from "next/navigation";
 import React from "react";
-import { StationIcon } from "./StationIcon";
+import { StationIcon } from "../../../components/StationIcon";
 import Modal from "./Modal";
-import { ScheduleViewType } from "../_program/contexts";
+import { ScheduleViewType } from "../contexts";
 
 const MINUTE_STRINGS = Array.from(Array(6), (_, idxm) =>
   String(idxm).padEnd(2, "0"),
