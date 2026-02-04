@@ -21,7 +21,7 @@ export const Program = () => {
           <p className="mb-8 text-2xl tracking-wider text-black/80 uppercase">
             {lang.programTile.loadingText}
           </p>
-          <div className="mb-6 flex gap-4 text-black">
+          <div className="mb-12 flex gap-4 text-black">
             <span
               className="animate-bean-pulse w-12"
               style={{ animationDelay: "0s" }}
@@ -40,14 +40,6 @@ export const Program = () => {
             >
               <BeanIcon />
             </span>
-          </div>
-          <div className="mb-12 w-full bg-white">
-            <div className="animate-pop punk-border pop-shadow bg-primary/10 relative h-12 w-full border-2">
-              <div className="bg-primary animate-progress-load h-full border-r-4 border-black" />
-              <p className="absolute inset-0 flex items-center justify-start pl-6 text-base font-bold text-black">
-                20%
-              </p>
-            </div>
           </div>
           <CaffeinCounter />
         </div>

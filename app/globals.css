@@ -19,7 +19,6 @@
   --animate-float: float 6s ease-in-out infinite;
   --animate-pop: pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   --animate-marquee: marquee 50s linear infinite;
-  --animate-progress-load: progress-load 1.5s ease-out forwards;
   --animate-bean-pulse: bean-pulse 1.5s ease-in-out infinite;
 
   @keyframes float {
@@ -49,15 +48,6 @@
     }
     100% {
       transform: translateX(-50%);
-    }
-  }
-
-  @keyframes progress-load {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 20%;
     }
   }
 
@@ -449,13 +439,13 @@ ol.round-counter li::before {
 }
 
 /* Apply jitter based on data attribute */
-html[data-caffeine-shake="1"] section *:not(.animate-progress-load),
+html[data-caffeine-shake="1"] section *,
 html[data-caffeine-shake="1"] nav *,
 html[data-caffeine-shake="1"] header * {
   animation: jitter-light 0.1s linear infinite;
 }
 
-html[data-caffeine-shake="2"] section *:not(.animate-progress-load),
+html[data-caffeine-shake="2"] section *,
 html[data-caffeine-shake="2"] nav *,
 html[data-caffeine-shake="2"] header * {
   animation: jitter-heavy 0.08s linear infinite;

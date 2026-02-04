@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useParams } from "next/navigation";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import InstagramIcon from "@/app/icons/instagram";
 import { subscribe } from "@/app/utils/firebase";
 import DoubleTickIcon from "@/app/icons/doubletick";
+import InstagramFeed from "../components/InstagramFeed";
 
 export const StayTuned = () => {
   const params = useParams();
@@ -32,7 +32,7 @@ export const StayTuned = () => {
 
   return (
     <section id="stay-tuned" className="bg-lines bg-white pb-16 lg:pb-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto flex flex-col gap-8 px-6">
         <div className="flex flex-col items-center text-center">
           <p className="font-display mb-2 text-2xl font-bold tracking-wider text-black uppercase md:text-3xl">
             {lang.stayTuned.title}
@@ -50,7 +50,7 @@ export const StayTuned = () => {
                     <DoubleTickIcon />
                   </div>
                   <p className="font-display py-3 text-base font-medium text-black uppercase">
-                    Thanks for subscribing!
+                    {lang.stayTuned.successMessage}
                   </p>
                 </div>
               ) : (
@@ -78,26 +78,14 @@ export const StayTuned = () => {
               )}
               {status === "error" && (
                 <p className="text-sm text-red-600">
-                  Something went wrong. Please try again.
+                  {lang.stayTuned.errorMessage}
                 </p>
               )}
             </div>
-
-            <a
-              href={lang.contacts.instagram}
-              target="_blank"
-              rel="external"
-              title="Instagram"
-              className="text-primary group flex items-center justify-center gap-3 px-6 py-3 transition-colors"
-            >
-              <span className="h-12 w-12 transition-transform group-hover:scale-110">
-                <InstagramIcon />
-              </span>
-              <span className="font-display text-sm font-bold tracking-wider uppercase">
-                {lang.stayTuned.followUs}
-              </span>
-            </a>
           </div>
+        </div>
+        <div className="aspect-square w-full cursor-pointer md:hidden">
+          <InstagramFeed />
         </div>
       </div>
     </section>

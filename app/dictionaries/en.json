@@ -380,7 +380,9 @@
     "emailPlaceholder": "Your email",
     "subscribe": "Subscribe",
     "followUs": "Follow us",
-    "addCaffeine": "Add caffeine!"
+    "addCaffeine": "Add caffeine!",
+    "successMessage": "Thanks for subscribing!",
+    "errorMessage": "Something went wrong. Please try again."
   },
   "caffeineCounter": {
     "jitterLevel": "Jitter Level",

@@ -412,11 +412,13 @@
     "subtitle": "Přihlas se k odběru novinek a buď v obraze o všech, co se na chystají na Roast!",
     "emailPlaceholder": "Tvůj e-mail",
     "subscribe": "Chci vědět víc!",
-    "followUs": "Sleduj nás"
+    "followUs": "Sleduj nás",
+    "successMessage": "Díky za přihlášení k odběru!",
+    "errorMessage": "Něco se pokazilo. Zkuste to prosím znovu."
   },
   "caffeineCounter": {
     "jitterLevel": "Hladina šílenství",
-    "pressForEnergy": "Dodej víc energie",
+    "pressForEnergy": "Dodej nám energii",
     "calmDown": "Ještě!",
     "espresso": "+ Espresso",
     "detox": "Zklidni se!",

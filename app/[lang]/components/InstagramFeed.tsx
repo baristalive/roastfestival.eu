@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
   fetchAndActivate,
   getRemoteConfig,
@@ -13,8 +13,9 @@ import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import VideoIcon from "@/app/icons/video";
 import { app } from "@/app/utils/firebase";
+import { PATTERNS } from "@/app/utils/consts";
 
-const LIMIT = 5;
+const LIMIT = 7;
 
 const INSTAGRAM_PARAMS = new URLSearchParams({
   fields: "media_url,permalink,media_type,thumbnail_url,caption",
@@ -52,11 +53,11 @@ const ContentTile = (post: InstagramPost) => {
     post.media_type === "VIDEO" ? post.thumbnail_url : post.media_url;
   return (
     <a href={post.permalink} rel="external" target="_blank">
-      <div className="img-overlay h-64 w-64 before:z-10">
+      <div className="img-overlay aspect-square w-full before:z-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={imageSrc}
-          className="absolute top-0 left-0 z-0 h-full w-full rounded-2xl object-cover"
+          className="absolute top-0 left-0 z-0 h-full w-full object-cover"
           alt={post.caption}
         />
         <div className="absolute top-3 right-3 z-20 text-xl text-white">
@@ -67,11 +68,7 @@ const ContentTile = (post: InstagramPost) => {
   );
 };
 
-const ContentTileSkeleton = () => (
-  <div className="h-64 w-64 animate-pulse rounded-2xl bg-slate-300" />
-);
-
-const InstagramFeed = () => {
+export const InstagramFeed = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   const [posts, setPosts] = useState([] as InstagramPost[]);
@@ -109,59 +106,57 @@ const InstagramFeed = () => {
   }, [igApiKey]);
 
   return (
-    <section>
-      <div className="mx-auto grid max-w-475 items-end gap-12 py-8 lg:grid-cols-[1fr,3fr] 2xl:gap-32">
-        <div className="flex flex-col px-8 md:p-12">
-          <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
-            {lang.social.title}
-          </h2>
-          <div className="space-y-10 text-base leading-normal 2xl:text-xl">
-            {lang.social.text}
-          </div>
-          <div className="my-12 flex gap-4 text-sm md:text-xl 2xl:text-2xl">
-            <a
-              href={lang.contacts.instagram}
-              title="Instagram"
-              rel="external"
-              className="nav"
-              target="_blank"
-            >
-              <InstagramIcon />
-              <span className="sr-only">Instagram</span>
-            </a>
-            <a
-              href={lang.contacts.facebook}
-              title="Facebook"
-              rel="external"
-              className="nav"
-              target="_blank"
-            >
-              <FacebookIcon />
-              <span className="sr-only">Facebook</span>
-            </a>
-          </div>
-        </div>
-        <div className="animate-hover-pause carousel flex overflow-hidden py-4">
-          <div className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4 pr-4 will-change-transform">
-            {posts
-              ? posts.map((p) => <ContentTile {...p} key={p.id} />)
-              : Array(LIMIT)
-                  .fill(0)
-                  .map((_, idx) => <ContentTileSkeleton key={idx} />)}
-          </div>
-          <div
-            className="flex shrink-0 grow-0 basis-full animate-[scrolling_90s_linear_infinite] gap-4 pr-4 will-change-transform"
-            aria-hidden
-          >
-            {posts
-              ? posts.map((p) => <ContentTile {...p} key={p.id} />)
-              : Array(LIMIT)
-                  .fill(0)
-                  .map((_, idx) => <ContentTileSkeleton key={idx} />)}
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="animate-pop punk-border pop-shadow bg-primary grid grid-cols-3 text-center text-white">
+      {posts.length > 0
+        ? posts.map((p, idx) => (
+            <Fragment key={p.id}>
+              {idx === 4 && (
+                <a
+                  href={lang.contacts.instagram}
+                  title="Instagram"
+                  rel="external"
+                  className="block aspect-square w-full p-6"
+                  target="_blank"
+                >
+                  <InstagramIcon />
+                  <span className="sr-only">Instagram</span>
+                </a>
+              )}
+              <ContentTile {...p} />
+            </Fragment>
+          ))
+        : Array(LIMIT)
+            .fill(0)
+            .map((_, idx) => (
+              <Fragment key={idx}>
+                {idx === 4 && (
+                  <a
+                    href={lang.contacts.instagram}
+                    title="Instagram"
+                    rel="external"
+                    className="block aspect-square w-full p-6"
+                    target="_blank"
+                  >
+                    <InstagramIcon />
+                    <span className="sr-only">Instagram</span>
+                  </a>
+                )}
+                <div
+                  className={`aspect-square w-full animate-pulse ${PATTERNS[idx % PATTERNS.length]} `}
+                />
+              </Fragment>
+            ))}
+      <a
+        href={lang.contacts.facebook}
+        title="Facebook"
+        rel="external"
+        className="bg-secondary block aspect-square w-full p-6"
+        target="_blank"
+      >
+        <FacebookIcon />
+        <span className="sr-only">Facebook</span>
+      </a>
+    </div>
   );
 };
 

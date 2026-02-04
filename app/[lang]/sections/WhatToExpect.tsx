@@ -6,6 +6,7 @@ import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { FlipCard } from "@/app/[lang]/components/FlipCard";
 import { ScoreCard } from "@/app/[lang]/components/ScoreCard";
 import { MobileCardStack } from "@/app/[lang]/components/MobileCardStack";
+import InstagramFeed from "../components/InstagramFeed";
 
 export const WhatToExpect = () => {
   const params = useParams();
@@ -69,6 +70,9 @@ export const WhatToExpect = () => {
                 />
               </Fragment>
             ))}
+            <div className="aspect-square w-[20em] cursor-pointer">
+              <InstagramFeed />
+            </div>
           </div>
         </div>
       </div>
