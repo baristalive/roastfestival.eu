@@ -118,10 +118,15 @@ const preprocessShared = (data: typeof shared) => {
 
 type Tickets = {
   title: string;
+  subtitle: string;
+  nowOnSale: string;
+  priceIncreases: string;
   discounted: string;
   timeLeft: string;
   soonAvailable: string;
+  comingSoon: string;
   soldOut: string;
+  missedOut: string;
   lastDay: string;
   alreadyAvailable: string;
   priceList: {
@@ -129,25 +134,9 @@ type Tickets = {
       start?: string;
       end?: string;
     };
-    subheading: string;
-    heading: (string | { superscript: string })[];
-    prices: {
-      title: string;
-      full: number;
-      discounted?: number;
-      highlight?: boolean;
-      note?: string;
-      overlay?: {
-        title: string;
-        full: number;
-        discounted?: number;
-        addon?: string;
-        availability: {
-          start?: string;
-          end?: string;
-        };
-      };
-    }[];
+    heading: string;
+    price: number;
+    tiers: string[];
   }[];
 };
 

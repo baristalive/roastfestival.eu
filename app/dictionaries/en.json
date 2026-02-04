@@ -514,11 +514,16 @@
   },
   "tickets": {
     "title": "Tickets",
+    "subtitle": "Limited Availability",
+    "nowOnSale": "Available now",
+    "priceIncreases": "Price increases",
     "discounted": "Discounted",
     "timeLeft": "Remaining",
     "lastDay": "last day",
     "soonAvailable": "Available from",
+    "comingSoon": "Coming soon",
     "soldOut": "Sold out",
+    "missedOut": "You've missed this one",
     "alreadyAvailable": "Available now",
     "priceList": [
       {
@@ -526,43 +531,12 @@
           "start": "2025-01-01",
           "end": "2025-05-31"
         },
-        "subheading": "Pre-sale",
-        "heading": [
-          "1",
-          {
-            "superscript": "st"
-          },
-          " ",
-          "Crack"
-        ],
-        "prices": [
-          {
-            "title": "Full event",
-            "full": 400,
-            "discounted": 300,
-            "addon": "Cup 100 Kč",
-            "overlay": {
-              "title": "Full event",
-              "full": 400,
-              "discounted": 300,
-              "addon": "Cup free",
-              "availability": {
-                "start": "2024-12-11",
-                "end": "2025-01-01"
-              }
-            }
-          },
-          {
-            "title": "Saturday",
-            "full": 300,
-            "discounted": 250,
-            "addon": "Cup 100 Kč"
-          },
-          {
-            "title": "Sunday",
-            "full": 250,
-            "addon": "Cup 100 Kč"
-          }
+        "heading": "1st Crack",
+        "price": 400,
+        "tiers": [
+          "Full event (cup for free)",
+          "Sobota (discount)",
+          "Neděle (discount)"
         ]
       },
       {
@@ -570,54 +544,18 @@
           "start": "2025-06-01",
           "end": "2025-09-19"
         },
-        "subheading": "Pre-sale",
-        "heading": [
-          "2",
-          {
-            "superscript": "nd"
-          },
-          " ",
-          "Crack"
-        ],
-        "prices": [
-          {
-            "title": "Full event",
-            "full": 500,
-            "discounted": 400,
-            "note": "Cup 250 Kč"
-          },
-          {
-            "title": "Saturday",
-            "full": 400,
-            "discounted": 350,
-            "note": "Cup 300 Kč"
-          },
-          {
-            "title": "Sunday",
-            "full": 350,
-            "note": "Cup 300 Kč"
-          }
+        "heading": "2nd Crack",
+        "price": 500,
+        "tiers": [
+          "Full event (with cup or without)",
+          "Sobota (discount)",
+          "Neděle (discount)"
         ]
       },
       {
-        "subheading": "Last chance",
-        "heading": ["Walk-up"],
-        "prices": [
-          {
-            "title": "Full event",
-            "full": 600,
-            "discounted": 500
-          },
-          {
-            "title": "Saturday",
-            "full": 500,
-            "discounted": 450
-          },
-          {
-            "title": "Sunday",
-            "full": 450
-          }
-        ]
+        "heading": "Walk-up",
+        "price": 600,
+        "tiers": ["Full event", "Sobota (discount)", "Neděle (discount)"]
       }
     ]
   },

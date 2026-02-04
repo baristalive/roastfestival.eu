@@ -59,10 +59,9 @@ export const availabilityToClassName = (availability: Availability) => {
   if (availability === Availability.SoldOut) return "availability__sold-out";
   return "";
 };
-export const toLocaleDateString = (date: string, lang: SupportedLanguages) => {
-  const opts = { day: "numeric" as const, month: "short" as const };
-  const locale = lang === "cz" ? "cs-CZ" : "en-EN";
-  return new Date(date).toLocaleDateString(locale, opts);
+export const toLocaleDateString = (dateString: string) => {
+  const date = new Date(dateString);
+  return `${date.getDate()}/${date.getMonth() + 1}`;
 };
 
 export const availabilityRemainingToLocale = (
