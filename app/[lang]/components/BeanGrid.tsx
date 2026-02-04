@@ -21,11 +21,11 @@ export const BeanGrid = () => {
   const beanCount = 500;
 
   return (
-    <div className="pointer-events-none absolute inset-0 flex flex-wrap gap-3 overflow-hidden p-3 md:gap-8 md:p-8">
+    <div className="pointer-events-none absolute inset-0 -mr-16 flex flex-wrap overflow-hidden p-2">
       {Array.from({ length: beanCount }).map((_, i) => (
         <div
           key={i}
-          className="pointer-events-auto flex items-center justify-center"
+          className="pointer-events-auto flex items-center justify-center p-3"
           onMouseEnter={() => handleMouseEnter(i)}
           onMouseLeave={() => handleMouseLeave(i)}
         >
