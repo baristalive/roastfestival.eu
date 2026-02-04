@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useParams } from "next/navigation";
 import BeanIcon from "@/app/icons/beanicon";
 import { PATTERNS } from "@/app/utils/consts";
 import TouchIcon from "@/app/icons/touch";
 import ArrowIcon from "@/app/icons/arrow";
+import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 
 type CardItem = {
   title: string;
@@ -16,6 +18,8 @@ type MobileCardStackProps = {
 };
 
 export const MobileCardStack = ({ items }: MobileCardStackProps) => {
+  const params = useParams();
+  const lang = dictionaries[params.lang as SupportedLanguages];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const [swipeOffset, setSwipeOffset] = useState(0);
@@ -193,7 +197,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
                   ? "bg-primary"
                   : "bg-transparent"
             }`}
-            aria-label={`Go to card ${index + 1}`}
+            aria-label={`${lang.mobileCardStack.goToCard} ${index + 1}`}
           />
         ))}
       </div>
@@ -222,8 +226,8 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
       {/* Flip hint */}
       <p className="font-body text-sm text-black opacity-60">
         {isFlipped
-          ? "Tap to hide, swipe to next"
-          : "Tap card to reveal, swipe to next"}
+          ? lang.mobileCardStack.tapToHide
+          : lang.mobileCardStack.tapToReveal}
       </p>
     </div>
   );

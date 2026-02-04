@@ -393,6 +393,11 @@
     "sideEffects": "Side effects include: seeing through time, extreme productivity, and talking very fast."
   },
   "learnMore": "learn more",
+  "mobileCardStack": {
+    "goToCard": "Go to card",
+    "tapToHide": "Tap to hide, swipe to next",
+    "tapToReveal": "Tap card to reveal, swipe to next"
+  },
   "location": {
     "addressTitle": "Address",
     "howToTitle": "How to get there?",

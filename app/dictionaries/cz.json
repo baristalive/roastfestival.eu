@@ -425,6 +425,11 @@
     "sideEffects": "Vedlejší účinky: vysoké dávky způsobují cestování časem, extrémní produktivitu a velmi rychlé mluvení."
   },
   "learnMore": "chci vědět víc",
+  "mobileCardStack": {
+    "goToCard": "Přejít na kartu",
+    "tapToHide": "Klepnutím skryješ, přejetím na další",
+    "tapToReveal": "Klepnutím zobrazíš, přejetím na další"
+  },
   "location": {
     "addressTitle": "Adresa",
     "howToTitle": "Jak se na festival dostanete?",
