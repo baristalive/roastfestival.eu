@@ -1,4 +1,9 @@
 {
+  "nav": {
+    "about": "O festivalu",
+    "lineup": "Program",
+    "tickets": "Vstupenky"
+  },
   "about": {
     "text": [
       "Pravidla? Neexistují. Žádné bílé ubrusy. Prostě kávové zrno té nejvyšší kvality. Bez skrupulí a vytáček. Nezáleží zda se teprve rozkoukáváš nebo máš vše v malíku. Káva je tu pro tebe a k tomu společnost těch, co ji upražili."

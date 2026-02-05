@@ -75,19 +75,19 @@ export const Navigation = () => {
           href="#about"
           className={`transition-colors ${isScrolled ? "text-accent hover:text-black" : "hover:text-accent"}`}
         >
-          The Vibe
+          {lang.nav.about}
         </a>
         <a
           href="#lineup"
           className={`transition-colors ${isScrolled ? "text-accent hover:text-black" : "hover:text-accent"}`}
         >
-          Lineup
+          {lang.nav.lineup}
         </a>
         <a
           href="#tickets"
           className={`transition-colors ${isScrolled ? "text-accent hover:text-black" : "hover:text-accent"}`}
         >
-          Tickets
+          {lang.nav.tickets}
         </a>
         <Link
           href={params.lang === "cz" ? "./en" : "./cz"}
