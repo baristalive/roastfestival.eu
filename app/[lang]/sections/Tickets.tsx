@@ -2,6 +2,7 @@
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { TicketCard } from "../components/TicketCard";
+import { Availability, getAvailability } from "@/app/utils/ticket";
 
 export const Tickets = () => {
   const params = useParams();
@@ -9,6 +10,9 @@ export const Tickets = () => {
   const lang = dictionaries[langCode];
 
   const ticketTiers = lang.tickets.priceList.slice(0, 3);
+  const anyFeatured = ticketTiers.some(
+    (t) => getAvailability(t.availability) === Availability.AvailableNow,
+  );
 
   return (
     <section id="tickets" className="bg-primary px-6 py-32 text-white">
@@ -27,6 +31,7 @@ export const Tickets = () => {
             <TicketCard
               key={idx}
               tier={tier}
+              shouldFeatureRegardless={!anyFeatured && idx === 0}
               ticketsHref={lang.contacts.tickets}
               labels={{
                 buyTickets: lang.buyTickets,

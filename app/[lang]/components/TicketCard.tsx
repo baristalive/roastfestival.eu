@@ -15,6 +15,7 @@ type TicketTier = {
 type TicketCardProps = {
   tier: TicketTier;
   ticketsHref: string;
+  shouldFeatureRegardless?: boolean;
   labels: {
     buyTickets: string;
     comingSoon: string;
@@ -25,7 +26,12 @@ type TicketCardProps = {
   };
 };
 
-export const TicketCard = ({ labels, ticketsHref, tier }: TicketCardProps) => {
+export const TicketCard = ({
+  labels,
+  shouldFeatureRegardless,
+  ticketsHref,
+  tier,
+}: TicketCardProps) => {
   const availability = getAvailability(tier.availability);
   const isSoldOut = availability === Availability.SoldOut;
   const isAvailableNow = availability === Availability.AvailableNow;
@@ -37,7 +43,7 @@ export const TicketCard = ({ labels, ticketsHref, tier }: TicketCardProps) => {
   const cardClassName = `relative flex-col ${
     isFeatured
       ? "flex bg-accent text-black pop-shadow transition-transform hover:-translate-x-2 hover:-translate-y-12 md:-translate-y-8"
-      : "hidden lg:flex bg-secondary group text-black"
+      : `${shouldFeatureRegardless ? "flex" : "hidden lg:flex"} bg-secondary group text-black`
   } ${isSoldOut ? "opacity-50" : ""}`;
 
   const cardContent = (
@@ -72,17 +78,17 @@ export const TicketCard = ({ labels, ticketsHref, tier }: TicketCardProps) => {
           ))}
         </ul>
         {isSoldOut ? (
-          <span className="font-display w-full cursor-not-allowed bg-black/50 py-4 text-center text-xl font-black text-white/70 uppercase">
+          <span className="font-display w-full cursor-not-allowed bg-black/50 px-2 py-4 text-center text-xl font-black text-white/70 uppercase">
             {labels.missedOut}
           </span>
         ) : isUpcoming ? (
-          <span className="font-display w-full bg-black py-4 text-center text-lg font-black text-white uppercase">
+          <span className="font-display w-full bg-black px-2 py-4 text-center text-lg font-black text-white uppercase">
             {tier.availability?.start
               ? `${labels.soonAvailable} ${toLocaleDateString(tier.availability.start)}`
               : labels.comingSoon}
           </span>
         ) : (
-          <span className="font-display w-full bg-black py-4 text-center text-xl font-black text-white uppercase">
+          <span className="font-display px-2text-center w-full bg-black py-4 text-xl font-black text-white uppercase">
             {labels.buyTickets}
           </span>
         )}
