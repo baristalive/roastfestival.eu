@@ -36,7 +36,7 @@ export const TicketCard = ({ labels, ticketsHref, tier }: TicketCardProps) => {
 
   const cardClassName = `relative flex-col ${
     isFeatured
-      ? "flex bg-accent text-black shadow-[20px_20px_0px_0px_var(--color-primary)] transition-shadow hover:shadow-[24px_24px_0px_0px_var(--color-black)] md:-translate-y-8"
+      ? "flex bg-accent text-black pop-shadow transition-transform hover:-translate-x-2 hover:-translate-y-12 md:-translate-y-8"
       : "hidden lg:flex bg-secondary group text-black"
   } ${isSoldOut ? "opacity-50" : ""}`;
 
@@ -54,11 +54,6 @@ export const TicketCard = ({ labels, ticketsHref, tier }: TicketCardProps) => {
         {isSoldOut && (
           <span className="bg-accent px-4 py-2 text-xs font-bold text-black uppercase">
             {labels.soldOut}
-          </span>
-        )}
-        {isUpcoming && tier.availability?.start && (
-          <span className="bg-primary animate-pulse px-2 py-0.5 text-xs font-bold text-white uppercase">
-            {labels.soonAvailable} {toLocaleDateString(tier.availability.start)}
           </span>
         )}
       </div>

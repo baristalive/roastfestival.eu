@@ -44,7 +44,9 @@ export const Footer = () => {
             <span className="mb-2 text-xs tracking-[0.5em] opacity-60">
               {params.lang === "cz" ? "Místo" : "Location"}
             </span>
-            <span className="text-md">{lang.place}</span>
+            <span className="text-md text-accent leading-relaxed">
+              {lang.place}
+            </span>
           </div>
           <div className="flex flex-col items-center">
             <span className="mb-2 text-xs tracking-[0.5em] opacity-60">

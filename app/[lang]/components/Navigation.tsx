@@ -38,9 +38,9 @@ export const Navigation = () => {
     sessionStorage.setItem(SCROLL_STORAGE_KEY, window.scrollY.toString());
   };
 
-  const languageSwitcherClasses = `translate-z-1 border-4 border-black  text-sm font-bold tracking-widest uppercase transition-all hover:-rotate-2 ${
+  const languageSwitcherClasses = `translate-z-1 border-4 text-sm font-bold tracking-widest uppercase transition-all hover:-rotate-2 ${
     isScrolled
-      ? "border-secondary text-secondary hover:bg-secondary hover:text-black"
+      ? "border-accent text-accent hover:bg-accent hover:text-black"
       : "hover:bg-accent"
   }`;
 
@@ -73,19 +73,19 @@ export const Navigation = () => {
       <div className="hidden items-center gap-8 text-sm font-bold tracking-widest uppercase md:order-2 md:flex">
         <a
           href="#about"
-          className={`transition-colors ${isScrolled ? "text-secondary hover:text-accent" : "hover:text-secondary"}`}
+          className={`transition-colors ${isScrolled ? "text-accent hover:text-black" : "hover:text-accent"}`}
         >
           The Vibe
         </a>
         <a
           href="#lineup"
-          className={`transition-colors ${isScrolled ? "text-secondary hover:text-accent" : "hover:text-secondary"}`}
+          className={`transition-colors ${isScrolled ? "text-accent hover:text-black" : "hover:text-accent"}`}
         >
           Lineup
         </a>
         <a
           href="#tickets"
-          className={`transition-colors ${isScrolled ? "text-secondary hover:text-accent" : "hover:text-secondary"}`}
+          className={`transition-colors ${isScrolled ? "text-accent hover:text-black" : "hover:text-accent"}`}
         >
           Tickets
         </a>
