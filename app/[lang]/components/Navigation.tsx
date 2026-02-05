@@ -98,10 +98,7 @@ export const Navigation = () => {
           {params.lang === "cz" ? "EN" : "CZ"}
         </Link>
       </div>
-      <a
-        href={lang.contacts.tickets}
-        className="group relative order-3 inline-block"
-      >
+      <a href="#tickets" className="group relative order-3 inline-block">
         <div
           className={`absolute inset-0 translate-x-1 translate-y-1 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5 ${
             isScrolled ? "bg-accent" : "bg-black"

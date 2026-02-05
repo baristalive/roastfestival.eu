@@ -542,13 +542,13 @@
     "priceList": [
       {
         "availability": {
-          "start": "2026-01-01",
+          "start": "2026-02-13",
           "end": "2026-06-30"
         },
         "heading": "1st Crack",
         "price": 400,
         "tiers": [
-          "Full event (cup for free)",
+          "Full event (cup at a discount)",
           "Sobota (discount)",
           "Neděle (discount)"
         ]
@@ -615,6 +615,6 @@
     }
   },
   "metadata": {
-    "description": "Brno Festival of Coffee and Roasters 2025"
+    "description": "Brno Festival of Coffee and Roasters 2026"
   }
 }

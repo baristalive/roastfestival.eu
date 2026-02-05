@@ -572,7 +572,7 @@
     "priceList": [
       {
         "availability": {
-          "start": "2026-01-01",
+          "start": "2026-02-13",
           "end": "2026-06-30"
         },
         "heading": "1st Crack",
@@ -643,6 +643,6 @@
     }
   },
   "metadata": {
-    "description": "Brněnský festival kávy a pražíren 2025"
+    "description": "Brněnský festival kávy a pražíren 2026"
   }
 }

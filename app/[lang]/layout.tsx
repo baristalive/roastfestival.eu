@@ -19,7 +19,7 @@ export async function generateMetadata({
 
 export function generateViewport() {
   return {
-    themeColor: "#ffa600",
+    themeColor: "#f51978",
   };
 }
 
