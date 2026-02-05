@@ -41,20 +41,36 @@ export const Info = () => {
             </div>
 
             {/* CTA Card */}
-            <a
-              href={lang.exhibitors.formLink}
-              rel="external"
-              target="_blank"
-              title={lang.exhibitors.cta}
-              className="bg-accent punk-border pop-shadow group flex flex-col items-center justify-center gap-6 p-8 text-black transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
-            >
-              <div className="text-6xl lg:text-7xl">
-                <ArrowIcon />
-              </div>
-              <span className="font-display text-center text-2xl font-black tracking-wider uppercase lg:text-3xl">
-                {lang.exhibitors.cta}
-              </span>
-            </a>
+            <div className="flex flex-col items-stretch justify-stretch gap-8">
+              <a
+                href={lang.forms.roasters}
+                rel="external"
+                target="_blank"
+                title={lang.exhibitors.cta}
+                className="bg-accent punk-border pop-shadow group flex h-full items-center justify-center px-8 py-2 text-black transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:px-10"
+              >
+                <span className="font-display text-center text-2xl font-black tracking-wider uppercase lg:text-3xl">
+                  {lang.exhibitors.cta}
+                </span>
+                <div className="aspect-square h-24">
+                  <ArrowIcon />
+                </div>
+              </a>
+              <a
+                href={lang.forms.gastro}
+                rel="external"
+                target="_blank"
+                title={lang.gastro.cta}
+                className="bg-secondary punk-border pop-shadow group flex h-full items-center justify-center gap-6 p-2 px-8 text-white transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:px-10"
+              >
+                <span className="font-display text-center text-2xl font-black tracking-wider uppercase lg:text-3xl">
+                  {lang.gastro.cta}
+                </span>
+                <div className="aspect-square h-24">
+                  <ArrowIcon />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>

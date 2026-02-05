@@ -4,9 +4,12 @@
     "lineup": "Program",
     "tickets": "Vstupenky"
   },
+  "forms": {
+    "roasters": "https://forms.gle/en47mXJnzqyuQMtv6"
+  },
   "about": {
     "text": [
-      "Pravidla? Neexistují. Žádné bílé ubrusy. Prostě kávové zrno té nejvyšší kvality. Bez skrupulí a vytáček. Nezáleží zda se teprve rozkoukáváš nebo máš vše v malíku. Káva je tu pro tebe a k tomu společnost těch, co ji upražili."
+      "Pravidla? Neexistují. Žádné bílé ubrusy. Prostě kávové zrno té nejvyšší kvality. Bez skrupulí a vytáček. Nezáleží, zda se teprve rozkoukáváš nebo máš vše v malíku. Káva je tu pro tebe a k tomu společnost těch, co ji upražili."
     ],
     "title": "Co je roast!?"
   },
@@ -21,17 +24,19 @@
     },
     "sponsors": {
       "button": "Zjistit podrobnosti",
-      "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
+      "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci a propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
       "title": "Sponzoři"
     },
     "title": "Pojďme do toho společně!"
   },
   "contact": "Kontakt",
   "exhibitors": {
-    "cta": "Vyplnit přihlášku",
+    "cta": "Přihláška pro pražírny",
     "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
-    "title": "Pražírny a učinkující",
-    "formLink": "https://forms.gle/eLdFwHCQKthC1XxX8"
+    "title": "Pražírny a učinkující"
+  },
+  "gastro": {
+    "cta": "Přihláška pro gastro"
   },
   "presenters": {
     "101": {
@@ -370,13 +375,13 @@
       "title": "Pod tlakem i bez"
     },
     {
-      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Říkáš, že nechceš jen přihlížet, ale radši si to zkusíš na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Vybraní hosté - profíci tě vším provedou a rádi odpoví na všechny dotazy.",
+      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Říkáš, že nechceš jen přihlížet, ale radši si to zkusíš na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Vybraní hosté, profíci, tě vším provedou a rádi odpoví na všechny dotazy.",
       "title": "Workshopy a Přednášky"
     }
   ],
   "lastYear": {
     "title": "Roast! roste",
-    "subtitle": "Rosteme to jako kávovník! A ty s námi!",
+    "subtitle": "Rosteme jako kávovník! A ty s námi!",
     "years": [
       {
         "year": 2023,
@@ -414,7 +419,7 @@
   },
   "stayTuned": {
     "title": "Nemůžeš se dočkat?",
-    "subtitle": "Přihlas se k odběru novinek a buď v obraze o všech, co se na chystají na Roast!",
+    "subtitle": "Přihlas se k odběru novinek a buď v obraze o všech, co se chystají na Roast!",
     "emailPlaceholder": "Tvůj e-mail",
     "subscribe": "Chci vědět víc!",
     "followUs": "Sleduj nás",
@@ -435,9 +440,13 @@
     "tapToHide": "Klepnutím skryješ, přejetím na další",
     "tapToReveal": "Klepnutím zobrazíš, přejetím na další"
   },
+  "scoreCard": {
+    "hide": "Znovu!",
+    "reveal": "Nemám čas, ukaž to"
+  },
   "location": {
     "addressTitle": "Adresa",
-    "howToTitle": "Jak se na festival dostanete?",
+    "howToTitle": "Jak se k nám dostaneš?",
     "means": {
       "car": "Autem",
       "public": "MHD"
@@ -515,7 +524,7 @@
       },
       {
         "title": "Přednášky",
-        "text": "Čekají tě přednášky od známých kavárníků, pražíčů kávy a jiných osobností z branže. Využijte jedinečnou možnost setkat se s těmi, díky kterým si u nás můžeš užívat výběrovou kávu. Vstup na přednášky je v ceně vstupného."
+        "text": "Čekají tě přednášky od známých kavárníků, pražíčů kávy a jiných osobností z branže. Využij jedinečnou možnost setkat se s těmi, díky kterým si u nás můžeš užívat výběrovou kávu. Vstup na přednášky je v ceně vstupného."
       },
       {
         "title": "Workshopy",
@@ -527,23 +536,23 @@
       },
       {
         "title": "Kelímky a hrníčky",
-        "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach hrníčků, tak aby sis pokaždé mohl vychutnat kávu z čisté nádoby."
+        "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach hrníčků, aby sis pokaždé mohl vychutnat kávu z čisté nádoby."
       },
       {
         "title": "Chill-out zóna",
-        "text": "Pokud si chceš během festivalu trochu oddechnout, máme pro tebe připravenou odpočinkou zónu s lehátky a posezením."
+        "text": "Pokud si chceš během festivalu trochu oddechnout, máme pro tebe připravenou odpočinkovou zónu s lehátky a posezením."
       },
       {
         "title": "Občerstvení",
-        "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomeneš."
+        "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné koktejly, slané i sladké jídlo, vodní dýmky... Prostě na co si jen vzpomeneš."
       },
       {
         "title": "Výběrová káva v prodeji",
-        "text": "Během prezentace jednotlivých pražíren máš možnost zakoupit si jejich kávu. Nestihl jsi svou oblíbenou kávu zrovna na mlýnku? Nezoufej, kávu od všech pražíren bude možné zakoupit po celou dobu festivalu na centrálním prodejním stánku."
+        "text": "Během prezentace jednotlivých pražíren máš možnost zakoupit si jejich kávu. Nestihl jsi svou oblíbenou kávu zrovna na mlýnku? Nezoufej, kávu od vystavujících pražíren bude možné zakoupit po celou dobu festivalu na centrálním prodejním stánku."
       },
       {
         "title": "Festivalový merch",
-        "text": "Stejně jako kávu, máme v nabídce ke koupi i různý další kávový sortiment. A navíc i speciální merch festivalu Roast!"
+        "text": "Nejen kávou a jídlem je člověk živ. Jsme hračičkové a suvenýry jsou prostě třeba. Speciální merch festivalu Roast! tě dobře naladí, pobaví a ty budeš o další cetku bohatší."
       }
     ]
   },
@@ -569,7 +578,7 @@
         "heading": "1st Crack",
         "price": 400,
         "tiers": [
-          "Celofestivalová (hrnek zdarma)",
+          "Celofestivalová (hrnek se slevou)",
           "Sobota (snížená)",
           "Neděle (snížená)"
         ]

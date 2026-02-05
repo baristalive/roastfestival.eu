@@ -17,7 +17,7 @@ export const Tickets = () => {
           <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
             {lang.tickets.title}
           </h2>
-          <p className="text-secondary text-2xl tracking-wider uppercase">
+          <p className="text-accent text-2xl tracking-wider uppercase">
             {lang.tickets.subtitle}
           </p>
         </div>

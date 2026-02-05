@@ -97,7 +97,7 @@ export const PreviousYears = () => {
           <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
             {lang.lastYear.title}
           </h2>
-          <p className="text-secondary text-md tracking-wider uppercase md:text-2xl">
+          <p className="text-accent text-md tracking-wider uppercase md:text-2xl">
             {lang.lastYear.subtitle}
           </p>
         </div>
@@ -117,7 +117,7 @@ export const PreviousYears = () => {
           attendees="?"
           beanCount={4}
           labels={labels}
-          roasters="35+"
+          roasters="30+"
           year={2026}
           highlight
         />

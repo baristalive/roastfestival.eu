@@ -4,16 +4,15 @@ export type ScoreCardProps = {
   onRevealAll: (reveal: boolean) => void;
   revealed: number;
   total: number;
-  completeLabel?: string;
-  revealLabel?: string;
-  hideLabel?: string;
+  revealLabel: string;
+  hideLabel: string;
 };
 
 export const ScoreCard = ({
-  hideLabel = "Znovu!",
+  hideLabel,
   onRevealAll,
   revealed,
-  revealLabel = "Nemám čas, ukaž to",
+  revealLabel,
   total,
 }: ScoreCardProps) => {
   const isComplete = revealed === total;

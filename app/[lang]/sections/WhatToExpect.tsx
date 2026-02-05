@@ -59,6 +59,8 @@ export const WhatToExpect = () => {
                     onRevealAll={handleRevealAll}
                     revealed={revealedCount}
                     total={totalCount}
+                    hideLabel={lang.scoreCard.hide}
+                    revealLabel={lang.scoreCard.reveal}
                   />
                 )}
                 <FlipCard

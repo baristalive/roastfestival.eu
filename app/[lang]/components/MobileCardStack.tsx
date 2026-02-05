@@ -207,7 +207,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex - 1)}
           disabled={currentIndex === 0}
-          className="punk-border font-display aspect-square rotate-180 cursor-pointer rounded-full px-4 py-2 text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
+          className="punk-border font-display aspect-square h-32 rotate-180 cursor-pointer rounded-full text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           <ArrowIcon />
         </button>
@@ -217,7 +217,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex + 1)}
           disabled={currentIndex === items.length - 1}
-          className="punk-border font-display aspect-square cursor-pointer rounded-full px-4 py-2 text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
+          className="punk-border font-display aspect-square h-32 cursor-pointer rounded-full text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           <ArrowIcon />
         </button>

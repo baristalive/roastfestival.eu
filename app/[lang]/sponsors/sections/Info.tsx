@@ -35,14 +35,14 @@ export const Info = () => {
             rel="external"
             target="_blank"
             title={lang.sponsors.cta}
-            className="bg-accent punk-border pop-shadow group inline-flex flex-col items-center justify-center gap-6 p-8 text-black transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:p-10"
+            className="bg-accent punk-border pop-shadow group flex items-center justify-center px-8 py-2 text-black transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none lg:px-10"
           >
-            <div className="text-6xl transition-transform group-hover:translate-x-2 lg:text-7xl">
-              <ArrowIcon />
-            </div>
             <span className="font-display text-center text-2xl font-black tracking-wider uppercase lg:text-3xl">
               {lang.sponsors.cta}
             </span>
+            <div className="aspect-square h-24">
+              <ArrowIcon />
+            </div>
           </a>
         </div>
       </section>

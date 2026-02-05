@@ -4,6 +4,9 @@
     "lineup": "Lineup",
     "tickets": "Tickets"
   },
+  "forms": {
+    "roasters": "https://forms.gle/DdH2grFkaJH7RNqj9"
+  },
   "about": {
     "text": [
       "We ripped up the rulebook. No beige tablecloths. Just the topmost quality beans. No chit-chat. No pretense. It doesn't matter if you are just getting acquainted or have it down to fine art. Coffee's here for you to enjoy. Plus company of those who roasted it for you."
@@ -21,17 +24,19 @@
     },
     "sponsors": {
       "button": "Find out more",
-      "text": "Are you a company that likes to support cultural events? You can be rewarded with a logo on the event, promotional materials, tickets and interesting packages for your employees.",
+      "text": "Are you a company that likes to support community events? You can be rewarded with a logo on the event, promotional materials, tickets and interesting packages for your employees.",
       "title": "Sponsors"
     },
     "title": "Let's join forces!"
   },
   "contact": "Contact us",
   "exhibitors": {
-    "cta": "Sign up",
+    "cta": "Roasters sign up",
     "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
-    "title": "Roasters and presenters",
-    "formLink": "https://forms.gle/TvVbmfVjBe3hQjPH7"
+    "title": "Roasters and presenters"
+  },
+  "gastro": {
+    "cta": "Gastro sign up"
   },
   "presenters": {
     "101": {
@@ -403,6 +408,10 @@
     "tapToHide": "Tap to hide, swipe to next",
     "tapToReveal": "Tap card to reveal, swipe to next"
   },
+  "scoreCard": {
+    "hide": "Again!",
+    "reveal": "No time, show me"
+  },
   "location": {
     "addressTitle": "Address",
     "howToTitle": "How to get there?",
@@ -505,11 +514,11 @@
       },
       {
         "title": "Snack bar",
-        "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
+        "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
       },
       {
         "title": "Specialty coffee to buy",
-        "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
+        "text": "Love what you're tasting? You can buy beans directly from the roasters during their presentations! If you missed your favorite coffee while it was on the grinder, don't worry—you can find a selection from our exhibiting roasters at the central festival booth all weekend long."
       },
       {
         "title": "Festival merchandise",

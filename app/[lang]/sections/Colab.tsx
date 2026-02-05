@@ -10,7 +10,7 @@ export const Colab = () => {
   return (
     <section id="colab" className="relative overflow-hidden lg:pb-12">
       {/* Split background */}
-      <div className="absolute inset-0 hidden lg:flex">
+      <div className="absolute inset-0 hidden xl:flex">
         <div className="bg-primary flex-1" />
         <div className="flex-1 bg-black" />
       </div>
@@ -25,8 +25,8 @@ export const Colab = () => {
           <polygon points="0,0 50,100 100,0" className="fill-black" />
         </svg>
       </div>
-      <div className="bg-primary relative pt-24 pb-24 text-center lg:bg-[unset] lg:pt-32 lg:pb-0">
-        <h2 className="font-display mb-8 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
+      <div className="bg-primary relative pt-24 pb-24 text-center xl:bg-[unset] xl:pt-32 xl:pb-0">
+        <h2 className="font-display mb-8 px-4 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
           {lang.colab.title}
         </h2>
         <p className="text-md mx-auto max-w-2xl px-6 tracking-wider text-white/80 uppercase md:text-2xl">
@@ -36,13 +36,13 @@ export const Colab = () => {
 
       <div className="relative">
         {/* Crossroads paths */}
-        <div className="bg-primary container mx-auto flex flex-col lg:flex-row lg:bg-[unset] lg:py-16 lg:pb-24">
+        <div className="bg-primary mx-auto flex flex-col items-stretch xl:flex-row xl:bg-[unset] xl:py-16 xl:pb-24">
           {/* Left path - Exhibitors */}
           <a
             href={`/${params.lang}/colab`}
             title={lang.colab.exhibitors.title}
             rel="next"
-            className="group relative flex-1 px-6 py-8 lg:px-12 lg:py-0"
+            className="group relative flex-1 px-6 py-8 xl:px-12 xl:py-0"
           >
             <div className="relative">
               {/* Direction arrow */}
@@ -90,7 +90,7 @@ export const Colab = () => {
             href={`/${params.lang}/sponsors`}
             title={lang.colab.sponsors.title}
             rel="next"
-            className="group relative flex-1 bg-black px-6 py-8 lg:px-12 lg:py-0"
+            className="group relative flex-1 bg-black px-6 py-8 xl:px-12 xl:py-0"
           >
             <div className="relative text-right">
               {/* Direction arrow */}

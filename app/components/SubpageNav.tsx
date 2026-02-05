@@ -28,7 +28,7 @@ export const SubpageNav = ({
         rel="prev"
         className="punk-border pop-shadow font-display inline-flex translate-z-1 items-center gap-3 bg-white px-2 text-sm font-bold tracking-wider text-black uppercase transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none md:px-6 md:py-1"
       >
-        <span className="rotate-180">
+        <span className="aspect-square h-12 rotate-180">
           <ArrowIcon />
         </span>
         {lang.back}

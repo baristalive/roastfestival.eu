@@ -85,7 +85,7 @@ export const Header = () => {
 
       {/* Scroll Indicator */}
       <div className="animate-bounce pb-8">
-        <div className="rotate-90 text-4xl font-bold text-black">
+        <div className="aspect-square h-24 rotate-90 text-black">
           <ArrowIcon />
         </div>
       </div>

@@ -20,7 +20,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h2>
     ),
     h3: ({ children }: PropsWithChildren) => (
-      <h3 className="font-display clear-both mb-6 text-lg font-black tracking-tighter uppercase md:text-xl lg:text-2xl">
+      <h3 className="font-display clear-both mb-6 text-lg font-black uppercase md:text-xl lg:text-2xl">
         {children}
       </h3>
     ),
@@ -59,10 +59,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </ol>
     ),
     p: ({ children }: PropsWithChildren) => (
-      <p className="mb-12 text-base lg:text-xl">{children}</p>
+      <p className="mb-6 text-base lg:text-xl">{children}</p>
     ),
     table: ({ children }: PropsWithChildren) => (
-      <div className="flex items-center justify-center">
+      <div className="mb-12">
         <table className="punk-border pop-shadow bg-secondary block border-collapse overflow-x-auto md:table">
           {children}
         </table>
