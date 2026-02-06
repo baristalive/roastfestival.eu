@@ -12,6 +12,7 @@ import subscribeFunc from "./subscribe";
 export const subscribe = onCall(
   {
     enforceAppCheck: true,
+    secrets: ["ECOMAIL_API_KEY"],
   },
   subscribeFunc,
 );
