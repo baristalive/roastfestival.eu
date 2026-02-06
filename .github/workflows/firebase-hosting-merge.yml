@@ -49,7 +49,10 @@ jobs:
       - name: Install and build Firebase Functions
         run: cd functions && npm ci && npm run build
 
+      - name: Log in to Firebase
+        uses: "google-github-actions/auth@v3"
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ROASTFESTIVAL }}
+
       - name: Deploy Firebase Functions
-        run: npx firebase-tools deploy --only functions --project roastfestival
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ROASTFESTIVAL }}
+        run: npx firebase deploy --only functions --project roastfestival
