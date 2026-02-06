@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useCallback, useState } from "react";
 import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 import Zoom from "react-medium-image-zoom";
 
@@ -40,7 +40,14 @@ type Image = {
 export const ZoomableImage = (
   props: Omit<ExportedImageProps, "alt" | "children"> & Image,
 ) => {
-  const ref = useRef(null);
+  const [srcSet, setSrcSet] = useState("");
+
+  const ref = useCallback((node: HTMLImageElement | null) => {
+    if (node) {
+      setSrcSet(node.getAttribute("srcset") || "");
+    }
+  }, []);
+
   if (!props.src || props.src === "") {
     return null;
   }
@@ -60,17 +67,16 @@ export const ZoomableImage = (
         classDialog="zoom"
         zoomImg={{
           alt: props.alt || "",
+          className: "punk-border",
           height: props.zoomed.height,
           src: props.src,
-          srcSet:
-            (ref.current as HTMLImageElement | null)?.getAttribute("srcset") ||
-            "",
+          srcSet,
           width: props.zoomed.width,
         }}
       >
-        <span className="card elevate img-overlay block rounded-lg lg:rounded-2xl">
+        <span className="img-overlay punk-border animate-pop block">
           <ExportedImage
-            className="h-auto max-w-full rounded-lg lg:rounded-2xl"
+            className="punk-border md:pop-shadow animate-pop h-auto max-w-full"
             src={props.src}
             height={props.small.height}
             width={props.small.width}

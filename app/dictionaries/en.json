@@ -1,7 +1,15 @@
 {
+  "nav": {
+    "about": "The Vibe",
+    "lineup": "Lineup",
+    "tickets": "Tickets"
+  },
+  "forms": {
+    "roasters": "https://forms.gle/DdH2grFkaJH7RNqj9"
+  },
   "about": {
     "text": [
-      "The festival is intended for everyone who is just a little bit interested in the world of specialty coffee. It doesn't matter if you are a professional in the industry, a coffee enthusiast or if you tasted your first v60 yesterday and are just getting acquainted. And if the caffeine gets to be too much for you - the festival offers an alternative in the form of alcoholic and non-alcoholic drinks and savoury and sweet treats."
+      "We ripped up the rulebook. No beige tablecloths. Just the topmost quality beans. No chit-chat. No pretense. It doesn't matter if you are just getting acquainted or have it down to fine art. Coffee's here for you to enjoy. Plus company of those who roasted it for you."
     ],
     "title": "What is roast!?"
   },
@@ -10,23 +18,25 @@
   "colab": {
     "description": "Roast! would be nothing without the participation of roasters, exhibitors, speakers and sponsors. If you fall into this category, be sure to click to find out more.",
     "exhibitors": {
-      "button": "Infopoint for roasters",
-      "text": "Click here for all the necessary information for roasters.",
-      "title": "Roasters and presenters"
+      "button": "Infopoint for roasters and food-artists",
+      "text": "Wanna participate and show off?",
+      "title": "Roasters and foodies"
     },
     "sponsors": {
       "button": "Find out more",
-      "text": "Are you a company that likes to support cultural events? You can be rewarded with a logo on the event, promotional materials, tickets and interesting packages for your employees.",
+      "text": "Are you a company that likes to support community events? You can be rewarded with a logo on the event, promotional materials, tickets and interesting packages for your employees.",
       "title": "Sponsors"
     },
-    "title": "Cooperation"
+    "title": "Let's join forces!"
   },
   "contact": "Contact us",
   "exhibitors": {
-    "cta": "Sign up",
+    "cta": "Roasters sign up",
     "text": "Information for exhibitors, participating roasters, cafes and coffee equipment dealers.",
-    "title": "Roasters and presenters",
-    "formLink": "https://forms.gle/TvVbmfVjBe3hQjPH7"
+    "title": "Roasters and presenters"
+  },
+  "gastro": {
+    "cta": "Gastro sign up"
   },
   "presenters": {
     "101": {
@@ -328,82 +338,80 @@
   },
   "info": [
     {
-      "text": "Would you like an espresso or maybe a cappuccino? That and much more is waiting to be tasted by you at our especially busy espresso bars. During the festival, there will be many different roasters on rotation, each with their own coffee to show off.",
-      "title": "Espresso done right"
+      "text": "Would you like an espresso, cappuccino or a fancy filter? That and much more is waiting for you at our especially busy bars. There will be many different roasters on rotation throughout the festival, each with their own coffee to show off.",
+      "title": "Under pressure or without"
     },
     {
-      "text": "Filtered coffee, this is a different discipline. V60, Chemex, Aeropress or Coldbrew? You can also taste these coffees at our brew bars. We give roasters complete freedom to choose the preparation that best suits their beans.",
-      "title": "Filtered coffee of all kinds"
-    },
-    {
-      "text": "You don't just want to watch, you want to experience it for yourself? Discover the ins and outs of coffee roasting, cupping, alternative preparations, experimental flavour pairing and much more. Our professional baristas will guide you through everything and will be happy to answer any questions.",
-      "title": "Workshops"
-    },
-    {
-      "text": "Again this year you can look forward to a wide range of lectures on all possible and impossible topics. Our special guests will guide you through the nooks and crannies of coffee technology, chemistry or culture you may not have known existed.",
-      "title": "Lectures"
+      "text": "This year is no diferent - you can look forward to a wide range of lectures on all possible and impossible topics. What do you say? You don't just want to watch, you want to experience it for yourself? Reveal the mysteries of coffee roasting, cuppings, alternative preparations, experimental sensory pairings and much more. Selected guests - professionals will be your guides and gladly answer all your questions.",
+      "title": "Hands-on / hands-off"
     }
   ],
   "lastYear": {
-    "center": {
-      "description": "Year 2",
-      "stat": 2024
-    },
-    "description": "Roast! 2025 will be the third Roast we are preparing for you. In 2023, when the festival was founded, we tried for the first time what it is like to prepare a coffee festival and whether such an event has its place in Brno. We found out that it does. By the next edition, Roast 2024, the festival had more than doubled in size and exceeded all our expectations.",
-    "side": [
+    "title": "Roast! grows",
+    "subtitle": "We grow like a coffee tree! Together!",
+    "years": [
       {
-        "description": "roasters",
-        "props": {
-          "r": 12,
-          "x": 30,
-          "y": 12
-        },
-        "stat": 22
+        "year": 2023,
+        "tagline": "The Beginning",
+        "stats": {
+          "roasters": 8,
+          "attendees": 300
+        }
       },
       {
-        "description": "workshops",
-        "props": {
-          "r": 12,
-          "x": 65,
-          "y": 22
-        },
-        "stat": 12
+        "year": 2024,
+        "tagline": "The Breakthrough",
+        "stats": {
+          "roasters": 22,
+          "attendees": 500
+        }
       },
       {
-        "description": "lectures",
-        "props": {
-          "r": 12,
-          "x": 45,
-          "y": 45
-        },
-        "stat": 7
-      },
-      {
-        "description": "visitors",
-        "props": {
-          "r": 17,
-          "x": 75,
-          "y": 75
-        },
-        "stat": ">700"
-      },
-      {
-        "description": "days",
-        "props": {
-          "r": 12,
-          "x": 25,
-          "y": 82
-        },
-        "stat": 2
+        "year": 2025,
+        "tagline": "The Explosion",
+        "stats": {
+          "roasters": 28,
+          "attendees": 1000
+        }
       }
     ],
-    "title": "Previous year"
+    "labels": {
+      "roasters": "Roasters",
+      "attendees": "Visitors"
+    }
   },
   "social": {
     "title": "Newsroom",
-    "text": "Roast! is preset on social networks as well. Follow us!"
+    "text": "Roast! is alive on social networks as well. Follow us!"
+  },
+  "stayTuned": {
+    "title": "Can't wait?",
+    "subtitle": "Subscribe to our newsletter and stay up to date with everything happening at Roast!",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "followUs": "Follow us",
+    "addCaffeine": "Add caffeine!",
+    "successMessage": "Thanks for subscribing!",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "caffeineCounter": {
+    "jitterLevel": "Jitter Level",
+    "pressForEnergy": "Press for energy",
+    "calmDown": "More!",
+    "espresso": "+ Espresso",
+    "detox": "Calm down",
+    "sideEffects": "Side effects include: seeing through time, extreme productivity, and talking very fast."
   },
   "learnMore": "learn more",
+  "mobileCardStack": {
+    "goToCard": "Go to card",
+    "tapToHide": "Tap to hide, swipe to next",
+    "tapToReveal": "Tap card to reveal, swipe to next"
+  },
+  "scoreCard": {
+    "hide": "Again!",
+    "reveal": "No time, show me"
+  },
   "location": {
     "addressTitle": "Address",
     "howToTitle": "How to get there?",
@@ -481,159 +489,83 @@
     "title": "What to expect?",
     "content": [
       {
-        "title": "Main program",
-        "items": [
-          {
-            "title": "Unlimited coffee consumption",
-            "text": "With the price of admission, you can sample coffees from all the roasters present throughout the festival."
-          },
-          {
-            "title": "Lectures",
-            "text": "You can expect lectures from well-known café owners, coffee roasters and other personalities from the industry. Take the unique opportunity to meet those who make it possible for you to enjoy the finest coffee. Admission to the lectures is included in the price of admission."
-          },
-          {
-            "title": "Workshops",
-            "text": "Try out different coffee brewing methods or roast your own coffee. Capacity of the workshops is limited, so come early. Participation in the workshops is included in the price of admission."
-          },
-          {
-            "title": "Cuppings",
-            "text": "Are you curious about how the taste descriptions of individual coffees are created? Come and taste coffee as it is tasted and evaluated by professionals. Participation is included in the price of admission."
-          },
-          {
-            "title": "Cups and mugs",
-            "text": "For each participant there is a reusable coffee and beer cups available and ready to be borrowed. A deposit is paid on site. And of course there is also a cup rinse available free of charge for everyone so we all can enjoy each coffee from a clean cup."
-          }
-        ]
+        "title": "Unlimited coffee consumption",
+        "text": "With the price of admission, you can sample coffees from all the roasters present throughout the festival."
       },
       {
-        "title": "Accompanying program",
-        "items": [
-          {
-            "title": "Chill-out zone",
-            "text": "If you want to relax during the festival, we have a relaxation area with deck chairs and seating."
-          },
-          {
-            "title": "Snack bar",
-            "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
-          },
-          {
-            "title": "Specialty coffee to buy",
-            "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
-          },
-          {
-            "title": "Festival merchandise",
-            "text": "As well as coffee, we also have various other coffee products available for purchase. Plus, special Roast! Festival merch."
-          }
-        ]
+        "title": "Lectures",
+        "text": "You can expect lectures from well-known café owners, coffee roasters and other personalities from the industry. Take the unique opportunity to meet those who make it possible for you to enjoy the finest coffee. Admission to the lectures is included in the price of admission."
+      },
+      {
+        "title": "Workshops",
+        "text": "Try out different coffee brewing methods or roast your own coffee. Capacity of the workshops is limited, so come early. Participation in the workshops is included in the price of admission."
+      },
+      {
+        "title": "Cuppings",
+        "text": "Are you curious about how the taste descriptions of individual coffees are created? Come and taste coffee as it is tasted and evaluated by professionals. Participation is included in the price of admission."
+      },
+      {
+        "title": "Cups and mugs",
+        "text": "For each participant there is a reusable coffee and beer cups available and ready to be borrowed. A deposit is paid on site. And of course there is also a cup rinse available free of charge for everyone so we all can enjoy each coffee from a clean cup."
+      },
+      {
+        "title": "Chill-out zone",
+        "text": "If you want to relax during the festival, we have a relaxation area with deck chairs and seating."
+      },
+      {
+        "title": "Snack bar",
+        "text": "Tasting coffee for two days in a row is not easy, that's why we also offer other snacks of all kinds. Beer, lemonade, coffee-based and other cocktails, salty and sweet food, hookahs... Whatever you can think of."
+      },
+      {
+        "title": "Specialty coffee to buy",
+        "text": "Love what you're tasting? You can buy beans directly from the roasters during their presentations! If you missed your favorite coffee while it was on the grinder, don't worry—you can find a selection from our exhibiting roasters at the central festival booth all weekend long."
+      },
+      {
+        "title": "Festival merchandise",
+        "text": "As well as coffee, we also have various other coffee products available for purchase. Plus, special Roast! Festival merch."
       }
     ]
   },
   "tickets": {
     "title": "Tickets",
+    "subtitle": "Limited Availability",
+    "nowOnSale": "Available now",
+    "priceIncreases": "Price increases",
     "discounted": "Discounted",
     "timeLeft": "Remaining",
     "lastDay": "last day",
     "soonAvailable": "Available from",
+    "comingSoon": "Coming soon",
     "soldOut": "Sold out",
+    "missedOut": "You've missed this one",
     "alreadyAvailable": "Available now",
     "priceList": [
       {
         "availability": {
-          "start": "2025-01-01",
-          "end": "2025-05-31"
+          "start": "2026-02-13",
+          "end": "2026-06-30"
         },
-        "subheading": "Pre-sale",
-        "heading": [
-          "1",
-          {
-            "superscript": "st"
-          },
-          " ",
-          "Crack"
-        ],
-        "prices": [
-          {
-            "title": "Full event",
-            "full": 400,
-            "discounted": 300,
-            "addon": "Cup 100 Kč",
-            "overlay": {
-              "title": "Full event",
-              "full": 400,
-              "discounted": 300,
-              "addon": "Cup free",
-              "availability": {
-                "start": "2024-12-11",
-                "end": "2025-01-01"
-              }
-            }
-          },
-          {
-            "title": "Saturday",
-            "full": 300,
-            "discounted": 250,
-            "addon": "Cup 100 Kč"
-          },
-          {
-            "title": "Sunday",
-            "full": 250,
-            "addon": "Cup 100 Kč"
-          }
-        ]
+        "heading": "1st Crack",
+        "price": 400,
+        "tiers": ["Full event (cup at a discount)"]
       },
       {
         "availability": {
-          "start": "2025-06-01",
-          "end": "2025-09-19"
+          "start": "2026-07-01",
+          "end": "2026-09-09"
         },
-        "subheading": "Pre-sale",
-        "heading": [
-          "2",
-          {
-            "superscript": "nd"
-          },
-          " ",
-          "Crack"
-        ],
-        "prices": [
-          {
-            "title": "Full event",
-            "full": 500,
-            "discounted": 400,
-            "note": "Cup 250 Kč"
-          },
-          {
-            "title": "Saturday",
-            "full": 400,
-            "discounted": 350,
-            "note": "Cup 300 Kč"
-          },
-          {
-            "title": "Sunday",
-            "full": 350,
-            "note": "Cup 300 Kč"
-          }
+        "heading": "2nd Crack",
+        "price": 500,
+        "tiers": [
+          "Full event (with cup or without)",
+          "Sobota (discount)",
+          "Neděle (discount)"
         ]
       },
       {
-        "subheading": "Last chance",
-        "heading": ["Walk-up"],
-        "prices": [
-          {
-            "title": "Full event",
-            "full": 600,
-            "discounted": 500
-          },
-          {
-            "title": "Saturday",
-            "full": 500,
-            "discounted": 450
-          },
-          {
-            "title": "Sunday",
-            "full": 450
-          }
-        ]
+        "heading": "Walk-up",
+        "price": 600,
+        "tiers": ["Full event", "Sobota (discount)", "Neděle (discount)"]
       }
     ]
   },
@@ -679,6 +611,6 @@
     }
   },
   "metadata": {
-    "description": "Brno Festival of Coffee and Roasters 2025"
+    "description": "Brno Festival of Coffee and Roasters 2026"
   }
 }

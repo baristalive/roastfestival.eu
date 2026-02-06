@@ -1,7 +1,15 @@
 {
+  "nav": {
+    "about": "O festivalu",
+    "lineup": "Program",
+    "tickets": "Vstupenky"
+  },
+  "forms": {
+    "roasters": "https://forms.gle/en47mXJnzqyuQMtv6"
+  },
   "about": {
     "text": [
-      "Festival je určen všem, kdo mají jen trochu zájem o svět výběrové kávy. Nezáleží zda jste profesionál z oboru, kávový nadšenec nebo jste včera ochutnali svoji první v60 a teprve se rozkoukáváte. A pokud na Vás už bude kofeinu moc - nabízí festival alternativu v podobě alko i nealko drinků a slaných i sladkých dobrot."
+      "Pravidla? Neexistují. Žádné bílé ubrusy. Prostě kávové zrno té nejvyšší kvality. Bez skrupulí a vytáček. Nezáleží, zda se teprve rozkoukáváš nebo máš vše v malíku. Káva je tu pro tebe a k tomu společnost těch, co ji upražili."
     ],
     "title": "Co je roast!?"
   },
@@ -10,23 +18,25 @@
   "colab": {
     "description": "Roast! by nebyl ničím bez účasti pražíren, vystavovatelů, přednášejících a sponzorů. Patříš-li do této kategorie, určitě klikni a zjisti víc.",
     "exhibitors": {
-      "button": "Informace pro pražírny",
-      "text": "Informace pro přihlášené pražírny nalezneš zde.",
-      "title": "Pražírny a ostatní učinkující"
+      "button": "Informace pro pražírny a gastro",
+      "text": "Chceš být součástí a předvést své umění?",
+      "title": "Pražírny a krmení"
     },
     "sponsors": {
       "button": "Zjistit podrobnosti",
-      "text": "Jste firma, která ráda podpoří kulturní akci? Odměnou Vám může být logo na akci, propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
+      "text": "Jsi firma, která ráda podpoří kulturní akci? Odměnou ti může být logo na akci a propagačních materiálech, vstupenky a zajímavé balíčky pro tvé zaměstnance.",
       "title": "Sponzoři"
     },
-    "title": "Spolupráce"
+    "title": "Pojďme do toho společně!"
   },
   "contact": "Kontakt",
   "exhibitors": {
-    "cta": "Vyplnit přihlášku",
+    "cta": "Přihláška pro pražírny",
     "text": "Informace pro vystavovatele, zúčastněné pražírny, kavárny a prodejce kávové techniky.",
-    "title": "Pražírny a učinkující",
-    "formLink": "https://forms.gle/eLdFwHCQKthC1XxX8"
+    "title": "Pražírny a učinkující"
+  },
+  "gastro": {
+    "cta": "Přihláška pro gastro"
   },
   "presenters": {
     "101": {
@@ -361,85 +371,82 @@
   },
   "info": [
     {
-      "text": "Je libo espresso nebo třeba cappuccino? To a mnoho dalšího ochutnáš na našlapaných espresso barech. Během festivalu se zde vystřídá mnoho různých pražíren a každá se bude chtít pochlubit svou kávou.",
-      "title": "Espresso, jak má být"
+      "text": "Je libo espresso, cappuccino nebo fancy filtr? To a mnoho dalšího ochutnáš na našich našlapaných barech. Během festivalu se zde vystřídá mnoho různých pražíren a každá se bude chtít pochlubit svou kávou.",
+      "title": "Pod tlakem i bez"
     },
     {
-      "text": "Filtrovaná káva, to je samostatná disciplína. V60, Chemex, Aeropress či Coldbrew? I takovéto přípravy káv můžeš na našich brew barech ochutnat. Necháváme pražírnám úplně volné ruce ve výběru přípravy, která nejvíc sluší jejich zrnům.",
-      "title": "Filtry všeho druhu"
-    },
-    {
-      "text": "Nechceš jen přihlížet, ale chceš to zkusit na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Naši profesionální baristi tě vším provedou a rádi odpoví na všechny dotazy.",
-      "title": "Workshopy"
-    },
-    {
-      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Naši speciální hosté tě provedou zákoutími kávových technologií, chemie či kultury o kterých jsi možná ani nechtěl vědět, že existují.",
-      "title": "Přednášky"
+      "text": "I letos se můžeš těšit na pestrou nabídku přednášek na všechna možná i nemožná témata. Říkáš, že nechceš jen přihlížet, ale radši si to zkusíš na vlastní kůži? Odhal taje pražení kávy, cuppingů, alternativních příprav, experimentálního párování chutí a mnoho dalšího. Vybraní hosté, profíci, tě vším provedou a rádi odpoví na všechny dotazy.",
+      "title": "Workshopy a Přednášky"
     }
   ],
   "lastYear": {
-    "center": {
-      "description": "2. ročník",
-      "stat": 2024
-    },
-    "description": "Roast! 2025 bude již třetím Roastem, který pro Vás chystáme. V roce 2023, kdy festival vznikl, jsme si vůbec poprvé zkusili, jaké to je připravovat kávový festival a jestli má taková akce v Brně své místo. Zjistili jsme, že má. Do dalšího ročníku, Roastu 2024, festival vyrostl více než dvojnásobně a předčil všechna naše očekávání. Posuďte sami.",
-    "side": [
+    "title": "Roast! roste",
+    "subtitle": "Rosteme jako kávovník! A ty s námi!",
+    "years": [
       {
-        "description": "pražíren",
-        "props": {
-          "r": 12,
-          "x": 30,
-          "y": 12
-        },
-        "stat": 22
+        "year": 2023,
+        "tagline": "Začátky",
+        "stats": {
+          "roasters": 8,
+          "attendees": 300
+        }
       },
       {
-        "description": "workshopů",
-        "props": {
-          "r": 12,
-          "x": 65,
-          "y": 22
-        },
-        "stat": 12
+        "year": 2024,
+        "tagline": "Průlom",
+        "stats": {
+          "roasters": 22,
+          "attendees": 500
+        }
       },
       {
-        "description": "přednášek",
-        "props": {
-          "r": 12,
-          "x": 45,
-          "y": 45
-        },
-        "stat": 7
-      },
-      {
-        "description": "návštěvníků",
-        "props": {
-          "r": 17,
-          "x": 75,
-          "y": 75
-        },
-        "stat": ">700"
-      },
-      {
-        "description": "dny",
-        "props": {
-          "r": 12,
-          "x": 25,
-          "y": 82
-        },
-        "stat": 2
+        "year": 2025,
+        "tagline": "Exploze",
+        "stats": {
+          "roasters": 28,
+          "attendees": 1000
+        }
       }
     ],
-    "title": "Předchozí ročník"
+    "labels": {
+      "roasters": "Pražíren",
+      "attendees": "Návštěvníků"
+    }
   },
   "social": {
     "title": "Novinky",
     "text": "Roast! najdete i na sociálních sítích. Sledujte nás!"
   },
+  "stayTuned": {
+    "title": "Nemůžeš se dočkat?",
+    "subtitle": "Přihlas se k odběru novinek a buď v obraze o všech, co se chystají na Roast!",
+    "emailPlaceholder": "Tvůj e-mail",
+    "subscribe": "Chci vědět víc!",
+    "followUs": "Sleduj nás",
+    "successMessage": "Díky za přihlášení k odběru!",
+    "errorMessage": "Něco se pokazilo. Zkuste to prosím znovu."
+  },
+  "caffeineCounter": {
+    "jitterLevel": "Hladina šílenství",
+    "pressForEnergy": "Dodej nám energii",
+    "calmDown": "Ještě!",
+    "espresso": "+ Espresso",
+    "detox": "Zklidni se!",
+    "sideEffects": "Vedlejší účinky: vysoké dávky způsobují cestování časem, extrémní produktivitu a velmi rychlé mluvení."
+  },
   "learnMore": "chci vědět víc",
+  "mobileCardStack": {
+    "goToCard": "Přejít na kartu",
+    "tapToHide": "Klepnutím skryješ, přejetím na další",
+    "tapToReveal": "Klepnutím zobrazíš, přejetím na další"
+  },
+  "scoreCard": {
+    "hide": "Znovu!",
+    "reveal": "Nemám čas, ukaž to"
+  },
   "location": {
     "addressTitle": "Adresa",
-    "howToTitle": "Jak se na festival dostanete?",
+    "howToTitle": "Jak se k nám dostaneš?",
     "means": {
       "car": "Autem",
       "public": "MHD"
@@ -509,160 +516,86 @@
     "cta": "Napište nám"
   },
   "whatToExpect": {
-    "title": "Co čekat od Roastu?",
+    "title": "Co můžu čekat?",
     "content": [
       {
-        "title": "Hlavní program",
-        "items": [
-          {
-            "title": "Neomezená konzumace kávy",
-            "text": "V ceně vstupného můžete dosytosti ochutnávat kávy od všech přítomných pražíren po celou dobu konání festivalu."
-          },
-          {
-            "title": "Přednášky",
-            "text": "Čekají Vás přednášky od známých kavárníků, pražíčů kávy a jiných osobností z branže. Využijte jedinečnou možnost setkat se s těmi, díky kterým si u nás můžete užívat výběrovou kávu. Vstup na přednášky je v ceně vstupného."
-          },
-          {
-            "title": "Workshopy",
-            "text": "Vyzkoušejte si různé metody přípravy kávy nebo si upražte vlastní kávu. Vstup na workshopy je kapacitně omezen, proto přijďte včas. Účast na workshopech je v ceně vstupného."
-          },
-          {
-            "title": "Cuppingy",
-            "text": "Zajímá Vás, jak vznikají chuťové popisy jednotlivých káv? Přijďte ochutnat kávu tak, jak ji ochutnávají a hodnotí profesionálové. Účast je v ceně vstupného."
-          },
-          {
-            "title": "Kelímky a hrníčky",
-            "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach hrníčků, tak abyste si pokaždé mohli vychutnat kávu z čisté nádoby."
-          }
-        ]
+        "title": "Neomezená konzumace kávy",
+        "text": "V ceně vstupného můžeš dosytosti ochutnávat kávy od všech přítomných pražíren po celou dobu konání festivalu."
       },
       {
-        "title": "Doprovodný program",
-        "items": [
-          {
-            "title": "Chill-out zóna",
-            "text": "Pokud si chcete během festivalu trochu oddechnout, máme pro Vás připravenou odpočinkou zónu s lehátky a posezením."
-          },
-          {
-            "title": "Občerstvení",
-            "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto pro Vás máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné kokteily, slané i sladké jídlo, vodní dýmky... Na co si vzpomenete."
-          },
-          {
-            "title": "Výběrová káva v prodeji",
-            "text": "Během prezentace jednotlivých pražíren máte možnost zakoupit si jejich kávu. Nestihli jste Vaši oblíbenou kávu zrovna na mlýnku? Nezoufejte, kávu od všech pražíren bude možné zakoupit po celou dobu festivalu na centrálním prodejním stánku."
-          },
-          {
-            "title": "Festivalový merch",
-            "text": "Stejně jako kávu, máme v nabídce ke koupi i různý další kávový sortiment. A navíc i speciální merch festivalu Roast!"
-          }
-        ]
+        "title": "Přednášky",
+        "text": "Čekají tě přednášky od známých kavárníků, pražíčů kávy a jiných osobností z branže. Využij jedinečnou možnost setkat se s těmi, díky kterým si u nás můžeš užívat výběrovou kávu. Vstup na přednášky je v ceně vstupného."
+      },
+      {
+        "title": "Workshopy",
+        "text": "Vyzkoušej si různé metody přípravy kávy nebo si upraž vlastní kávu. Vstup na workshopy je kapacitně omezen, proto přijď včas. Účast na workshopech je v ceně vstupného."
+      },
+      {
+        "title": "Cuppingy",
+        "text": "Zajímá tě, jak vznikají chuťové popisy jednotlivých káv? Přijď ochutnat kávu tak, jak ji ochutnávají a hodnotí profesionálové. Účast je v ceně vstupného."
+      },
+      {
+        "title": "Kelímky a hrníčky",
+        "text": "Pro každého účastníka máme k dispozici zálohované kelímky na kávu i pivo. Samozřejmostí je volně dostupný oplach hrníčků, aby sis pokaždé mohl vychutnat kávu z čisté nádoby."
+      },
+      {
+        "title": "Chill-out zóna",
+        "text": "Pokud si chceš během festivalu trochu oddechnout, máme pro tebe připravenou odpočinkovou zónu s lehátky a posezením."
+      },
+      {
+        "title": "Občerstvení",
+        "text": "Ochutnávat kávu dva dny v kuse není jednoduché, proto máme v nabídce i další občerstvení všeho druhu. Pivo, limonádu, kávové i jiné koktejly, slané i sladké jídlo, vodní dýmky... Prostě na co si jen vzpomeneš."
+      },
+      {
+        "title": "Výběrová káva v prodeji",
+        "text": "Během prezentace jednotlivých pražíren máš možnost zakoupit si jejich kávu. Nestihl jsi svou oblíbenou kávu zrovna na mlýnku? Nezoufej, kávu od vystavujících pražíren bude možné zakoupit po celou dobu festivalu na centrálním prodejním stánku."
+      },
+      {
+        "title": "Festivalový merch",
+        "text": "Nejen kávou a jídlem je člověk živ. Jsme hračičkové a suvenýry jsou prostě třeba. Speciální merch festivalu Roast! tě dobře naladí, pobaví a ty budeš o další cetku bohatší."
       }
     ]
   },
   "tickets": {
     "title": "Vstupenky",
+    "subtitle": "Limitka! Víc nebude!",
+    "nowOnSale": "Právě v prodeji",
+    "priceIncreases": "Zdražujeme",
     "discounted": "Snížená",
     "timeLeft": "Zbývá",
     "lastDay": "poslední den",
     "soonAvailable": "Dostupné od",
+    "comingSoon": "Teprve bude",
     "soldOut": "Vyprodáno",
+    "missedOut": "Tohle ti uteklo",
     "alreadyAvailable": "Již v prodeji",
     "priceList": [
       {
         "availability": {
-          "start": "2025-01-01",
-          "end": "2025-05-31"
+          "start": "2026-02-13",
+          "end": "2026-06-30"
         },
-        "subheading": "Předprodej",
-        "heading": [
-          "1",
-          {
-            "superscript": "st"
-          },
-          "Crack"
-        ],
-        "prices": [
-          {
-            "title": "Celofestivalová",
-            "full": 400,
-            "discounted": 300,
-            "addon": "Hrnek za 100 Kč",
-            "overlay": {
-              "title": "Celofestivalová",
-              "full": 400,
-              "discounted": 300,
-              "addon": "Hrnek zdarma",
-              "availability": {
-                "start": "2024-12-11",
-                "end": "2025-01-01"
-              }
-            }
-          },
-          {
-            "title": "Sobota",
-            "full": 300,
-            "discounted": 250,
-            "addon": "Hrnek za 100 Kč"
-          },
-          {
-            "title": "Neděle",
-            "full": 250,
-            "addon": "Hrnek za 100 Kč"
-          }
-        ]
+        "heading": "1st Crack",
+        "price": 400,
+        "tiers": ["Celofestivalová (hrnek se slevou)"]
       },
       {
         "availability": {
-          "start": "2025-06-01",
-          "end": "2025-09-19"
+          "start": "2026-07-01",
+          "end": "2026-09-09"
         },
-        "subheading": "Předprodej",
-        "heading": [
-          "2",
-          {
-            "superscript": "nd"
-          },
-          "Crack"
-        ],
-        "prices": [
-          {
-            "title": "Celofestivalová",
-            "full": 500,
-            "discounted": 400,
-            "note": "Hrnek za 250 Kč"
-          },
-          {
-            "title": "Sobota",
-            "full": 400,
-            "discounted": 350,
-            "note": "Hrnek za 300 Kč"
-          },
-          {
-            "title": "Neděle",
-            "full": 350,
-            "note": "Hrnek za 300 Kč"
-          }
+        "heading": "2nd Crack",
+        "price": 500,
+        "tiers": [
+          "Celofestivalová (s hrnkem i bez)",
+          "Sobota (snížená)",
+          "Neděle (snížená)"
         ]
       },
       {
-        "subheading": "Poslední možnost",
-        "heading": ["Na místě"],
-        "prices": [
-          {
-            "title": "Celofestivalová",
-            "full": 600,
-            "discounted": 500
-          },
-          {
-            "title": "Sobota",
-            "full": 500,
-            "discounted": 450
-          },
-          {
-            "title": "Neděle",
-            "full": 450
-          }
-        ]
+        "heading": "Na místě",
+        "price": 600,
+        "tiers": ["Celofestivalová", "Sobota (snížená)", "Neděle (snížená)"]
       }
     ]
   },
@@ -706,6 +639,6 @@
     }
   },
   "metadata": {
-    "description": "Brněnský festival kávy a pražíren 2025"
+    "description": "Brněnský festival kávy a pražíren 2026"
   }
 }

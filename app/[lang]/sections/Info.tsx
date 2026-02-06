@@ -1,76 +1,63 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import Bar from "@/app/components/Bar";
 
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const ref = useRef(null);
 
-  const info = [
-    lang.info.slice(0, Math.ceil(lang.info.length / 2)),
-    lang.info.slice(Math.ceil(lang.info.length / 2)),
-  ];
-
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
-      const mm = gsap.matchMedia();
-      mm.add("(min-width: 768px)", () => {
-        gsap.set(".cards", { y: "+=30rem" });
-        gsap.to(".cards", {
-          scrollTrigger: {
-            end: "bottom top",
-            scrub: 2,
-            start: "top bottom",
-            trigger: ref.current,
-          },
-          y: "-=30rem",
-        });
-      });
-    },
-    { scope: ref },
-  );
   return (
-    <section
-      ref={ref}
-      id="info"
-      className="info-section watermark2 flex flex-col items-center justify-between gap-8 pb-48"
-    >
-      <div className="grid max-w-[1900px] items-center gap-12 p-8 lg:grid-cols-[1fr,2fr] 2xl:gap-32">
-        <div className="md:p-12">
-          <h2 className="pb-8 pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
-            {lang.about.title}
-          </h2>
-          <div className="mx-auto max-w-screen-lg space-y-10 text-base leading-normal 2xl:text-xl">
-            {lang.about.text.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
+    <section id="about" className="bg-dots relative bg-white px-6 py-32">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+          {/* Feature Card 1 - Main */}
+          <div className="animate-pop punk-border pop-shadow bg-primary -rotate-1 transform p-10 transition-transform duration-300 hover:rotate-0 md:col-span-7">
+            <h2 className="font-display mb-6 text-4xl leading-[0.85] font-black text-black uppercase xl:text-8xl">
+              {lang.about.title.split(" ").slice(0, 2).join(" ")} <br />
+              <span className="text-accent">
+                {lang.about.title.split(" ").slice(2).join(" ") || "ROAST!"}
+              </span>
+            </h2>
+            <p className="max-w-lg text-xl font-bold text-black md:text-2xl">
+              {lang.about.text[0]}
+            </p>
           </div>
-          <Bar />
-        </div>
-        <div className="cards flex flex-col gap-8 md:grid md:grid-cols-2">
-          {info.map((col, idx) => (
+
+          {/* Stat Card */}
+          <div className="animate-pop punk-border pop-shadow bg-accent flex rotate-2 flex-col items-center justify-center p-10 text-center transition-transform duration-300 hover:rotate-0 md:col-span-5">
+            <span className="font-display text-4xl leading-none font-black text-black lg:text-5xl xl:text-9xl">
+              30+
+            </span>
+            <span className="font-display text-3xl font-bold tracking-tighter uppercase">
+              {params.lang === "cz" ? "Pražíren" : "Roasters"}
+            </span>
+          </div>
+
+          {/* Info Cards from dictionary */}
+          {lang.info.map((item, idx) => (
             <div
-              key={`col_${idx}`}
-              className={`flex flex-col gap-8 ${idx ? "md:pt-[var(--vertical-offset)]" : ""}`}
+              key={item.title}
+              className={`animate-pop punk-border pop-shadow group bg-secondary flex flex-col justify-between p-8 text-black ${idx === 0 ? "md:col-span-4" : "md:col-span-8"}`}
             >
-              {col.map((s) => (
+              <div className="relative z-10">
                 <div
-                  className="card elevate h-auto rounded-2xl p-8 2xl:p-12"
-                  key={s.title}
+                  className={`mb-4 h-4 w-16 ${idx === 0 ? "bg-accent" : "bg-black"}`}
+                ></div>
+                <h3 className="font-display text-2xl font-black uppercase lg:text-4xl">
+                  {item.title}
+                </h3>
+                <p className="mt-8 text-lg font-light opacity-80">
+                  {item.text}
+                </p>
+              </div>
+              {idx === 1 && (
+                <a
+                  href="#what-to-expect"
+                  className="font-display bg-primary text-mint-cream hover:bg-accent mt-8 inline-block px-8 py-3 text-xl font-black uppercase transition-colors"
                 >
-                  <h3 className="pb-4 text-xl font-bold 2xl:pb-12 2xl:text-3xl">
-                    {s.title}
-                  </h3>
-                  <p className="text-base 2xl:text-xl">{s.text}</p>
-                </div>
-              ))}
+                  {lang.learnMore || "Explore"}
+                </a>
+              )}
             </div>
           ))}
         </div>

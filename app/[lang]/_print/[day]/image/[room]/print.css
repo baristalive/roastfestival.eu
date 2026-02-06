@@ -1,0 +1,27 @@
+.logo {
+  background-color: var(--color-primary);
+}
+
+.row:first-of-type .logo {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.row:last-of-type .logo {
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  align-self: flex-start;
+}
+
+.schedule-header {
+  display: none;
+}
+.schedule-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.schedule-item {
+  background-color: var(--color-accent) !important;
+  text-align: center;
+}

@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    background_color: "#fff",
+    background_color: "#f51978",
     description: dictionaries.en.metadata.description,
     display: "browser",
     icons: [
@@ -13,12 +13,6 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "maskable",
         sizes: "512x512",
         src: "/icon-light-512.png",
-        type: "image/png",
-      },
-      {
-        purpose: "maskable",
-        sizes: "1024x1024",
-        src: "/icon-light-1024.png",
         type: "image/png",
       },
       {

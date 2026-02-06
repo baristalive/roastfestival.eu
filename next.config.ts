@@ -1,19 +1,13 @@
 import type { NextConfig } from "next";
 
 import createMDX from "@next/mdx";
-import rehypeUnwrapImages from "rehype-unwrap-images";
-import remarkGfm from "remark-gfm";
-import remarkExtendedTable, {
-  extendedTableHandlers,
-} from "remark-extended-table";
-import { RuleSetRule } from "webpack";
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
+  extension: /\.(md|mdx)$/,
   options: {
-    rehypePlugins: [rehypeUnwrapImages],
-    remarkPlugins: [remarkGfm, remarkExtendedTable],
-    remarkRehypeOptions: { handlers: { ...extendedTableHandlers } },
+    rehypePlugins: ["rehype-unwrap-images"],
+    remarkPlugins: [["remark-gfm"]],
   },
 });
 
@@ -40,58 +34,8 @@ const nextConfig: NextConfig = {
     loader: "custom",
   },
   output: "export",
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   transpilePackages: ["next-image-export-optimizer"],
-  webpack(config) {
-    // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find(
-      (rule: RuleSetRule) =>
-        rule.test instanceof RegExp && rule.test?.test?.(".svg"),
-    );
-
-    config.module.rules.push(
-      // Reapply the existing rule, but only for svg imports ending in ?url
-      {
-        ...fileLoaderRule,
-        resourceQuery: /url/, // *.svg?url
-        test: /\.svg$/i,
-      },
-      // Convert all other *.svg imports to React components
-      {
-        issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
-        test: /\.svg$/i,
-        use: [
-          {
-            loader: "@svgr/webpack",
-            options: {
-              svgoConfig: {
-                plugins: [
-                  {
-                    name: "preset-default",
-                    params: {
-                      overrides: {
-                        cleanupIds: false,
-                        removeViewBox: false,
-                      },
-                    },
-                  },
-                ],
-              },
-            },
-          },
-        ],
-      },
-      {
-        test: /\.md$/i,
-        use: "raw-loader",
-      },
-    );
-
-    // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i;
-
-    return config;
-  },
 };
 
 export default withMDX(nextConfig);

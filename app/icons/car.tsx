@@ -5,9 +5,6 @@ const CarIcon = ({ size = 34 }: { size?: string | number }) => (
     height={size}
     fill="currentColor"
     style={{
-      background: "rgb(var(--foreground-rgb))",
-      borderRadius: "17px",
-      color: "rgb(var(--background-rgb))",
       display: "inline-block",
       padding: "2px",
     }}

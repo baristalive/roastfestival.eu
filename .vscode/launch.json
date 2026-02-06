@@ -7,10 +7,17 @@
       "request": "launch",
       "command": "npm run dev",
       "serverReadyAction": {
-        "pattern": "Local:\\s*(https?://.+)",
-        "uriFormat": "%s",
-        "action": "debugWithChrome"
+        "pattern": "- Local:.+(https?://.+)",
+        "action": "startDebugging",
+        "name": "Launch Chrome session"
       }
+    },
+    {
+      "name": "Launch Chrome session",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "runtimeArgs": ["--remote-debugging-port=9222"]
     }
   ]
 }

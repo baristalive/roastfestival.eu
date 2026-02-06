@@ -1,49 +1,82 @@
 "use client";
-import Bar from "@/app/components/Bar";
+
+import { Fragment, useState } from "react";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import BeanIcon from "@/app/icons/beanicon";
+import { FlipCard } from "@/app/[lang]/components/FlipCard";
+import { ScoreCard } from "@/app/[lang]/components/ScoreCard";
+import { MobileCardStack } from "@/app/[lang]/components/MobileCardStack";
+import InstagramFeed from "../components/InstagramFeed";
 
 export const WhatToExpect = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
+  // Flatten all items from both categories into a single array
+  const allItems = lang.whatToExpect.content;
+
+  const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+
+  const handleFlip = (index: number) => {
+    setFlippedCards((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
+  };
+
+  const handleRevealAll = (reveal: boolean) => {
+    setFlippedCards(reveal ? new Set(allItems.map((_, i) => i)) : new Set());
+  };
+
+  const revealedCount = flippedCards.size;
+  const totalCount = allItems.length;
+
   return (
-    <section
-      id="what-to-expect"
-      className="what-to-expect-section watermark3 pt-12 sm:pt-0 lg:pb-24"
-    >
-      <div className="mx-auto grid max-w-[1900px] px-8 lg:grid-cols-[1fr,1fr]">
-        <div className="md:pl-12">
-          <h2 className="pt-24 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
+    <section id="what-to-expect" className="bg-lines bg-white py-16 lg:py-24">
+      <div className="container mx-auto">
+        <div className="mb-8 text-center lg:mb-12">
+          <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-black uppercase md:text-6xl">
             {lang.whatToExpect.title}
           </h2>
-          <Bar />
         </div>
-      </div>
-      <div className="mx-auto grid max-w-[1900px] gap-4 px-8 py-12 md:px-12 lg:grid-cols-[1fr,1fr] lg:gap-16">
-        {lang.whatToExpect.content.map((col, idx) => (
-          <div className="py-4 lg:px-8 lg:py-12" key={idx}>
-            <h2 className="pb-4 text-2xl font-bold lg:pb-16 lg:text-3xl">
-              {col.title}
-            </h2>
-            <ul className="flex flex-col gap-4 lg:gap-16 lg:text-xl">
-              {col.items.map((item, idx) => (
-                <li className="flex gap-12" key={idx}>
-                  <div className="hidden w-16 lg:block">
-                    <BeanIcon />
-                  </div>
-                  <div>
-                    <div className="pb-4 font-bold lg:text-2xl">
-                      {item.title}
-                    </div>
-                    {item.text}
-                  </div>
-                </li>
-              ))}
-            </ul>
+        {/* Mobile: Swipeable Card Stack */}
+        <div className="md:hidden">
+          <MobileCardStack items={allItems} />
+        </div>
+
+        {/* Desktop: Grid Layout */}
+        <div className="hidden md:block">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+            {allItems.map((item, index) => (
+              <Fragment key={item.title}>
+                {Math.ceil(allItems.length / 2) === index && (
+                  <ScoreCard
+                    onRevealAll={handleRevealAll}
+                    revealed={revealedCount}
+                    total={totalCount}
+                    hideLabel={lang.scoreCard.hide}
+                    revealLabel={lang.scoreCard.reveal}
+                  />
+                )}
+                <FlipCard
+                  title={item.title}
+                  text={item.text}
+                  index={index}
+                  isFlipped={flippedCards.has(index)}
+                  onFlip={() => handleFlip(index)}
+                />
+              </Fragment>
+            ))}
+            <div className="aspect-square w-[20em] cursor-pointer">
+              <InstagramFeed />
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
