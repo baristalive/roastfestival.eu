@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { BeanGrid } from "@/app/[lang]/components/BeanGrid";
 import ArrowIcon from "@/app/icons/arrow";
+import FestivalName from "@/app/icons/festivalname";
 
 export const Header = () => {
   const params = useParams();
@@ -53,17 +54,17 @@ export const Header = () => {
           </span>
         </div>
 
-        <h1 className="font-display text-onyx relative mb-6 text-[15vw] leading-[0.8] font-black tracking-tight select-none">
-          <span className="text-stroke-outline relative z-10 block">
-            Roast!
+        <h1 className="relative mb-12 fill-black stroke-black stroke-8 select-none">
+          <span className="relative z-10 block h-fit w-[90vw] md:w-[75vw]">
+            <FestivalName />
           </span>
           <span
-            className="text-stroke absolute top-1 left-1 -z-10 transition-transform duration-150 ease-out lg:top-4 lg:left-4"
+            className="absolute top-1 left-1 -z-10 h-fit w-[90vw] fill-transparent stroke-black stroke-6 transition-transform duration-150 ease-out md:w-[75vw] md:stroke-4 lg:top-4 lg:left-4"
             style={{
               transform: `translate(${mouseOffset.x}px, ${mouseOffset.y}px)`,
             }}
           >
-            Roast!
+            <FestivalName />
           </span>
         </h1>
 
