@@ -371,7 +371,7 @@
         "tagline": "The Explosion",
         "stats": {
           "roasters": 28,
-          "attendees": 700
+          "attendees": 1000
         }
       }
     ],
@@ -547,11 +547,7 @@
         },
         "heading": "1st Crack",
         "price": 400,
-        "tiers": [
-          "Full event (cup at a discount)",
-          "Sobota (discount)",
-          "Neděle (discount)"
-        ]
+        "tiers": ["Full event (cup at a discount)"]
       },
       {
         "availability": {

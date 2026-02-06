@@ -404,7 +404,7 @@
         "tagline": "Exploze",
         "stats": {
           "roasters": 28,
-          "attendees": 700
+          "attendees": 1000
         }
       }
     ],
@@ -577,11 +577,7 @@
         },
         "heading": "1st Crack",
         "price": 400,
-        "tiers": [
-          "Celofestivalová (hrnek se slevou)",
-          "Sobota (snížená)",
-          "Neděle (snížená)"
-        ]
+        "tiers": ["Celofestivalová (hrnek se slevou)"]
       },
       {
         "availability": {
