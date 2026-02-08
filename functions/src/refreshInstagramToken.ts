@@ -1,5 +1,6 @@
 import * as admin from "firebase-admin";
-import { logger } from "firebase-functions";
+
+import logger from "./utils/logger";
 
 // Initialize Firebase Admin SDK (safe to call multiple times)
 if (!admin.apps.length) {
@@ -31,8 +32,8 @@ const refreshInstagramAccessToken = async (
 
   if (!response.ok) {
     const errorText = await response.text();
-    logger.error("Instagram token refresh failed", {
-      error: errorText,
+    logger.error("Instagram token refresh failed", undefined, {
+      errorText,
       status: response.status,
     });
     throw new Error(

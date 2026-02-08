@@ -2,13 +2,14 @@
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { StationIcon } from "@/app/components/StationIcon";
+import { Section } from "@/app/components/Section";
 
 export const Colab = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="colab" className="relative overflow-hidden lg:pb-12">
+    <Section id="colab" className="relative overflow-hidden lg:pb-12">
       {/* Split background */}
       <div className="absolute inset-0 hidden xl:flex">
         <div className="bg-primary flex-1" />
@@ -159,6 +160,6 @@ export const Colab = () => {
           </a>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

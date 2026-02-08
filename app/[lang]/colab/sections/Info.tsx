@@ -8,6 +8,7 @@ import enExhibitorsContent from "@/app/dictionaries/colab/exhibitors/content_en.
 import czExhibitorsContent from "@/app/dictionaries/colab/exhibitors/content_cz.mdx";
 import ArrowIcon from "@/app/icons/arrow";
 import { SubpageNav } from "@/app/components/SubpageNav";
+import { Section } from "@/app/components/Section";
 
 export const Info = () => {
   const params = useParams();
@@ -19,7 +20,7 @@ export const Info = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="info" className="bg-primary bg-lines pt-8 pb-16 lg:pb-24">
+      <Section id="info" className="bg-primary bg-lines pt-8 pb-16 lg:pb-24">
         <SubpageNav backToSection="colab" selfHref="colab" />
 
         <div className="container mx-auto mt-12 px-6">
@@ -73,19 +74,22 @@ export const Info = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Content Section */}
-      <section className="bg-dots bg-white py-16 lg:py-24">
+      <Section
+        trackingName="colab-content"
+        className="bg-dots bg-white py-16 lg:py-24"
+      >
         <div className="container mx-auto px-6 text-black">
           <Content />
         </div>
-      </section>
+      </Section>
 
       {/* Bottom Navigation */}
-      <section className="bg-black py-12 lg:py-16">
+      <Section trackingName="colab-nav" className="bg-black py-12 lg:py-16">
         <SubpageNav backToSection="colab" centered />
-      </section>
+      </Section>
     </>
   );
 };

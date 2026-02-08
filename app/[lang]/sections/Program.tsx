@@ -3,13 +3,14 @@ import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 import { CaffeinCounter } from "@/app/[lang]/components/CaffeinCounter";
+import { Section } from "@/app/components/Section";
 
 export const Program = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section
+    <Section
       className={`bg-dots bg-white py-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
       id="lineup"
     >
@@ -44,6 +45,6 @@ export const Program = () => {
           <CaffeinCounter />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

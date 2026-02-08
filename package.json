@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
+    "@sentry/nextjs": "^10.38.0",
     "deepmerge-ts": "^7.1.5",
     "firebase": "^12.8.0",
     "html-to-image": "^1.11.13",
@@ -19,7 +20,8 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-map-gl": "^8.1.0",
-    "react-medium-image-zoom": "^5.4.0"
+    "react-medium-image-zoom": "^5.4.0",
+    "zod": "^4.3.6"
   },
   "prettier": {
     "plugins": [

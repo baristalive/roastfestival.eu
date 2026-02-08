@@ -1,21 +1,34 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect } from "react";
+import { error } from "./lib/monitoring/core/logger";
 
 export default function NotFound() {
+  useEffect(() => {
+    error("Page not found", undefined, {
+      component: "not_found",
+      operation: "page_not_found",
+    });
+  }, []);
   return (
-    <div className="grid h-screen w-screen grid-cols-1 grid-rows-[minmax(0,2fr)_minmax(0,3fr)] place-content-stretch items-center text-center md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:grid-rows-1">
-      <div className="inverted flex h-full flex-col justify-end p-10 md:justify-center">
-        <h1 className="text-8xl md:text-right">404</h1>
-      </div>
-      <div className="flex h-full flex-col justify-start md:justify-center md:text-left">
-        <h2 className="p-10 align-bottom text-2xl">
-          Tato stránka neexistuje. Zkuste se vrátit na{" "}
+    <div className="flex flex-col">
+      <div className="bg-primary relative flex min-h-screen flex-1 items-center justify-center">
+        <div className="z-10 container px-6 text-center">
+          <div className="mx-auto mb-8 h-48 w-48"></div>
+          <div className="font-display mb-4 text-2xl font-black text-black uppercase md:text-4xl">
+            Stránka nebyla nalezena
+          </div>
+          <p className="text-palette-beige/70 mb-8 text-lg">
+            Omlouváme se, ale stránka, kterou hledáte, neexistuje.
+          </p>
           <Link
             href="/"
-            className="p-2 underline decoration-2 underline-offset-2"
+            className="bg-accent pop-shadow punk-border tex-black inline-block px-8 py-3 font-medium transition-colors"
           >
-            začátek.
+            Zpět na hlavní stránku
           </Link>
-        </h2>
+        </div>
       </div>
     </div>
   );

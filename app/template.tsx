@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { Syne, Outfit } from "next/font/google";
+import { usePageTracking } from "./hooks/usePageTracking";
 
 const syne = Syne({
   subsets: ["latin", "latin-ext"],
@@ -15,6 +16,7 @@ const outfit = Outfit({
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const params = useParams<{ lang: string }>();
+  usePageTracking();
   return (
     <html lang={params.lang === "cz" ? "cs" : "en"} className="scroll-smooth">
       <body

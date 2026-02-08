@@ -3,6 +3,7 @@ import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import { useParams } from "next/navigation";
 import ArrowIcon from "@/app/icons/arrow";
 import { SubpageNav } from "@/app/components/SubpageNav";
+import { Section } from "@/app/components/Section";
 
 import enSponsorsContent from "@/app/dictionaries/colab/sponsors/content_en.mdx";
 import czSponsorsContent from "@/app/dictionaries/colab/sponsors/content_cz.mdx";
@@ -15,7 +16,7 @@ export const Info = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="info" className="bg-lines bg-black pt-8 pb-16 lg:pb-24">
+      <Section id="info" className="bg-lines bg-black pt-8 pb-16 lg:pb-24">
         <SubpageNav backToSection="colab" selfHref="sponsors" />
 
         <div className="container mx-auto px-6">
@@ -45,19 +46,25 @@ export const Info = () => {
             </div>
           </a>
         </div>
-      </section>
+      </Section>
 
       {/* Content Section */}
-      <section className="bg-dots bg-white py-16 lg:py-24">
+      <Section
+        trackingName="sponsors-content"
+        className="bg-dots bg-white py-16 lg:py-24"
+      >
         <div className="container mx-auto px-6 text-black">
           <Content />
         </div>
-      </section>
+      </Section>
 
       {/* Bottom Navigation */}
-      <section className="bg-primary py-12 lg:py-16">
+      <Section
+        trackingName="sponsors-nav"
+        className="bg-primary py-12 lg:py-16"
+      >
         <SubpageNav backToSection="colab" centered />
-      </section>
+      </Section>
     </>
   );
 };

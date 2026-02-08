@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
+import { Section } from "@/app/components/Section";
 
 type YearData = {
   year: number;
@@ -90,7 +91,7 @@ export const PreviousYears = () => {
   const labels = lang.lastYear.labels as Labels;
 
   return (
-    <section id="prev-year" className="bg-primary pt-16 lg:pt-24">
+    <Section id="prev-year" className="bg-primary pt-16 lg:pt-24">
       <div className="mx-auto">
         {/* Title */}
         <div className="mb-16 text-center lg:mb-20">
@@ -122,6 +123,6 @@ export const PreviousYears = () => {
           highlight
         />
       </div>
-    </section>
+    </Section>
   );
 };

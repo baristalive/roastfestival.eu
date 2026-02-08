@@ -7,6 +7,7 @@ import {
   PORTRAIT,
   ZoomableImage,
 } from "../../components/ZoomableImage";
+import { Section } from "@/app/components/Section";
 
 const largeWallImages = [
   [
@@ -63,7 +64,7 @@ export const Organizers = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
   return (
-    <section>
+    <Section trackingName="organizers">
       <div className="mx-auto max-w-475">
         <div className="p-8 md:p-20">
           <h2 className="w-3/4 text-3xl font-bold md:pt-56 lg:pt-24 2xl:pb-8 2xl:text-6xl">
@@ -127,6 +128,6 @@ export const Organizers = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

@@ -1,12 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { subscribe } from "@/app/utils/firebase";
 import DoubleTickIcon from "@/app/icons/doubletick";
 import InstagramFeed from "../components/InstagramFeed";
+import {
+  logger,
+  MetricEvent,
+  metrics,
+  OperationType,
+  performance,
+} from "@/app/lib/monitoring";
+import z, { ZodError } from "zod";
+import { Section } from "@/app/components/Section";
 
+const FormSchema = z.object({
+  email: z.email(),
+});
 export const StayTuned = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
@@ -14,24 +26,108 @@ export const StayTuned = () => {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [formStartTime, setFormStartTime] = useState<number | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmail(value);
 
-    setStatus("loading");
-    try {
-      await subscribe({ email });
-      setStatus("success");
-      setEmail("");
-    } catch (error) {
-      console.error("Subscription error:", error);
-      setStatus("error");
+    // Track form start on first interaction
+    if (formStartTime === null && value !== "") {
+      setFormStartTime(Date.now());
+      metrics.track(MetricEvent.NEWSLETTER_FORM_STARTED, {
+        component: "newsletter",
+      });
     }
   };
 
+  // Track form abandonment when user leaves the page
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      // Only track abandonment if form was started but not submitted
+      if (formStartTime !== null && status !== "success") {
+        const timeSpentMs = Date.now() - formStartTime;
+
+        metrics.trackNewsletterAbandonment({
+          completionPercentage: email !== "" ? 100 : 0,
+          component: "newsletter",
+          formName: "newsletter",
+          lastField: email !== "" ? "email" : undefined,
+          timeSpentMs,
+        });
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [formStartTime, status, email]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      FormSchema.parse({ email });
+    } catch (error) {
+      if (error instanceof ZodError) {
+        const message = error.issues.map((e) => e.message).join(", ");
+        metrics.trackNewsletterValidationError(
+          "email",
+          "validation_error",
+          message,
+        );
+        logger.warn("Newsletter submission failed", {
+          component: "newsletter",
+          metadata: { fields: "email", message },
+        });
+        setStatus("error");
+        return;
+      } else {
+        setStatus("error");
+        throw error;
+      }
+    }
+
+    setStatus("loading");
+    metrics.track(MetricEvent.NEWSLETTER_FORM_SUBMITTED, {
+      component: "newsletter",
+    });
+    const {
+      data: { message, success },
+    } = await performance.measureAsync(
+      OperationType.SUBSCRIBE,
+      "submit_newsletter",
+      async () => {
+        return await subscribe({ email });
+      },
+      {
+        component: "newsletter",
+      },
+    );
+
+    if (!success) {
+      const error = new Error(message);
+      logger.error("Newsletter subscription failed", error, {
+        component: "newsletter",
+        operation: "submit_newsletter",
+      });
+      metrics.trackNewsletterSubmission(false, {
+        component: "newsletter",
+        errorMessage: message,
+      });
+      setStatus("error");
+      throw error;
+    }
+
+    logger.info("Subscribed to newsletter", {
+      component: "newsletter",
+      operation: "submit_newsletter",
+    });
+    setStatus("success");
+    setEmail("");
+  };
+
   return (
-    <section id="stay-tuned" className="bg-lines bg-white pb-16 lg:pb-24">
+    <Section id="stay-tuned" className="bg-lines bg-white pb-16 lg:pb-24">
       <div className="container mx-auto flex flex-col gap-8 px-6">
         <div className="flex flex-col items-center text-center">
           <p className="font-display mb-2 text-2xl font-bold tracking-wider text-black uppercase md:text-3xl">
@@ -62,7 +158,7 @@ export const StayTuned = () => {
                     type="email"
                     name="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={handleEmailChange}
                     placeholder={lang.stayTuned.emailPlaceholder}
                     disabled={status === "loading"}
                     className="flex-1 bg-transparent px-4 py-3 text-base font-medium text-black outline-none placeholder:text-black/50 disabled:opacity-50"
@@ -88,6 +184,6 @@ export const StayTuned = () => {
           <InstagramFeed />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

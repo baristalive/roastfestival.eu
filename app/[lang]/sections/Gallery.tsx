@@ -7,6 +7,7 @@ import {
   ZoomableImage,
 } from "../../components/ZoomableImage";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import { Section } from "@/app/components/Section";
 
 const largeWallImages = [
   [
@@ -54,7 +55,7 @@ export const Gallery = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section className="bg-secondary">
+    <Section className="bg-secondary">
       <div className="mx-auto hidden items-center justify-center gap-8 p-12 md:flex">
         {largeWallImages.map((col, idx) => (
           <div
@@ -86,6 +87,6 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 };

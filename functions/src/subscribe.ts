@@ -1,6 +1,7 @@
-import { logger } from "firebase-functions";
 import { CallableRequest, HttpsError } from "firebase-functions/https";
 import { defineSecret, defineString } from "firebase-functions/params";
+
+import logger from "./utils/logger";
 
 const ecomailApiKey = defineSecret("ECOMAIL_API_KEY");
 const ecomailListId = defineString("ECOMAIL_LIST_ID");
@@ -48,7 +49,7 @@ const subscribeToEcomail = async (
 
   if (!response.ok) {
     const errorText = await response.text();
-    logger.error("Ecomail subscription failed", { error: errorText });
+    logger.error("Ecomail subscription failed", undefined, { errorText });
     throw new Error(
       `Ecomail subscription failed: ${response.status} - ${errorText}`,
     );
@@ -90,8 +91,8 @@ const subscribe = async (request: CallableRequest) => {
     const result = await subscribeToEcomail(email);
     logger.info("Subscribed", { result });
     return result;
-  } catch (error) {
-    logger.error("Subscription error", { error });
+  } catch (err) {
+    logger.error("Subscription error", err as Error);
     throw new HttpsError("internal", "Subscription failed");
   }
 };

@@ -1,6 +1,7 @@
 import { onCall, onRequest } from "firebase-functions/https";
 import { onSchedule } from "firebase-functions/scheduler";
 
+import { initSentry, sentryDsn } from "./utils/instrument";
 import refreshInstagramTokenFunc from "./refreshInstagramToken";
 import subscribeFunc from "./subscribe";
 
@@ -12,9 +13,12 @@ import subscribeFunc from "./subscribe";
 export const subscribe = onCall(
   {
     enforceAppCheck: true,
-    secrets: ["ECOMAIL_API_KEY"],
+    secrets: ["ECOMAIL_API_KEY", sentryDsn],
   },
-  subscribeFunc,
+  (request) => {
+    initSentry();
+    return subscribeFunc(request);
+  },
 );
 
 /**
@@ -25,9 +29,13 @@ export const subscribe = onCall(
 export const refreshInstagramTokenScheduled = onSchedule(
   {
     schedule: "0 3 1,15 * *", // Run at 3:00 AM on the 1st and 15th of each month
+    secrets: [sentryDsn],
     timeZone: "Europe/Prague",
   },
-  refreshInstagramTokenFunc,
+  () => {
+    initSentry();
+    return refreshInstagramTokenFunc();
+  },
 );
 
 /**

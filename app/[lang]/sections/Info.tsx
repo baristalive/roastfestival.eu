@@ -1,13 +1,14 @@
 "use client";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import { Section } from "@/app/components/Section";
 
 export const Info = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="about" className="bg-dots relative bg-white px-6 py-32">
+    <Section id="about" className="bg-dots relative bg-white px-6 py-32">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           {/* Feature Card 1 - Main */}
@@ -62,6 +63,6 @@ export const Info = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

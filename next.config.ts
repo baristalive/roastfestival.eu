@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+import { withSentryConfig } from "@sentry/nextjs";
 import createMDX from "@next/mdx";
 
 const withMDX = createMDX({
@@ -38,4 +39,28 @@ const nextConfig: NextConfig = {
   transpilePackages: ["next-image-export-optimizer"],
 };
 
-export default withMDX(nextConfig);
+export default withSentryConfig(withMDX(nextConfig), {
+  // For all available options, see:
+  // https://www.npmjs.com/package/@sentry/webpack-plugin#options
+
+  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
+
+  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
+
+  // Only print logs for uploading source maps in CI
+  silent: !process.env.CI,
+
+  // For all available options, see:
+  // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+  webpack: {
+    // Tree-shaking options for reducing bundle size
+    treeshake: {
+      // Automatically tree-shake Sentry logger statements to reduce bundle size
+      removeDebugLogging: true,
+    },
+  },
+
+  // Upload a larger set of source maps for prettier stack traces (increases build time)
+  widenClientFileUpload: true,
+});

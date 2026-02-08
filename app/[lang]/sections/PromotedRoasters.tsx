@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import dynamic from "next/dynamic";
 import { shuffle } from "@/app/utils/array";
+import { Section } from "@/app/components/Section";
 
 const PresenterLogo = dynamic(() => import("../components/PresenterLogo"), {
   ssr: false,
@@ -14,7 +15,7 @@ export const PromotedRoasters = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <section id="promoted">
+    <Section id="promoted">
       <div className="mx-auto grid max-w-475 items-center gap-12 p-8 lg:grid-cols-[1fr,1fr] 2xl:gap-32">
         <div className="md:p-12">
           <h2 className="pt-24 pb-8 text-3xl font-bold md:pt-0 2xl:pt-20 2xl:text-6xl">
@@ -94,7 +95,7 @@ export const PromotedRoasters = () => {
           </div>
         </>
       )}
-    </section>
+    </Section>
   );
 };
 

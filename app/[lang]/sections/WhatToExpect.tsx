@@ -7,6 +7,7 @@ import { FlipCard } from "@/app/[lang]/components/FlipCard";
 import { ScoreCard } from "@/app/[lang]/components/ScoreCard";
 import { MobileCardStack } from "@/app/[lang]/components/MobileCardStack";
 import InstagramFeed from "../components/InstagramFeed";
+import { Section } from "@/app/components/Section";
 
 export const WhatToExpect = () => {
   const params = useParams();
@@ -37,7 +38,7 @@ export const WhatToExpect = () => {
   const totalCount = allItems.length;
 
   return (
-    <section id="what-to-expect" className="bg-lines bg-white py-16 lg:py-24">
+    <Section id="what-to-expect" className="bg-lines bg-white py-16 lg:py-24">
       <div className="container mx-auto">
         <div className="mb-8 text-center lg:mb-12">
           <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-black uppercase md:text-6xl">
@@ -78,6 +79,6 @@ export const WhatToExpect = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

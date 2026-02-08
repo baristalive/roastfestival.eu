@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
+import { Section } from "@/app/components/Section";
 
 const BASE_LAT = 49.1995978;
 const BASE_LNG = 16.6225864;
@@ -36,7 +37,7 @@ export const Map = () => {
   };
 
   return (
-    <section id="location" className="relative">
+    <Section id="location" className="relative">
       {/* Full-bleed Map */}
       <div className="h-screen lg:h-225">
         <ReactMap
@@ -176,6 +177,6 @@ export const Map = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

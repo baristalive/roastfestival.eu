@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
+import { trackCaffeineLevel } from "@/app/lib/monitoring";
 
 export const CaffeinCounter = () => {
   const params = useParams();
@@ -18,6 +19,7 @@ export const CaffeinCounter = () => {
   };
 
   useEffect(() => {
+    trackCaffeineLevel(count);
     const root = document.documentElement;
     root.style.setProperty("--caffeine-level", String(count));
 
