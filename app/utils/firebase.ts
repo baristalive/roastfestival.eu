@@ -1,6 +1,7 @@
 "use client";
 
-import { initializeApp, getApps } from "firebase/app";
+import { initializeApp, getApps, FirebaseApp } from "firebase/app";
+import { getAnalytics, Analytics } from "firebase/analytics";
 import {
   initializeAppCheck,
   ReCaptchaEnterpriseProvider,
@@ -25,19 +26,58 @@ const firebaseConfig = {
 export const app =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
-// Initialize App Check with reCAPTCHA Enterprise
+/**
+ * Get the Google Analytics instance (if initialized and cookies accepted)
+ */
+let analyticsInstance: Analytics | null = null;
+export const getAnalyticsInstance = (): Analytics | null => analyticsInstance;
+
+// Initialize App Check with reCAPTCHA Enterprise (only when cookies are accepted)
 const RECAPTCHA_SITE_KEY = "6LeQq18sAAAAAEbwUGnt9vdMjesm24tJrLFZ-f8l";
 
-if (typeof window !== "undefined") {
+let appCheckInitialized = false;
+
+const initializeAppCheckIfConsented = (firebaseApp: FirebaseApp) => {
+  if (appCheckInitialized) return;
+
+  const consent = localStorage.getItem("cookie-consent");
+  if (consent !== "accepted") return;
+
   // Enable debug token for local development
   if (process.env.NODE_ENV === "development") {
     // @ts-expect-error - Firebase debug token for local development
     self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
   }
 
-  initializeAppCheck(app, {
+  initializeAppCheck(firebaseApp, {
     isTokenAutoRefreshEnabled: true,
     provider: new ReCaptchaEnterpriseProvider(RECAPTCHA_SITE_KEY),
+  });
+
+  appCheckInitialized = true;
+};
+
+const initializeAnalyticsIfConsented = (firebaseApp: FirebaseApp) => {
+  if (analyticsInstance) return;
+
+  const consent = localStorage.getItem("cookie-consent");
+  if (consent !== "accepted") return;
+
+  analyticsInstance = getAnalytics(firebaseApp);
+};
+
+if (typeof window !== "undefined") {
+  // Try to initialize App Check and Analytics if already consented
+  initializeAppCheckIfConsented(app);
+  initializeAnalyticsIfConsented(app);
+
+  // Listen for consent changes
+  window.addEventListener("cookie-consent-changed", (event) => {
+    const detail = (event as CustomEvent).detail;
+    if (detail === "accepted") {
+      initializeAppCheckIfConsented(app);
+      initializeAnalyticsIfConsented(app);
+    }
   });
 }
 

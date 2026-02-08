@@ -421,10 +421,12 @@
     "title": "Nemůžeš se dočkat?",
     "subtitle": "Přihlas se k odběru novinek a buď v obraze o všech, co se chystají na Roast!",
     "emailPlaceholder": "Tvůj e-mail",
-    "subscribe": "Chci vědět víc!",
+    "subscribe": "Souhlasím a chci vědět víc!",
     "followUs": "Sleduj nás",
     "successMessage": "Díky za přihlášení k odběru!",
-    "errorMessage": "Něco se pokazilo. Zkuste to prosím znovu."
+    "errorMessage": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "consentNotice": "Odesláním formuláře souhlasíš s použitím cookies a našimi",
+    "gdprLink": "zásadami ochrany osobních údajů"
   },
   "caffeineCounter": {
     "jitterLevel": "Hladina šílenství",
@@ -637,6 +639,11 @@
         }
       ]
     }
+  },
+  "cookieConsent": {
+    "message": "Dovol nám použít 🍪 pro ochranu před spamem a analytiku.",
+    "accept": "Souhlasím",
+    "decline": "To teda ne!"
   },
   "metadata": {
     "description": "Brněnský festival kávy a pražíren 2026"

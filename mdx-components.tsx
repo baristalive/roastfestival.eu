@@ -24,6 +24,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h3>
     ),
+    h4: ({ children }: PropsWithChildren) => (
+      <h4 className="font-display clear-both mb-6 text-lg font-black uppercase lg:text-xl">
+        {children}
+      </h4>
+    ),
     img: ({ alt, src, ...rest }: { src?: string; alt?: string }) => {
       const [altText, sizing] = (alt || "|").split("|");
 

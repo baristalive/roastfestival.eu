@@ -1,10 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { subscribe } from "@/app/utils/firebase";
 import DoubleTickIcon from "@/app/icons/doubletick";
+import {
+  getConsentStatus,
+  acceptCookieConsent,
+} from "@/app/components/CookieConsent";
 import InstagramFeed from "../components/InstagramFeed";
 import {
   logger,
@@ -64,6 +69,12 @@ export const StayTuned = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Accept cookie consent when subscribing (button text indicates user agrees)
+    const consent = getConsentStatus();
+    if (consent !== "accepted") {
+      acceptCookieConsent();
+    }
 
     try {
       FormSchema.parse({ email });
@@ -161,17 +172,27 @@ export const StayTuned = () => {
                     onChange={handleEmailChange}
                     placeholder={lang.stayTuned.emailPlaceholder}
                     disabled={status === "loading"}
-                    className="flex-1 bg-transparent px-4 py-3 text-base font-medium text-black outline-none placeholder:text-black/50 disabled:opacity-50"
+                    className="flex-2 bg-transparent px-4 py-3 text-base font-medium text-black outline-none placeholder:text-black/50 disabled:opacity-50"
                   />
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="bg-primary hover:bg-primary/90 font-display cursor-pointer px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                    className="bg-primary hover:bg-primary/90 font-display flex-1 cursor-pointer px-6 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {status === "loading" ? "..." : lang.stayTuned.subscribe}
                   </button>
                 </form>
               )}
+              <p className="text-sm text-black">
+                {lang.stayTuned.consentNotice}{" "}
+                <Link
+                  href={`/${params.lang}/gdpr`}
+                  className="underline hover:text-black"
+                >
+                  {lang.stayTuned.gdprLink}
+                </Link>
+                .
+              </p>
               {status === "error" && (
                 <p className="text-sm text-red-600">
                   {lang.stayTuned.errorMessage}

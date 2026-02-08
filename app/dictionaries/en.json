@@ -388,11 +388,13 @@
     "title": "Can't wait?",
     "subtitle": "Subscribe to our newsletter and stay up to date with everything happening at Roast!",
     "emailPlaceholder": "Your email",
-    "subscribe": "Subscribe",
+    "subscribe": "I agree & Subscribe",
     "followUs": "Follow us",
     "addCaffeine": "Add caffeine!",
     "successMessage": "Thanks for subscribing!",
-    "errorMessage": "Something went wrong. Please try again."
+    "errorMessage": "Something went wrong. Please try again.",
+    "consentNotice": "By submitting this form, you agree to our use of cookies and our",
+    "gdprLink": "privacy policy"
   },
   "caffeineCounter": {
     "jitterLevel": "Jitter Level",
@@ -609,6 +611,11 @@
         }
       ]
     }
+  },
+  "cookieConsent": {
+    "message": "Allow us to use 🍪 for spam protection and analytics.",
+    "accept": "Accept",
+    "decline": "No way!"
   },
   "metadata": {
     "description": "Brno Festival of Coffee and Roasters 2026"

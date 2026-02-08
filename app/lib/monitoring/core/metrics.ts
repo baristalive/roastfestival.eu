@@ -8,6 +8,7 @@
  */
 
 import * as Sentry from "@sentry/nextjs";
+import { logEvent } from "firebase/analytics";
 import type {
   MetricEvent,
   MetricData,
@@ -16,8 +17,32 @@ import type {
 } from "../types";
 import { MetricEvent as MetricEventEnum } from "../types";
 import * as logger from "./logger";
+import { getAnalyticsInstance } from "@/app/utils/firebase";
 
 const isDevelopment = process.env.NODE_ENV === "development";
+
+/**
+ * Send event to Google Analytics (if initialized)
+ */
+function sendToGoogleAnalytics(event: MetricEvent, data?: MetricData): void {
+  const analytics = getAnalyticsInstance();
+  if (!analytics) return;
+
+  // Convert event name to GA4 format (replace dots with underscores)
+  const gaEventName = event.replace(/\./g, "_");
+
+  // Filter out undefined values and ensure GA4-compatible params
+  const params: Record<string, string | number | boolean> = {};
+  if (data) {
+    for (const [key, value] of Object.entries(data)) {
+      if (value !== undefined) {
+        params[key] = value;
+      }
+    }
+  }
+
+  logEvent(analytics, gaEventName, params);
+}
 
 /**
  * Track a metric event
@@ -33,6 +58,9 @@ export function track(event: MetricEvent, data?: MetricData): void {
     logger.debug(`Metric: ${event}`, enrichedData);
     return;
   }
+
+  // Send to Google Analytics
+  sendToGoogleAnalytics(event, enrichedData);
 
   // Add to Sentry breadcrumb for production
   Sentry.addBreadcrumb({
