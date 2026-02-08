@@ -55,6 +55,7 @@ jobs:
         run: |
           cd functions
           npm ci
+          echo "SENTRY_RELEASE=$(git rev-parse HEAD)" >> .env
           npm run build
         env:
           SENTRY_ORG: ${{ vars.NEXT_PUBLIC_SENTRY_ORG }}
@@ -72,7 +73,7 @@ jobs:
       - name: Upload sourcemaps to Sentry
         run: |
           cd functions
-          npx sentry-cli sourcemaps upload lib
+          npx sentry-cli sourcemaps upload --release "$(git rev-parse HEAD)" lib
         env:
           SENTRY_ORG: ${{ vars.NEXT_PUBLIC_SENTRY_ORG }}
           SENTRY_PROJECT: ${{ vars.NEXT_PUBLIC_SENTRY_PROJECT }}

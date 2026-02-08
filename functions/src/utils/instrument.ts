@@ -1,7 +1,8 @@
 import * as Sentry from "@sentry/node";
-import { defineSecret } from "firebase-functions/params";
+import { defineSecret, defineString } from "firebase-functions/params";
 
 export const sentryDsn = defineSecret("SENTRY_DSN");
+const sentryRelease = defineString("SENTRY_RELEASE");
 
 let isInitialized = false;
 
@@ -18,6 +19,7 @@ export const initSentry = () => {
 
   Sentry.init({
     dsn,
+    release: sentryRelease.value(),
     sendDefaultPii: true,
   });
 
