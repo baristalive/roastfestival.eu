@@ -52,7 +52,14 @@ jobs:
           cache-dependency-path: functions/package-lock.json
 
       - name: Install and build Firebase Functions
-        run: cd functions && npm ci && npm run build
+        run: |
+          cd functions
+          npm ci
+          npm run build
+        env:
+          SENTRY_ORG: ${{ vars.NEXT_PUBLIC_SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.NEXT_PUBLIC_SENTRY_PROJECT }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
       - name: Log in to Firebase
         uses: "google-github-actions/auth@v3"
@@ -61,3 +68,12 @@ jobs:
 
       - name: Deploy Firebase Functions
         run: npx firebase-tools deploy --only functions --project roastfestival --non-interactive
+
+      - name: Upload sourcemaps to Sentry
+        run: |
+          cd functions
+          npx sentry-cli sourcemaps upload lib
+        env:
+          SENTRY_ORG: ${{ vars.NEXT_PUBLIC_SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.NEXT_PUBLIC_SENTRY_PROJECT }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}

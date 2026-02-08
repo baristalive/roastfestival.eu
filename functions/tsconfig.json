@@ -6,6 +6,8 @@
     "noUnusedLocals": true,
     "outDir": "lib",
     "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
     "strict": true,
     "target": "ES2022",
     "skipLibCheck": true
