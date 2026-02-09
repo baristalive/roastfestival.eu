@@ -29,6 +29,7 @@ export const Footer = () => {
                 rel="external"
               >
                 <InstagramIcon />
+                <span className="sr-only">Instagram</span>
               </a>
               <a
                 href={lang.contacts.facebook}
@@ -37,6 +38,7 @@ export const Footer = () => {
                 rel="external"
               >
                 <FacebookIcon />
+                <span className="sr-only">Facebook</span>
               </a>
             </div>
           </div>
@@ -57,6 +59,7 @@ export const Footer = () => {
               className="text-accent hover:text-cream inline-block h-10 w-10 transition-colors"
             >
               <AtIcon />
+              <span className="sr-only">Email</span>
             </a>
           </div>
         </div>

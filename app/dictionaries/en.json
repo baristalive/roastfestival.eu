@@ -407,6 +407,8 @@
   "learnMore": "learn more",
   "mobileCardStack": {
     "goToCard": "Go to card",
+    "nextCard": "Next card",
+    "previousCard": "Previous card",
     "tapToHide": "Tap to hide, swipe to next",
     "tapToReveal": "Tap card to reveal, swipe to next"
   },

@@ -8,7 +8,6 @@
  */
 
 import * as Sentry from "@sentry/nextjs";
-import { logEvent } from "firebase/analytics";
 import type {
   MetricEvent,
   MetricData,
@@ -17,14 +16,23 @@ import type {
 } from "../types";
 import { MetricEvent as MetricEventEnum } from "../types";
 import * as logger from "./logger";
-import { getAnalyticsInstance } from "@/app/utils/firebase";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
 /**
  * Send event to Google Analytics (if initialized)
+ * Uses dynamic imports to defer Firebase SDK loading until actually needed
  */
-function sendToGoogleAnalytics(event: MetricEvent, data?: MetricData): void {
+async function sendToGoogleAnalytics(
+  event: MetricEvent,
+  data?: MetricData,
+): Promise<void> {
+  // Dynamically import Firebase modules only when analytics is being sent
+  const [{ getAnalyticsInstance }, { logEvent }] = await Promise.all([
+    import("@/app/utils/firebase"),
+    import("firebase/analytics"),
+  ]);
+
   const analytics = getAnalyticsInstance();
   if (!analytics) return;
 

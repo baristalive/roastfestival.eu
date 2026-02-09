@@ -55,12 +55,14 @@ export const ZoomableImage = (
   return (
     <>
       <ExportedImage
+        aria-label={props.alt || ""}
         ref={ref}
         className="hidden"
         src={props.src}
         height={props.zoomed.height}
         width={props.zoomed.width}
         alt={props.alt || ""}
+        loading="lazy"
       />
       <Zoom
         zoomMargin={16}
@@ -76,11 +78,13 @@ export const ZoomableImage = (
       >
         <span className="img-overlay punk-border animate-pop block">
           <ExportedImage
+            aria-label={props.alt || ""}
             className="punk-border md:pop-shadow animate-pop h-auto max-w-full"
             src={props.src}
             height={props.small.height}
             width={props.small.width}
             alt={props.alt || ""}
+            loading="lazy"
           />
         </span>
       </Zoom>

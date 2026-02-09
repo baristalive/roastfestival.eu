@@ -30,7 +30,7 @@ export const Colab = () => {
         <h2 className="font-display mb-8 px-4 text-3xl leading-[0.85] font-black text-white uppercase md:text-6xl">
           {lang.colab.title}
         </h2>
-        <p className="text-md mx-auto max-w-2xl px-6 tracking-wider text-white/80 uppercase md:text-2xl">
+        <p className="text-md mx-auto max-w-2xl px-6 tracking-wider text-white uppercase md:text-2xl">
           {lang.colab.description}
         </p>
       </div>
@@ -67,7 +67,7 @@ export const Colab = () => {
               </h3>
 
               {/* Station icons */}
-              <div className="mb-6 flex flex-wrap gap-3 text-2xl text-white/90 md:text-3xl">
+              <div className="mb-6 flex flex-wrap gap-3 text-2xl text-white md:text-3xl">
                 <StationIcon station="espresso" />
                 <StationIcon station="espresso_milk" />
                 <StationIcon station="brew" />
@@ -75,7 +75,7 @@ export const Colab = () => {
                 <StationIcon station="workshop" />
               </div>
 
-              <p className="mb-8 max-w-md text-base leading-relaxed text-white/80 md:text-lg">
+              <p className="mb-8 max-w-md text-base leading-relaxed text-white md:text-lg">
                 {lang.colab.exhibitors.text}
               </p>
 
@@ -115,7 +115,7 @@ export const Colab = () => {
               </h3>
 
               {/* Plus icons */}
-              <div className="mb-6 flex justify-end gap-3 text-2xl text-white/90 md:text-3xl">
+              <div className="mb-6 flex justify-end gap-3 text-2xl text-white md:text-3xl">
                 <svg
                   className="h-8 w-8"
                   viewBox="0 0 24 24"
@@ -148,7 +148,7 @@ export const Colab = () => {
                 </svg>
               </div>
 
-              <p className="mb-8 ml-auto max-w-md text-base leading-relaxed text-white/80 md:text-lg">
+              <p className="mb-8 ml-auto max-w-md text-base leading-relaxed text-white md:text-lg">
                 {lang.colab.sponsors.text}
               </p>
 

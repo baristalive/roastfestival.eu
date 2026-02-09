@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://roastfestival.eu/",
     languages: {
-      "cs-CZ": "/cz",
-      "en-US": "/en",
+      "cs-CZ": "https://roastfestival.eu/cz",
+      "en-US": "https://roastfestival.eu/en",
     },
   },
   description: dictionaries.en.metadata.description,

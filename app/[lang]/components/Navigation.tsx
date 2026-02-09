@@ -67,6 +67,7 @@ export const Navigation = () => {
           className={`block h-12 w-12 text-center transition-transform duration-300 group-hover:rotate-12 ${isScrolled ? "text-accent" : ""}`}
         >
           <BeanIcon />
+          <span className="sr-only">Home</span>
         </Link>
       </div>
 

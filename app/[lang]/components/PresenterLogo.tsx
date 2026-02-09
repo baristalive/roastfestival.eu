@@ -14,6 +14,7 @@ const PresenterLogo = ({
   imgProps = {
     className: "h-auto max-h-[16rem] w-full max-w-[16rem]",
     height: 256,
+    loading: "lazy" as const,
     width: 256,
   },
   name,
@@ -67,9 +68,7 @@ const PresenterLogo = ({
           image
         ) : (
           <>
-            <div className="flex h-[200px] items-center justify-center">
-              {image}
-            </div>
+            <div className="flex h-50 items-center justify-center">{image}</div>
             <div className="justify-self-end text-center text-2xl font-bold">
               {presenter.name}
             </div>

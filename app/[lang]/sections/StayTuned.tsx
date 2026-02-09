@@ -169,6 +169,7 @@ export const StayTuned = () => {
                     type="email"
                     name="email"
                     value={email}
+                    autoComplete="email"
                     onChange={handleEmailChange}
                     placeholder={lang.stayTuned.emailPlaceholder}
                     disabled={status === "loading"}

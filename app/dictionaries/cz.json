@@ -439,6 +439,8 @@
   "learnMore": "chci vědět víc",
   "mobileCardStack": {
     "goToCard": "Přejít na kartu",
+    "nextCard": "Další karta",
+    "previousCard": "Předchozí karta",
     "tapToHide": "Klepnutím skryješ, přejetím na další",
     "tapToReveal": "Klepnutím zobrazíš, přejetím na další"
   },

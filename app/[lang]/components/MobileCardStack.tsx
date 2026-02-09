@@ -207,6 +207,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex - 1)}
           disabled={currentIndex === 0}
+          aria-label={lang.mobileCardStack.previousCard}
           className="punk-border font-display aspect-square h-32 rotate-180 cursor-pointer rounded-full text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           <ArrowIcon />
@@ -217,6 +218,7 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
         <button
           onClick={() => goToCard(currentIndex + 1)}
           disabled={currentIndex === items.length - 1}
+          aria-label={lang.mobileCardStack.nextCard}
           className="punk-border font-display aspect-square h-32 cursor-pointer rounded-full text-lg font-bold text-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           <ArrowIcon />
