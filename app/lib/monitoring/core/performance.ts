@@ -14,7 +14,7 @@ const isDevelopment = process.env.NODE_ENV === "development";
 
 // Thresholds for slow operation detection (in milliseconds)
 const SLOW_OPERATION_THRESHOLDS: Partial<Record<OperationType, number>> = {
-  "subscribe.submit": 2000,
+  "subscribe.submit": 4000,
 };
 
 /**
