@@ -58,6 +58,8 @@ export const CookieConsent = () => {
   const [forceShow, setForceShow] = useState(false);
   // Track if user has scrolled past the header
   const [hasScrolledPastHeader, setHasScrolledPastHeader] = useState(false);
+  // Track if cookie details accordion is open
+  const [detailsOpen, setDetailsOpen] = useState(false);
 
   // Listen for scroll to show consent after header
   useEffect(() => {
@@ -110,11 +112,9 @@ export const CookieConsent = () => {
 
   if (!shouldShow) return null;
 
-  const cookieConsent = lang?.cookieConsent || {
-    accept: "Accept",
-    decline: "Decline",
-    message: "We use cookies for analytics and to protect our forms from spam.",
-  };
+  const cookieConsent = lang?.cookieConsent;
+
+  const cookies = cookieConsent.cookies || [];
 
   return (
     <div className="fixed right-0 bottom-0 z-50 p-4 md:p-6">
@@ -122,6 +122,44 @@ export const CookieConsent = () => {
         <p className="text-sm text-black md:text-base">
           {cookieConsent.message}
         </p>
+        {cookies.length > 0 && (
+          <div className="w-full">
+            <button
+              onClick={() => setDetailsOpen((o) => !o)}
+              className="font-display flex cursor-pointer items-center gap-1 text-xs font-bold tracking-wider text-black/60 uppercase transition-colors hover:text-black"
+            >
+              <span
+                className={`inline-block transition-transform ${detailsOpen ? "rotate-90" : ""}`}
+              >
+                ▶
+              </span>
+              {cookieConsent.details}
+            </button>
+            {detailsOpen && (
+              <div className="mt-2 space-y-2">
+                {cookies.map((c) => (
+                  <div
+                    key={c.name}
+                    className="border-primary border-l-4 py-1 pl-3 text-xs text-black/80"
+                  >
+                    <span className="block font-bold">
+                      {c.name} ·{" "}
+                      {c.cookies ? (
+                        <span className="bg-secondary/30 px-2 py-1 font-mono">
+                          {c.cookies}
+                        </span>
+                      ) : (
+                        cookieConsent.noCookiesStored
+                      )}{" "}
+                      · {c.duration}
+                    </span>
+                    {c.description}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
         <div className="flex gap-3">
           <button
             onClick={handleDecline}

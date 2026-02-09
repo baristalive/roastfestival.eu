@@ -617,7 +617,28 @@
   "cookieConsent": {
     "message": "Allow us to use 🍪 for spam protection and analytics.",
     "accept": "Accept",
-    "decline": "No way!"
+    "decline": "No way!",
+    "details": "What cookies?",
+    "noCookiesStored": "No cookies",
+    "cookies": [
+      {
+        "name": "Google Analytics",
+        "description": "Helps us understand how visitors use the site.",
+        "cookies": "_ga, _ga_*, _gid",
+        "duration": "Stored for up to 2 years"
+      },
+      {
+        "name": "reCAPTCHA",
+        "description": "Protects our forms from spam and bots.",
+        "cookies": "NID",
+        "duration": "Stored for current session only"
+      },
+      {
+        "name": "Sentry",
+        "description": "Error monitoring to keep the site running smoothly. Always active.",
+        "duration": "Stored for current session only"
+      }
+    ]
   },
   "metadata": {
     "description": "Brno Festival of Coffee and Roasters 2026"

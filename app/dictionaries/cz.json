@@ -645,7 +645,28 @@
   "cookieConsent": {
     "message": "Dovol nám použít 🍪 pro ochranu před spamem a analytiku.",
     "accept": "Souhlasím",
-    "decline": "To teda ne!"
+    "decline": "To teda ne!",
+    "details": "Jaké cookies?",
+    "noCookiesStored": "Žádné cookies",
+    "cookies": [
+      {
+        "name": "Google Analytics",
+        "description": "Pomáhá nám pochopit, jak návštěvníci používají web.",
+        "cookies": "_ga, _ga_*, _gid",
+        "duration": "Uloženo až 2 roky"
+      },
+      {
+        "name": "reCAPTCHA",
+        "description": "Chrání naše formuláře před spamem a boty.",
+        "cookies": "NID",
+        "duration": "Pouze v rámci aktuální relace"
+      },
+      {
+        "name": "Sentry",
+        "description": "Monitoring chyb pro bezproblémový chod webu. Vždy aktivní.",
+        "duration": "Pouze v rámci aktuální relace"
+      }
+    ]
   },
   "metadata": {
     "description": "Brněnský festival kávy a pražíren 2026"
