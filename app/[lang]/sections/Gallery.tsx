@@ -8,6 +8,7 @@ import {
 } from "../../components/ZoomableImage";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { Section } from "@/app/components/Section";
+import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 
 const largeWallImages = [
   [
@@ -53,40 +54,58 @@ const smallWallImages = [
 export const Gallery = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
+  // Before hydration (undefined), render both layouts with CSS visibility
+  // to match the static HTML output. After mount, conditionally render only
+  // the active layout to reduce the number of mounted ZoomableImage components.
+
+  const MobileView = (
+    <div className="mx-auto flex items-center justify-center gap-3 p-2 pb-12">
+      {smallWallImages.map((col, idx) => (
+        <div className="flex flex-col gap-3" key={`col_${idx}`}>
+          {col.map((i, idx2) => (
+            <ZoomableImage
+              key={`img_${idx2}`}
+              alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
+              {...i}
+              src={`/images/photos/${i.src}`}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+
+  const DesktopView = (
+    <div className="mx-auto flex items-center justify-center gap-8 p-12">
+      {largeWallImages.map((col, idx) => (
+        <div className="flex min-w-0 shrink flex-col gap-8" key={`col_${idx}`}>
+          {col.map((i, idx2) => (
+            <ZoomableImage
+              key={`img_${idx2}`}
+              alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
+              {...i}
+              src={`/images/photos/${i.src}`}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+  if (isMobile !== undefined) {
+    return (
+      <Section className="bg-secondary">
+        {isMobile ? MobileView : DesktopView}
+      </Section>
+    );
+  }
+
+  // SSR / hydration fallback: render both, let CSS handle visibility
   return (
     <Section className="bg-secondary">
-      <div className="mx-auto hidden items-center justify-center gap-8 p-12 md:flex">
-        {largeWallImages.map((col, idx) => (
-          <div
-            className="flex min-w-0 shrink flex-col gap-8"
-            key={`col_${idx}`}
-          >
-            {col.map((i, idx2) => (
-              <ZoomableImage
-                key={`img_${idx2}`}
-                alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
-                {...i}
-                src={`/images/photos/${i.src}`}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto flex items-center justify-center gap-3 p-2 pb-12 md:hidden">
-        {smallWallImages.map((col, idx) => (
-          <div className="flex flex-col gap-3 md:grid" key={`col_${idx}`}>
-            {col.map((i, idx2) => (
-              <ZoomableImage
-                key={`img_${idx2}`}
-                alt={`${lang.lastYear.title}: ${params.lang === "cz" ? "Foto" : "Photo"} #${idx}${idx2}`}
-                {...i}
-                src={`/images/photos/${i.src}`}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
+      {DesktopView}
+      {MobileView}
     </Section>
   );
 };

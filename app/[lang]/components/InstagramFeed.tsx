@@ -1,10 +1,5 @@
 "use client";
-import { Fragment, useEffect, useState } from "react";
-import {
-  fetchAndActivate,
-  getRemoteConfig,
-  getValue,
-} from "firebase/remote-config";
+import { Fragment } from "react";
 import { useParams } from "next/navigation";
 
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
@@ -12,30 +7,13 @@ import CarouselIcon from "@/app/icons/carousel";
 import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import VideoIcon from "@/app/icons/video";
-import { app } from "@/app/utils/firebase";
 import { PATTERNS } from "@/app/utils/consts";
-
-const LIMIT = 7;
-
-const INSTAGRAM_PARAMS = new URLSearchParams({
-  fields: "media_url,permalink,media_type,thumbnail_url,caption",
-  limit: LIMIT.toString(),
-});
-
-const INSTAGRAM_URLS = [
-  "https://graph.instagram.com/me/stories",
-  "https://graph.instagram.com/me/media",
-];
-
-type InstagramMediaType = "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO";
-type InstagramPost = {
-  media_url: string;
-  media_type: InstagramMediaType;
-  thumbnail_url: string;
-  permalink: string;
-  caption: string;
-  id: string;
-};
+import {
+  useInstagramFeed,
+  INSTAGRAM_LIMIT,
+  type InstagramMediaType,
+  type InstagramPost,
+} from "@/app/hooks/useInstagramFeed";
 
 const Badge = ({ type }: { type: InstagramMediaType }) => {
   switch (type) {
@@ -71,39 +49,7 @@ const ContentTile = (post: InstagramPost) => {
 export const InstagramFeed = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
-  const [posts, setPosts] = useState([] as InstagramPost[]);
-  const [igApiKey, setIgApiKey] = useState("");
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const remoteConfig = getRemoteConfig(app);
-
-    fetchAndActivate(remoteConfig)
-      .then(() => getValue(remoteConfig, "INSTAGRAM_API_KEY"))
-      .then((c) => setIgApiKey(c.asString()));
-  }, [igApiKey]);
-
-  useEffect(() => {
-    if (igApiKey === "") return;
-    INSTAGRAM_PARAMS.set("access_token", igApiKey);
-
-    Promise.all(
-      INSTAGRAM_URLS.map((url) => fetch(`${url}?${INSTAGRAM_PARAMS}`)),
-    )
-      .then((rawResponses) =>
-        Promise.all(rawResponses.map((resp) => resp.json())),
-      )
-      .then((data) =>
-        setPosts(
-          data
-            .map((d) => d?.data)
-            .flat()
-            .slice(0, LIMIT)
-            .filter((d) => d !== undefined),
-        ),
-      );
-  }, [igApiKey]);
+  const posts = useInstagramFeed();
 
   return (
     <div className="animate-pop punk-border pop-shadow bg-primary grid grid-cols-3 text-center text-white">
@@ -125,7 +71,7 @@ export const InstagramFeed = () => {
               <ContentTile {...p} />
             </Fragment>
           ))
-        : Array(LIMIT)
+        : Array(INSTAGRAM_LIMIT)
             .fill(0)
             .map((_, idx) => (
               <Fragment key={idx}>

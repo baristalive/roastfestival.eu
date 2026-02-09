@@ -187,9 +187,8 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
       {/* Progress Dots */}
       <div className="flex items-center gap-2">
         {items.map((item, index) => (
-          <button
+          <div
             key={item.title}
-            onClick={() => goToCard(index)}
             className={`h-3 w-3 rounded-full border-2 border-black transition-all ${
               index === currentIndex
                 ? "scale-110 bg-black"
@@ -197,7 +196,6 @@ export const MobileCardStack = ({ items }: MobileCardStackProps) => {
                   ? "bg-primary"
                   : "bg-transparent"
             }`}
-            aria-label={`${lang.mobileCardStack.goToCard} ${index + 1}`}
           />
         ))}
       </div>

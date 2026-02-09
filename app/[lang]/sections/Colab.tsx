@@ -9,7 +9,7 @@ export const Colab = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <Section id="colab" className="relative overflow-hidden lg:pb-12">
+    <Section id="colab" className="relative overflow-hidden xl:pb-12">
       {/* Split background */}
       <div className="absolute inset-0 hidden xl:flex">
         <div className="bg-primary flex-1" />

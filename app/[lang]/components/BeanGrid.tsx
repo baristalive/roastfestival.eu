@@ -1,46 +1,73 @@
 "use client";
-import { useState, useCallback } from "react";
-import BeanIcon from "@/app/icons/beanicon";
+import { useEffect, useRef, useState } from "react";
+
+// Each bean cell: p-3 (12px each side) + h-12/w-12 (48px) = 72px
+const CELL_SIZE = 72;
 
 export const BeanGrid = () => {
-  const [hoveredBeans, setHoveredBeans] = useState<Set<number>>(new Set());
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [beanCount, setBeanCount] = useState(0);
 
-  const handleMouseEnter = useCallback((index: number) => {
-    setHoveredBeans((prev) => new Set(prev).add(index));
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const measure = () => {
+      const cols = Math.ceil(container.clientWidth / CELL_SIZE);
+      const rows = Math.ceil(container.clientHeight / CELL_SIZE) + 1;
+      setBeanCount(cols * rows);
+    };
+
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(container);
+    return () => observer.disconnect();
   }, []);
-
-  const handleMouseLeave = useCallback((index: number) => {
-    setHoveredBeans((prev) => {
-      const next = new Set(prev);
-      next.delete(index);
-      return next;
-    });
-  }, []);
-
-  // Create a grid of beans - adjust count based on desired density
-  const beanCount = 500;
 
   return (
-    <div className="pointer-events-none absolute inset-0 -mr-16 flex flex-wrap overflow-hidden p-2">
+    <div
+      ref={containerRef}
+      className="pointer-events-none absolute inset-0 -mr-16 flex flex-wrap overflow-hidden p-2"
+    >
+      <svg className="absolute h-0 w-0" aria-hidden="true">
+        <defs>
+          <symbol id="bean" viewBox="0 0 6.349875 6.349875">
+            <path
+              d="M 1.2657484,1.1333142 C 1.1983113,1.134191 1.1313358,1.1430451 1.0652921,1.1603061 0.3608257,1.3444226 0.03163502,2.4189668 0.33012376,3.5602695 0.6286001,4.7015216 1.4415433,5.4772942 2.1459379,5.2932694 2.6061717,5.1729532 2.9061148,4.6725573 2.9756264,4.0218418 2.6468121,3.9374915 2.3820994,3.7602152 2.2427802,3.4882908 2.0619407,3.1353248 2.1330468,2.7040789 2.3769662,2.3010311 2.4251367,2.221435 2.4803208,2.1426756 2.541627,2.0653595 2.203701,1.48968 1.7246514,1.1273345 1.2657484,1.1333142 Z m 0.068786,0.794957 a 0.07430047,0.07430047 0 0 1 0.038505,7.732e-4 0.07430047,0.07430047 0 0 1 0.050695,0.092005 C 1.306088,2.4281454 1.3956029,2.8668321 1.6632751,3.1953443 1.9616434,3.5614881 2.0614295,4.0509474 1.9302927,4.5046967 a 0.07430047,0.07430047 0 0 1 -0.092005,0.050791 0.07430047,0.07430047 0 0 1 -0.050792,-0.092005 C 1.9051405,4.0564193 1.8156243,3.6177572 1.5479549,3.2892838 1.2495885,2.9231024 1.149802,2.4336139 1.2809374,1.9798352 a 0.07430047,0.07430047 0 0 1 0.053598,-0.051565 z"
+              style={{
+                fill: "currentcolor",
+                fillOpacity: 1,
+                strokeWidth: 0.264578,
+              }}
+            />
+            <path
+              style={{
+                fill: "currentcolor",
+                fillOpacity: 1,
+                strokeDasharray: "none",
+                strokeWidth: 0,
+              }}
+              d="M 4.955231,1.0296032 C 4.554571,1.0307375 4.0921567,1.1427028 3.6424928,1.3731462 3.1285892,1.6365116 2.7305167,2.0037991 2.5040893,2.3779436 2.2776636,2.752089 2.2238493,3.1254895 2.3750309,3.4205688 2.5262096,3.7156412 2.8607648,3.8900193 3.2967248,3.9247092 3.7326841,3.9593987 4.2633142,3.8507721 4.7772194,3.5874546 5.291118,3.3241411 5.6891035,2.956918 5.9155258,2.5827537 6.1419464,2.20859 6.1956959,1.8350841 6.0445841,1.540032 h 9.91e-5 C 5.8934817,1.2449819 5.5589678,1.0705987 5.1229899,1.0358914 5.0684925,1.0315523 5.0124704,1.0294412 4.9552334,1.0296032 Z m 0.3786613,0.7907 a 0.07430926,0.07430926 0 0 1 0.074301,0.074494 0.07430926,0.07430926 0 0 1 -0.074494,0.074204 C 4.9098942,1.9681887 4.5128335,2.17513 4.2708539,2.5230618 4.0011639,2.910882 3.5580964,3.141886 3.0857228,3.1409747 a 0.07430926,0.07430926 0 0 1 -0.074107,-0.074494 0.07430926,0.07430926 0 0 1 0.074494,-0.074204 C 3.5098819,2.993101 3.9069153,2.7861345 4.1488579,2.4382161 4.4185855,2.050387 4.8614904,1.8193992 5.3338923,1.8203032 Z"
+            />
+          </symbol>
+        </defs>
+      </svg>
       {Array.from({ length: beanCount }).map((_, i) => (
         <div
           key={i}
-          className="pointer-events-auto flex items-center justify-center p-3"
-          onMouseEnter={() => handleMouseEnter(i)}
-          onMouseLeave={() => handleMouseLeave(i)}
+          className="group pointer-events-auto flex items-center justify-center p-3"
         >
-          <div
-            className={`h-12 w-12 text-black transition-opacity ${
-              hoveredBeans.has(i)
-                ? "opacity-0 duration-100"
-                : "opacity-10 delay-1000 duration-300"
-            }`}
+          <svg
+            className="h-12 w-12 text-black opacity-10 transition-opacity delay-1000 duration-300 group-hover:opacity-0 group-hover:delay-0 group-hover:duration-100 group-active:opacity-0 group-active:delay-0 group-active:duration-100"
             style={{
               transform: `rotate(${(i * 37) % 360}deg)`,
             }}
+            viewBox="0 0 6.349875 6.349875"
+            aria-hidden="true"
           >
-            <BeanIcon />
-          </div>
+            <use href="#bean" />
+          </svg>
         </div>
       ))}
     </div>

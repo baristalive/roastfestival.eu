@@ -85,7 +85,7 @@ export const Header = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="animate-bounce pb-8">
+      <div className="pointer-events-none animate-bounce pb-8 select-none">
         <div className="aspect-square h-24 rotate-90 text-black">
           <ArrowIcon />
         </div>

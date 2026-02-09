@@ -22,11 +22,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <html lang={params.lang === "cz" ? "cs" : "en"} className="scroll-smooth">
       <head>
         {/* Preconnect to third-party origins for faster resource loading */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link
-          rel="preconnect"
-          href="https://firebaseinstallations.googleapis.com"
-        />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://graph.instagram.com" />
       </head>

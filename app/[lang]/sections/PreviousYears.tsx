@@ -37,7 +37,7 @@ const YearBlock = ({
 }) => {
   return (
     <div
-      className={`flex w-full flex-col items-center gap-4 p-12 ${highlight ? "bg-accent bg-lines" : "bg-black"}`}
+      className={`flex w-full flex-col items-center gap-4 py-12 ${highlight ? "bg-accent bg-lines" : "bg-black"}`}
     >
       {/* Year */}
       <span

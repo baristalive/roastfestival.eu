@@ -5,11 +5,11 @@ import TramIcon from "@/app/icons/tram";
 import WebIcon from "@/app/icons/web";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useParams } from "next/navigation";
-import { useState, useEffect } from "react";
 import ReactMap, { Marker, NavigationControl } from "react-map-gl/maplibre";
 import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 import { Section } from "@/app/components/Section";
+import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 
 const BASE_LAT = 49.1995978;
 const BASE_LNG = 16.6225864;
@@ -19,20 +19,10 @@ export const Map = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(max-width: 768px)").matches;
-  });
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const mapCenter = {
-    latitude: isMobile ? BASE_LAT + MOBILE_LAT_OFFSET : BASE_LAT,
+    latitude: isMobile === true ? BASE_LAT + MOBILE_LAT_OFFSET : BASE_LAT,
     longitude: BASE_LNG,
   };
 
