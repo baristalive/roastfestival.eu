@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://roastfestival.eu/",
+    canonical: "https://roastfestival.eu/cz",
     languages: {
       "cs-CZ": "https://roastfestival.eu/cz",
       "en-US": "https://roastfestival.eu/en",
