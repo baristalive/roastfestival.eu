@@ -88,7 +88,7 @@ export const TicketCard = ({
               : labels.comingSoon}
           </span>
         ) : (
-          <span className="font-display px-2text-center w-full bg-black py-4 text-xl font-black text-white uppercase">
+          <span className="font-display w-full bg-black px-2 py-4 text-center text-xl font-black text-white uppercase">
             {labels.buyTickets}
           </span>
         )}
