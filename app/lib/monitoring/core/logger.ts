@@ -148,8 +148,18 @@ export function info(message: string, context?: LogContext): void {
 /**
  * Log warning message
  */
-export function warn(message: string, context?: LogContext): void {
-  log(LogLevelEnum.WARN, message, context);
+export function warn(message: string, context?: LogContext): void;
+export function warn(message: string, err: Error, context?: LogContext): void;
+export function warn(
+  message: string,
+  errOrContext?: Error | LogContext,
+  context?: LogContext,
+): void {
+  if (errOrContext instanceof Error) {
+    log(LogLevelEnum.WARN, message, context, errOrContext);
+  } else {
+    log(LogLevelEnum.WARN, message, errOrContext);
+  }
 }
 
 /**

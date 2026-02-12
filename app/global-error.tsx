@@ -5,6 +5,16 @@ import { useEffect } from "react";
 import "./globals.css";
 import { logger } from "./lib/monitoring";
 
+const CHUNK_ERROR_RELOAD_KEY = "chunk-error-reload";
+
+function isChunkLoadError(error: Error): boolean {
+  return (
+    error.name === "ChunkLoadError" ||
+    /loading chunk [\w]+ failed/i.test(error.message) ||
+    /failed to fetch dynamically imported module/i.test(error.message)
+  );
+}
+
 const GlobalError = ({
   error,
   reset,
@@ -13,6 +23,18 @@ const GlobalError = ({
   reset: () => void;
 }) => {
   useEffect(() => {
+    // Auto-reload once on ChunkLoadError (stale chunks after deploy)
+    if (isChunkLoadError(error)) {
+      const alreadyReloaded =
+        sessionStorage.getItem(CHUNK_ERROR_RELOAD_KEY) !== null;
+      if (!alreadyReloaded) {
+        sessionStorage.setItem(CHUNK_ERROR_RELOAD_KEY, "1");
+        window.location.reload();
+        return;
+      }
+      sessionStorage.removeItem(CHUNK_ERROR_RELOAD_KEY);
+    }
+
     // Log error to Sentry
     Sentry.captureException(error);
 

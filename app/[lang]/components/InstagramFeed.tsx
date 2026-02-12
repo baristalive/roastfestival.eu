@@ -26,25 +26,21 @@ const Badge = ({ type }: { type: InstagramMediaType }) => {
   }
 };
 
-const ContentTile = (post: InstagramPost) => {
-  const imageSrc =
-    post.media_type === "VIDEO" ? post.thumbnail_url : post.media_url;
-  return (
-    <a href={post.permalink} rel="external" target="_blank">
-      <div className="img-overlay aspect-square w-full before:z-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={imageSrc}
-          className="absolute top-0 left-0 z-0 h-full w-full object-cover"
-          alt={post.caption}
-        />
-        <div className="absolute top-3 right-3 z-20 text-xl text-white">
-          <Badge type={post.media_type} />
-        </div>
+const ContentTile = (post: InstagramPost) => (
+  <a href={post.permalink} rel="external" target="_blank">
+    <div className="img-overlay aspect-square w-full before:z-10">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={post.image_url}
+        className="absolute top-0 left-0 z-0 h-full w-full object-cover"
+        alt={post.caption}
+      />
+      <div className="absolute top-3 right-3 z-20 text-xl text-white">
+        <Badge type={post.media_type} />
       </div>
-    </a>
-  );
-};
+    </div>
+  </a>
+);
 
 export const InstagramFeed = () => {
   const params = useParams();

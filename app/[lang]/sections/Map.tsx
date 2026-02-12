@@ -1,4 +1,5 @@
 "use client";
+import { Component, type ErrorInfo, type ReactNode } from "react";
 import CarIcon from "@/app/icons/car";
 import MapIcon from "@/app/icons/map";
 import TramIcon from "@/app/icons/tram";
@@ -10,6 +11,36 @@ import { SupportedLanguages, dictionaries } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 import { Section } from "@/app/components/Section";
 import { useMediaQuery } from "@/app/hooks/useMediaQuery";
+import { logger } from "@/app/lib/monitoring";
+
+class MapErrorBoundary extends Component<
+  { fallback: ReactNode; children: ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { fallback: ReactNode; children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    logger.warn("Map failed to render (likely WebGL unavailable)", error, {
+      component: "Map",
+      metadata: { componentStack: info.componentStack ?? undefined },
+      operation: "map_render",
+    });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
 
 const BASE_LAT = 49.1995978;
 const BASE_LNG = 16.6225864;
@@ -30,75 +61,101 @@ export const Map = () => {
     <Section id="location" className="relative">
       {/* Full-bleed Map */}
       <div className="h-screen lg:h-225">
-        <ReactMap
-          key={isMobile ? "mobile" : "desktop"}
-          initialViewState={{
-            latitude: mapCenter.latitude,
-            longitude: mapCenter.longitude,
-            zoom: 15,
-          }}
-          scrollZoom={false}
-          style={{
-            height: "100%",
-            width: "100%",
-          }}
-          mapStyle="https://api.maptiler.com/maps/019c202e-e943-71a2-9307-527f7fee6b56/style.json?key=PeGeqGWAzLQUdqICcIfc"
-        >
-          <Marker latitude={49.1996958} longitude={16.6225864} anchor="bottom">
-            <div
-              className="map-marker-punk bg-primary flex flex-col items-center gap-2 px-4 py-2 text-white"
-              style={
-                {
-                  "--background": "var(--color-primary)",
-                } as React.CSSProperties
-              }
-            >
-              <span className="font-display w-min text-center font-bold">
-                {lang.location.stops.kaznice}
-              </span>
-              <div className="h-12 w-12">
-                <BeanIcon />
+        <MapErrorBoundary
+          fallback={
+            <div className="bg-dots flex h-full flex-col items-center justify-center gap-4 bg-white p-8 text-center">
+              <div className="aspect-square h-24">
+                <MapIcon />
               </div>
+              <p className="font-display text-xl font-bold uppercase">
+                {lang.location.stops.kaznice}
+              </p>
+              <p className="text-base">Bratislavská 249/68, 602 00 Brno</p>
+              <a
+                href={lang.contacts.kaznice_loc}
+                rel="external"
+                target="_blank"
+                className="punk-border bg-accent pop-shadow-small hover:bg-accent px-6 py-3 font-bold text-black transition-colors"
+              >
+                {lang.location.openInMaps}
+              </a>
             </div>
-          </Marker>
-          <Marker
-            latitude={49.20001678633428}
-            longitude={16.625958456324793}
-            anchor="bottom"
+          }
+        >
+          <ReactMap
+            key={isMobile ? "mobile" : "desktop"}
+            initialViewState={{
+              latitude: mapCenter.latitude,
+              longitude: mapCenter.longitude,
+              zoom: 15,
+            }}
+            scrollZoom={false}
+            style={{
+              height: "100%",
+              width: "100%",
+            }}
+            mapStyle="https://api.maptiler.com/maps/019c202e-e943-71a2-9307-527f7fee6b56/style.json?key=PeGeqGWAzLQUdqICcIfc"
           >
-            <div className="map-marker-punk flex flex-col items-center gap-2 bg-white px-4 py-2">
-              <span className="font-display w-min text-center font-bold">
-                {lang.location.stops.tkalcovska}
-              </span>
-              <TramIcon size="2em" />
-            </div>
-          </Marker>
-          <Marker
-            latitude={49.19832445765383}
-            longitude={16.61971675681972}
-            anchor="bottom"
-          >
-            <div className="map-marker-punk flex flex-col items-center gap-2 bg-white px-4 py-2">
-              <span className="font-display w-min text-center font-bold">
-                {lang.location.stops.kornerova}
-              </span>
-              <TramIcon size="2em" />
-            </div>
-          </Marker>
-          <Marker
-            latitude={49.198594269474306}
-            longitude={16.61462520981893}
-            anchor="bottom"
-          >
-            <div className="map-marker-punk flex flex-col items-center gap-2 bg-white px-4 py-2">
-              <span className="font-display w-min text-center font-bold">
-                {lang.location.parking.lot.title}
-              </span>
-              <CarIcon size="2em" />
-            </div>
-          </Marker>
-          <NavigationControl position="bottom-right" showCompass={false} />
-        </ReactMap>
+            <Marker
+              latitude={49.1996958}
+              longitude={16.6225864}
+              anchor="bottom"
+            >
+              <div
+                className="map-marker-punk bg-primary flex flex-col items-center gap-2 px-4 py-2 text-white"
+                style={
+                  {
+                    "--background": "var(--color-primary)",
+                  } as React.CSSProperties
+                }
+              >
+                <span className="font-display w-min text-center font-bold">
+                  {lang.location.stops.kaznice}
+                </span>
+                <div className="h-12 w-12">
+                  <BeanIcon />
+                </div>
+              </div>
+            </Marker>
+            <Marker
+              latitude={49.20001678633428}
+              longitude={16.625958456324793}
+              anchor="bottom"
+            >
+              <div className="map-marker-punk flex flex-col items-center gap-2 bg-white px-4 py-2">
+                <span className="font-display w-min text-center font-bold">
+                  {lang.location.stops.tkalcovska}
+                </span>
+                <TramIcon size="2em" />
+              </div>
+            </Marker>
+            <Marker
+              latitude={49.19832445765383}
+              longitude={16.61971675681972}
+              anchor="bottom"
+            >
+              <div className="map-marker-punk flex flex-col items-center gap-2 bg-white px-4 py-2">
+                <span className="font-display w-min text-center font-bold">
+                  {lang.location.stops.kornerova}
+                </span>
+                <TramIcon size="2em" />
+              </div>
+            </Marker>
+            <Marker
+              latitude={49.198594269474306}
+              longitude={16.61462520981893}
+              anchor="bottom"
+            >
+              <div className="map-marker-punk flex flex-col items-center gap-2 bg-white px-4 py-2">
+                <span className="font-display w-min text-center font-bold">
+                  {lang.location.parking.lot.title}
+                </span>
+                <CarIcon size="2em" />
+              </div>
+            </Marker>
+            <NavigationControl position="bottom-right" showCompass={false} />
+          </ReactMap>
+        </MapErrorBoundary>
       </div>
 
       {/* Floating Panels */}
@@ -115,7 +172,7 @@ export const Map = () => {
                   href={lang.contacts.kaznice_loc}
                   rel="external"
                   title="Káznice Brno - Google Maps"
-                  className="hover:bg-primary flex h-10 w-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
+                  className="hover:bg-primary flex aspect-square h-10 items-center justify-center border-2 border-black bg-black fill-current p-1 text-white transition-colors"
                 >
                   <MapIcon />
                   <span className="sr-only">Káznice Brno - Google Maps</span>
@@ -124,7 +181,7 @@ export const Map = () => {
                   href={lang.contacts.kaznice_web}
                   rel="external"
                   title="Káznice Brno - Web"
-                  className="hover:bg-primary flex h-10 w-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
+                  className="hover:bg-primary flex aspect-square h-10 items-center justify-center border-2 border-black bg-black fill-current text-white transition-colors"
                 >
                   <WebIcon />
                   <span className="sr-only">Káznice Brno - Web</span>

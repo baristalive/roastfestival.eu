@@ -20,10 +20,18 @@ const INSTAGRAM_URLS = [
 ];
 
 export type InstagramMediaType = "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO";
+type InstagramApiPost = {
+  media_url?: string;
+  media_type?: InstagramMediaType;
+  thumbnail_url?: string;
+  permalink?: string;
+  caption?: string;
+  id?: string;
+};
+
 export type InstagramPost = {
-  media_url: string;
+  image_url: string;
   media_type: InstagramMediaType;
-  thumbnail_url: string;
   permalink: string;
   caption: string;
   id: string;
@@ -52,8 +60,26 @@ function fetchInstagramPosts(): Promise<InstagramPost[]> {
     const posts = data
       .map((d) => d?.data)
       .flat()
+      .filter(
+        (d): d is Required<InstagramApiPost> =>
+          d != null &&
+          typeof d.id === "string" &&
+          typeof d.permalink === "string" &&
+          typeof d.media_url === "string" &&
+          d.media_url !== "" &&
+          (d.media_type !== "VIDEO" ||
+            (typeof d.thumbnail_url === "string" && d.thumbnail_url !== "")),
+      )
       .slice(0, LIMIT)
-      .filter((d): d is InstagramPost => d !== undefined);
+      .map(
+        (d): InstagramPost => ({
+          caption: d.caption ?? "",
+          id: d.id,
+          image_url: d.media_type === "VIDEO" ? d.thumbnail_url : d.media_url,
+          media_type: d.media_type,
+          permalink: d.permalink,
+        }),
+      );
 
     cachedPosts = posts;
     return posts;

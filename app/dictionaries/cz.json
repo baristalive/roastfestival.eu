@@ -472,7 +472,8 @@
         "title": "Parkování v městské zóně nebo na ulici"
       }
     },
-    "title": "Místo konání"
+    "title": "Místo konání",
+    "openInMaps": "Otevřít v mapách"
   },
   "organizers": {
     "text": [

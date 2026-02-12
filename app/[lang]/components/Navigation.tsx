@@ -9,6 +9,9 @@ const SCROLL_STORAGE_KEY = "lang-switch-scroll";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import BeanIcon from "@/app/icons/beanicon";
 
+const getAlternateLangHref = (currentLang: string) =>
+  currentLang === "cz" ? "/en" : "/cz";
+
 export const Navigation = () => {
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
@@ -52,14 +55,14 @@ export const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <Link
-        href={params.lang === "cz" ? "./en" : "./cz"}
+      <a
+        href={getAlternateLangHref(params.lang as string)}
         rel="alternate"
         onClick={handleLanguageSwitch}
         className={`order-1 px-3 py-2 md:hidden ${languageSwitcherClasses}`}
       >
         {params.lang === "cz" ? "EN" : "CZ"}
-      </Link>
+      </a>
 
       <div className="group order-2 md:order-1">
         <Link
@@ -90,14 +93,14 @@ export const Navigation = () => {
         >
           {lang.nav.tickets}
         </a>
-        <Link
-          href={params.lang === "cz" ? "./en" : "./cz"}
+        <a
+          href={getAlternateLangHref(params.lang as string)}
           rel="alternate"
           onClick={handleLanguageSwitch}
           className={`px-3 py-1 ${languageSwitcherClasses}`}
         >
           {params.lang === "cz" ? "EN" : "CZ"}
-        </Link>
+        </a>
       </div>
       <a href="#tickets" className="group relative order-3 inline-block">
         <div
