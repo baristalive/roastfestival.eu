@@ -16,8 +16,12 @@
       "mcp__plugin_supabase_supabase__list_projects",
       "mcp__plugin_sentry_sentry__find_organizations",
       "mcp__plugin_sentry_sentry__search_issues",
+      "mcp__plugin_sentry_sentry__search_events",
+      "mcp__plugin_sentry_sentry__find_projects",
       "Bash(npm run lint:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)",
+      "Bash(git log:*)"
     ]
   },
   "enabledMcpjsonServers": ["next-devtools-mcp", "chrome-devtools", "eslint"],
