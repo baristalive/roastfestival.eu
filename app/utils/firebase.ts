@@ -67,9 +67,18 @@ const initializeAnalyticsIfConsented = (firebaseApp: FirebaseApp) => {
 };
 
 if (typeof window !== "undefined") {
-  // Try to initialize App Check and Analytics if already consented
-  initializeAppCheckIfConsented(app);
-  initializeAnalyticsIfConsented(app);
+  const initOnReady = () => {
+    initializeAppCheckIfConsented(app);
+    initializeAnalyticsIfConsented(app);
+  };
+
+  // Defer initialization until DOM is fully loaded to avoid
+  // "reCAPTCHA placeholder element must be an element or id" errors
+  if (document.readyState === "complete") {
+    initOnReady();
+  } else {
+    window.addEventListener("load", initOnReady, { once: true });
+  }
 
   // Listen for consent changes
   window.addEventListener("cookie-consent-changed", (event) => {
