@@ -20,17 +20,27 @@ type Labels = {
   workshops: string;
 };
 
+const LOCALE_MAP = { cz: "cs-CZ", en: "en-US" } as const;
+
+const formatNumber = (value: number | string, lang: string) => {
+  if (typeof value !== "number") return value;
+  const locale = LOCALE_MAP[lang as keyof typeof LOCALE_MAP] ?? "en-US";
+  return value.toLocaleString(locale);
+};
+
 const YearBlock = ({
   attendees,
   beanCount,
   highlight,
   labels,
+  lang,
   roasters,
   year,
 }: {
   attendees: number | string;
   beanCount: number;
   labels: Labels;
+  lang: string;
   roasters: number | string;
   year: number;
   highlight?: boolean;
@@ -64,7 +74,7 @@ const YearBlock = ({
       >
         <div>
           <span className="font-display block text-2xl font-black lg:text-3xl">
-            {attendees.toLocaleString()}
+            {formatNumber(attendees, lang)}
           </span>
           <span className="text-xs font-bold tracking-tight uppercase">
             {labels.attendees}
@@ -85,7 +95,8 @@ const YearBlock = ({
 
 export const PreviousYears = () => {
   const params = useParams();
-  const lang = dictionaries[params.lang as SupportedLanguages];
+  const langKey = params.lang as string;
+  const lang = dictionaries[langKey as SupportedLanguages];
 
   const years = lang.lastYear.years as YearData[];
   const labels = lang.lastYear.labels as Labels;
@@ -109,6 +120,7 @@ export const PreviousYears = () => {
             key={yearData.year}
             attendees={yearData.stats.attendees}
             beanCount={index + 1}
+            lang={langKey}
             labels={labels}
             roasters={yearData.stats.roasters}
             year={yearData.year}
@@ -117,6 +129,7 @@ export const PreviousYears = () => {
         <YearBlock
           attendees="?"
           beanCount={4}
+          lang={langKey}
           labels={labels}
           roasters="30+"
           year={2026}

@@ -1,25 +1,22 @@
 "use client";
-import { useCallback, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 
 export function useMediaQuery(query: string): boolean | undefined {
-  const subscribe = useCallback(
-    (onStoreChange: () => void) => {
-      const mediaQuery = window.matchMedia(query);
-      mediaQuery.addEventListener("change", onStoreChange);
-      return () => mediaQuery.removeEventListener("change", onStoreChange);
-    },
-    [query],
-  );
+  const [matches, setMatches] = useState<boolean | undefined>(undefined);
 
-  const getSnapshot = useCallback(
-    () => window.matchMedia(query).matches,
-    [query],
-  );
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(query);
 
-  const getServerSnapshot = useCallback(
-    () => undefined as boolean | undefined,
-    [],
-  );
+    const handler = () => setMatches(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handler);
 
-  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+    // Intentional: read initial value after mount so the first client render
+    // returns undefined (matching SSR), avoiding a hydration mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMatches(mediaQuery.matches);
+
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, [query]);
+
+  return matches;
 }

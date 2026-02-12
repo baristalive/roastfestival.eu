@@ -3,10 +3,12 @@ import { useEffect, useRef, useState } from "react";
 
 // Each bean cell: p-3 (12px each side) + h-12/w-12 (48px) = 72px
 const CELL_SIZE = 72;
+// Generous default so SSR HTML already contains beans (overflow is hidden, extras are clipped)
+const DEFAULT_BEAN_COUNT = 50;
 
 export const BeanGrid = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [beanCount, setBeanCount] = useState(0);
+  const [beanCount, setBeanCount] = useState(DEFAULT_BEAN_COUNT);
 
   useEffect(() => {
     const container = containerRef.current;

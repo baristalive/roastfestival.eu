@@ -54,7 +54,7 @@ export const Info = () => {
               {idx === 1 && (
                 <a
                   href="#what-to-expect"
-                  className="font-display bg-primary text-mint-cream hover:bg-accent mt-8 inline-block px-8 py-3 text-xl font-black uppercase transition-colors"
+                  className="font-display bg-primary hover:bg-accent mt-8 inline-block px-8 py-3 text-xl font-black text-black uppercase transition-colors"
                 >
                   {lang.learnMore || "Explore"}
                 </a>

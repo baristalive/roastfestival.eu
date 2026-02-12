@@ -26,7 +26,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         <link rel="dns-prefetch" href="https://graph.instagram.com" />
       </head>
       <body
-        className={`${syne.variable} ${outfit.variable} font-body bg-cream text-midnight selection:bg-orange selection:text-cream overflow-x-hidden`}
+        className={`${syne.variable} ${outfit.variable} font-body selection:bg-accent overflow-x-hidden bg-white text-black selection:text-black`}
       >
         {children}
         <CookieConsent />
