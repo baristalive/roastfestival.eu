@@ -26,7 +26,7 @@ const subscribeToEcomail = async (
     `https://api2.ecomailapp.cz/lists/${listId}/subscribe`,
     {
       body: JSON.stringify({
-        skip_confirmation: true,
+        skip_confirmation: false,
         subscriber_data: {
           email,
           source: "roastfestival.eu website",
