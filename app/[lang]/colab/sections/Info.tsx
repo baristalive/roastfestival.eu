@@ -40,7 +40,7 @@ export const Info = () => {
             <div className="punk-border pop-shadow bg-white p-4 text-black lg:p-6">
               <Card />
               <a
-                className="bg-primary font-display mt-10 block px-6 py-4 text-center text-xl font-black uppercase lg:hidden"
+                className="bg-primary font-display mt-10 block px-6 py-4 text-center text-xl font-black uppercase 2xl:hidden"
                 href="#colab-content"
               >
                 {lang.exhibitors.terms}
