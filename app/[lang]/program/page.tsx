@@ -83,7 +83,7 @@ export default function ProgramPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Sticky toolbar */}
-      <div className="sticky top-0 z-50 border-y-4 border-black bg-black px-4 py-3">
+      <div className="sticky top-0 z-50 border-y-4 border-black bg-black px-6 py-4">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
           {/* Left: home + title */}
           <div className="flex items-center gap-3">

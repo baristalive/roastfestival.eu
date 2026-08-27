@@ -80,18 +80,17 @@ export const Modal = ({
             className="fixed inset-0 z-50 flex animate-[fadeIn_150ms] items-end overflow-y-auto md:items-center md:justify-center"
             onClick={() => setShowModal(false)}
           >
-            {/* Close button */}
-            <button
-              className="bg-accent font-display hover:bg-primary fixed top-4 right-4 z-50 flex h-12 w-12 items-center justify-center text-2xl font-black text-black transition-all hover:-rotate-12 hover:text-white"
-              onClick={() => setShowModal(false)}
-            >
-              ×
-            </button>
-
             <div
-              className="my-4 max-h-[calc(100vh-2rem)] w-full overflow-y-auto md:w-auto md:max-w-2xl xl:max-w-3xl"
+              className="relative my-4 max-h-[calc(100vh-2rem)] w-full overflow-y-auto md:w-auto md:max-w-2xl xl:max-w-3xl"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Close button */}
+              <button
+                className="bg-accent font-display absolute top-3 right-3 z-10 flex h-12 w-12 items-center justify-center text-2xl font-black text-black transition-all hover:-rotate-12 hover:bg-black hover:text-white"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
               {/* Top colored section — logo + name */}
               <div
                 className={`${headerBg} px-6 pt-8 pb-8 text-center md:px-10`}
