@@ -8,6 +8,7 @@ import {
 } from "@/app/dictionaries/all";
 import { useCallback, useRef, useState } from "react";
 import { useParams } from "next/navigation";
+import InlineMarkdown from "@/app/components/InlineMarkdown";
 import { StationIcon } from "@/app/components/StationIcon";
 import Modal from "./Modal";
 import type { ViewMode } from "../page";
@@ -24,6 +25,11 @@ const GRID_STOPS =
     .flat()
     .join(" ") +
   " [h1800] 1fr 4px [h1810]";
+
+const TIMELINE_MIN_WIDTH = "64rem";
+const TIMELINE_COLUMNS = {
+  gridTemplateColumns: "var(--program-track-width) minmax(0, 1fr)",
+};
 
 const HOURS = Array.from(Array(9), (_, idx) => ({
   center: `h${idx + 10}00`,
@@ -42,6 +48,12 @@ const TRACK_STYLES: Record<
     headerBg: "bg-white",
     text: "text-black",
   },
+  cupping: {
+    bg: "bg-black",
+    edge: "border-l-white",
+    headerBg: "bg-black",
+    text: "text-white",
+  },
   espresso: {
     bg: "bg-black",
     edge: "border-l-white",
@@ -55,15 +67,15 @@ const TRACK_STYLES: Record<
     text: "text-black",
   },
   lecture: {
-    bg: "bg-black",
-    edge: "border-l-white",
-    headerBg: "bg-black",
-    text: "text-white",
-  },
-  party: {
     bg: "bg-white",
     edge: "border-l-black",
     headerBg: "bg-white",
+    text: "text-black",
+  },
+  party: {
+    bg: "bg-accent",
+    edge: "border-l-black",
+    headerBg: "bg-accent",
     text: "text-black",
   },
   workshop: {
@@ -92,6 +104,7 @@ const DaySchedule = ({
   const lang = dictionaries[params.lang as SupportedLanguages];
   const wrapperRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const headerTimelineRef = useRef<HTMLDivElement>(null);
   const [tracker, setTracker] = useState<{ x: number; time: string } | null>(
     null,
   );
@@ -122,15 +135,31 @@ const DaySchedule = ({
     });
   }, []);
 
+  const handleTimelineScroll = useCallback(
+    (e: React.UIEvent<HTMLDivElement>) => {
+      const headerTimeline = headerTimelineRef.current;
+      if (!headerTimeline) return;
+      headerTimeline.style.transform = `translate3d(-${e.currentTarget.scrollLeft}px, 0, 0)`;
+    },
+    [],
+  );
+
   if (schedule.length === 0) return null;
 
-  const style = (track: string) =>
-    TRACK_STYLES[track] || {
+  const altBg = dayBg.includes("bg-primary") ? "bg-secondary" : "bg-primary";
+
+  const style = (track: string) => {
+    const base = TRACK_STYLES[track] || {
       bg: "bg-black",
       edge: "border-l-black",
       headerBg: "bg-black",
       text: "text-white",
     };
+    if (base.bg === "bg-white") {
+      return { ...base, bg: altBg, headerBg: altBg };
+    }
+    return base;
+  };
 
   if (view === "list") {
     return (
@@ -182,8 +211,13 @@ const DaySchedule = ({
                               )}
                             </div>
                             <div className="bg-white p-4">
-                              <h4 className="font-display text-lg leading-tight font-black">
-                                {presenter.name}
+                              <h4
+                                lang={params.lang === "cz" ? "cs" : "en"}
+                                className="font-display text-lg leading-tight font-black break-words hyphens-auto"
+                              >
+                                <InlineMarkdown>
+                                  {presenter.name}
+                                </InlineMarkdown>
                               </h4>
                               {presenter.subheading && (
                                 <p className="mt-1 text-base text-black/60">
@@ -204,111 +238,190 @@ const DaySchedule = ({
   }
 
   return (
-    <div
-      ref={wrapperRef}
-      className={`schedule-wrapper relative flex w-full flex-col ${dayBg} ${className}`}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={() => setTracker(null)}
-    >
-      {/* Hidden calibration grid — same px-4 as header/gridlines */}
+    <div className="schedule-timeline relative">
+      {/* Sticky hour labels stay outside the horizontal scroller so they can
+          stick to the page while the schedule itself scrolls sideways. */}
       <div
-        className="pointer-events-none invisible absolute inset-0 grid px-4"
-        style={{ gridTemplateColumns: GRID_STOPS }}
+        className={`sticky z-20 grid overflow-hidden ${dayBg}`}
+        style={{
+          ...TIMELINE_COLUMNS,
+          top: "var(--program-toolbar-height, 0px)",
+        }}
       >
-        <div
-          ref={gridRef}
-          style={{ gridColumnEnd: "h1800", gridColumnStart: "h1000" }}
-        />
-      </div>
-
-      {/* Time tracker line — behind items */}
-      {tracker && (
-        <div
-          className="pointer-events-none absolute top-0 bottom-0 z-0"
-          style={{ left: tracker.x }}
-        >
-          <div className="font-display absolute top-0 -translate-x-1/2 bg-black px-2 py-0.5 text-sm font-black tracking-widest text-white">
-            {tracker.time}
-          </div>
-          <div className="absolute top-7 bottom-0 left-1/2 w-0.5 -translate-x-1/2 bg-black/50" />
-        </div>
-      )}
-
-      {/* Hour labels */}
-      <div
-        className="schedule-header font-display px-4 pb-2 text-center text-sm font-black tracking-widest text-black/50 uppercase"
-        style={{ gridTemplateColumns: GRID_STOPS }}
-      >
-        {HOURS.map((h) => (
+        <div className="border-r-4 border-black/20" />
+        <div className="min-w-0 overflow-hidden">
           <div
-            style={{ gridColumnEnd: h.end, gridColumnStart: h.start }}
-            key={h.title}
+            ref={headerTimelineRef}
+            className="schedule-header font-display relative grid px-4 py-2 text-center text-sm font-black tracking-widest text-black/50 uppercase will-change-transform"
+            style={{
+              gridTemplateColumns: GRID_STOPS,
+              minWidth: `calc(${TIMELINE_MIN_WIDTH} - var(--program-track-width))`,
+            }}
           >
-            {h.title}
+            {HOURS.map((h) => (
+              <div
+                style={{ gridColumnEnd: h.end, gridColumnStart: h.start }}
+                key={h.title}
+              >
+                {h.title}
+              </div>
+            ))}
+            {tracker && (
+              <div
+                className="font-display pointer-events-none absolute top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-black px-2 py-1 text-sm font-black tracking-widest text-white"
+                style={{
+                  left: `calc(${tracker.x}px - var(--program-track-width))`,
+                }}
+              >
+                {tracker.time}
+              </div>
+            )}
           </div>
-        ))}
+        </div>
       </div>
 
-      {/* Hour grid lines */}
-      <div
-        className="schedule-header absolute inset-0 top-7 bottom-0 z-0 px-4"
-        style={{ gridTemplateColumns: GRID_STOPS }}
-      >
-        {HOURS.map((h) => (
+      <div className="overflow-x-auto" onScroll={handleTimelineScroll}>
+        <div
+          ref={wrapperRef}
+          className={`schedule-wrapper relative flex w-full flex-col ${dayBg} ${className}`}
+          style={{ minWidth: TIMELINE_MIN_WIDTH }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={() => setTracker(null)}
+        >
+          {/* Hidden calibration grid — same px-4 as header/gridlines */}
           <div
-            className="schedule-gridline"
-            style={{ gridColumnEnd: h.center, gridColumnStart: h.start }}
-            key={h.title}
-          />
-        ))}
-      </div>
-
-      {/* Tracks */}
-      {schedule
-        .filter((t) => tracks.includes(t.track))
-        .map((t) => {
-          const { bg, edge, text } = style(t.track);
-          return (
+            className="pointer-events-none invisible absolute inset-0 grid"
+            style={TIMELINE_COLUMNS}
+          >
+            <div />
             <div
-              key={t.track}
-              data-track={t.track}
-              className="schedule-track relative px-4 py-3"
+              className="grid px-4"
               style={{ gridTemplateColumns: GRID_STOPS }}
             >
-              {t.schedule.flat().map((s, idx) => {
-                const presenter = lang.presenters[
-                  s.$ref as keyof typeof lang.presenters
-                ] as Presenter;
-                if (!presenter?.name) return null;
-                return (
-                  <div
-                    className="schedule-item-wrapper"
-                    key={`${presenter.name}_${idx}`}
-                    style={{
-                      gridColumnEnd: `h${s.end.replace(":", "")}`,
-                      gridColumnStart: `h${s.start.replace(":", "")}`,
-                    }}
-                  >
-                    <Modal {...presenter} headerBg={modalBg}>
-                      <div
-                        className={`schedule-item group my-1.5 flex h-full cursor-pointer items-start gap-2 border-l-4 ${edge} px-3 py-3 transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)] ${bg} ${text}`}
-                      >
-                        <h4 className="font-display line-clamp-2 grow text-sm leading-tight font-black">
-                          {presenter.name}
-                        </h4>
-                        {presenter.lang && (
-                          <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
-                            {presenter.lang}
-                          </span>
-                        )}
-                      </div>
-                    </Modal>
-                  </div>
-                );
-              })}
+              <div
+                ref={gridRef}
+                style={{ gridColumnEnd: "h1800", gridColumnStart: "h1000" }}
+              />
             </div>
-          );
-        })}
+          </div>
+
+          {/* Time tracker line — behind items */}
+          {tracker && (
+            <div
+              className="pointer-events-none absolute top-0 bottom-0 z-0"
+              style={{ left: tracker.x }}
+            >
+              <div className="absolute top-0 bottom-0 left-1/2 w-0.5 -translate-x-1/2 bg-black/50" />
+            </div>
+          )}
+
+          {/* Hour grid lines */}
+          <div
+            className="pointer-events-none absolute inset-0 z-0 grid"
+            style={TIMELINE_COLUMNS}
+          >
+            <div />
+            <div
+              className="schedule-header grid px-4"
+              style={{ gridTemplateColumns: GRID_STOPS }}
+            >
+              {HOURS.map((h) => (
+                <div
+                  className="schedule-gridline"
+                  style={{ gridColumnEnd: h.center, gridColumnStart: h.start }}
+                  key={h.title}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Tracks */}
+          {schedule
+            .filter((t) => tracks.includes(t.track))
+            .map((t) => {
+              const { bg, edge, headerBg, text } = style(t.track);
+              const singleLane = t.schedule.length === 1;
+              const categoryName =
+                lang.programCategory[
+                  t.track as keyof typeof lang.programCategory
+                ];
+              return (
+                <div
+                  key={t.track}
+                  data-track={t.track}
+                  className="grid"
+                  style={TIMELINE_COLUMNS}
+                >
+                  <div
+                    className={`sticky left-0 z-10 flex flex-col items-center justify-center gap-1 self-stretch border-r-4 border-black px-1 py-3 md:gap-2 md:px-2 md:py-4 ${headerBg} ${text}`}
+                  >
+                    <StationIcon station={t.track} />
+                    <span
+                      className="font-display text-center text-[0.65rem] leading-none font-black tracking-widest uppercase"
+                      style={{
+                        transform: "rotate(180deg)",
+                        writingMode: "vertical-rl",
+                      }}
+                    >
+                      {categoryName}
+                    </span>
+                  </div>
+                  <div
+                    className="schedule-track relative px-4 py-3"
+                    style={{ gridTemplateColumns: GRID_STOPS }}
+                  >
+                    {t.schedule.flat().map((s, idx) => {
+                      const presenter = lang.presenters[
+                        s.$ref as keyof typeof lang.presenters
+                      ] as Presenter;
+                      if (!presenter?.name) return null;
+                      return (
+                        <div
+                          className="schedule-item-wrapper"
+                          key={`${presenter.name}_${idx}`}
+                          style={{
+                            gridColumnEnd: `h${s.end.replace(":", "")}`,
+                            gridColumnStart: `h${s.start.replace(":", "")}`,
+                          }}
+                        >
+                          <Modal {...presenter} headerBg={modalBg}>
+                            <div
+                              className={`schedule-item group my-1.5 flex h-full cursor-pointer items-start gap-2 border-l-4 ${edge} px-3 py-3 transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)] ${bg} ${text}`}
+                            >
+                              <div className="min-w-0 grow">
+                                <h4
+                                  lang={params.lang === "cz" ? "cs" : "en"}
+                                  className={`font-display min-w-0 text-sm leading-tight font-black break-words hyphens-auto ${singleLane ? "" : "line-clamp-2"}`}
+                                >
+                                  <InlineMarkdown>
+                                    {presenter.name}
+                                  </InlineMarkdown>
+                                </h4>
+                                {presenter.subheading && (
+                                  <p
+                                    lang={params.lang === "cz" ? "cs" : "en"}
+                                    className="mt-1 text-sm leading-tight break-words hyphens-auto opacity-70"
+                                  >
+                                    {presenter.subheading}
+                                  </p>
+                                )}
+                              </div>
+                              {presenter.lang && (
+                                <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
+                                  {presenter.lang}
+                                </span>
+                              )}
+                            </div>
+                          </Modal>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      </div>
     </div>
   );
 };

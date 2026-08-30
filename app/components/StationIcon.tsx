@@ -11,6 +11,7 @@ export const StationIcon = ({ station }: { station?: string }) => {
     case "espresso":
       return <PortafilterIcon />;
     case "espresso_milk":
+    case "cupping":
       return <CupIcon />;
     case "brew":
       return <FiltersIcon />;

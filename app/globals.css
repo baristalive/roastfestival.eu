@@ -338,6 +338,14 @@ ol.round-counter li::before {
 }
 
 /* Schedule — timeline view */
+.schedule-timeline {
+  --program-track-width: 4rem;
+}
+@media (min-width: 768px) {
+  .schedule-timeline {
+    --program-track-width: 6rem;
+  }
+}
 .schedule-style-schedule .schedule-track,
 .schedule-style-schedule .schedule-header {
   display: grid;

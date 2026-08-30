@@ -8,6 +8,7 @@ import dictionaries, {
   Track,
 } from "@/app/dictionaries/all";
 import "../../../../../globals.css";
+import InlineMarkdown from "@/app/components/InlineMarkdown";
 import { toPng } from "html-to-image";
 import { getRoomCategory, RoomCategory } from "./utils";
 
@@ -109,7 +110,7 @@ const Schedule = (props: SchedulePropsType) => {
                               {presenter.lang}
                             </span>
                           )}
-                          {presenter.name}
+                          <InlineMarkdown>{presenter.name}</InlineMarkdown>
                         </h4>
                         <i className="text-lg">
                           {s.start} - {s.end}{" "}

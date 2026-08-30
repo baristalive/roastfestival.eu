@@ -5,7 +5,14 @@ import dictionaries, {
 import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
 import { useParams } from "next/navigation";
-import { PropsWithChildren, ReactNode, useEffect, useState } from "react";
+import InlineMarkdown from "@/app/components/InlineMarkdown";
+import {
+  PropsWithChildren,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { StationIcon } from "@/app/components/StationIcon";
 import ExportedImage from "next-image-export-optimizer";
 import WebIcon from "@/app/icons/web";
@@ -60,6 +67,14 @@ export const Modal = ({
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
 
+  const cardRef = useRef<HTMLDivElement>(null);
+  const dragState = useRef<{
+    startY: number;
+    startScroll: number;
+    dragging: boolean;
+  } | null>(null);
+  const [dragOffset, setDragOffset] = useState(0);
+
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") setShowModal(false);
@@ -68,6 +83,77 @@ export const Modal = ({
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showModal]);
+
+  const dragOffsetRef = useRef(0);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card || !showModal) return;
+
+    const onTouchStart = (e: TouchEvent) => {
+      dragState.current = {
+        dragging: false,
+        startScroll: card.scrollTop,
+        startY: e.touches[0].clientY,
+      };
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      const state = dragState.current;
+      if (!state) return;
+
+      const dy = e.touches[0].clientY - state.startY;
+
+      if (!state.dragging) {
+        if (dy > 0 && card.scrollTop <= 0) {
+          state.dragging = true;
+        } else {
+          return;
+        }
+      }
+
+      if (state.dragging) {
+        e.preventDefault();
+        const offset = Math.max(0, dy);
+        dragOffsetRef.current = offset;
+        setDragOffset(offset);
+      }
+    };
+
+    const onTouchEnd = () => {
+      const state = dragState.current;
+      dragState.current = null;
+
+      if (!state?.dragging) return;
+
+      if (dragOffsetRef.current > 150) {
+        setShowModal(false);
+      }
+      dragOffsetRef.current = 0;
+      setDragOffset(0);
+    };
+
+    card.addEventListener("touchstart", onTouchStart);
+    card.addEventListener("touchmove", onTouchMove, { passive: false });
+    card.addEventListener("touchend", onTouchEnd);
+
+    return () => {
+      card.removeEventListener("touchstart", onTouchStart);
+      card.removeEventListener("touchmove", onTouchMove);
+      card.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [showModal]);
+
   return (
     <>
       <div className="cursor-pointer" onClick={() => setShowModal(true)}>
@@ -75,15 +161,30 @@ export const Modal = ({
       </div>
       {showModal && (
         <>
-          <div className="fixed inset-0 z-40 bg-black/70" />
+          <div
+            className="fixed inset-0 z-40 bg-black/70 transition-opacity"
+            style={{ opacity: Math.max(0, 1 - dragOffset / 300) }}
+          />
           <div
             className="fixed inset-0 z-50 flex animate-[fadeIn_150ms] items-end overflow-y-auto md:items-center md:justify-center"
             onClick={() => setShowModal(false)}
           >
             <div
-              className="relative my-4 max-h-[calc(100vh-2rem)] w-full overflow-y-auto md:w-auto md:max-w-2xl xl:max-w-3xl"
+              ref={cardRef}
+              className="relative max-h-full w-full overflow-y-auto md:w-auto md:max-w-2xl xl:max-w-3xl"
+              style={{
+                transform:
+                  dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined,
+                transition: dragOffset > 0 ? "none" : "transform 0.2s ease-out",
+              }}
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Drag handle — mobile only */}
+              <div className="flex items-center justify-center gap-1.5 bg-black py-2 md:hidden">
+                <div className="h-0.5 w-3 bg-white/40" />
+                <div className="h-0.5 w-3 bg-white/40" />
+                <div className="h-0.5 w-3 bg-white/40" />
+              </div>
               {/* Close button */}
               <button
                 className="bg-accent font-display absolute top-3 right-3 z-10 flex h-12 w-12 items-center justify-center text-2xl font-black text-black transition-all hover:-rotate-12 hover:bg-black hover:text-white"
@@ -118,7 +219,7 @@ export const Modal = ({
                 )}
                 {modalProps?.showName !== false && (
                   <h3 className="font-display text-2xl font-black text-black uppercase md:text-4xl">
-                    {name}
+                    <InlineMarkdown>{name}</InlineMarkdown>
                   </h3>
                 )}
                 {subheading && modalProps?.showSubheading !== false && (
@@ -128,29 +229,37 @@ export const Modal = ({
 
               {/* Schedule badges strip */}
               {schedule.length > 0 && (
-                <div className="flex flex-wrap items-stretch justify-center border-y-4 border-black bg-black">
+                <div
+                  className={`grid justify-center border-y-4 border-black bg-black ${schedule.length === 1 ? "grid-cols-1" : "grid-cols-2"}`}
+                >
                   {schedule.map((item, idx) => {
                     const day =
                       lang.programDays[
                         item.day as keyof typeof lang.programDays
                       ].name;
+                    const isCenteredLastItem =
+                      schedule.length > 1 &&
+                      schedule.length % 2 === 1 &&
+                      idx === schedule.length - 1;
                     return (
                       <div
-                        className="flex items-center gap-3 border-r border-white/10 px-6 py-3 text-white last:border-r-0"
+                        className={`flex items-center justify-center gap-2 px-2 py-3 text-white md:gap-3 md:px-6 ${
+                          isCenteredLastItem ? "col-span-2" : ""
+                        }`}
                         key={idx}
                       >
-                        <div className="text-accent">
+                        <div className="text-accent shrink-0">
                           <StationIcon station={item.track} />
                         </div>
-                        <div>
-                          <div className="font-display text-sm font-black uppercase">
+                        <div className="min-w-0">
+                          <div className="font-display truncate text-xs font-black uppercase md:text-sm">
                             {
                               lang.programCategory[
                                 item.track as keyof typeof lang.programCategory
                               ]
                             }
                           </div>
-                          <div className="text-sm text-white/70">
+                          <div className="truncate text-xs text-white/70 md:text-sm">
                             {day} {item.start} – {item.end}
                           </div>
                         </div>
@@ -187,7 +296,17 @@ export const Modal = ({
                     <h6 className="font-display mb-2 text-base font-black uppercase">
                       {subheading}
                     </h6>
-                    <p className="text-base leading-relaxed">{bio}</p>
+                    <div className="text-base leading-relaxed">
+                      {Array.isArray(bio) ? (
+                        bio.map((paragraph) => (
+                          <p className="mb-4 last:mb-0" key={paragraph}>
+                            {paragraph}
+                          </p>
+                        ))
+                      ) : (
+                        <p>{bio}</p>
+                      )}
+                    </div>
                   </div>
                 )}
 

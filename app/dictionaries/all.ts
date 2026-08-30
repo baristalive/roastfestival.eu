@@ -21,6 +21,7 @@ export enum Track {
   Espresso = "espresso",
   Filter = "brew",
   Workshop = "workshop",
+  Cupping = "cupping",
   Lecture = "lecture",
   Party = "party",
   Honor = "espresso_milk",
@@ -38,6 +39,7 @@ export const AllTracks = [
   Track.Filter,
   Track.Lecture,
   Track.Workshop,
+  Track.Cupping,
   Track.Party,
 ];
 
@@ -59,7 +61,7 @@ export type Presenter = {
   twitter?: string;
   name: string;
   logo: string;
-  bio?: string;
+  bio?: string | string[];
   primaryLink: "web" | "instagram" | "facebook";
   subheading?: string;
   annotation?: string | string[];

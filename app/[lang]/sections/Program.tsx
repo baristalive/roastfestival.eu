@@ -11,7 +11,7 @@ export const Program = () => {
   return (
     <Section className="bg-dots bg-white px-6 py-24 lg:py-32" id="lineup">
       <div className="container mx-auto text-center">
-        <h2 className="font-display mb-6 text-5xl leading-[0.85] font-black text-black uppercase md:text-8xl lg:text-9xl">
+        <h2 className="font-display mb-6 text-4xl leading-[0.85] font-black text-black uppercase md:text-6xl lg:text-7xl 2xl:text-9xl">
           {lang.programTile.title}
         </h2>
         <p className="mx-auto mb-10 max-w-xl text-lg text-black/60 md:text-xl">

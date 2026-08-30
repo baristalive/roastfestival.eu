@@ -60,6 +60,15 @@
         "Our customers are cafés and enthusiasts who already know their way around specialty coffee, but also cafés that want to improve their output. We help them with both education and technical support. Many of them have found their niche in a professional approach to barista work and the diverse flavors of specialty Arabica coffees."
       ]
     },
+    "cofinet": {
+      "annotation": [
+        "For 80 years our family business has grown and distributed the finest Colombian coffee to local exporters. In 2015 we expanded our operations and began producing, sourcing and exporting speciality coffee to the rest of the world.",
+        "As growers, we specialise in alternative fermentation processes that are new to Colombia. On our farm and in our Processing Centre La Pradera, the most exotic varieties are processed achieving unique profiles that are unknown for Colombian coffees.",
+        "Cofinet also represents and supports a large number of Colombian Specialty coffee growers. Our aim is to encourage direct relationships between our farmers at origin and roasters around the world. We pride ourselves on creating sustainable, ethical and long-term relationships",
+        "We have established a strong relationship with a group of high-quality associations from Peru, who share our sustainability and traceability values. These associations work with farmers whose love and commitment to coffee are reflected in every single lot they produce. We must say that we have been stunned by the cup potential of Peruvian coffees.",
+        "One of our aims is to source the best coffee from Peru, but what really drives us is being able to work with the local community and have an impact in both social and economic ways. Our processing team provides continuous guidance to several smallholders in three different regions around Peru in order to improve the cup quality and achieve alternative profiles, never seen before in Peru. The results so far have been super promising and we cannot wait to share these coffees with you. We strongly believe that working hand in hand with growers is the only way to produce outstanding coffees."
+      ]
+    },
     "comandante": {},
     "chcikofein": {
       "annotation": "We are Miro and Maru – husband and wife, coffee addicts, and a little bit crazy, roasting coffee for like-minded enthusiasts. We roast in a one-kilogram roaster because we like to experiment, and a smaller roaster allows us to do that. It also means we can change our range more often, and from time to time you will find some real limited editions."
@@ -150,12 +159,6 @@
     },
     "pikola": {
       "annotation": "We are Pikola. At the foot of the Jeseníky Mountains we roast the finest coffee with respect for its origin. We are constantly on the lookout for exceptional coffees that stand out from the norm in terms of aroma and taste. Thanks to long-term relationships with our suppliers and farmers, our roastery offers you fresh coffees from this year's harvest. Our offerings are changing, but the freshness and quality remain. We do everything with respect and love for nature."
-    },
-    "poppy": {
-      "annotation": [
-        "What happens when a geologist, a builder, an economist and an engineer from the same town in the foothills of the Beskydy Mountains, who share a passion for coffee, meet after years of separation? This is how a bad joke or our story could start. Maybe it was fate or just chance that brought the friends together after returning from opposite corners of the world to breathe life into an artisanal coffee roastery in the promised land and city of unlimited possibilities, filled with inspiration and years of experience with fine coffee from Australia and Britain.",
-        "We started looking for premises suitable for a coffee shop and roastery in late 2019, although the idea itself dates back a couple of years earlier when one of the co-owners was making a living as a barista on the Gold Coast and the other two started discovering the magic of speciality coffee in Edinburgh and Glasgow. We soon realised that combining a roasting space with an espresso bar wasn't going to be quite so easy - hats off to QB in Brno and Nordbeans' Dock in Liberec, but suitable venues were scarce in Brno. After we acquired our first roasting machine in early 2020, a suitable space in a historic building from the 1920s finally came up in Brno to set up shop, at least according to some of our ideas. However, the road to opening in the covid era combined with a complete renovation was thorny, and we launched a live operation in July 2021. Even before the opening of the café we understood that the capacity of the roasting machine (2 kg) would not be enough. After moving to the current premises in Husovice, we purchased a Kuban machine in July 2021 - a gas roaster with a capacity of 12 kg."
-      ]
     },
     "punkt": {
       "annotation": [
@@ -306,8 +309,7 @@
       "bio": "Well-known Brno Instagram reporter Pavel Černý will meet with his \"colleagues in the field\", coffee YouTuber and podcaster Tomáš Taussig and gastro-freelancer and social media manager Petra Vlková."
     },
     "party_soutez": {
-      "name": "Competition in coffee brewing",
-      "annotation": "A competition focused on alternative coffee preparation. Contestants receive a package of coffee beans one hour before their round, and their task is to prepare at least 150 ml of the beverage using only water and coffee. They have exactly 10 minutes to prepare it. The competition takes place in three rounds, and in each round, the jury decides which contestant will advance. In the event of a tie, the head judge will decide..",
+      "annotation": "",
       "actionIcons": {
         "signup": {
           "text": "Sign up"
@@ -316,6 +318,192 @@
           "text": "Rules"
         }
       }
+    },
+    "bracia": {
+      "annotation": "Bracia Ziolkowscy means Ziolkowski Brothers. It's a speciality coffee roastery run by - surprise, surprise - two brothers. The elder is a neat Mr President in a tie. The younger is a slightly dishevelled activist in flannel. Polish Roasting Championship 2nd place in 2025 and 3rd in 2021."
+    },
+    "cafe_cult": {
+      "annotation": "Importer of Cult Café coffee, accessories and equipment for coffee preparation."
+    },
+    "hrncek": {
+      "annotation": [
+        "The Hrnček Roastery was founded in 2026 through the merger of the family-run Liškafé project and the Hrnček community café located at the tram terminal in Brno's Komárov district.",
+        "We've been working with specialty coffee for 4 years now, and this year we've once again prepared some real coffee gems for you."
+      ]
+    },
+    "mia_coffee": {
+      "annotation": "A family roastery from northern Bohemia. We offer great coffee, delicious teas, and equipment for home or gastro use."
+    },
+    "coffee_banditos": {
+      "annotation": "Coffee Banditos isn't just about coffee. It's about the experience, the passion, and a community of people who love great coffee just as much as we do. Coffee Banditos — because coffee should have character."
+    },
+    "prazirna_kromeriz": {
+      "annotation": [
+        "“We are a small family-run roastery in Kroměříž that was founded over a cup of specialty coffee in August 2013.",
+        "Our vision is to provide coffee of the highest quality and exceptional flavor. We source green coffee beans from trusted suppliers from around the world and devote the utmost care and attention to every detail during the roasting process.",
+        "The roastery's founding was preceded by a two-year period of learning, testing, and searching for the ideal method of roasting and brewing coffee. As a result, today we focus primarily on specialty single-origin coffee, but we also offer carefully crafted blends to suit various taste preferences.",
+        "For lovers of high-quality coffee and a healthy lifestyle, we also offer decaffeinated coffee that retains its full flavor, aroma, and character even after gentle processing.",
+        "We pride ourselves on freshness and quality at every step. After roasting, coffee needs time to 'rest' - usually 2 to 3 days - during which its flavor notes and aroma fully develop."
+      ]
+    },
+    "zoban": {
+      "annotation": "ZOBAN — a roastery from Litoměřice focused on specialty coffee with SCA scores above 85. We roast with respect for every bean. Proof? A silver medal at the Global Coffee Awards Europe 2025. Simply specialty coffee for discerning palates."
+    },
+    "kikafe": {
+      "annotation": "We believe in naturalness, attention to detail, and moments that don't need to be rushed. Wherever you enjoy our coffee, we're glad it becomes part of your everyday little moments of comfort."
+    },
+    "qb_coffee": {
+      "annotation": [
+        "We are coffee holists. We roast coffee, brew coffee, drink coffee. We care about everything - from bean quality and origin to fair treatment of farmers, coffee technology, and barista craft. We believe this approach delivers the best taste in every cup you try with us.",
+        "From our first roasting experiments over 10 years ago, we've grown into our current qb coffee roasters with an espresso bar in Brno."
+      ]
+    },
+    "kopi_bean": {
+      "annotation": [
+        "We are Kopi Bean, a Brno-based roastery where coffee is always a story, never just an anonymous bag. We carefully select every coffee, communicating with suppliers and growers from around the world.",
+        "Before beans reach our large IMF air-flow roaster, we fine-tune every profile on Ikawa and Roest sample roasters. We care about the details, because details make the difference between good and great coffee.",
+        "Come taste what we're roasting at Roast 2026!"
+      ]
+    },
+    "beberry": {
+      "annotation": "At Be Berry, we see coffee as a form of art. Every roast is an adventure that brings new, unforgettable tones of flavour and aroma into life. Discover the extraordinary in every cup - because Be Berry is coffee for those who aren't afraid to explore."
+    },
+    "poppy": {
+      "annotation": "Poppy Beans is a Brno-based specialty coffee roastery and Czech Coffee Roasting Champion 2024. It focuses on carefully selected coffees with transparent origins and roasting that lets the natural character, sweetness, and complexity of every bean shine through."
+    },
+    "prazirna_krok": {
+      "annotation": "Pražírna krok was born in the heart of Jičín as a natural continuation of our café Všehochuť. Since 2024, we've been roasting specialty coffee right across the street, proving that even a small town can have a roastery with big ambitions. Every cup is an honest step forward — for us and for Jičín."
+    },
+    "jungle_roastery": {
+      "annotation": "Jungle Roastery is a small craft coffee roastery that combines a passion for specialty beans and exotic flavours. It focuses on freshness, sustainable farming, and direct contact with growers. Every cup offers a unique profile, full of wild tones and the unmistakable atmosphere of the jungle."
+    },
+    "la_boheme": {
+      "annotation": "La Bohème Café has been among the pioneers of specialty coffee in the Czech Republic. Since 2003, we've been sourcing coffee directly from farmers around the world and roasting it with respect for its origin. We build on quality, long-term relationships, and the belief that behind every cup there's a story worth knowing."
+    },
+    "party_stop_time": {
+      "annotation": [
+        "We are Stop.Time, a Slovak-Czech funk-rock band from Brno. We mostly play original music with drums, guitar, bass, saxophone, and keys.",
+        "\"Everything is in 4/4 if you count long enough.\""
+      ]
+    },
+    "party_jazz_damu": {
+      "annotation": "Brno jazz band Jazz Baía will play well-known and lesser-known jazz standards and Brazilian bossa novas with saxophone (Petr Smékal), guitar (Tomáš Skalský), bass (Pavlína Radochová), and drums (Dan Křivánek)."
+    },
+    "party_vazky": {
+      "annotation": [
+        "Vážky is a group of musicians who love life and liveness! Almost all members have a formal music education.",
+        "The band is made up of solo players who enjoy each other's company, go on trips together, play in pubs, and that's why they occasionally meet on a shared stage to share the joy of playing together."
+      ]
+    },
+    "party_druha_kapelka": {
+      "annotation": "From quiet melodic moments to monumental walls of sound. A four-piece from Brno rooted in alternative rock with shoegaze elements and a wide palette of other influences. The band prides itself on Czech lyrics with themes of melancholy and music with a feel for atmosphere."
+    },
+    "five_elephant": {
+      "annotation": [
+        "Founded in 2010, Five Elephant is dedicated to setting the highest standards in specialty coffee. With a focus on sustainable sourcing, ethical practices, and meticulous roasting, we collaborate with producers who are committed to environmental regeneration and exceptional quality.",
+        "From our single-origin coffees to the Meridian collection, we celebrate the diversity of terroirs and varietals that honor the legacy of generations past and those yet to come.",
+        "Thoughtful choices shape every step we take."
+      ]
+    },
+    "ws_espresso_tonic": {
+      "name": "Espresso & Tonic Tasting – It’s all about the tonic!",
+      "annotation": "Espressotonic, Eskotonik, E&T – or whatever you want to call it. This trend of hot summer days is firmly established on the menus of virtually every specialty coffee shop. And the tonic matters – in most cases, tonic makes up more than 70 per cent of the drink, and as lovers of cocktail drinks know, every tonic tastes different. Led by Karolína Lužová, you’ll get to taste nearly a dozen different tonics – both premium and standard varieties – combined with two types of espresso.",
+      "bio": "Hi, I’m Kája, and I’ve been working in a café for several years now. Coffee has gone from being just a drink to something I’m increasingly enjoying discovering. I’m always up for a good filter coffee, and my guilty pleasure is fermented coffee."
+    },
+    "ws_ice_filter": {
+      "name": "Ice Ice ~~Baby~~ Filter – Tasting preparations of cold filters",
+      "annotation": "Ice drip, cold brew, chilled brew, batch over ice – it's hard to keep track of them all. A tasting workshop where you'll sample a whole range of different ways to prepare cold filter coffee, all using a single variety of coffee. Each has its own characteristics, and every result is slightly different. Let's sort out the terminology once and for all, and perhaps even work out which method is best.",
+      "bio": "Hi, I'm Kája, and I've been working in a café for several years now. Coffee has gone from being just a drink to something I'm increasingly enjoying discovering. I'm always up for a good filter coffee, and my guilty pleasure is fermented coffee."
+    },
+    "ws_gongfu": {
+      "name": "The Gongfu Cha tea ceremony",
+      "annotation": "The workshop will feature a demonstration of the traditional gong fu cha tea ceremony and explain the significance behind the names of different types of tea. The workshop will focus on four types of tea: white, green, oolong and black.",
+      "bio": [
+        "I served for two years in the elected role of tea master at the Klub Čajovna student club. I regularly organised tea tastings for both club members and guests.",
+        "The club itself is one of the finest venues for tea culture in the Czech Republic, where we regularly invite experts and organise tea workshops."
+      ]
+    },
+    "ws_grandma": {
+      "name": "Speciality coffee just like Grandma used to make (Melitta, Lamka and Karlsbad-style coffee maker vs. V60)",
+      "annotation": [
+        "What might a speciality coffee prepared by a grandmother using the equipment available in the past have tasted like?",
+        "You won't find a Melitta, a Lamk or Karlovy Vary cutlery in cafés any more. Is that a shame, or is it actually a good thing? During the workshop, you’ll taste one coffee prepared in four different ways – three traditional and one modern. The question is: can old-school coffee equipment still hold its own against the widespread V60?"
+      ],
+      "bio": "We’re Miro and Maru from the Brno-based micro-roastery Chci kofein. We’re a married couple, coffee addicts and a bit mad, who roast speciality coffee for like-minded madcaps."
+    },
+    "ws_milk": {
+      "name": "Milk under the microscope - Sensory characteristics and their impact on the flavour of coffee",
+      "annotation": "Milk is often an overlooked ingredient in coffee, yet it can radically transform its flavour. During the workshop, we will taste various types of milk – from commercial and UHT varieties through to farm-fresh and competition-grade – both on their own and in combination with a single shot of espresso. Together, we will observe how the sweetness, texture, aroma and overall flavour profile change.",
+      "bio": "Patrik Sláma has long been involved in coffee education and has been working as a coffee trainer for several years. He focuses primarily on sensory evaluation, coffee preparation, milk and latte art. In recent years, he has also been working on a book dedicated to the sensory evaluation, physics and chemistry of milk microfoam and latte art. As well as training, he is also involved in coffee journalism as editor-in-chief of Káva spojuje and Okafi magazine."
+    },
+    "ws_beer_sensory": {
+      "name": "Beer sensory workshop"
+    },
+    "ws_naked_espresso": {
+      "name": "Naked espresso Kopi z Luwak"
+    },
+    "ws_latteart_poppy": {
+      "name": "Latte art"
+    },
+    "ws_cupping_qgrader": {
+      "annotation": "Cupping led by Q-Grader Barbora Fialová."
+    },
+    "talk_coufalova": {
+      "name": "The hidden science in a cup: How microorganisms shape the flavour of coffee",
+      "annotation": "Why do some coffees taste of jasmine and citrus, others of ripe blueberries, and still others of tropical fruit or rum? The key lies in what happens to the coffee cherry long before it is roasted. Take a look at the world of coffee through the lens of microbiology. We’ll explore the journey from traditional processing methods to modern controlled anaerobic fermentation. We’ll explain clearly and accessibly how yeasts and bacteria build flavour precursors in the bean, what the real difference is between co-fermentation with fruit and artificial infusion, and what a fascinating role biochemistry plays in the whole process.",
+      "bio": "Ing. Mgr. Martina Coufalová, microbiologist. Fascinated by the role of fermentation in various aspects of human life, she decided to broaden her education to include food technology. Thanks to this, she can help you explore coffee from the perspective of the biochemical processes and microbial fermentation that fundamentally shape its final flavour profile."
+    },
+    "talk_podcast_ect": {
+      "name": "Podcast LIVE: Where is the European coffee scene heading?",
+      "annotation": "European Coffee Trip began as a blog and guide to cafés. Today, it has become one of the most prominent platforms on the European coffee scene. How has the world of speciality coffee changed over the past twelve years, how can you spot a really good café, and what do the data from thousands of establishments reveal about European coffee culture? Patrik Sláma will be discussing all this in a live podcast with Aleš Pospíšil, co-founder of European Coffee Trip.",
+      "bio": [
+        "Aleš Pospíšil is the co-founder and CEO of European Coffee Trip, a platform connecting speciality coffee lovers with cafés across Europe. He founded the project in 2014 together with Radek Nožička, and they have gradually built the original café guide into an international coffee media outlet and community.",
+        "Patrik Sláma is editor-in-chief of the editorial team at Káva spojuje and Okafi magazine. He specialises in coffee journalism, content creation and coffee education. He connects the coffee community through interviews, articles, podcasts and other formats."
+      ]
+    },
+    "talk_kocar": {
+      "name": "Coffee shot!",
+      "annotation": [
+        "Every café, product or member of staff deserves to be shown in the best possible light! Let's go through a few tips, insights and pieces of advice together on how best to film and photograph your business or your favourite coffee. The workshop is designed for both those with their own cameras and those who film on their phones. And you’ll most likely find the insights you gain here useful even beyond the realms that smell of coffee.",
+        "The only photo and video workshop in the Czech Republic tailored to all café-goers – this really won't just be a slide show."
+      ],
+      "bio": "An internationally active filmmaker. Former lecturer in video at Masaryk University. Founder of the audiovisual production company KoPro. Someone who has finally learnt how to water his plants."
+    },
+    "talk_blahovec": {
+      "name": "The creation of the book Kávový Baťa.",
+      "annotation": "A discussion on how the book Kávový Baťa came about. Hubert Lamplota – a name that, over 100 years ago in Czechoslovakia, was legendary in the world of coffee.",
+      "bio": "Boris Blahovec is a coffee enthusiast, amateur historian, traveller and writer who has long been dedicated to the history of coffee and coffee culture. Through his collection of historical coffee makers, he enjoys bringing to life forgotten stories linked to coffee. At the talk, he will discuss the creation of his book Kávový Baťa and the story of Hubert Lamplot, a prominent figure in Brno’s coffee scene. He will also share interesting facts from his historical research and the world of coffee."
+    },
+    "talk_ajala": {
+      "name": "Ajala"
+    },
+    "talk_chickas": {
+      "name": "Chicas Industry"
+    },
+    "talk_angela_chickas": {
+      "name": "More than just a process: how exceptional coffee is made",
+      "annotation": "A presentation by Angela Rojas from Colombia, co-founder of the Quebraditas Coffee Farm project, will tell the story of the farm and its journey towards an experimental approach to coffee processing. She will demonstrate that, although the chosen processes are a key part of the final quality, it all begins with the plant itself – the variety, the roots, the soil, the nutrition and the ripeness of the coffee cherries. Using specific experiments and two processes from the farm as examples – washed Geisha with thermal shock and SL28 Advanced Natural – Angela will explain how decisions made from cultivation right through to processing influence the final flavour of the coffee in the cup.",
+      "bio": [
+        "Angela Rojas is a Colombian coffee producer and co-founder of the Quebraditas Coffee Farm project in the Huila region.",
+        "She became involved in coffee after returning to her home region during the Covid pandemic, when she and Edinson Argote began working on the family farms.",
+        "Within the project, she is primarily responsible for administration, agronomy and soil management.",
+        "Together with Edinson, she combines traditional cultivation with experimental coffee processing methods.",
+        "Their approach is based on soil health, plant care and a long-term quest to find ways to improve the quality of the coffee."
+      ]
+    },
+    "talk_gloria": {
+      "name": "Gloria Spirits"
+    },
+    "talk_sloficek": {
+      "name": "Coffee and a nap",
+      "annotation": "Coffee and a nap – two little pleasures that compete with each other in the world of sleep. Let’s find out just how complex the process of sleep actually is, and how coffee can disrupt it. Does that one cup of coffee really not affect your sleep? And is an afternoon nap a way to refresh yourself, or rather a tried-and-tested way to ruin your night’s sleep? So have a coffee, listen to the talk, and hopefully you won’t fall asleep during it :)",
+      "bio": "Barbara Šťastná, M.D. is a paediatrician with experience working in both general paediatric practices and specialist clinics focusing on childhood obesity and cerebral palsy. She loves coffee (especially filter coffee with a good bit of acidity) and perhaps loves sleep even more. This year, she will combine both in the topic of her talk. In her spare time, she dances, travels a lot, sews her own clothes or gets buried in a book."
+    },
+    "talk_kaznice": {
+      "name": "Káznice venue tour"
+    },
+    "talk_pranachai": {
+      "name": "Prana chai"
     }
   },
   "promoted": {
@@ -472,18 +660,27 @@
     "espresso_milk": "Honored guests",
     "lecture": "Lectures",
     "workshop": "Workshops",
+    "cupping": "Cuppings",
     "party": "Extras",
     "overview": "Overview",
     "robotarna": "Roasters"
   },
   "programTile": {
-    "title": "Schedule",
+    "title": "Lineup",
     "loadingText": "We are still roasting the festival program for you.",
     "content": "The schedule is really extensive this year. You can find it on a separate page.",
     "filter": "Filter",
     "talkInLanguage": {
       "en": "Talk in English"
     }
+  },
+  "programHelp": {
+    "title": "What now?",
+    "viewTitle": "Switch",
+    "viewText": "Use the view control in the top bar to switch between the list and timeline views.",
+    "filterTitle": "Filter",
+    "filterText": "Use the filter controls in the top bar to show or hide individual program categories.",
+    "close": "Got it"
   },
   "programTitle": "",
   "programLoadingText": "",
