@@ -1,8 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
-import BeanIcon from "@/app/icons/beanicon";
-import { CaffeinCounter } from "@/app/[lang]/components/CaffeinCounter";
 import { Section } from "@/app/components/Section";
 
 export const Program = () => {
@@ -10,40 +9,23 @@ export const Program = () => {
   const lang = dictionaries[params.lang as SupportedLanguages];
 
   return (
-    <Section
-      className={`bg-dots bg-white py-12 lg:pt-22 lg:pb-48 ${lang.program.some((day) => day.schedule.length > 0) ? "h-fit" : ""}`}
-      id="lineup"
-    >
-      <div className="container mx-auto lg:px-6">
-        <div className="mx-auto flex flex-col items-center p-6 text-center lg:p-12">
-          <h2 className="font-display mb-4 text-3xl leading-[0.85] font-black text-black uppercase md:text-6xl">
-            {lang.programTile.title}
-          </h2>
-          <p className="mb-8 text-2xl tracking-wider text-black/80 uppercase">
-            {lang.programTile.loadingText}
-          </p>
-          <div className="mb-12 flex gap-4 text-black">
-            <span
-              className="animate-bean-pulse w-12"
-              style={{ animationDelay: "0s" }}
-            >
-              <BeanIcon />
-            </span>
-            <span
-              className="animate-bean-pulse w-12"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <BeanIcon />
-            </span>
-            <span
-              className="animate-bean-pulse w-12"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <BeanIcon />
-            </span>
+    <Section className="bg-dots bg-white px-6 py-24 lg:py-32" id="lineup">
+      <div className="container mx-auto text-center">
+        <h2 className="font-display mb-6 text-4xl leading-[0.85] font-black text-black uppercase md:text-6xl lg:text-7xl 2xl:text-9xl">
+          {lang.programTile.title}
+        </h2>
+        <p className="mx-auto mb-10 max-w-xl text-lg text-black/60 md:text-xl">
+          {lang.programTile.content}
+        </p>
+        <Link
+          href={`/${params.lang}/program`}
+          className="group relative inline-block"
+        >
+          <div className="bg-accent absolute inset-0 translate-x-2 translate-y-2 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
+          <div className="punk-border font-display bg-primary relative px-12 py-5 text-xl font-black tracking-tighter text-white uppercase transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 md:text-2xl">
+            {lang.programTile.title} →
           </div>
-          <CaffeinCounter />
-        </div>
+        </Link>
       </div>
     </Section>
   );

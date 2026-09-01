@@ -10,11 +10,11 @@ When debugging or investigating issues, **use MCP tools to inspect the running a
 
 ## Protocol
 
-1. **Load tools first**: Use `MCPSearch` to load MCP tools before calling them
-2. **Chrome DevTools**: For browser inspection (screenshots, console, network)
-   - `select:mcp__chrome-devtools__take_screenshot`
+1. **Load tools first**: Use `ToolSearch` to load MCP tools before calling them
+2. **Playwright**: For browser inspection (screenshots, interaction, console, network)
+   - `select:mcp__playwright__browser_navigate,mcp__playwright__browser_screenshot`
 3. **Next.js DevTools**: For Next.js specific debugging
-   - `select:mcp__next-devtools-mcp__init`
+   - `select:mcp__next-devtools-mcp__nextjs_call`
 
 ## Priority
 

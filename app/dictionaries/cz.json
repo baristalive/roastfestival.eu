@@ -60,6 +60,15 @@
         "Našimi zákazníky jsou kavárny a nadšenci, kteří již ve výběrové kávě umějí plavat, ale také kavárny, které chtějí zlepšit své výstupy. Jim pomáháme jak edukací, tak také technickou podporou. Spousta z nich se našla v profesionálním přístupu k baristice a v různorodých chutích výběrových arabik."
       ]
     },
+    "cofinet": {
+      "annotation": [
+        "Již 80 let se naše rodinná firma zabývá pěstováním a distribucí té nejkvalitnější kolumbijské kávy místním vývozcům. V roce 2015 jsme rozšířili naši činnost a začali jsme produkovat, nakupovat a vyvážet speciální kávu do zbytku světa.",
+        "Jako pěstitelé se specializujeme na alternativní fermentační procesy, které jsou v Kolumbii novinkou. Na naší farmě a v našem zpracovatelském centru La Pradera zpracováváme ty nejexotičtější odrůdy a dosahujeme tak jedinečných profilů, které jsou u kolumbijských káv neznámé.",
+        "Cofinet také zastupuje a podporuje velké množství kolumbijských pěstitelů speciální kávy. Naším cílem je podporovat přímé vztahy mezi našimi farmáři v zemích původu a pražírnami po celém světě. Jsme hrdí na to, že budujeme udržitelné, etické a dlouhodobé vztahy",
+        "Navázali jsme pevné vztahy se skupinou vysoce kvalitních sdružení z Peru, která sdílejí naše hodnoty v oblasti udržitelnosti a sledovatelnosti. Tato sdružení spolupracují s farmáři, jejichž láska a oddanost kávě se odráží v každé jednotlivé šarži, kterou produkují. Musíme říci, že nás ohromil šálkový potenciál peruánských káv.",
+        "Jedním z našich cílů je získávat tu nejlepší kávu z Peru, ale tím, co nás skutečně pohání, je možnost spolupracovat s místními komunitami a mít pozitivní dopad jak v sociální, tak v ekonomické rovině. Náš tým zabývající se zpracováním poskytuje průběžné poradenství několika drobným pěstitelům ve třech různých regionech Peru s cílem zlepšit kvalitu chuti a dosáhnout alternativních profilů, jaké v Peru dosud nikdo nezažil. Dosavadní výsledky jsou velmi slibné a už se nemůžeme dočkat, až se s vámi o tyto kávy podělíme. Jsme pevně přesvědčeni, že spolupráce ruku v ruce s pěstiteli je jediným způsobem, jak produkovat výjimečnou kávu."
+      ]
+    },
     "comandante": {},
     "chcikofein": {
       "annotation": "Jsme Miro a Maru – manželé, kávoholici a tak trochu blázni, kteří praží kávu pro podobně smýšlející blázny. Pražíme na kilové pražičce, protože rádi experimentujeme a menší pražička nám to umožňuje. Zároveň můžeme častěji obměňovat náš sortiment, ve kterém čas od času najdete skutečné limitky."
@@ -86,7 +95,7 @@
       ]
     },
     "gills": {
-      "annotation": "Jsme jedna z nejstarších a nejpřátelštějších pražíren v centru Brna, za kterou stojí kluci Marek a Martin. Za dobu své existence jsme zvládli zjistit co chceme a to vám teď přinášíme na festival nabídnout."
+      "annotation": "V Gill's Coffee se vášnivě věnujeme kvalitní kávě a jejímu etickému zpracování. Naše pražírna v Brně zdůrazňuje jedinečné chuťové profily každé odrůdy pomocí moderních technologií a pečlivého pražení. V našem espresso baru se rádi setkáváme s našimi zákazníky a sdílíme s nimi nejen skvělou kávu, ale i další lahůdky, které máme rádi."
     },
     "hayb": {
       "annotation": "Ahoj, jak se ti praží? Jsme HAYB - pražírna kávy se sídlem ve Varšavě v Polsku. Máme rádi zábavné zpracování, riskantní experimenty s kávovými boby, ale také nás baví stabilní kvalita běžných denních várek - těch funky i těch klasických. Chceme, aby tato káva vnesla do vašeho šálku trochu barvy - každý den i při zvláštních příležitostech. Pražíme s nejhlubším respektem k původu. Bez kompromisů v chuti. Žádné kompromisy v kvalitě. Tato práce nás pohání energií nejen kvůli kofeinu. Vše děláme pro to, abyste se svou kávou nakládali s lehkostí a radostí a bavili se různými možnostmi, které vám dobrá káva může dát. Bez námahy!"
@@ -125,7 +134,7 @@
       "annotation": "Fungujeme od roku 2022 a jsme patrně jedna z nejmenších brněnských pražíren. Pracujeme jen a pouze s výběrovkou a nejvíce nás aktuálně baví fermentované a ovocem infuzované kávy, proto jich v naší nabídce objevíte hned několik. A jelikož pražíme v malých objemech a snažíme se často měnit naše kávové portfolio, je u nás téměř vše tak trochu limitka. Pokud byste chtěli ochutnat naši kávu, stavte se do kavárny Hrnček, které je na konečné šaliny č.12 v Brně."
     },
     "labanda": {
-      "annotation": "La Banda Caffeina – kofeinový kartel pro všechny, kdo se nebojí silné chuti a ještě silnějších rozhodnutí. Každé zrnko je výsledkem tajné operace mezi ohněm a časem, přičemž vzniká čistá chuť a aroma, které tě dostanou do transu. Přidej se k naší bandě a už navždy pij kávu bez kompromisů."
+      "annotation": "La Banda Caffeina je prostor pro lidi, co mají chuť přemýšlet, tvořit a občas se ztratit v šálku. U nás najdeš kafe s charakterem, pro ranní chaos, soustředěnou práci i noční nápady. Usrkni si taky a buď La Banda i ty."
     },
     "lot": {
       "annotation": "Sme Lot – pražiareň kávy z Bratislavy, kde veríme, že skvelá káva nie je náhoda. Každý krok, od výberu zŕn až po praženie, robíme s cieľom zachytiť skutočnú chuť a charakter kávy. Kto hľadá ružovú, ten nás nájde. Vidíme sa v Brne!"
@@ -158,10 +167,7 @@
       "annotation": "Jsme Pikola. Na úpatí jesenických hor pražíme výběrovou kávu s respektem k jejímu původu. Neustále pro vás hledáme výjimečné kávy, které se svým aroma a chutí odlišují od běžných standardů. Díky dlouhodobým vztahům s našimi dodavateli a farmáři vám naše pražírna nabízí čerstvé kávy z letošní sklizně. Naše nabídka se mění, čerstvost a kvalita ovšem zůstává. Vše děláme s úctou a láskou k přírodě."
     },
     "poppy": {
-      "annotation": [
-        "Co se stane, když se po letech odloučení potká geoložka, stavařka, ekonom a ajťák, pocházející ze stejného města v podhůří Beskyd, kteří spolu sdílí vášeň pro kávu? Takhle nějak by mohl začínat nepovedený vtip nebo taky náš příběh. Možná osud nebo jen náhoda svedla dohromady přátele po návratu z opačných koutů světa, aby naplněni inspirací a letitými zkušenostmi s výběrovou kávou z Austrálie a Británie, společně v zemi zaslíbené a městě neomezených možností vdechli život řemeslné pražírně s výběrovou kávou.",
-        "Prostory vhodné pro vybavení kavárny s pražírnou jsme začali hledat koncem roku 2019, byť samotná myšlenka pochází z doby o pár let dříve, kdy se jeden ze spolumajitelů živil jako barista v Gold Coast a další dva začali objevovat kouzlo výběrovky v Edinburghu a Glasgow. Zanedlouho jsme pochopili, že kombinovat prostor pro pražení s espresso barem nebude úplně tak jednoduché - klobouk dolů před QB v Brně a libereckým Dokem od Nordbeans, nicméně vhodných míst bylo v Brně poskrovnu. Po té co jsme začátkem roku 2020 pořídili první pražící stroj, se v Brně konečně objevil vhodný prostor v historické budově z 20. let 20. století pro zařízení provozu, tedy alespoň dle části našich představ. Leč cesta k otevření v době covidové v kombinaci s kompletní rekonstrukcí byla trnitá, v červenci 2021 jsme spustili ostrý provoz. Ještě před otevřením kavárny jsme pochopili, že kapacita pražícího stroje (2 kg) nám nebude stačit. Po přesunu do stávajícíh prostor v Husovicích jsme v červenci 2021 zakoupili stroj Kuban - plynovou pražičku s kapacitou 12 kg."
-      ]
+      "annotation": "Poppy Beans je brněnská pražírna výběrové kávy a držitel titulu Czech Coffee Roasting Champion 2024. Zaměřuje se na pečlivě vybrané kávy s transparentním původem a pražení, které nechává naplno vyniknout přirozený charakter, sladkost a komplexitu každého zrna."
     },
     "punkt": {
       "annotation": [
@@ -177,10 +183,10 @@
       "annotation": "Rebelbean je pražírna výběrové kávy, je to vlastní síť kaváren a hlavně je to energie pro všechny, kdo se nebojí být Rebel a jít vstříc svým nápadům a snům. V Brně žijeme i podnikáme a jsme rádi, že můžeme zásobovat energií i tento festival."
     },
     "red_fawn": {
-      "annotation": "Sme Red Fawn z Trnavy – dvaja bratia, čo milujú výberovku. Pražíme sladké a šťavnaté kávy, ktoré nechutia ako kompromis. Čerstvé zbery, čistá chuť plná ovocia a charakteru. Príď ochutnať zážitok, nie len kofeín."
+      "annotation": "Sme rodinná pražiareň z Trnavy vedená dvoma bratmi. Zameriavame sa na čistotu, transparentnosť a charakter každej kávy. Pracujeme precízne, s dôrazom na detail a konzistenciu, aby každá šálka ukázala svoj pôvod."
     },
     "trafficcoffee": {
-      "annotation": "Jsme Traffic Coffee – pražírna z Olomouce, kde tvoříme výběrovou kávu s charakterem. Pražíme tradiční zrna i odvážné experimenty jako barrel aged kávu ze sudů po aromatických alkoholech. Své si u nás najdou jak kávoví konzervativci, tak odvážlivci."
+      "annotation": "Jsme olomoucká pražírna, která se specializuje na barrel aged coffee! V nabídce našeho zrna však najdete i kávy klasického zpracování a v Olomouci je připravujeme ve 3 našich pobočkách."
     },
     "tripple_five": {
       "annotation": "Sme pražiareň výberovej kávy v Bratislave. Starostlivo vyberáme tie najkvalitnejšie odrody z rôznych kútov sveta. Dôsledným pražením sa snažíme získať plnú chuť, ktorú v sebe každé zrnko skrýva."
@@ -261,6 +267,11 @@
     "ws_cupping_punkt": {
       "annotation": "Přijď ochutnat kávu z pražírny Punkt. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z Punkt."
     },
+    "talk_arana": {
+      "name": "The Real Price of an Exotic Lot",
+      "annotation": "Exkluzivní káva se do vaší pražírny dostává s ne úplně nízkou nákupní cenou, ale téměř nikdo v celém řetězci nedokáže říct, kde tyto peníze vlastně končí. V této přednášce budeme sledovat jeden lot z kolumbie od farmy až po evropský sklad – kolik vydělá producent, kolik stojí zpracování a jaké náklady přibývají při přepravě, celním odbavení a skladování. Prošel jsem si cestu od degustačního stolu ve Valle del Cauca až ke koncovému distributorovi v Evropě a viděl jsem, jak odlišně každá ze stran popisuje stejnou kávu. Získáte jasnější představu o tom, za co skutečně platíte, a poradím vám pět otázek, které stojí za to položit svému dovozci před dalším nákupem.",
+      "bio": "Santiago Arana vyrostl v Seville, městě známém pěstováním kávy v departementu Valle del Cauca, a svou kariéru zahájil v místním zpracovatelském družstvu, kde prováděl degustaci kávy od více než tří set producentů z tohoto regionu. Do společnosti Cofinet nastoupil jako obchodní zástupce a v současné době působí jako obchodní ředitel Cofinet Europe, kde spolupracuje s pražírnami ve více než čtyřiceti zemích. Svou práci vnímá jednoduše: \"Chci sblížit lidi, kteří kávu pěstují, s těmi, kteří ji praží.\""
+    },
     "talk_biology": {
       "name": "Kávu všem (i dětem?)!",
       "annotation": "Všichni milujeme kávu, co ale kofein dělá s naším tělem? A co způsobí, když kofein přijímá dětský organismus? O tom, kolik kofeinu v dnešní době zkonzumují dospělí, ale i děti, a o tom, co to s námi provádí bude povídat dětská lékařka MUDr. Barbara Šťastná.",
@@ -339,8 +350,14 @@
       "annotation": "Od tichých melodických momentů až po monumentální zdi zvuku. Čtyřčlenné uskupení z Brna se stylem ukotveným v alternative rocku s elementy shoegaze a širokou paletou dalších hudebních vlivů. Kapela si zakládá na českých textech s motivy melancholie a hudbě s citem pro atmosféru."
     },
     "party_soutez": {
-      "name": "Soutěž v přípravě kávy",
-      "annotation": "Soutěž zaměřená na alternativní přípravu kávy. Soutěžící obdrží balíček kávových zrn hodinu před svým kolem a jejich úkolem je připravit minimálně 150 ml nápoje pouze za použití vody a kávy. Na přípravu mají přesně 10 minut. Soutěž probíhá ve třech kolech a v každém z nich rozhoduje porota, který soutěžící postoupí dál. V případě nerozhodného výsledku rozhodne hlavní porotce.",
+      "annotation": [
+        "Letošní ročník jsme si řekli, že nám jenom filtrované kafe nestačí. A protože milujeme mixologii a další formy gastronomie, tak si rádi trošku zkomplikujeme život. Představujeme vám ROAST! in good spirits. Jednodušší a zábavnější formu snad nejkomplexnější kávové soutěže CIGS.",
+        "Pravidla jsou jednoduchá:",
+        "V prvním kole si připravíš jeden drink ze svého kafe a alkoholu své volby a představíš ho porotě u nás na STAGE. A pokud zrovna doma nebudeš mít dost flašek nevadí! Něco najdeš i na festivalu.",
+        "No a v druhém kole ti dáme na výběr kafe a slušnou zásobníku flašek a připravíš si možná stejný - možná jiný drink - to už je jen na tobě!",
+        "Přihlásit se můžeš níže a kompletní pravidla najdeš taky tam!",
+        "Nebudeš platit nic navíc, přihlášku máš v ceně tvé vstupenky. Nemusíš se bát, že je to soutěž je pro profíky - klidně se můžeš přihlásit i když si jen doma občas mixneš GT a šoupneš do něj espresso. Protože to je stejně nejlepší snídaně."
+      ],
       "actionIcons": {
         "signup": {
           "text": "Přihláška"
@@ -349,6 +366,197 @@
           "text": "Pravidla"
         }
       }
+    },
+    "party_slehni_mech": {
+      "annotation": [
+        "…písně o věcech, které se vám mohly stát",
+        "Kapela z nezávislé brněnské scény, která v autorské tvorbě čerpá z indie rocku, jazzu, world music, grunge nebo swingu. Zábavné české texty skrývají při bližším pohledu i temnější témata a zanechají v posluchači pocit, že svět je místo plné lásky a nepopsatelných hrůz.",
+        "„Mech nejde slehnout, je to touha dokázat nemožné…“"
+      ]
+    },
+    "party_topol": {
+      "annotation": "Brněnská formace TOPOL m.b. v čele s Jiřím Topolem Novotným přiváží na klubovou scénu energický hudební zážitek, ve kterém se mísí autorská tvorba s nezaměnitelnou atmosférou. Kapela, která pravidelně oživuje kulturní dění nejen v Brně, láká na podmanivé melodie a silný kontakt s publikem. Na pódiu je navíc často doplňují skvělí hosté, což z každého jejich vystoupení dělá jedinečný a neopakovatelný zážitek."
+    },
+    "party_fanglou": {
+      "annotation": "Fanglou je brněnská kapela, která propojuje jazzovou hravost, funky groove, popovou melodičnost a rockovou energii. V autorské tvorbě s českými texty vypráví o životních radostech i malých každodenních zázracích. V sestavě bicí, basa, perkuse, klávesy, kytara a zpěv přináší Fangloukoncertní vystoupení plné upřímnosti, energie a muzikantské radosti."
+    },
+    "party_jan_vana": {
+      "annotation": "Písničkář Jan Váňa přináší na scénu křehkou melancholii a intimní zpovědi, které hudební kritici označují za hojivé písně ticha. Táborský rodák a absolvent oboru Tvorba textu a scénáře na Konzervatoři Jaroslava Ježka vědomě navazuje na tradici českých básníků s kytarou. Svoji neprvoplánovou, hlubokou poetiku otiskl do debutového alba A na Jordán dopadla tma (2024), které produkoval vyhledávaný hudebník badfocus. Jeho vystoupení, postavená na podmanivém hlasu a akustické kytaře, slibují intenzivní a emotivní komorní zážitek."
+    },
+    "cafe_cult": {
+      "annotation": "Dovozce kávy Cult Café, dovozce doplňků a příslušenství pro kávu."
+    },
+    "hrncek": {
+      "annotation": [
+        "Pražírna Hrnček vzniká v roce 2026 sloučením rodinného projektu Liškafé a komunitní kavárny Hrnček z konečné šaliny v brněnském Komárově.",
+        "S výběrovkou pracujeme už 4 roky a i letos jsme si pro vás připravili opravdové kávové parádičky."
+      ]
+    },
+    "mia_coffee": {
+      "annotation": "Rodinná pražírna ze severních Čech. Najdete u nás skvělou kávu, lahodné čaje, technologie pro domácnost nebo gastro provozy."
+    },
+    "coffee_banditos": {
+      "annotation": "Coffee Banditos není jen o kávě. Je to o zážitku, vášni a komunitě lidí, kteří milují dobrou kávu stejně jako my. Coffee Banditos – protože káva má mít charakter."
+    },
+    "prazirna_kromeriz": {
+      "annotation": [
+        "Jsme malá rodinná pražírna z Kroměříže, která vznikla u jednoho šálku výběrové kávy v srpnu 2013.",
+        "Naší vizí je přinášet kávu té nejvyšší kvality a výjimečné chuti. Zelená kávová zrna nakupujeme od prověřených obchodníků z různých koutů světa a jejich pražení věnujeme maximální péči a pozornost každému detailu.",
+        "Vzniku pražírny předcházela dvouletá fáze učení, testování a hledání ideálního způsobu pražení i přípravy kávy. Díky tomu se dnes zaměřujeme především na výběrovou jednodruhovou kávu, ale v nabídce máme také pečlivě sestavené směsi pro různé chuťové preference.",
+        "Pro milovníky kvalitní kávy a zdravého životního stylu nabízíme také bezkofeinovou kávu, která si i po šetrném zpracování zachovává plnou chuť, aroma a charakter.",
+        "Zakládáme si na čerstvosti a kvalitě v každém kroku. Káva potřebuje po upražení čas na tzv. odpočinek – obvykle 2 až 3 dny – během kterých se plně rozvinou její chuťové tóny a vůně."
+      ]
+    },
+    "zoban": {
+      "annotation": "ZOBAN - litoměřická pražírna zaměřená na výběrovou kávu s SCA skóre nad 85 bodů. Pražíme s respektem ke každé kávě. Potvrzení? Stříbrná medaile z Global Coffee Awards Europe 2025. Prostě výběrovka pro zmlsaný zobáky."
+    },
+    "kikafe": {
+      "annotation": "Věříme v přirozenost, péči o detail a chvíle, které není potřeba uspěchat. Ať už si naši kávu vychutnáte kdekoliv, budeme rádi, že se stane součástí Vašich každodenních malých momentů pohody."
+    },
+    "qb_coffee": {
+      "annotation": [
+        "Jsme kávoví holisti. Pražíme kávu, připravujeme kávu, pijeme kávu. Záleží nám na všem - od kvality a původu zrna přes férový přístup k farmářům až po kávové technologie a baristickou praxi. Věříme, že díky tomuto přístupu, dosáhneme nejlepší chuti v každém šálku kávy, který u nás ochutnáte.",
+        "Od prvních pokusů o pražení kávy před více jak 10 lety jsme se dopracovali až do naší současné pražírny qb coffee roasters s espresso barem v Brně."
+      ]
+    },
+    "kopi_bean": {
+      "annotation": [
+        "Jsme brněnská pražírna Kopi Bean, pro kterou je káva vždycky příběh, ne anonymní pytel. Každou kávu pečlivě vybíráme, komunikujeme s dodavateli i pěstiteli z celého světa.",
+        "Než se zrna dostanou do velké air-flow pražičky IMF, každý profil nejdřív ladíme na Ikawa a Roest testovacích pražičkách. Záleží nám na detailech, protože ty dělají rozdíl mezi dobrou a skvělou kávou.",
+        "Přijďte na Roast 2026 ochutnat, co u nás právě pražíme!"
+      ]
+    },
+    "beberry": {
+      "annotation": "V Be Berry vnímáme kávu jako svého druhu umění. Každé pražení je pro nás dobrodružství, které do života přináší nové, nezapomenutelné tóny chutí a vůní. Objevte s námi výjimečnost v každém šálku. Protože be berry je káva pro ty, kteří se nebojí objevovat."
+    },
+    "prazirna_krok": {
+      "annotation": "Pražírna krok vznikla v srdci Jičína jako přirozené pokračování naší kavárny Všehochuť. Od roku 2024 pražíme výběrovou kávu přímo naproti ní a chceme ukázat, že i malé město může mít pražírnu s velkými ambicemi. Každý šálek je poctivý krok vpřed – pro nás i pro Jičín."
+    },
+    "jungle_roastery": {
+      "annotation": "Jungle Roastery je malá remeselná pražiareň kávy, ktorá spája vášne pre výberové zrná a exotické chute. Zameriava sa na čerstvosť, udržateľné pestovanie a priamy kontakt s farmármi. Každá šálka ponúka jedinečný profil, plný divokých tónov a neopakovateľnej atmosféry džungle."
+    },
+    "la_boheme": {
+      "annotation": "La Bohème Café patří mezi průkopníky výběrové kávy v Česku. Od roku 2003 vybíráme kávy přímo od farmářů z celého světa a pražíme je s respektem k jejich původu. Stavíme na kvalitě, dlouhodobých vztazích a přesvědčení, že za každým šálkem stojí příběh, který stojí za to poznat."
+    },
+    "bracia": {
+      "annotation": "Bracia Ziolkowscy znamená \"Bratři Ziolkowští\". Jedná se o pražírnu výběrové kávy, kterou vedou – překvapivě – dva bratři. Starší z nich je elegantní pan Prezident v kravatě. Mladší je poněkud rozcuchaný aktivista ve flanelce. V polském mistrovství v pražení kávy obsadili 2. místo v roce 2025 a 3. místo v roce 2021."
+    },
+    "ws_espresso_tonic": {
+      "name": "Degustace Espresso&Tonic - Na tonicu záleží!",
+      "annotation": "Espressotonic, Eskotonik, E&T nebo jak mu chceme říkat. Tento fenomén horkých letních dnů je pevně zakořeněný snad v každé nabídce výběrových kaváren. A na tonicu záleží - více než 70% nápoje je ve většině případů tonic a jak vědí milovníci míchaných nápojů, tak každý tonic chutná jinak. Pod vedením Karolíny Lužové ochutnáte téměř desítku různých toniců prémiovích i základních toniců v kombinaci s dvěma druhy espressa.",
+      "bio": "Ahoj, já su Kája, už několik let dělám v kavárně. Káva se z pohonné hmoty stala něčím, co mě stále víc baví objevovat. Nepohrdnu dobrým filtrem a mojí guilty plesure jsou fermenty."
+    },
+    "ws_ice_filter": {
+      "name": "Ice Ice ~~Baby~~ Filter – Degustace příprav studených filtrů",
+      "annotation": "Ice drip, Cold Brew, Chilled Brew, Batch na led a kdo se v tom má vyznat. Degustační workshop kdy ochutnáte na jednom druhu kávy celou řádku různých příprav studené filtrované kávy. Každá má své aspekty a každý výstup se něčím liší. Společně si pro jednou urovnáme terminologii a třeba vymyslíme jaký způsob je nejlepší.",
+      "bio": "Ahoj, já su Kája, už několik let dělám v kavárně. Káva se z pohonné hmoty stala něčím, co mě stále víc baví objevovat. Nepohrdnu dobrým filtrem a mojí guilty plesure jsou fermenty."
+    },
+    "ws_gongfu": {
+      "name": "Čajový obřad Gong fu cha",
+      "annotation": "Workshop bude o ukázke tradičného čajového obradu gong fu cha a o informáciach, ktoré sa skrývajú za názvami rôznych druhou čajou. Predmetom workshopu budú 4 čaje, biely, zelený, oolong, červený.",
+      "bio": [
+        "Pôsobil som 2 roky na volenej pozícii mistra čaje v študentskom klube Klub Čajovna. Regulérne som usporiadaval ochutnávky ako pre členou klubu tak aj pre hostí.",
+        "Klub samotný je jedno z najlepších miest čajovej kultúry v ČR, kde si regulérne pozívame znalcou a usporiadavame čajové workshopy."
+      ]
+    },
+    "ws_grandma": {
+      "name": "Výběrová káva jako od babičky (melitta, lamka a karlovarský příbor vs. V60)",
+      "annotation": [
+        "Jak by asi chutnala výběrovka připravená babičkou pomocí náčiní, které bylo k dispozici v minulosti?",
+        "Melittu, lamku nebo karlovarský příbor v kavárnách už nenajdete. Je to škoda nebo je to jedině dobře? V průběhu workshopu ochutnáte jednu kávu připravenou čtyřmi způsoby – třemi starými a jedním novým. Otázka zní: dokáže ještě oldschoolové kávové náčiní obstát v konkurenci všude přítomné V60?"
+      ],
+      "bio": "Jsme Miro a Maru z brněnské mikropražírny Chci kofein. Jsme manželé, kávoholici a tak trochu blázni, kteří praží výběrovou kávu pro podobně smýšlející blázny."
+    },
+    "ws_milk": {
+      "name": "Mléko pod lupou — Senzorika a jeho vliv na chuť kávy",
+      "annotation": "Mléko je v kávě často přehlíženou surovinou, přitom může její chuť zásadně proměnit. Během workshopu ochutnáme různé druhy mléka – od komerčního a UHT přes farmářské až po soutěžní – samostatně i v kombinaci s jedním espressem. Společně budeme sledovat, jak se mění sladkost, textura, aroma a celkový chuťový dojem.",
+      "bio": "Patrik Sláma se dlouhodobě věnuje vzdělávání v oblasti kávy a několik let působí jako kávový školitel. Zaměřuje se především na senzoriku, přípravu kávy, mléko a latte art. V posledních letech pracuje také na knize věnované senzorice, fyzice a chemii mléčné mikropěny a latte artu. Vedle školení se věnuje také kávové žurnalistice jako šéfredaktor Káva spojuje a magazínu Okafi."
+    },
+    "ws_beer_sensory": {
+      "name": "Pivní senzorika aneb \"proč mám v pivu kávu\"?",
+      "annotation": [
+        "Predstavte si dokonalý svet kde sa snažíme dosiahnuť vysoký stupeň efektivity. Preto budeme piť všetci jeden nápoj - blend kávy a piva. Prečo by sa nám mal páčiť?",
+        "Alebo o základnej pivnej senzorike a či existuje dôvod infúzovania pív výluhom z kávy."
+      ],
+      "bio": [
+        "Miša bola takmer večný študent (Technológia potravín), teraz už úspešne 'Doktorka piva', ktorá je verejne trochu známa ako Sládkyňa zla s bylinnými pivami a ako hodnotiteľka a spoluorganizátorka pivných súťaží. Má 5+ rokov praxe v pivovarníctve v rôznych krajinách ČR, Cyprus, Estónsko...",
+        "Aktuálne sa jej stalo, že menežuje výrobu malého pivovaru a zároveň je sládek. Ak ju stretnete, pravdepodobne budete svedkovia nezámernej stand up comedy/tragedy."
+      ]
+    },
+    "ws_naked_espresso": {
+      "name": "Better Vessel - utajená chuť espressa",
+      "annotation": "Espresso vzniklo z touhy po rychlosti. Od patentu Angela Morionda z roku 1884 přes první komerční stroje Luigiho Bezzery a Desideria Pavoniho po roce 1901 se káva připravovala tlakem páry — a žádnou krému neměla. Ta se objevila až v roce 1948, kdy Achille Gaggia nahradil páru pákovým pístem a tlakem kolem devíti barů. Hustou pěnu, kterou nikdo nečekal, tehdejší marketing rychle prohlásil za důkaz kvality. Od té doby ji baristé i hosté berou jako samozřejmou součást šálku. Better Vessel, nástroj z Filipín od Michaela Harrise a Federica Bolañose, tuhle samozřejmost zpochybňuje. Revoluce, evoluce nebo nesmysl? Ochutnáš, pochopíš :)",
+      "bio": "Příběh Jakuba Fialy a kávy začal v roce 2005, kdy se během obchodních cest za dřevem po Indonésii poprvé dostal na kávovníkové plantáže. Návštěvy plantáží a zpracovatelských provozů ho okouzlily natolik, že v roce 2007 začal sám pražit kávu dováženou od drobných farmářů. Dnes stojí za brněnskou značkou Kopi Bean, kde pečlivě vybrané kávové speciality praží na moderním italském pražicím stroji IMF. K espressu přistupuje stejně jako k pražicím profilům — vždy je co zlepšovat."
+    },
+    "ws_latteart_poppy": {
+      "name": "Nalij si srdce: Latte art s Terkou",
+      "annotation": "Jak dostat z mléka srdíčko, tulipán nebo něco trochu odvážnějšího? Terka vás provede základy latte artu a ukáže, jak pracovat s mlékem, konvičkou i samotným šálkem. Vyzkoušíte si techniku free pour i etching a zjistíte, že za povedeným obrázkem není magie, ale správná technika, trochu trpělivosti a spousta mléka. A hlavně – nemusíte se bát, že první pokus bude vypadat jako labuť.",
+      "bio": "Terka pracuje jako provozní v brněnské kavárně Poppy Beans, kde je latte art její každodenní vášní. Baví ji jak free pour, tak etching, a když zrovna nekreslí do šálku v práci nebo doma, můžete ji potkat na některé z latte artových soutěží, kde se pravidelně probojovává do finále. Teď své zkušenosti a know-how ráda předá i vám."
+    },
+    "ws_cupping_qgrader": {
+      "name": "Cupping pod vedením Q-Graderky"
+    },
+    "talk_coufalova": {
+      "name": "Skrytá věda v šálku: Jak mikroorganismy tvoří chuť kávy",
+      "annotation": "Proč některé kávy chutnají po jasmínu a citrusech, jiné po zralých borůvkách a další po tropickém ovoci či rumu? Klíč se skrývá v tom, co se s kávovou třešní děje ještě dávno před pražením. Nahlédněte do světa kávy pohledem potravinářské mikrobiologie. Projdeme si cestu od klasických metod zpracování až po moderní řízené anaerobní fermentace. Jasně a srozumitelně si rozklíčujeme, jak kvasinky a bakterie budují chuťové prekurzory v zrnu, jaký je skutečný rozdíl mezi ko-fermentací s ovocem a umělým infuzováním a jak fascinující roli hraje v celém procesu biochemie.",
+      "bio": "Ing. Mgr. Martina Coufalová, mikrobioložka. Fascinována rolí fermentace v různých oblastech lidského života se rozhodla své vzdělání rozšířit také o technologii potravin. Díky tomu se spolu s ní můžete na kávu podívat z pohledu biochemických procesů a mikrobiální fermentace, které zásadně formují její výsledný chuťový profil."
+    },
+    "talk_podcast_ect": {
+      "name": "Podcast LIVE: Kam míří evropská kávová scéna?",
+      "annotation": "European Coffee Trip začínal jako blog a průvodce po kavárnách. Dnes je z něj jedna z nejvýraznějších platforem evropské kávové scény. Jak se za dvanáct let změnil svět výběrové kávy, podle čeho poznat opravdu dobrou kavárnu a co o evropské kávové kultuře prozrazují data z tisíců podniků? O tom si bude Patrik Sláma v živém podcastu povídat s Alešem Pospíšilem, spoluzakladatelem European Coffee Trip.",
+      "bio": [
+        "Aleš Pospíšil je spoluzakladatel a CEO European Coffee Trip, platformy propojující milovníky výběrové kávy s kavárnami napříč Evropou. Projekt založil v roce 2014 společně s Radkem Nožičkou a z původního průvodce kavárnami postupně vybudovali mezinárodní kávové médium a komunitu.",
+        "Patrik Sláma je šéfredaktorem redakce Káva spojuje a magazínu Okafi. Věnuje se kávové žurnalistice, tvorbě obsahu a vzdělávání v oblasti kávy. Kávovou komunitu propojuje prostřednictvím rozhovorů, článků, podcastů a dalších formátů."
+      ]
+    },
+    "talk_kocar": {
+      "name": "Kafe shot!",
+      "annotation": [
+        "Každá kavárna, produkt, či personál si zaslouží zazářit v tom nejlepším světle! Pojďme si společně projít pár tipů, postřehů a rad, jak ideálně natočit a nafotit váš podnik, či oblíbenou kávu. Workshop je stavěn jak pro vlastníky kamery, tak telefonní filmaře. A poznatky z něj dost pravděpodobně užijete i mimo revíry, které voní kávou.",
+        "Jediný Foto-Video Workshop v ČR stavěný na míru všem kavárenským povalečům - tady se fakt nebude jen promítat prezentace."
+      ],
+      "bio": "Mezinárodně fungující filmmaker. Bývalý vyučující MU v oblasti videa. Zakladatel audiovizualní produkce KoPro. Člověk co se konečně naučil zalévat kytky."
+    },
+    "talk_blahovec": {
+      "name": "Ako vznikla kniha Kávový Baťa",
+      "annotation": "Beseda/prednáška o tom, ako vznikala kniha Kávový Baťa. Hubert Lamplota – meno, ktoré pred viac ako 100 rokmi v Československu znamenalo vo svete kávy legendu.",
+      "bio": "Pravý Kávičkár je nadšenec do kávy, amatérsky historik, cestovateľ a spisovateľ, ktorý sa dlhodobo venuje histórii kávy a kávovej kultúry. Vo svojej zbierke historických kávovarov rád prezentuje zabudnuté príbehy spojené s kávou. Na besede predstaví vznik svojej knihy Kávový Baťa a príbeh Huberta Lamplotu, významnej osobnosti brnianskeho sveta kávy. Podelí sa aj o zaujímavosti zo svojho historického bádania a sveta kávy."
+    },
+    "talk_ajala": {
+      "name": "Horká čokoláda: Where It All Started",
+      "annotation": "Věděli jste, že čokoláda byla po většinu své historie konzumována primárně v tekuté formě? Fascinující evoluce této suroviny zahrnuje mnohé překvapivé a zábavné momenty. V rámci přednášky představíme koncept bean-to-bar jako návrat k tradičním postupům a vysvětlíme, jak tento přístup utváří výsledný chuťový profil. Projdeme si rovněž praktická specifika přípravy – od ideální teploty až po význam provzdušnění pro plný rozvoj chuti. Teorii následně propojíme s praxí během degustace, kde můžete tyto nuance prozkoumat na vlastní chuťové pohárky.",
+      "bio": "Přednáškou a degustací vás provede Emma, která má v brněnské čokoládovně Ajala na starosti vzdělávání, senzorické workshopy a kontrolu kvality. Je jednou z mála odbornic v ČR s certifikací prestižního britského institutu IICCT (Level 1 & 2 Certificate in Chocolate Tasting). S vášní představuje veřejnosti komplexní svět kakaa a s radostí inspiruje k hlubšímu porozumění poctivé a eticky vyráběné čokoládě."
+    },
+    "talk_chickas": {
+      "name": "Nová kapitola Chicas Industry: výběrová káva z lesů Indonésie",
+      "annotation": "Přednáška nabídne krátký pohled do práce importéra výběrové kávy a představí Indonésii jako nový projekt Chicas Industry. Přestože nás tato země láká už téměř dva roky, teprve se do ní chystáme a vztahy s místními producenty začínáme budovat. Díky spolupráci s vídeňskou univerzitou BOKU jsme však už měli možnost na dálku poznat řadu projektů, které vynikají nejen kvalitou kávy, ale také péčí o životní prostředí, místní komunity a udržitelný rozvoj. Podělíme se o to, co nás na Indonésii baví a které farmáře a projekty bychom rádi představili pražírnám i milovníkům kávy v Česku a okolí.",
+      "bio": "Karolína Nekvindová a Tereza Prejdová jsou zakladatelky společnosti Chicas Industry, která dováží výběrovou zelenou kávu z Kolumbie, Mexika, Indonésie a Indie. Kávě se věnují řadu let a spojuje je zájem o její rozmanitost, původ i příběhy lidí, kteří ji pěstují. Ve své práci propojují farmáře s pražírnami a staví na dlouhodobé spolupráci, transparentnosti a vzájemném respektu."
+    },
+    "talk_angela_chickas": {
+      "name": "Více než proces: jak vzniká výjimečná káva",
+      "subheading": "Angela Rojas",
+      "annotation": "Přednáška Angely Rojas z Kolumbie, spoluzakladatelky projektu Quebraditas Coffee Farm, představí příběh farmy a její cestu k experimentálnímu přístupu ke zpracování kávy. Ukáže, že ačkoli jsou zvolené procesy důležitou součástí výsledné kvality, vše začíná už u samotné rostliny – u odrůdy, kořenů, půdy, výživy a zralosti kávových třešní. Na příkladu konkrétních experimentů a dvou procesů z farmy, promyté Geisha s tepelným šokem a SL28 Advanced Natural, Angela přiblíží, jak rozhodnutí učiněná od pěstování až po zpracování ovlivňují výslednou chuť kávy v šálku.",
+      "bio": [
+        "Angela Rojas je kolumbijská producentka kávy a spoluzakladatelka projektu Quebraditas Coffee Farm v regionu Huila.",
+        "Ke kávě se dostala po návratu do rodného kraje během pandemie covidu, kdy se společně s Edinsonem Argotem začala věnovat rodinným farmám.",
+        "Na projektu má na starosti především administrativu, agronomii a péči o půdu.",
+        "Společně s Edinsonem propojuje tradiční pěstování s experimentálními metodami zpracování kávy.",
+        "Jejich přístup staví na zdraví půdy, péči o rostliny a dlouhodobém hledání způsobů, jak zlepšit kvalitu kávy."
+      ]
+    },
+    "talk_gloria": {
+      "name": "Gloria Spirits"
+    },
+    "talk_sloficek": {
+      "name": "Kafe a šlofíček",
+      "annotation": "Kafe a šlofíček - dvě malé radosti, které se mohou ve spánkovém světě pěkně poškorpit. Zjistíme, jak moc komplexní děj spánek vlastně je a jak s ním dokáže zamávat káva. Skutečně ten jeden hrnek kávy spánku nevadí? A je odpolední šlofíček cesta k osvěžení nebo spíš osvědčený způsob, jak si rozhodit noc? Tak si dejte kávu, poslechněte si přednášku a třeba na ní neusnete :)",
+      "bio": "MUDr. Barbara Šťastná je dětská lékařka se zkušeností z ordinace dětského praktika i z léčeben zaměřených na obezitu u dětí nebo mozkovou obrnu. Miluje kávu (hlavně filtr s pořádnou aciditou) a snad ještě víc miluje spánek. Letos obojí propojí v tématu své přednášky. Ve volném čase tančí, hodně cestuje, šije vlastní oblečení a nebo má nos zabořený v knížce."
+    },
+    "talk_kaznice": {
+      "name": "Prohlídka Káznice"
+    },
+    "talk_pranachai": {
+      "name": "Prana chai"
     }
   },
   "promoted": {
@@ -488,10 +696,11 @@
   "programCategory": {
     "brew": "Brew bar",
     "espresso": "Espresso bar",
-    "espresso_milk": "Čestní hosté",
+    "espresso_milk": "Hosté",
     "lecture": "Přednášky",
     "workshop": "Workshopy",
-    "party": "Další program",
+    "cupping": "Cuppingy",
+    "party": "Stage",
     "overview": "Přehled",
     "robotarna": "Pražírny"
   },
@@ -513,9 +722,18 @@
     "loadingText": "Program festivalu pro Vás ještě pražíme.",
     "content": "Programu se letos urodilo opravdu hodně. Najdete ho na separátní stránce.",
     "filter": "Filtr",
+    "inProgress": "Dopražujeme",
     "talkInLanguage": {
       "en": "Přednáška v angličtině"
     }
+  },
+  "programHelp": {
+    "title": "Co teď?",
+    "viewTitle": "Přepínání",
+    "viewText": "Tlačítkem v horní liště přepneš mezi zobrazením seznamu a časové osy.",
+    "filterTitle": "Filtrování",
+    "filterText": "Pomocí ovládacích prvků v horní liště zobrazíš nebo skryješ jednotlivé programové kategorie.",
+    "close": "Rozumím"
   },
   "programDisclaimer": "Změna programu vyhrazena",
   "sponsors": {
