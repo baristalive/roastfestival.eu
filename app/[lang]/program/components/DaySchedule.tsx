@@ -393,7 +393,7 @@ const DaySchedule = ({
                   style={TIMELINE_COLUMNS}
                 >
                   <div
-                    className={`sticky left-0 z-10 flex flex-col items-center justify-center gap-1 self-stretch border-r-4 border-black px-1 py-3 md:gap-2 md:px-2 md:py-4 ${headerBg} ${text}`}
+                    className={`sticky left-0 z-20 flex flex-col items-center justify-center gap-1 self-stretch border-r-4 border-black px-1 py-3 md:gap-2 md:px-2 md:py-4 ${headerBg} ${text}`}
                   >
                     <StationIcon station={t.track} />
                     <span
