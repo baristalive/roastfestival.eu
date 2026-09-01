@@ -324,6 +324,22 @@
         }
       }
     },
+    "party_slehni_mech": {
+      "annotation": [
+        "… songs about things that could have happened to you",
+        "A band from the independent Brno scene whose original music draws on indie rock, jazz, world music, grunge, and swing. Upon closer inspection, the entertaining Czech lyrics also conceal darker themes, leaving the listener with the feeling that the world is a place full of love and indescribable horrors.",
+        "\"Moss can’t be crushed; it's the desire to achieve the impossible…\""
+      ]
+    },
+    "party_topol": {
+      "annotation": "The Brno-based band TOPOL m.b., led by Jiří Topol Novotný, brings an energetic musical experience to the club scene, blending original compositions with an unmistakable atmosphere. The band, which regularly enlivens the cultural scene not only in Brno, captivates audiences with its compelling melodies and strong connection with the crowd. They are also often joined on stage by fantastic guests, making each of their performances a unique and unforgettable experience."
+    },
+    "party_fanglou": {
+      "annotation": "Fanglou is a band from Brno that blends jazz playfulness, funky grooves, pop melodies, and rock energy. In their original songs with Czech lyrics, they sing about life's joys and the small miracles of everyday life. With a lineup featuring drums, bass, percussion, keyboards, guitar, and vocals, Fanglou delivers live performances full of sincerity, energy, and the joy of making music."
+    },
+    "party_jan_vana": {
+      "annotation": "Singer-songwriter Jan Váňa brings to the stage a delicate melancholy and intimate confessions that music critics describe as healing songs of silence. A native of Tábor and a graduate of the Lyric and Screenplay Writing program at the Jaroslav Ježek Conservatory, he consciously carries on the tradition of Czech poets with guitars. He has imbued his debut album, \"A na Jordán dopadla tma\" (2024), produced by the sought-after musician badfocus, with his unpretentious, profound poetics. His performances, built around his captivating voice and acoustic guitar, promise an intense and emotional intimate experience."
+    },
     "bracia": {
       "annotation": "Bracia Ziolkowscy means Ziolkowski Brothers. It's a speciality coffee roastery run by - surprise, surprise - two brothers. The elder is a neat Mr President in a tie. The younger is a slightly dishevelled activist in flannel. Polish Roasting Championship 2nd place in 2025 and 3rd in 2021."
     },
@@ -487,7 +503,7 @@
       "bio": "An internationally active filmmaker. Former lecturer in video at Masaryk University. Founder of the audiovisual production company KoPro. Someone who has finally learnt how to water his plants."
     },
     "talk_blahovec": {
-      "name": "The creation of the book Kávový Baťa.",
+      "name": "The creation of the book Kávový Baťa",
       "annotation": "A discussion on how the book Kávový Baťa came about. Hubert Lamplota – a name that, over 100 years ago in Czechoslovakia, was legendary in the world of coffee.",
       "bio": "Boris Blahovec is a coffee enthusiast, amateur historian, traveller and writer who has long been dedicated to the history of coffee and coffee culture. Through his collection of historical coffee makers, he enjoys bringing to life forgotten stories linked to coffee. At the talk, he will discuss the creation of his book Kávový Baťa and the story of Hubert Lamplot, a prominent figure in Brno's coffee scene. He will also share interesting facts from his historical research and the world of coffee."
     },

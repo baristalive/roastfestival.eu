@@ -888,6 +888,7 @@
     "ws_grandma": {
       "country": "cz",
       "subheading": "Miroslav Meňhert, Mária Meňhert",
+      "logo": "menhertovi.jpg",
       "modalProps": {
         "className": ""
       }
@@ -918,6 +919,7 @@
     "ws_latteart_poppy": {
       "country": "cz",
       "subheading": "Tereza Němcová",
+      "logo": "ws_latte.jpg",
       "modalProps": {
         "className": ""
       }
@@ -942,11 +944,16 @@
     "talk_arana": {
       "country": "es",
       "lang": "en",
-      "subheading": "Santiago Arana"
+      "subheading": "Santiago Arana",
+      "logo": "arana.png",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_coufalova": {
       "country": "cz",
       "subheading": "Ing. Mgr. Martina Coufalová",
+      "logo": "coufalova.jpg",
       "modalProps": {
         "className": ""
       }
@@ -954,6 +961,7 @@
     "talk_podcast_ect": {
       "country": "cz",
       "subheading": "Patrik Sláma, Aleš Pospíšil",
+      "logo": "podcast.png",
       "modalProps": {
         "className": ""
       }
@@ -961,6 +969,7 @@
     "talk_kocar": {
       "country": "cz",
       "subheading": "Ondřej Kocar",
+      "logo": "kocar.jpg",
       "modalProps": {
         "className": ""
       }
@@ -974,15 +983,27 @@
     },
     "talk_ajala": {
       "subheading": "Emma Barickmanova",
-      "country": "cz"
+      "country": "cz",
+      "logo": "choco.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_chickas": {
       "country": "cz",
-      "subheading": "Tereza Prejdová"
+      "subheading": "Tereza Prejdová",
+      "logo": "talk_chicas.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_angela_chickas": {
       "country": "co",
-      "subheading": "Angela Rojas"
+      "subheading": "Angela Rojas",
+      "logo": "angela.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "talk_gloria": {
       "subheading": "Honza Veselý",
@@ -991,6 +1012,9 @@
     "talk_sloficek": {
       "country": "cz",
       "logo": "lor.jpg",
+      "modalProps": {
+        "className": ""
+      },
       "subheading": "MUDr.\u00a0Barbara Šťastná"
     },
     "talk_kaznice": {
@@ -1002,19 +1026,43 @@
     },
     "party_jan_vana": {
       "name": "Jan Váňa",
-      "in_progress": true
+      "logo": "jan_vana.jpg",
+      "modalProps": {
+        "className": ""
+      },
+      "web": "https://orcd.co/janvana",
+      "facebook": "",
+      "spotify": "https://open.spotify.com/album/5Y8EVq7msQnWf3UZdYFk5t",
+      "instagram": "https://www.instagram.com/h.vana"
     },
     "party_fanglou": {
       "name": "Fanglou",
-      "in_progress": true
+      "logo": "fanglou.jpg",
+      "modalProps": {
+        "className": ""
+      },
+      "facebook": "https://www.facebook.com/KapelaFanglou/"
     },
     "party_topol": {
       "name": "Topol",
-      "in_progress": true
+      "logo": "topol.jpg",
+      "modalProps": {
+        "className": ""
+      },
+      "web": "",
+      "facebook": "https://www.facebook.com/p/TOPOL-mb-100076571195196/"
     },
     "party_slehni_mech": {
       "name": "Slehni Mech",
-      "in_progress": true
+      "logo": "slehni_mech.jpg",
+      "modalProps": {
+        "className": ""
+      },
+      "web": "https://slehnimech.cz/",
+      "facebook": "https://www.facebook.com/slehnimech",
+      "instagram": "https://www.instagram.com/slehnimech",
+      "youtube": "https://www.youtube.com/@slehnimech-b8t",
+      "spotify": "https://open.spotify.com/artist/5bjab4ScS6twTqPejw0P0i"
     }
   },
   "promoted": {

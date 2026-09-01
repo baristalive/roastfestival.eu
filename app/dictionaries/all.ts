@@ -57,6 +57,7 @@ export type Presenter = {
   instagram?: string;
   facebook?: string;
   youtube?: string;
+  spotify?: string;
   linkedin?: string;
   twitter?: string;
   name: string;

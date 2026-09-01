@@ -367,6 +367,22 @@
         }
       }
     },
+    "party_slehni_mech": {
+      "annotation": [
+        "…písně o věcech, které se vám mohly stát",
+        "Kapela z nezávislé brněnské scény, která v autorské tvorbě čerpá z indie rocku, jazzu, world music, grunge nebo swingu. Zábavné české texty skrývají při bližším pohledu i temnější témata a zanechají v posluchači pocit, že svět je místo plné lásky a nepopsatelných hrůz.",
+        "„Mech nejde slehnout, je to touha dokázat nemožné…“"
+      ]
+    },
+    "party_topol": {
+      "annotation": "Brněnská formace TOPOL m.b. v čele s Jiřím Topolem Novotným přiváží na klubovou scénu energický hudební zážitek, ve kterém se mísí autorská tvorba s nezaměnitelnou atmosférou. Kapela, která pravidelně oživuje kulturní dění nejen v Brně, láká na podmanivé melodie a silný kontakt s publikem. Na pódiu je navíc často doplňují skvělí hosté, což z každého jejich vystoupení dělá jedinečný a neopakovatelný zážitek."
+    },
+    "party_fanglou": {
+      "annotation": "Fanglou je brněnská kapela, která propojuje jazzovou hravost, funky groove, popovou melodičnost a rockovou energii. V autorské tvorbě s českými texty vypráví o životních radostech i malých každodenních zázracích. V sestavě bicí, basa, perkuse, klávesy, kytara a zpěv přináší Fangloukoncertní vystoupení plné upřímnosti, energie a muzikantské radosti."
+    },
+    "party_jan_vana": {
+      "annotation": "Písničkář Jan Váňa přináší na scénu křehkou melancholii a intimní zpovědi, které hudební kritici označují za hojivé písně ticha. Táborský rodák a absolvent oboru Tvorba textu a scénáře na Konzervatoři Jaroslava Ježka vědomě navazuje na tradici českých básníků s kytarou. Svoji neprvoplánovou, hlubokou poetiku otiskl do debutového alba A na Jordán dopadla tma (2024), které produkoval vyhledávaný hudebník badfocus. Jeho vystoupení, postavená na podmanivém hlasu a akustické kytaře, slibují intenzivní a emotivní komorní zážitek."
+    },
     "cafe_cult": {
       "annotation": "Dovozce kávy Cult Café, dovozce doplňků a příslušenství pro kávu."
     },
@@ -502,7 +518,7 @@
       "bio": "Mezinárodně fungující filmmaker. Bývalý vyučující MU v oblasti videa. Zakladatel audiovizualní produkce KoPro. Člověk co se konečně naučil zalévat kytky."
     },
     "talk_blahovec": {
-      "name": "Ako vznikla kniha Kávový Baťa.",
+      "name": "Ako vznikla kniha Kávový Baťa",
       "annotation": "Beseda/prednáška o tom, ako vznikala kniha Kávový Baťa. Hubert Lamplota – meno, ktoré pred viac ako 100 rokmi v Československu znamenalo vo svete kávy legendu.",
       "bio": "Pravý Kávičkár je nadšenec do kávy, amatérsky historik, cestovateľ a spisovateľ, ktorý sa dlhodobo venuje histórii kávy a kávovej kultúry. Vo svojej zbierke historických kávovarov rád prezentuje zabudnuté príbehy spojené s kávou. Na besede predstaví vznik svojej knihy Kávový Baťa a príbeh Huberta Lamplotu, významnej osobnosti brnianskeho sveta kávy. Podelí sa aj o zaujímavosti zo svojho historického bádania a sveta kávy."
     },

@@ -20,6 +20,7 @@ import YoutubeIcon from "@/app/icons/youtube";
 import Flag from "@/app/icons/flag";
 import TwitterIcon from "@/app/icons/twitter";
 import LinkedinIcon from "@/app/icons/linkedin";
+import SpotifyIcon from "@/app/icons/spotify";
 
 const SocialLink = ({
   href,
@@ -58,6 +59,7 @@ export const Modal = ({
   modalProps,
   name,
   schedule,
+  spotify,
   subheading,
   twitter,
   web,
@@ -339,6 +341,11 @@ export const Modal = ({
                     href={youtube}
                     title="YouTube"
                     icon={<YoutubeIcon />}
+                  />
+                  <SocialLink
+                    href={spotify}
+                    title="Spotify"
+                    icon={<SpotifyIcon />}
                   />
                   <SocialLink
                     href={twitter}
