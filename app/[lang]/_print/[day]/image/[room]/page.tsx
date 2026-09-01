@@ -98,23 +98,36 @@ const Schedule = (props: SchedulePropsType) => {
                   {i.map((s) => {
                     const presenter = lang.presenters[
                       s.$ref as keyof typeof lang.presenters
-                    ] as Presenter;
+                    ] as Presenter | undefined;
+                    const isInProgress = presenter?.in_progress === true;
+
+                    if (!presenter?.name && !isInProgress) return null;
                     return (
                       <div
                         className="elevate bg-accent relative my-1 flex flex-col items-center rounded-lg p-2 text-center text-white"
+                        data-in-progress={isInProgress ? "true" : undefined}
                         key={`${t.track}_${idx}_${s.$ref}`}
                       >
+                        {isInProgress && (
+                          <span className="bg-accent pointer-events-none absolute top-0 left-1/2 z-10 -translate-x-1/2 -rotate-6 border-2 border-black px-2 py-1 text-xs font-black whitespace-nowrap text-black uppercase">
+                            {lang.programTile.inProgress}
+                          </span>
+                        )}
                         <h4 className="relative mb-1 text-2xl font-bold">
-                          {presenter.lang && (
+                          {presenter?.lang && (
                             <span className="elevate absolute left-full ml-2 inline-block aspect-square h-8 w-8 rounded-full bg-white p-1 text-base font-bold text-black uppercase">
                               {presenter.lang}
                             </span>
                           )}
-                          <InlineMarkdown>{presenter.name}</InlineMarkdown>
+                          {presenter?.name ? (
+                            <InlineMarkdown>{presenter.name}</InlineMarkdown>
+                          ) : (
+                            lang.programTile.inProgress
+                          )}
                         </h4>
                         <i className="text-lg">
                           {s.start} - {s.end}{" "}
-                          {presenter.subheading && `| ${presenter.subheading}`}
+                          {presenter?.subheading && `| ${presenter.subheading}`}
                         </i>
                       </div>
                     );

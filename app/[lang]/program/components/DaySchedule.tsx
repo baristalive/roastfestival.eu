@@ -26,7 +26,7 @@ const GRID_STOPS =
     .join(" ") +
   " [h1800] 1fr 4px [h1810]";
 
-const TIMELINE_MIN_WIDTH = "64rem";
+const TIMELINE_MIN_WIDTH = "100rem";
 const TIMELINE_COLUMNS = {
   gridTemplateColumns: "var(--program-track-width) minmax(0, 1fr)",
 };
@@ -85,6 +85,21 @@ const TRACK_STYLES: Record<
     text: "text-black",
   },
 };
+
+const InProgressBadge = ({
+  className = "",
+  label,
+}: {
+  className?: string;
+  label: string;
+}) => (
+  <span
+    className={`font-display pointer-events-none absolute z-10 rotate-6 border-2 border-black bg-white px-2 py-1 leading-none font-black tracking-widest whitespace-nowrap text-black uppercase shadow-[4px_4px_0_0_var(--color-black)] ${className}`}
+    data-in-progress-label="true"
+  >
+    {label}
+  </span>
+);
 
 const DaySchedule = ({
   className = "",
@@ -190,27 +205,35 @@ const DaySchedule = ({
                       const presenter = lang.presenters[
                         s.$ref as keyof typeof lang.presenters
                       ] as Presenter;
-                      if (!presenter?.name) return null;
-                      return (
-                        <Modal
-                          {...presenter}
-                          headerBg={modalBg}
-                          key={`${presenter.name}_${idx}`}
+                      const isInProgress = presenter?.in_progress === true;
+
+                      if (!presenter?.name && !isInProgress) return null;
+
+                      const card = (
+                        <div
+                          className={`punk-border relative overflow-hidden ${isInProgress ? "" : "cursor-pointer transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]"}`}
+                          data-in-progress={isInProgress ? "true" : undefined}
                         >
-                          <div className="punk-border cursor-pointer overflow-hidden transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]">
-                            <div
-                              className={`flex items-center justify-between px-4 py-2 ${bg} ${text}`}
-                            >
-                              <span className="font-display text-sm font-black uppercase">
-                                {s.start} – {s.end}
+                          {isInProgress && (
+                            <InProgressBadge
+                              className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                              label={lang.programTile.inProgress}
+                            />
+                          )}
+                          <div
+                            className={`flex items-center justify-between px-4 py-2 ${bg} ${text}`}
+                          >
+                            <span className="font-display text-sm font-black uppercase">
+                              {s.start} – {s.end}
+                            </span>
+                            {presenter.lang && (
+                              <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
+                                {presenter.lang}
                               </span>
-                              {presenter.lang && (
-                                <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
-                                  {presenter.lang}
-                                </span>
-                              )}
-                            </div>
-                            <div className="bg-white p-4">
+                            )}
+                          </div>
+                          <div className="bg-white p-4">
+                            {presenter.name ? (
                               <h4
                                 lang={params.lang === "cz" ? "cs" : "en"}
                                 className="font-display text-lg leading-tight font-black break-words hyphens-auto"
@@ -219,13 +242,31 @@ const DaySchedule = ({
                                   {presenter.name}
                                 </InlineMarkdown>
                               </h4>
-                              {presenter.subheading && (
-                                <p className="mt-1 text-base text-black/60">
-                                  {presenter.subheading}
-                                </p>
-                              )}
-                            </div>
+                            ) : (
+                              <span className="font-display text-sm font-black tracking-widest text-black uppercase">
+                                {lang.programTile.inProgress}
+                              </span>
+                            )}
+                            {presenter.subheading && (
+                              <p className="mt-1 text-base text-black/60">
+                                {presenter.subheading}
+                              </p>
+                            )}
                           </div>
+                        </div>
+                      );
+
+                      return isInProgress ? (
+                        <div key={`${s.$ref}_${s.start}_${s.end}_${idx}`}>
+                          {card}
+                        </div>
+                      ) : (
+                        <Modal
+                          {...presenter}
+                          headerBg={modalBg}
+                          key={`${presenter.name}_${idx}`}
+                        >
+                          {card}
                         </Modal>
                       );
                     })}
@@ -340,7 +381,6 @@ const DaySchedule = ({
             .filter((t) => tracks.includes(t.track))
             .map((t) => {
               const { bg, edge, headerBg, text } = style(t.track);
-              const singleLane = t.schedule.length === 1;
               const categoryName =
                 lang.programCategory[
                   t.track as keyof typeof lang.programCategory
@@ -374,45 +414,74 @@ const DaySchedule = ({
                       const presenter = lang.presenters[
                         s.$ref as keyof typeof lang.presenters
                       ] as Presenter;
-                      if (!presenter?.name) return null;
+                      const isInProgress = presenter?.in_progress === true;
+
+                      if (!presenter?.name && !isInProgress) return null;
+
+                      const item = (
+                        <div
+                          aria-label={
+                            isInProgress
+                              ? lang.programTile.inProgress
+                              : undefined
+                          }
+                          className={`schedule-item group relative my-1.5 flex items-start gap-2 border-l-4 ${edge} px-3 py-3 ${bg} ${text} ${isInProgress ? "" : "cursor-pointer transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]"}`}
+                          data-in-progress={isInProgress ? "true" : undefined}
+                        >
+                          {isInProgress && (
+                            <InProgressBadge
+                              className="-top-4 left-1/2 -translate-x-1/2 text-[0.65rem]"
+                              label={lang.programTile.inProgress}
+                            />
+                          )}
+                          <div className="min-w-0 grow">
+                            {presenter.name ? (
+                              <h4
+                                lang={params.lang === "cz" ? "cs" : "en"}
+                                className={`font-display wrap-break-words min-w-0 text-sm leading-tight font-black hyphens-auto`}
+                              >
+                                <InlineMarkdown>
+                                  {presenter.name}
+                                </InlineMarkdown>
+                              </h4>
+                            ) : (
+                              <span className="font-display text-xs leading-tight font-black tracking-widest uppercase">
+                                {lang.programTile.inProgress}
+                              </span>
+                            )}
+                            {presenter.subheading && (
+                              <p
+                                lang={params.lang === "cz" ? "cs" : "en"}
+                                className="wrap-break-words mt-1 text-sm leading-tight hyphens-auto opacity-70"
+                              >
+                                {presenter.subheading}
+                              </p>
+                            )}
+                          </div>
+                          {presenter.lang && (
+                            <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
+                              {presenter.lang}
+                            </span>
+                          )}
+                        </div>
+                      );
+
                       return (
                         <div
                           className="schedule-item-wrapper"
-                          key={`${presenter.name}_${idx}`}
+                          key={`${s.$ref}_${s.start}_${s.end}_${idx}`}
                           style={{
                             gridColumnEnd: `h${s.end.replace(":", "")}`,
                             gridColumnStart: `h${s.start.replace(":", "")}`,
                           }}
                         >
-                          <Modal {...presenter} headerBg={modalBg}>
-                            <div
-                              className={`schedule-item group my-1.5 flex h-full cursor-pointer items-start gap-2 border-l-4 ${edge} px-3 py-3 transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)] ${bg} ${text}`}
-                            >
-                              <div className="min-w-0 grow">
-                                <h4
-                                  lang={params.lang === "cz" ? "cs" : "en"}
-                                  className={`font-display min-w-0 text-sm leading-tight font-black break-words hyphens-auto ${singleLane ? "" : "line-clamp-2"}`}
-                                >
-                                  <InlineMarkdown>
-                                    {presenter.name}
-                                  </InlineMarkdown>
-                                </h4>
-                                {presenter.subheading && (
-                                  <p
-                                    lang={params.lang === "cz" ? "cs" : "en"}
-                                    className="mt-1 text-sm leading-tight break-words hyphens-auto opacity-70"
-                                  >
-                                    {presenter.subheading}
-                                  </p>
-                                )}
-                              </div>
-                              {presenter.lang && (
-                                <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
-                                  {presenter.lang}
-                                </span>
-                              )}
-                            </div>
-                          </Modal>
+                          {isInProgress ? (
+                            item
+                          ) : (
+                            <Modal {...presenter} headerBg={modalBg}>
+                              {item}
+                            </Modal>
+                          )}
                         </div>
                       );
                     })}

@@ -98,7 +98,7 @@
       "annotation": "We are one of the oldest and friendliest coffee roasters in the center of Brno, run by Marek and Martin. Over the years, we have figured out what we want, and now we are bringing it to you at the festival."
     },
     "hayb": {
-      "annotation": "Hi, How Are You Brewing? We’re HAYB - speciality coffee roasters based in Warsaw, Poland. We like fun processings, risky bean experiments, but we also enjoy the stable quality of ordinary daily brews - both the funky and the classic ones. We want those beans to bring some colour to your cup - every day and on special occasions. We roast with the deepest respect for the origin. No compromise on taste. No compromise on quality. This job drives us energetically not only due to caffeine. All done for you to deal with your coffee with ease and joy, having fun with various possibilities that good coffee can give you. Effortlessly!"
+      "annotation": "Hi, How Are You Brewing? We're HAYB - speciality coffee roasters based in Warsaw, Poland. We like fun processings, risky bean experiments, but we also enjoy the stable quality of ordinary daily brews - both the funky and the classic ones. We want those beans to bring some colour to your cup - every day and on special occasions. We roast with the deepest respect for the origin. No compromise on taste. No compromise on quality. This job drives us energetically not only due to caffeine. All done for you to deal with your coffee with ease and joy, having fun with various possibilities that good coffee can give you. Effortlessly!"
     },
     "hodne_nekde": {},
     "idylika": {
@@ -257,6 +257,11 @@
     "ws_cupping_punkt": {
       "annotation": "Come and taste coffee from the Punkt roastery. Cupping is lead by the Punkt roastery staff."
     },
+    "talk_arana": {
+      "name": "The Real Price of an Exotic Lot",
+      "annotation": "An exotic lot can land in your roastery at a price that raises eyebrows, but almost nobody in the chain can tell you where that money actually goes. In this talk we follow one real Colombian lot from the farm to a European warehouse — what the producer earns, what the processing costs, and what gets added by milling, shipping, customs and storage. Having gone from a cupping table in Valle del Cauca to the buying side in Europe, I've seen how differently each end describes the same coffee. You'll leave with a clearer picture of what you're paying for, and five questions worth asking your importer before your next purchase.",
+      "bio": "Santiago Arana grew up in Sevilla, a coffee town in Valle del Cauca, and started out at the local growers' cooperative, cupping coffees from more than three hundred producers in the region. He joined Cofinet as a sales rep and is now Commercial Manager for Cofinet Europe, working with roasters in over forty countries. His job, the way he sees it, is simple: getting the people who grow the coffee and the people who roast it onto the same table."
+    },
     "talk_biology": {
       "name": "Coffee for everyone (even children?)!",
       "annotation": "We all love coffee, but what does caffeine do to our bodies? And what happens when caffeine is consumed by children? Pediatrician Dr. Barbara Šťastná will talk about how much caffeine adults and children consume today and what it does to us.",
@@ -268,7 +273,7 @@
       "bio": "I am a mom, entrepreneur, lover of foreign cultures and languages, and formerly a frequent traveler. I have been involved with coffee since 2011, and with specialty coffee since 2014. Since 2019, together with my colleague Karolína, I have been developing the Chicas Industry project focused on importing green coffee."
     },
     "talk_humberto": {
-      "name": "Celebrating Coffee’s Transformative Power",
+      "name": "Celebrating Coffee's Transformative Power",
       "annotation": "We will discuss the impact of coffee and how it can transform people's lives across the entire supply chain. This includes its effects at origin, as well as the roles of importers, roasters, baristas, and guests.",
       "bio": "Humberto Ribes, a Spanish barista living in Berlin. Currently Head of Coffee at the Five Elephant roastery in Berlin. Among other things, Humberto is a talented photographer. "
     },
@@ -406,9 +411,9 @@
       ]
     },
     "ws_espresso_tonic": {
-      "name": "Espresso & Tonic Tasting – It’s all about the tonic!",
-      "annotation": "Espressotonic, Eskotonik, E&T – or whatever you want to call it. This trend of hot summer days is firmly established on the menus of virtually every specialty coffee shop. And the tonic matters – in most cases, tonic makes up more than 70 per cent of the drink, and as lovers of cocktail drinks know, every tonic tastes different. Led by Karolína Lužová, you’ll get to taste nearly a dozen different tonics – both premium and standard varieties – combined with two types of espresso.",
-      "bio": "Hi, I’m Kája, and I’ve been working in a café for several years now. Coffee has gone from being just a drink to something I’m increasingly enjoying discovering. I’m always up for a good filter coffee, and my guilty pleasure is fermented coffee."
+      "name": "Espresso & Tonic Tasting – It's all about the tonic!",
+      "annotation": "Espressotonic, Eskotonik, E&T – or whatever you want to call it. This trend of hot summer days is firmly established on the menus of virtually every specialty coffee shop. And the tonic matters – in most cases, tonic makes up more than 70 per cent of the drink, and as lovers of cocktail drinks know, every tonic tastes different. Led by Karolína Lužová, you'll get to taste nearly a dozen different tonics – both premium and standard varieties – combined with two types of espresso.",
+      "bio": "Hi, I'm Kája, and I've been working in a café for several years now. Coffee has gone from being just a drink to something I'm increasingly enjoying discovering. I'm always up for a good filter coffee, and my guilty pleasure is fermented coffee."
     },
     "ws_ice_filter": {
       "name": "Ice Ice ~~Baby~~ Filter – Tasting preparations of cold filters",
@@ -427,9 +432,9 @@
       "name": "Speciality coffee just like Grandma used to make (Melitta, Lamka and Karlsbad-style coffee maker vs. V60)",
       "annotation": [
         "What might a speciality coffee prepared by a grandmother using the equipment available in the past have tasted like?",
-        "You won't find a Melitta, a Lamk or Karlovy Vary cutlery in cafés any more. Is that a shame, or is it actually a good thing? During the workshop, you’ll taste one coffee prepared in four different ways – three traditional and one modern. The question is: can old-school coffee equipment still hold its own against the widespread V60?"
+        "You won't find a Melitta, a Lamk or Karlovy Vary cutlery in cafés any more. Is that a shame, or is it actually a good thing? During the workshop, you'll taste one coffee prepared in four different ways – three traditional and one modern. The question is: can old-school coffee equipment still hold its own against the widespread V60?"
       ],
-      "bio": "We’re Miro and Maru from the Brno-based micro-roastery Chci kofein. We’re a married couple, coffee addicts and a bit mad, who roast speciality coffee for like-minded madcaps."
+      "bio": "We're Miro and Maru from the Brno-based micro-roastery Chci kofein. We're a married couple, coffee addicts and a bit mad, who roast speciality coffee for like-minded madcaps."
     },
     "ws_milk": {
       "name": "Milk under the microscope - Sensory characteristics and their impact on the flavour of coffee",
@@ -437,20 +442,32 @@
       "bio": "Patrik Sláma has long been involved in coffee education and has been working as a coffee trainer for several years. He focuses primarily on sensory evaluation, coffee preparation, milk and latte art. In recent years, he has also been working on a book dedicated to the sensory evaluation, physics and chemistry of milk microfoam and latte art. As well as training, he is also involved in coffee journalism as editor-in-chief of Káva spojuje and Okafi magazine."
     },
     "ws_beer_sensory": {
-      "name": "Beer sensory workshop"
+      "name": "Beer Sensory Analysis, or \"Why Does My Beer Taste Like Coffee?\"",
+      "annotation": [
+        "Imagine a perfect world where we strive to achieve a high degree of efficiency. That's why we'll all drink the same beverage—a blend of coffee and beer. Why should we like it?",
+        "Or, let's talk about the basics of beer sensory evaluation and whether there's a reason to infuse beers with coffee extract."
+      ],
+      "bio": [
+        "Miša was practically a lifelong student (Food Technology), but is now a successful \"Beer Doctor\" who is somewhat known to the public as the \"Evil Brewer\" for her herbal beers, as well as a judge and co-organizer of beer competitions. She has over 5 years of experience in brewing in various countries, including the Czech Republic, Cyprus, and Estonia...",
+        "Currently, she manages production at a small brewery while also serving as the brewmaster. If you meet her, you'll likely witness an unintentional stand-up comedy/tragedy."
+      ]
     },
     "ws_naked_espresso": {
-      "name": "Naked espresso Kopi z Luwak"
+      "name": "Better Vessel - The Hidden Flavor of Espresso",
+      "annotation": "Espresso was born out of a desire for speed. From Angelo Moriondo's 1884 patent through the first commercial machines by Luigi Bezzera and Desiderio Pavoni after 1901, coffee was brewed using steam pressure—and had no crema. That didn't appear until 1948, when Achille Gaggia replaced steam with a lever-operated piston and a pressure of around nine bars. The thick foam, which no one expected, was quickly touted by marketers of the time as proof of quality. Since then, both baristas and customers have taken it for granted as an integral part of the cup. Better Vessel, a device from the Philippines by Michael Harris and Federico Bolaños, challenges this assumption. Revolution, evolution, or nonsense? Try it, and you'll understand :)",
+      "bio": "The story of Jakub Fiala and coffee began in 2005, when he first visited coffee plantations during business trips to Indonesia to source wood. His visits to the plantations and processing facilities captivated him so much that in 2007 he began roasting coffee imported from small-scale farmers himself. Today, he is the driving force behind the Brno-based brand Kopi Bean, where he roasts carefully selected specialty coffees on a modern Italian IMF roasting machine. He approaches espresso the same way he approaches roasting profiles—there's always room for improvement."
     },
     "ws_latteart_poppy": {
-      "name": "Latte art"
+      "name": "Pour your heart out: Latte art with Terka",
+      "annotation": "How do you create a heart, a tulip or something a bit more daring out of milk? Terka will guide you through the basics of latte art and show you how to work with the milk, the jug and the cup itself. You'll try out the free-pour and etching techniques and discover that there's no magic behind a successful design – just the right technique, a bit of patience and plenty of milk. And most importantly – don't worry if your first attempt ends up looking like a swan.",
+      "bio": "Terka works as a barista at Poppy Beans café in Brno, where latte art is her daily passion. She enjoys both free-pour and etching, and when she's not creating designs in cups at work or at home, you might spot her at one of the latte art competitions, where she regularly makes it through to the final. Now she's keen to share her experience and know-how with you too."
     },
     "ws_cupping_qgrader": {
-      "annotation": "Cupping led by Q-Grader Barbora Fialová."
+      "name": "Cupping led by a Q-Grader"
     },
     "talk_coufalova": {
       "name": "The hidden science in a cup: How microorganisms shape the flavour of coffee",
-      "annotation": "Why do some coffees taste of jasmine and citrus, others of ripe blueberries, and still others of tropical fruit or rum? The key lies in what happens to the coffee cherry long before it is roasted. Take a look at the world of coffee through the lens of microbiology. We’ll explore the journey from traditional processing methods to modern controlled anaerobic fermentation. We’ll explain clearly and accessibly how yeasts and bacteria build flavour precursors in the bean, what the real difference is between co-fermentation with fruit and artificial infusion, and what a fascinating role biochemistry plays in the whole process.",
+      "annotation": "Why do some coffees taste of jasmine and citrus, others of ripe blueberries, and still others of tropical fruit or rum? The key lies in what happens to the coffee cherry long before it is roasted. Take a look at the world of coffee through the lens of microbiology. We'll explore the journey from traditional processing methods to modern controlled anaerobic fermentation. We'll explain clearly and accessibly how yeasts and bacteria build flavour precursors in the bean, what the real difference is between co-fermentation with fruit and artificial infusion, and what a fascinating role biochemistry plays in the whole process.",
       "bio": "Ing. Mgr. Martina Coufalová, microbiologist. Fascinated by the role of fermentation in various aspects of human life, she decided to broaden her education to include food technology. Thanks to this, she can help you explore coffee from the perspective of the biochemical processes and microbial fermentation that fundamentally shape its final flavour profile."
     },
     "talk_podcast_ect": {
@@ -464,7 +481,7 @@
     "talk_kocar": {
       "name": "Coffee shot!",
       "annotation": [
-        "Every café, product or member of staff deserves to be shown in the best possible light! Let's go through a few tips, insights and pieces of advice together on how best to film and photograph your business or your favourite coffee. The workshop is designed for both those with their own cameras and those who film on their phones. And you’ll most likely find the insights you gain here useful even beyond the realms that smell of coffee.",
+        "Every café, product or member of staff deserves to be shown in the best possible light! Let's go through a few tips, insights and pieces of advice together on how best to film and photograph your business or your favourite coffee. The workshop is designed for both those with their own cameras and those who film on their phones. And you'll most likely find the insights you gain here useful even beyond the realms that smell of coffee.",
         "The only photo and video workshop in the Czech Republic tailored to all café-goers – this really won't just be a slide show."
       ],
       "bio": "An internationally active filmmaker. Former lecturer in video at Masaryk University. Founder of the audiovisual production company KoPro. Someone who has finally learnt how to water his plants."
@@ -472,13 +489,17 @@
     "talk_blahovec": {
       "name": "The creation of the book Kávový Baťa.",
       "annotation": "A discussion on how the book Kávový Baťa came about. Hubert Lamplota – a name that, over 100 years ago in Czechoslovakia, was legendary in the world of coffee.",
-      "bio": "Boris Blahovec is a coffee enthusiast, amateur historian, traveller and writer who has long been dedicated to the history of coffee and coffee culture. Through his collection of historical coffee makers, he enjoys bringing to life forgotten stories linked to coffee. At the talk, he will discuss the creation of his book Kávový Baťa and the story of Hubert Lamplot, a prominent figure in Brno’s coffee scene. He will also share interesting facts from his historical research and the world of coffee."
+      "bio": "Boris Blahovec is a coffee enthusiast, amateur historian, traveller and writer who has long been dedicated to the history of coffee and coffee culture. Through his collection of historical coffee makers, he enjoys bringing to life forgotten stories linked to coffee. At the talk, he will discuss the creation of his book Kávový Baťa and the story of Hubert Lamplot, a prominent figure in Brno's coffee scene. He will also share interesting facts from his historical research and the world of coffee."
     },
     "talk_ajala": {
-      "name": "Ajala"
+      "name": "Hot Chocolate: Where It All Started",
+      "annotation": "Did you know that for most of its history, chocolate was consumed primarily in liquid form? The fascinating evolution of this ingredient includes many surprising and entertaining moments. During this lecture, we’ll introduce the “bean-to-bar” concept as a return to traditional methods and explain how this approach shapes the final flavor profile. We’ll also go over the practical details of preparation—from the ideal temperature to the importance of aeration for the full development of flavor. We’ll then connect theory with practice during a tasting, where you can explore these nuances with your own taste buds.",
+      "bio": "Emma, who is in charge of training, sensory workshops, and quality control at the Ajala chocolate factory in Brno, will guide you through the lecture and tasting. She is one of the few experts in the Czech Republic certified by the prestigious British institute IICCT (Level 1 & 2 Certificate in Chocolate Tasting). She passionately introduces the public to the complex world of cacao and delights in inspiring a deeper understanding of honest and ethically produced chocolate."
     },
     "talk_chickas": {
-      "name": "Chicas Industry"
+      "name": "A New Chapter for Chicas Industry: Specialty Coffee from the Forests of Indonesia",
+      "annotation": "This lecture will offer a brief insight into the work of a specialty coffee importer and introduce Indonesia as Chicas Industry’s new project. Although this country has been intriguing us for nearly two years, we are only now preparing to go there and are beginning to build relationships with local producers. However, thanks to our collaboration with BOKU University in Vienna, we’ve already had the opportunity to learn about a number of projects from afar that stand out not only for the quality of their coffee but also for their commitment to the environment, local communities, and sustainable development. We’ll share what we love about Indonesia and which farmers and projects we’d like to introduce to roasters and coffee lovers in the Czech Republic and beyond.",
+      "bio": "Karolína Nekvindová and Tereza Prejdová are the founders of Chicas Industry, a company that imports premium green coffee from Colombia, Mexico, Indonesia, and India. They have been involved in the coffee industry for many years and share a passion for its diversity, origins, and the stories of the people who grow it. In their work, they connect farmers with roasters and build relationships based on long-term collaboration, transparency, and mutual respect."
     },
     "talk_angela_chickas": {
       "name": "More than just a process: how exceptional coffee is made",
@@ -496,7 +517,7 @@
     },
     "talk_sloficek": {
       "name": "Coffee and a nap",
-      "annotation": "Coffee and a nap – two little pleasures that compete with each other in the world of sleep. Let’s find out just how complex the process of sleep actually is, and how coffee can disrupt it. Does that one cup of coffee really not affect your sleep? And is an afternoon nap a way to refresh yourself, or rather a tried-and-tested way to ruin your night’s sleep? So have a coffee, listen to the talk, and hopefully you won’t fall asleep during it :)",
+      "annotation": "Coffee and a nap – two little pleasures that compete with each other in the world of sleep. Let's find out just how complex the process of sleep actually is, and how coffee can disrupt it. Does that one cup of coffee really not affect your sleep? And is an afternoon nap a way to refresh yourself, or rather a tried-and-tested way to ruin your night's sleep? So have a coffee, listen to the talk, and hopefully you won't fall asleep during it :)",
       "bio": "Barbara Šťastná, M.D. is a paediatrician with experience working in both general paediatric practices and specialist clinics focusing on childhood obesity and cerebral palsy. She loves coffee (especially filter coffee with a good bit of acidity) and perhaps loves sleep even more. This year, she will combine both in the topic of her talk. In her spare time, she dances, travels a lot, sews her own clothes or gets buried in a book."
     },
     "talk_kaznice": {
@@ -657,7 +678,7 @@
   "programCategory": {
     "brew": "Brew bar",
     "espresso": "Espresso bar",
-    "espresso_milk": "Honored guests",
+    "espresso_milk": "Guests",
     "lecture": "Lectures",
     "workshop": "Workshops",
     "cupping": "Cuppings",
@@ -670,6 +691,7 @@
     "loadingText": "We are still roasting the festival program for you.",
     "content": "The schedule is really extensive this year. You can find it on a separate page.",
     "filter": "Filter",
+    "inProgress": "Still in oven",
     "talkInLanguage": {
       "en": "Talk in English"
     }

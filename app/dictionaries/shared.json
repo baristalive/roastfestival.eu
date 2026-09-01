@@ -910,13 +910,14 @@
     },
     "ws_naked_espresso": {
       "country": "cz",
+      "subheading": "Jakub Fiala",
       "modalProps": {
         "className": ""
       }
     },
     "ws_latteart_poppy": {
       "country": "cz",
-      "subheading": "Poppy Beans",
+      "subheading": "Tereza Němcová",
       "modalProps": {
         "className": ""
       }
@@ -925,6 +926,7 @@
       "name": "Cupping",
       "country": "cz",
       "subheading": "Barbora Fialová",
+      "in_progress": true,
       "modalProps": {
         "className": ""
       }
@@ -936,6 +938,11 @@
       "logo": "cofinet.svg",
       "primaryLink": "web",
       "web": "https://www.cofinet.com.au/"
+    },
+    "talk_arana": {
+      "country": "es",
+      "lang": "en",
+      "subheading": "Santiago Arana"
     },
     "talk_coufalova": {
       "country": "cz",
@@ -966,41 +973,48 @@
       }
     },
     "talk_ajala": {
-      "name": "Ajala"
+      "subheading": "Emma Barickmanova",
+      "country": "cz"
     },
     "talk_chickas": {
       "country": "cz",
-      "name": "Chicas Industry"
+      "subheading": "Tereza Prejdová"
     },
     "talk_angela_chickas": {
       "country": "co",
       "subheading": "Angela Rojas"
     },
     "talk_gloria": {
-      "name": "Honza Veselý"
+      "subheading": "Honza Veselý",
+      "in_progress": true
     },
     "talk_sloficek": {
       "country": "cz",
       "logo": "lor.jpg",
-      "subheading": "MUDr.\u00a0Barbara\u00a0Šťastná"
+      "subheading": "MUDr.\u00a0Barbara Šťastná"
     },
     "talk_kaznice": {
       "country": "cz"
     },
     "talk_pranachai": {
-      "lang": "en"
+      "lang": "en",
+      "in_progress": true
     },
     "party_jan_vana": {
-      "name": "Jan Váňa"
+      "name": "Jan Váňa",
+      "in_progress": true
     },
     "party_fanglou": {
-      "name": "Fanglou"
+      "name": "Fanglou",
+      "in_progress": true
     },
     "party_topol": {
-      "name": "Topol"
+      "name": "Topol",
+      "in_progress": true
     },
     "party_slehni_mech": {
-      "name": "Slehni Mech"
+      "name": "Slehni Mech",
+      "in_progress": true
     }
   },
   "promoted": {
@@ -1183,6 +1197,11 @@
                 "$ref": "ws_espresso_tonic"
               },
               {
+                "start": "12:00",
+                "end": "13:00",
+                "$ref": "ws_cupping_qgrader"
+              },
+              {
                 "start": "13:30",
                 "end": "14:30",
                 "$ref": "ws_gongfu"
@@ -1261,7 +1280,7 @@
               {
                 "start": "13:30",
                 "end": "14:20",
-                "$ref": "cofinet"
+                "$ref": "talk_arana"
               },
               {
                 "start": "14:40",

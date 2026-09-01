@@ -267,6 +267,11 @@
     "ws_cupping_punkt": {
       "annotation": "Přijď ochutnat kávu z pražírny Punkt. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z Punkt."
     },
+    "talk_arana": {
+      "name": "The Real Price of an Exotic Lot",
+      "annotation": "Exkluzivní káva se do vaší pražírny dostává s ne úplně nízkou nákupní cenou, ale téměř nikdo v celém řetězci nedokáže říct, kde tyto peníze vlastně končí. V této přednášce budeme sledovat jeden lot z kolumbie od farmy až po evropský sklad – kolik vydělá producent, kolik stojí zpracování a jaké náklady přibývají při přepravě, celním odbavení a skladování. Prošel jsem si cestu od degustačního stolu ve Valle del Cauca až ke koncovému distributorovi v Evropě a viděl jsem, jak odlišně každá ze stran popisuje stejnou kávu. Získáte jasnější představu o tom, za co skutečně platíte, a poradím vám pět otázek, které stojí za to položit svému dovozci před dalším nákupem.",
+      "bio": "Santiago Arana vyrostl v Seville, městě známém pěstováním kávy v departementu Valle del Cauca, a svou kariéru zahájil v místním zpracovatelském družstvu, kde prováděl degustaci kávy od více než tří set producentů z tohoto regionu. Do společnosti Cofinet nastoupil jako obchodní zástupce a v současné době působí jako obchodní ředitel Cofinet Europe, kde spolupracuje s pražírnami ve více než čtyřiceti zemích. Svou práci vnímá jednoduše: \"Chci sblížit lidi, kteří kávu pěstují, s těmi, kteří ji praží.\""
+    },
     "talk_biology": {
       "name": "Kávu všem (i dětem?)!",
       "annotation": "Všichni milujeme kávu, co ale kofein dělá s naším tělem? A co způsobí, když kofein přijímá dětský organismus? O tom, kolik kofeinu v dnešní době zkonzumují dospělí, ale i děti, a o tom, co to s námi provádí bude povídat dětská lékařka MUDr. Barbara Šťastná.",
@@ -452,16 +457,28 @@
       "bio": "Patrik Sláma se dlouhodobě věnuje vzdělávání v oblasti kávy a několik let působí jako kávový školitel. Zaměřuje se především na senzoriku, přípravu kávy, mléko a latte art. V posledních letech pracuje také na knize věnované senzorice, fyzice a chemii mléčné mikropěny a latte artu. Vedle školení se věnuje také kávové žurnalistice jako šéfredaktor Káva spojuje a magazínu Okafi."
     },
     "ws_beer_sensory": {
-      "name": "Pivní senzorika"
+      "name": "Pivní senzorika aneb \"proč mám v pivu kávu\"?",
+      "annotation": [
+        "Predstavte si dokonalý svet kde sa snažíme dosiahnuť vysoký stupeň efektivity. Preto budeme piť všetci jeden nápoj - blend kávy a piva. Prečo by sa nám mal páčiť?",
+        "Alebo o základnej pivnej senzorike a či existuje dôvod infúzovania pív výluhom z kávy."
+      ],
+      "bio": [
+        "Miša bola takmer večný študent (Technológia potravín), teraz už úspešne 'Doktorka piva', ktorá je verejne trochu známa ako Sládkyňa zla s bylinnými pivami a ako hodnotiteľka a spoluorganizátorka pivných súťaží. Má 5+ rokov praxe v pivovarníctve v rôznych krajinách ČR, Cyprus, Estónsko...",
+        "Aktuálne sa jej stalo, že menežuje výrobu malého pivovaru a zároveň je sládek. Ak ju stretnete, pravdepodobne budete svedkovia nezámernej stand up comedy/tragedy."
+      ]
     },
     "ws_naked_espresso": {
-      "name": "Naked espresso Kopi z Luwak"
+      "name": "Better Vessel - utajená chuť espressa",
+      "annotation": "Espresso vzniklo z touhy po rychlosti. Od patentu Angela Morionda z roku 1884 přes první komerční stroje Luigiho Bezzery a Desideria Pavoniho po roce 1901 se káva připravovala tlakem páry — a žádnou krému neměla. Ta se objevila až v roce 1948, kdy Achille Gaggia nahradil páru pákovým pístem a tlakem kolem devíti barů. Hustou pěnu, kterou nikdo nečekal, tehdejší marketing rychle prohlásil za důkaz kvality. Od té doby ji baristé i hosté berou jako samozřejmou součást šálku. Better Vessel, nástroj z Filipín od Michaela Harrise a Federica Bolañose, tuhle samozřejmost zpochybňuje. Revoluce, evoluce nebo nesmysl? Ochutnáš, pochopíš :)",
+      "bio": "Příběh Jakuba Fialy a kávy začal v roce 2005, kdy se během obchodních cest za dřevem po Indonésii poprvé dostal na kávovníkové plantáže. Návštěvy plantáží a zpracovatelských provozů ho okouzlily natolik, že v roce 2007 začal sám pražit kávu dováženou od drobných farmářů. Dnes stojí za brněnskou značkou Kopi Bean, kde pečlivě vybrané kávové speciality praží na moderním italském pražicím stroji IMF. K espressu přistupuje stejně jako k pražicím profilům — vždy je co zlepšovat."
     },
     "ws_latteart_poppy": {
-      "name": "Latte art"
+      "name": "Nalij si srdce: Latte art s Terkou",
+      "annotation": "Jak dostat z mléka srdíčko, tulipán nebo něco trochu odvážnějšího? Terka vás provede základy latte artu a ukáže, jak pracovat s mlékem, konvičkou i samotným šálkem. Vyzkoušíte si techniku free pour i etching a zjistíte, že za povedeným obrázkem není magie, ale správná technika, trochu trpělivosti a spousta mléka. A hlavně – nemusíte se bát, že první pokus bude vypadat jako labuť.",
+      "bio": "Terka pracuje jako provozní v brněnské kavárně Poppy Beans, kde je latte art její každodenní vášní. Baví ji jak free pour, tak etching, a když zrovna nekreslí do šálku v práci nebo doma, můžete ji potkat na některé z latte artových soutěží, kde se pravidelně probojovává do finále. Teď své zkušenosti a know-how ráda předá i vám."
     },
     "ws_cupping_qgrader": {
-      "annotation": "Cupping pod vedením Q-Graderky Barbory Fialové."
+      "name": "Cupping pod vedením Q-Graderky"
     },
     "talk_coufalova": {
       "name": "Skrytá věda v šálku: Jak mikroorganismy tvoří chuť kávy",
@@ -490,10 +507,14 @@
       "bio": "Pravý Kávičkár je nadšenec do kávy, amatérsky historik, cestovateľ a spisovateľ, ktorý sa dlhodobo venuje histórii kávy a kávovej kultúry. Vo svojej zbierke historických kávovarov rád prezentuje zabudnuté príbehy spojené s kávou. Na besede predstaví vznik svojej knihy Kávový Baťa a príbeh Huberta Lamplotu, významnej osobnosti brnianskeho sveta kávy. Podelí sa aj o zaujímavosti zo svojho historického bádania a sveta kávy."
     },
     "talk_ajala": {
-      "name": "Ajala"
+      "name": "Horká čokoláda: Where It All Started",
+      "annotation": "Věděli jste, že čokoláda byla po většinu své historie konzumována primárně v tekuté formě? Fascinující evoluce této suroviny zahrnuje mnohé překvapivé a zábavné momenty. V rámci přednášky představíme koncept bean-to-bar jako návrat k tradičním postupům a vysvětlíme, jak tento přístup utváří výsledný chuťový profil. Projdeme si rovněž praktická specifika přípravy – od ideální teploty až po význam provzdušnění pro plný rozvoj chuti. Teorii následně propojíme s praxí během degustace, kde můžete tyto nuance prozkoumat na vlastní chuťové pohárky.",
+      "bio": "Přednáškou a degustací vás provede Emma, která má v brněnské čokoládovně Ajala na starosti vzdělávání, senzorické workshopy a kontrolu kvality. Je jednou z mála odbornic v ČR s certifikací prestižního britského institutu IICCT (Level 1 & 2 Certificate in Chocolate Tasting). S vášní představuje veřejnosti komplexní svět kakaa a s radostí inspiruje k hlubšímu porozumění poctivé a eticky vyráběné čokoládě."
     },
     "talk_chickas": {
-      "name": "Chicas Industry"
+      "name": "Nová kapitola Chicas Industry: výběrová káva z lesů Indonésie",
+      "annotation": "Přednáška nabídne krátký pohled do práce importéra výběrové kávy a představí Indonésii jako nový projekt Chicas Industry. Přestože nás tato země láká už téměř dva roky, teprve se do ní chystáme a vztahy s místními producenty začínáme budovat. Díky spolupráci s vídeňskou univerzitou BOKU jsme však už měli možnost na dálku poznat řadu projektů, které vynikají nejen kvalitou kávy, ale také péčí o životní prostředí, místní komunity a udržitelný rozvoj. Podělíme se o to, co nás na Indonésii baví a které farmáře a projekty bychom rádi představili pražírnám i milovníkům kávy v Česku a okolí.",
+      "bio": "Karolína Nekvindová a Tereza Prejdová jsou zakladatelky společnosti Chicas Industry, která dováží výběrovou zelenou kávu z Kolumbie, Mexika, Indonésie a Indie. Kávě se věnují řadu let a spojuje je zájem o její rozmanitost, původ i příběhy lidí, kteří ji pěstují. Ve své práci propojují farmáře s pražírnami a staví na dlouhodobé spolupráci, transparentnosti a vzájemném respektu."
     },
     "talk_angela_chickas": {
       "name": "Více než proces: jak vzniká výjimečná káva",
@@ -659,7 +680,7 @@
   "programCategory": {
     "brew": "Brew bar",
     "espresso": "Espresso bar",
-    "espresso_milk": "Čestní hosté",
+    "espresso_milk": "Hosté",
     "lecture": "Přednášky",
     "workshop": "Workshopy",
     "cupping": "Cuppingy",
@@ -685,6 +706,7 @@
     "loadingText": "Program festivalu pro Vás ještě pražíme.",
     "content": "Programu se letos urodilo opravdu hodně. Najdete ho na separátní stránce.",
     "filter": "Filtr",
+    "inProgress": "Dopražujeme",
     "talkInLanguage": {
       "en": "Přednáška v angličtině"
     }

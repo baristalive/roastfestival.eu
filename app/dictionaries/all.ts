@@ -74,6 +74,7 @@ export type Presenter = {
     className?: string;
     showSubheading?: boolean;
   };
+  in_progress?: boolean;
   actionIcons?: {
     [key: string]: {
       href?: string;
