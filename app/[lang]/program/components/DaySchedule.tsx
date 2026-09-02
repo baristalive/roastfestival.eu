@@ -226,17 +226,22 @@ const DaySchedule = ({
                             <span className="font-display text-sm font-black uppercase">
                               {s.start} – {s.end}
                             </span>
-                            {presenter.lang && (
-                              <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
-                                {presenter.lang}
-                              </span>
-                            )}
+                            {![
+                              Track.Honor,
+                              Track.Espresso,
+                              Track.Filter,
+                            ].includes(t.track) &&
+                              presenter.lang && (
+                                <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
+                                  {presenter.lang}
+                                </span>
+                              )}
                           </div>
                           <div className="bg-white p-4">
                             {presenter.name ? (
                               <h4
                                 lang={params.lang === "cz" ? "cs" : "en"}
-                                className="font-display text-lg leading-tight font-black break-words hyphens-auto"
+                                className="font-display wrap-break-words text-lg leading-tight font-black hyphens-auto"
                               >
                                 <InlineMarkdown>
                                   {presenter.name}
@@ -264,6 +269,7 @@ const DaySchedule = ({
                         <Modal
                           {...presenter}
                           headerBg={modalBg}
+                          track={t.track}
                           key={`${presenter.name}_${idx}`}
                         >
                           {card}
@@ -458,11 +464,16 @@ const DaySchedule = ({
                               </p>
                             )}
                           </div>
-                          {presenter.lang && (
-                            <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
-                              {presenter.lang}
-                            </span>
-                          )}
+                          {![
+                            Track.Honor,
+                            Track.Espresso,
+                            Track.Filter,
+                          ].includes(t.track) &&
+                            presenter.lang && (
+                              <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
+                                {presenter.lang}
+                              </span>
+                            )}
                         </div>
                       );
 
@@ -478,7 +489,11 @@ const DaySchedule = ({
                           {isInProgress ? (
                             item
                           ) : (
-                            <Modal {...presenter} headerBg={modalBg}>
+                            <Modal
+                              {...presenter}
+                              headerBg={modalBg}
+                              track={t.track}
+                            >
                               {item}
                             </Modal>
                           )}

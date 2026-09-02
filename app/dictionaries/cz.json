@@ -259,7 +259,7 @@
       "annotation": "Ve dvou na sebe navazujících workshopech (Espresso a Latteart) se podíváme na základy přípravy výběrové kávy. Jak správně nastavit mlýnek, proč používáme váhy a jak správně našlehat mléko na latteart."
     },
     "ws_cupping_chicas": {
-      "annotation": "Přijď ochutnat kávu od importérů Chicas Industry. Ochutnávka formou cuppingu pod taktovkou Chicas Industry."
+      "annotation": "Produkční cupping pod vedením farmářky Angely Rojas. Ochutnáte experimentální zpracování a speciální loty, které se normálně ani neimportují do Evropy."
     },
     "ws_cupping_lot": {
       "annotation": "Přijď ochutnat kávu z pražírny LOT. Ochutnávka formou cuppingu pod taktovkou zkušených pražičů kávy z LOT."
@@ -724,7 +724,7 @@
     "filter": "Filtr",
     "inProgress": "Dopražujeme",
     "talkInLanguage": {
-      "en": "Přednáška v angličtině"
+      "en": "Tento program je v angličtině"
     }
   },
   "programHelp": {

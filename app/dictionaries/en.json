@@ -249,7 +249,7 @@
       "annotation": "In two consecutive workshops (Espresso and Latte Art), we will look at the basics of preparing specialty coffee. How to set up the grinder correctly, why we use scales, and how to prepare milk for latte art correctly."
     },
     "ws_cupping_chicas": {
-      "annotation": "Come and taste coffee from the Chicas Industry coffee importers. Cupping is lead by the Chicas Industry staff."
+      "annotation": "Produkční cupping pod vedením farmářky Angely Rojas. Ochutnáte experimentální zpracování a speciální loty, které se normálně ani neimportují do Evropy."
     },
     "ws_cupping_lot": {
       "annotation": "Come and taste coffee from the LOT roastery. Cupping is lead by the LOT roastery staff."
@@ -709,7 +709,7 @@
     "filter": "Filter",
     "inProgress": "Still in oven",
     "talkInLanguage": {
-      "en": "Talk in English"
+      "en": "This session is held in English"
     }
   },
   "programHelp": {

@@ -1,6 +1,7 @@
 import dictionaries, {
   Presenter,
   SupportedLanguages,
+  Track,
 } from "@/app/dictionaries/all";
 import FacebookIcon from "@/app/icons/facebook";
 import InstagramIcon from "@/app/icons/instagram";
@@ -61,10 +62,11 @@ export const Modal = ({
   schedule,
   spotify,
   subheading,
+  track,
   twitter,
   web,
   youtube,
-}: PropsWithChildren<Presenter & { headerBg?: string }>) => {
+}: PropsWithChildren<Presenter & { headerBg?: string; track: Track }>) => {
   const [showModal, setShowModal] = useState(false);
   const params = useParams();
   const lang = dictionaries[params.lang as SupportedLanguages];
@@ -273,11 +275,12 @@ export const Modal = ({
 
               {/* Content section */}
               <div className="bg-white px-8 py-8 md:px-12">
-                {talkLang && (
-                  <div className="border-primary bg-primary/10 mb-6 border-l-4 px-4 py-3 font-bold">
-                    {lang.programTile.talkInLanguage[talkLang]}
-                  </div>
-                )}
+                {![Track.Honor, Track.Espresso, Track.Filter].includes(track) &&
+                  talkLang && (
+                    <div className="border-primary bg-primary/10 mb-6 border-l-4 px-4 py-3 font-bold">
+                      {lang.programTile.talkInLanguage[talkLang]}
+                    </div>
+                  )}
 
                 {annotation && (
                   <div className="mb-6 text-base leading-relaxed md:text-lg">

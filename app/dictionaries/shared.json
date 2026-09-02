@@ -104,6 +104,7 @@
     "hayb": {
       "logo": "hayb.png",
       "country": "pl",
+      "lang": "en",
       "name": "HAYB",
       "primaryLink": "web",
       "web": "https://haybcoffee.pl/",
@@ -390,7 +391,7 @@
     },
     "ws_roasting": {
       "country": "cz",
-      "subheading": "Martin\u00a0Dutkiewic, Alfréd\u00a0Hawle"
+      "subheading": "Martin\u00a0Dutkiewič, Alfréd\u00a0Hawle"
     },
     "ws_esko": {
       "country": "cz",
@@ -436,7 +437,7 @@
       }
     },
     "ws_cupping_chicas": {
-      "name": "Chicas Industry",
+      "name": "Angela Rojas",
       "country": "cz",
       "facebook": "https://www.facebook.com/chicasindustry",
       "instagram": "https://www.instagram.com/chicas_industry/",
@@ -758,6 +759,7 @@
       "name": "Bracia Ziółkowscy",
       "country": "pl",
       "logo": "bracia-ziolkowscy.svg",
+      "lang": "en",
       "primaryLink": "instagram",
       "instagram": "https://www.instagram.com/braciaziolkowscy"
     },
