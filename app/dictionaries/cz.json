@@ -330,7 +330,7 @@
       ]
     },
     "party_jazz_damu": {
-      "annotation": "Brněnská jazzová kapela Jazz Baía zahraje ve složení saxofon (Petr Smékal), kytara (Tomáš Skalský), baskytara (Pavlína Radochová) a bicí (Dan Křivánek) více i méně známé jazzové standardy a brazilské bossa novy."
+      "annotation": "Brněnská kapela Jazz Baía hraje hlavně klasické swingovky, jazzové standardy a brazilské bossa novy. Uslyšíte od nich ale i vlastní verze hitů od Nirvany nebo Michaela Jacksona."
     },
     "party_vazky": {
       "annotation": [
@@ -369,19 +369,23 @@
     },
     "party_slehni_mech": {
       "annotation": [
-        "…písně o věcech, které se vám mohly stát",
+        "...písně o věcech, které se vám mohly stát",
         "Kapela z nezávislé brněnské scény, která v autorské tvorbě čerpá z indie rocku, jazzu, world music, grunge nebo swingu. Zábavné české texty skrývají při bližším pohledu i temnější témata a zanechají v posluchači pocit, že svět je místo plné lásky a nepopsatelných hrůz.",
-        "„Mech nejde slehnout, je to touha dokázat nemožné…“"
+        "Honza Sysel (kytara, zpěv), Libor Třeška (trubka, kytara, zpěv). Terka Volmutová (basa, zpěv), Vašek Hadrava (bicí)",
+        "Úspěchy, ceny:",
+        "2. místo Porta 2025",
+        "Úspěch v call up města Brna pro účast na Vánočních trzích 2025",
+        "Účast na festivalu Slunovrat 2026 – Welcome Kofola Stage, účast mezi 10 vybranými kapelami z celkem 133 přihlášených."
       ]
     },
     "party_topol": {
-      "annotation": "Brněnská formace TOPOL m.b. v čele s Jiřím Topolem Novotným přiváží na klubovou scénu energický hudební zážitek, ve kterém se mísí autorská tvorba s nezaměnitelnou atmosférou. Kapela, která pravidelně oživuje kulturní dění nejen v Brně, láká na podmanivé melodie a silný kontakt s publikem. Na pódiu je navíc často doplňují skvělí hosté, což z každého jejich vystoupení dělá jedinečný a neopakovatelný zážitek."
+      "annotation": "Topol a Holič je spojení brněnských hudebníků, kteří ze své podstaty a přátelství kombinují písničku s elektronickou hudbou."
     },
     "party_fanglou": {
-      "annotation": "Fanglou je brněnská kapela, která propojuje jazzovou hravost, funky groove, popovou melodičnost a rockovou energii. V autorské tvorbě s českými texty vypráví o životních radostech i malých každodenních zázracích. V sestavě bicí, basa, perkuse, klávesy, kytara a zpěv přináší Fangloukoncertní vystoupení plné upřímnosti, energie a muzikantské radosti."
+      "annotation": "Fanglou je brněnská hudební kapela, která míchá jazz, funky groove, pop a rockovou energii. Sama o sobě říká, že se řadí k žánru tzv. Brněnskej pop! Hrají ve složení Bicí - Jiří Wolf, Perkuse - Jiří Tůma, Basa - Pavel Kocián, Kytara - Josef Mucha, Klávesy - Jan Wolf, Zpěv - Jiří Slatina."
     },
     "party_jan_vana": {
-      "annotation": "Písničkář Jan Váňa přináší na scénu křehkou melancholii a intimní zpovědi, které hudební kritici označují za hojivé písně ticha. Táborský rodák a absolvent oboru Tvorba textu a scénáře na Konzervatoři Jaroslava Ježka vědomě navazuje na tradici českých básníků s kytarou. Svoji neprvoplánovou, hlubokou poetiku otiskl do debutového alba A na Jordán dopadla tma (2024), které produkoval vyhledávaný hudebník badfocus. Jeho vystoupení, postavená na podmanivém hlasu a akustické kytaře, slibují intenzivní a emotivní komorní zážitek."
+      "annotation": "Jan Váňa je písničkář a textař původem z jihočeského Tábora. Obvykle vystupuje s elektrickou kytarou a baskytarou, přičemž oba nástroje loopuje přes počítač, v poslední době ale dává přednost samotné akustické kytaře. Vydal dvě doma nahraná EP, několik singlů, v roce 2021 vystupoval v rámci série Wombat Sessions a v květnu 2021 vydal první studiový dvojsingl jménem Tajem, napsaný ve spolupráci s Prokopem Korbem (alias badfocusem). Toho přizval jako producenta i k debutové desce A na Jordán dopadla tma, která vyšla v dubnu 2024. V současné době žije v Praze, kde studuje tvorbu textu a scénáře na Konzervatoři Jaroslava Ježka. To se odráží i na jeho hudbě, kde texty hrají velmi důležitou roli."
     },
     "cafe_cult": {
       "annotation": "Dovozce kávy Cult Café, dovozce doplňků a příslušenství pro kávu."
@@ -545,7 +549,16 @@
       ]
     },
     "talk_gloria": {
-      "name": "Gloria Spirits"
+      "name": "Není káva, jako káva!",
+      "annotation": [
+        "Jak se z celoživotní vášně za barem rodí úspěšná liquorová značka? Tato přednáška vás zavede do zákulisí vzniku a vývoje společnosti Gloria Spirits, která od roku",
+        "Ukážeme si celou cestu od prvotní myšlenky a barmanských zkušeností přes vývoj a produkci prémiových kávových likérů až po budování značky na tuzemském trhu. Do hloubky probereme specifika práce s kávou v likérové produkci, kde objevování nových profilů a zpracování nikdy nekončí.",
+        "Zároveň nahlédneme do světa komunitních akcí a barmanských soutěží, které kolem Glorie vznikly. Představíme si koncept Gloria Challenge a propojení s prestižní soutěží Coffee in Good Spirits, která propojuje precizní svět kávové kultury s moderní mixologií. Přijďte si poslechnout příběh o odvaze, řemeslu, kávě a podnikání v české gastronomii bez růžových brýlí."
+      ],
+      "bio": [
+        "Honza se pohybuje v české i světové gastronomii už 16 let. Za barovým pultem prošel všemi fázemi oboru, což ho přirozeně přivedlo k hlubší vášni pro kávu – oblasti, které se věnuje dlouhodobě a ve které pro něj objevování nových chutí, profilů a zpracování nikdy nekončí.",
+        "Od roku 2023 tuto vášeň zúročil jako spolumajitel a tvůrce v rodící se české značce Gloria Spirits. Stojí za vývojem prémiového kávového likéru Gloria Single Origin i inovativního Ready-to-Serve koktejlu Gloria Negroni. Ve své práci propojuje poctivé barmanské řemeslo, precizní přístup ke kávě a chuť posouvat české destilérské řemeslo dál."
+      ]
     },
     "talk_sloficek": {
       "name": "Kafe a šlofíček",
@@ -556,7 +569,12 @@
       "name": "Prohlídka Káznice"
     },
     "talk_pranachai": {
-      "name": "Prana chai"
+      "name": "Prana Chai - bez prachu a sirupů",
+      "annotation": "Chai latte, které se kvalitou vyrovná výběrové kávě.  Právě to si společnost Prana Chai před 17 lety stanovila za cíl, když začala experimentovat a vařit své ručně připravované „lepivé chai“ v kuchyňce malé kavárny v australském Melbourne.  Podíváme se na to, jak k tomu došlo, z čeho se tento nápoj skládá a jak se připravuje.",
+      "bio": "Matthew je obchodním manažerem společnosti Prana Chai v České republice. Do týmu Prana nastoupil po 14 letech práce v pohostinství."
+    },
+    "cupping_tea": {
+      "name": "Příprava čaje kávovými metodami"
     }
   },
   "promoted": {

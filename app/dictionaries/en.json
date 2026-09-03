@@ -326,19 +326,23 @@
     },
     "party_slehni_mech": {
       "annotation": [
-        "… songs about things that could have happened to you",
-        "A band from the independent Brno scene whose original music draws on indie rock, jazz, world music, grunge, and swing. Upon closer inspection, the entertaining Czech lyrics also conceal darker themes, leaving the listener with the feeling that the world is a place full of love and indescribable horrors.",
-        "\"Moss can’t be crushed; it's the desire to achieve the impossible…\""
+        "...songs about things that might have happened to you",
+        "A band from the independent Brno scene whose original music draws on indie rock, jazz, world music, grunge, and swing. Upon closer inspection, the entertaining Czech lyrics also conceal darker themes and leave the listener with the feeling that the world is a place full of love and indescribable horrors.",
+        "Honza Sysel (guitar, vocals), Libor Třeška (trumpet, guitar, vocals). Terka Volmutová (bass, vocals), Vašek Hadrava (drums)",
+        "Achievements, awards:",
+        "2nd place at Porta 2025",
+        "Selected by the City of Brno to perform at the 2025 Christmas Markets",
+        "Participation in the Slunovrat 2026 festival – Welcome Kofola Stage, among 10 selected bands out of a total of 133 applicants."
       ]
     },
     "party_topol": {
-      "annotation": "The Brno-based band TOPOL m.b., led by Jiří Topol Novotný, brings an energetic musical experience to the club scene, blending original compositions with an unmistakable atmosphere. The band, which regularly enlivens the cultural scene not only in Brno, captivates audiences with its compelling melodies and strong connection with the crowd. They are also often joined on stage by fantastic guests, making each of their performances a unique and unforgettable experience."
+      "annotation": "Topol and Holič is a collaboration between musicians from Brno who, driven by their shared passion and friendship, blend songs with electronic music."
     },
     "party_fanglou": {
-      "annotation": "Fanglou is a band from Brno that blends jazz playfulness, funky grooves, pop melodies, and rock energy. In their original songs with Czech lyrics, they sing about life's joys and the small miracles of everyday life. With a lineup featuring drums, bass, percussion, keyboards, guitar, and vocals, Fanglou delivers live performances full of sincerity, energy, and the joy of making music."
+      "annotation": "Fanglou is a Brno-based band that blends jazz, funky groove, pop, and rock energy. They describe themselves as part of the so-called “Brno pop” genre! The band consists of Jiří Wolf on drums, Jiří Tůma on percussion, Pavel Kocián on bass, Josef Mucha on guitar, Jan Wolf on keyboards, and Jiří Slatina on vocals."
     },
     "party_jan_vana": {
-      "annotation": "Singer-songwriter Jan Váňa brings to the stage a delicate melancholy and intimate confessions that music critics describe as healing songs of silence. A native of Tábor and a graduate of the Lyric and Screenplay Writing program at the Jaroslav Ježek Conservatory, he consciously carries on the tradition of Czech poets with guitars. He has imbued his debut album, \"A na Jordán dopadla tma\" (2024), produced by the sought-after musician badfocus, with his unpretentious, profound poetics. His performances, built around his captivating voice and acoustic guitar, promise an intense and emotional intimate experience."
+      "annotation": "Jan Váňa is a singer-songwriter and lyricist originally from Tábor in South Bohemia. He usually performs with an electric guitar and a bass guitar, looping both instruments through a computer, but lately he has been preferring the acoustic guitar on its own. He has released two self-recorded EPs and several singles; in 2021, he performed as part of the Wombat Sessions series, and in May 2021, he released his first studio double single, titled \"Tajem\", written in collaboration with Prokop Korbe (aka badfocus). He also invited Korb to produce his debut album, \"A na Jordán dopadla tma\", which was released in April 2024. He currently lives in Prague, where he studies songwriting and screenwriting at the Jaroslav Ježek Conservatory. This is reflected in his music, where lyrics play a very important role."
     },
     "bracia": {
       "annotation": "Bracia Ziolkowscy means Ziolkowski Brothers. It's a speciality coffee roastery run by - surprise, surprise - two brothers. The elder is a neat Mr President in a tie. The younger is a slightly dishevelled activist in flannel. Polish Roasting Championship 2nd place in 2025 and 3rd in 2021."
@@ -408,7 +412,7 @@
       ]
     },
     "party_jazz_damu": {
-      "annotation": "Brno jazz band Jazz Baía will play well-known and lesser-known jazz standards and Brazilian bossa novas with saxophone (Petr Smékal), guitar (Tomáš Skalský), bass (Pavlína Radochová), and drums (Dan Křivánek)."
+      "annotation": "The Brno-based band Jazz Baía mainly plays classic swing tunes, jazz standards, and Brazilian bossa nova. But you'll also hear their own takes on hits by Nirvana and Michael Jackson."
     },
     "party_vazky": {
       "annotation": [
@@ -529,7 +533,16 @@
       ]
     },
     "talk_gloria": {
-      "name": "Gloria Spirits"
+      "name": "Not all coffee is the same!",
+      "annotation": [
+        "How does a lifelong passion for bartending give rise to a successful liqueur brand? This talk will take you behind the scenes of the founding and development of Gloria Spirits, which since",
+        "We’ll explore the entire journey – from the initial idea and bartending experience, through the development and production of premium coffee liqueurs, to building the brand on the domestic market. We’ll take an in-depth look at the specifics of working with coffee in liqueur production, where the discovery of new profiles and processing techniques never ends.",
+        "At the same time, we’ll gain an insight into the world of community events and bartending competitions that have sprung up around Gloria. We’ll introduce the Gloria Challenge concept and its links to the prestigious Coffee in Good Spirits competition, which bridges the precise world of coffee culture with modern mixology. Come and hear a story of courage, craftsmanship, coffee and entrepreneurship in the Czech gastronomy scene – without rose-tinted glasses."
+      ],
+      "bio": [
+        "Honza has been involved in the Czech and international gastronomy scene for 16 years. Behind the bar, he has worked his way through every stage of the trade, which naturally led him to develop a deeper passion for coffee – a field he has been dedicated to for a long time and in which the discovery of new flavours, profiles and processing methods is a never-ending journey for him.",
+        "Since 2023, he has channelled this passion as co-owner and creator of the emerging Czech brand Gloria Spirits. He is behind the development of the premium coffee liqueur Gloria Single Origin and the innovative ready-to-serve cocktail Gloria Negroni. In his work, he combines the honest craft of bartending, a meticulous approach to coffee and a desire to take the Czech distilling craft to the next level."
+      ]
     },
     "talk_sloficek": {
       "name": "Coffee and a nap",
@@ -540,7 +553,12 @@
       "name": "Káznice venue tour"
     },
     "talk_pranachai": {
-      "name": "Prana chai"
+      "name": "Prana Chai - No Powders, no syrups",
+      "annotation": "A chai latte that matches the quality of specialty coffee.  This is what Prana Chai set out to do when they started tinkering and brewing their handmade sticky chai in the back of a small coffee shop kitchen in Melbourne, Australia, 17 years ago.  We will explore why it came about, what it’s made of and how to prepare it.",
+      "bio": "Matthew is the sales manager for Prana Chai in Czech Republic.  He joined the Prana team after working 14 years in hospitality."
+    },
+    "cupping_tea": {
+      "name": "Brew tea like a coffee"
     }
   },
   "promoted": {
