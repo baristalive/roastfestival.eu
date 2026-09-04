@@ -1,11 +1,16 @@
 import dictionaries, { Day, SupportedLanguages } from "@/app/dictionaries/all";
 import React from "react";
-import { getRoomCategory } from "./utils";
+import { getRoomCategory, RoomCategory } from "./utils";
 
 export async function generateStaticParams() {
-  return ["stolarna", "kaple", "brew", "espresso", "espresso_milk"].map(
-    (room) => ({ room }),
-  );
+  return [
+    "stolarna",
+    "kaple",
+    "brew",
+    "cupping",
+    "espresso",
+    "espresso_milk",
+  ].map((room) => ({ room }));
 }
 
 export async function generateMetadata({
@@ -14,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{
     lang: SupportedLanguages;
     day: Day;
-    room: "kaple" | "stolarna";
+    room: RoomCategory;
   }>;
 }) {
   const resolvedParams = await params;

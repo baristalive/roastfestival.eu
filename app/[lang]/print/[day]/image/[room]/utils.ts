@@ -1,6 +1,12 @@
 import dictionaries from "@/app/dictionaries/all";
 
-export type RoomCategory = "kaple" | "stolarna";
+export type RoomCategory =
+  | "kaple"
+  | "stolarna"
+  | "brew"
+  | "cupping"
+  | "espresso"
+  | "espresso_milk";
 export const getRoomCategory = (
   room: RoomCategory,
 ): keyof typeof dictionaries.en.programCategory => {

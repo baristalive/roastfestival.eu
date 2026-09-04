@@ -1,0 +1,29 @@
+.print-poster {
+  text-rendering: geometricPrecision;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    background: var(--color-white);
+  }
+
+  .print-controls {
+    display: none !important;
+  }
+
+  .image {
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .print-poster {
+    width: 100vmin;
+    max-width: none;
+    border-width: 0;
+    box-shadow: none;
+  }
+}
