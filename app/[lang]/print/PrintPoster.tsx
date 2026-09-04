@@ -212,17 +212,10 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
                   >
                     {item.start} – {item.end}
                   </span>
-                  {isHonoredGuests ? (
-                    <span className="font-display border-2 border-white px-3 py-1 text-sm font-black tracking-wider uppercase">
-                      {lang.promoted.roasters.honoredTitle}
+                  {showPresenterLanguage && presenter?.lang && (
+                    <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
+                      {presenter.lang}
                     </span>
-                  ) : (
-                    showPresenterLanguage &&
-                    presenter?.lang && (
-                      <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
-                        {presenter.lang}
-                      </span>
-                    )
                   )}
                 </div>
                 <div
