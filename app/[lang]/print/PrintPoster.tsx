@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useCallback, useRef, useState } from "react";
+import { forwardRef } from "react";
 
 import InlineMarkdown from "@/app/components/InlineMarkdown";
 import { BeanGrid } from "@/app/[lang]/components/BeanGrid";
@@ -12,11 +12,9 @@ import dictionaries, {
   Track,
 } from "@/app/dictionaries/all";
 import ExportedImage from "next-image-export-optimizer";
-import { toPng } from "html-to-image";
-import "./print.css";
 import { getRoomCategory, RoomCategory } from "./utils";
 
-const POSTER_BACKGROUNDS = [
+export const POSTER_BACKGROUNDS = [
   {
     className: "bg-secondary",
     id: "salmon",
@@ -37,21 +35,21 @@ const POSTER_BACKGROUNDS = [
   },
 ] as const;
 
-const POSTER_PATTERNS = [
+export const POSTER_PATTERNS = [
   { id: "dots", label: "Dots" },
   { id: "lines", label: "Lines" },
   { id: "beans", label: "Beans" },
 ] as const;
 
-type PosterBackgroundId = (typeof POSTER_BACKGROUNDS)[number]["id"];
-type PosterPatternId = (typeof POSTER_PATTERNS)[number]["id"];
+export type PosterBackgroundId = (typeof POSTER_BACKGROUNDS)[number]["id"];
+export type PosterPatternId = (typeof POSTER_PATTERNS)[number]["id"];
 
-const DEFAULT_BACKGROUND_BY_DAY: Record<Day, PosterBackgroundId> = {
+export const DEFAULT_BACKGROUND_BY_DAY: Record<Day, PosterBackgroundId> = {
   [Day.Saturday]: "salmon",
   [Day.Sunday]: "pink",
 };
 
-const DEFAULT_PATTERN_BY_DAY: Record<Day, PosterPatternId> = {
+export const DEFAULT_PATTERN_BY_DAY: Record<Day, PosterPatternId> = {
   [Day.Saturday]: "dots",
   [Day.Sunday]: "lines",
 };
@@ -74,147 +72,74 @@ const ITEM_HEADER_STYLES: Record<string, { bg: string; text: string }> = {
   workshop: { bg: "bg-accent", text: "text-black" },
 };
 
-type SchedulePropsType = {
-  params: Promise<{ lang: SupportedLanguages; day: Day; room: RoomCategory }>;
+export type PrintPosterProps = {
+  backgroundId: PosterBackgroundId;
+  dayKey: Day;
+  langKey: SupportedLanguages;
+  patternId: PosterPatternId;
+  roomSlug: RoomCategory;
 };
 
-const Schedule = (props: SchedulePropsType) => {
-  const params = use(props.params);
-  const ref = useRef<HTMLDivElement>(null);
-  const room = getRoomCategory(params.room);
-  const lang = dictionaries[params.lang];
-  const day = lang.program.find((programDay) => programDay.$ref === params.day);
-  const [backgroundId, setBackgroundId] = useState<PosterBackgroundId>(
-    DEFAULT_BACKGROUND_BY_DAY[params.day],
-  );
-  const [patternId, setPatternId] = useState<PosterPatternId>(
-    DEFAULT_PATTERN_BY_DAY[params.day],
-  );
-  const background =
-    POSTER_BACKGROUNDS.find(
-      (posterBackground) => posterBackground.id === backgroundId,
-    ) ?? POSTER_BACKGROUNDS[0];
-  const pattern =
-    POSTER_PATTERNS.find((posterPattern) => posterPattern.id === patternId) ??
-    POSTER_PATTERNS[0];
-  const handleButtonClick = useCallback(() => {
-    if (ref.current === null) {
-      return;
+const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
+  ({ backgroundId, dayKey, langKey, patternId, roomSlug }, ref) => {
+    const room = getRoomCategory(roomSlug);
+    const lang = dictionaries[langKey];
+    const day = lang.program.find((programDay) => programDay.$ref === dayKey);
+    const dayDetails = lang.programDays[dayKey];
+    const background =
+      POSTER_BACKGROUNDS.find(
+        (posterBackground) => posterBackground.id === backgroundId,
+      ) ?? POSTER_BACKGROUNDS[0];
+    const pattern =
+      POSTER_PATTERNS.find((posterPattern) => posterPattern.id === patternId) ??
+      POSTER_PATTERNS[0];
+
+    if (!day || !day.schedule.length || !dayDetails) {
+      return null;
     }
 
-    toPng(ref.current, { cacheBust: true, pixelRatio: 2 })
-      .then((dataUrl) => {
-        const link = document.createElement("a");
-        link.download = `${params.day}_${room}.png`;
-        link.href = dataUrl;
-        link.click();
-      })
-      .catch(console.error);
-  }, [params.day, room]);
+    const schedule = day.schedule.filter((item) => item.track === room);
+    const scheduleItems = schedule.flatMap((track) =>
+      track.schedule.flatMap((column) => column),
+    );
 
-  if (!day || !day.schedule.length) {
-    return null;
-  }
+    if (!schedule.length || !scheduleItems.length) {
+      return null;
+    }
 
-  const schedule = day.schedule.filter((item) => item.track === room);
-  const dayDetails = lang.programDays[params.day];
-  const scheduleItems = schedule.flatMap((track) =>
-    track.schedule.flatMap((column) => column),
-  );
-  const scheduleColumns = SINGLE_COLUMN_ROOMS.has(room)
-    ? 1
-    : TWO_COLUMN_ROOMS.has(room)
-      ? 2
-      : scheduleItems.length <= 1
-        ? 1
-        : scheduleItems.length <= 4
-          ? 2
-          : 3;
-  const needsCompactSingleColumnSpacing =
-    (room === "lecture" || room === "workshop") && scheduleItems.length > 5;
-  const needsTopAlignedSingleColumnSpacing =
-    SINGLE_COLUMN_ROOMS.has(room) && scheduleItems.length >= 5;
-  const isHonoredGuests = room === Track.Honor;
+    const scheduleColumns = SINGLE_COLUMN_ROOMS.has(room)
+      ? 1
+      : TWO_COLUMN_ROOMS.has(room)
+        ? 2
+        : scheduleItems.length <= 1
+          ? 1
+          : scheduleItems.length <= 4
+            ? 2
+            : 3;
+    const needsCompactSingleColumnSpacing =
+      (room === "lecture" || room === "workshop") && scheduleItems.length > 5;
+    const needsTopAlignedSingleColumnSpacing =
+      SINGLE_COLUMN_ROOMS.has(room) && scheduleItems.length >= 5;
+    const isHonoredGuests = room === Track.Honor;
 
-  const baseItemHeaderStyle =
-    ITEM_HEADER_STYLES[room] ?? ITEM_HEADER_STYLES.espresso;
-  const itemHeaderStyle =
-    baseItemHeaderStyle.bg === "bg-white"
-      ? {
-          ...baseItemHeaderStyle,
-          bg: background.className.includes("bg-primary")
-            ? "bg-secondary"
-            : "bg-primary",
-        }
-      : baseItemHeaderStyle;
-  const showPresenterLanguage = ![
-    Track.Honor,
-    Track.Espresso,
-    Track.Filter,
-  ].includes(room as Track);
+    const baseItemHeaderStyle =
+      ITEM_HEADER_STYLES[room] ?? ITEM_HEADER_STYLES.espresso;
+    const itemHeaderStyle =
+      baseItemHeaderStyle.bg === "bg-white"
+        ? {
+            ...baseItemHeaderStyle,
+            bg: background.className.includes("bg-primary")
+              ? "bg-secondary"
+              : "bg-primary",
+          }
+        : baseItemHeaderStyle;
+    const showPresenterLanguage = ![
+      Track.Honor,
+      Track.Espresso,
+      Track.Filter,
+    ].includes(room as Track);
 
-  if (!schedule.length || !scheduleItems.length || !dayDetails) {
-    return null;
-  }
-
-  return (
-    <main className="image relative flex min-h-screen flex-col items-center gap-6 overflow-x-auto bg-white p-3 md:p-6">
-      <div className="print-controls z-50 flex max-w-full flex-col gap-4 pb-4">
-        <div className="flex items-center gap-5">
-          <button
-            className="font-display bg-black px-4 py-2 text-sm font-black tracking-wider text-white uppercase transition-transform hover:-translate-y-1"
-            onClick={handleButtonClick}
-            type="button"
-          >
-            {params.lang === "cz" ? "Uložit obrázek" : "Save image"}
-          </button>
-          <a
-            className="font-display text-sm font-black tracking-wider text-black uppercase underline decoration-2 underline-offset-4 transition-transform hover:-translate-y-1"
-            href={`/${params.lang}/print`}
-          >
-            ← {params.lang === "cz" ? "Zpět" : "Back"}
-          </a>
-        </div>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-black uppercase">
-            <span className="opacity-60">Background</span>
-            <select
-              className="min-w-32 cursor-pointer border-b-2 border-black bg-transparent px-0.5 py-1 text-xs font-black tracking-wide uppercase outline-none"
-              id="poster-background"
-              name="poster-background"
-              onChange={(event) =>
-                setBackgroundId(event.target.value as PosterBackgroundId)
-              }
-              value={backgroundId}
-            >
-              {POSTER_BACKGROUNDS.map((posterBackground) => (
-                <option key={posterBackground.id} value={posterBackground.id}>
-                  {posterBackground.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-black uppercase">
-            <span className="opacity-60">Pattern</span>
-            <select
-              className="min-w-32 cursor-pointer border-b-2 border-black bg-transparent px-0.5 py-1 text-xs font-black tracking-wide uppercase outline-none"
-              id="poster-pattern"
-              name="poster-pattern"
-              onChange={(event) =>
-                setPatternId(event.target.value as PosterPatternId)
-              }
-              value={patternId}
-            >
-              {POSTER_PATTERNS.map((posterPattern) => (
-                <option key={posterPattern.id} value={posterPattern.id}>
-                  {posterPattern.label}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-      </div>
-
+    return (
       <div
         ref={ref}
         className={`print-poster relative flex aspect-square w-[68rem] flex-col overflow-hidden border-4 border-black p-[6%] ${background.className} ${background.ink}`}
@@ -287,10 +212,17 @@ const Schedule = (props: SchedulePropsType) => {
                   >
                     {item.start} – {item.end}
                   </span>
-                  {showPresenterLanguage && presenter?.lang && (
-                    <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
-                      {presenter.lang}
+                  {isHonoredGuests ? (
+                    <span className="font-display border-2 border-white px-3 py-1 text-sm font-black tracking-wider uppercase">
+                      {lang.promoted.roasters.honoredTitle}
                     </span>
+                  ) : (
+                    showPresenterLanguage &&
+                    presenter?.lang && (
+                      <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
+                        {presenter.lang}
+                      </span>
+                    )
                   )}
                 </div>
                 <div
@@ -315,7 +247,7 @@ const Schedule = (props: SchedulePropsType) => {
                   {!isHonoredGuests &&
                     (presenter?.name ? (
                       <h4
-                        lang={params.lang === "cz" ? "cs" : "en"}
+                        lang={langKey === "cz" ? "cs" : "en"}
                         className="font-display wrap-break-words text-lg leading-tight font-black hyphens-auto"
                       >
                         <InlineMarkdown>{presenter.name}</InlineMarkdown>
@@ -338,8 +270,10 @@ const Schedule = (props: SchedulePropsType) => {
           })}
         </div>
       </div>
-    </main>
-  );
-};
+    );
+  },
+);
 
-export default Schedule;
+PrintPoster.displayName = "PrintPoster";
+
+export default PrintPoster;

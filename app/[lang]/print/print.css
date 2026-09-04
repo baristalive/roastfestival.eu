@@ -15,6 +15,10 @@
     display: none !important;
   }
 
+  .print-studio-chrome {
+    display: none !important;
+  }
+
   .image {
     min-height: 100vh;
     padding: 0;
