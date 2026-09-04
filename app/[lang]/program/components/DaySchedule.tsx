@@ -26,7 +26,7 @@ const GRID_STOPS =
     .join(" ") +
   " [h1800] 1fr 4px [h1810]";
 
-const TIMELINE_MIN_WIDTH = "100rem";
+const TIMELINE_MIN_WIDTH = "110rem";
 const TIMELINE_COLUMNS = {
   gridTemplateColumns: "var(--program-track-width) minmax(0, 1fr)",
 };
@@ -44,43 +44,43 @@ const TRACK_STYLES: Record<
 > = {
   brew: {
     bg: "bg-white",
-    edge: "border-l-black",
+    edge: "border-black",
     headerBg: "bg-white",
     text: "text-black",
   },
   cupping: {
     bg: "bg-black",
-    edge: "border-l-white",
+    edge: "border-white",
     headerBg: "bg-black",
     text: "text-white",
   },
   espresso: {
     bg: "bg-black",
-    edge: "border-l-white",
+    edge: "border-white",
     headerBg: "bg-black",
     text: "text-white",
   },
   espresso_milk: {
     bg: "bg-accent",
-    edge: "border-l-black",
+    edge: "border-black",
     headerBg: "bg-accent",
     text: "text-black",
   },
   lecture: {
     bg: "bg-white",
-    edge: "border-l-black",
+    edge: "border-black",
     headerBg: "bg-white",
     text: "text-black",
   },
   party: {
     bg: "bg-accent",
-    edge: "border-l-black",
+    edge: "border-black",
     headerBg: "bg-accent",
     text: "text-black",
   },
   workshop: {
     bg: "bg-accent",
-    edge: "border-l-black",
+    edge: "border-black",
     headerBg: "bg-accent",
     text: "text-black",
   },
@@ -421,6 +421,10 @@ const DaySchedule = ({
                         s.$ref as keyof typeof lang.presenters
                       ] as Presenter;
                       const isInProgress = presenter?.in_progress === true;
+                      const hasLanguageMarker =
+                        ![Track.Honor, Track.Espresso, Track.Filter].includes(
+                          t.track,
+                        ) && Boolean(presenter?.lang);
 
                       if (!presenter?.name && !isInProgress) return null;
 
@@ -434,6 +438,13 @@ const DaySchedule = ({
                           className={`schedule-item group relative my-1.5 flex items-start gap-2 border-l-4 ${edge} px-3 py-3 ${bg} ${text} ${isInProgress ? "" : "cursor-pointer transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]"}`}
                           data-in-progress={isInProgress ? "true" : undefined}
                         >
+                          {hasLanguageMarker && (
+                            <span
+                              className={`bg-accent font-display absolute bottom-full -left-1 z-10 border-l-4 ${edge} px-1.5 py-0.5 text-xs font-black text-black uppercase`}
+                            >
+                              {presenter.lang}
+                            </span>
+                          )}
                           {isInProgress && (
                             <InProgressBadge
                               className="-top-4 left-1/2 -translate-x-1/2 text-[0.65rem]"
@@ -464,16 +475,6 @@ const DaySchedule = ({
                               </p>
                             )}
                           </div>
-                          {![
-                            Track.Honor,
-                            Track.Espresso,
-                            Track.Filter,
-                          ].includes(t.track) &&
-                            presenter.lang && (
-                              <span className="bg-primary shrink-0 border-2 border-black px-1.5 py-0.5 text-xs font-black text-white uppercase">
-                                {presenter.lang}
-                              </span>
-                            )}
                         </div>
                       );
 
