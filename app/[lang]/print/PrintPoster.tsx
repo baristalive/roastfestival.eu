@@ -172,7 +172,9 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
         <div
           className={`z-10 flex flex-col items-center ${needsCompactSingleColumnSpacing ? "pt-[4rem]" : "pt-[4.5rem]"} text-center`}
         >
-          <h1 className="font-display mt-7 max-w-full text-[clamp(2.5rem,6vw,5.25rem)] leading-[1.2] font-black tracking-[-0.08em] uppercase">
+          <h1
+            className={`font-display mt-7 max-w-full ${isHonoredGuests ? "mx-10" : "max-w-full"} text-[clamp(2.5rem,6vw,5.25rem)] leading-[1.2] font-black tracking-[-0.08em] uppercase`}
+          >
             {isHonoredGuests
               ? lang.promoted.roasters.honoredTitle
               : lang.programCategory[room]}
