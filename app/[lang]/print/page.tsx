@@ -27,6 +27,7 @@ const PRINT_ROOMS = [
 ] as const;
 
 const PRINT_DAYS = [Day.Saturday, Day.Sunday] as const;
+type ExportFormat = "instagram" | "a3";
 
 type PrintPropsType = {
   params: Promise<{ lang: SupportedLanguages }>;
@@ -45,6 +46,7 @@ const Print = (props: PrintPropsType) => {
   const [patternId, setPatternId] = useState<PosterPatternId>(
     DEFAULT_PATTERN_BY_DAY[Day.Saturday],
   );
+  const [exportFormat, setExportFormat] = useState<ExportFormat>("instagram");
 
   const handleDayChange = useCallback((nextDay: Day) => {
     setSelectedDay(nextDay);
@@ -58,6 +60,11 @@ const Print = (props: PrintPropsType) => {
     }
 
     const room = getRoomCategory(selectedRoomSlug);
+
+    if (exportFormat === "a3") {
+      window.print();
+      return;
+    }
 
     toPng(posterRef.current, {
       cacheBust: true,
@@ -73,7 +80,7 @@ const Print = (props: PrintPropsType) => {
         link.click();
       })
       .catch(console.error);
-  }, [selectedDay, selectedRoomSlug]);
+  }, [exportFormat, selectedDay, selectedRoomSlug]);
 
   return (
     <main className="relative min-h-screen bg-white text-black">
@@ -89,7 +96,7 @@ const Print = (props: PrintPropsType) => {
             Roast! <span className="opacity-50">/ Print studio</span>
           </span>
         </Link>
-        <div className="flex items-center gap-x-6 gap-y-3">
+        <div className="grid grid-cols-3 gap-x-6">
           <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
             <span className="text-white/60">Day</span>
             <select
@@ -104,6 +111,40 @@ const Print = (props: PrintPropsType) => {
                   {lang.programDays[dayKey].name}
                 </option>
               ))}
+            </select>
+          </label>
+
+          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+            <span className="text-white/60">Background</span>
+            <select
+              className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+              id="poster-background"
+              name="poster-background"
+              onChange={(event) =>
+                setBackgroundId(event.target.value as PosterBackgroundId)
+              }
+              value={backgroundId}
+            >
+              {POSTER_BACKGROUNDS.map((posterBackground) => (
+                <option key={posterBackground.id} value={posterBackground.id}>
+                  {posterBackground.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+            <span className="text-white/60">Format</span>
+            <select
+              className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+              id="print-format"
+              name="print-format"
+              onChange={(event) =>
+                setExportFormat(event.target.value as ExportFormat)
+              }
+              value={exportFormat}
+            >
+              <option value="instagram">Instagram PNG</option>
+              <option value="a3">A3 PDF</option>
             </select>
           </label>
 
@@ -131,25 +172,6 @@ const Print = (props: PrintPropsType) => {
           </label>
 
           <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
-            <span className="text-white/60">Background</span>
-            <select
-              className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
-              id="poster-background"
-              name="poster-background"
-              onChange={(event) =>
-                setBackgroundId(event.target.value as PosterBackgroundId)
-              }
-              value={backgroundId}
-            >
-              {POSTER_BACKGROUNDS.map((posterBackground) => (
-                <option key={posterBackground.id} value={posterBackground.id}>
-                  {posterBackground.label}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
             <span className="text-white/60">Pattern</span>
             <select
               className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
@@ -167,15 +189,9 @@ const Print = (props: PrintPropsType) => {
               ))}
             </select>
           </label>
+        </div>
 
-          <button
-            className="font-display bg-accent order-last border-4 border-black px-4 py-2 text-sm font-black tracking-wider text-black uppercase transition-transform hover:-translate-y-1"
-            onClick={handleButtonClick}
-            type="button"
-          >
-            {params.lang === "cz" ? "Uložit" : "Save"}
-          </button>
-
+        <div className="flex items-center gap-x-6 gap-y-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase md:gap-3 md:text-sm">
             <Link
               href={params.lang === "cz" ? "/en/print" : "/cz/print"}
@@ -186,6 +202,13 @@ const Print = (props: PrintPropsType) => {
               {params.lang === "cz" ? "EN" : "CZ"}
             </Link>
           </div>
+          <button
+            className="font-display bg-accent border-accent w-40 border-4 px-4 py-2 text-sm font-black tracking-wider text-black uppercase transition-transform hover:-translate-y-1"
+            onClick={handleButtonClick}
+            type="button"
+          >
+            {params.lang === "cz" ? "Uložit" : "Save"}
+          </button>
         </div>
       </nav>
 
@@ -195,6 +218,7 @@ const Print = (props: PrintPropsType) => {
             ref={posterRef}
             backgroundId={backgroundId}
             dayKey={selectedDay}
+            isA3={exportFormat === "a3"}
             langKey={params.lang}
             patternId={patternId}
             roomSlug={selectedRoomSlug}

@@ -5,10 +5,13 @@
 @media print {
   @page {
     margin: 0;
+    size: A3 portrait;
   }
 
   body {
     background: var(--color-white);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .print-controls {
@@ -21,13 +24,45 @@
 
   .image {
     min-height: 100vh;
+    max-width: none;
+    overflow: visible;
     padding: 0;
   }
 
+  .image > div {
+    padding-bottom: 0;
+  }
+
   .print-poster {
-    width: 100vmin;
+    width: 297mm !important;
+    height: 420mm !important;
     max-width: none;
+    aspect-ratio: auto !important;
     border-width: 0 !important;
     box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-poster[data-export-format="a3"] .print-poster-brand {
+    height: 3.5rem !important;
+    width: 3.5rem !important;
+  }
+
+  .print-poster[data-export-format="a3"] .print-poster-day {
+    font-size: 3.5rem !important;
+  }
+
+  .print-poster[data-export-format="a3"] .print-poster-date {
+    font-size: 2.75rem !important;
+  }
+
+  .print-poster[data-export-format="a3"] .print-poster-title {
+    font-size: 5.25rem !important;
+  }
+
+  .print-poster[data-export-format="a3"] .print-poster-guest-logo {
+    height: 17rem !important;
+    width: 26rem !important;
   }
 }
