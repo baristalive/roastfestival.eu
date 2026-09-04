@@ -27,7 +27,7 @@
   .print-poster {
     width: 100vmin;
     max-width: none;
-    border-width: 0;
+    border-width: 0 !important;
     box-shadow: none;
   }
 }

@@ -59,7 +59,13 @@ const Print = (props: PrintPropsType) => {
 
     const room = getRoomCategory(selectedRoomSlug);
 
-    toPng(posterRef.current, { cacheBust: true, pixelRatio: 2 })
+    toPng(posterRef.current, {
+      cacheBust: true,
+      pixelRatio: 2,
+      style: {
+        border: "none",
+      },
+    })
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.download = `${selectedDay}_${room}.png`;
