@@ -551,7 +551,7 @@
     "talk_gloria": {
       "name": "Není káva, jako káva!",
       "annotation": [
-        "Jak se z celoživotní vášně za barem rodí úspěšná liquorová značka? Tato přednáška vás zavede do zákulisí vzniku a vývoje společnosti Gloria Spirits, která od roku",
+        "Jak se z celoživotní vášně za barem rodí úspěšná liquorová značka? Tato přednáška vás zavede do zákulisí vzniku a vývoje společnosti Gloria Spirits.",
         "Ukážeme si celou cestu od prvotní myšlenky a barmanských zkušeností přes vývoj a produkci prémiových kávových likérů až po budování značky na tuzemském trhu. Do hloubky probereme specifika práce s kávou v likérové produkci, kde objevování nových profilů a zpracování nikdy nekončí.",
         "Zároveň nahlédneme do světa komunitních akcí a barmanských soutěží, které kolem Glorie vznikly. Představíme si koncept Gloria Challenge a propojení s prestižní soutěží Coffee in Good Spirits, která propojuje precizní svět kávové kultury s moderní mixologií. Přijďte si poslechnout příběh o odvaze, řemeslu, kávě a podnikání v české gastronomii bez růžových brýlí."
       ],
@@ -574,7 +574,9 @@
       "bio": "Matthew je obchodním manažerem společnosti Prana Chai v České republice. Do týmu Prana nastoupil po 14 letech práce v pohostinství."
     },
     "cupping_tea": {
-      "name": "Příprava čaje kávovými metodami"
+      "name": "Na mlýnku Pu-erh aneb jak připravit čaj jako kávu",
+      "annotation": "Už jste měli někdy čaj z french pressu? A co třeba z pákového kávovaru, moka konvičky, FrenchPressu nebo AeroPressu… Přijde vám to jako bizár? Ukážeme vám, že všechno své drahé vybavení na přípravu kávy můžete použít i na přípravu čaje a že to funguje vlastně dost dobře. Koneckonců, proč vybírat, jestli čaj, nebo kávu, když můžete mít obojí!",
+      "bio": "Richard začal jako nadšený konzument čaje, ale trochu se to zvrtlo. V současnosti spoluprovozuje brněnský obchůdek s výběrovým čajem Mezi šálky a letos k tomu přidal ještě pořádání mezinárodního festivalu Brno Tea Fest. Dlouhodobě se snaží ukázat, že čaj nemusí být jenom o obřadech a složité přípravě."
     }
   },
   "promoted": {

@@ -104,7 +104,6 @@
     "hayb": {
       "logo": "hayb.png",
       "country": "pl",
-      "lang": "en",
       "name": "HAYB",
       "primaryLink": "web",
       "web": "https://haybcoffee.pl/",
@@ -391,7 +390,11 @@
     },
     "ws_roasting": {
       "country": "cz",
-      "subheading": "Martin\u00a0Dutkiewič, Alfréd\u00a0Hawle"
+      "subheading": "Martin\u00a0Dutkiewič, Alfréd\u00a0Hawle",
+      "logo": "prazeni.jpg",
+      "modalProps": {
+        "className": ""
+      }
     },
     "ws_esko": {
       "country": "cz",
@@ -869,6 +872,7 @@
     "ws_espresso_tonic": {
       "country": "cz",
       "subheading": "Karolína Lužová",
+      "logo": "luzova.png",
       "modalProps": {
         "className": ""
       }
@@ -876,12 +880,14 @@
     "ws_ice_filter": {
       "country": "cz",
       "subheading": "Karolína Lužová",
+      "logo": "luzova.png",
       "modalProps": {
         "className": ""
       }
     },
     "ws_gongfu": {
       "country": "sk",
+      "logo": "oravkin.jpg",
       "subheading": "Martin Oravkin",
       "modalProps": {
         "className": ""
@@ -907,6 +913,7 @@
     "ws_beer_sensory": {
       "country": "cz",
       "subheading": "Michaela Neméthová",
+      "logo": "pivo.jpg",
       "modalProps": {
         "className": ""
       }
@@ -914,6 +921,7 @@
     "ws_naked_espresso": {
       "country": "cz",
       "subheading": "Jakub Fiala",
+      "logo": "better_vessel.jpg",
       "modalProps": {
         "className": ""
       }
@@ -1028,6 +1036,7 @@
     "talk_pranachai": {
       "lang": "en",
       "subheading": "Matthew Hardison",
+      "logo": "pranachai.png",
       "modalProps": {
         "className": ""
       }
@@ -1073,7 +1082,10 @@
       "spotify": "https://open.spotify.com/artist/5bjab4ScS6twTqPejw0P0i"
     },
     "cupping_tea": {
-      "in_progress": true
+      "subheading": "Richard Sabo Holaj",
+      "modalProps": {
+        "className": ""
+      }
     }
   },
   "promoted": {
@@ -1273,8 +1285,8 @@
                 "$ref": "ws_roasting"
               },
               {
-                "start": "14:30",
-                "end": "15:40",
+                "start": "15:30",
+                "end": "16:40",
                 "$ref": "ws_latteart_poppy"
               }
             ]
