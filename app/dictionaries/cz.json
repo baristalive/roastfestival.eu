@@ -497,9 +497,6 @@
       "annotation": "Jak dostat z mléka srdíčko, tulipán nebo něco trochu odvážnějšího? Terka vás provede základy latte artu a ukáže, jak pracovat s mlékem, konvičkou i samotným šálkem. Vyzkoušíte si techniku free pour i etching a zjistíte, že za povedeným obrázkem není magie, ale správná technika, trochu trpělivosti a spousta mléka. A hlavně – nemusíte se bát, že první pokus bude vypadat jako labuť.",
       "bio": "Terka pracuje jako provozní v brněnské kavárně Poppy Beans, kde je latte art její každodenní vášní. Baví ji jak free pour, tak etching, a když zrovna nekreslí do šálku v práci nebo doma, můžete ji potkat na některé z latte artových soutěží, kde se pravidelně probojovává do finále. Teď své zkušenosti a know-how ráda předá i vám."
     },
-    "ws_cupping_qgrader": {
-      "name": "Cupping pod vedením Q-Graderky"
-    },
     "talk_coufalova": {
       "name": "Skrytá věda v šálku: Jak mikroorganismy tvoří chuť kávy",
       "annotation": "Proč některé kávy chutnají po jasmínu a citrusech, jiné po zralých borůvkách a další po tropickém ovoci či rumu? Klíč se skrývá v tom, co se s kávovou třešní děje ještě dávno před pražením. Nahlédněte do světa kávy pohledem potravinářské mikrobiologie. Projdeme si cestu od klasických metod zpracování až po moderní řízené anaerobní fermentace. Jasně a srozumitelně si rozklíčujeme, jak kvasinky a bakterie budují chuťové prekurzory v zrnu, jaký je skutečný rozdíl mezi ko-fermentací s ovocem a umělým infuzováním a jak fascinující roli hraje v celém procesu biochemie.",
@@ -574,9 +571,20 @@
       "bio": "Matthew je obchodním manažerem společnosti Prana Chai v České republice. Do týmu Prana nastoupil po 14 letech práce v pohostinství."
     },
     "cupping_tea": {
-      "name": "Na mlýnku Pu-erh aneb jak připravit čaj jako kávu",
+      "name": "Na mlýnku puer aneb jak připravit čaj jako kávu",
       "annotation": "Už jste měli někdy čaj z french pressu? A co třeba z pákového kávovaru, moka konvičky, FrenchPressu nebo AeroPressu… Přijde vám to jako bizár? Ukážeme vám, že všechno své drahé vybavení na přípravu kávy můžete použít i na přípravu čaje a že to funguje vlastně dost dobře. Koneckonců, proč vybírat, jestli čaj, nebo kávu, když můžete mít obojí!",
       "bio": "Richard začal jako nadšený konzument čaje, ale trochu se to zvrtlo. V současnosti spoluprovozuje brněnský obchůdek s výběrovým čajem Mezi šálky a letos k tomu přidal ještě pořádání mezinárodního festivalu Brno Tea Fest. Dlouhodobě se snaží ukázat, že čaj nemusí být jenom o obřadech a složité přípravě."
+    },
+    "party_bingo": {
+      "annotation": [
+        "It's a Bingo! Slosování o ceny!",
+        "Splněné, podepsané a odevzdané kartičky Binga vstupují do slosování o ceny! Každý festivalový den v 17:30 proběhne na Stage slosování."
+      ]
+    },
+    "ws_irska": {
+      "name": "Irish Coffee? A proč ne Scottish nebo Czechish?!",
+      "annotation": "Už v první polovině 19. století ve Francii dostali nápad do kávy dát kapku něčeho ostřejšího pod krásným názvem \"Gloria\". Moderní recept na irskou kávu si snaží přivlastnit kde kdo. Často přisuzuje Joe Sheridanovi, který pracoval v restauraci a kavárně na letišti Foyenes v západním Irsku. Příběh praví, že za obzvlášť špatného počasí byly zrušeny všechny lety a protože všichni byli promrzlí a unavení z čekání na letišti, tak jim na zpříjemnění večera umíchal drink z kávy, whisky, cukru a smetany. Možná to tak bylo, možná ne, to už asi nezjistíme, ale můžeme se spolu podívat na aspekty klasické irské. Vyzkoušíme si nejzákladnější recept, ale i modernější twisty se složitějšími whiskami nebo espumou a na závěr zkusíme nahradit whisku i jiným alkoholem.",
+      "bio": "Už od gymnazijních let se jako zodpovědný student po ránu zhášel večírkovou únavu kafem. Začínal na klasické rozpustné Nesce, ale netrvalo mu dlouho než objevil výběrovku a naprosto ho uchvátila. Prošel si řadou kaváren a pražíren na pozicích od řadového basisty, headbaristy, provozáka po produkčního pražiče. Nakonec sice skončil jako mistr zvuku v činoherním divadle, ale káva jej nikdy nepustila a po nějaké době v Brně spoluotevřel espressobar I/O Coffee. No a mimo jiné s partou kamarádů založil festival Roast! - to jen tak pro úplnost."
     }
   },
   "promoted": {

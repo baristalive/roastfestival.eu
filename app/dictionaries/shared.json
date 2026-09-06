@@ -934,15 +934,6 @@
         "className": ""
       }
     },
-    "ws_cupping_qgrader": {
-      "name": "Cupping",
-      "country": "cz",
-      "subheading": "Barbora Fialová",
-      "in_progress": true,
-      "modalProps": {
-        "className": ""
-      }
-    },
     "cofinet": {
       "country": "au",
       "name": "Cofinet",
@@ -1083,6 +1074,17 @@
     },
     "cupping_tea": {
       "subheading": "Richard Sabo Holaj",
+      "modalProps": {
+        "className": ""
+      }
+    },
+    "party_bingo": {
+      "name": "Bingo!"
+    },
+    "ws_irska": {
+      "subheading": "Josef Kučera",
+      "country": "cz",
+      "logo": "irska.jpg",
       "modalProps": {
         "className": ""
       }
@@ -1265,7 +1267,7 @@
               {
                 "start": "12:00",
                 "end": "13:00",
-                "$ref": "ws_cupping_qgrader"
+                "$ref": "ws_irska"
               },
               {
                 "start": "13:30",
@@ -1379,6 +1381,11 @@
                 "start": "16:00",
                 "end": "17:00",
                 "$ref": "party_fanglou"
+              },
+              {
+                "start": "17:30",
+                "end": "18:00",
+                "$ref": "party_bingo"
               }
             ]
           ]
@@ -1644,6 +1651,11 @@
                 "start": "16:00",
                 "end": "17:00",
                 "$ref": "party_slehni_mech"
+              },
+              {
+                "start": "17:30",
+                "end": "18:00",
+                "$ref": "party_bingo"
               }
             ]
           ]

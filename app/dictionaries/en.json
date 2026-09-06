@@ -482,9 +482,6 @@
       "annotation": "How do you create a heart, a tulip or something a bit more daring out of milk? Terka will guide you through the basics of latte art and show you how to work with the milk, the jug and the cup itself. You'll try out the free-pour and etching techniques and discover that there's no magic behind a successful design – just the right technique, a bit of patience and plenty of milk. And most importantly – don't worry if your first attempt ends up looking like a swan.",
       "bio": "Terka works as a barista at Poppy Beans café in Brno, where latte art is her daily passion. She enjoys both free-pour and etching, and when she's not creating designs in cups at work or at home, you might spot her at one of the latte art competitions, where she regularly makes it through to the final. Now she's keen to share her experience and know-how with you too."
     },
-    "ws_cupping_qgrader": {
-      "name": "Cupping led by a Q-Grader"
-    },
     "talk_coufalova": {
       "name": "The hidden science in a cup: How microorganisms shape the flavour of coffee",
       "annotation": "Why do some coffees taste of jasmine and citrus, others of ripe blueberries, and still others of tropical fruit or rum? The key lies in what happens to the coffee cherry long before it is roasted. Take a look at the world of coffee through the lens of microbiology. We'll explore the journey from traditional processing methods to modern controlled anaerobic fermentation. We'll explain clearly and accessibly how yeasts and bacteria build flavour precursors in the bean, what the real difference is between co-fermentation with fruit and artificial infusion, and what a fascinating role biochemistry plays in the whole process.",
@@ -560,7 +557,18 @@
     "cupping_tea": {
       "name": "Pu-erh on a grinder, or how to make tea like coffee",
       "annotation": "Have you ever had tea made in a French press? Or how about from a coffee machine, a moka pot, a French press or an AeroPress… Does that sound a bit bizarre to you? We'll show you that you can use all your expensive coffee-making equipment to make tea too, and that it actually works quite well. After all, why choose between tea and coffee when you can have both!",
-      "bio": "Richard started out as a keen tea drinker, but things took a bit of a turn. He currently co-runs ‘Mezi šálky', a specialist tea shop in Brno, and this year he has also taken on the organisation of the international Brno Tea Fest. He has long been striving to show that tea doesn't have to be all about rituals and complicated preparation."
+      "bio": "Richard started out as a keen tea drinker, but things took a bit of a turn. He currently co-runs \"Mezi šálky', a specialist tea shop in Brno, and this year he has also taken on the organisation of the international Brno Tea Fest. He has long been striving to show that tea doesn't have to be all about rituals and complicated preparation."
+    },
+    "party_bingo": {
+      "annotation": [
+        "It's Bingo! Prize Draw!",
+        "Completed, signed and submitted Bingo cards enter the prize draw! Every festival day at 17:30, a prize draw will take place on the Stage."
+      ]
+    },
+    "ws_irska": {
+      "name": "Irish Coffee? Why not Scottish or Czechish?!",
+      "annotation": "In the first half of the 19th century in France, someone came up with the idea of adding a drop of something stronger to coffee, under the lovely name \"Gloria\". All sorts of people try to claim the recipe for Irish coffee as their own. It is often attributed to Joe Sheridan, who worked at a restaurant and café at Foynes Airport in the west of Ireland. The story goes that, during a particularly bad storm, all flights were cancelled and, as everyone was frozen and tired from waiting at the airport, Sheridan mixed them a drink made from coffee, whisky, sugar and cream to brighten up their evening. Perhaps that's how it happened, perhaps not – we'll probably never know – but we can take a look together at the different aspects of this classic Irish drink. We'll try out the most basic recipe, as well as more modern twists featuring more complex whiskies or espuma, finishing by trying to substitute the whisky with other spirits.",
+      "bio": "Ever since high school, as a responsible student, He's been fighting off morning tiredness with coffee. It started out with instant coffee, but it wasn't long before he discovered specialty coffee and fell in love with it. He worked at a number of cafés and roasteries – from a regular barista to head barista and operations manager, eventually becoming a production roaster. He actually ended up as a sound engineer at a drama theatre, but coffee never let me go, and not long ago he co-founded the I/O Coffee espresso bar in Brno. Oh, and among other things, he founded the Roast! festival with a group of friends – just for the record."
     }
   },
   "promoted": {
