@@ -38,12 +38,14 @@ const A4_ROOMS = [
   { category: "espresso", slug: "espresso" },
 ] as const;
 
+const DISPLAY_ROOMS = [{ category: "lecture", slug: "kaple" }] as const;
+
 type InstagramRoomSlug = (typeof PRINT_ROOMS)[number]["slug"];
 type A3RoomSlug = (typeof A3_ROOMS)[number]["slug"];
 type A4RoomSlug = (typeof A4_ROOMS)[number]["slug"];
 
 const PRINT_DAYS = [Day.Saturday, Day.Sunday] as const;
-type ExportFormat = "instagram" | "a3" | "a4";
+type ExportFormat = "instagram" | "a3" | "a4" | "display";
 
 type PrintPropsType = {
   params: Promise<{ lang: SupportedLanguages }>;
@@ -61,6 +63,7 @@ const Print = (props: PrintPropsType) => {
   const [selectedA4RoomSlug, setSelectedA4RoomSlug] =
     useState<A4RoomSlug>("brew");
   const [selectedA4RowIndex, setSelectedA4RowIndex] = useState(0);
+  const [selectedDisplayTalkRef, setSelectedDisplayTalkRef] = useState("");
   const [backgroundId, setBackgroundId] = useState<PosterBackgroundId>(
     DEFAULT_BACKGROUND_BY_DAY[Day.Saturday],
   );
@@ -73,15 +76,29 @@ const Print = (props: PrintPropsType) => {
       ? selectedA3RoomSlug
       : exportFormat === "a4"
         ? selectedA4RoomSlug
-        : selectedInstagramRoomSlug;
+        : exportFormat === "display"
+          ? "kaple"
+          : selectedInstagramRoomSlug;
   const roomOptions =
     exportFormat === "a3"
       ? A3_ROOMS
       : exportFormat === "a4"
         ? A4_ROOMS
-        : PRINT_ROOMS;
+        : exportFormat === "display"
+          ? DISPLAY_ROOMS
+          : PRINT_ROOMS;
   const isTimelinePreview =
     exportFormat === "a3" && selectedA3RoomSlug === "overview";
+  const selectedLectureItems =
+    lang.program
+      .find((programDay) => programDay.$ref === selectedDay)
+      ?.schedule.find((track) => track.track === "lecture")
+      ?.schedule.flat() ?? [];
+  const activeDisplayTalkRef = selectedLectureItems.some(
+    (item) => item.$ref === selectedDisplayTalkRef,
+  )
+    ? selectedDisplayTalkRef
+    : selectedLectureItems[0]?.$ref;
   const selectedA4Rows =
     lang.program
       .find((programDay) => programDay.$ref === selectedDay)
@@ -98,24 +115,35 @@ const Print = (props: PrintPropsType) => {
     setBackgroundId(DEFAULT_BACKGROUND_BY_DAY[nextDay]);
     setPatternId(DEFAULT_PATTERN_BY_DAY[nextDay]);
     setSelectedA4RowIndex(0);
+    setSelectedDisplayTalkRef("");
   }, []);
 
   const handleFormatChange = useCallback((nextFormat: ExportFormat) => {
     setExportFormat(nextFormat);
     setSelectedA4RowIndex(0);
+    if (nextFormat === "display") {
+      setSelectedDisplayTalkRef("");
+    }
   }, []);
 
-  const handleButtonClick = useCallback(() => {
+  const handleButtonClick = () => {
     if (posterRef.current === null) {
       return;
     }
 
-    if (exportFormat !== "instagram") {
+    if (exportFormat !== "instagram" && exportFormat !== "display") {
       window.print();
       return;
     }
 
-    const room = getRoomCategory(selectedInstagramRoomSlug);
+    const room =
+      exportFormat === "display"
+        ? "lecture"
+        : getRoomCategory(selectedInstagramRoomSlug);
+    const filename =
+      exportFormat === "display"
+        ? `${selectedDay}_${room}_${activeDisplayTalkRef ?? "talk"}.png`
+        : `${selectedDay}_${room}.png`;
 
     toPng(posterRef.current, {
       cacheBust: true,
@@ -126,12 +154,12 @@ const Print = (props: PrintPropsType) => {
     })
       .then((dataUrl) => {
         const link = document.createElement("a");
-        link.download = `${selectedDay}_${room}.png`;
+        link.download = filename;
         link.href = dataUrl;
         link.click();
       })
       .catch(console.error);
-  }, [exportFormat, selectedDay, selectedInstagramRoomSlug]);
+  };
 
   return (
     <main className="relative min-h-screen bg-white text-black">
@@ -197,6 +225,7 @@ const Print = (props: PrintPropsType) => {
               <option value="instagram">Instagram PNG</option>
               <option value="a3">A3 PDF</option>
               <option value="a4">A4 PDF</option>
+              <option value="display">Digital (16:9)</option>
             </select>
           </label>
 
@@ -214,6 +243,8 @@ const Print = (props: PrintPropsType) => {
                 } else if (exportFormat === "a4") {
                   setSelectedA4RoomSlug(event.target.value as A4RoomSlug);
                   setSelectedA4RowIndex(0);
+                } else if (exportFormat === "display") {
+                  setSelectedDisplayTalkRef(event.target.value);
                 } else {
                   setSelectedInstagramRoomSlug(
                     event.target.value as InstagramRoomSlug,
@@ -233,6 +264,31 @@ const Print = (props: PrintPropsType) => {
               ))}
             </select>
           </label>
+
+          {exportFormat === "display" && (
+            <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+              <span className="text-white/60">Talk</span>
+              <select
+                className="max-w-60 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+                id="print-talk"
+                name="print-talk"
+                onChange={(event) =>
+                  setSelectedDisplayTalkRef(event.target.value)
+                }
+                value={activeDisplayTalkRef ?? ""}
+              >
+                {selectedLectureItems.map((item) => {
+                  const presenter =
+                    lang.presenters[item.$ref as keyof typeof lang.presenters];
+                  return (
+                    <option key={item.$ref} value={item.$ref}>
+                      {item.start} · {presenter?.subheading ?? item.$ref}
+                    </option>
+                  );
+                })}
+              </select>
+            </label>
+          )}
 
           {exportFormat === "a4" && (
             <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
@@ -297,7 +353,7 @@ const Print = (props: PrintPropsType) => {
       </nav>
 
       <section
-        className={`image relative z-10 mx-auto flex justify-center overflow-x-auto px-6 pt-8 pb-20 md:pt-12 ${isTimelinePreview ? "print-preview-timeline" : "max-w-7xl"}`}
+        className={`image relative z-10 mx-auto flex justify-center overflow-x-auto px-6 pt-8 pb-20 md:pt-12 ${isTimelinePreview ? "print-preview-timeline" : exportFormat === "display" ? "print-preview-display" : "max-w-7xl"}`}
       >
         <div className="pb-4">
           <PrintPoster
@@ -306,10 +362,14 @@ const Print = (props: PrintPropsType) => {
             dayKey={selectedDay}
             isA3={exportFormat === "a3"}
             isA4={exportFormat === "a4"}
+            isDigitalDisplay={exportFormat === "display"}
             langKey={params.lang}
             patternId={patternId}
             roomSlug={selectedRoomSlug}
             rowIndex={exportFormat === "a4" ? activeA4RowIndex : undefined}
+            talkRef={
+              exportFormat === "display" ? activeDisplayTalkRef : undefined
+            }
           />
         </div>
       </section>

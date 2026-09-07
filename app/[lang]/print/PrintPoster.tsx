@@ -12,6 +12,7 @@ import dictionaries, {
   Track,
 } from "@/app/dictionaries/all";
 import ExportedImage from "next-image-export-optimizer";
+import PrintDisplay from "./PrintDisplay";
 import PrintTimeline from "./PrintTimeline";
 import { getRoomCategory, PrintRoomSlug, RoomCategory } from "./utils";
 
@@ -82,10 +83,12 @@ export type PrintPosterProps = {
   dayKey: Day;
   isA3: boolean;
   isA4: boolean;
+  isDigitalDisplay: boolean;
   langKey: SupportedLanguages;
   patternId: PosterPatternId;
   roomSlug: PrintRoomSlug;
   rowIndex?: number;
+  talkRef?: string;
 };
 
 const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
@@ -95,10 +98,12 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
       dayKey,
       isA3,
       isA4,
+      isDigitalDisplay,
       langKey,
       patternId,
       roomSlug,
       rowIndex,
+      talkRef,
     },
     ref,
   ) => {
@@ -123,11 +128,45 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
 
     const schedule = day.schedule.filter((item) => item.track === room);
     const scheduleRows = schedule.flatMap((track) => track.schedule);
+    const allScheduleItems = scheduleRows.flat();
+    const displayItem = isDigitalDisplay
+      ? (allScheduleItems.find((item) => item.$ref === talkRef) ??
+        allScheduleItems[0])
+      : undefined;
     const scheduleItems = isA4
       ? (scheduleRows[rowIndex ?? 0] ?? [])
       : scheduleRows.flat();
 
-    if (!isMergedTimeline && (!schedule.length || !scheduleItems.length)) {
+    if (
+      isDigitalDisplay &&
+      displayItem &&
+      (lang.presenters[displayItem.$ref as keyof typeof lang.presenters] as
+        | Presenter
+        | undefined)
+    ) {
+      return (
+        <PrintDisplay
+          ref={ref}
+          backgroundClassName={background.className}
+          backgroundInk={background.ink}
+          dayDate={dayDetails.date}
+          dayName={dayDetails.name}
+          item={displayItem}
+          langKey={langKey}
+          patternId={pattern.id}
+          presenter={
+            lang.presenters[
+              displayItem.$ref as keyof typeof lang.presenters
+            ] as Presenter
+          }
+        />
+      );
+    }
+
+    if (
+      !isMergedTimeline &&
+      (isDigitalDisplay || !schedule.length || !scheduleItems.length)
+    ) {
       return null;
     }
 

@@ -71,8 +71,17 @@
   justify-content: flex-start;
 }
 
+.print-preview-display {
+  max-width: none !important;
+  justify-content: flex-start;
+}
+
 @media (min-width: 1660px) {
   .print-preview-timeline {
+    justify-content: center;
+  }
+
+  .print-preview-display {
     justify-content: center;
   }
 }
@@ -85,6 +94,11 @@
 @page a4-portrait {
   margin: 0;
   size: A4 portrait;
+}
+
+@page display-landscape {
+  margin: 0;
+  size: 16in 9in;
 }
 
 @media print {
@@ -139,6 +153,12 @@
     page: a4-portrait;
     width: 210mm !important;
     height: 297mm !important;
+  }
+
+  .print-poster[data-export-format="display"] {
+    page: display-landscape;
+    width: 16in !important;
+    height: 9in !important;
   }
 
   .print-poster[data-export-format="a4"] .print-poster-brand {
