@@ -1108,6 +1108,12 @@
       "primaryLink": "web",
       "logo": "sponsor_brita.svg"
     },
+    "sponsor_aqualink": {
+      "name": "Aqualink",
+      "web": "https://aqualink.cz/",
+      "primaryLink": "web",
+      "logo": "sponsor_aqualink.svg"
+    },
     "sponsor_okafi": {
       "name": "okafi",
       "web": "https://www.okafi.cz/",
@@ -1160,6 +1166,7 @@
         "sponsor_kopro",
         "sponsor_ignac",
         "sponsor_okafi",
+        "sponsor_aqualink",
         "sponsor_brita",
         "sponsor_kavaspojuje"
       ]

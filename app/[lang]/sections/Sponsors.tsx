@@ -14,9 +14,12 @@ const sponsorLayout: Record<
   {
     flex: string;
     mobileWidth: string;
-    gridColumn?: string;
   }
 > = {
+  sponsor_aqualink: {
+    flex: "1.35 1 0%",
+    mobileWidth: "w-[92%]",
+  },
   sponsor_brita: {
     flex: "0.85 1 0%",
     mobileWidth: "w-[76%]",
@@ -27,7 +30,6 @@ const sponsorLayout: Record<
   },
   sponsor_kavaspojuje: {
     flex: "1.25 1 0%",
-    gridColumn: "1 / -1",
     mobileWidth: "w-full",
   },
   sponsor_kopro: {
@@ -68,7 +70,6 @@ export const Sponsors = () => {
                 className: "flex min-w-0 items-center justify-center p-2",
                 style: {
                   flex: layout.flex,
-                  gridColumn: layout.gridColumn,
                 },
               }}
               imgProps={{
