@@ -7,6 +7,9 @@ export type RoomCategory =
   | "cupping"
   | "espresso"
   | "espresso_milk";
+
+export type PrintRoomSlug = RoomCategory | "overview";
+
 export const getRoomCategory = (
   room: RoomCategory,
 ): keyof typeof dictionaries.en.programCategory => {

@@ -14,7 +14,7 @@ import PrintPoster, {
   PosterBackgroundId,
   PosterPatternId,
 } from "./PrintPoster";
-import { getRoomCategory, RoomCategory } from "./utils";
+import { getRoomCategory, PrintRoomSlug } from "./utils";
 import "./print.css";
 
 const PRINT_ROOMS = [
@@ -25,6 +25,16 @@ const PRINT_ROOMS = [
   { category: "workshop", slug: "stolarna" },
   { category: "lecture", slug: "kaple" },
 ] as const;
+
+const A3_ROOMS = [
+  { category: "overview", slug: "overview" },
+  { category: "cupping", slug: "cupping" },
+  { category: "workshop", slug: "stolarna" },
+  { category: "lecture", slug: "kaple" },
+] as const;
+
+type InstagramRoomSlug = (typeof PRINT_ROOMS)[number]["slug"];
+type A3RoomSlug = (typeof A3_ROOMS)[number]["slug"];
 
 const PRINT_DAYS = [Day.Saturday, Day.Sunday] as const;
 type ExportFormat = "instagram" | "a3";
@@ -38,8 +48,10 @@ const Print = (props: PrintPropsType) => {
   const lang = dictionaries[params.lang];
   const posterRef = useRef<HTMLDivElement>(null);
   const [selectedDay, setSelectedDay] = useState<Day>(Day.Saturday);
-  const [selectedRoomSlug, setSelectedRoomSlug] =
-    useState<RoomCategory>("espresso_milk");
+  const [selectedInstagramRoomSlug, setSelectedInstagramRoomSlug] =
+    useState<InstagramRoomSlug>("espresso_milk");
+  const [selectedA3RoomSlug, setSelectedA3RoomSlug] =
+    useState<A3RoomSlug>("overview");
   const [backgroundId, setBackgroundId] = useState<PosterBackgroundId>(
     DEFAULT_BACKGROUND_BY_DAY[Day.Saturday],
   );
@@ -47,6 +59,11 @@ const Print = (props: PrintPropsType) => {
     DEFAULT_PATTERN_BY_DAY[Day.Saturday],
   );
   const [exportFormat, setExportFormat] = useState<ExportFormat>("instagram");
+  const selectedRoomSlug: PrintRoomSlug =
+    exportFormat === "a3" ? selectedA3RoomSlug : selectedInstagramRoomSlug;
+  const roomOptions = exportFormat === "a3" ? A3_ROOMS : PRINT_ROOMS;
+  const isTimelinePreview =
+    exportFormat === "a3" && selectedA3RoomSlug === "overview";
 
   const handleDayChange = useCallback((nextDay: Day) => {
     setSelectedDay(nextDay);
@@ -59,12 +76,12 @@ const Print = (props: PrintPropsType) => {
       return;
     }
 
-    const room = getRoomCategory(selectedRoomSlug);
-
     if (exportFormat === "a3") {
       window.print();
       return;
     }
+
+    const room = getRoomCategory(selectedInstagramRoomSlug);
 
     toPng(posterRef.current, {
       cacheBust: true,
@@ -80,7 +97,7 @@ const Print = (props: PrintPropsType) => {
         link.click();
       })
       .catch(console.error);
-  }, [exportFormat, selectedDay, selectedRoomSlug]);
+  }, [exportFormat, selectedDay, selectedInstagramRoomSlug]);
 
   return (
     <main className="relative min-h-screen bg-white text-black">
@@ -149,17 +166,25 @@ const Print = (props: PrintPropsType) => {
           </label>
 
           <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
-            <span className="text-white/60">Track</span>
+            <span className="text-white/60">
+              {exportFormat === "a3" ? "View" : "Track"}
+            </span>
             <select
               className="min-w-44 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
               id="print-track"
               name="print-track"
-              onChange={(event) =>
-                setSelectedRoomSlug(event.target.value as RoomCategory)
-              }
+              onChange={(event) => {
+                if (exportFormat === "a3") {
+                  setSelectedA3RoomSlug(event.target.value as A3RoomSlug);
+                } else {
+                  setSelectedInstagramRoomSlug(
+                    event.target.value as InstagramRoomSlug,
+                  );
+                }
+              }}
               value={selectedRoomSlug}
             >
-              {PRINT_ROOMS.map(({ category, slug }) => (
+              {roomOptions.map(({ category, slug }) => (
                 <option key={slug} value={slug}>
                   {
                     lang.programCategory[
@@ -212,7 +237,9 @@ const Print = (props: PrintPropsType) => {
         </div>
       </nav>
 
-      <section className="image relative z-10 mx-auto flex max-w-7xl justify-center overflow-x-auto px-6 pt-8 pb-20 md:pt-12">
+      <section
+        className={`image relative z-10 mx-auto flex justify-center overflow-x-auto px-6 pt-8 pb-20 md:pt-12 ${isTimelinePreview ? "print-preview-timeline" : "max-w-7xl"}`}
+      >
         <div className="pb-4">
           <PrintPoster
             ref={posterRef}

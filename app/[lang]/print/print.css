@@ -2,6 +2,86 @@
   text-rendering: geometricPrecision;
 }
 
+.print-poster[data-print-layout="timeline"] .schedule-timeline {
+  --program-track-width: 4rem;
+}
+
+.print-poster[data-print-layout="timeline"]
+  .schedule-timeline
+  > .overflow-x-auto {
+  overflow: visible;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-wrapper,
+.print-poster[data-print-layout="timeline"] .schedule-header {
+  min-width: 0 !important;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-wrapper {
+  width: 100% !important;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-track {
+  display: grid;
+}
+
+.print-poster[data-print-layout="timeline"] .print-poster-title {
+  font-size: 10rem !important;
+}
+
+.print-poster[data-print-layout="timeline"] .print-poster-timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.print-poster[data-print-layout="timeline"]
+  .print-poster-timeline
+  .schedule-timeline {
+  width: 95%;
+  margin-inline: auto;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-timeline .sticky {
+  position: static !important;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-track {
+  padding: 0rem !important;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-header {
+  padding: 0.2rem 0.5rem !important;
+  font-size: 0.7rem !important;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-item {
+  margin-top: 0.15rem !important;
+  margin-bottom: 0.15rem !important;
+  cursor: default !important;
+  transition: none !important;
+}
+
+.print-poster[data-print-layout="timeline"] .schedule-item p {
+  font-size: 0.65rem !important;
+}
+
+.print-preview-timeline {
+  max-width: none !important;
+  justify-content: flex-start;
+}
+
+@media (min-width: 1660px) {
+  .print-preview-timeline {
+    justify-content: center;
+  }
+}
+
+@page a3-landscape {
+  margin: 0;
+  size: A3 landscape;
+}
+
 @media print {
   @page {
     margin: 0;
@@ -44,6 +124,12 @@
     print-color-adjust: exact;
   }
 
+  .print-poster[data-print-layout="timeline"] {
+    page: a3-landscape;
+    width: 420mm !important;
+    height: 297mm !important;
+  }
+
   .print-poster[data-export-format="a3"] .print-poster-brand {
     height: 3.5rem !important;
     width: 3.5rem !important;
@@ -57,7 +143,8 @@
     font-size: 2.75rem !important;
   }
 
-  .print-poster[data-export-format="a3"] .print-poster-title {
+  .print-poster[data-export-format="a3"][data-print-layout="poster"]
+    .print-poster-title {
     font-size: 5.25rem !important;
   }
 
