@@ -217,7 +217,7 @@ const DaySchedule = ({
                 {afterparty.start} – {afterparty.end}
               </span>
             </div>
-            <div className="flex flex-col gap-4 bg-white p-4 md:p-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-col gap-4 bg-white p-4 lg:flex-row lg:items-center lg:justify-between">
               <div className="min-w-0">
                 <h4
                   lang={params.lang === "cz" ? "cs" : "en"}
