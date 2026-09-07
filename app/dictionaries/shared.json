@@ -1440,7 +1440,7 @@
           "schedule": [
             [
               {
-                "start": "19:00",
+                "start": "18:00",
                 "end": "22:00",
                 "$ref": "afterparty"
               }
