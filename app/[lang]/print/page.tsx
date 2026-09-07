@@ -33,11 +33,17 @@ const A3_ROOMS = [
   { category: "lecture", slug: "kaple" },
 ] as const;
 
+const A4_ROOMS = [
+  { category: "brew", slug: "brew" },
+  { category: "espresso", slug: "espresso" },
+] as const;
+
 type InstagramRoomSlug = (typeof PRINT_ROOMS)[number]["slug"];
 type A3RoomSlug = (typeof A3_ROOMS)[number]["slug"];
+type A4RoomSlug = (typeof A4_ROOMS)[number]["slug"];
 
 const PRINT_DAYS = [Day.Saturday, Day.Sunday] as const;
-type ExportFormat = "instagram" | "a3";
+type ExportFormat = "instagram" | "a3" | "a4";
 
 type PrintPropsType = {
   params: Promise<{ lang: SupportedLanguages }>;
@@ -52,6 +58,9 @@ const Print = (props: PrintPropsType) => {
     useState<InstagramRoomSlug>("espresso_milk");
   const [selectedA3RoomSlug, setSelectedA3RoomSlug] =
     useState<A3RoomSlug>("overview");
+  const [selectedA4RoomSlug, setSelectedA4RoomSlug] =
+    useState<A4RoomSlug>("brew");
+  const [selectedA4RowIndex, setSelectedA4RowIndex] = useState(0);
   const [backgroundId, setBackgroundId] = useState<PosterBackgroundId>(
     DEFAULT_BACKGROUND_BY_DAY[Day.Saturday],
   );
@@ -60,15 +69,40 @@ const Print = (props: PrintPropsType) => {
   );
   const [exportFormat, setExportFormat] = useState<ExportFormat>("instagram");
   const selectedRoomSlug: PrintRoomSlug =
-    exportFormat === "a3" ? selectedA3RoomSlug : selectedInstagramRoomSlug;
-  const roomOptions = exportFormat === "a3" ? A3_ROOMS : PRINT_ROOMS;
+    exportFormat === "a3"
+      ? selectedA3RoomSlug
+      : exportFormat === "a4"
+        ? selectedA4RoomSlug
+        : selectedInstagramRoomSlug;
+  const roomOptions =
+    exportFormat === "a3"
+      ? A3_ROOMS
+      : exportFormat === "a4"
+        ? A4_ROOMS
+        : PRINT_ROOMS;
   const isTimelinePreview =
     exportFormat === "a3" && selectedA3RoomSlug === "overview";
+  const selectedA4Rows =
+    lang.program
+      .find((programDay) => programDay.$ref === selectedDay)
+      ?.schedule.find(
+        (track) => track.track === getRoomCategory(selectedA4RoomSlug),
+      )?.schedule ?? [];
+  const activeA4RowIndex = Math.min(
+    selectedA4RowIndex,
+    Math.max(selectedA4Rows.length - 1, 0),
+  );
 
   const handleDayChange = useCallback((nextDay: Day) => {
     setSelectedDay(nextDay);
     setBackgroundId(DEFAULT_BACKGROUND_BY_DAY[nextDay]);
     setPatternId(DEFAULT_PATTERN_BY_DAY[nextDay]);
+    setSelectedA4RowIndex(0);
+  }, []);
+
+  const handleFormatChange = useCallback((nextFormat: ExportFormat) => {
+    setExportFormat(nextFormat);
+    setSelectedA4RowIndex(0);
   }, []);
 
   const handleButtonClick = useCallback(() => {
@@ -76,7 +110,7 @@ const Print = (props: PrintPropsType) => {
       return;
     }
 
-    if (exportFormat === "a3") {
+    if (exportFormat !== "instagram") {
       window.print();
       return;
     }
@@ -156,12 +190,13 @@ const Print = (props: PrintPropsType) => {
               id="print-format"
               name="print-format"
               onChange={(event) =>
-                setExportFormat(event.target.value as ExportFormat)
+                handleFormatChange(event.target.value as ExportFormat)
               }
               value={exportFormat}
             >
               <option value="instagram">Instagram PNG</option>
               <option value="a3">A3 PDF</option>
+              <option value="a4">A4 PDF</option>
             </select>
           </label>
 
@@ -176,6 +211,9 @@ const Print = (props: PrintPropsType) => {
               onChange={(event) => {
                 if (exportFormat === "a3") {
                   setSelectedA3RoomSlug(event.target.value as A3RoomSlug);
+                } else if (exportFormat === "a4") {
+                  setSelectedA4RoomSlug(event.target.value as A4RoomSlug);
+                  setSelectedA4RowIndex(0);
                 } else {
                   setSelectedInstagramRoomSlug(
                     event.target.value as InstagramRoomSlug,
@@ -195,6 +233,27 @@ const Print = (props: PrintPropsType) => {
               ))}
             </select>
           </label>
+
+          {exportFormat === "a4" && (
+            <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+              <span className="text-white/60">Row</span>
+              <select
+                className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+                id="print-row"
+                name="print-row"
+                onChange={(event) =>
+                  setSelectedA4RowIndex(Number(event.target.value))
+                }
+                value={activeA4RowIndex}
+              >
+                {selectedA4Rows.map((_, rowIndex) => (
+                  <option key={rowIndex} value={rowIndex}>
+                    Row {rowIndex + 1}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
 
           <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
             <span className="text-white/60">Pattern</span>
@@ -246,9 +305,11 @@ const Print = (props: PrintPropsType) => {
             backgroundId={backgroundId}
             dayKey={selectedDay}
             isA3={exportFormat === "a3"}
+            isA4={exportFormat === "a4"}
             langKey={params.lang}
             patternId={patternId}
             roomSlug={selectedRoomSlug}
+            rowIndex={exportFormat === "a4" ? activeA4RowIndex : undefined}
           />
         </div>
       </section>

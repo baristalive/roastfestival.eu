@@ -81,13 +81,27 @@ export type PrintPosterProps = {
   backgroundId: PosterBackgroundId;
   dayKey: Day;
   isA3: boolean;
+  isA4: boolean;
   langKey: SupportedLanguages;
   patternId: PosterPatternId;
   roomSlug: PrintRoomSlug;
+  rowIndex?: number;
 };
 
 const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
-  ({ backgroundId, dayKey, isA3, langKey, patternId, roomSlug }, ref) => {
+  (
+    {
+      backgroundId,
+      dayKey,
+      isA3,
+      isA4,
+      langKey,
+      patternId,
+      roomSlug,
+      rowIndex,
+    },
+    ref,
+  ) => {
     const isMergedTimeline = isA3 && roomSlug === "overview";
     const room = getRoomCategory(
       roomSlug === "overview" ? "espresso_milk" : (roomSlug as RoomCategory),
@@ -108,29 +122,33 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
     }
 
     const schedule = day.schedule.filter((item) => item.track === room);
-    const scheduleItems = schedule.flatMap((track) =>
-      track.schedule.flatMap((column) => column),
-    );
+    const scheduleRows = schedule.flatMap((track) => track.schedule);
+    const scheduleItems = isA4
+      ? (scheduleRows[rowIndex ?? 0] ?? [])
+      : scheduleRows.flat();
 
     if (!isMergedTimeline && (!schedule.length || !scheduleItems.length)) {
       return null;
     }
 
-    const scheduleColumns = SINGLE_COLUMN_ROOMS.has(room)
+    const scheduleColumns = isA4
       ? 1
-      : TWO_COLUMN_ROOMS.has(room)
-        ? 2
-        : scheduleItems.length <= 1
-          ? 1
-          : scheduleItems.length <= 4
-            ? 2
-            : 3;
+      : SINGLE_COLUMN_ROOMS.has(room)
+        ? 1
+        : TWO_COLUMN_ROOMS.has(room)
+          ? 2
+          : scheduleItems.length <= 1
+            ? 1
+            : scheduleItems.length <= 4
+              ? 2
+              : 3;
     const needsCompactSingleColumnSpacing =
       !isA3 &&
       (room === "lecture" || room === "workshop") &&
       scheduleItems.length > 5;
     const needsTopAlignedSingleColumnSpacing =
       !isA3 && SINGLE_COLUMN_ROOMS.has(room) && scheduleItems.length >= 5;
+    const needsA4ListSpacing = isA4;
     const isHonoredGuests = room === Track.Honor;
 
     const baseItemHeaderStyle =
@@ -154,9 +172,11 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
     return (
       <div
         ref={ref}
-        className={`print-poster relative flex ${isMergedTimeline ? "aspect-[420/297] w-[420mm]" : isA3 ? "aspect-[297/420]" : "aspect-square w-[68rem]"} flex-col overflow-hidden border-4 border-black p-[6%] ${background.className} ${background.ink}`}
-        data-export-format={isA3 ? "a3" : "instagram"}
-        data-print-layout={isMergedTimeline ? "timeline" : "poster"}
+        className={`print-poster relative flex ${isMergedTimeline ? "aspect-[420/297] w-[420mm]" : isA3 ? "aspect-[297/420]" : isA4 ? "aspect-[210/297]" : "aspect-square w-[68rem]"} flex-col overflow-hidden border-4 border-black p-[6%] ${background.className} ${background.ink}`}
+        data-export-format={isA3 ? "a3" : isA4 ? "a4" : "instagram"}
+        data-print-layout={
+          isMergedTimeline ? "timeline" : isA4 ? "list" : "poster"
+        }
       >
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           {pattern.id === "beans" ? (
@@ -186,6 +206,11 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
         <div
           className={`z-10 flex flex-col items-center ${showPresenterAnnotation ? "pt-[4.5rem]" : isMergedTimeline ? "pt-[1.5rem]" : isA3 ? "pt-[10rem]" : needsCompactSingleColumnSpacing ? "pt-[4rem]" : "pt-[4.5rem]"} text-center`}
         >
+          {isA4 && (
+            <span className="font-display print-poster-row-number text-[clamp(7rem,30vw,30rem)] font-black">
+              {(rowIndex ?? 0) + 1}
+            </span>
+          )}
           <h1
             className={`font-display print-poster-title ${isMergedTimeline ? "mt-0" : "mt-7"} max-w-full ${isHonoredGuests ? "mx-10" : "max-w-full"} text-[clamp(2.5rem,6vw,5.25rem)] leading-[1.2] font-black tracking-[-0.08em] uppercase`}
           >
@@ -208,7 +233,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
           </div>
         ) : (
           <div
-            className={`z-10 grid min-h-0 flex-1 px-[2%] ${showPresenterAnnotation ? "content-start gap-[1%] pt-[3%]" : needsCompactSingleColumnSpacing ? "content-start gap-0.5 pt-2" : needsTopAlignedSingleColumnSpacing ? "content-start gap-[2%] pt-[6%]" : "content-center gap-[2%] pt-[6%]"}`}
+            className={`z-10 grid min-h-0 flex-1 px-[2%] ${showPresenterAnnotation ? "content-start gap-[1%] pt-[3%]" : needsA4ListSpacing ? "content-start gap-[10%] pt-[10%]" : needsCompactSingleColumnSpacing ? "content-start gap-0.5 pt-2" : needsTopAlignedSingleColumnSpacing ? "content-start gap-[2%] pt-[6%]" : "content-center gap-[2%] pt-[6%]"}`}
             style={{
               gridTemplateColumns: `repeat(${scheduleColumns}, minmax(0, 1fr))`,
             }}
@@ -243,7 +268,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
                     className={`flex items-center justify-between ${isHonoredGuests ? "bg-black px-6 py-4 text-white" : `px-4 py-2 ${itemHeaderStyle.bg} ${itemHeaderStyle.text}`}`}
                   >
                     <span
-                      className={`font-display font-black uppercase ${isHonoredGuests ? "text-lg tracking-wide" : "text-sm"}`}
+                      className={`font-display font-black uppercase ${isHonoredGuests ? "text-lg tracking-wide" : isA4 ? "text-xl" : "text-sm"}`}
                     >
                       {item.start} – {item.end}
                     </span>
@@ -278,7 +303,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
                       (presenter?.name ? (
                         <h4
                           lang={langKey === "cz" ? "cs" : "en"}
-                          className="font-display wrap-break-words text-lg leading-tight font-black hyphens-auto"
+                          className={`font-display wrap-break-words ${isA4 ? "text-3xl" : "text-lg"} leading-tight font-black hyphens-auto`}
                         >
                           <InlineMarkdown>{presenter.name}</InlineMarkdown>
                         </h4>

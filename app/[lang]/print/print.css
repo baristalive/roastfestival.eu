@@ -82,6 +82,11 @@
   size: A3 landscape;
 }
 
+@page a4-portrait {
+  margin: 0;
+  size: A4 portrait;
+}
+
 @media print {
   @page {
     margin: 0;
@@ -128,6 +133,22 @@
     page: a3-landscape;
     width: 420mm !important;
     height: 297mm !important;
+  }
+
+  .print-poster[data-export-format="a4"] {
+    page: a4-portrait;
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+
+  .print-poster[data-export-format="a4"] .print-poster-brand {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+  }
+
+  .print-poster[data-export-format="a4"] .print-poster-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .print-poster[data-export-format="a3"] .print-poster-brand {
