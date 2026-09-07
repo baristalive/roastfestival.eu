@@ -1089,6 +1089,36 @@
       "modalProps": {
         "className": ""
       }
+    },
+    "sponsor_ignac": {
+      "instagram": "https://www.instagram.com/ig_coffee_roasters/",
+      "name": "Pražírna Ignáč",
+      "primaryLink": "instagram",
+      "logo": "sponsor_ignac.svg"
+    },
+    "sponsor_kopro": {
+      "name": "Kopro",
+      "web": "https://www.kopro.team/",
+      "primaryLink": "web",
+      "logo": "sponsor_kopro.svg"
+    },
+    "sponsor_brita": {
+      "name": "Brita",
+      "web": "https://aqualink.cz/",
+      "primaryLink": "web",
+      "logo": "sponsor_brita.svg"
+    },
+    "sponsor_okafi": {
+      "name": "okafi",
+      "web": "https://www.okafi.cz/",
+      "primaryLink": "web",
+      "logo": "sponsor_okafi.svg"
+    },
+    "sponsor_kavaspojuje": {
+      "name": "Káva spojuje",
+      "web": "https://kavaspojuje.cz/",
+      "primaryLink": "web",
+      "logo": "sponsor_kavaspojuje.svg"
     }
   },
   "promoted": {
@@ -1125,7 +1155,13 @@
       ]
     },
     "sponsors": {
-      "items": ["ig", "mamu", "audioagency", "brita", "kavaspojuje"]
+      "items": [
+        "sponsor_kopro",
+        "sponsor_ignac",
+        "sponsor_okafi",
+        "sponsor_brita",
+        "sponsor_kavaspojuje"
+      ]
     }
   },
   "program": [

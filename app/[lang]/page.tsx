@@ -13,7 +13,7 @@ import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
 import { Soutez } from "./sections/Soutez";
 // import { PromotedRoasters } from "./sections/PromotedRoasters";
-// import { Sponsors } from "./sections/Sponsors";
+import { Sponsors } from "./sections/Sponsors";
 import { StayTuned } from "./sections/StayTuned";
 
 const Home = () => {
@@ -25,6 +25,7 @@ const Home = () => {
         <Marquee />
         <Info />
         <Program />
+        <Sponsors />
         <Soutez />
         {/* <PromotedRoasters /> */}
         {/* <Colab /> */}
@@ -34,7 +35,6 @@ const Home = () => {
         <Map />
         <PreviousYears />
         <Gallery />
-        {/* <Sponsors /> */}
         {/* <Organizers /> */}
         <Footer />
       </main>
