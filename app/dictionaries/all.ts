@@ -24,6 +24,7 @@ export enum Track {
   Cupping = "cupping",
   Lecture = "lecture",
   Party = "party",
+  Afterparty = "afterparty",
   Honor = "espresso_milk",
 }
 
@@ -82,6 +83,11 @@ export type Presenter = {
       text: string;
     };
   };
+  card?: {
+    name: string;
+    annotation: string;
+  };
+  hide?: boolean;
 };
 
 type Presenters = { [key: string]: Presenter };

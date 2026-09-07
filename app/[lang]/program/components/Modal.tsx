@@ -49,6 +49,7 @@ export const Modal = ({
   actionIcons,
   annotation,
   bio,
+  card,
   children,
   country,
   facebook,
@@ -293,6 +294,17 @@ export const Modal = ({
                     ) : (
                       <p>{annotation}</p>
                     )}
+                  </div>
+                )}
+
+                {card && (
+                  <div className="bg-accent punk-border pop-shadow mb-6 rotate-1 p-4 text-black md:p-6">
+                    <h4 className="font-display pb-4 text-2xl leading-tight font-black uppercase">
+                      <InlineMarkdown>{card.name}</InlineMarkdown>
+                    </h4>
+                    <p className="text-base leading-relaxed">
+                      {card.annotation}
+                    </p>
                   </div>
                 )}
 

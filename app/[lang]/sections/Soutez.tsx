@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { dictionaries, SupportedLanguages } from "@/app/dictionaries/all";
 import { Section } from "@/app/components/Section";
+import ArrowIcon from "@/app/icons/arrow";
 
 export const Soutez = () => {
   const params = useParams();
@@ -36,9 +37,12 @@ export const Soutez = () => {
                     href={action.href}
                     target="_blank"
                     rel="external"
-                    className="font-display punk-border bg-accent px-6 py-4 text-lg font-black tracking-tight text-black uppercase transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_var(--color-primary)] md:px-8 md:text-xl"
+                    className="font-display punk-border bg-accent flex items-center gap-2 px-6 py-4 text-lg font-black tracking-tight text-black uppercase transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_var(--color-primary)] md:px-8 md:text-xl"
                   >
-                    {action.text} ↗
+                    <h3>{action.text}</h3>
+                    <div className="aspect-square h-12">
+                      <ArrowIcon />
+                    </div>
                   </a>
                 ) : null,
               )}

@@ -1119,7 +1119,8 @@
       "web": "https://kavaspojuje.cz/",
       "primaryLink": "web",
       "logo": "sponsor_kavaspojuje.svg"
-    }
+    },
+    "afterparty": {}
   },
   "promoted": {
     "others": {
@@ -1423,6 +1424,18 @@
                 "start": "17:30",
                 "end": "18:00",
                 "$ref": "party_bingo"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "afterparty",
+          "schedule": [
+            [
+              {
+                "start": "19:00",
+                "end": "22:00",
+                "$ref": "afterparty"
               }
             ]
           ]

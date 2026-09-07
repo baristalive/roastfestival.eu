@@ -27,6 +27,7 @@ const GRID_STOPS =
   " [h1800] 1fr 4px [h1810]";
 
 const TIMELINE_MIN_WIDTH = "110rem";
+const AFTERPARTY_REF = "afterparty";
 const TIMELINE_COLUMNS = {
   gridTemplateColumns: "var(--program-track-width) minmax(0, 1fr)",
 };
@@ -42,6 +43,12 @@ const TRACK_STYLES: Record<
   string,
   { bg: string; text: string; headerBg: string; edge: string }
 > = {
+  afterparty: {
+    bg: "bg-accent",
+    edge: "border-black",
+    headerBg: "bg-accent",
+    text: "text-black",
+  },
   brew: {
     bg: "bg-white",
     edge: "border-black",
@@ -159,8 +166,6 @@ const DaySchedule = ({
     [],
   );
 
-  if (schedule.length === 0) return null;
-
   const altBg = dayBg.includes("bg-primary") ? "bg-secondary" : "bg-primary";
 
   const style = (track: string) => {
@@ -176,216 +181,313 @@ const DaySchedule = ({
     return base;
   };
 
+  const filteredSchedule = schedule.filter(
+    (t) => t.track !== Track.Afterparty && tracks.includes(t.track),
+  );
+  const afterparty = tracks.includes(Track.Party)
+    ? schedule
+        .find((t) => t.track === Track.Afterparty)
+        ?.schedule.flat()
+        .find((item) => item.$ref === AFTERPARTY_REF)
+    : undefined;
+  const visibleSchedule = filteredSchedule;
+  const afterpartyPresenter = afterparty
+    ? (lang.presenters[
+        afterparty.$ref as keyof typeof lang.presenters
+      ] as Presenter)
+    : undefined;
+
+  if (visibleSchedule.length === 0 && !afterpartyPresenter?.name) return null;
+
+  const afterpartyCard =
+    afterparty && afterpartyPresenter?.name ? (
+      <div
+        className={`mx-auto mt-8 max-w-7xl ${view === "schedule" ? "px-4 md:px-8" : ""}`}
+      >
+        <Modal
+          {...afterpartyPresenter}
+          headerBg={modalBg}
+          track={Track.Afterparty}
+        >
+          <div className="punk-border mx-auto max-w-7xl cursor-pointer overflow-hidden transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]">
+            <div
+              className={`flex items-center justify-between px-4 py-2 ${style(Track.Afterparty).bg} ${style(Track.Afterparty).text}`}
+            >
+              <span className="font-display text-sm font-black uppercase">
+                {afterparty.start} – {afterparty.end}
+              </span>
+            </div>
+            <div className="flex flex-col gap-4 bg-white p-4 md:p-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="min-w-0">
+                <h4
+                  lang={params.lang === "cz" ? "cs" : "en"}
+                  className="font-display wrap-break-words text-lg leading-tight font-black hyphens-auto"
+                >
+                  <InlineMarkdown>{afterpartyPresenter.name}</InlineMarkdown>
+                </h4>
+                {afterpartyPresenter.subheading && (
+                  <p className="mt-1 text-base text-black/60">
+                    {afterpartyPresenter.subheading}
+                  </p>
+                )}
+                {!afterpartyPresenter.hide && (
+                  <>
+                    {afterpartyPresenter.annotation && (
+                      <div className="mt-4 pt-4 text-sm leading-relaxed md:text-base">
+                        {Array.isArray(afterpartyPresenter.annotation) ? (
+                          afterpartyPresenter.annotation.map(
+                            (paragraph, idx) => (
+                              <p
+                                className="mb-4 last:mb-0"
+                                key={`${afterparty.$ref}-annotation-${idx}`}
+                              >
+                                {paragraph}
+                              </p>
+                            ),
+                          )
+                        ) : (
+                          <p>{afterpartyPresenter.annotation}</p>
+                        )}
+                      </div>
+                    )}
+                    {afterpartyPresenter.card && (
+                      <div className="bg-accent punk-border pop-shadow rotate-1 p-4 xl:p-8">
+                        <h4
+                          lang={params.lang === "cz" ? "cs" : "en"}
+                          className="font-display wrap-break-words pb-4 text-2xl leading-tight font-black hyphens-auto uppercase"
+                        >
+                          <InlineMarkdown>
+                            {afterpartyPresenter.card.name}
+                          </InlineMarkdown>
+                        </h4>
+                        <p>{afterpartyPresenter.card.annotation}</p>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+              <button
+                type="button"
+                disabled
+                className="font-display pointer-events-none shrink-0 self-start bg-black/10 px-4 py-3 text-xs font-black tracking-widest text-black/50 uppercase"
+              >
+                {lang.programTile.modalHint}
+              </button>
+            </div>
+          </div>
+        </Modal>
+      </div>
+    ) : null;
+
   if (view === "list") {
     return (
       <div className={`mx-auto max-w-7xl ${className}`}>
-        {schedule
-          .filter((t) => tracks.includes(t.track))
-          .map((t) => {
-            const { bg, headerBg, text } = style(t.track);
-            const categoryName =
-              lang.programCategory[
-                t.track as keyof typeof lang.programCategory
-              ];
-            return (
-              <div key={t.track} className="mb-8">
-                <div
-                  className={`mb-3 flex items-center gap-2 ${headerBg} ${text} punk-border px-4 py-2`}
-                >
-                  <StationIcon station={t.track} />
-                  <h3 className="font-display text-sm font-black uppercase md:text-base">
-                    {categoryName}
-                  </h3>
-                </div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {t.schedule
-                    .flat()
-                    .sort((a, b) => (a.start < b.start ? -1 : 1))
-                    .map((s, idx) => {
-                      const presenter = lang.presenters[
-                        s.$ref as keyof typeof lang.presenters
-                      ] as Presenter;
-                      const isInProgress = presenter?.in_progress === true;
+        {visibleSchedule.map((t) => {
+          const { bg, headerBg, text } = style(t.track);
+          const categoryName =
+            lang.programCategory[t.track as keyof typeof lang.programCategory];
+          return (
+            <div key={t.track} className="mb-8">
+              <div
+                className={`mb-3 flex items-center gap-2 ${headerBg} ${text} punk-border px-4 py-2`}
+              >
+                <StationIcon station={t.track} />
+                <h3 className="font-display text-sm font-black uppercase md:text-base">
+                  {categoryName}
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {t.schedule
+                  .flat()
+                  .sort((a, b) => (a.start < b.start ? -1 : 1))
+                  .map((s, idx) => {
+                    const presenter = lang.presenters[
+                      s.$ref as keyof typeof lang.presenters
+                    ] as Presenter;
+                    const isInProgress = presenter?.in_progress === true;
 
-                      if (!presenter?.name && !isInProgress) return null;
+                    if (!presenter?.name && !isInProgress) return null;
 
-                      const card = (
+                    const card = (
+                      <div
+                        className={`punk-border relative overflow-hidden ${isInProgress ? "" : "cursor-pointer transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]"}`}
+                        data-in-progress={isInProgress ? "true" : undefined}
+                      >
+                        {isInProgress && (
+                          <InProgressBadge
+                            className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            label={lang.programTile.inProgress}
+                          />
+                        )}
                         <div
-                          className={`punk-border relative overflow-hidden ${isInProgress ? "" : "cursor-pointer transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--color-black)]"}`}
-                          data-in-progress={isInProgress ? "true" : undefined}
+                          className={`flex items-center justify-between px-4 py-2 ${bg} ${text}`}
                         >
-                          {isInProgress && (
-                            <InProgressBadge
-                              className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                              label={lang.programTile.inProgress}
-                            />
-                          )}
-                          <div
-                            className={`flex items-center justify-between px-4 py-2 ${bg} ${text}`}
-                          >
-                            <span className="font-display text-sm font-black uppercase">
-                              {s.start} – {s.end}
-                            </span>
-                            {![
-                              Track.Honor,
-                              Track.Espresso,
-                              Track.Filter,
-                            ].includes(t.track) &&
-                              presenter.lang && (
-                                <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
-                                  {presenter.lang}
-                                </span>
-                              )}
-                          </div>
-                          <div className="bg-white p-4">
-                            {presenter.name ? (
-                              <h4
-                                lang={params.lang === "cz" ? "cs" : "en"}
-                                className="font-display wrap-break-words text-lg leading-tight font-black hyphens-auto"
-                              >
-                                <InlineMarkdown>
-                                  {presenter.name}
-                                </InlineMarkdown>
-                              </h4>
-                            ) : (
-                              <span className="font-display text-sm font-black tracking-widest text-black uppercase">
-                                {lang.programTile.inProgress}
+                          <span className="font-display text-sm font-black uppercase">
+                            {s.start} – {s.end}
+                          </span>
+                          {![
+                            Track.Honor,
+                            Track.Espresso,
+                            Track.Filter,
+                          ].includes(t.track) &&
+                            presenter.lang && (
+                              <span className="bg-white px-2 py-0.5 text-xs font-black text-black uppercase">
+                                {presenter.lang}
                               </span>
                             )}
-                            {presenter.subheading && (
-                              <p className="mt-1 text-base text-black/60">
-                                {presenter.subheading}
-                              </p>
-                            )}
-                          </div>
                         </div>
-                      );
+                        <div className="bg-white p-4">
+                          {presenter.name ? (
+                            <h4
+                              lang={params.lang === "cz" ? "cs" : "en"}
+                              className="font-display wrap-break-words text-lg leading-tight font-black hyphens-auto"
+                            >
+                              <InlineMarkdown>{presenter.name}</InlineMarkdown>
+                            </h4>
+                          ) : (
+                            <span className="font-display text-sm font-black tracking-widest text-black uppercase">
+                              {lang.programTile.inProgress}
+                            </span>
+                          )}
+                          {presenter.subheading && (
+                            <p className="mt-1 text-base text-black/60">
+                              {presenter.subheading}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
 
-                      return isInProgress ? (
-                        <div key={`${s.$ref}_${s.start}_${s.end}_${idx}`}>
-                          {card}
-                        </div>
-                      ) : (
-                        <Modal
-                          {...presenter}
-                          headerBg={modalBg}
-                          track={t.track}
-                          key={`${presenter.name}_${idx}`}
-                        >
-                          {card}
-                        </Modal>
-                      );
-                    })}
-                </div>
+                    return isInProgress ? (
+                      <div key={`${s.$ref}_${s.start}_${s.end}_${idx}`}>
+                        {card}
+                      </div>
+                    ) : (
+                      <Modal
+                        {...presenter}
+                        headerBg={modalBg}
+                        track={t.track}
+                        key={`${presenter.name}_${idx}`}
+                      >
+                        {card}
+                      </Modal>
+                    );
+                  })}
               </div>
-            );
-          })}
+            </div>
+          );
+        })}
+        {afterpartyCard}
       </div>
     );
   }
 
+  if (visibleSchedule.length === 0) return afterpartyCard;
+
   return (
-    <div className="schedule-timeline relative">
-      {/* Sticky hour labels stay outside the horizontal scroller so they can
+    <>
+      <div className="schedule-timeline relative">
+        {/* Sticky hour labels stay outside the horizontal scroller so they can
           stick to the page while the schedule itself scrolls sideways. */}
-      <div
-        className={`sticky z-20 grid overflow-hidden ${dayBg}`}
-        style={{
-          ...TIMELINE_COLUMNS,
-          top: "var(--program-toolbar-height, 0px)",
-        }}
-      >
-        <div className="border-r-4 border-black/20" />
-        <div className="min-w-0 overflow-hidden">
-          <div
-            ref={headerTimelineRef}
-            className="schedule-header font-display relative grid px-4 py-2 text-center text-sm font-black tracking-widest text-black/50 uppercase will-change-transform"
-            style={{
-              gridTemplateColumns: GRID_STOPS,
-              minWidth: `calc(${TIMELINE_MIN_WIDTH} - var(--program-track-width))`,
-            }}
-          >
-            {HOURS.map((h) => (
-              <div
-                style={{ gridColumnEnd: h.end, gridColumnStart: h.start }}
-                key={h.title}
-              >
-                {h.title}
-              </div>
-            ))}
-            {tracker && (
-              <div
-                className="font-display pointer-events-none absolute top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-black px-2 py-1 text-sm font-black tracking-widest text-white"
-                style={{
-                  left: `calc(${tracker.x}px - var(--program-track-width))`,
-                }}
-              >
-                {tracker.time}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <div className="overflow-x-auto" onScroll={handleTimelineScroll}>
         <div
-          ref={wrapperRef}
-          className={`schedule-wrapper relative flex w-full flex-col ${dayBg} ${className}`}
-          style={{ minWidth: TIMELINE_MIN_WIDTH }}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={() => setTracker(null)}
+          className={`sticky z-20 grid overflow-hidden ${dayBg}`}
+          style={{
+            ...TIMELINE_COLUMNS,
+            top: "var(--program-toolbar-height, 0px)",
+          }}
         >
-          {/* Hidden calibration grid — same px-4 as header/gridlines */}
-          <div
-            className="pointer-events-none invisible absolute inset-0 grid"
-            style={TIMELINE_COLUMNS}
-          >
-            <div />
+          <div className="border-r-4 border-black/20" />
+          <div className="min-w-0 overflow-hidden">
             <div
-              className="grid px-4"
-              style={{ gridTemplateColumns: GRID_STOPS }}
-            >
-              <div
-                ref={gridRef}
-                style={{ gridColumnEnd: "h1800", gridColumnStart: "h1000" }}
-              />
-            </div>
-          </div>
-
-          {/* Time tracker line — behind items */}
-          {tracker && (
-            <div
-              className="pointer-events-none absolute top-0 bottom-0 z-0"
-              style={{ left: tracker.x }}
-            >
-              <div className="absolute top-0 bottom-0 left-1/2 w-0.5 -translate-x-1/2 bg-black/50" />
-            </div>
-          )}
-
-          {/* Hour grid lines */}
-          <div
-            className="pointer-events-none absolute inset-0 z-0 grid"
-            style={TIMELINE_COLUMNS}
-          >
-            <div />
-            <div
-              className="schedule-header grid px-4"
-              style={{ gridTemplateColumns: GRID_STOPS }}
+              ref={headerTimelineRef}
+              className="schedule-header font-display relative grid px-4 py-2 text-center text-sm font-black tracking-widest text-black/50 uppercase will-change-transform"
+              style={{
+                gridTemplateColumns: GRID_STOPS,
+                minWidth: `calc(${TIMELINE_MIN_WIDTH} - var(--program-track-width))`,
+              }}
             >
               {HOURS.map((h) => (
                 <div
-                  className="schedule-gridline"
-                  style={{ gridColumnEnd: h.center, gridColumnStart: h.start }}
+                  style={{ gridColumnEnd: h.end, gridColumnStart: h.start }}
                   key={h.title}
-                />
+                >
+                  {h.title}
+                </div>
               ))}
+              {tracker && (
+                <div
+                  className="font-display pointer-events-none absolute top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-black px-2 py-1 text-sm font-black tracking-widest text-white"
+                  style={{
+                    left: `calc(${tracker.x}px - var(--program-track-width))`,
+                  }}
+                >
+                  {tracker.time}
+                </div>
+              )}
             </div>
           </div>
+        </div>
 
-          {/* Tracks */}
-          {schedule
-            .filter((t) => tracks.includes(t.track))
-            .map((t) => {
+        <div className="overflow-x-auto" onScroll={handleTimelineScroll}>
+          <div
+            ref={wrapperRef}
+            className={`schedule-wrapper relative flex w-full flex-col ${dayBg} ${className}`}
+            style={{ minWidth: TIMELINE_MIN_WIDTH }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={() => setTracker(null)}
+          >
+            {/* Hidden calibration grid — same px-4 as header/gridlines */}
+            <div
+              className="pointer-events-none invisible absolute inset-0 grid"
+              style={TIMELINE_COLUMNS}
+            >
+              <div />
+              <div
+                className="grid px-4"
+                style={{ gridTemplateColumns: GRID_STOPS }}
+              >
+                <div
+                  ref={gridRef}
+                  style={{ gridColumnEnd: "h1800", gridColumnStart: "h1000" }}
+                />
+              </div>
+            </div>
+
+            {/* Time tracker line — behind items */}
+            {tracker && (
+              <div
+                className="pointer-events-none absolute top-0 bottom-0 z-0"
+                style={{ left: tracker.x }}
+              >
+                <div className="absolute top-0 bottom-0 left-1/2 w-0.5 -translate-x-1/2 bg-black/50" />
+              </div>
+            )}
+
+            {/* Hour grid lines */}
+            <div
+              className="pointer-events-none absolute inset-0 z-0 grid"
+              style={TIMELINE_COLUMNS}
+            >
+              <div />
+              <div
+                className="schedule-header grid px-4"
+                style={{ gridTemplateColumns: GRID_STOPS }}
+              >
+                {HOURS.map((h) => (
+                  <div
+                    className="schedule-gridline"
+                    style={{
+                      gridColumnEnd: h.center,
+                      gridColumnStart: h.start,
+                    }}
+                    key={h.title}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Tracks */}
+            {visibleSchedule.map((t) => {
               const { bg, edge, headerBg, text } = style(t.track);
               const categoryName =
                 lang.programCategory[
@@ -505,9 +607,11 @@ const DaySchedule = ({
                 </div>
               );
             })}
+          </div>
         </div>
       </div>
-    </div>
+      {afterpartyCard}
+    </>
   );
 };
 

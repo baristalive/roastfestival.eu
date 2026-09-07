@@ -727,6 +727,7 @@
     "workshop": "Workshops",
     "cupping": "Cuppings",
     "party": "Extras",
+    "afterparty": "Afterparty",
     "overview": "Overview",
     "robotarna": "Roasters"
   },
@@ -736,6 +737,7 @@
     "content": "The schedule is really extensive this year. You can find it on a separate page.",
     "filter": "Filter",
     "inProgress": "Still in oven",
+    "modalHint": "Click to find out more",
     "talkInLanguage": {
       "en": "This session is held in English"
     }

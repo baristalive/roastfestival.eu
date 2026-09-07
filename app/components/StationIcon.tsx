@@ -20,6 +20,7 @@ export const StationIcon = ({ station }: { station?: string }) => {
     case "workshop":
       return <WorkshopIcon />;
     case "party":
+    case "afterparty":
       return <PlusIcon />;
     default:
       return null;

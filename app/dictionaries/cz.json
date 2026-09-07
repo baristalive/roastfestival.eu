@@ -585,6 +585,16 @@
       "name": "Irish Coffee? A proč ne Scottish nebo Czechish?!",
       "annotation": "Už v první polovině 19. století ve Francii dostali nápad do kávy dát kapku něčeho ostřejšího pod krásným názvem \"Gloria\". Moderní recept na irskou kávu si snaží přivlastnit kde kdo. Často přisuzuje Joe Sheridanovi, který pracoval v restauraci a kavárně na letišti Foyenes v západním Irsku. Příběh praví, že za obzvlášť špatného počasí byly zrušeny všechny lety a protože všichni byli promrzlí a unavení z čekání na letišti, tak jim na zpříjemnění večera umíchal drink z kávy, whisky, cukru a smetany. Možná to tak bylo, možná ne, to už asi nezjistíme, ale můžeme se spolu podívat na aspekty klasické irské. Vyzkoušíme si nejzákladnější recept, ale i modernější twisty se složitějšími whiskami nebo espumou a na závěr zkusíme nahradit whisku i jiným alkoholem.",
       "bio": "Už od gymnazijních let se jako zodpovědný student po ránu zhášel večírkovou únavu kafem. Začínal na klasické rozpustné Nesce, ale netrvalo mu dlouho než objevil výběrovku a naprosto ho uchvátila. Prošel si řadou kaváren a pražíren na pozicích od řadového basisty, headbaristy, provozáka po produkčního pražiče. Nakonec sice skončil jako mistr zvuku v činoherním divadle, ale káva jej nikdy nepustila a po nějaké době v Brně spoluotevřel espressobar I/O Coffee. No a mimo jiné s partou kamarádů založil festival Roast! - to jen tak pro úplnost."
+    },
+    "afterparty": {
+      "name": "Afterparty",
+      "subheading": "Pub kvíz & videomapping",
+      "hide": true,
+      "annotation": "Kofeinu, workshopů i přednášek už bylo pro dnešek dost a co teď? No přece Afterpárty! Co takhle dát si ještě jeden, dva kousky nebo vínečko a užít si i ne tolik kávový program. K závěru dne pro vás máme speciální překvapení. Z pera mladých grafiků Šárky Portešové a Mato Bertka vznikl, speciálně pro tento ročník, videomapping na zeď káznice. Tuhle vizuální pecku si přece nemůžete nechat ujít, tak s námi vydržte ještě pár minutek v areálu a po západu slunce a pubqizu to odstartujeme.",
+      "card": {
+        "name": "Pub kvíz",
+        "annotation": "Myslíš si, že máš kávový svět v malíku? Připravili jsme pro tebe kávový hospodský kvíz! Čekají tě otázky z historie, pěstování, alternativních příprav, ale i nečekané kávové bizarnosti. Utvoř s kamarády tým (nebo se k někomu přidej přímo na místě), vezměte si do ruky pivo či koktejl a ukažte všem, kdo je tady největší kávový geek. Účast je v ceně vstupného a tým může mít maximálně 6 členů."
+      }
     }
   },
   "promoted": {
@@ -729,6 +739,7 @@
     "workshop": "Workshopy",
     "cupping": "Cuppingy",
     "party": "Stage",
+    "afterparty": "Afterparty",
     "overview": "Přehled",
     "robotarna": "Pražírny"
   },
@@ -751,6 +762,7 @@
     "content": "Programu se letos urodilo opravdu hodně. Najdete ho na separátní stránce.",
     "filter": "Filtr",
     "inProgress": "Dopražujeme",
+    "modalHint": "Klikni a zjisti víc",
     "talkInLanguage": {
       "en": "Tento program je v angličtině"
     }
