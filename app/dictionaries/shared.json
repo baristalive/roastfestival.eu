@@ -939,8 +939,9 @@
       "name": "Cofinet",
       "lang": "en",
       "logo": "cofinet.svg",
-      "primaryLink": "web",
-      "web": "https://www.cofinet.com.au/"
+      "primaryLink": "instagram",
+      "web": "https://www.cofinet.com.au/",
+      "instagram": "https://www.instagram.com/cofi_net/"
     },
     "talk_arana": {
       "country": "es",
