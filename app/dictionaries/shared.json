@@ -132,12 +132,12 @@
     "ig": {
       "instagram": "https://www.instagram.com/ig_coffee_roasters/",
       "country": "cz",
-      "logo": "ig.png",
-      "name": "IG Coffee Roasters",
+      "logo": "ignac.png",
+      "name": "Pražírna Ignác",
       "primaryLink": "instagram",
       "web": "https://www.prazirnaignac.cz/",
       "modalProps": {
-        "className": "p-8"
+        "className": ""
       }
     },
     "kaple": {
