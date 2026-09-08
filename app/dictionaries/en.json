@@ -562,7 +562,10 @@
     "ws_irska": {
       "name": "Irish Coffee? Why not Scottish or Czechish?!",
       "annotation": "In the first half of the 19th century in France, someone came up with the idea of adding a drop of something stronger to coffee, under the lovely name \"Gloria\". All sorts of people try to claim the recipe for Irish coffee as their own. It is often attributed to Joe Sheridan, who worked at a restaurant and café at Foynes Airport in the west of Ireland. The story goes that, during a particularly bad storm, all flights were cancelled and, as everyone was frozen and tired from waiting at the airport, Sheridan mixed them a drink made from coffee, whisky, sugar and cream to brighten up their evening. Perhaps that's how it happened, perhaps not – we'll probably never know – but we can take a look together at the different aspects of this classic Irish drink. We'll try out the most basic recipe, as well as more modern twists featuring more complex whiskies or espuma, finishing by trying to substitute the whisky with other spirits.",
-      "bio": "Ever since high school, as a responsible student, He's been fighting off morning tiredness with coffee. It started out with instant coffee, but it wasn't long before he discovered specialty coffee and fell in love with it. He worked at a number of cafés and roasteries – from a regular barista to head barista and operations manager, eventually becoming a production roaster. He actually ended up as a sound engineer at a drama theatre, but coffee never let me go, and not long ago he co-founded the I/O Coffee espresso bar in Brno. Oh, and among other things, he founded the Roast! festival with a group of friends – just for the record."
+      "bio": [
+        "Hi, it's Eliška here!",
+        "I'm a lead bartender from Karlovy Vary; I've been working behind the bar for over 10 years, but I'm also happy to get behind the coffee machine. My mixology skills took me all the way to the final of the Bartender of the Year competition. I'm never one to turn down a good batch."
+      ]
     },
     "afterparty": {
       "name": "Afterparty",
@@ -573,6 +576,38 @@
         "name": "Pub quiz",
         "annotation": "Think you know everything there is to know about the world of coffee? We've put together a coffee trivia quiz just for you! You'll face questions on history, cultivation, alternative brewing methods, and even some unexpected coffee oddities. Form a team with your friends (or join one right there), grab a beer or a cocktail, and show everyone who's the biggest coffee geek here. Participation is included in the admission price, and teams can have up to 6 members."
       }
+    },
+    "uprazeno": {
+      "annotation": [
+        "We are Upraženo. A group of people with hearts from the Beskydy Mountains who love coffee. A lot.",
+        "In 2019, we decided that just drinking coffee wasn't enough. So we started roasting it, too.",
+        "We roast in small batches. That way, you can be sure your coffee will always be fresh. Our coffees have a known origin—we know the farms, the producers, and the processing methods. And because we know that coffee isn't just what's in the cup, we strive to select beans from people who are fairly compensated for their work.",
+        "Whether you want 125 grams for a tasting or a kilo for home use, we have something for you."
+      ]
+    },
+    "studio_kavaspojuje": {
+      "name": "Media melting point",
+      "subheading": "Káva spojuje and magazine Okafi",
+      "annotation": [
+        "Káva spojuje je české kávové médium, které propojuje svět výběrové kávy, gastronomie a lidí, kteří za kávou stojí. Přináší rozhovory, články, podcasty i další obsah zaměřený na kávovou kulturu, vzdělávání a aktuální dění v oboru.",
+        "Součástí projektu je také tištěný čtvrtletní magazín Okafi, který nabízí hlubší pohled na kávu prostřednictvím autorských textů, rozhovorů, reportáží a témat přesahujících samotný šálek. Na magazínu spolupracuje redakce s českou Specialty Coffee Association. Káva spojuje a Okafi tak společně vytvářejí prostor pro vzdělávání, inspiraci a propojování kávové komunity."
+      ]
+    },
+    "studio_hand": {
+      "name": "Pottery shop",
+      "annotation": "We are Studio Hand, a ceramics studio, and we specialise primarily in the production of functional ceramics, such as coffee cups and mugs. Everything is created in our family-run studio in Prague. Vlasta, Juliána, Valérie and Max are behind the creation of our products and the running of the studio. Our products are mainly slip-cast; the production process begins with a 3D design, from which we create our own moulds for casting the ceramic slip. We also produce pottery using the wheel or by hand-building. We experiment with and discover new processes, techniques and materials."
+    },
+    "studio_kavickar": {
+      "name": "Historical coffee machines and book reveal 'Kávový Baťa'",
+      "annotation": "Pravý Kávičkár is a coffee enthusiast, amateur historian, traveller and writer who has long been dedicated to the history of coffee and coffee culture. Through his collection of historical coffee makers, he enjoys sharing forgotten stories linked to coffee. At his stall, he will showcase a range of historical coffee makers and, if all goes well with the publisher, his new book, Kávový Baťa."
+    },
+    "art_s_pop": {
+      "name": "Malování kávou",
+      "annotation": [
+        "Soňa Halfar is an artist, designer and founder of the creative S.Pop Studio. She studied animation in Bratislava and at UTB in Zlín, audiovisual production and theatre at JAMU, and art therapy at Masaryk University in Brno.",
+        "One discipline simply isn't enough for her. Animation, photography, graphic design, UI, illustration, film, television and theatre - she enjoys experimenting with different forms of creativity and interweaving them. In her illustrations, she creates her own world where reality blends with symbols, dreams and a slightly peculiar logic. In the world of coffee, you may also recognise her from the illustrations on Liškafé packaging.",
+        "Today, she runs her own creative workshops, where she helps people switch off their inner critic, shake off their creative block and simply start creating. She isn't concerned with the 'right' image, but with the freedom to experiment, play and not be afraid that it won't be good enough. Because anyone can create."
+      ]
     }
   },
   "promoted": {
@@ -733,7 +768,9 @@
     "party": "Extras",
     "afterparty": "Afterparty",
     "overview": "Overview",
-    "robotarna": "Roasters"
+    "robotarna": "Roasters",
+    "studio": "Studio",
+    "art": ""
   },
   "programTile": {
     "title": "Lineup",

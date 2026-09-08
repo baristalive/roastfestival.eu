@@ -50,7 +50,7 @@ export const Soutez = () => {
           </div>
 
           <div className="punk-border pop-shadow-small bg-accent rotate-1 p-6 text-black transition-transform duration-300 hover:rotate-0 md:p-10">
-            <div className="space-y-4 text-base leading-relaxed font-bold md:text-lg">
+            <div className="space-y-4 text-base leading-relaxed font-semibold md:text-lg">
               {paragraphs.length > 0 ? (
                 paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>

@@ -12,7 +12,6 @@ import { PreviousYears } from "./sections/PreviousYears";
 import { Tickets } from "./sections/Tickets";
 import { WhatToExpect } from "./sections/WhatToExpect";
 import { Soutez } from "./sections/Soutez";
-// import { PromotedRoasters } from "./sections/PromotedRoasters";
 import { Sponsors } from "./sections/Sponsors";
 import { StayTuned } from "./sections/StayTuned";
 
@@ -27,7 +26,6 @@ const Home = () => {
         <Program />
         <Sponsors />
         <Soutez />
-        {/* <PromotedRoasters /> */}
         {/* <Colab /> */}
         <WhatToExpect />
         <StayTuned />

@@ -37,7 +37,9 @@
     "terms": "Podmínky a sloty"
   },
   "gastro": {
-    "cta": "Přihláška pro gastro"
+    "cta": "Přihláška pro gastro",
+    "name": "Zažeň hlad!",
+    "text": "Trpět hlady ani žízní nebudeme! Krom Roastího výčepu na festivalu najdeš například:"
   },
   "presenters": {
     "101": {
@@ -578,7 +580,10 @@
     "ws_irska": {
       "name": "Irish Coffee? A proč ne Scottish nebo Czechish?!",
       "annotation": "Už v první polovině 19. století ve Francii dostali nápad do kávy dát kapku něčeho ostřejšího pod krásným názvem \"Gloria\". Moderní recept na irskou kávu si snaží přivlastnit kde kdo. Často přisuzuje Joe Sheridanovi, který pracoval v restauraci a kavárně na letišti Foyenes v západním Irsku. Příběh praví, že za obzvlášť špatného počasí byly zrušeny všechny lety a protože všichni byli promrzlí a unavení z čekání na letišti, tak jim na zpříjemnění večera umíchal drink z kávy, whisky, cukru a smetany. Možná to tak bylo, možná ne, to už asi nezjistíme, ale můžeme se spolu podívat na aspekty klasické irské. Vyzkoušíme si nejzákladnější recept, ale i modernější twisty se složitějšími whiskami nebo espumou a na závěr zkusíme nahradit whisku i jiným alkoholem.",
-      "bio": "Už od gymnazijních let se jako zodpovědný student po ránu zhášel večírkovou únavu kafem. Začínal na klasické rozpustné Nesce, ale netrvalo mu dlouho než objevil výběrovku a naprosto ho uchvátila. Prošel si řadou kaváren a pražíren na pozicích od řadového basisty, headbaristy, provozáka po produkčního pražiče. Nakonec sice skončil jako mistr zvuku v činoherním divadle, ale káva jej nikdy nepustila a po nějaké době v Brně spoluotevřel espressobar I/O Coffee. No a mimo jiné s partou kamarádů založil festival Roast! - to jen tak pro úplnost."
+      "bio": [
+        "Ahoj tady Eliška!",
+        "Jsem headbarmanka z Karlových Varů, za barem se pohybuji přes 10 let ale za kávovar se taky dostanu. Mixologie mě zavedla až na finále soutěže o barmana roku. Dobrým batchem nikdy nepohrdnu."
+      ]
     },
     "afterparty": {
       "name": "Afterparty",
@@ -589,6 +594,38 @@
         "name": "Pub kvíz",
         "annotation": "Myslíš si, že máš kávový svět v malíku? Připravili jsme pro tebe kávový hospodský kvíz! Čekají tě otázky z historie, pěstování, alternativních příprav, ale i nečekané kávové bizarnosti. Utvoř s kamarády tým (nebo se k někomu přidej přímo na místě), vezměte si do ruky pivo či koktejl a ukažte všem, kdo je tady největší kávový geek. Účast je v ceně vstupného a tým může mít maximálně 6 členů."
       }
+    },
+    "uprazeno": {
+      "annotation": [
+        "Jsme Upraženo. Parta lidí s beskydským srdcem, které baví kafe. Hodně.",
+        "V roce 2019 jsme si řekli, že nestačí kávu jenom pít. Tak jsme začali i pražit.",
+        "Pražíme v malých dávkách. Máte tak jistotu, že vaše káva bude vždy čerstvá. Naše kávy mají známý původ, známe farmy, producenty i způsob zpracování. A protože víme, že káva není jen to, co je v šálku, snažíme se vybírat zrna od lidí, kteří za svou práci dostávají férově zaplaceno.",
+        "Ať už chcete 125 gramů na ochutnávku, nebo kilo pro domácí spotřebu, máme něco pro vás."
+      ]
+    },
+    "studio_kavaspojuje": {
+      "name": "Media melting point",
+      "subheading": "Káva spojuje a magazín Okafi",
+      "annotation": [
+        "Káva spojuje je české kávové médium, které propojuje svět výběrové kávy, gastronomie a lidí, kteří za kávou stojí. Přináší rozhovory, články, podcasty i další obsah zaměřený na kávovou kulturu, vzdělávání a aktuální dění v oboru.",
+        "Součástí projektu je také tištěný čtvrtletní magazín Okafi, který nabízí hlubší pohled na kávu prostřednictvím autorských textů, rozhovorů, reportáží a témat přesahujících samotný šálek. Na magazínu spolupracuje redakce s českou Specialty Coffee Association. Káva spojuje a Okafi tak společně vytvářejí prostor pro vzdělávání, inspiraci a propojování kávové komunity."
+      ]
+    },
+    "studio_hand": {
+      "name": "Keramika",
+      "annotation": "Jsme keramické Studio Hand a zaměřujeme se především na výrobu užitkové keramiky, jako jsou kalíšky a hrnky na kávu. Vše vzniká v našem rodinném ateliéru v Praze.Za tvorbou výrobků a chodem studia stojí Vlasta, Juliána, Valérie a Max. Naše výrobky jsou převážně lité, výroba začíná u 3D návrhu designu, ze kterého vyrábíme vlastní formy pro lití keramické hmoty. Dále děláme keramiku točenou nebo modelovanou. Zkoušíme a objevujeme nové postupy, techniky a materiály."
+    },
+    "studio_kavickar": {
+      "name": "Historické kávovary a představení knihy Kávový Baťa",
+      "annotation": "Pravý Kávičkár je nadšenec do kávy, amatérsky historik, cestovateľ a spisovateľ, ktorý sa dlhodobo venuje histórii kávy a kávovej kultúry. Vo svojej zbierke historických kávovarov rád prezentuje zabudnuté príbehy spojené s kávou. Na svojom stánku predstaví sériu historických kávovarov a ak všetko dobre dopadne s tlačou, tak aj svoju novú knihu Kávový Baťa."
+    },
+    "art_s_pop": {
+      "name": "Malování kávou",
+      "annotation": [
+        "Soňa Halfar je výtvarníčka, dizajnérka a zakladateľka kreatívneho S.Pop Studia. Vyštudovala animáciu v Bratislave a na UTB v Zlíne, audiovizuálnu tvorbu a divadlo na JAMU a arteterapiu na Masarykovej univerzite v Brne.",
+        "Jedna disciplína jej skrátka nestačí. Animácia, fotografia, grafický dizajn, UI, ilustrácia, film, televízia aj divadlo – baví ju skúšať rôzne formy tvorby a prepájať ich. V ilustrácii si vytvára vlastný svet, kde sa realita mieša so symbolmi, snami a trochu zvláštnou logikou. V kávovom svete ju môžete poznať aj z ilustrácií na obaloch Liškafé.",
+        "Dnes vedie vlastné tvorivé kurzy, kde ľuďom pomáha vypnúť vnútorného kritika, odhodiť blok a jednoducho začať tvoriť. Nejde jej o „správny“ obraz, ale o slobodu skúšať, hrať sa a nebáť sa, že to nebude dosť dobré. Pretože tvoriť môže každý."
+      ]
     }
   },
   "promoted": {
@@ -735,7 +772,9 @@
     "party": "Stage",
     "afterparty": "Afterparty",
     "overview": "Přehled",
-    "robotarna": "Pražírny"
+    "robotarna": "Pražírny",
+    "studio": "Studio",
+    "art": "Art"
   },
   "filterCategories": {
     "day": "Den"

@@ -1084,9 +1084,9 @@
       "name": "Bingo!"
     },
     "ws_irska": {
-      "subheading": "Josef Kučera",
+      "subheading": "Eliška Švehláková",
       "country": "cz",
-      "logo": "irska.jpg",
+      "logo": "irska_eliska.png",
       "modalProps": {
         "className": ""
       }
@@ -1127,51 +1127,65 @@
       "primaryLink": "web",
       "logo": "sponsor_kavaspojuje.svg"
     },
-    "afterparty": {}
-  },
-  "promoted": {
-    "others": {
-      "items": []
+    "afterparty": {},
+    "uprazeno": {
+      "name": "Upraženo",
+      "web": "https://www.uprazeno.cz/",
+      "logo": "uprazeno.png",
+      "instagram": "https://www.instagram.com/uprazeno/",
+      "facebook": "https://www.facebook.com/uprazeno/",
+      "modalProps": {
+        "className": "p-8"
+      },
+      "country": "cz"
     },
-    "roasters": {
-      "honored": ["ig"],
-      "regular": [
-        "gills",
-        "poppy",
-        "mia_coffee",
-        "cafe_cult",
-        "red_fawn",
-        "hayb",
-        "punkt",
-        "kopi_bean",
-        "bracia",
-        "hrncek",
-        "penerini",
-        "chcikofein",
-        "coffee_banditos",
-        "zoban",
-        "kikafe",
-        "prazirna_kromeriz",
-        "qb_coffee",
-        "101",
-        "labanda",
-        "prazirna_krok",
-        "beberry",
-        "jungle_roastery",
-        "trafficcoffee",
-        "la_boheme"
-      ]
+    "studio_kavaspojuje": {
+      "web": "https://kavaspojuje.cz/",
+      "facebook": "https://www.facebook.com/kavaspojuje",
+      "instagram": "https://www.instagram.com/kavaspojuje/",
+      "spotify": "https://open.spotify.com/show/7nTrUYSUEFDNx6lnhvl5wM",
+      "primaryLink": "web",
+      "logo": "kavaspojuje.png"
     },
-    "sponsors": {
-      "items": [
-        "sponsor_kopro",
-        "sponsor_ignac",
-        "sponsor_okafi",
-        "sponsor_aqualink",
-        "sponsor_brita",
-        "sponsor_kavaspojuje"
-      ]
+    "studio_hand": {
+      "subheading": "Studio Hand",
+      "logo": "hand.png",
+      "country": "cz",
+      "modalProps": {
+        "className": "p-4"
+      },
+      "web": "https://studiohand.cz/",
+      "instagram": "https://www.instagram.com/studiohand_prague/",
+      "facebook": "https://www.facebook.com/studiohandprague/"
+    },
+    "studio_kavickar": {
+      "subheading": "Pravý Kávičkár",
+      "country": "sk",
+      "logo": "kavickar.jpg",
+      "modalProps": {
+        "className": ""
+      },
+      "instagram": "https://www.instagram.com/pravy.kavickar"
+    },
+    "art_s_pop": {
+      "subheading": "S.POP STUDIO",
+      "country": "sk",
+      "logo": "s_pop.svg",
+      "modalProps": {
+        "className": "p-4"
+      },
+      "instagram": "https://www.instagram.com/s.popart/"
     }
+  },
+  "gastro": {
+    "items": [
+      "gastro_ramen",
+      "gastro_roburrito",
+      "gastro_putra",
+      "gastro_hodne_nekde",
+      "gastro_kaple",
+      "gastro_parabellum"
+    ]
   },
   "program": [
     {
@@ -1297,6 +1311,11 @@
                 "start": "10:00",
                 "end": "13:30",
                 "$ref": "kikafe"
+              },
+              {
+                "start": "14:00",
+                "end": "17:30",
+                "$ref": "uprazeno"
               }
             ]
           ]
@@ -1405,6 +1424,37 @@
                 "start": "15:50",
                 "end": "16:40",
                 "$ref": "talk_gloria"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "studio",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "studio_kavaspojuje"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "studio_hand"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "art",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "art_s_pop"
               }
             ]
           ]
@@ -1687,6 +1737,37 @@
           ]
         },
         {
+          "track": "studio",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "studio_kavickar"
+              }
+            ],
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "studio_hand"
+              }
+            ]
+          ]
+        },
+        {
+          "track": "art",
+          "schedule": [
+            [
+              {
+                "start": "10:00",
+                "end": "18:00",
+                "$ref": "art_s_pop"
+              }
+            ]
+          ]
+        },
+        {
           "track": "party",
           "schedule": [
             [
@@ -1741,7 +1822,15 @@
     "cupping": null
   },
   "sponsors": {
-    "signUpLink": "mailto:sponsors@roastfestival.eu"
+    "signUpLink": "mailto:sponsors@roastfestival.eu",
+    "items": [
+      "sponsor_kopro",
+      "sponsor_ignac",
+      "sponsor_okafi",
+      "sponsor_aqualink",
+      "sponsor_brita",
+      "sponsor_kavaspojuje"
+    ]
   },
   "title": "Coffee festival"
 }

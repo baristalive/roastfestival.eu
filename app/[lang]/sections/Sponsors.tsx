@@ -54,7 +54,7 @@ export const Sponsors = () => {
   return (
     <Section className="bg-primary bg-lines" id="promoted">
       <div className="mx-auto grid max-w-screen-2xl grid-cols-2 items-center gap-x-2 gap-y-8 px-4 py-10 text-xl sm:gap-x-6 sm:gap-y-10 md:flex md:flex-nowrap md:gap-4 md:px-6 md:py-10 lg:gap-8 lg:px-10 lg:py-12">
-        {lang.promoted.sponsors.items.map((p) => {
+        {lang.sponsors.items.map((p) => {
           const layout = sponsorLayout[p] ?? defaultSponsorLayout;
 
           return (

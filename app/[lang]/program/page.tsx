@@ -29,12 +29,14 @@ function readStorage<T>(key: string, fallback: T, parse?: (v: string) => T): T {
 }
 
 const TRACK_COLORS: Record<string, string> = {
-  brew: "bg-white",
-  cupping: "bg-primary",
+  art: "bg-black",
+  brew: "bg-primary",
+  cupping: "bg-black",
   espresso: "bg-black",
   espresso_milk: "bg-accent",
-  lecture: "bg-black",
-  party: "bg-white",
+  lecture: "bg-primary",
+  party: "bg-primary",
+  studio: "bg-accent",
   workshop: "bg-accent",
 };
 
@@ -147,7 +149,7 @@ export default function ProgramPage() {
           {/* Right: controls */}
           <div className="flex items-center gap-2 md:gap-3">
             {/* Track filters — always visible on md+ */}
-            <div className="hidden md:flex md:flex-wrap md:items-center md:gap-3">
+            <div className="hidden flex-wrap items-center gap-3 lg:flex">
               {AllTracks.map((track) => {
                 const active = tracks.includes(track);
                 return (
@@ -178,7 +180,7 @@ export default function ProgramPage() {
             {/* Filter toggle — mobile only */}
             <button
               onClick={() => setShowFilters((v) => !v)}
-              className={`relative text-white transition-all md:hidden ${showFilters ? "text-accent" : ""}`}
+              className={`relative border-2 border-transparent bg-white/10 px-2 py-1 text-white transition-all lg:hidden ${showFilters ? "text-accent" : "text-white"}`}
               aria-label="Toggle filters"
             >
               <Filter />
@@ -189,7 +191,7 @@ export default function ProgramPage() {
 
             <button
               onClick={toggleView}
-              className="font-display shrink-0 bg-white/10 p-1.5 text-white transition-all hover:bg-white/20 md:px-3 md:py-1 md:text-xs md:font-black md:uppercase"
+              className="font-display shrink-0 border-2 border-transparent bg-white/10 px-2 py-1 text-white transition-all hover:bg-white/20 lg:border-4 lg:px-4 lg:py-1 lg:text-sm lg:font-black lg:uppercase"
               aria-label={view === "list" ? "Timeline" : "List"}
             >
               {view === "list" ? (
@@ -197,21 +199,21 @@ export default function ProgramPage() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 14"
-                    className="h-4 w-5 fill-current md:hidden"
+                    className="h-4 w-5 fill-current lg:hidden"
                   >
                     <rect x="0" y="0" width="20" height="2" rx="1" />
                     <rect x="4" y="4" width="16" height="2" rx="1" />
                     <rect x="2" y="8" width="14" height="2" rx="1" />
                     <rect x="6" y="12" width="14" height="2" rx="1" />
                   </svg>
-                  <span className="hidden md:inline">Timeline</span>
+                  <span className="hidden lg:inline">Timeline</span>
                 </>
               ) : (
                 <>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 14"
-                    className="h-4 w-5 fill-current md:hidden"
+                    className="h-4 w-5 fill-current lg:hidden"
                   >
                     <rect x="0" y="0" width="4" height="2" rx="1" />
                     <rect x="6" y="0" width="14" height="2" rx="1" />
@@ -222,7 +224,7 @@ export default function ProgramPage() {
                     <rect x="0" y="12" width="4" height="2" rx="1" />
                     <rect x="6" y="12" width="14" height="2" rx="1" />
                   </svg>
-                  <span className="hidden md:inline">List</span>
+                  <span className="hidden lg:inline">List</span>
                 </>
               )}
             </button>
@@ -230,7 +232,7 @@ export default function ProgramPage() {
               href={params.lang === "cz" ? "/en/program" : "/cz/program"}
               hrefLang={params.lang === "cz" ? "en-US" : "cs-CZ"}
               rel="alternate"
-              className="border-accent bg-accent font-display shrink-0 border-2 px-2 py-1 text-xs font-black tracking-wider text-black uppercase transition-all hover:-rotate-2 hover:bg-white hover:text-black md:border-4 md:px-4 md:text-sm md:tracking-widest"
+              className="border-accent bg-accent font-display shrink-0 border-2 px-2 py-1 text-xs font-black tracking-wider text-black uppercase transition-all hover:-rotate-2 hover:bg-white hover:text-black lg:border-4 lg:px-4 lg:text-sm lg:tracking-widest"
             >
               {params.lang === "cz" ? "EN" : "CZ"}
             </Link>
@@ -239,7 +241,7 @@ export default function ProgramPage() {
 
         {/* Mobile filter panel */}
         {showFilters && (
-          <div className="mt-3 flex flex-wrap gap-3 border-t border-white/10 pt-3 md:hidden">
+          <div className="mt-3 flex flex-wrap gap-3 border-t border-white/10 pt-3 lg:hidden">
             {AllTracks.map((track) => {
               const active = tracks.includes(track);
               return (

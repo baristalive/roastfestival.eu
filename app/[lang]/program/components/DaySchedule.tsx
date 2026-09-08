@@ -44,10 +44,16 @@ const TRACK_STYLES: Record<
   { bg: string; text: string; headerBg: string; edge: string }
 > = {
   afterparty: {
-    bg: "bg-accent",
+    bg: "bg-white",
     edge: "border-black",
-    headerBg: "bg-accent",
+    headerBg: "bg-white",
     text: "text-black",
+  },
+  art: {
+    bg: "bg-black",
+    edge: "border-white",
+    headerBg: "bg-black",
+    text: "text-white",
   },
   brew: {
     bg: "bg-white",
@@ -80,6 +86,12 @@ const TRACK_STYLES: Record<
     text: "text-black",
   },
   party: {
+    bg: "bg-white",
+    edge: "border-black",
+    headerBg: "bg-white",
+    text: "text-black",
+  },
+  studio: {
     bg: "bg-accent",
     edge: "border-black",
     headerBg: "bg-accent",

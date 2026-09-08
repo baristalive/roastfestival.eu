@@ -205,7 +205,7 @@ export const Modal = ({
                   <div className="mb-4 flex justify-center">
                     <div className="relative inline-block">
                       <div
-                        className={`pop-shadow-small inline-flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border-4 border-black bg-white md:h-36 md:w-36 ${modalProps?.className !== undefined ? modalProps?.className : "p-4"}`}
+                        className={`pop-shadow-small inline-flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border-4 border-black bg-[white] md:h-36 md:w-36 ${modalProps?.className !== undefined ? modalProps?.className : "p-4"}`}
                       >
                         <ExportedImage
                           src={`/images/promoted/${logo}`}

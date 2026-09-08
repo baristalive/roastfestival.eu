@@ -26,6 +26,8 @@ export enum Track {
   Party = "party",
   Afterparty = "afterparty",
   Honor = "espresso_milk",
+  Studio = "studio",
+  Art = "art",
 }
 
 export enum Day {
@@ -42,6 +44,8 @@ export const AllTracks = [
   Track.Workshop,
   Track.Cupping,
   Track.Party,
+  Track.Studio,
+  Track.Art,
 ];
 
 export type RawProgramDay = {
