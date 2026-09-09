@@ -40,12 +40,19 @@ const A4_ROOMS = [
 
 const DISPLAY_ROOMS = [{ category: "lecture", slug: "kaple" }] as const;
 
+const DIGITAL_PORTRAIT_ROOMS = [
+  { category: "cupping", slug: "cupping" },
+  { category: "workshop", slug: "stolarna" },
+  { category: "lecture", slug: "kaple" },
+] as const;
+
 type InstagramRoomSlug = (typeof PRINT_ROOMS)[number]["slug"];
 type A3RoomSlug = (typeof A3_ROOMS)[number]["slug"];
 type A4RoomSlug = (typeof A4_ROOMS)[number]["slug"];
+type DigitalPortraitRoomSlug = (typeof DIGITAL_PORTRAIT_ROOMS)[number]["slug"];
 
 const PRINT_DAYS = [Day.Saturday, Day.Sunday] as const;
-type ExportFormat = "instagram" | "a3" | "a4" | "display";
+type ExportFormat = "instagram" | "a3" | "a4" | "display" | "displayPortrait";
 
 type PrintPropsType = {
   params: Promise<{ lang: SupportedLanguages }>;
@@ -65,6 +72,8 @@ const Print = (props: PrintPropsType) => {
     useState<A4RoomSlug>("brew");
   const [selectedA4RowIndex, setSelectedA4RowIndex] = useState(0);
   const [selectedDisplayTalkRef, setSelectedDisplayTalkRef] = useState("");
+  const [selectedDigitalPortraitRoomSlug, setSelectedDigitalPortraitRoomSlug] =
+    useState<DigitalPortraitRoomSlug>("cupping");
   const [backgroundId, setBackgroundId] = useState<PosterBackgroundId>(
     DEFAULT_BACKGROUND_BY_DAY[Day.Saturday],
   );
@@ -79,7 +88,9 @@ const Print = (props: PrintPropsType) => {
         ? selectedA4RoomSlug
         : exportFormat === "display"
           ? "kaple"
-          : selectedInstagramRoomSlug;
+          : exportFormat === "displayPortrait"
+            ? selectedDigitalPortraitRoomSlug
+            : selectedInstagramRoomSlug;
   const roomOptions =
     exportFormat === "a3"
       ? A3_ROOMS
@@ -87,7 +98,11 @@ const Print = (props: PrintPropsType) => {
         ? A4_ROOMS
         : exportFormat === "display"
           ? DISPLAY_ROOMS
-          : PRINT_ROOMS;
+          : exportFormat === "displayPortrait"
+            ? DIGITAL_PORTRAIT_ROOMS
+            : PRINT_ROOMS;
+  const isDigitalPortrait = exportFormat === "displayPortrait";
+  const isDigitalPreview = exportFormat === "display" || isDigitalPortrait;
   const isTimelinePreview =
     exportFormat === "a3" && selectedA3RoomSlug === "overview";
   const selectedLectureItems =
@@ -145,7 +160,12 @@ const Print = (props: PrintPropsType) => {
       return;
     }
 
-    if (exportFormat !== "instagram" && exportFormat !== "display") {
+    const isPngExport =
+      exportFormat === "instagram" ||
+      exportFormat === "display" ||
+      isDigitalPortrait;
+
+    if (!isPngExport) {
       window.print();
       return;
     }
@@ -153,13 +173,20 @@ const Print = (props: PrintPropsType) => {
     const room =
       exportFormat === "display"
         ? "lecture"
-        : getRoomCategory(selectedInstagramRoomSlug);
+        : getRoomCategory(
+            isDigitalPortrait
+              ? selectedDigitalPortraitRoomSlug
+              : selectedInstagramRoomSlug,
+          );
     const filename =
       exportFormat === "display"
         ? `${selectedDay}_${room}_${activeDisplayTalkRef ?? "talk"}.png`
-        : `${selectedDay}_${room}.png`;
+        : isDigitalPortrait
+          ? `${selectedDay}_${room}_portrait.png`
+          : `${selectedDay}_${room}.png`;
 
     toPng(posterRef.current, {
+      backgroundColor: isDigitalPortrait ? "transparent" : undefined,
       cacheBust: true,
       pixelRatio: 2,
       style: {
@@ -207,24 +234,26 @@ const Print = (props: PrintPropsType) => {
             </select>
           </label>
 
-          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
-            <span className="text-white/60">Background</span>
-            <select
-              className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
-              id="poster-background"
-              name="poster-background"
-              onChange={(event) =>
-                setBackgroundId(event.target.value as PosterBackgroundId)
-              }
-              value={backgroundId}
-            >
-              {POSTER_BACKGROUNDS.map((posterBackground) => (
-                <option key={posterBackground.id} value={posterBackground.id}>
-                  {posterBackground.label}
-                </option>
-              ))}
-            </select>
-          </label>
+          {!isDigitalPortrait && (
+            <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+              <span className="text-white/60">Background</span>
+              <select
+                className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+                id="poster-background"
+                name="poster-background"
+                onChange={(event) =>
+                  setBackgroundId(event.target.value as PosterBackgroundId)
+                }
+                value={backgroundId}
+              >
+                {POSTER_BACKGROUNDS.map((posterBackground) => (
+                  <option key={posterBackground.id} value={posterBackground.id}>
+                    {posterBackground.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
           <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
             <span className="text-white/60">Format</span>
             <select
@@ -240,6 +269,7 @@ const Print = (props: PrintPropsType) => {
               <option value="a3">A3 PDF</option>
               <option value="a4">A4 PDF</option>
               <option value="display">Digital (16:9)</option>
+              <option value="displayPortrait">Digital portrait (9:16)</option>
             </select>
           </label>
 
@@ -260,6 +290,10 @@ const Print = (props: PrintPropsType) => {
                   setSelectedA4RowIndex(0);
                 } else if (exportFormat === "display") {
                   setSelectedDisplayTalkRef(event.target.value);
+                } else if (exportFormat === "displayPortrait") {
+                  setSelectedDigitalPortraitRoomSlug(
+                    event.target.value as DigitalPortraitRoomSlug,
+                  );
                 } else {
                   setSelectedInstagramRoomSlug(
                     event.target.value as InstagramRoomSlug,
@@ -347,24 +381,26 @@ const Print = (props: PrintPropsType) => {
             </label>
           )}
 
-          <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
-            <span className="text-white/60">Pattern</span>
-            <select
-              className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
-              id="poster-pattern"
-              name="poster-pattern"
-              onChange={(event) =>
-                setPatternId(event.target.value as PosterPatternId)
-              }
-              value={patternId}
-            >
-              {POSTER_PATTERNS.map((posterPattern) => (
-                <option key={posterPattern.id} value={posterPattern.id}>
-                  {posterPattern.label}
-                </option>
-              ))}
-            </select>
-          </label>
+          {!isDigitalPortrait && (
+            <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+              <span className="text-white/60">Pattern</span>
+              <select
+                className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+                id="poster-pattern"
+                name="poster-pattern"
+                onChange={(event) =>
+                  setPatternId(event.target.value as PosterPatternId)
+                }
+                value={patternId}
+              >
+                {POSTER_PATTERNS.map((posterPattern) => (
+                  <option key={posterPattern.id} value={posterPattern.id}>
+                    {posterPattern.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
         </div>
 
         <div className="flex items-center gap-x-6 gap-y-3">
@@ -389,7 +425,7 @@ const Print = (props: PrintPropsType) => {
       </nav>
 
       <section
-        className={`image relative z-10 mx-auto flex justify-center overflow-x-auto px-6 pt-8 pb-20 md:pt-12 ${isTimelinePreview ? "print-preview-timeline" : exportFormat === "display" ? "print-preview-display" : "max-w-7xl"}`}
+        className={`image relative z-10 mx-auto flex justify-center overflow-x-auto px-6 pt-8 pb-20 md:pt-12 ${isTimelinePreview ? "print-preview-timeline" : isDigitalPreview ? "print-preview-display" : "max-w-7xl"}`}
       >
         <div className="pb-4">
           <PrintPoster
@@ -399,6 +435,7 @@ const Print = (props: PrintPropsType) => {
             isA3={exportFormat === "a3"}
             isA4={exportFormat === "a4"}
             isDigitalDisplay={exportFormat === "display"}
+            isDigitalPortrait={isDigitalPortrait}
             langKey={params.lang}
             patternId={patternId}
             roomSlug={selectedRoomSlug}

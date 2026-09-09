@@ -101,6 +101,11 @@
   size: 16in 9in;
 }
 
+@page display-portrait {
+  margin: 0;
+  size: 9in 16in;
+}
+
 @media print {
   @page {
     margin: 0;
@@ -159,6 +164,12 @@
     page: display-landscape;
     width: 16in !important;
     height: 9in !important;
+  }
+
+  .print-poster[data-export-format="display-portrait"] {
+    page: display-portrait;
+    width: 9in !important;
+    height: 16in !important;
   }
 
   .print-poster[data-export-format="a4"] .print-poster-brand {
