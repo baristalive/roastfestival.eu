@@ -60,6 +60,7 @@ const Print = (props: PrintPropsType) => {
     useState<InstagramRoomSlug>("espresso_milk");
   const [selectedA3RoomSlug, setSelectedA3RoomSlug] =
     useState<A3RoomSlug>("overview");
+  const [selectedA3RowIndex, setSelectedA3RowIndex] = useState(0);
   const [selectedA4RoomSlug, setSelectedA4RoomSlug] =
     useState<A4RoomSlug>("brew");
   const [selectedA4RowIndex, setSelectedA4RowIndex] = useState(0);
@@ -105,6 +106,17 @@ const Print = (props: PrintPropsType) => {
       ?.schedule.find(
         (track) => track.track === getRoomCategory(selectedA4RoomSlug),
       )?.schedule ?? [];
+  const selectedA3Rows =
+    selectedA3RoomSlug === "stolarna"
+      ? (lang.program
+          .find((programDay) => programDay.$ref === selectedDay)
+          ?.schedule.find((track) => track.track === "workshop")?.schedule ??
+        [])
+      : [];
+  const activeA3RowIndex = Math.min(
+    selectedA3RowIndex,
+    Math.max(selectedA3Rows.length - 1, 0),
+  );
   const activeA4RowIndex = Math.min(
     selectedA4RowIndex,
     Math.max(selectedA4Rows.length - 1, 0),
@@ -114,12 +126,14 @@ const Print = (props: PrintPropsType) => {
     setSelectedDay(nextDay);
     setBackgroundId(DEFAULT_BACKGROUND_BY_DAY[nextDay]);
     setPatternId(DEFAULT_PATTERN_BY_DAY[nextDay]);
+    setSelectedA3RowIndex(0);
     setSelectedA4RowIndex(0);
     setSelectedDisplayTalkRef("");
   }, []);
 
   const handleFormatChange = useCallback((nextFormat: ExportFormat) => {
     setExportFormat(nextFormat);
+    setSelectedA3RowIndex(0);
     setSelectedA4RowIndex(0);
     if (nextFormat === "display") {
       setSelectedDisplayTalkRef("");
@@ -240,6 +254,7 @@ const Print = (props: PrintPropsType) => {
               onChange={(event) => {
                 if (exportFormat === "a3") {
                   setSelectedA3RoomSlug(event.target.value as A3RoomSlug);
+                  setSelectedA3RowIndex(0);
                 } else if (exportFormat === "a4") {
                   setSelectedA4RoomSlug(event.target.value as A4RoomSlug);
                   setSelectedA4RowIndex(0);
@@ -311,6 +326,27 @@ const Print = (props: PrintPropsType) => {
             </label>
           )}
 
+          {exportFormat === "a3" && selectedA3RoomSlug === "stolarna" && (
+            <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
+              <span className="text-white/60">Track</span>
+              <select
+                className="min-w-32 cursor-pointer border-b-2 border-white/60 bg-transparent px-0.5 py-1 text-xs font-black tracking-wide text-white uppercase outline-none"
+                id="print-workshop-track"
+                name="print-workshop-track"
+                onChange={(event) =>
+                  setSelectedA3RowIndex(Number(event.target.value))
+                }
+                value={activeA3RowIndex}
+              >
+                {selectedA3Rows.map((_, rowIndex) => (
+                  <option key={rowIndex} value={rowIndex}>
+                    Track {rowIndex + 1}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+
           <label className="font-display flex items-center gap-2 text-xs font-black tracking-wider text-white uppercase">
             <span className="text-white/60">Pattern</span>
             <select
@@ -366,7 +402,13 @@ const Print = (props: PrintPropsType) => {
             langKey={params.lang}
             patternId={patternId}
             roomSlug={selectedRoomSlug}
-            rowIndex={exportFormat === "a4" ? activeA4RowIndex : undefined}
+            rowIndex={
+              exportFormat === "a4"
+                ? activeA4RowIndex
+                : exportFormat === "a3" && selectedA3RoomSlug === "stolarna"
+                  ? activeA3RowIndex
+                  : undefined
+            }
             talkRef={
               exportFormat === "display" ? activeDisplayTalkRef : undefined
             }

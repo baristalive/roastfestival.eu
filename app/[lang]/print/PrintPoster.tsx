@@ -128,12 +128,14 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
 
     const schedule = day.schedule.filter((item) => item.track === room);
     const scheduleRows = schedule.flatMap((track) => track.schedule);
+    const isA3Workshop = isA3 && room === Track.Workshop;
+    const usesSelectedScheduleRow = isA4 || isA3Workshop;
     const allScheduleItems = scheduleRows.flat();
     const displayItem = isDigitalDisplay
       ? (allScheduleItems.find((item) => item.$ref === talkRef) ??
         allScheduleItems[0])
       : undefined;
-    const scheduleItems = isA4
+    const scheduleItems = usesSelectedScheduleRow
       ? (scheduleRows[rowIndex ?? 0] ?? [])
       : scheduleRows.flat();
 
@@ -170,7 +172,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
       return null;
     }
 
-    const scheduleColumns = isA4
+    const scheduleColumns = usesSelectedScheduleRow
       ? 1
       : SINGLE_COLUMN_ROOMS.has(room)
         ? 1
@@ -187,7 +189,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
       scheduleItems.length > 5;
     const needsTopAlignedSingleColumnSpacing =
       !isA3 && SINGLE_COLUMN_ROOMS.has(room) && scheduleItems.length >= 5;
-    const needsA4ListSpacing = isA4;
+    const needsSelectedRowSpacing = usesSelectedScheduleRow;
     const isHonoredGuests = room === Track.Honor;
 
     const baseItemHeaderStyle =
@@ -243,10 +245,12 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
         </div>
 
         <div
-          className={`z-10 flex flex-col items-center ${showPresenterAnnotation ? "pt-[4.5rem]" : isMergedTimeline ? "pt-[1.5rem]" : isA3 ? "pt-[10rem]" : needsCompactSingleColumnSpacing ? "pt-[4rem]" : "pt-[4.5rem]"} text-center`}
+          className={`z-10 flex flex-col items-center ${isA3Workshop ? "pt-[4.5rem]" : showPresenterAnnotation ? "pt-[8.5rem]" : isMergedTimeline ? "pt-[1.5rem]" : isA3 ? "pt-[10rem]" : needsCompactSingleColumnSpacing ? "pt-[4rem]" : "pt-[4.5rem]"} text-center`}
         >
-          {isA4 && (
-            <span className="font-display print-poster-row-number text-[clamp(7rem,30vw,30rem)] font-black">
+          {usesSelectedScheduleRow && (
+            <span
+              className={`font-display print-poster-row-number font-black ${isA3Workshop ? "text-[clamp(5rem,12vw,12rem)]" : "text-[clamp(7rem,30vw,30rem)]"}`}
+            >
               {(rowIndex ?? 0) + 1}
             </span>
           )}
@@ -272,7 +276,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
           </div>
         ) : (
           <div
-            className={`z-10 grid min-h-0 flex-1 px-[2%] ${showPresenterAnnotation ? "content-start gap-[1%] pt-[3%]" : needsA4ListSpacing ? "content-start gap-[10%] pt-[10%]" : needsCompactSingleColumnSpacing ? "content-start gap-0.5 pt-2" : needsTopAlignedSingleColumnSpacing ? "content-start gap-[2%] pt-[6%]" : "content-center gap-[2%] pt-[6%]"}`}
+            className={`z-10 grid min-h-0 flex-1 px-[2%] ${showPresenterAnnotation ? "content-center gap-[2%] pt-[3%]" : needsSelectedRowSpacing ? "content-start gap-[10%] pt-[10%]" : needsCompactSingleColumnSpacing ? "content-start gap-0.5 pt-2" : needsTopAlignedSingleColumnSpacing ? "content-start gap-[2%] pt-[6%]" : "content-center gap-[2%] pt-[6%]"}`}
             style={{
               gridTemplateColumns: `repeat(${scheduleColumns}, minmax(0, 1fr))`,
             }}
@@ -342,7 +346,7 @@ const PrintPoster = forwardRef<HTMLDivElement, PrintPosterProps>(
                       (presenter?.name ? (
                         <h4
                           lang={langKey === "cz" ? "cs" : "en"}
-                          className={`font-display wrap-break-words ${isA4 ? "text-3xl" : "text-lg"} leading-tight font-black hyphens-auto`}
+                          className={`font-display wrap-break-words ${isA3 ? "text-lg" : isA4 ? "text-3xl" : "text-lg"} leading-tight font-black hyphens-auto`}
                         >
                           <InlineMarkdown>{presenter.name}</InlineMarkdown>
                         </h4>
