@@ -1396,33 +1396,33 @@
           "schedule": [
             [
               {
-                "start": "10:00",
-                "end": "10:50",
+                "start": "10:20",
+                "end": "11:20",
                 "$ref": "talk_ajala"
               },
               {
-                "start": "11:10",
-                "end": "12:00",
+                "start": "11:30",
+                "end": "12:30",
                 "$ref": "talk_chickas"
               },
               {
-                "start": "12:20",
-                "end": "13:10",
+                "start": "12:40",
+                "end": "13:40",
                 "$ref": "talk_blahovec"
               },
               {
-                "start": "13:30",
-                "end": "14:20",
+                "start": "13:50",
+                "end": "14:50",
                 "$ref": "talk_arana"
               },
               {
-                "start": "14:40",
-                "end": "15:30",
+                "start": "15:00",
+                "end": "16:10",
                 "$ref": "talk_angela_chickas"
               },
               {
-                "start": "15:50",
-                "end": "16:40",
+                "start": "16:20",
+                "end": "17:20",
                 "$ref": "talk_gloria"
               }
             ]
@@ -1710,27 +1710,27 @@
             [
               {
                 "start": "10:30",
-                "end": "11:50",
+                "end": "12:00",
                 "$ref": "talk_podcast_ect"
               },
               {
                 "start": "12:10",
-                "end": "13:00",
+                "end": "13:10",
                 "$ref": "talk_sloficek"
               },
               {
                 "start": "13:20",
-                "end": "14:10",
+                "end": "14:20",
                 "$ref": "talk_coufalova"
               },
               {
-                "start": "15:10",
-                "end": "15:50",
+                "start": "15:00",
+                "end": "16:10",
                 "$ref": "talk_pranachai"
               },
               {
                 "start": "16:30",
-                "end": "17:20",
+                "end": "17:30",
                 "$ref": "talk_kocar"
               }
             ]
