@@ -14,6 +14,7 @@ import BeanIcon from "@/app/icons/beanicon";
 import Filter from "@/app/icons/filter";
 import DaySchedule from "./components/DaySchedule";
 import { ProgramHelp } from "./components/ProgramHelp";
+import ArrowIcon from "@/app/icons/arrow";
 
 export type ViewMode = "schedule" | "list";
 
@@ -87,6 +88,7 @@ export default function ProgramPage() {
     readStorage(STORAGE_TRACKS, AllTracks),
   );
   const [showHelp, setShowHelp] = useState(false);
+  const [isFirstDayOpen, setIsFirstDayOpen] = useState(false);
   const [view, setView] = useState<ViewMode>(() =>
     readStorage(
       STORAGE_VIEW,
@@ -275,24 +277,59 @@ export default function ProgramPage() {
       <div className={`schedule-style-${view}`}>
         {lang.program.map((day, idx) => {
           const theme = DAY_THEMES[idx % DAY_THEMES.length];
+          const isFirstDay = idx === 0;
           return (
             <section
               key={day.$ref}
-              className={`${theme.bg} ${theme.bgPattern} px-4 pt-10 pb-16 md:px-8`}
+              id={lang.programDays[day.$ref].date}
+              className={`${theme.bg} ${theme.bgPattern} px-4 transition-[all,200ms] ${isFirstDay && !isFirstDayOpen ? "" : "pt-10 pb-16 md:px-8"}`}
             >
-              <div className="mx-auto mb-8 max-w-7xl md:mb-12">
-                <h2
-                  className={`font-display text-4xl font-black uppercase md:text-8xl ${theme.text}`}
-                >
-                  {lang.programDays[day.$ref].name}
-                </h2>
-                <span
-                  className={`font-display text-3xl font-black md:text-5xl ${theme.text} opacity-60`}
-                >
-                  {lang.programDays[day.$ref].date}
-                </span>
+              <div
+                className={`mx-auto max-w-7xl transition-[margin,200ms] ${isFirstDay && !isFirstDayOpen ? "" : "mb-8 md:mb-12"}`}
+              >
+                {isFirstDay ? (
+                  <button
+                    type="button"
+                    onClick={() => setIsFirstDayOpen((open) => !open)}
+                    aria-expanded={isFirstDayOpen}
+                    aria-controls="program-day-1-content"
+                    className={`flex w-full cursor-pointer items-center justify-start gap-4 text-left transition-opacity hover:opacity-80 ${theme.text}`}
+                  >
+                    <div>
+                      <h2 className="font-display text-4xl font-black uppercase md:text-8xl">
+                        {lang.programDays[day.$ref].name}
+                      </h2>
+                      <span className="font-display text-3xl font-black opacity-60 md:text-5xl">
+                        {lang.programDays[day.$ref].date}
+                      </span>
+                    </div>
+                    <span
+                      aria-hidden="true"
+                      className={`aspect-square h-24 transition-transform ${isFirstDayOpen ? "rotate-90" : ""}`}
+                    >
+                      <ArrowIcon />
+                    </span>
+                  </button>
+                ) : (
+                  <>
+                    <h2
+                      className={`font-display text-4xl font-black uppercase md:text-8xl ${theme.text}`}
+                    >
+                      {lang.programDays[day.$ref].name}
+                    </h2>
+                    <span
+                      className={`font-display text-3xl font-black md:text-5xl ${theme.text} opacity-60`}
+                    >
+                      {lang.programDays[day.$ref].date}
+                    </span>
+                  </>
+                )}
               </div>
-              <div className={view === "schedule" ? "-mx-4 md:-mx-8" : ""}>
+              <div
+                id={isFirstDay ? "program-day-1-content" : undefined}
+                hidden={isFirstDay && !isFirstDayOpen}
+                className={view === "schedule" ? "-mx-4 md:-mx-8" : ""}
+              >
                 <DaySchedule
                   schedule={day.schedule}
                   tracks={tracks}
