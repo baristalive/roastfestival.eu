@@ -68,7 +68,7 @@
     },
     "comandante": {},
     "chcikofein": {
-      "annotation": "We are Miro and Maru – husband and wife, coffee addicts, and a little bit crazy, roasting coffee for like-minded enthusiasts. We roast in a one-kilogram roaster because we like to experiment, and a smaller roaster allows us to do that. It also means we can change our range more often, and from time to time you will find some real limited editions."
+      "annotation": "We are Miro and Maru - husband and wife, coffee addicts, and a little bit crazy, roasting coffee for like-minded enthusiasts. We roast in a one-kilogram roaster because we like to experiment, and a smaller roaster allows us to do that. It also means we can change our range more often, and from time to time you will find some real limited editions."
     },
     "dalia": {
       "annotation": "A roastery from Silůvky near Brno, we roast excellent select coffee on a modern Coffee Crafters hot-air roaster. Come and taste both classic and experimental coffees at our brew bar."
@@ -125,13 +125,13 @@
     },
     "kudyznudy": {},
     "labanda": {
-      "annotation": "La Banda Caffeina – a caffeine cartel for everyone who isn't afraid of strong flavors and even stronger decisions. Each bean is the result of a secret operation between fire and time, creating a pure taste and aroma that will put you in a trance. Join our gang and drink coffee without compromise forever."
+      "annotation": "La Banda Caffeina - a caffeine cartel for everyone who isn't afraid of strong flavors and even stronger decisions. Each bean is the result of a secret operation between fire and time, creating a pure taste and aroma that will put you in a trance. Join our gang and drink coffee without compromise forever."
     },
     "liskafe": {
       "annotation": "We have been operating since 2022 and we are probably one of the smallest roasters in Brno. We work only with a selection of coffees and we are currently most interested in fermented and fruit-infused coffees, which is why you will find several of them in our offer. And since we roast in small volumes and try to change our coffee portfolio often, almost everything is a bit of a limit. If you'd like to taste our coffee, drop by the Mug café, which is at the end of the 12 bus in Brno."
     },
     "lot": {
-      "annotation": "We are Lot – a coffee roastery from Bratislava, where we believe that great coffee is no accident. Every step, from selecting the beans to roasting, is done with the aim of capturing the true flavor and character of coffee. If you're looking for pink, you'll find us. See you in Brno!"
+      "annotation": "We are Lot - a coffee roastery from Bratislava, where we believe that great coffee is no accident. Every step, from selecting the beans to roasting, is done with the aim of capturing the true flavor and character of coffee. If you're looking for pink, you'll find us. See you in Brno!"
     },
     "mamacoffee": {
       "annotation": "At mamacoffee, we combine the highest quality coffee with fair and sustainable trading. We focus on working directly with the farmers to deliver not only a great cup of coffee, but also the unique stories behind it. You can buy coffee and much more from our e-shop or from one of the 7 cafes we operate in Prague. Where, in addition to delicious coffee, you can also enjoy pastries from our own artisan bakery."
@@ -177,10 +177,10 @@
       "annotation": "Wildkaffee is a specialty coffee roastery based in Farchant, near Garmisch-Partenkirchen in Germany. Established in 2010 by Stefanie and Leonhard Wild, the company is guided by four core principles: quality, innovation, transparency and sustainability. Each roast is a considered expression of these values, a reflection of thoughtful sourcing, precise technique and a deep respect for the art of coffee. With bases in Austria and Thailand, and a growing presence around the globe, Wildkaffee coffees are enjoyed by discerning partners and coffee lovers worldwide."
     },
     "red_fawn": {
-      "annotation": "We are Red Fawn from Trnava – two brothers who love specialty coffee. We roast sweet and juicy coffees that don't taste like a compromise. Fresh harvests, pure taste full of fruit and character. Come and taste the experience, not just caffeine."
+      "annotation": "We are Red Fawn from Trnava - two brothers who love specialty coffee. We roast sweet and juicy coffees that don't taste like a compromise. Fresh harvests, pure taste full of fruit and character. Come and taste the experience, not just caffeine."
     },
     "trafficcoffee": {
-      "annotation": "We are Traffic Coffee – a roastery from Olomouc, where we create select coffee with character. We roast traditional beans as well as bold experiments such as barrel-aged coffee from aromatic alcohol barrels. Both coffee conservatives and adventurers will find something to their liking here."
+      "annotation": "We are Traffic Coffee - a roastery from Olomouc, where we create select coffee with character. We roast traditional beans as well as bold experiments such as barrel-aged coffee from aromatic alcohol barrels. Both coffee conservatives and adventurers will find something to their liking here."
     },
     "tripple_five": {
       "annotation": "We are a specialty coffee roaster in Bratislava. We carefully select the highest quality varieties from different corners of the world. Through careful roasting, we strive to bring out the full flavor that each bean has to offer."
@@ -201,7 +201,7 @@
       "annotation": "Discover why Yerba Maté is conquering the world as a healthier alternative to coffee. This workshop will reveal why Yerba Maté surpasses coffee in terms of energy, concentration, and lifestyle. Come and taste the change directly from the founder of the largest Yerba Maté brand in Czechia and Slovakia. You will learn how to prepare Yerba and how to benefit from it in the long term."
     },
     "ws_water": {
-      "name": "Water – more important than coffee itself",
+      "name": "Water - more important than coffee itself",
       "annotation": "Let's take a closer look at water. Although it is not widely known, water is more important than anything else when it comes to making coffee. Have you ever wondered why the filter coffee tasted great at the café, but the same beans suddenly didn't taste as good at home? Here's the answer."
     },
     "ws_whisky": {
@@ -274,7 +274,7 @@
     "talk_ks": {
       "name": "Coffee journalism on the rise",
       "subheading": "The editorial team of Káva spojuje",
-      "annotation": "How do you write about coffee and gastronomy in a way that readers will enjoy? The editors of Káva spojuje magazine will openly reveal everything that goes on \"behind the keyboard\" – from finding topics to behind-the-scenes interviews to what never makes it past the editors' scrutiny. Come take a peek into the editorial kitchen and ask anything you want to know about journalism.",
+      "annotation": "How do you write about coffee and gastronomy in a way that readers will enjoy? The editors of Káva spojuje magazine will openly reveal everything that goes on \"behind the keyboard\" - from finding topics to behind-the-scenes interviews to what never makes it past the editors' scrutiny. Come take a peek into the editorial kitchen and ask anything you want to know about journalism.",
       "bio": "We believe that \"coffee connects\". We are an online editorial team that aims to become a trusted voice connecting the coffee community across the Czech Republic."
     },
     "talk_helena": {
@@ -298,17 +298,24 @@
       "bio": "Madalin Truica, a coffee professional working as Head Barista at The Pelican Coffee Company in Vienna. He was born in Romania but grew up in Germany and has been involved in the coffee community for at least 10 years. In 2020, he won the Austria Barista Championship."
     },
     "talk_tripplesenzory": {
-      "name": "Sensory battle – what do wine, beer, and coffee have in common?",
+      "name": "Sensory battle - what do wine, beer, and coffee have in common?",
       "annotation": "What do good wine, decent beer, and specialty coffee have in common? And how do their worlds differ? A brewer, winemaker, and roaster will share their experiences with the sensory properties of these three traditional beverages and show that the world of flavors is much more diverse than you might think.",
       "bio": "The panel discussion will feature Michaela Neméthová, \"beer doctor\", certified BJCP judge, and brewer. Also participating will be Jiří Vyzourek, whose great passion is natural wines, which he deals with professionally at the Kaple wine bar in Brno. Last but not least, they will be joined by Jan Židů, roaster and owner of the Au Lait espresso bar in Brno, who will take care of \"the coffee part\"."
     },
     "talk_influencers": {
-      "name": "Like, share, drink – gastroinfluencing on social media",
-      "annotation": "Instagram, TikTok, YouTube – where does food taste best today? Three different food influencers reveal how food and drink are presented on social media, what is just a well-arranged illusion, and what is genuine passion. A discussion about authenticity and creative content.",
+      "name": "Like, share, drink - gastroinfluencing on social media",
+      "annotation": "Instagram, TikTok, YouTube - where does food taste best today? Three different food influencers reveal how food and drink are presented on social media, what is just a well-arranged illusion, and what is genuine passion. A discussion about authenticity and creative content.",
       "bio": "Well-known Brno Instagram reporter Pavel Černý will meet with his \"colleagues in the field\", coffee YouTuber and podcaster Tomáš Taussig and gastro-freelancer and social media manager Petra Vlková."
     },
     "party_soutez": {
-      "annotation": "",
+      "annotation": [
+        "For this year's edition, we decided that filtered coffee alone wasn't enough for us. And since we love mixology and other forms of gastronomy, we're happy to make things a little more complicated for ourselves. Introducing ROAST! in good spirits—a simpler and more fun version of what is perhaps the most complex coffee competition, CIGS.",
+        "The rules are simple:",
+        "In the first round, you'll prepare one drink using your own coffee and an alcohol of your choice, and present it to the judges on our STAGE. And if you don't happen to have enough bottles at home, no problem! You'll find something at the festival.",
+        "And in the second round, we'll give you a choice of coffee and a decent supply of bottles, and you'll prepare either the same drink—or a different one—it's entirely up to you!",
+        "You can sign up below, and you'll find the complete rules there, too!",
+        "You won't pay anything extra—registration is included in the price of your ticket. Don't worry that this is a competition for pros—feel free to sign up even if you just mix a GT at home every now and then and add an espresso shot to it. Because that's the best breakfast anyway."
+      ],
       "actionIcons": {
         "signup": {
           "text": "Sign up"
@@ -326,7 +333,7 @@
         "Achievements, awards:",
         "2nd place at Porta 2025",
         "Selected by the City of Brno to perform at the 2025 Christmas Markets",
-        "Participation in the Slunovrat 2026 festival – Welcome Kofola Stage, among 10 selected bands out of a total of 133 applicants."
+        "Participation in the Slunovrat 2026 festival - Welcome Kofola Stage, among 10 selected bands out of a total of 133 applicants."
       ]
     },
     "party_topol": {
@@ -425,13 +432,13 @@
       ]
     },
     "ws_espresso_tonic": {
-      "name": "Espresso & Tonic Tasting – It's all about the tonic!",
-      "annotation": "Espressotonic, Eskotonik, E&T – or whatever you want to call it. This trend of hot summer days is firmly established on the menus of virtually every specialty coffee shop. And the tonic matters – in most cases, tonic makes up more than 70 per cent of the drink, and as lovers of cocktail drinks know, every tonic tastes different. Led by Karolína Lužová, you'll get to taste nearly a dozen different tonics – both premium and standard varieties – combined with two types of espresso.",
+      "name": "Espresso & Tonic Tasting - It's all about the tonic!",
+      "annotation": "Espressotonic, Eskotonik, E&T - or whatever you want to call it. This trend of hot summer days is firmly established on the menus of virtually every specialty coffee shop. And the tonic matters - in most cases, tonic makes up more than 70 per cent of the drink, and as lovers of cocktail drinks know, every tonic tastes different. Led by Karolína Lužová, you'll get to taste nearly a dozen different tonics - both premium and standard varieties - combined with two types of espresso.",
       "bio": "Hi, I'm Kája, and I've been working in a café for several years now. Coffee has gone from being just a drink to something I'm increasingly enjoying discovering. I'm always up for a good filter coffee, and my guilty pleasure is fermented coffee."
     },
     "ws_ice_filter": {
-      "name": "Ice Ice ~~Baby~~ Filter – Tasting preparations of cold filters",
-      "annotation": "Ice drip, cold brew, chilled brew, batch over ice – it's hard to keep track of them all. A tasting workshop where you'll sample a whole range of different ways to prepare cold filter coffee, all using a single variety of coffee. Each has its own characteristics, and every result is slightly different. Let's sort out the terminology once and for all, and perhaps even work out which method is best.",
+      "name": "Ice Ice ~~Baby~~ Filter - Tasting preparations of cold filters",
+      "annotation": "Ice drip, cold brew, chilled brew, batch over ice - it's hard to keep track of them all. A tasting workshop where you'll sample a whole range of different ways to prepare cold filter coffee, all using a single variety of coffee. Each has its own characteristics, and every result is slightly different. Let's sort out the terminology once and for all, and perhaps even work out which method is best.",
       "bio": "Hi, I'm Kája, and I've been working in a café for several years now. Coffee has gone from being just a drink to something I'm increasingly enjoying discovering. I'm always up for a good filter coffee, and my guilty pleasure is fermented coffee."
     },
     "ws_gongfu": {
@@ -446,13 +453,13 @@
       "name": "Speciality coffee just like Grandma used to make (Melitta, Lamka and Karlsbad-style coffee maker vs. V60)",
       "annotation": [
         "What might a speciality coffee prepared by a grandmother using the equipment available in the past have tasted like?",
-        "You won't find a Melitta, a Lamk or Karlovy Vary cutlery in cafés any more. Is that a shame, or is it actually a good thing? During the workshop, you'll taste one coffee prepared in four different ways – three traditional and one modern. The question is: can old-school coffee equipment still hold its own against the widespread V60?"
+        "You won't find a Melitta, a Lamk or Karlovy Vary cutlery in cafés any more. Is that a shame, or is it actually a good thing? During the workshop, you'll taste one coffee prepared in four different ways - three traditional and one modern. The question is: can old-school coffee equipment still hold its own against the widespread V60?"
       ],
       "bio": "We're Miro and Maru from the Brno-based micro-roastery Chci kofein. We're a married couple, coffee addicts and a bit mad, who roast speciality coffee for like-minded madcaps."
     },
     "ws_milk": {
       "name": "Milk under the microscope - Sensory characteristics and their impact on the flavour of coffee",
-      "annotation": "Milk is often an overlooked ingredient in coffee, yet it can radically transform its flavour. During the workshop, we will taste various types of milk – from commercial and UHT varieties through to farm-fresh and competition-grade – both on their own and in combination with a single shot of espresso. Together, we will observe how the sweetness, texture, aroma and overall flavour profile change.",
+      "annotation": "Milk is often an overlooked ingredient in coffee, yet it can radically transform its flavour. During the workshop, we will taste various types of milk - from commercial and UHT varieties through to farm-fresh and competition-grade - both on their own and in combination with a single shot of espresso. Together, we will observe how the sweetness, texture, aroma and overall flavour profile change.",
       "bio": "Patrik Sláma has long been involved in coffee education and has been working as a coffee trainer for several years. He focuses primarily on sensory evaluation, coffee preparation, milk and latte art. In recent years, he has also been working on a book dedicated to the sensory evaluation, physics and chemistry of milk microfoam and latte art. As well as training, he is also involved in coffee journalism as editor-in-chief of Káva spojuje and Okafi magazine."
     },
     "ws_beer_sensory": {
@@ -473,7 +480,7 @@
     },
     "ws_latteart_poppy": {
       "name": "Pour your heart out: Latte art with Terka",
-      "annotation": "How do you create a heart, a tulip or something a bit more daring out of milk? Terka will guide you through the basics of latte art and show you how to work with the milk, the jug and the cup itself. You'll try out the free-pour and etching techniques and discover that there's no magic behind a successful design – just the right technique, a bit of patience and plenty of milk. And most importantly – don't worry if your first attempt ends up looking like a swan.",
+      "annotation": "How do you create a heart, a tulip or something a bit more daring out of milk? Terka will guide you through the basics of latte art and show you how to work with the milk, the jug and the cup itself. You'll try out the free-pour and etching techniques and discover that there's no magic behind a successful design - just the right technique, a bit of patience and plenty of milk. And most importantly - don't worry if your first attempt ends up looking like a swan.",
       "bio": "Terka works as a barista at Poppy Beans café in Brno, where latte art is her daily passion. She enjoys both free-pour and etching, and when she's not creating designs in cups at work or at home, you might spot her at one of the latte art competitions, where she regularly makes it through to the final. Now she's keen to share her experience and know-how with you too."
     },
     "talk_coufalova": {
@@ -493,13 +500,13 @@
       "name": "Coffee shot!",
       "annotation": [
         "Every café, product or member of staff deserves to be shown in the best possible light! Let's go through a few tips, insights and pieces of advice together on how best to film and photograph your business or your favourite coffee. The workshop is designed for both those with their own cameras and those who film on their phones. And you'll most likely find the insights you gain here useful even beyond the realms that smell of coffee.",
-        "The only photo and video workshop in the Czech Republic tailored to all café-goers – this really won't just be a slide show."
+        "The only photo and video workshop in the Czech Republic tailored to all café-goers - this really won't just be a slide show."
       ],
       "bio": "An internationally active filmmaker. Former lecturer in video at Masaryk University. Founder of the audiovisual production company KoPro. Someone who has finally learnt how to water his plants."
     },
     "talk_blahovec": {
       "name": "The creation of the book Kávový Baťa",
-      "annotation": "A discussion on how the book Kávový Baťa came about. Hubert Lamplota – a name that, over 100 years ago in Czechoslovakia, was legendary in the world of coffee.",
+      "annotation": "A discussion on how the book Kávový Baťa came about. Hubert Lamplota - a name that, over 100 years ago in Czechoslovakia, was legendary in the world of coffee.",
       "bio": "Boris Blahovec is a coffee enthusiast, amateur historian, traveller and writer who has long been dedicated to the history of coffee and coffee culture. Through his collection of historical coffee makers, he enjoys bringing to life forgotten stories linked to coffee. At the talk, he will discuss the creation of his book Kávový Baťa and the story of Hubert Lamplot, a prominent figure in Brno's coffee scene. He will also share interesting facts from his historical research and the world of coffee."
     },
     "talk_ajala": {
@@ -514,7 +521,7 @@
     },
     "talk_angela_chickas": {
       "name": "More than just a process: how exceptional coffee is made",
-      "annotation": "A presentation by Angela Rojas from Colombia, co-founder of the Quebraditas Coffee Farm project, will tell the story of the farm and its journey towards an experimental approach to coffee processing. She will demonstrate that, although the chosen processes are a key part of the final quality, it all begins with the plant itself – the variety, the roots, the soil, the nutrition and the ripeness of the coffee cherries. Using specific experiments and two processes from the farm as examples – washed Geisha with thermal shock and SL28 Advanced Natural – Angela will explain how decisions made from cultivation right through to processing influence the final flavour of the coffee in the cup.",
+      "annotation": "A presentation by Angela Rojas from Colombia, co-founder of the Quebraditas Coffee Farm project, will tell the story of the farm and its journey towards an experimental approach to coffee processing. She will demonstrate that, although the chosen processes are a key part of the final quality, it all begins with the plant itself - the variety, the roots, the soil, the nutrition and the ripeness of the coffee cherries. Using specific experiments and two processes from the farm as examples - washed Geisha with thermal shock and SL28 Advanced Natural - Angela will explain how decisions made from cultivation right through to processing influence the final flavour of the coffee in the cup.",
       "bio": [
         "Angela Rojas is a Colombian coffee producer and co-founder of the Quebraditas Coffee Farm project in the Huila region.",
         "She became involved in coffee after returning to her home region during the Covid pandemic, when she and Edinson Argote began working on the family farms.",
@@ -527,17 +534,17 @@
       "name": "Not all coffee is the same!",
       "annotation": [
         "How does a lifelong passion for bartending give rise to a successful liqueur brand? This talk will take you behind the scenes of the founding and development of Gloria Spirits.",
-        "We'll explore the entire journey – from the initial idea and bartending experience, through the development and production of premium coffee liqueurs, to building the brand on the domestic market. We'll take an in-depth look at the specifics of working with coffee in liqueur production, where the discovery of new profiles and processing techniques never ends.",
-        "At the same time, we'll gain an insight into the world of community events and bartending competitions that have sprung up around Gloria. We'll introduce the Gloria Challenge concept and its links to the prestigious Coffee in Good Spirits competition, which bridges the precise world of coffee culture with modern mixology. Come and hear a story of courage, craftsmanship, coffee and entrepreneurship in the Czech gastronomy scene – without rose-tinted glasses."
+        "We'll explore the entire journey - from the initial idea and bartending experience, through the development and production of premium coffee liqueurs, to building the brand on the domestic market. We'll take an in-depth look at the specifics of working with coffee in liqueur production, where the discovery of new profiles and processing techniques never ends.",
+        "At the same time, we'll gain an insight into the world of community events and bartending competitions that have sprung up around Gloria. We'll introduce the Gloria Challenge concept and its links to the prestigious Coffee in Good Spirits competition, which bridges the precise world of coffee culture with modern mixology. Come and hear a story of courage, craftsmanship, coffee and entrepreneurship in the Czech gastronomy scene - without rose-tinted glasses."
       ],
       "bio": [
-        "Honza has been involved in the Czech and international gastronomy scene for 16 years. Behind the bar, he has worked his way through every stage of the trade, which naturally led him to develop a deeper passion for coffee – a field he has been dedicated to for a long time and in which the discovery of new flavours, profiles and processing methods is a never-ending journey for him.",
+        "Honza has been involved in the Czech and international gastronomy scene for 16 years. Behind the bar, he has worked his way through every stage of the trade, which naturally led him to develop a deeper passion for coffee - a field he has been dedicated to for a long time and in which the discovery of new flavours, profiles and processing methods is a never-ending journey for him.",
         "Since 2023, he has channelled this passion as co-owner and creator of the emerging Czech brand Gloria Spirits. He is behind the development of the premium coffee liqueur Gloria Single Origin and the innovative ready-to-serve cocktail Gloria Negroni. In his work, he combines the honest craft of bartending, a meticulous approach to coffee and a desire to take the Czech distilling craft to the next level."
       ]
     },
     "talk_sloficek": {
       "name": "Coffee and a nap",
-      "annotation": "Coffee and a nap – two little pleasures that compete with each other in the world of sleep. Let's find out just how complex the process of sleep actually is, and how coffee can disrupt it. Does that one cup of coffee really not affect your sleep? And is an afternoon nap a way to refresh yourself, or rather a tried-and-tested way to ruin your night's sleep? So have a coffee, listen to the talk, and hopefully you won't fall asleep during it :)",
+      "annotation": "Coffee and a nap - two little pleasures that compete with each other in the world of sleep. Let's find out just how complex the process of sleep actually is, and how coffee can disrupt it. Does that one cup of coffee really not affect your sleep? And is an afternoon nap a way to refresh yourself, or rather a tried-and-tested way to ruin your night's sleep? So have a coffee, listen to the talk, and hopefully you won't fall asleep during it :)",
       "bio": "Barbara Šťastná, M.D. is a paediatrician with experience working in both general paediatric practices and specialist clinics focusing on childhood obesity and cerebral palsy. She loves coffee (especially filter coffee with a good bit of acidity) and perhaps loves sleep even more. This year, she will combine both in the topic of her talk. In her spare time, she dances, travels a lot, sews her own clothes or gets buried in a book."
     },
     "talk_kaznice": {
@@ -561,7 +568,7 @@
     },
     "ws_irska": {
       "name": "Irish Coffee? Why not Scottish or Czechish?!",
-      "annotation": "In the first half of the 19th century in France, someone came up with the idea of adding a drop of something stronger to coffee, under the lovely name \"Gloria\". All sorts of people try to claim the recipe for Irish coffee as their own. It is often attributed to Joe Sheridan, who worked at a restaurant and café at Foynes Airport in the west of Ireland. The story goes that, during a particularly bad storm, all flights were cancelled and, as everyone was frozen and tired from waiting at the airport, Sheridan mixed them a drink made from coffee, whisky, sugar and cream to brighten up their evening. Perhaps that's how it happened, perhaps not – we'll probably never know – but we can take a look together at the different aspects of this classic Irish drink. We'll try out the most basic recipe, as well as more modern twists featuring more complex whiskies or espuma, finishing by trying to substitute the whisky with other spirits.",
+      "annotation": "In the first half of the 19th century in France, someone came up with the idea of adding a drop of something stronger to coffee, under the lovely name \"Gloria\". All sorts of people try to claim the recipe for Irish coffee as their own. It is often attributed to Joe Sheridan, who worked at a restaurant and café at Foynes Airport in the west of Ireland. The story goes that, during a particularly bad storm, all flights were cancelled and, as everyone was frozen and tired from waiting at the airport, Sheridan mixed them a drink made from coffee, whisky, sugar and cream to brighten up their evening. Perhaps that's how it happened, perhaps not - we'll probably never know - but we can take a look together at the different aspects of this classic Irish drink. We'll try out the most basic recipe, as well as more modern twists featuring more complex whiskies or espuma, finishing by trying to substitute the whisky with other spirits.",
       "bio": [
         "Hi, it's Eliška here!",
         "I'm a lead bartender from Karlovy Vary; I've been working behind the bar for over 10 years, but I'm also happy to get behind the coffee machine. My mixology skills took me all the way to the final of the Bartender of the Year competition. I'm never one to turn down a good batch."
