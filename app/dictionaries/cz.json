@@ -894,8 +894,8 @@
         "availability": {
           "start": "2026-06-12"
         },
-        "price": 600,
-        "tiers": ["Celofestivalová", "Sobota (snížená)", "Neděle (snížená)"]
+        "price": 400,
+        "tiers": ["Neděle"]
       }
     ]
   },

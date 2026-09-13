@@ -886,8 +886,8 @@
         "availability": {
           "start": "2026-06-12"
         },
-        "price": 600,
-        "tiers": ["Full event", "Sobota (discount)", "Neděle (discount)"]
+        "price": 400,
+        "tiers": ["Neděle"]
       }
     ]
   },
